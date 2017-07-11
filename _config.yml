@@ -2,16 +2,16 @@
 # Values for this lesson.
 #------------------------------------------------------------
 
-# Which carpentry is this ("swc", "dc", "lc", or "cwl")?
-carpentry: "cwl"
+# Which carpentry is this ("swc", "dc", or "lc")?
+carpentry: "swc"
 
 # Overall title for pages.
-title: "Lesson Title"
+title: "Common Workflow Language User Guide"
 
 # Contact.  This *must* include the protocol: if it's an email
 # address, it must look like "mailto:lessons@software-carpentry.org",
 # or if it's a URL, "https://gitter.im/username/ProjectName".
-contact: "mailto:lessons@software-carpentry.org"
+contact: "http://www.commonwl.org/#Support"
 
 #------------------------------------------------------------
 # Generic settings (should not need to change).
@@ -22,7 +22,7 @@ kind: "lesson"
 
 # Magic to make URLs resolve both locally and on GitHub.
 # See https://help.github.com/articles/repository-metadata-on-github-pages/.
-repository: <USERNAME>/<PROJECT>
+repository: common-workflow-language/common-workflow-language
 
 # Sites.
 amy_site: "https://amy.software-carpentry.org/workshops"
