@@ -3,6 +3,12 @@ layout: page
 title: "Contributor Code of Conduct"
 permalink: /conduct/
 ---
+As contributors and maintainers of this project,
+we pledge to respect all people who contribute through reporting issues,
+posting feature requests,
+updating documentation,
+submitting pull requests or patches,
+and other activities.
 
 The CWL Project is dedicated to providing a harassment-free experience for everyone, regardless of gender, gender identity and expression, sexual orientation, disability, physical appearance, body size, age, race, or religion. We do not tolerate harassment of participants in any form.
 
