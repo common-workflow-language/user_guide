@@ -1,7 +1,7 @@
 ---
-title: "Recommended CWL Practices"
-teaching: 0
-exercises: 0
+layout: page
+title: "Recommended Practices"
+permalink: /rec-practices/
 ---
 
 Below are a set of recommended good practices to keep in mind when writing a Common Workflow Language description for a tool or workflow. These guidelines are presented for consideration on a scale of usefulness: more is better, not all are required.
