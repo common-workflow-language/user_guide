@@ -13,22 +13,16 @@ keypoints:
 - "Input values are specified in a separate YAML file."
 - "The tool description and input files are provided as arguments to a CWL runner."
 ---
-The simplest "hello world" program.  This accepts one input parameter, writes a message to the terminal or job log, and produces no permanent output. CWL documents are written in [JSON](json) or [YAML](yaml), or a mix of the two.
+The simplest "hello world" program.  This accepts one input parameter, writes a message to the terminal or job log, and produces no permanent output. CWL documents are written in [JSON][json] or [YAML][yaml], or a mix of the two.
 
 
 *1st-tool.cwl*
-
-```
-{% include cwl/1st-tool.cwl %}
-```
+{% include: cwl/1st-tool.cwl %}
 
 Use a YAML object in a separate file to describe the input of a run:
 
 *echo-job.yml*
-
-```
-{% include cwl/echo-job.yml %}
-```
+{% include: cwl/echo-job.yml %}
 
 Now invoke `cwl-runner` with the tool wrapper and the input object on the command line:
 

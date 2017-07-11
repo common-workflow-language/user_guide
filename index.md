@@ -12,7 +12,7 @@ Note: This document is a work in progress. Not all features are covered, yet.
 >
 > A text editor
 >
-> A CWL runner e.g. the [reference implementation](cwltool-repo) (see [the project homepage](cwl-home) for a full list)
+> A CWL runner e.g. the [reference implementation][cwltool-repo] (see [the project homepage][cwl-home] for a full list)
 {: .prereq}
 
 [cwl-home]: http://www.commonwl.org
