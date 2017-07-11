@@ -17,12 +17,12 @@ The simplest "hello world" program.  This accepts one input parameter, writes a 
 
 
 *1st-tool.cwl*
-{% include: cwl/1st-tool.cwl %}
+{% include cwl/1st-tool.cwl %}
 
 Use a YAML object in a separate file to describe the input of a run:
 
 *echo-job.yml*
-{% include: cwl/echo-job.yml %}
+{% include cwl/echo-job.yml %}
 
 Now invoke `cwl-runner` with the tool wrapper and the input object on the command line:
 
