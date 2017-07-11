@@ -6,12 +6,12 @@
 carpentry: "cwl"
 
 # Overall title for pages.
-title: "Lesson Title"
+title: "Common Workflow Language User Guide"
 
 # Contact.  This *must* include the protocol: if it's an email
 # address, it must look like "mailto:lessons@software-carpentry.org",
 # or if it's a URL, "https://gitter.im/username/ProjectName".
-contact: "mailto:lessons@software-carpentry.org"
+contact: "http://www.commonwl.org/#Support"
 
 #------------------------------------------------------------
 # Generic settings (should not need to change).
@@ -22,26 +22,26 @@ kind: "lesson"
 
 # Magic to make URLs resolve both locally and on GitHub.
 # See https://help.github.com/articles/repository-metadata-on-github-pages/.
-repository: <USERNAME>/<PROJECT>
+repository: common-workflow-language/user-guide
 
 # Sites.
-amy_site: "https://amy.software-carpentry.org/workshops"
-dc_site: "http://datacarpentry.org"
-swc_github: "https://github.com/swcarpentry"
-swc_site: "https://software-carpentry.org"
-swc_pages: "https://swcarpentry.github.io"
-lc_site: "http://librarycarpentry.github.io/"
-template_repo: "https://github.com/swcarpentry/styles"
-example_repo: "https://github.com/swcarpentry/lesson-example"
-example_site: "https://swcarpentry.github.com/lesson-example"
-workshop_repo: "https://github.com/swcarpentry/workshop-template"
-workshop_site: "https://swcarpentry.github.io/workshop-template"
-training_site: "https://swcarpentry.github.io/instructor-training"
+# amy_site: "https://amy.software-carpentry.org/workshops"
+# dc_site: "http://datacarpentry.org"
+# swc_github: "https://github.com/swcarpentry"
+# swc_site: "https://software-carpentry.org"
+# swc_pages: "https://swcarpentry.github.io"
+# lc_site: "http://librarycarpentry.github.io/"
+# template_repo: "https://github.com/swcarpentry/styles"
+# example_repo: "https://github.com/swcarpentry/lesson-example"
+# example_site: "https://swcarpentry.github.com/lesson-example"
+# workshop_repo: "https://github.com/swcarpentry/workshop-template"
+# workshop_site: "https://swcarpentry.github.io/workshop-template"
+# training_site: "https://swcarpentry.github.io/instructor-training"
 
 # Surveys.
-pre_survey: "https://www.surveymonkey.com/r/swc_pre_workshop_v1?workshop_id="
-post_survey: "https://www.surveymonkey.com/r/swc_post_workshop_v1?workshop_id="
-training_post_survey: "https://www.surveymonkey.com/r/post-instructor-training"
+# pre_survey: "https://www.surveymonkey.com/r/swc_pre_workshop_v1?workshop_id="
+# post_survey: "https://www.surveymonkey.com/r/swc_post_workshop_v1?workshop_id="
+# training_post_survey: "https://www.surveymonkey.com/r/post-instructor-training"
 
 # Start time in minutes (0 to be clock-independent, 540 to show a start at 09:00 am).
 start_time: 0

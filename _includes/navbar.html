@@ -24,6 +24,10 @@
       <a href="{{ site.lc_site }}" class="pull-left">
         <img class="navbar-logo" src="{{ page.root }}/assets/img/lc-icon-black.png" alt="Library Carpentry logo" />
       </a>
+      {% elsif site.carpentry == "cwl" %}
+      <a href="{{ site.swc_site }}" class="pull-left">
+        <img class="navbar-logo" src="{{ page.root }}/assets/img/cwl-apple-icon-180x180.png" alt="Common Workflow Language logo" />
+      </a>
       {% endif %}
 
       {% comment %} Always show link to home page. {% endcomment %}

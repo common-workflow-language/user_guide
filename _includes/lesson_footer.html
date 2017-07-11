@@ -6,12 +6,14 @@
     <div class="col-md-6" align="left">
       <h4>
 	Copyright &copy; 2016–{{ 'now' | date: "%Y" }}
-	{% if site.carpentry == "swc" %}
+    {% if site.carpentry == "swc" %}
 	<a href="{{ site.swc_site }}">Software Carpentry Foundation</a>
 	{% elsif site.carpentry == "dc" %}
 	<a href="{{ site.dc_site }}">Data Carpentry</a>
 	{% elsif site.carpentry == "lc" %}
 	<a href="{{ site.lc_site }}">Library Carpentry</a>
+    {% elsif site.carpentry == "cwl" %}
+	<a href="{{ site.swc_site }}">Common Workflow Language Project</a>
 	{% endif %}
       </h4>
     </div>
