@@ -10,35 +10,8 @@ updating documentation,
 submitting pull requests or patches,
 and other activities.
 
-We are committed to making participation in this project a harassment-free experience for everyone,
-regardless of level of experience,
-gender,
-gender identity and expression,
-sexual orientation,
-disability,
-personal appearance,
-body size,
-race,
-ethnicity,
-age,
-or religion.
+The CWL Project is dedicated to providing a harassment-free experience for everyone, regardless of gender, gender identity and expression, sexual orientation, disability, physical appearance, body size, age, race, or religion. We do not tolerate harassment of participants in any form.
 
-Examples of unacceptable behavior by participants include the use of sexual language or imagery,
-derogatory comments or personal attacks,
-trolling,
-public or private harassment,
-insults,
-or other unprofessional conduct.
+This code of conduct applies to all CWL Project spaces, including the Google Group, the Gitter chat room, the Google Hangouts chats, both online and off. Anyone who violates this code of conduct may be sanctioned or expelled from these spaces at the discretion of the leadership team.
 
-Project maintainers have the right and responsibility to remove, edit, or reject
-comments, commits, code, wiki edits, issues, and other contributions
-that are not aligned to this Code of Conduct.
-Project maintainers who do not follow the Code of Conduct may be removed from the project team.
-
-Instances of abusive, harassing, or otherwise unacceptable behavior
-may be reported by opening an issue or contacting one or more of the project maintainers.
-
-This Code of Conduct is adapted from
-the [Contributor Covenant][contrib-covenant] Version 1.0.0.
-
-[contrib-covenant]: http://contributor-covenant.org/
+For more details, see our https://github.com/common-workflow-language/common-workflow-language/blob/master/CODE_OF_CONDUCT.md
