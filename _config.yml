@@ -2,8 +2,8 @@
 # Values for this lesson.
 #------------------------------------------------------------
 
-# Which carpentry is this ("swc", "dc", or "lc")?
-carpentry: "swc"
+# Which carpentry is this ("swc", "dc", "lc", or "cwl")?
+carpentry: "cwl"
 
 # Overall title for pages.
 title: "Common Workflow Language User Guide"
