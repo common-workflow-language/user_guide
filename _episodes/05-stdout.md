@@ -8,7 +8,7 @@ objectives:
 - "Learn how to capture streamed output from a tool."
 keypoints:
 - "Use the `stdout` field to specify a filename to capture streamed output."
-- "The corresponding output parameter must have `type: stdout`"
+- "The corresponding output parameter must have `type: stdout`."
 ---
 To capture a tool's standard output stream, add the `stdout` field with
 the name of the file where the output stream should go.  Then add `type:
