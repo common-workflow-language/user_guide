@@ -22,6 +22,8 @@ Below are a set of recommended good practices to keep in mind when writing a Com
 
 &#9744; `format` should be specified for all input and output `File`s. Bioinformatics tools should use format identifiers from [EDAM][edam-example]. See also `iana:text/plain`, `iana:text/tab-separated-values` with `$namespaces: { iana: "https://www.iana.org/assignments/media-types/" }`. [Full IANA media type list][iana-types] (also known as MIME types).
 
+&#9744; Refer to all individuals and organizations using unambiguous identifiers like [ORCID][orcid].
+
 &#9744; Mark all input and output `File`s that are read or written to in a streaming compatible way (once, no random-access), as `streamable: true`.
 
 &#9744; Each `CommandLineTool` description should focus on a single operation only, even if the (sub)command is capable of more.
@@ -44,3 +46,4 @@ Below are a set of recommended good practices to keep in mind when writing a Com
 [edam-example]: http://edamontology.org/format_1915
 [iana-types]: http://www.iana.org/assignments/media-types/media-types.xhtml
 [file-prop]: http://www.commonwl.org/v1.0/CommandLineTool.html#File
+[orcid]: https://orcid.org
