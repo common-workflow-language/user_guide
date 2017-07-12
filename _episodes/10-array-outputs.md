@@ -16,13 +16,13 @@ You can also capture multiple output files into an array of files using `glob`.
 *array-outputs.cwl*
 
 ```
-{% include examples/array-outputs.cwl %}
+{% include cwl/array-outputs.cwl %}
 ```
 
 *array-outputs-job.yml*
 
 ```
-{% include examples/array-outputs-job.yml %}
+{% include cwl/array-outputs-job.yml %}
 ```
 
 Now invoke `cwl-runner` providing the tool wrapper and the input object
