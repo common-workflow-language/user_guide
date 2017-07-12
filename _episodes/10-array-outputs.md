@@ -1,0 +1,51 @@
+---
+title: "Array Outputs"
+teaching: 10
+exercises: 0
+questions:
+- "How do I specify tool outputs as arrays?"
+objectives:
+- "Learn how to create arrays of output files."
+keypoints:
+- "You can capture multiple output files into an array of files using `glob`."
+- "Use wildcards and filenames to specify the output files that will be returned
+after tool execution."
+---
+You can also capture multiple output files into an array of files using `glob`.
+
+*array-outputs.cwl*
+
+```
+{% include examples/array-outputs.cwl %}
+```
+
+*array-outputs-job.yml*
+
+```
+{% include examples/array-outputs-job.yml %}
+```
+
+Now invoke `cwl-runner` providing the tool wrapper and the input object
+on the command line:
+
+```
+$ cwl-runner array-outputs.cwl array-outputs-job.yml
+[job 140190876078160] /home/example$ touch foo.txt bar.dat baz.txt
+Final process status is success
+{
+  "output": [
+    {
+      "size": 0,
+      "location": "/home/peter/work/common-workflow-language/draft-3/examples/foo.txt",
+      "checksum": "sha1$da39a3ee5e6b4b0d3255bfef95601890afd80709",
+      "class": "File"
+    },
+    {
+      "size": 0,
+      "location": "/home/peter/work/common-workflow-language/draft-3/examples/baz.txt",
+      "checksum": "sha1$da39a3ee5e6b4b0d3255bfef95601890afd80709",
+      "class": "File"
+    }
+  ]
+}
+```
