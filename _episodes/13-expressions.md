@@ -6,7 +6,7 @@ questions:
 - "What do I do when I want to create values dynamically and CWL doesn't
 provide a built-in way of doing so?"
 objectives:
-- "Learn how to insert javaScript expressions into a CWL description."
+- "Learn how to insert JavaScript expressions into a CWL description."
 keypoints:
 - "If `InlineJavascriptRequirement` is specified, you can include JavaScript
 expressions that will be evaulated by the CWL runner."
