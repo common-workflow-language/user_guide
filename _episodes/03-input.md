@@ -29,7 +29,7 @@ types and appearing on the command line in different ways:
 *inp.cwl*
 
 ```
-{% include cwl/inp.cwl % }
+{% include cwl/inp.cwl %}
 ```
 
 *inp-job.yml*
