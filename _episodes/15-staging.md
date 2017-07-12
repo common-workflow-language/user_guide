@@ -15,7 +15,7 @@ directory."
 Normally, input files are located in a read-only directory separate from
 the output directory.  This causes problems if the underlying tool expects to
 write its output files alongside the input file in the same directory.  You use `InitialWorkDirRequirement` to stage input files into the output directory.
-In this example, we use a Javascript expression to extract the base name of the 
+In this example, we use a JavaScript expression to extract the base name of the
 input file from its leading directory path.
 
 *linkfile.cwl*
