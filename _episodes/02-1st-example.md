@@ -1,7 +1,7 @@
 ---
 title: "First Example"
 teaching: 5
-exercises: 5
+exercises: 0
 questions:
 - "How do I wrap a simple command line tool?"
 objectives:
