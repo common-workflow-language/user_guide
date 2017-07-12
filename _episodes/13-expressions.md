@@ -67,4 +67,5 @@ You can only use expressions in certain fields.  These are:
 - `outdirMin`
 - `outdirMax`
 
-[rec-practices]: rec-practices/
+[file-prop]: http://www.commonwl.org/v1.0/CommandLineTool.html#File
+[rec-practices]: /rec-practices/
