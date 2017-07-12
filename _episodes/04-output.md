@@ -32,7 +32,7 @@ themselves, or come from examining the content of those files.
 *tar-job.yml*
 
 ```
-{% include: cwl/tar-job.yml %}
+{% include cwl/tar-job.yml %}
 ```
 
 Next, create a tar file for the example and invoke `cwl-runner` with the tool
