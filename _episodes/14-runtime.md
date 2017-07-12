@@ -3,10 +3,9 @@ title: "Creating Files at Runtime"
 teaching: 10
 exercises: 0
 questions:
-- "What do I do when I want to create values dynamically and CWL doesn't
-provide a built-in way of doing so?"
+- "How do I create required input files from input parameters at runtime?"
 objectives:
-- "Learn how to insert JavaScript expressions into a CWL description."
+- "Learn how to create files on the fly during runtime."
 keypoints:
 - "Use `InitialWorkDirRequirement` to specify input files that need to be
 created during tool runtime."
