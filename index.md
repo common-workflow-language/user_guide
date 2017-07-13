@@ -12,8 +12,8 @@ Note: This document is a work in progress. Not all features are covered, yet.
 >
 > A text editor
 >
-> A CWL runner e.g. the [reference implementation](cwltool-repo) (see [the project homepage](cwl-home) for a full list)
+> A CWL runner. It is recommended to start with the [reference implementation][cwltool-install]. The full list of CWL runners is on [the project homepage][cwl-runners-list].
 {: .prereq}
 
-[cwl-home]: http://www.commonwl.org
-[cwltool-repo]: https://github.com/common-workflow-language/cwltool
+[cwl-runners-list]: http://www.commonwl.org/#Implementations
+[cwltool-install]: https://github.com/common-workflow-language/cwltool#install
