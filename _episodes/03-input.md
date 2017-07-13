@@ -128,14 +128,14 @@ parameter were not provided in the input, nothing would appear on the
 command line.
 
 Input files are read-only.  If you wish to update an input file, you must
-first copy it to the output directory.
+[first copy it to the output directory]({{ page.root }}/15-staging/).
 
 The value of `position` is used to determine where parameter should
 appear on the command line.  Positions are relative to one another, not
 absolute.  As a result, positions do not have to be sequential, three
-parameters with positions `[1, 3, 5]` will result in the same command
-line as `[1, 2, 3]`.  More than one parameter can have the same position
+parameters with positions 1, 3, 5 will result in the same command
+line as 1, 2, 3.  More than one parameter can have the same position
 (ties are broken using the parameter name), and the position field itself
-is optional.  the default position is 0.
+is optional.  The default position is 0.
 
-The `baseCommand` field always comes before parameters.
+The `baseCommand` field will always appear in the final command line before the parameters.
