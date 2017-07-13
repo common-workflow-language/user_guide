@@ -17,20 +17,28 @@ The simplest "hello world" program.  This accepts one input parameter, writes a 
 
 
 *1st-tool.cwl*
+```
 {% include cwl/1st-tool.cwl %}
+```
 
 Use a YAML object in a separate file to describe the input of a run:
 
 *echo-job.yml*
+```
 {% include cwl/echo-job.yml %}
+```
 
 Now invoke `cwl-runner` with the tool wrapper and the input object on the command line:
 
 ```
 $ cwl-runner 1st-tool.cwl echo-job.yml
-[job 140199012414352] $ echo 'Hello world!'
+[job 1st-tool.cwl] /tmp/tmpmM5S_1$ echo \
+    'Hello world!'
 Hello world!
+[job 1st-tool.cwl] completed success
+{}
 Final process status is success
+
 ```
 
 What's going on here?  Let's break it down:
