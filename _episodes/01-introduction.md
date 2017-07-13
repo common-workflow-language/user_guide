@@ -28,5 +28,3 @@ technologies such as Docker, be used with CWL implementations from different
 vendors, and is well suited for describing large-scale workflows in cluster,
 cloud and high performance computing environments where tasks are scheduled in
 parallel across many nodes.
-
-{% include links.md %}
