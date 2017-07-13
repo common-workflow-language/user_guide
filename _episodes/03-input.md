@@ -47,8 +47,15 @@ input object on the command line:
 ```
 $ touch whale.txt
 $ cwl-runner inp.cwl inp-job.yml
-[job 140020149614160] /home/example$ echo -f -i42 --example-string hello --file=/home/example/whale.txt
--f -i42 --example-string hello --file=/home/example/whale.txt
+[job inp.cwl] /tmp/tmpzrSnfX$ echo \
+    -f \
+    -i42 \
+    --example-string \
+    hello \
+    --file=/tmp/tmpRBSHIG/stg979b6d24-d50a-47e3-9e9e-90097eed2cbc/whale.txt
+-f -i42 --example-string hello --file=/tmp/tmpRBSHIG/stg979b6d24-d50a-47e3-9e9e-90097eed2cbc/whale.txt
+[job inp.cwl] completed success
+{}
 Final process status is success
 ```
 
