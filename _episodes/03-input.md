@@ -28,9 +28,9 @@ types and appearing on the command line in different ways:
 
 *inp.cwl*
 
-```
+~~~
 {% include cwl/inp.cwl %}
-```
+~~~
 
 *inp-job.yml*
 
@@ -58,6 +58,13 @@ $ cwl-runner inp.cwl inp-job.yml
 {}
 Final process status is success
 ```
+> ## Where did those `/tmp` paths come from?
+>
+> The CWL reference runner (cwltool) and other runners create temporary
+> directories with symbolic ("soft") links to your input files to ensure that
+> the tools aren't accidently accessing files that were not explicitly
+> specified
+{: .callout}
 
 The field `inputBinding` is optional and indicates whether and how the
 input parameter should be appear on the tool's command line.  If
@@ -116,7 +123,7 @@ example_file:
 File types appear on the command line as the path to the file.  When the
 parameter type ends with a question mark `?` it indicates that the
 parameter is optional.  In the example above, this is rendered as
-`--file=/home/example/whale.txt`.  However, if the "example_file"
+`--file=/tmp/random/path/whale.txt`.  However, if the "example_file"
 parameter were not provided in the input, nothing would appear on the
 command line.
 
