@@ -41,16 +41,23 @@ wrapper and the input object on the command line:
 ```
 $ touch hello.txt && tar -cvf hello.tar hello.txt
 $ cwl-runner tar.cwl tar-job.yml
-[job 139868145165200] $ tar xf /home/example/hello.tar
-Final process status is success
+[job tar.cwl] /tmp/tmpqOeawQ$ tar \
+    xf \
+    /tmp/tmpGDk8Y1/stg80bbad20-494d-47af-8075-dffc32df03a3/hello.tar
+[job tar.cwl] completed success
 {
-"example_out": {
-  "location": "hello.txt",
-  "size": 13,
-  "class": "File",
-  "checksum": "sha1$47a013e660d408619d894b20806b1d5086aab03b"
-  }
+    "example_out": {
+        "checksum": "sha1$da39a3ee5e6b4b0d3255bfef95601890afd80709", 
+        "basename": "hello.txt", 
+        "nameroot": "hello", 
+        "nameext": ".txt", 
+        "location": "file:///home/me/cwl/user_guide/hello.txt", 
+        "path": "/home/me/cwl/user_guide/hello.txt", 
+        "class": "File", 
+        "size": 0
+    }
 }
+Final process status is success
 ```
 
 The field `outputBinding` describes how to to set the value of each
@@ -61,8 +68,8 @@ outputs:
   example_out:
     type: File
     outputBinding:
-    glob: hello.txt
+      glob: hello.txt
 ```
 
 The `glob` field consists of the name of a file in the output directory.
-If you don't know name of the file in advance, you can use a wildcard pattern.
+If you don't know name of the file in advance, you can use a wildcard pattern like `*.txt`.

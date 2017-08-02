@@ -31,16 +31,21 @@ on the command line:
 
 ```
 $ cwl-runner stdout.cwl echo-job.yml
-[job 140199012414352] $ echo 'Hello world!' > output.txt
-Final process status is success
+[job stdout.cwl] /tmp/tmpE0gTz7$ echo \
+    'Hello world!' > /tmp/tmpE0gTz7/output.txt
+[job stdout.cwl] completed success
 {
-"output": {
-  "location": "output.txt",
-  "size": 13,
-  "class": "File",
-  "checksum": "sha1$47a013e660d408619d894b20806b1d5086aab03b"
-  }
+    "output": {
+        "checksum": "sha1$47a013e660d408619d894b20806b1d5086aab03b",
+        "basename": "output.txt",
+        "nameroot": "output",
+        "nameext": ".txt",
+        "location": "file:///home/me/cwl/user_guide/output.txt",
+        "path": "/home/me/cwl/user_guide/output.txt",
+        "class": "File",
+        "size": 13
+    }
 }
-$ cat output.txt
-Hello world!
+Final process status is success
+
 ```

@@ -17,7 +17,7 @@ complete known-good runtime for software and its dependencies.  However,
 containers are also purposefully isolated from the host system, so in
 order to run a tool inside a Docker container there is additional work to
 ensure that input files are available inside the container and output
-files can be recovered from the container.  CWL can perform this work
+files can be recovered from the container.  A CWL runner can perform this work
 automatically, allowing you to use Docker to simplify your software
 management while avoiding the complexity of invoking and managing Docker
 containers.
@@ -42,15 +42,31 @@ input object on the command line:
 ```
 $ echo "console.log(\"Hello World\");" > hello.js
 $ cwl-runner docker.cwl docker-job.yml
-[job 140259721854416] /home/example$ docker run -i --volume=/home/example/hello.js:/var/lib/cwl/job369354770_examples/hello.js:ro --volume=/home/example:/var/spool/cwl:rw --volume=/tmp/tmpDLs5hm:/tmp:rw --workdir=/var/spool/cwl --read-only=true --net=none --user=1001 --rm --env=TMPDIR=/tmp node:slim node /var/lib/cwl/job369354770_examples/hello.js
-Hello world!
+[job docker.cwl] /tmp/tmpgugLND$ docker \
+    run \
+    -i \
+    --volume=/tmp/tmpgugLND:/var/spool/cwl:rw \
+    --volume=/tmp/tmpSs5JoN:/tmp:rw \
+    --volume=/home/me/cwl/user_guide/hello.js:/var/lib/cwl/stg16848d97-e6ba-4b35-b666-4546d9965a2d/hello.js:ro \
+    --workdir=/var/spool/cwl \
+    --read-only=true \
+    --user=1000 \
+    --rm \
+    --env=TMPDIR=/tmp \
+    --env=HOME=/var/spool/cwl \
+    node:slim \
+    node \
+    /var/lib/cwl/stg16848d97-e6ba-4b35-b666-4546d9965a2d/hello.js
+Hello World
+[job docker.cwl] completed success
+{}
 Final process status is success
 ```
 
 Notice the CWL runner has constructed a Docker command line to run the
 script.  One of the responsibilities of the CWL runner is to adjust the paths of
 input files to reflect the location where they appear inside the container.  
-In this example, the path to the script `hello.js` is `/home/example/hello.js`
+In this example, the path to the script `hello.js` is `/home/me/cwl/user_guide/hello.js`
 outside the container but `/var/lib/cwl/job369354770_examples/hello.js` inside
 the container, as reflected in the invocation of the `node` command.
 
