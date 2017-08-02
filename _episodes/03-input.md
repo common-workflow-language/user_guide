@@ -28,9 +28,9 @@ types and appearing on the command line in different ways:
 
 *inp.cwl*
 
-```
+~~~
 {% include cwl/inp.cwl %}
-```
+~~~
 
 *inp-job.yml*
 
@@ -47,10 +47,24 @@ input object on the command line:
 ```
 $ touch whale.txt
 $ cwl-runner inp.cwl inp-job.yml
-[job 140020149614160] /home/example$ echo -f -i42 --example-string hello --file=/home/example/whale.txt
--f -i42 --example-string hello --file=/home/example/whale.txt
+[job inp.cwl] /tmp/tmpzrSnfX$ echo \
+    -f \
+    -i42 \
+    --example-string \
+    hello \
+    --file=/tmp/tmpRBSHIG/stg979b6d24-d50a-47e3-9e9e-90097eed2cbc/whale.txt
+-f -i42 --example-string hello --file=/tmp/tmpRBSHIG/stg979b6d24-d50a-47e3-9e9e-90097eed2cbc/whale.txt
+[job inp.cwl] completed success
+{}
 Final process status is success
 ```
+> ## Where did those `/tmp` paths come from?
+>
+> The CWL reference runner (cwltool) and other runners create temporary
+> directories with symbolic ("soft") links to your input files to ensure that
+> the tools aren't accidently accessing files that were not explicitly
+> specified
+{: .callout}
 
 The field `inputBinding` is optional and indicates whether and how the
 input parameter should be appear on the tool's command line.  If
@@ -109,19 +123,19 @@ example_file:
 File types appear on the command line as the path to the file.  When the
 parameter type ends with a question mark `?` it indicates that the
 parameter is optional.  In the example above, this is rendered as
-`--file=/home/example/whale.txt`.  However, if the "example_file"
+`--file=/tmp/random/path/whale.txt`.  However, if the "example_file"
 parameter were not provided in the input, nothing would appear on the
 command line.
 
 Input files are read-only.  If you wish to update an input file, you must
-first copy it to the output directory.
+[first copy it to the output directory]({{ page.root }}/15-staging/).
 
 The value of `position` is used to determine where parameter should
 appear on the command line.  Positions are relative to one another, not
 absolute.  As a result, positions do not have to be sequential, three
-parameters with positions `[1, 3, 5]` will result in the same command
-line as `[1, 2, 3]`.  More than one parameter can have the same position
+parameters with positions 1, 3, 5 will result in the same command
+line as 1, 2, 3.  More than one parameter can have the same position
 (ties are broken using the parameter name), and the position field itself
-is optional.  the default position is 0.
+is optional.  The default position is 0.
 
-The `baseCommand` field always comes before parameters.
+The `baseCommand` field will always appear in the final command line before the parameters.
