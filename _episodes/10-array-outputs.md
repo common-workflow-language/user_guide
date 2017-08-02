@@ -15,20 +15,22 @@ You can also capture multiple output files into an array of files using `glob`.
 
 *array-outputs.cwl*
 
-```
+~~~
 {% include cwl/array-outputs.cwl %}
-```
+~~~
+{: .source}
 
 *array-outputs-job.yml*
 
-```
+~~~
 {% include cwl/array-outputs-job.yml %}
-```
+~~~
+{: .source}
 
 Now invoke `cwl-runner` providing the tool wrapper and the input object
 on the command line:
 
-```
+~~~
 $ cwl-runner array-outputs.cwl array-outputs-job.yml
 [job 140190876078160] /home/example$ touch foo.txt bar.dat baz.txt
 Final process status is success
@@ -48,4 +50,5 @@ Final process status is success
     }
   ]
 }
-```
+~~~
+{: .output}

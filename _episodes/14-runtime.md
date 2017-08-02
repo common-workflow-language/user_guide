@@ -17,23 +17,26 @@ rather than the command line parameters.  To do this, use
 
 *createfile.cwl*
 
-```
+~~~
 {% include cwl/createfile.cwl %}
-```
+~~~
+{: .source}
 
 *echo-job.yml*
 
-```
+~~~
 {% include cwl/echo-job.yml %}
-```
+~~~
+{: .source}
 
 Now invoke `cwl-runner` with the tool wrapper and the input object on the
 command line:
 
-```
+~~~
 $ cwltool createfile.cwl echo-job.yml
 [job 140528604979344] /home/example$ cat example.conf
 CONFIGVAR=Hello world!
 Final process status is success
 {}
-```
+~~~
+{: .output}

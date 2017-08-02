@@ -23,26 +23,29 @@ data types that may appear in the array.
 
 *array-inputs.cwl*
 
-```
+~~~
 {% include cwl/array-inputs.cwl %}
-```
+~~~
+{: .source}
 
 *array-inputs-job.yml*
 
-```
+~~~
 {% include cwl/array-inputs-job.yml %}
-```
+~~~
+{: .source}
 
 Now invoke `cwl-runner` providing the tool wrapper and the input object
 on the command line:
 
-```
+~~~
 $ cwl-runner array-inputs.cwl array-inputs-job.yml
 [job 140334923640912] /home/example$ echo -A one two three -B=four -B=five -B=six -C=seven,eight,nine
 -A one two three -B=four -B=five -B=six -C=seven,eight,nine
 Final process status is success
 {}
-```
+~~~
+{: .output}
 
 The `inputBinding` can appear either on the outer array parameter definition
 or the inner array element definition, and these produce different behavior when

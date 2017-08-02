@@ -34,9 +34,10 @@ types and appearing on the command line in different ways:
 
 *inp-job.yml*
 
-```
+~~~
 {% include cwl/inp-job.yml %}
-```
+~~~
+{: .source}
 
 Notice that "example_file", as a `File` type, must be provided as an
 object with the fields `class: File` and `path`.
@@ -44,7 +45,7 @@ object with the fields `class: File` and `path`.
 Next, create a whale.txt and invoke `cwl-runner` with the tool wrapper and the
 input object on the command line:
 
-```
+~~~
 $ touch whale.txt
 $ cwl-runner inp.cwl inp-job.yml
 [job inp.cwl] /tmp/tmpzrSnfX$ echo \
@@ -57,7 +58,8 @@ $ cwl-runner inp.cwl inp-job.yml
 [job inp.cwl] completed success
 {}
 Final process status is success
-```
+~~~
+{: .output}
 > ## Where did those `/tmp` paths come from?
 >
 > The CWL reference runner (cwltool) and other runners create temporary
@@ -71,39 +73,42 @@ input parameter should be appear on the tool's command line.  If
 `inputBinding` is missing, the parameter does not appear on the command
 line.  Let's look at each example in detail.
 
-```
+~~~
 example_flag:
   type: boolean
   inputBinding:
     position: 1
     prefix: -f
-```
+~~~
+{: .source}
 
 Boolean types are treated as a flag.  If the input parameter
 "example_flag" is "true", then `prefix` will be added to the
 command line.  If false, no flag is added.
 
-```
+~~~
 example_string:
   type: string
   inputBinding:
     position: 3
     prefix: --example-string
-```
+~~~
+{: .source}
 
 String types appear on the command line as literal values.  The `prefix`
 is optional, if provided, it appears as a separate argument on the
 command line before the parameter .  In the example above, this is
 rendered as `--example-string hello`.
 
-```
+~~~
 example_int:
   type: int
   inputBinding:
     position: 2
     prefix: -i
     separate: false
-```
+~~~
+{: .source}
 
 Integer (and floating point) types appear on the command line with
 decimal text representation.  When the option `separate` is false (the
@@ -111,14 +116,15 @@ default value is true), the prefix and value are combined into a single
 argument.  In the example above, this is rendered as `-i42`.
 
 
-```
+~~~
 example_file:
   type: File?
   inputBinding:
     prefix: --file=
     separate: false
     position: 4
-```
+~~~
+{: .source}
 
 File types appear on the command line as the path to the file.  When the
 parameter type ends with a question mark `?` it indicates that the

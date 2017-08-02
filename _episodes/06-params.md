@@ -18,20 +18,22 @@ fields.
 
 *tar-param.cwl*
 
-```
+~~~
 {% include cwl/tar-param.cwl %}
-```
+~~~
+{: .source}
 
 *tar-param-job.yml*
 
-```
+~~~
 {% include cwl/tar-param-job.yml %}
-```
+~~~
+{: .source}
 
 Create your input files and invoke `cwl-runner` with the tool wrapper and the
 input object on the command line:
 
-```
+~~~
 $ rm hello.tar || true && touch goodbye.txt && tar -cvf hello.tar goodbye.txt
 $ cwl-runner tar-param.cwl tar-param-job.yml
 [job tar-param.cwl] /tmp/tmpwH4ouT$ tar \
@@ -41,29 +43,31 @@ $ cwl-runner tar-param.cwl tar-param-job.yml
 [job tar-param.cwl] completed success
 {
     "example_out": {
-        "checksum": "sha1$da39a3ee5e6b4b0d3255bfef95601890afd80709", 
-        "basename": "goodbye.txt", 
-        "nameroot": "goodbye", 
-        "nameext": ".txt", 
-        "location": "file:///home/me/cwl/user_guide/goodbye.txt", 
-        "path": "/home/me/cwl/user_guide/goodbye.txt", 
-        "class": "File", 
+        "checksum": "sha1$da39a3ee5e6b4b0d3255bfef95601890afd80709",
+        "basename": "goodbye.txt",
+        "nameroot": "goodbye",
+        "nameext": ".txt",
+        "location": "file:///home/me/cwl/user_guide/goodbye.txt",
+        "path": "/home/me/cwl/user_guide/goodbye.txt",
+        "class": "File",
         "size": 0
     }
 }
 Final process status is success
-```
+~~~
+{: .output}
 
 Certain fields permit parameter references which are enclosed in `$(...)`.
 These are evaluated and replaced with value being referenced.
 
-```
+~~~
 outputs:
   example_out:
     type: File
     outputBinding:
       glob: $(inputs.extractfile)
-```
+~~~
+{: .source}
 
 References are written using a subset of Javascript syntax.  In this
 example, `$(inputs.extractfile)`, `$(inputs["extractfile"])`, and

@@ -25,20 +25,22 @@ themselves, or come from examining the content of those files.
 
 *tar.cwl*
 
-```
+~~~
 {% include cwl/tar.cwl %}
-```
+~~~
+{: .source}
 
 *tar-job.yml*
 
-```
+~~~
 {% include cwl/tar-job.yml %}
-```
+~~~
+{: .source}
 
 Next, create a tar file for the example and invoke `cwl-runner` with the tool
 wrapper and the input object on the command line:
 
-```
+~~~
 $ touch hello.txt && tar -cvf hello.tar hello.txt
 $ cwl-runner tar.cwl tar-job.yml
 [job tar.cwl] /tmp/tmpqOeawQ$ tar \
@@ -47,29 +49,31 @@ $ cwl-runner tar.cwl tar-job.yml
 [job tar.cwl] completed success
 {
     "example_out": {
-        "checksum": "sha1$da39a3ee5e6b4b0d3255bfef95601890afd80709", 
-        "basename": "hello.txt", 
-        "nameroot": "hello", 
-        "nameext": ".txt", 
-        "location": "file:///home/me/cwl/user_guide/hello.txt", 
-        "path": "/home/me/cwl/user_guide/hello.txt", 
-        "class": "File", 
+        "checksum": "sha1$da39a3ee5e6b4b0d3255bfef95601890afd80709",
+        "basename": "hello.txt",
+        "nameroot": "hello",
+        "nameext": ".txt",
+        "location": "file:///home/me/cwl/user_guide/hello.txt",
+        "path": "/home/me/cwl/user_guide/hello.txt",
+        "class": "File",
         "size": 0
     }
 }
 Final process status is success
-```
+~~~
+{: .output}
 
 The field `outputBinding` describes how to to set the value of each
 output parameter.
 
-```
+~~~
 outputs:
   example_out:
     type: File
     outputBinding:
       glob: hello.txt
-```
+~~~
+{: .source}
 
 The `glob` field consists of the name of a file in the output directory.
 If you don't know name of the file in advance, you can use a wildcard pattern like `*.txt`.

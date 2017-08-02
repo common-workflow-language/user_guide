@@ -17,20 +17,22 @@ The simplest "hello world" program.  This accepts one input parameter, writes a 
 
 
 *1st-tool.cwl*
-```
+~~~
 {% include cwl/1st-tool.cwl %}
-```
+~~~
+{: .source}
 
 Use a YAML object in a separate file to describe the input of a run:
 
 *echo-job.yml*
-```
+~~~
 {% include cwl/echo-job.yml %}
-```
+~~~
+{: .source}
 
 Now invoke `cwl-runner` with the tool wrapper and the input object on the command line:
 
-```
+~~~
 $ cwl-runner 1st-tool.cwl echo-job.yml
 [job 1st-tool.cwl] /tmp/tmpmM5S_1$ echo \
     'Hello world!'
@@ -39,36 +41,41 @@ Hello world!
 {}
 Final process status is success
 
-```
+~~~
+{: .output}
 
 What's going on here?  Let's break it down:
 
-```
+~~~
 cwlVersion: v1.0
 class: CommandLineTool
-```
+~~~
+{: .source}
 
 The `cwlVersion` field indicates the version of the CWL spec used by the document.  The `class` field indicates this document describes a command line tool.
 
-```
+~~~
 baseCommand: echo
-```
+~~~
+{: .source}
 
 The `baseCommand` provides the name of program that will actually run (`echo`)
 
-```
+~~~
 inputs:
   message:
     type: string
       inputBinding:
         position: 1
-```
+~~~
+{: .source}
 
 The `inputs` section describes the inputs of the tool.  This is a list of input parameters and each parameter includes an identifier, a data type, and optionally an `inputBinding` which describes how this input parameter should appear on the command line.  In this example, the `position` field indicates where it should appear on the command line.
 
-```
+~~~
 outputs: []
-```
+~~~
+{: .source}
 
 This tool has no formal output, so the `outputs` section is an empty list.
 

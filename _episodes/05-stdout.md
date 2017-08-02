@@ -16,20 +16,22 @@ stdout` on the corresponding output parameter.
 
 *stdout.cwl*
 
-```
+~~~
 {% include cwl/stdout.cwl %}
-```
+~~~
+{: .source}
 
 *echo-job.yml*
 
-```
+~~~
 {% include cwl/echo-job.yml %}
-```
+~~~
+{: .source}
 
 Now invoke `cwl-runner` providing the tool wrapper and the input object
 on the command line:
 
-```
+~~~
 $ cwl-runner stdout.cwl echo-job.yml
 [job stdout.cwl] /tmp/tmpE0gTz7$ echo \
     'Hello world!' > /tmp/tmpE0gTz7/output.txt
@@ -48,4 +50,5 @@ $ cwl-runner stdout.cwl echo-job.yml
 }
 Final process status is success
 
-```
+~~~
+{: .output}
