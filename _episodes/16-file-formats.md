@@ -19,7 +19,8 @@ type-checking when creating parameter files.
 For file formats, we recommend referencing existing ontologies (like EDAM in
 our example), reference a local ontology for your institution, or do not add
 a file format initially for quick development before sharing your tool with
-others.
+others. You can browse existing file format listings for IANA [here][IANA] and
+for EDAM [here][EDAM].
 
 Note that for added value `cwltool` can do some basic reasoning based on file
 formats and warn you if there seem to be some obvious mismatches.
@@ -66,3 +67,6 @@ Final process status is success
   }
 }
 ```
+
+[IANA]: https://www.iana.org/assignments/media-types/media-types.xhtml
+[EDAM]: http://www.ebi.ac.uk/ols/ontologies/edam/terms?iri=http%3A%2F%2Fedamontology.org%2Fformat_1915
