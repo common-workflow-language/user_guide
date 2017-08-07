@@ -40,13 +40,13 @@ $schemas:
 s:author:
   - class: s:Person
     s:id: https://orcid.org/0000-0002-6130-1021
-    s:email: dyuen@oicr.on.ca
+    s:email: mailto:dyuen@oicr.on.ca
     s:name: Denis Yuen
 
 s:contributor:
   - class: s:Person
     s:id: http://orcid.org/0000-0002-7681-6415
-    s:email: briandoconnor@gmail.com
+    s:email: mailto:briandoconnor@gmail.com
     s:name: Brian O'Connor
 
 s:citation: https://dx.doi.org/10.6084/m9.figshare.3115156.v2
