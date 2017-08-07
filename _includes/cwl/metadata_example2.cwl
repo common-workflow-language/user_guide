@@ -34,8 +34,6 @@ $namespaces:
   s: https://schema.org/
 
 $schemas:
-- http://dublincore.org/2012/06/14/dcterms.rdf
-- http://xmlns.com/foaf/spec/20140114.rdf
 - https://schema.org/docs/schema_org_rdfa.html
 
 s:author:
