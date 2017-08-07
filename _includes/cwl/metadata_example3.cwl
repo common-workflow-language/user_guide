@@ -18,7 +18,7 @@ inputs:
   bam_input:
     type: File
     doc: The BAM file used as input
-    format: http://edamontology.org/format_2572
+    format: edam:format_2572
     inputBinding:
       position: 1
 
@@ -27,7 +27,7 @@ stdout: output.txt
 outputs:
   report:
     type: File
-    format: http://edamontology.org/format_1964
+    format: edam:format_1964
     outputBinding:
       glob: "*.txt"
     doc: A text file that contains a line count
@@ -35,11 +35,10 @@ outputs:
 baseCommand: ["wc", "-l"]
 
 $namespaces:
-  s: https://schema.org/
+- s: https://schema.org/
+- edam: https://edamontology.org/
 
 $schemas:
-- http://dublincore.org/2012/06/14/dcterms.rdf
-- http://xmlns.com/foaf/spec/20140114.rdf
 - https://schema.org/docs/schema_org_rdfa.html
 
 s:author:
@@ -58,10 +57,10 @@ s:contributor:
     s:email: dyuen@oicr.on.ca
     s:name: Denis Yuen
 
-s:citation: https://figshare.com/articles/Common_Workflow_Language_draft_3/3115156/2
+s:citation: https://dx.doi.org/10.6084/m9.figshare.3115156.v2
 s:codeRepository: https://github.com/common-workflow-language/common-workflow-language
 s:dateCreated: "2016-12-13"
 s:license: https://www.apache.org/licenses/LICENSE-2.0
 
-s:keywords: http://edamontology.org/topic_0091 , http://edamontology.org/topic_0622
+s:keywords: edam:topic_0091 , edam:topic_0622
 s:programmingLanguage: C
