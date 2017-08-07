@@ -1,38 +1,31 @@
 #!/usr/bin/env cwl-runner
-
-class: CommandLineTool
-id: Example tool
-label: Example tool
 cwlVersion: v1.0
-doc: |
-    An example tool demonstrating metadata. Note that this is an example and the metadata is not necessarily consistent.
+class: CommandLineTool
 
-requirements:
-  - class: ShellCommandRequirement
+label: An example tool demonstrating metadata. Note that this is an example and the metadata is not necessarily consistent.
+
 
 hints:
   - class: ResourceRequirement
     coresMin: 4
 
 inputs:
-  bam_input:
+  aligned_sequences:
     type: File
-    doc: The BAM file used as input
+    label: Aligned sequences in BAM format
     format: edam:format_2572
     inputBinding:
       position: 1
+
+baseCommand: [ wc, -l ]
 
 stdout: output.txt
 
 outputs:
   report:
-    type: File
+    type: stdout
     format: edam:format_1964
-    outputBinding:
-      glob: "*.txt"
-    doc: A text file that contains a line count
-
-baseCommand: ["wc", "-l"]
+    label: A text file that contains a line count
 
 $namespaces:
 - s: https://schema.org/
