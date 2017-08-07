@@ -40,7 +40,7 @@ parameterization.
 *sample.json*
 
 ```
-{% include cwl/sample.json %}
+{% include cwl/sample.yml %}
 ```
 
 Now invoke `cwl-runner` with the tool wrapper and the input object on the
