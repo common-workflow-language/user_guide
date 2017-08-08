@@ -22,6 +22,7 @@ outputs:
     format: edam:format_1964
     label: A text file that contains a line count
 
-
 $namespaces:
-    edam: http://edamontology.org/
+  edam: http://edamontology.org/
+$schemas:
+  - http://edamontology.org/EDAM_1.18.owl
