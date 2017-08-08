@@ -22,23 +22,25 @@ used as a step in another CWL workflow, if the workflow engine supports the
 `SubworkflowFeatureRequirement`:
 
 
-```
+~~~
 requirements:
   - class: SubworkflowFeatureRequirement
-```
+~~~
+{: .source}
 
 Here's an example workflow that uses our `1st-workflow.cwl` as a nested
 workflow:
 
-```
+~~~
 {% include cwl/nestedworkflows.cwl %}
-```
+~~~
+{: .source}
 
 A CWL `Workflow` can be used as a `step` just like a `CommandLineTool`, it's CWL
 file is included with `run`. The workflow inputs (`inp` and `ex`) and outputs
 (`classout`) then can be mapped to become the step's input/outputs.
 
-```
+~~~
   compile:
     run: 1st-workflow.cwl
     in:
@@ -47,7 +49,8 @@ file is included with `run`. The workflow inputs (`inp` and `ex`) and outputs
       ex:
         default: "Hello.java"
     out: [classout]
-```
+~~~
+{: .source}
 
 Our `1st-workflow.cwl` was parameterized with workflow inputs, so when running
 it we had to provide a job file to denote the tar file and `*.java` filename.
@@ -65,7 +68,7 @@ dependencies in the job file. So in this workflow we can generate a hard-coded
 `Hello.java` file using the previously mentioned `InitialWorkDirRequirement`
 requirement, before adding it to a tar file.
 
-```
+~~~
   create-tar:
     requirements:
       - class: InitialWorkDirRequirement
@@ -77,13 +80,14 @@ requirement, before adding it to a tar file.
                     System.out.println("Hello from Java");
                 }
               }
-```
+~~~
+{: .source}
 
 In this case our step can assume `Hello.java` rather than be parameterized, so
 we can use a simpler `arguments` form as long as the CWL workflow engine
 supports the `ShellCommandRequirement`:
 
-```
+~~~
   run:
     class: CommandLineTool
     requirements:
@@ -92,7 +96,8 @@ supports the `ShellCommandRequirement`:
       - shellQuote: false
         valueFrom: >
           tar cf hello.tar Hello.java
-```
+~~~
+{: .source}
 
 Note the use of `shellQuote: false` here, otherwise the shell will try to
 execute the quoted binary `"tar cf hello.tar Hello.java"`.

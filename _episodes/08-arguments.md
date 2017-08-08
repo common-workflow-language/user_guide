@@ -27,20 +27,22 @@ instead.
 
 *arguments.cwl*
 
-```
+~~~
 {% include cwl/arguments.cwl %}
-```
+~~~
+{: .source}
 
 *arguments-job.yml*
 
-```
+~~~
 {% include cwl/arguments-job.yml %}
-```
+~~~
+{: .source}
 
 Now create a sample Java file and invoke `cwl-runner` providing the tool wrapper
 and the input object on the command line:
 
-```
+~~~
 $ echo "public class Hello {}" > Hello.java
 $ cwl-runner arguments.cwl arguments-job.yml
 [job arguments.cwl] /tmp/tmpwYALo1$ docker \
@@ -70,14 +72,16 @@ Final process status is success
   }
 }
 
-```
+~~~
+{: .output}
 
 Here we use the `arguments` field to add an additional argument to the
 command line that isn't tied to a specific input parameter.
 
-```
+~~~
 arguments: ["-d", $(runtime.outdir)]
-```
+~~~
+{: .source}
 
 This example references a runtime parameter.  Runtime parameters provide
 information about the hardware or software environment when the tool is

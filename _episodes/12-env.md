@@ -18,20 +18,22 @@ the tool using `EnvVarRequirement`.
 
 *env.cwl*
 
-```
+~~~
 {% include cwl/env.cwl %}
-```
+~~~
+{: .source}
 
 *echo-job.yml*
 
-```
+~~~
 {% include cwl/echo-job.yml %}
-```
+~~~
+{: .source}
 
 Now invoke `cwl-runner` with the tool wrapper and the input object on the
 command line:
 
-```
+~~~
 $ cwl-runner env.cwl echo-job.yml
 [job 140710387785808] /home/example$ env
 PATH=/bin:/usr/bin:/usr/local/bin
@@ -39,4 +41,5 @@ HELLO=Hello world!
 TMPDIR=/tmp/tmp63Obpk
 Final process status is success
 {}
-```
+~~~
+{: .output}

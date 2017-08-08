@@ -26,20 +26,22 @@ This example runs a simple Node.js script inside a Docker container.
 
 *docker.cwl*
 
-```
+~~~
 {% include cwl/docker.cwl %}
-```
+~~~
+{: .source}
 
 *docker-job.yml*
 
-```
+~~~
 {% include cwl/docker-job.yml %}
-```
+~~~
+{: .source}
 
 Provide a "hello.js" and invoke `cwl-runner` providing the tool wrapper and the
 input object on the command line:
 
-```
+~~~
 $ echo "console.log(\"Hello World\");" > hello.js
 $ cwl-runner docker.cwl docker-job.yml
 [job docker.cwl] /tmp/tmpgugLND$ docker \
@@ -61,7 +63,8 @@ Hello World
 [job docker.cwl] completed success
 {}
 Final process status is success
-```
+~~~
+{: .output}
 
 Notice the CWL runner has constructed a Docker command line to run the
 script.  One of the responsibilities of the CWL runner is to adjust the paths of
