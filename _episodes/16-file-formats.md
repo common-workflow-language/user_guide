@@ -42,7 +42,7 @@ parameterization.
 *sample.json*
 
 ~~~
-{% include cwl/sample.json %}
+{% include cwl/sample.yml %}
 ~~~
 {: .source}
 
