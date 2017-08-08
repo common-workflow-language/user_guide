@@ -1,51 +1,37 @@
 #!/usr/bin/env cwl-runner
-
-class: CommandLineTool
-id: Example tool
-label: Example tool
 cwlVersion: v1.0
-doc: |
-    An example tool demonstrating metadata. Note that this is an example and the metadata is not necessarily consistent.
+class: CommandLineTool
 
-requirements:
-  - class: ShellCommandRequirement
+label: An example tool demonstrating metadata.
+doc: Note that this is an example and the metadata is not necessarily consistent.
 
 inputs:
-  bam_input:
+  aligned_sequences:
     type: File
-    doc: The BAM file used as input
+    label: Aligned sequences in BAM format
     format: edam:format_2572
     inputBinding:
       position: 1
+
+baseCommand: [ wc, -l ]
 
 stdout: output.txt
 
 outputs:
   report:
-    type: File
+    type: stdout
     format: edam:format_1964
-    outputBinding:
-      glob: "*.txt"
-    doc: A text file that contains a line count
-
-baseCommand: ["wc", "-l"]
-
-$namespaces:
-  s: https://schema.org/
-  edam: http://edamontology.org/
-
-$schemas:
-- https://schema.org/docs/schema_org_rdfa.html
+    label: A text file that contains a line count
 
 s:author:
   - class: s:Person
-    s:id: https://orcid.org/0000-0002-6130-1021
+    s:identifier: https://orcid.org/0000-0002-6130-1021
     s:email: mailto:dyuen@oicr.on.ca
     s:name: Denis Yuen
 
 s:contributor:
   - class: s:Person
-    s:id: http://orcid.org/0000-0002-7681-6415
+    s:identifier: http://orcid.org/0000-0002-7681-6415
     s:email: mailto:briandoconnor@gmail.com
     s:name: Brian O'Connor
 
@@ -53,3 +39,11 @@ s:citation: https://dx.doi.org/10.6084/m9.figshare.3115156.v2
 s:codeRepository: https://github.com/common-workflow-language/common-workflow-language
 s:dateCreated: "2016-12-13"
 s:license: https://www.apache.org/licenses/LICENSE-2.0
+
+$namespaces:
+  s: https://schema.org/
+  edam: http://edamontology.org/
+
+$schemas:
+ - https://schema.org/docs/schema_org_rdfa.html
+ - http://edamontology.org/EDAM_1.18.owl
