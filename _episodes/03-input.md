@@ -31,6 +31,7 @@ types and appearing on the command line in different ways:
 ~~~
 {% include cwl/inp.cwl %}
 ~~~
+{: .source}
 
 *inp-job.yml*
 
