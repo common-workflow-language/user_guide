@@ -19,7 +19,8 @@ type-checking when creating parameter files.
 For file formats, we recommend referencing existing ontologies (like EDAM in
 our example), reference a local ontology for your institution, or do not add
 a file format initially for quick development before sharing your tool with
-others.
+others. You can browse existing file format listings for IANA [here][IANA] and
+for EDAM [here][EDAM].
 
 Note that for added value `cwltool` can do some basic reasoning based on file
 formats and warn you if there seem to be some obvious mismatches.
@@ -49,12 +50,12 @@ Now invoke `cwl-runner` with the tool wrapper and the input object on the
 command line:
 
 ~~~
-$ cwltool metadata_example.cwl sample.json
+$ cwltool metadata_example.cwl sample.yml
 /usr/local/bin/cwltool 1.0.20161114152756
 Resolved 'metadata_example.cwl' to 'file:///media/large_volume/testing/cwl_tutorial2/metadata_example.cwl'
 [job metadata_example.cwl] /tmp/tmpNWyAd6$ /bin/sh \
     -c \
-    'wc' '-l' '/tmp/tmpBf6m9u/stge293ac74-3d42-45c9-b506-dd35ea3e6eea/rna.SRR948778.bam' > /tmp/tmpNWyAd6/output.txt
+    'wc' '-l' '/tmp/tmpBf6m9u/stge293ac74-3d42-45c9-b506-dd35ea3e6eea/file-formats.bam' > /tmp/tmpNWyAd6/output.txt
 Final process status is success
 {
   "report": {
@@ -69,3 +70,6 @@ Final process status is success
 }
 ~~~
 {: .output}
+
+[IANA]: https://www.iana.org/assignments/media-types/media-types.xhtml
+[EDAM]: http://www.ebi.ac.uk/ols/ontologies/edam/terms?iri=http%3A%2F%2Fedamontology.org%2Fformat_1915

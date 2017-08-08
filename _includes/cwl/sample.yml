@@ -1,0 +1,7 @@
+bam_input:
+    class: File
+    format: http://edamontology.org/format_2572
+    path: file-formats.bam
+bamstats_report:
+    class: File
+    path: /tmp/bamstats_report.zip
