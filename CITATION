@@ -4,3 +4,15 @@ Our preferred DOI is http://doi.org/10.5281/zenodo.840129
 
 The latest DOI is:
 [![DOI](https://zenodo.org/badge/89621457.svg)](https://zenodo.org/badge/latestdoi/89621457)
+
+#### BibTex
+
+@misc{greg_wilson_2017_840130,
+  author       = {Toby Hodges and
+                  Michael R. Crusoe},
+  title        = {Common Workflow Language User Guide},
+  month        = aug,
+  year         = 2017,
+  doi          = {10.5281/zenodo.840129},
+  url          = {https://doi.org/10.5281/zenodo.840129}
+}
