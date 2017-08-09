@@ -1,0 +1,5 @@
+directory_handling: recurse
+search_pattern: abc
+search_target:
+    class: Directory
+    path: .
