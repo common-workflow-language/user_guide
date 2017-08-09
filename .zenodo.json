@@ -14,7 +14,7 @@
             "affiliation": "Common Workflow Language project",
             "orcid": "http://orcid.org/0000-0002-2961-9670",
             "name": "Michael R. Crusoe"
-        },
+        }
     ],
     "access_right": "open",
     "notes": "Based off of the excellent Software/Data Carpentry templates: https://github.com/swcarpentry/styles/",
