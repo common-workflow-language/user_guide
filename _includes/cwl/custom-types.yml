@@ -1,1 +1,3 @@
-proteinFile: test_proteins.fasta
+proteinFile:
+    class: File
+    path: test_proteins.fasta

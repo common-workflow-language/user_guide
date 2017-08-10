@@ -16,8 +16,8 @@ requirements:
     coresMin: 3
   SchemaDefRequirement:
     types:
-      - $import: InterProScan-apps.yaml
-      - $import: InterProScan-protein_formats.yaml
+      - $import: InterProScan-apps.yml
+
 hints:
   SoftwareRequirement:
     packages:
@@ -30,12 +30,8 @@ inputs:
     type: File
     inputBinding:
       prefix: --input
-  # outputFileType:
-  #   type: InterProScan-protein_formats.yaml#protein_formats
-  #   inputBinding:
-  #     prefix: --formats
   applications:
-    type: InterProScan-apps.yaml#apps[]?
+    type: InterProScan-apps.yml#apps[]?
     inputBinding:
       itemSeparator: ','
       prefix: --applications
