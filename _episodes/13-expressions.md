@@ -43,7 +43,7 @@ job file:
 
 `empty.yml` contains a description of an empty JSON object. JSON objects
 descriptions are contained inside curly brackets `{}`, so an empty object is
-represented simply by a set of empyty brackets.
+represented simply by a set of empty brackets.
 
 We can then run `expression.cwl`:
 
