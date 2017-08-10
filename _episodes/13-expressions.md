@@ -56,6 +56,10 @@ Final process status is success
 ~~~
 {: .output}
 
+Note that requirements must be provided as an array, with each entry (in this
+case, only `class: InlineJavascriptRequirement`) marked by a `-`, as are the
+additional command line arguments.
+
 You can only use expressions in certain fields.  These are:
 
 - `filename`
