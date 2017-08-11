@@ -42,10 +42,10 @@ Depending on your CWL runner, these hints may be used to check
 that required software is installed and available before the job is run (note
 that currently the reference implementation does not do this).
 
-As well as a version number, a unique identifier for the tool is given in the
-form of an [RRID][rrid]. Resources with RRIDs can be looked up in the
+As well as a version number, a unique resource identifier (URI) for the tool is
+given in the form of an [RRID][rrid]. Resources with RRIDs can be looked up in the
 [SciCrunch][scicrunch] registry, which provides a portal for finding, tracking,
-and referring to scientfic reseources consistently. If you want to specify a
+and referring to scientific resources consistently. If you want to specify a
 tool as a `SoftwareRequirement`, search for the tool on SciCrunch and use the
 RRID that it has been assigned in the registry. You can use this RRID to refer
 to the tool (via [identifiers.org][identifiers]) in the `specs` field of your
