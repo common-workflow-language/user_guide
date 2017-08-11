@@ -10,9 +10,7 @@ objectives:
 - "Learn how to use SciCrunch to retrieve a unique identifier for a tool/version
 that is required."
 keypoints:
-- "Metadata can be provided in CWL descriptions."
-- "Developers should provide a minimal amount of authorship information to
-encourage correct citation."
+- "Software requirements should be specified under `hints:SoftwareRequirement`."
 ---
 Often tool descriptions will be written for a specific version of a software. To
 make it easier for others to make use of your descriptions, you can include a
