@@ -34,7 +34,7 @@ It is a good example of a number of good practices in CWL.
 *custom-types.yml*
 
 ~~~
-{% include cwl/tar-param-job.yml %}
+{% include cwl/custom-types.yml %}
 ~~~
 {: .source}
 
@@ -62,7 +62,10 @@ within that file (`apps`) that defines the custom type. The square brackets
 
 The contents of the YAML file describing the custom type are given below:
 
+~~~
 {% include cwl/InterProScan-apps.yml %}
+~~~
+{: .source}
 
 In order for the custom type to be used in the CWL description, it must be
 imported. Imports are described in `requirements:SchemaDefRequirement`, as
