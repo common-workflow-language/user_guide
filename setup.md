@@ -18,5 +18,5 @@ also need:
   - Java compiler
   - Docker (optional)
 
-[ref-imp]: https://github.com/common-workflow-language/cwltool
+[ref-imp]: https://github.com/common-workflow-language/cwltool#install
 [commonwl]: http://www.commonwl.org/
