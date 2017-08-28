@@ -31,7 +31,8 @@ See the [list of recommended practices][rec-practices].__
 ~~~
 {: .source}
 
-As this tool does not require any `inputs` we can run it with an (almost) empty job file:
+As this tool does not require any `inputs` we can run it with an (almost) empty
+job file:
 
 *empty.yml*
 
@@ -39,6 +40,10 @@ As this tool does not require any `inputs` we can run it with an (almost) empty 
 {% include cwl/empty.yml %}
 ~~~
 {: .source}
+
+`empty.yml` contains a description of an empty JSON object. JSON objects
+descriptions are contained inside curly brackets `{}`, so an empty object is
+represented simply by a set of empty brackets.
 
 We can then run `expression.cwl`:
 
@@ -50,6 +55,10 @@ Final process status is success
 {}
 ~~~
 {: .output}
+
+Note that requirements must be provided as an array, with each entry (in this
+case, only `class: InlineJavascriptRequirement`) marked by a `-`. The same
+syntax is used to describe the additional command line arguments.
 
 You can only use expressions in certain fields.  These are:
 

@@ -54,5 +54,7 @@ In addition, the `itemSeperator` field, if provided, specifies that array
 values should be concatenated into a single argument separated by the item
 separator string.
 
-You can specify arrays of arrays, arrays of records, and other complex
-types.
+Note that the arrays of inputs are specified inside square brackets `[]` in `array-inputs-job.yml`. Arrays can also be expressed over multiple lines, where
+array values that are not defined with an associated key is marked by a leading
+`-`, as demonstrated in the next lesson. 
+You can specify arrays of arrays, arrays of records, and other complex types.

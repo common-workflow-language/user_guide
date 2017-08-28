@@ -22,7 +22,7 @@ The simplest "hello world" program.  This accepts one input parameter, writes a 
 ~~~
 {: .source}
 
-Use a YAML object in a separate file to describe the input of a run:
+Use a YAML or JSON object in a separate file to describe the input of a run:
 
 *echo-job.yml*
 ~~~
