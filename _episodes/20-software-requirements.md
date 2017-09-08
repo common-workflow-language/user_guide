@@ -37,8 +37,8 @@ hints:
 {: .source}
 
 Depending on your CWL runner, these hints may be used to check
-that required software is installed and available before the job is run (note
-that currently the reference implementation does not do this).
+that required software is installed and available before the job is run. To enable
+these checks with the reference implementation, use the [dependency resolvers configuration][dependencies].
 
 As well as a version number, a unique resource identifier (URI) for the tool is
 given in the form of an [RRID][rrid]. Resources with RRIDs can be looked up in the
@@ -52,4 +52,5 @@ requirement description.
 
 [rrid]: https://scicrunch.org/resources/about/resource
 [scicrunch]: https://scicrunch.org/
+[dependencies]: https://github.com/common-workflow-language/cwltool#leveraging-softwarerequirements-beta
 [identifiers]: https://identifiers.org/
