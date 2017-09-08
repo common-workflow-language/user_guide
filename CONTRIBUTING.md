@@ -47,22 +47,17 @@ and to meet some of our community members.
 
 1.  If you wish to change this lesson,
     please work in <https://github.com/common-workflow-language/user_guide>,
-    which can be viewed at <https://swcarpentry.github.io/FIXME>.
+    which can be viewed at <http://www.commmonwl.org/user_guide/>.
 
 2.  If you wish to change the example lesson,
     please work in <https://github.com/swcarpentry/lesson-example>,
     which documents the format of our lessons
     and can be viewed at <https://swcarpentry.github.io/lesson-example>.
 
-3.  If you wish to change the template used for workshop websites,
-    please work in <https://github.com/swcarpentry/workshop-template>.
-    The home page of that repository explains how to set up workshop websites,
-    while the extra pages in <https://swcarpentry.github.io/workshop-template>
-    provide more background on our design choices.
-
-4.  If you wish to change CSS style files, tools,
+3.  If you wish to change CSS style files, tools,
     or HTML boilerplate for lessons or workshops stored in `_includes` or `_layouts`,
-    please work in <https://github.com/swcarpentry/styles>.
+    please work in <https://github.com/swcarpentry/styles> if those changes are
+    generic or here if they are specific to the CWL user guide.
 
 ## What to Contribute
 
@@ -122,6 +117,7 @@ In brief:
     5.  If you receive feedback,
         make changes on your desktop and push to your branch on GitHub:
         the pull request will update automatically.
+3. Please add yourself to the authors file if you aren't already present: https://github.com/common-workflow-language/user_guide/blob/gh-pages/.zenodo.json
 
 Each lesson has two maintainers who review issues and pull requests
 or encourage others to do so.
