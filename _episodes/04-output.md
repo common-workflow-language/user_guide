@@ -76,4 +76,4 @@ outputs:
 {: .source}
 
 The `glob` field consists of the name of a file in the output directory.
-If you don't know name of the file in advance, you can use a wildcard pattern like `*.txt`.
+If you don't know name of the file in advance, you can use a wildcard pattern like `glob: '*.txt'`.
