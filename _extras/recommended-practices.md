@@ -38,6 +38,8 @@ Below are a set of recommended good practices to keep in mind when writing a Com
 
 &#9744; Give the tool description to a colleague (preferably at a different institution) to test and provide feedback.
 
+&#9744; CWL implementations which also implement [`SubworkflowFeatureRequirement`][subworkflow] can support nesting workflows as a step within others. Complex workflows with individual components which can be abstracted should utilise this to make their workflow modular and allow sections of them to be easily reused.
+
 [apache-license]: https://www.apache.org/licenses/LICENSE-2.0#apply
 [license-example]: https://github.com/ProteinsWebTeam/ebi-metagenomics-cwl/blob/master/workflows/emg-assembly.cwl#L200
 [scicrunch-issue]: https://github.com/common-workflow-language/common-workflow-language/issues/scicrunch.org
@@ -45,3 +47,4 @@ Below are a set of recommended good practices to keep in mind when writing a Com
 [iana-types]: http://www.iana.org/assignments/media-types/media-types.xhtml
 [file-prop]: http://www.commonwl.org/v1.0/CommandLineTool.html#File
 [orcid]: https://orcid.org
+[subworkflow]: http://www.commonwl.org/v1.0/Workflow.html#SubworkflowFeatureRequirement
