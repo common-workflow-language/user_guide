@@ -18,19 +18,19 @@ inputs:
             prefix: -B
   exclusive_parameters:
     type:
-      type: record
-      name: itemC
-      fields:
-        itemC:
-          type: string
-          inputBinding:
-            prefix: -C
-      type: record
-      name: itemD
-      fields:
-        itemD:
-          type: string
-          inputBinding:
-            prefix: -D
+      - type: record
+        name: itemC
+        fields:
+          itemC:
+            type: string
+            inputBinding:
+              prefix: -C
+      - type: record
+        name: itemD
+        fields:
+          itemD:
+            type: string
+            inputBinding:
+              prefix: -D
 outputs: []
 baseCommand: echo
