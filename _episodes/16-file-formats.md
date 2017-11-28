@@ -46,6 +46,14 @@ parameterization.
 ~~~
 {: .source}
 
+___Note:___ To follow the example below, you need to download the example input file, *file-formats.bam*. The file is available from https://github.com/common-workflow-language/user_guide/blob/gh-pages/_includes/cwl/file-formats.bam and can be downloaded e.g. via `wget`:
+
+~~~
+wget wget https://github.com/common-workflow-language/user_guide/blob/gh-pages/_includes/cwl/file-formats.bam
+~~~
+{: .source}
+
+
 Now invoke `cwl-runner` with the tool wrapper and the input object on the
 command line:
 
