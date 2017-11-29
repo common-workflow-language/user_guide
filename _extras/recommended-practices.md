@@ -8,7 +8,16 @@ Below are a set of recommended good practices to keep in mind when writing a Com
 
 &#9744; No `type: string` parameters for names of input or reference files/directories; use `type: File` or `type: Directory` as appropriate.
 
-&#9744; Include a license that allows for re-use by anyone, e.g. [Apache 2.0][apache-license]. If possible, the license should be specified with its corresponding [SPDX identifier][spdx]. For non-standard licenses without an SPDX identifier, provide a URL. [Example of license inclusion][license-example].
+&#9744; Include a license that allows for re-use by anyone, e.g. [Apache 2.0][apache-license]. If possible, the license should be specified with its corresponding [SPDX identifier][spdx]. Construct the metadata field for the licence by providing a URL of the form `https://spdx.org/licenses/[SPDX-ID]` where `SPDX-ID` is the taken from the list of identifiers linked above. See the example snippet below for guidance. For non-standard licenses without an SPDX identifier, provide a URL to the license. 
+
+_Example of metadata field for license with SPDX identifier:_
+~~~
+$namespaces:
+  s: http://schema.org/
+s:license: https://spdx.org/licenses/Apache-2.0
+# other s: declarations
+~~~
+{: .source}
 
 &#9744; Include [attribution information][license-example] for the author(s) of the CWL tool or workflow description. Use  unambiguous identifiers like [ORCID][orcid].
 
