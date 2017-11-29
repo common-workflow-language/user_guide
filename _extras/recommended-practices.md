@@ -51,7 +51,7 @@ For more examples of providing metadata within CWL descriptions, see the [Metada
 
 &#9744; CWL implementations which also implement [`SubworkflowFeatureRequirement`][subworkflow] can support nesting workflows as a step within others. Complex workflows with individual components which can be abstracted should utilise this to make their workflow modular and allow sections of them to be easily reused.
 
-[apache-license]: https://www.apache.org/licenses/LICENSE-2.0#apply
+[apache-license]: https://spdx.org/licenses/Apache-2.0.html
 [license-example]: https://github.com/ProteinsWebTeam/ebi-metagenomics-cwl/blob/master/workflows/emg-assembly.cwl#L200
 [scicrunch-issue]: https://github.com/common-workflow-language/common-workflow-language/issues/scicrunch.org
 [edam-example]: http://edamontology.org/format_1915
