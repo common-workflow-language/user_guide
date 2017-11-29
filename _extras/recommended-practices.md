@@ -38,7 +38,7 @@ Below are a set of recommended good practices to keep in mind when writing a Com
 
 &#9744; Give the tool description to a colleague (preferably at a different institution) to test and provide feedback.
 
-&#9744; CWL implementations which also implement [`SubworkflowFeatureRequirement`][subworkflow] can support nesting workflows as a step within others. Complex workflows with individual components which can be abstracted should utilise this to make their workflow modular and allow sections of them to be easily reused.
+&#9744; Complex workflows with individual components which can be abstracted should utilise the [`SubworkflowFeatureRequirement`][subworkflow] to make their workflow modular and allow sections of them to be easily reused.
 
 [apache-license]: https://www.apache.org/licenses/LICENSE-2.0#apply
 [license-example]: https://github.com/ProteinsWebTeam/ebi-metagenomics-cwl/blob/master/workflows/emg-assembly.cwl#L200
