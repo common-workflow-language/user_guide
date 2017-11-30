@@ -18,14 +18,14 @@ rather than the command line parameters.  To do this, use
 *createfile.cwl*
 
 ~~~
-{% include cwl/createfile.cwl %}
+{% include cwl/14-runtime/createfile.cwl %}
 ~~~
 {: .source}
 
 *echo-job.yml*
 
 ~~~
-{% include cwl/echo-job.yml %}
+{% include cwl/14-runtime/echo-job.yml %}
 ~~~
 {: .source}
 

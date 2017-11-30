@@ -32,7 +32,7 @@ Here's an example workflow that uses our `1st-workflow.cwl` as a nested
 workflow:
 
 ~~~
-{% include cwl/nestedworkflows.cwl %}
+{% include cwl/22-nested-workflow/nestedworkflows.cwl %}
 ~~~
 {: .source}
 

@@ -19,14 +19,14 @@ fields.
 *tar-param.cwl*
 
 ~~~
-{% include cwl/tar-param.cwl %}
+{% include cwl/06-params/tar-param.cwl %}
 ~~~
 {: .source}
 
 *tar-param-job.yml*
 
 ~~~
-{% include cwl/tar-param-job.yml %}
+{% include cwl/06-params/tar-param-job.yml %}
 ~~~
 {: .source}
 

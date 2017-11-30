@@ -26,7 +26,7 @@ and workflows. This example includes metadata allowing others to cite your tool.
 *metadata_example2.cwl*
 
 ~~~
-{% include cwl/metadata_example2.cwl %}
+{% include cwl/17-metadata/metadata_example2.cwl %}
 ~~~
 {: .source}
 
@@ -40,7 +40,7 @@ requirements in order to use the tool, and a few more metadata fields.
 *metadata_example3.cwl*
 
 ~~~
-{% include cwl/metadata_example3.cwl %}
+{% include cwl/17-metadata/metadata_example3.cwl %}
 ~~~
 {: .source}
 

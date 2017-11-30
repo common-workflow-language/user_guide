@@ -28,14 +28,14 @@ instead.
 *arguments.cwl*
 
 ~~~
-{% include cwl/arguments.cwl %}
+{% include cwl/08-arguments/arguments.cwl %}
 ~~~
 {: .source}
 
 *arguments-job.yml*
 
 ~~~
-{% include cwl/arguments-job.yml %}
+{% include cwl/08-arguments/arguments-job.yml %}
 ~~~
 {: .source}
 

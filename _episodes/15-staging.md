@@ -21,14 +21,14 @@ input file from its leading directory path.
 *linkfile.cwl*
 
 ~~~
-{% include cwl/linkfile.cwl %}
+{% include cwl/15-staging/linkfile.cwl %}
 ~~~
 {: .source}
 
 *arguments-job.yml*
 
 ~~~
-{% include cwl/arguments-job.yml %}
+{% include cwl/15-staging/arguments-job.yml %}
 ~~~
 {: .source}
 

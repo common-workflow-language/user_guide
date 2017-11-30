@@ -28,7 +28,7 @@ formats and warn you if there seem to be some obvious mismatches.
 *metadata_example.cwl*
 
 ~~~
-{% include cwl/metadata_example.cwl %}
+{% include cwl/16-file-formats/metadata_example.cwl %}
 ~~~
 {: .source}
 
@@ -42,15 +42,15 @@ parameterization.
 *sample.json*
 
 ~~~
-{% include cwl/sample.yml %}
+{% include cwl/16-file-formats/sample.yml %}
 ~~~
 {: .source}
 
-___Note:___ To follow the example below, you need to download the example input file, *file-formats.bam*. The file is available from [https://github.com/common-workflow-language/user_guide/raw/gh-pages/_includes/cwl/file-formats.bam
-](https://github.com/common-workflow-language/user_guide/raw/gh-pages/_includes/cwl/file-formats.bam) and can be downloaded e.g. via `wget`:
+___Note:___ To follow the example below, you need to download the example input file, *file-formats.bam*. The file is available from [https://github.com/common-workflow-language/user_guide/raw/gh-pages/_includes/cwl/16-file-formats/file-formats.bam
+](https://github.com/common-workflow-language/user_guide/raw/gh-pages/_includes/cwl/16-file-formats/file-formats.bam) and can be downloaded e.g. via `wget`:
 
 ~~~
-wget https://github.com/common-workflow-language/user_guide/raw/gh-pages/_includes/cwl/file-formats.bam
+wget https://github.com/common-workflow-language/user_guide/raw/gh-pages/_includes/cwl/16-file-formats/file-formats.bam
 ~~~
 {: .source}
 

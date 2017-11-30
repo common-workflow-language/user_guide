@@ -24,14 +24,14 @@ data types that may appear in the array.
 *array-inputs.cwl*
 
 ~~~
-{% include cwl/array-inputs.cwl %}
+{% include cwl/09-array-inputs/array-inputs.cwl %}
 ~~~
 {: .source}
 
 *array-inputs-job.yml*
 
 ~~~
-{% include cwl/array-inputs-job.yml %}
+{% include cwl/09-array-inputs/array-inputs-job.yml %}
 ~~~
 {: .source}
 

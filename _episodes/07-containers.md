@@ -27,14 +27,14 @@ This example runs a simple Node.js script inside a Docker container.
 *docker.cwl*
 
 ~~~
-{% include cwl/docker.cwl %}
+{% include cwl/07-containers/docker.cwl %}
 ~~~
 {: .source}
 
 *docker-job.yml*
 
 ~~~
-{% include cwl/docker-job.yml %}
+{% include cwl/07-containers/docker-job.yml %}
 ~~~
 {: .source}
 
