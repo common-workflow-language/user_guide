@@ -38,6 +38,13 @@ It is a good example of a number of good practices in CWL.
 ~~~
 {: .source}
 
+___Note:___ To follow the example below, you need to download the example input file, *test_proteins.fasta*. The file is available from [https://github.com/common-workflow-language/user_guide/raw/gh-pages/_includes/cwl/test_proteins.fasta](https://github.com/common-workflow-language/user_guide/raw/gh-pages/_includes/cwl/test_proteins.fasta) and can be downloaded e.g. via `wget`:
+
+~~~
+wget https://github.com/common-workflow-language/user_guide/raw/gh-pages/_includes/cwl/test_proteins.fasta
+~~~
+{: .source}
+
 On line 34, in `inputs:applications`, a list of applications to be used in the
 search are imported as a custom object:
 
