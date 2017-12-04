@@ -59,7 +59,7 @@ The reference to a custom type is a combination of the name of the file in which
 the object is defined (`InterProScan-apps.yml`) and the name of the object
 within that file (`apps`) that defines the custom type. The square brackets `[]`
 mean that an array of the preceding type is expected, in this case the `apps`
-type from the imported `InterProScan-apps.yaml` file
+type from the imported `InterProScan-apps.yml` file
 
 The contents of the YAML file describing the custom type are given below:
 
