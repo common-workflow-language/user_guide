@@ -8,7 +8,18 @@ Below are a set of recommended good practices to keep in mind when writing a Com
 
 &#9744; No `type: string` parameters for names of input or reference files/directories; use `type: File` or `type: Directory` as appropriate.
 
-&#9744; Include a license that allows for re-use by anyone, e.g. [Apache 2.0][apache-license]. [Example of license inclusion][license-example].
+&#9744; Include a license that allows for re-use by anyone, e.g. [Apache 2.0][apache-license]. If possible, the license should be specified with its corresponding [SPDX identifier][spdx]. Construct the metadata field for the licence by providing a URL of the form `https://spdx.org/licenses/[SPDX-ID]` where `SPDX-ID` is the taken from the list of identifiers linked above. See the example snippet below for guidance. For non-standard licenses without an SPDX identifier, provide a URL to the license.
+
+_Example of metadata field for license with SPDX identifier:_
+~~~
+$namespaces:
+  s: http://schema.org/
+s:license: https://spdx.org/licenses/Apache-2.0
+# other s: declarations
+~~~
+{: .source}
+
+For more examples of providing metadata within CWL descriptions, see the [Metadata and Authorship section][metadata-lesson] of this User Guide.
 
 &#9744; Include [attribution information][license-example] for the author(s) of the CWL tool or workflow description. Use  unambiguous identifiers like [ORCID][orcid].
 
@@ -40,7 +51,7 @@ Below are a set of recommended good practices to keep in mind when writing a Com
 
 &#9744; Complex workflows with individual components which can be abstracted should utilise the [`SubworkflowFeatureRequirement`][subworkflow] to make their workflow modular and allow sections of them to be easily reused.
 
-[apache-license]: https://www.apache.org/licenses/LICENSE-2.0#apply
+[apache-license]: https://spdx.org/licenses/Apache-2.0.html
 [license-example]: https://github.com/ProteinsWebTeam/ebi-metagenomics-cwl/blob/master/workflows/emg-assembly.cwl#L200
 [scicrunch-issue]: https://github.com/common-workflow-language/common-workflow-language/issues/scicrunch.org
 [edam-example]: http://edamontology.org/format_1915
@@ -48,3 +59,4 @@ Below are a set of recommended good practices to keep in mind when writing a Com
 [file-prop]: http://www.commonwl.org/v1.0/CommandLineTool.html#File
 [orcid]: https://orcid.org
 [subworkflow]: http://www.commonwl.org/v1.0/Workflow.html#SubworkflowFeatureRequirement
+[metadata-lesson]: /user_guide/17-metadata/

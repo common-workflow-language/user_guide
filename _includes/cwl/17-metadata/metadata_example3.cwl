@@ -42,7 +42,7 @@ s:contributor:
 s:citation: https://dx.doi.org/10.6084/m9.figshare.3115156.v2
 s:codeRepository: https://github.com/common-workflow-language/common-workflow-language
 s:dateCreated: "2016-12-13"
-s:license: https://www.apache.org/licenses/LICENSE-2.0
+s:license: https://spdx.org/licenses/Apache-2.0 
 
 s:keywords: edam:topic_0091 , edam:topic_0622
 s:programmingLanguage: C
