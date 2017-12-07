@@ -16,14 +16,14 @@ You can also capture multiple output files into an array of files using `glob`.
 *array-outputs.cwl*
 
 ~~~
-{% include cwl/array-outputs.cwl %}
+{% include cwl/10-array-outputs/array-outputs.cwl %}
 ~~~
 {: .source}
 
 *array-outputs-job.yml*
 
 ~~~
-{% include cwl/array-outputs-job.yml %}
+{% include cwl/10-array-outputs/array-outputs-job.yml %}
 ~~~
 {: .source}
 

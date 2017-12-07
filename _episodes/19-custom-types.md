@@ -27,14 +27,14 @@ It is a good example of a number of good practices in CWL.
 *custom-types.cwl*
 
 ~~~
-{% include cwl/custom-types.cwl %}
+{% include cwl/19-custom-types/custom-types.cwl %}
 ~~~
 {: .source}
 
 *custom-types.yml*
 
 ~~~
-{% include cwl/custom-types.yml %}
+{% include cwl/19-custom-types/custom-types.yml %}
 ~~~
 {: .source}
 
@@ -71,7 +71,7 @@ type from the imported `InterProScan-apps.yml` file
 The contents of the YAML file describing the custom type are given below:
 
 ~~~
-{% include cwl/InterProScan-apps.yml %}
+{% include cwl/19-custom-types/InterProScan-apps.yml %}
 ~~~
 {: .source}
 

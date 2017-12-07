@@ -26,14 +26,14 @@ themselves, or come from examining the content of those files.
 *tar.cwl*
 
 ~~~
-{% include cwl/tar.cwl %}
+{% include cwl/04-output/tar.cwl %}
 ~~~
 {: .source}
 
 *tar-job.yml*
 
 ~~~
-{% include cwl/tar-job.yml %}
+{% include cwl/04-output/tar-job.yml %}
 ~~~
 {: .source}
 

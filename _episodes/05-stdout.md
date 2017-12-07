@@ -17,14 +17,14 @@ stdout` on the corresponding output parameter.
 *stdout.cwl*
 
 ~~~
-{% include cwl/stdout.cwl %}
+{% include cwl/05-stdout/stdout.cwl %}
 ~~~
 {: .source}
 
 *echo-job.yml*
 
 ~~~
-{% include cwl/echo-job.yml %}
+{% include cwl/05-stdout/echo-job.yml %}
 ~~~
 {: .source}
 
