@@ -19,14 +19,14 @@ parameters together to describe these two conditions.
 *record.cwl*
 
 ~~~
-{% include cwl/record.cwl %}
+{% include cwl/11-records/record.cwl %}
 ~~~
 {: .source}
 
 *record-job1.yml*
 
 ~~~
-{% include cwl/record-job1.yml %}
+{% include cwl/11-records/record-job1.yml %}
 ~~~
 {: .source}
 
@@ -43,7 +43,7 @@ In the first example, you can't provide `itemA` without also providing `itemB`.
 *record-job2.yml*
 
 ~~~
-{% include cwl/record-job2.yml %}
+{% include cwl/11-records/record-job2.yml %}
 ~~~
 {: .source}
 
@@ -62,7 +62,7 @@ is added to the command line and `itemD` is ignored.
 *record-job3.yml*
 
 ~~~
-{% include cwl/record-job3.yml %}
+{% include cwl/11-records/record-job3.yml %}
 ~~~
 {: .source}
 

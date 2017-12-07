@@ -27,7 +27,7 @@ See the [list of recommended practices][rec-practices].__
 *expression.cwl*
 
 ~~~
-{% include cwl/expression.cwl %}
+{% include cwl/13-expressions/expression.cwl %}
 ~~~
 {: .source}
 
@@ -37,7 +37,7 @@ job file:
 *empty.yml*
 
 ~~~
-{% include cwl/empty.yml %}
+{% include cwl/13-expressions/empty.yml %}
 ~~~
 {: .source}
 

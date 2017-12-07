@@ -27,14 +27,21 @@ It is a good example of a number of good practices in CWL.
 *custom-types.cwl*
 
 ~~~
-{% include cwl/custom-types.cwl %}
+{% include cwl/19-custom-types/custom-types.cwl %}
 ~~~
 {: .source}
 
 *custom-types.yml*
 
 ~~~
-{% include cwl/custom-types.yml %}
+{% include cwl/19-custom-types/custom-types.yml %}
+~~~
+{: .source}
+
+___Note:___ To follow the example below, you need to download the example input file, *test_proteins.fasta*. The file is available from [https://github.com/common-workflow-language/user_guide/raw/gh-pages/_includes/cwl/test_proteins.fasta](https://github.com/common-workflow-language/user_guide/raw/gh-pages/_includes/cwl/test_proteins.fasta) and can be downloaded e.g. via `wget`:
+
+~~~
+wget https://github.com/common-workflow-language/user_guide/raw/gh-pages/_includes/cwl/test_proteins.fasta
 ~~~
 {: .source}
 
@@ -59,12 +66,12 @@ The reference to a custom type is a combination of the name of the file in which
 the object is defined (`InterProScan-apps.yml`) and the name of the object
 within that file (`apps`) that defines the custom type. The square brackets `[]`
 mean that an array of the preceding type is expected, in this case the `apps`
-type from the imported `InterProScan-apps.yaml` file
+type from the imported `InterProScan-apps.yml` file
 
 The contents of the YAML file describing the custom type are given below:
 
 ~~~
-{% include cwl/InterProScan-apps.yml %}
+{% include cwl/19-custom-types/InterProScan-apps.yml %}
 ~~~
 {: .source}
 

@@ -20,7 +20,7 @@ compiles it.
 *1st-workflow.cwl*
 
 ~~~
-{% include cwl/1st-workflow.cwl %}
+{% include cwl/21-1st-workflow/1st-workflow.cwl %}
 ~~~
 {: .source}
 
@@ -29,7 +29,7 @@ Use a JSON object in a separate file to describe the input of a run:
 *1st-workflow-job.yml*
 
 ~~~
-{% include cwl/1st-workflow-job.yml %}
+{% include cwl/21-1st-workflow/1st-workflow-job.yml %}
 ~~~
 {: .source}
 

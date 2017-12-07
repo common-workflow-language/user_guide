@@ -29,14 +29,14 @@ types and appearing on the command line in different ways:
 *inp.cwl*
 
 ~~~
-{% include cwl/inp.cwl %}
+{% include cwl/03-input/inp.cwl %}
 ~~~
 {: .source}
 
 *inp-job.yml*
 
 ~~~
-{% include cwl/inp-job.yml %}
+{% include cwl/03-input/inp-job.yml %}
 ~~~
 {: .source}
 

@@ -18,7 +18,7 @@ The simplest "hello world" program.  This accepts one input parameter, writes a 
 
 *1st-tool.cwl*
 ~~~
-{% include cwl/1st-tool.cwl %}
+{% include cwl/02-1st-example/1st-tool.cwl %}
 ~~~
 {: .source}
 
@@ -26,7 +26,7 @@ Use a YAML or JSON object in a separate file to describe the input of a run:
 
 *echo-job.yml*
 ~~~
-{% include cwl/echo-job.yml %}
+{% include cwl/02-1st-example/echo-job.yml %}
 ~~~
 {: .source}
 

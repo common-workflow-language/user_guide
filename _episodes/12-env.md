@@ -19,14 +19,14 @@ the tool using `EnvVarRequirement`.
 *env.cwl*
 
 ~~~
-{% include cwl/env.cwl %}
+{% include cwl/12-env/env.cwl %}
 ~~~
 {: .source}
 
 *echo-job.yml*
 
 ~~~
-{% include cwl/echo-job.yml %}
+{% include cwl/12-env/echo-job.yml %}
 ~~~
 {: .source}
 
