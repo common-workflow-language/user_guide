@@ -103,6 +103,12 @@ lesson-figures :
 unittest :
 	python bin/test_lesson_check.py
 
+RUNNER=cwl-runner
+
+## unittest-examples: run unit tests for the examples
+unittest-examples :
+	cd _includes/cwl; cwltest --test=conformance-test.yml --tool=${RUNNER}
+
 ## lesson-files     : show expected names of generated files for debugging.
 lesson-files :
 	@echo 'RMD_SRC:' ${RMD_SRC}
