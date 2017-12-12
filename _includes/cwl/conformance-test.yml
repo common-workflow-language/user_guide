@@ -1,0 +1,10 @@
+- doc: Test for section 4
+  job: 04-output/tar-job.yml
+  tool: 04-output/tar.cwl
+  output:
+    example_out:
+      class: File
+      checksum: sha1$da39a3ee5e6b4b0d3255bfef95601890afd80709
+      basename: hello.txt
+      location: Any
+      size: 0
