@@ -90,7 +90,7 @@
       location: Any
 
 # Section 16
-# Note: The checksum is always changed for every executions
+# Note: The checksum and size is always changed for every executions
 - doc: Test for section 16
   job: 16-file-formats/sample.yml
   tool: 16-file-formats/metadata_example.cwl
@@ -99,10 +99,10 @@
       class: File
       basename: output.txt
       location: Any
-      size: 132
+      size: Any
 
 # Section 17
-# Note: The checksum is always changed for every executions
+# Note: The checksum and size is always changed for every executions
 - doc: Test for section 17 (1st example)
   job: 17-metadata/sample.yml
   tool: 17-metadata/metadata_example2.cwl
@@ -111,7 +111,7 @@
       class: File
       basename: output.txt
       location: Any
-      size: 132
+      size: Any
 
 - doc: Test for section 17 (extended example)
   job: 17-metadata/sample.yml
