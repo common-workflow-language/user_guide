@@ -99,7 +99,6 @@
       class: File
       basename: output.txt
       location: Any
-      size: Any
 
 # Section 17
 # Note: The checksum and size is always changed for every executions
@@ -111,7 +110,6 @@
       class: File
       basename: output.txt
       location: Any
-      size: Any
 
 - doc: Test for section 17 (extended example)
   job: 17-metadata/sample.yml
@@ -121,7 +119,6 @@
       class: File
       basename: output.txt
       location: Any
-      size: 132
 
 # Section 19
 # See: Issue #48
