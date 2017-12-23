@@ -80,4 +80,4 @@ You can only use expressions in certain fields.  These are:
 - `outdirMax`
 
 [file-prop]: http://www.commonwl.org/v1.0/CommandLineTool.html#File
-[rec-practices]: /rec-practices/
+[rec-practices]: http://www.commonwl.org/user_guide/rec-practices/
