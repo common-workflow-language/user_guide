@@ -2,10 +2,10 @@
 
 cwlVersion: v1.0
 class: CommandLineTool
-label: Example trivial wrapper for Java 7 compiler
+label: Example trivial wrapper for Java 9 compiler
 hints:
   DockerRequirement:
-    dockerPull: java:7-jdk
+    dockerPull: openjdk:9.0.1-11-slim
 baseCommand: javac
 arguments: ["-d", $(runtime.outdir)]
 inputs:
