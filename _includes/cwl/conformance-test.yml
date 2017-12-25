@@ -1,5 +1,16 @@
-# Section 2 depends on side-effects
-# Section 3 depends on side-effects
+# Section 2
+- doc: Test for section 2
+  job: 02-1st-example/echo-job.yml
+  tool: 02-1st-example/1st-tool.cwl
+  should_fail: false
+  output: {}
+
+# Section 3
+- doc: Test for section 3
+  job: 03-input/inp-job.yml
+  tool: 03-input/inp.cwl
+  should_fail: false
+  output: {}
 
 # Section 4
 - doc: Test for section 4
@@ -53,7 +64,6 @@
 # Section 9 depends on side-effects
 
 # Section 10
-# Note: fragile! The order of `foo.txt` and `baz.txt` cannot be determined.
 - doc: Test for section 10
   job: 10-array-outputs/array-outputs-job.yml
   tool: 10-array-outputs/array-outputs.cwl
@@ -71,8 +81,11 @@
         size: 0
 
 # Section 11 depends on side-effects
-# Note: One of the tests in this section is expected to be failed
-# Rest of the examples depend on side-effects
+# Rest two examples in Section 11 depend on side-effects
+- doc: Test for section 11 (1st example)
+  job: 11-records/record-job1.yml
+  tool: 11-records/record.cwl
+  should_fail: true
 
 # Section 12 depends on side-effects
 # Section 13 depends on side-effects
