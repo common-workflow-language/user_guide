@@ -24,7 +24,7 @@ execution based on dependencies between tasks.  However unlike "make", CWL
 tasks are isolated and you must be explicit about your inputs and outputs.  The
 benefit of explicitness and isolation are flexibility, portability, and
 scalability: tools and workflows described with CWL can transparently leverage
-technologies such as Docker, be used with CWL implementations from different
-vendors, and is well suited for describing large-scale workflows in cluster,
+technologies such as Docker and be used with CWL implementations from different
+vendors. CWL is well suited for describing large-scale workflows in cluster,
 cloud and high performance computing environments where tasks are scheduled in
 parallel across many nodes.
