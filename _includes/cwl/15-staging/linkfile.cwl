@@ -4,7 +4,7 @@ cwlVersion: v1.0
 class: CommandLineTool
 hints:
   DockerRequirement:
-    dockerPull: java:7
+    dockerPull: openjdk:9.0.1-11-slim
 baseCommand: javac
 
 requirements:
