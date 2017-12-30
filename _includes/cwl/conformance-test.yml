@@ -51,15 +51,16 @@
 # Section 7 depends on side-effects
 
 # Section 8
-# Note: Skip checking size and checksum of the resulted file because it depends on the external compiler.
 - doc: Test for section 8
   job: 08-arguments/arguments-job.yml
   tool: 08-arguments/arguments.cwl
   output:
     classfile:
       class: File
+      checksum: sha1$fdb876b40ad9ebc7fee873212e02d5940588642e
       basename: Hello.class
       location: Any
+      size: 184
 
 # Section 9 depends on side-effects
 
@@ -92,15 +93,16 @@
 # Section 14 depends on side-effects
 
 # Section 15
-# Note: Skip checking size and checksum of the resulted file because it depends on the external compiler.
 - doc: Test for section 15
   job: 15-staging/arguments-job.yml
   tool: 15-staging/linkfile.cwl
   output:
     classfile:
       class: File
+      checksum: sha1$fdb876b40ad9ebc7fee873212e02d5940588642e
       basename: Hello.class
       location: Any
+      size: 184
 
 # Section 16
 # Note: The checksum and size is always changed for every executions
@@ -158,22 +160,24 @@
 #       size: Any # To be fixed
 
 # Section 21
-# Note: Skip checking size and checksum of the resulted file because it depends on the external compiler.
 - doc: Test for section 21
   job: 21-1st-workflow/1st-workflow-job.yml
   tool: 21-1st-workflow/1st-workflow.cwl
   output:
     classout:
       class: File
+      checksum: sha1$39e3219327347c05aa3e82236f83aa6d77fe6bfd
       basename: Hello.class
       location: Any
+      size: 419
 
 # Section 22
-# Note: Skip checking size and checksum of the resulted file because it depends on the external compiler.
 - doc: Test for section 22
   tool: 22-nested-workflows/nestedworkflows.cwl
   output:
     classout:
       class: File
+      checksum: sha1$39e3219327347c05aa3e82236f83aa6d77fe6bfd
       basename: Hello.class
       location: Any
+      size: 419
