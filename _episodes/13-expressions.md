@@ -9,7 +9,7 @@ objectives:
 - "Learn how to insert JavaScript expressions into a CWL description."
 keypoints:
 - "If `InlineJavascriptRequirement` is specified, you can include JavaScript
-expressions that will be evaulated by the CWL runner."
+expressions that will be evaluated by the CWL runner."
 - "Expressions are only valid in certain fields."
 - "Expressions should only be used when no built in CWL solution exists."
 ---
