@@ -138,4 +138,4 @@ connecting the input parameter `src` to the output parameter of `untar` using
 `untar/example_out`.  The output of this step `classfile` is connected to the
 `outputs` section for the Workflow, described above.
 
-[params]: /06-params/
+[params]: 06-params/
