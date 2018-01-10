@@ -100,7 +100,7 @@ steps:
     in:
       tarfile: inp
       extractfile: ex
-    outputs: [example_out]
+    out: [example_out]
 ~~~
 {: .source}
 
@@ -116,12 +116,12 @@ The first step, `untar` runs `tar-param.cwl` (described previously in
 [Parameter references][params]).  This tool has two input parameters, `tarfile`
 and `extractfile` and one output parameter `example_out`.
 
-The `inputs` section of the workflow step connects these two input parameters to
+The `inputs` (or `in`) section of the workflow step connects these two input parameters to
 the inputs of the workflow, `inp` and `ex` using `source`.  This means that when
 the workflow step is executed, the values assigned to `inp` and `ex` will be
 used for the parameters `tarfile` and `extractfile` in order to run the tool.
 
-The `outputs` section of the workflow step lists the output parameters that are
+The `outputs` (or `out`) section of the workflow step lists the output parameters that are
 expected from the tool.
 
 ~~~
@@ -129,7 +129,7 @@ expected from the tool.
     run: arguments.cwl
     in:
       src: untar/example_out
-    outputs: [classfile]
+    out: [classfile]
 ~~~
 {: .source}
 
@@ -138,4 +138,4 @@ connecting the input parameter `src` to the output parameter of `untar` using
 `untar/example_out`.  The output of this step `classfile` is connected to the
 `outputs` section for the Workflow, described above.
 
-[params]: _episodes/06-params/
+[params]: /06-params/
