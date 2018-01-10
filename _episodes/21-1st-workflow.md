@@ -11,8 +11,7 @@ keypoints:
 - "Top level inputs and outputs of the workflow are described in the `inputs`
 and `outputs` fields respectively."
 - "The steps are specified under `steps`."
-- "Execution order is determined by the flow of inputs and outputs between
-steps."
+- "Execution order is determined by the connections between steps."
 ---
 This workflow extracts a java source file from a tar file and then
 compiles it.
@@ -116,12 +115,12 @@ The first step, `untar` runs `tar-param.cwl` (described previously in
 [Parameter references][params]).  This tool has two input parameters, `tarfile`
 and `extractfile` and one output parameter `example_out`.
 
-The `inputs` (or `in`) section of the workflow step connects these two input parameters to
+The ``in`` section of the workflow step connects these two input parameters to
 the inputs of the workflow, `inp` and `ex` using `source`.  This means that when
 the workflow step is executed, the values assigned to `inp` and `ex` will be
 used for the parameters `tarfile` and `extractfile` in order to run the tool.
 
-The `outputs` (or `out`) section of the workflow step lists the output parameters that are
+The `out` section of the workflow step lists the output parameters that are
 expected from the tool.
 
 ~~~
