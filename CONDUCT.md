@@ -14,4 +14,4 @@ The CWL Project is dedicated to providing a harassment-free experience for every
 
 This code of conduct applies to all CWL Project spaces, including the Google Group, the Gitter chat room, the Google Hangouts chats, both online and off. Anyone who violates this code of conduct may be sanctioned or expelled from these spaces at the discretion of the leadership team.
 
-For more details, see our https://github.com/common-workflow-language/common-workflow-language/blob/master/CODE_OF_CONDUCT.md
+For more details, see the [complete CWL project code of conduct](https://github.com/common-workflow-language/common-workflow-language/blob/master/CODE_OF_CONDUCT.md).
