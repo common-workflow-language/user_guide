@@ -22,6 +22,10 @@ automatically, allowing you to use Docker to simplify your software
 management while avoiding the complexity of invoking and managing Docker
 containers.
 
+One of the responsibilities of the CWL runner is to adjust the paths of
+input files to reflect the location where they appear inside the container.  
+
+
 This example runs a simple Node.js script inside a Docker container.
 
 *docker.cwl*
@@ -67,10 +71,11 @@ Final process status is success
 {: .output}
 
 Notice the CWL runner has constructed a Docker command line to run the
-script.  One of the responsibilities of the CWL runner is to adjust the paths of
-input files to reflect the location where they appear inside the container.  
+script.  
+
 In this example, the path to the script `hello.js` is `/home/me/cwl/user_guide/hello.js`
 outside the container but `/var/lib/cwl/job369354770_examples/hello.js` inside
 the container, as reflected in the invocation of the `node` command.
+
 
 [docker]: https://docker.io
