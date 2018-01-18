@@ -6,3 +6,9 @@
 
 Original source:
 https://github.com/common-workflow-language/common-workflow-language/blob/master/v1.0/UserGuide.yml
+
+To edit the user guide:
+
+- The text files for each tutorial can be found in the directory [_episodes](_episodes)
+
+- The cwl and yaml code files linked to each tutorial can be found in the directory [_includes/cwl](_includes/cwl)
