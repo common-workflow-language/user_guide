@@ -15,7 +15,7 @@ keypoints:
 ---
 The simplest "hello world" program.  This accepts one input parameter, writes a message to the terminal or job log, and produces no permanent output. CWL documents are written in [JSON][json] or [YAML][yaml], or a mix of the two.
 
-First, create a file called 1st-tool.cwl, containing the following:
+First, create a file called 1st-tool.cwl, containing the following boxed text:
 
 *1st-tool.cwl*
 ~~~
@@ -23,7 +23,7 @@ First, create a file called 1st-tool.cwl, containing the following:
 ~~~
 {: .source}
 
-Next, use a YAML or JSON object in a separate file to describe the input of a run:
+Next, create a file called echo-job.yml, containing the following boxed text, which will describe the input of a run:
 
 *echo-job.yml*
 ~~~
@@ -31,7 +31,8 @@ Next, use a YAML or JSON object in a separate file to describe the input of a ru
 ~~~
 {: .source}
 
-Now, invoke `cwl-runner` with the tool wrapper and the input object on the command line:
+Now, invoke `cwl-runner` with the tool wrapper 1st-too.cwl and the input object echo-job.yml on the command line. The command is 
+`cwl-runner 1st-tool.cwl echo-job.yml`. The boxed text below shows this command and the expected output.
 
 ~~~
 $ cwl-runner 1st-tool.cwl echo-job.yml
@@ -45,7 +46,10 @@ Final process status is success
 ~~~
 {: .output}
 
-What's going on here?  Let's break it down:
+The command `cwl-runner 1st-tool.cwl echo-job.yml` is an example of a general form that you will often come across while using CWL. The general form is: 
+`cwl-runner [tool-or-workflow-description] [input-job-settings]`
+
+What's going on here?  Let's break down the contents of 1st-tool.cwl:
 
 ~~~
 cwlVersion: v1.0
@@ -60,7 +64,7 @@ baseCommand: echo
 ~~~
 {: .source}
 
-The `baseCommand` provides the name of program that will actually run (`echo`)
+The `baseCommand` provides the name of program that will actually run (`echo`). [echo] is a built-in program in the bash and C shells.
 
 ~~~
 inputs:
@@ -82,3 +86,4 @@ This tool has no formal output, so the `outputs` section is an empty list.
 
 [json]: http://json.org
 [yaml]: http://yaml.org
+[echo]: http://www.linfo.org/echo.html
