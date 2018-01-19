@@ -15,7 +15,7 @@ keypoints:
 ---
 The simplest "hello world" program.  This accepts one input parameter, writes a message to the terminal or job log, and produces no permanent output. CWL documents are written in [JSON][json] or [YAML][yaml], or a mix of the two.
 
-First, create a file called 1st-tool.cwl, containing the following:
+First, create a file called 1st-tool.cwl, containing the boxed text below. It will help you to use a text editor that can be specified to produce text in YAML or JSON. Whatever text editor you use, the indents you see should not be created using tabs.
 
 *1st-tool.cwl*
 ~~~
