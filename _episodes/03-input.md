@@ -23,7 +23,9 @@ and *null*; complex types are *array* and *record*; in addition there are
 special types *File*, *Directory* and *Any*.
 
 The following example demonstrates some input parameters with different
-types and appearing on the command line in different ways:
+types and appearing on the command line in different ways.
+
+First, create a file called inp.cwl, containing the following:
 
 
 *inp.cwl*
@@ -32,6 +34,8 @@ types and appearing on the command line in different ways:
 {% include cwl/03-input/inp.cwl %}
 ~~~
 {: .source}
+
+Create a file called inp-job.yml:
 
 *inp-job.yml*
 
@@ -43,8 +47,7 @@ types and appearing on the command line in different ways:
 Notice that "example_file", as a `File` type, must be provided as an
 object with the fields `class: File` and `path`.
 
-Next, create a whale.txt and invoke `cwl-runner` with the tool wrapper and the
-input object on the command line:
+Next, create a whale.txt using [touch] by typing `touch whale.txt` on the command line and then invoke `cwl-runner` with the tool wrapper and the input object on the command line, using the command `cwl-runner inp.cwl inp-job.yml`. The following boxed text describes these two commands and the expected output from the command line:
 
 ~~~
 $ touch whale.txt
@@ -146,3 +149,5 @@ line as 1, 2, 3.  More than one parameter can have the same position
 is optional.  The default position is 0.
 
 The `baseCommand` field will always appear in the final command line before the parameters.
+
+[touch]: http://www.linfo.org/touch.html
