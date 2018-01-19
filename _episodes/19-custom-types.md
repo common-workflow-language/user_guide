@@ -41,8 +41,8 @@ ___Note:___ To follow the example below, you need to download the example input 
 
 ~~~
 wget https://github.com/common-workflow-language/user_guide/raw/gh-pages/_includes/cwl/rich_sparse_otu_table.biom
-{: .source}
 ~~~
+{: .source}
 
 On line 34, in `inputs:table_type`, a list of allowable table options to be used in the
 table conversion are imported as a custom object:
