@@ -66,8 +66,8 @@ The `baseCommand` provides the name of program that will actually run (`echo`)
 inputs:
   message:
     type: string
-      inputBinding:
-        position: 1
+    inputBinding:
+      position: 1
 ~~~
 {: .source}
 
