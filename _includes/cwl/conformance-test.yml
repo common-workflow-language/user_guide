@@ -48,7 +48,17 @@
       location: Any
       size: 0
 
-# Section 7 depends on side-effects
+# Section 7
+- doc: Test for section 7
+  job: 07-containers/docker-job.yml
+  tool: 07-containers/docker.cwl
+  output:
+    output:
+      class: File
+      checksum: sha1$648a6a6ffffdaa0badb23b8baf90b6168dd16b3a
+      basename: output.txt
+      location: Any
+      size: 12
 
 # Section 8
 - doc: Test for section 8
