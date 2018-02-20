@@ -13,8 +13,7 @@ branches:
     - /.*/
 
 before_script:
-  - git clone https://github.com/common-workflow-language/cwltool.git cwltool && pip install ./cwltool
-  - git clone https://github.com/common-workflow-language/cwltest.git cwltest && pip install ./cwltest
+  - pip install cwltool cwltest html5lib
 
 script:
   - make RUNNER=cwltool unittest-examples
