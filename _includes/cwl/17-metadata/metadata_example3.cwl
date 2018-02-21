@@ -49,7 +49,7 @@ s:programmingLanguage: C
 
 $namespaces:
  s: https://schema.org/
- edam: https://edamontology.org/
+ edam: http://edamontology.org/
 
 $schemas:
  - https://schema.org/docs/schema_org_rdfa.html
