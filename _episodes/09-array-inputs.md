@@ -40,10 +40,29 @@ on the command line:
 
 ~~~
 $ cwl-runner array-inputs.cwl array-inputs-job.yml
-[job 140334923640912] /home/example$ echo -A one two three -B=four -B=five -B=six -C=seven,eight,nine
--A one two three -B=four -B=five -B=six -C=seven,eight,nine
+[job array-inputs.cwl] /home/examples$ echo \
+    -A \
+    one \
+    two \
+    three \
+    -B=four \
+    -B=five \
+    -B=six \
+    -C=seven,eight,nine > /home/examples/output.txt
+[job array-inputs.cwl] completed success
+{
+    "example_out": {
+        "location": "file:///home/examples/output.txt",
+        "basename": "output.txt",
+        "class": "File",
+        "checksum": "sha1$91038e29452bc77dcd21edef90a15075f3071540",
+        "size": 60,
+        "path": "/home/examples/output.txt"
+    }
+}
 Final process status is success
-{}
+$ cat output.txt
+-A one two three -B=four -B=five -B=six -C=seven,eight,nine
 ~~~
 {: .output}
 

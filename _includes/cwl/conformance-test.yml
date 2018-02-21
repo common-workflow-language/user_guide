@@ -72,7 +72,17 @@
       location: Any
       size: 184
 
-# Section 9 depends on side-effects
+# Section 9
+- doc: Test for section 9
+  job: 09-array-inputs/array-inputs-job.yml
+  tool: 09-array-inputs/array-inputs.cwl
+  output:
+    example_out:
+      class: File
+      checksum: sha1$91038e29452bc77dcd21edef90a15075f3071540
+      basename: output.txt
+      location: Any
+      size: 60
 
 # Section 10
 - doc: Test for section 10
