@@ -27,5 +27,8 @@ inputs:
       separate: false
       position: 4
 
-outputs: []
+outputs:
+  output:
+    type: stdout
+stdout: output.txt
 baseCommand: echo
