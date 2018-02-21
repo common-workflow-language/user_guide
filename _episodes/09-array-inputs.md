@@ -51,7 +51,7 @@ $ cwl-runner array-inputs.cwl array-inputs-job.yml
     -C=seven,eight,nine > /home/examples/output.txt
 [job array-inputs.cwl] completed success
 {
-    "output": {
+    "example_out": {
         "location": "file:///home/examples/output.txt",
         "basename": "output.txt",
         "class": "File",

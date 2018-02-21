@@ -77,7 +77,7 @@
   job: 09-array-inputs/array-inputs-job.yml
   tool: 09-array-inputs/array-inputs.cwl
   output:
-    output:
+    example_out:
       class: File
       checksum: sha1$91038e29452bc77dcd21edef90a15075f3071540
       basename: output.txt

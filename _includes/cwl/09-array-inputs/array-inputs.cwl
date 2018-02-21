@@ -28,7 +28,7 @@ inputs:
       position: 4
 
 outputs:
-  output:
+  example_out:
     type: stdout
 stdout: output.txt
 baseCommand: echo
