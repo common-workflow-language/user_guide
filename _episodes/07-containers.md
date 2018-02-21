@@ -65,7 +65,7 @@ $ cwl-runner docker.cwl docker-job.yml
     /var/lib/cwl/job369354770_examples/hello.js > /tmp/tmpgugLND/output.txt
 [job docker.cwl] completed success
 {
-    "output": {
+    "example_out": {
         "location": "file:///home/me/cwl/user_guide/output.txt",
         "basename": "output.txt",
         "class": "File",
