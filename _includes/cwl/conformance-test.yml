@@ -75,7 +75,7 @@
 # Section 9
 - doc: Test for section 9
   job: 09-array-inputs/array-inputs-job.yml
-  tool: 09-array-inputs/array-inputs.cwl/
+  tool: 09-array-inputs/array-inputs.cwl
   output:
     output:
       class: File
