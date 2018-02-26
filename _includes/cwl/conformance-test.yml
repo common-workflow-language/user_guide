@@ -156,16 +156,16 @@
       location: Any
 
 # Section 19
-# See: Issue #48
-# - doc: Test for section 19
-#   job: 19-custom-types/custom-types.yml
-#   tool: 19-custom-types/costom-types.cwl
-#   output:
-#     i5Annotations:
-#       class: File
-#       basename: test_proteins.i5_annotations
-#       location: Any
-#       size: Any # To be fixed
+# Note: The checksum is always changed for every executions
+- doc: Test for section 19
+  job: 19-custom-types/custom-types.yml
+  tool: 19-custom-types/custom-types.cwl
+  output:
+    result:
+      class: File
+      basename: rich_sparse_otu_table.hdf5
+      location: Any
+      size: 46992
 
 # Section 20
 # See: Issue #48
