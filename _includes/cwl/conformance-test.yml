@@ -102,11 +102,32 @@
         size: 0
 
 # Section 11 depends on side-effects
-# Rest two examples in Section 11 depend on side-effects
 - doc: Test for section 11 (1st example)
   job: 11-records/record-job1.yml
   tool: 11-records/record.cwl
   should_fail: true
+
+- doc: Test for section 11 (2nd example)
+  job: 11-records/record-job2.yml
+  tool: 11-records/record.cwl
+  output:
+    example_out:
+      class: File
+      checksum: sha1$329fe3b598fed0dfd40f511522eaf386edb2d077
+      basename: output.txt
+      location: Any
+      size: 23
+
+- doc: Test for section 11 (3rd example)
+  job: 11-records/record-job3.yml
+  tool: 11-records/record.cwl
+  output:
+    example_out:
+      class: File
+      checksum: sha1$77f572b28e441240a5e30eb14f1d300bcc13a3b4
+      basename: output.txt
+      location: Any
+      size: 22
 
 # Section 12 depends on side-effects
 # Section 13 depends on side-effects
