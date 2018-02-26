@@ -33,10 +33,22 @@ Now invoke `cwl-runner` with the tool wrapper and the input object on the
 command line:
 
 ~~~
-$ cwltool createfile.cwl echo-job.yml
-[job 140528604979344] /home/example$ cat example.conf
-CONFIGVAR=Hello world!
+$ cwl-runner createfile.cwl echo-job.yml
+[job createfile.cwl] /home/example$ cat \
+    example.conf > /home/example/output.txt
+[job createfile.cwl] completed success
+{
+    "example_out": {
+        "location": "file:///home/example/output.txt",
+        "basename": "output.txt",
+        "class": "File",
+        "checksum": "sha1$5d3f955d1bb862ec618bc2f7ca4c5fa29fa39e89",
+        "size": 22,
+        "path": "/home/example/output.txt"
+    }
+}
 Final process status is success
-{}
+$ cat output.txt
+CONFIGVAR=Hello world!
 ~~~
 {: .output}
