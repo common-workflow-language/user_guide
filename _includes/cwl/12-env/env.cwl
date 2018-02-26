@@ -9,4 +9,7 @@ requirements:
       HELLO: $(inputs.message)
 inputs:
   message: string
-outputs: []
+outputs:
+  example_out:
+    type: stdout
+stdout: output.txt
