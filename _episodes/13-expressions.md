@@ -49,10 +49,36 @@ We can then run `expression.cwl`:
 
 ~~~
 $ cwl-runner expression.cwl empty.yml
-[job 140000594593168] /home/example$ echo -A 2 -B baz -C 10 9 8 7 6 5 4 3 2 1
--A 2 -B baz -C 10 9 8 7 6 5 4 3 2 1
+[job expression.cwl] /home/example$ echo \
+    -A \
+    2 \
+    -B \
+    baz \
+    -C \
+    10 \
+    9 \
+    8 \
+    7 \
+    6 \
+    5 \
+    4 \
+    3 \
+    2 \
+    1 > /home/example/output.txt
+[job expression.cwl] completed success
+{
+    "example_out": {
+        "location": "file:///home/example/output.txt",
+        "basename": "output.txt",
+        "class": "File",
+        "checksum": "sha1$a739a6ff72d660d32111265e508ed2fc91f01a7c",
+        "size": 36,
+        "path": "/home/example/output.txt"
+    }
+}
 Final process status is success
-{}
+$ cat output.txt
+-A 2 -B baz -C 10 9 8 7 6 5 4 3 2 1
 ~~~
 {: .output}
 

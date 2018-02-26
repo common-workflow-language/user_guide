@@ -109,7 +109,19 @@
   should_fail: true
 
 # Section 12 depends on side-effects
-# Section 13 depends on side-effects
+
+# Section 13
+- doc: Test for section 13
+  job: 13-expressions/empty.yml
+  tool: 13-expressions/expression.cwl
+  output:
+    example_out:
+      class: File
+      checksum: sha1$a739a6ff72d660d32111265e508ed2fc91f01a7c
+      basename: output.txt
+      location: Any
+      size: 36
+
 # Section 14 depends on side-effects
 
 # Section 15
