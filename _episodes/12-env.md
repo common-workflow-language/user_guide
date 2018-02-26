@@ -35,11 +35,23 @@ command line:
 
 ~~~
 $ cwl-runner env.cwl echo-job.yml
-[job 140710387785808] /home/example$ env
-PATH=/bin:/usr/bin:/usr/local/bin
-HELLO=Hello world!
-TMPDIR=/tmp/tmp63Obpk
+[job env.cwl] /home/example$ env > /home/example/output.txt
+[job env.cwl] completed success
+{
+    "example_out": {
+        "location": "file:///home/example/output.txt",
+        "basename": "output.txt",
+        "class": "File",
+        "checksum": "sha1$1ca16a840b14807b2fd3323022c476b06a150e2f",
+        "size": 94,
+        "path": "/home/example/output.txt"
+    }
+}
 Final process status is success
-{}
+$ cat output.txt
+HELLO=Hello world!
+PATH=/bin:/usr/bin:/usr/local/bin
+HOME=/home/example
+TMPDIR=/tmp/tmp63Obpk
 ~~~
 {: .output}

@@ -129,7 +129,16 @@
       location: Any
       size: 22
 
-# Section 12 depends on side-effects
+# Section 12
+- doc: Test for section 12
+  job: 12-env/echo-job.yml
+  tool: 12-env/env.cwl
+  output:
+    example_out:
+      class: File
+      basename: output.txt
+      location: Any
+
 # Section 13 depends on side-effects
 # Section 14 depends on side-effects
 
