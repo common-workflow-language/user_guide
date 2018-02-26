@@ -110,7 +110,18 @@
 
 # Section 12 depends on side-effects
 # Section 13 depends on side-effects
-# Section 14 depends on side-effects
+
+# Section 14
+- doc: Test for section 14
+  job: 14-runtime/echo-job.yml
+  tool: 14-runtime/createfile.cwl
+  output:
+    example_out:
+      class: File
+      checksum: sha1$5d3f955d1bb862ec618bc2f7ca4c5fa29fa39e89
+      basename: output.txt
+      location: Any
+      size: 22
 
 # Section 15
 - doc: Test for section 15
