@@ -158,10 +158,10 @@
   output:
     example_out:
       class: File
-      checksum: sha1$5d3f955d1bb862ec618bc2f7ca4c5fa29fa39e89
+      checksum: sha1$5509385b089c054ac9f9890dccef666eda7eb79d
       basename: output.txt
       location: Any
-      size: 22
+      size: 23
 
 # Section 15
 - doc: Test for section 15
