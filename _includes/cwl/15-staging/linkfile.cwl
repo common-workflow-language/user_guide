@@ -8,8 +8,7 @@ hints:
 baseCommand: javac
 
 requirements:
-  - class: InlineJavascriptRequirement
-  - class: InitialWorkDirRequirement
+  InitialWorkDirRequirement:
     listing:
       - $(inputs.src)
 
