@@ -36,6 +36,11 @@ workflow:
 ~~~
 {: .source}
 
+<a href="https://view.commonwl.org/workflows/github.com/common-workflow-language/user_guide/blob/gh-pages/_includes/cwl/22-nested-workflows/nestedworkflows.cwl"><img
+src="https://view.commonwl.org/graph/svg/github.com/common-workflow-language/user_guide/blob/gh-pages/_includes/cwl/22-nested-workflows/nestedworkflows.cwl"
+alt="Visualization of nestedworkflows.cwl" /></a>
+
+
 A CWL `Workflow` can be used as a `step` just like a `CommandLineTool`, it's CWL
 file is included with `run`. The workflow inputs (`inp` and `ex`) and outputs
 (`classout`) then can be mapped to become the step's input/outputs.
