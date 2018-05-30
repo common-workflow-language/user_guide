@@ -59,7 +59,7 @@ outputs:
 
 $namespaces:
  iana: https://www.iana.org/assignments/media-types/
- s: http://schema.org/
+ s: https://schema.org/
 $schemas:
  - https://schema.org/docs/schema_org_rdfa.html
 

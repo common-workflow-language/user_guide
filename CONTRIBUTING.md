@@ -47,7 +47,7 @@ and to meet some of our community members.
 
 1.  If you wish to change this lesson,
     please work in <https://github.com/common-workflow-language/user_guide>,
-    which can be viewed at <http://www.commmonwl.org/user_guide/>.
+    which can be viewed at <https://www.commmonwl.org/user_guide/>.
 
 2.  If you wish to change the example lesson,
     please work in <https://github.com/swcarpentry/lesson-example>,
@@ -134,13 +134,13 @@ which everyone is welcome to join.
 [dc-lessons]: http://datacarpentry.org/lessons/
 [dc-site]: http://datacarpentry.org/
 [discuss-list]: https://groups.google.com/forum/#!forum/common-workflow-language
-[github]: http://github.com
+[github]: https://github.com
 [github-flow]: https://guides.github.com/introduction/flow/
 [github-join]: https://github.com/join
 [how-contribute]: https://egghead.io/series/how-to-contribute-to-an-open-source-project-on-github
 [issues]: https://github.com/common-workflow-language/user_guide/issues
 [repo]: https://github.com/common-workflow-language/user_guide
 [swc-issues]: https://github.com/issues?q=user%3Aswcarpentry
-[swc-lessons]: http://software-carpentry.org/lessons/
-[swc-site]: http://software-carpentry.org/
-[cwl-site]: http://www.commonwl.org/
+[swc-lessons]: https://software-carpentry.org/lessons/
+[swc-site]: https://software-carpentry.org/
+[cwl-site]: https://www.commonwl.org/

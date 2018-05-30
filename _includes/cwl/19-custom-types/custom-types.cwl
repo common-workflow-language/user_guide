@@ -54,7 +54,7 @@ outputs:
 
 $namespaces:
   edam: http://edamontology.org/
-  s: http://schema.org/
+  s: https://schema.org/
 
 $schemas:
   - http://edamontology.org/EDAM_1.16.owl

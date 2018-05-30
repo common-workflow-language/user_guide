@@ -17,4 +17,4 @@ also need:
   - Docker (optional)
 
 [ref-imp]: https://github.com/common-workflow-language/cwltool#install
-[commonwl]: http://www.commonwl.org/
+[commonwl]: https://www.commonwl.org/

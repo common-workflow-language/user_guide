@@ -11,7 +11,7 @@ title: "Common Workflow Language User Guide"
 # Contact.  This *must* include the protocol: if it's an email
 # address, it must look like "mailto:lessons@software-carpentry.org",
 # or if it's a URL, "https://gitter.im/username/ProjectName".
-email: "http://www.commonwl.org/#Support"
+email: "https://www.commonwl.org/#Support"
 
 #------------------------------------------------------------
 # Generic settings (should not need to change).
