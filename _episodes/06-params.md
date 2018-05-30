@@ -80,3 +80,30 @@ Note that because `File` parameters are objects, to get the path to an
 input file you must reference the path field on a file object; to
 reference the path to the tar file in the above example you would write
 `$(inputs.tarfile.path)`.
+
+> ## Where are parameter references allowed?
+> You can only use parameter references in certain fields.  These are:
+> 
+> - [`arguments`](http://www.commonwl.org/v1.0/CommandLineTool.html#CommandLineTool)
+> - [`coresMin`](http://www.commonwl.org/v1.0/CommandLineTool.html#ResourceRequirement)
+> - [`coresMax`](http://www.commonwl.org/v1.0/CommandLineTool.html#ResourceRequirement)
+> - [`entry`](http://www.commonwl.org/v1.0/CommandLineTool.html#Dirent)
+> - [`entryname`](http://www.commonwl.org/v1.0/CommandLineTool.html#Dirent)
+> - `format` (in a [CommandInputParameter](http://www.commonwl.org/v1.0/CommandLineTool.html#CommandInputParameter), [CommandOutputParamater](http://www.commonwl.org/v1.0/CommandLineTool.html#CommandOutputParameter), [WorkflowOutputParameter](http://www.commonwl.org/v1.0/Workflow.html#WorkflowOutputParameter), or [ExpressionToolOutputParameter](http://www.commonwl.org/v1.0/Workflow.html#ExpressionToolOutputParameter))
+> - [`expression`](http://www.commonwl.org/v1.0/Workflow.html#ExpressionTool)
+> - [`envValue`](http://www.commonwl.org/v1.0/CommandLineTool.html#EnvironmentDef)
+> - [`glob`](http://www.commonwl.org/v1.0/CommandLineTool.html#CommandOutputBinding)
+> - [`listing`](http://www.commonwl.org/v1.0/CommandLineTool.html#InitialWorkDirRequirement)
+> - [`outdirMin`](http://www.commonwl.org/v1.0/CommandLineTool.html#ResourceRequirement)
+> - [`outdirMax`](http://www.commonwl.org/v1.0/CommandLineTool.html#ResourceRequirement)
+> - [`outputEval`](http://www.commonwl.org/v1.0/CommandLineTool.html#CommandOutputBinding)
+> - `secondaryFiles` (in a [CommandInputParameter](http://www.commonwl.org/v1.0/CommandLineTool.html#CommandInputParameter), [CommandOutputParamater](http://www.commonwl.org/v1.0/CommandLineTool.html#CommandOutputParameter), [WorkflowOutputParameter](http://www.commonwl.org/v1.0/Workflow.html#WorkflowOutputParameter), or [ExpressionToolOutputParameter](http://www.commonwl.org/v1.0/Workflow.html#ExpressionToolOutputParameter))
+> - [`ramMin`](http://www.commonwl.org/v1.0/CommandLineTool.html#ResourceRequirement)
+> - [`ramMax`](http://www.commonwl.org/v1.0/CommandLineTool.html#ResourceRequirement)
+> - [`stdin`](http://www.commonwl.org/v1.0/CommandLineTool.html#CommandLineTool)
+> - [`stdout`](http://www.commonwl.org/v1.0/CommandLineTool.html#CommandLineTool)
+> - [`stderr`](http://www.commonwl.org/v1.0/CommandLineTool.html#CommandLineTool)
+> - [`tmpdirMin`](http://www.commonwl.org/v1.0/CommandLineTool.html#ResourceRequirement)
+> - [`tmpdirMax`](http://www.commonwl.org/v1.0/CommandLineTool.html#ResourceRequirement)
+> - `valueFrom` (in a [CommandLineBinding](http://www.commonwl.org/v1.0/CommandLineTool.html#CommandLineBinding), or [WorkflowStepInput](http://www.commonwl.org/v1.0/Workflow.html#WorkflowStepInput))
+{: .callout }
