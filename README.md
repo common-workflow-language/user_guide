@@ -12,3 +12,5 @@ To edit the user guide:
 - The text files for each tutorial can be found in the directory [_episodes](_episodes)
 
 - The cwl and yaml code files linked to each tutorial can be found in the directory [_includes/cwl](_includes/cwl)
+
+This repo is based upon https://github.com/swcarpentry/styles and should be periodically resynced.
