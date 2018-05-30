@@ -5,7 +5,7 @@
 [User guide for CWL v1.0.1](http://www.commonwl.org/user_guide/)
 
 Original source:
-https://github.com/common-workflow-language/common-workflow-language/blob/master/v1.0/UserGuide.yml
+https://github.com/common-workflow-language/common-workflow-language/blob/a2a8a08b8c8d56f8f2ca6284ca4e9cbf23d19346/v1.0/UserGuide.yml
 
 To edit the user guide:
 
