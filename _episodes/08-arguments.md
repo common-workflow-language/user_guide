@@ -92,3 +92,4 @@ designated output directory.  Other parameters include `$(runtime.tmpdir)`,
 CWL specification for details.
 
 [runtime]: http://www.commonwl.org/v1.0/CommandLineTool.html#Runtime_environment
+{% include links.md %}

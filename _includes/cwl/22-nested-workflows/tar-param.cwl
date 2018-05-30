@@ -2,18 +2,18 @@
 
 cwlVersion: v1.0
 class: CommandLineTool
-baseCommand: [tar, xf]
+baseCommand: [tar, --extract]
 inputs:
   tarfile:
     type: File
     inputBinding:
-      position: 1
+      prefix: --file
   extractfile:
     type: string
     inputBinding:
-      position: 2
+      position: 1
 outputs:
-  example_out:
+  extracted_file:
     type: File
     outputBinding:
       glob: $(inputs.extractfile)

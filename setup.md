@@ -1,7 +1,5 @@
 ---
-layout: page
 title: Setup
-permalink: /setup/
 ---
 To follow the Common Workflow Language user guide, you will need an up-to-date
 Linux or Mac OS X system, with the following software installed:

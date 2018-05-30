@@ -37,12 +37,12 @@ input object on the command line:
 $ rm hello.tar || true && touch goodbye.txt && tar -cvf hello.tar goodbye.txt
 $ cwl-runner tar-param.cwl tar-param-job.yml
 [job tar-param.cwl] /tmp/tmpwH4ouT$ tar \
-    xf \
+    --extract --file \
     /tmp/tmpREYiEt/stgd7764383-99c9-4848-af51-7c2d6e5527d9/hello.tar \
     goodbye.txt
 [job tar-param.cwl] completed success
 {
-    "example_out": {
+    "extracted_file": {
         "checksum": "sha1$da39a3ee5e6b4b0d3255bfef95601890afd80709",
         "basename": "goodbye.txt",
         "nameroot": "goodbye",
@@ -62,7 +62,7 @@ These are evaluated and replaced with value being referenced.
 
 ~~~
 outputs:
-  example_out:
+  extracted_out:
     type: File
     outputBinding:
       glob: $(inputs.extractfile)
@@ -131,3 +131,5 @@ reference the path to the tar file in the above example you would write
 >   - From [EnvironmentDef](http://www.commonwl.org/v1.0/CommandLineTool.html#EnvironmentDef)
 >     - `envValue`
 {: .callout }
+
+{% include links.md %}

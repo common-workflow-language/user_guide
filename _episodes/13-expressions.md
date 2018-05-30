@@ -141,3 +141,4 @@ syntax is used to describe the additional command line arguments.
 
 [file-prop]: http://www.commonwl.org/v1.0/CommandLineTool.html#File
 [rec-practices]: http://www.commonwl.org/user_guide/rec-practices/
+{% include links.md %}

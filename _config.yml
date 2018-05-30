@@ -11,7 +11,7 @@ title: "Common Workflow Language User Guide"
 # Contact.  This *must* include the protocol: if it's an email
 # address, it must look like "mailto:lessons@software-carpentry.org",
 # or if it's a URL, "https://gitter.im/username/ProjectName".
-contact: "http://www.commonwl.org/#Support"
+email: "http://www.commonwl.org/#Support"
 
 #------------------------------------------------------------
 # Generic settings (should not need to change).
@@ -34,8 +34,8 @@ repository: common-workflow-language/user-guide
 # template_repo: "https://github.com/swcarpentry/styles"
 # example_repo: "https://github.com/swcarpentry/lesson-example"
 # example_site: "https://swcarpentry.github.com/lesson-example"
-# workshop_repo: "https://github.com/swcarpentry/workshop-template"
-# workshop_site: "https://swcarpentry.github.io/workshop-template"
+workshop_repo: "https://github.com/swcarpentry/workshop-template"
+workshop_site: "https://swcarpentry.github.io/workshop-template"
 # training_site: "https://swcarpentry.github.io/instructor-training"
 
 # Surveys.
@@ -50,24 +50,34 @@ start_time: 0
 collections:
   episodes:
     output: true
-    permalink: /:path/
+    permalink: /:path/index.html
   extras:
     output: true
+    permalink: /:path/index.html
 
 # Set the default layout for things in the episodes collection.
 defaults:
   - values:
-      root: ..
+      root: .
+      layout: page
   - scope:
       path: ""
       type: episodes
     values:
+      root: ..
       layout: episode
+  - scope:
+      path: ""
+      type: extras
+    values:
+      root: ..
+      layout: page
 
 # Files and directories that are not to be copied.
 exclude:
   - Makefile
-  - bin
+  - bin/
+  - .Rproj.user/
 
-# Turn off built-in syntax highlighting.
-highlighter: false
+# Turn on built-in syntax highlighting.
+highlighter: rouge

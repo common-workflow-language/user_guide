@@ -63,7 +63,7 @@ RMD_DST = $(patsubst _episodes_rmd/%.Rmd,_episodes/%.md,$(RMD_SRC))
 # Lesson source files in the order they appear in the navigation menu.
 MARKDOWN_SRC = \
   index.md \
-  CONDUCT.md \
+  CODE_OF_CONDUCT.md \
   setup.md \
   $(sort $(wildcard _episodes/*.md)) \
   reference.md \
@@ -88,26 +88,16 @@ ${RMD_DST} : ${RMD_SRC}
 	@bin/knit_lessons.sh ${RMD_SRC}
 
 ## lesson-check     : validate lesson Markdown.
-lesson-check :
+lesson-check : lesson-fixme
 	@bin/lesson_check.py -s . -p ${PARSER} -r _includes/links.md
 
 ## lesson-check-all : validate lesson Markdown, checking line lengths and trailing whitespace.
 lesson-check-all :
 	@bin/lesson_check.py -s . -p ${PARSER} -l -w
 
-## lesson-figures   : re-generate inclusion displaying all figures.
-lesson-figures :
-	@bin/extract_figures.py -p ${PARSER} ${MARKDOWN_SRC} > _includes/all_figures.html
-
 ## unittest         : run unit tests on checking tools.
 unittest :
 	python bin/test_lesson_check.py
-
-RUNNER=cwl-runner
-
-## unittest-examples: run unit tests for the examples
-unittest-examples :
-	cd _includes/cwl; cwltest --test=conformance-test.yml --tool=${RUNNER}
 
 ## lesson-files     : show expected names of generated files for debugging.
 lesson-files :

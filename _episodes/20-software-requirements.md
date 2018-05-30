@@ -57,3 +57,4 @@ include the DOI for the main tool citation and the URL to the tool.
 [dependencies]: https://github.com/common-workflow-language/cwltool#leveraging-softwarerequirements-beta
 [identifiers]: https://identifiers.org/
 [scicrunch-add-tool]: https://scicrunch.org/page/tutorials/336
+{% include links.md %}

@@ -82,3 +82,4 @@ This tool has no formal output, so the `outputs` section is an empty list.
 
 [json]: http://json.org
 [yaml]: http://yaml.org
+{% include links.md %}

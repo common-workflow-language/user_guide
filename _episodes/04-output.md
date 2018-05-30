@@ -44,7 +44,7 @@ wrapper and the input object on the command line:
 $ touch hello.txt && tar -cvf hello.tar hello.txt
 $ cwl-runner tar.cwl tar-job.yml
 [job tar.cwl] /tmp/tmpqOeawQ$ tar \
-    xf \
+    --extract --file \
     /tmp/tmpGDk8Y1/stg80bbad20-494d-47af-8075-dffc32df03a3/hello.tar
 [job tar.cwl] completed success
 {
@@ -77,3 +77,5 @@ outputs:
 
 The `glob` field consists of the name of a file in the output directory.
 If you don't know name of the file in advance, you can use a wildcard pattern like `glob: '*.txt'`.
+
+{% include links.md %}

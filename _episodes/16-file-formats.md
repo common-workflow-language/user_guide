@@ -89,3 +89,4 @@ Final process status is success
 
 [IANA]: https://www.iana.org/assignments/media-types/media-types.xhtml
 [EDAM]: http://www.ebi.ac.uk/ols/ontologies/edam/terms?iri=http%3A%2F%2Fedamontology.org%2Fformat_1915
+{% include links.md %}

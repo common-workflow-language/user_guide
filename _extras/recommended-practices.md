@@ -63,3 +63,4 @@ For more examples of providing metadata within CWL descriptions, see the [Metada
 [orcid]: https://orcid.org
 [subworkflow]: http://www.commonwl.org/v1.0/Workflow.html#SubworkflowFeatureRequirement
 [metadata-lesson]: /user_guide/17-metadata/
+[spdx]: https://spdx.org/licenses/
