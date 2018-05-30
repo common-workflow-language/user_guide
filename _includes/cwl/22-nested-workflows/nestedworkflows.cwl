@@ -8,7 +8,7 @@ inputs: []
 outputs:
   classout:
     type: File
-    outputSource: compiled_class
+    outputSource: compile/compiled_class
 
 requirements:
   SubworkflowFeatureRequirement: {}
