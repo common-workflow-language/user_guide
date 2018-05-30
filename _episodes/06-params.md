@@ -108,7 +108,7 @@ reference the path to the tar file in the above example you would write
 >     - From `steps`
 >       - From [WorkflowStepInput](http://www.commonwl.org/v1.0/Workflow.html#WorkflowStepInput)
 >         - `valueFrom`
-> - From ExpressionTool
+> - From [ExpressionTool](https://www.commonwl.org/v1.0/Workflow.html#ExpressionTool)
 >   - `expression`
 >   - From [InputParameter](http://www.commonwl.org/v1.0/Workflow.html#InputParameter) and [ExpressionToolOutputParameter](http://www.commonwl.org/v1.0/Workflow.html#ExpressionToolOutputParameter)
 >     - `format`

@@ -114,7 +114,7 @@ syntax is used to describe the additional command line arguments.
 >     - From `steps`
 >       - From [WorkflowStepInput](http://www.commonwl.org/v1.0/Workflow.html#WorkflowStepInput)
 >         - `valueFrom`
-> - From ExpressionTool
+> - From [ExpressionTool](https://www.commonwl.org/v1.0/Workflow.html#ExpressionTool)
 >   - `expression`
 >   - From [InputParameter](http://www.commonwl.org/v1.0/Workflow.html#InputParameter) and [ExpressionToolOutputParameter](http://www.commonwl.org/v1.0/Workflow.html#ExpressionToolOutputParameter)
 >     - `format`
