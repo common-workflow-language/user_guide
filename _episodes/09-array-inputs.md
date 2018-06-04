@@ -13,7 +13,7 @@ keypoints:
 `type: array`."
 - "The appearance of array parameters on the command line differs depending on
 with the `inputBinding` field is provided in the description."
-- "Use the `itemSeperator` field to control concatenatation of array
+- "Use the `itemSeparator` field to control concatenatation of array
 parameters."
 ---
 It is easy to add arrays of input parameters represented to the command
@@ -69,7 +69,7 @@ $ cat output.txt
 The `inputBinding` can appear either on the outer array parameter definition
 or the inner array element definition, and these produce different behavior when
 constructing the command line, as shown above.
-In addition, the `itemSeperator` field, if provided, specifies that array
+In addition, the `itemSeparator` field, if provided, specifies that array
 values should be concatenated into a single argument separated by the item
 separator string.
 
