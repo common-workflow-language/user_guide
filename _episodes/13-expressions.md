@@ -86,7 +86,7 @@ Note that requirements must be provided as an array, with each entry (in this
 case, only `class: InlineJavascriptRequirement`) marked by a `-`. The same
 syntax is used to describe the additional command line arguments.
 
-> ## Where are parameter references allowed?
+> ## Where are JavaScript expressions allowed?
 > Just like [parameter references]({{ page.root }}{% link _episodes/06-params.md %}), you can use JavaScript Expressions
 > only in certain fields.  These are:
 > 
