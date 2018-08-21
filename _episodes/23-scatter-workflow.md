@@ -1,5 +1,5 @@
 ---
-title: "Scatter Workflows"
+title: "Scattering Workflows"
 teaching: 10
 exercises: 0
 questions:
@@ -11,6 +11,7 @@ keypoints:
 supports the `ScatterFeatureRequirement`."
 - The `scatter` field is specified for each step you want to scatter
 - The `scatter` field references the step level inputs, not the workflow inputs
+- Scatter runs on each step specified independently
 ---
 Now that we know how to write workflows, we can start utilizing the `ScatterFeatureRequirement`.
 This feature tells the runner that you wish to run a tool or workflow multiple times over a list
@@ -106,4 +107,57 @@ Final process status is success
 ~~~ 
 
 You can see that the workflow calls echo multiple times on each element of our 
-`message_array`. 
+`message_array`. Ok, so how about if we want to scatter over two steps in a workflow?
+
+Let's perform a simple echo like above, but capturing `stdout` by adding the following 
+lines instead of `outputs: []`
+
+*1st-tool-mod.cwl*
+
+~~~
+outputs:
+  echo_out:
+    type: stdout
+~~~
+
+And add a second step that uses `wc` to count the characters in each file. See the tool
+below:
+
+*wc-tool.cwl*
+
+~~~
+{% include cwl/23-scatter-workflow/wc-tool.cwl %}
+~~~
+
+Now, how do we incorporate scatter? Remember the scatter field is under each step:
+
+~~~
+{% include cwl/23-scatter-workflow/scatter-two-steps.cwl %}
+~~~
+
+Here we have placed the scatter field under each step. This is fine for this example since
+it runs quickly, but if you're runnung many samples for a more complex workflow, you may 
+wish to consider an alternative. Here we are running scatter on each step independently, but
+since the second step is not dependent on the first step completing all languages, we aren't
+using the scatter functionality efficiently. The second step expects an array as input from 
+the first step, so it will wait until everything in step one is finished before doing anything.
+Pretend that `echo Hello World!` takes 1 minute to perform, `wc -c` on the output takes 3 minutes 
+and that `echo Hallo welt!` takes 5 minutes to perform, and `wc` on that output takes 3 minutes. 
+Even though `echo Hello World!` could finish in 4 minutes, it will actually finish in 8 minutes 
+because the first step must wait on `echo Hallo welt!`. You can see how this might not scale
+well. 
+
+Ok, so how do we scatter on steps that can proceed independent of other samples? Remember from
+chapter 22, that we can make an entire workflow a single step in another workflow! Convert our
+two step workflow to a single step subworkflow:
+
+*scatter-nested-workflow.cwl*
+
+~~~
+{% include cwl/23-scatter-workflow/scatter-nested-workflow.cwl %}
+~~~
+
+Now the scatter acts on a single step, but that step consists of two steps so each step is performed
+in parallel.
+
+
