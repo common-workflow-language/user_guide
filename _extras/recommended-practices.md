@@ -53,6 +53,7 @@ For more examples of providing metadata within CWL descriptions, see the [Metada
 
 &#9744; Software containers should be made to be conformant to the ["Recommendations for the packaging and containerizing of bioinformatics software"][containers] (also useful to other disciplines).
 
+[containers]: https://doi.org/10.12688/f1000research.15140.1
 [apache-license]: https://spdx.org/licenses/Apache-2.0.html
 [license-example]: https://github.com/ProteinsWebTeam/ebi-metagenomics-cwl/blob/master/workflows/emg-assembly.cwl#L200
 [scicrunch-issue]: https://github.com/common-workflow-language/common-workflow-language/issues/scicrunch.org
