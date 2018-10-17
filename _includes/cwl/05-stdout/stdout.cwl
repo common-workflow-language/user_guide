@@ -10,5 +10,5 @@ inputs:
     inputBinding:
       position: 1
 outputs:
-  output:
+  example_out:
     type: stdout

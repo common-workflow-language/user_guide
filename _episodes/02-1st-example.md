@@ -15,6 +15,7 @@ keypoints:
 ---
 The simplest "hello world" program.  This accepts one input parameter, writes a message to the terminal or job log, and produces no permanent output. CWL documents are written in [JSON][json] or [YAML][yaml], or a mix of the two.
 
+First, create a file called 1st-tool.cwl, containing the boxed text below. It will help you to use a text editor that can be specified to produce text in YAML or JSON. Whatever text editor you use, the indents you see should not be created using tabs.
 
 *1st-tool.cwl*
 ~~~
@@ -22,7 +23,7 @@ The simplest "hello world" program.  This accepts one input parameter, writes a 
 ~~~
 {: .source}
 
-Use a YAML or JSON object in a separate file to describe the input of a run:
+Next, use a YAML or JSON object in a separate file to describe the input of a run:
 
 *echo-job.yml*
 ~~~
@@ -30,7 +31,7 @@ Use a YAML or JSON object in a separate file to describe the input of a run:
 ~~~
 {: .source}
 
-Now invoke `cwl-runner` with the tool wrapper and the input object on the command line:
+Now, invoke `cwl-runner` with the tool wrapper and the input object on the command line:
 
 ~~~
 $ cwl-runner 1st-tool.cwl echo-job.yml
@@ -65,8 +66,8 @@ The `baseCommand` provides the name of program that will actually run (`echo`)
 inputs:
   message:
     type: string
-      inputBinding:
-        position: 1
+    inputBinding:
+      position: 1
 ~~~
 {: .source}
 
