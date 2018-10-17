@@ -49,10 +49,36 @@ We can then run `expression.cwl`:
 
 ~~~
 $ cwl-runner expression.cwl empty.yml
-[job 140000594593168] /home/example$ echo -A 2 -B baz -C 10 9 8 7 6 5 4 3 2 1
--A 2 -B baz -C 10 9 8 7 6 5 4 3 2 1
+[job expression.cwl] /home/example$ echo \
+    -A \
+    2 \
+    -B \
+    baz \
+    -C \
+    10 \
+    9 \
+    8 \
+    7 \
+    6 \
+    5 \
+    4 \
+    3 \
+    2 \
+    1 > /home/example/output.txt
+[job expression.cwl] completed success
+{
+    "example_out": {
+        "location": "file:///home/example/output.txt",
+        "basename": "output.txt",
+        "class": "File",
+        "checksum": "sha1$a739a6ff72d660d32111265e508ed2fc91f01a7c",
+        "size": 36,
+        "path": "/home/example/output.txt"
+    }
+}
 Final process status is success
-{}
+$ cat output.txt
+-A 2 -B baz -C 10 9 8 7 6 5 4 3 2 1
 ~~~
 {: .output}
 
@@ -60,30 +86,57 @@ Note that requirements must be provided as an array, with each entry (in this
 case, only `class: InlineJavascriptRequirement`) marked by a `-`. The same
 syntax is used to describe the additional command line arguments.
 
-You can only use expressions in certain fields.  These are:
-
-- [`arguments`](http://www.commonwl.org/v1.0/CommandLineTool.html#CommandLineTool)
-- [`coresMin`](http://www.commonwl.org/v1.0/CommandLineTool.html#ResourceRequirement)
-- [`coresMax`](http://www.commonwl.org/v1.0/CommandLineTool.html#ResourceRequirement)
-- [`entry`](http://www.commonwl.org/v1.0/CommandLineTool.html#Dirent)
-- [`entryname`](http://www.commonwl.org/v1.0/CommandLineTool.html#Dirent)
-- `format` (in a [CommandInputParameter](http://www.commonwl.org/v1.0/CommandLineTool.html#CommandInputParameter), [CommandOutputParamater](http://www.commonwl.org/v1.0/CommandLineTool.html#CommandOutputParameter), [WorkflowOutputParameter](http://www.commonwl.org/v1.0/Workflow.html#WorkflowOutputParameter), or [ExpressionToolOutputParameter](http://www.commonwl.org/v1.0/Workflow.html#ExpressionToolOutputParameter))
-- [`expression`](http://www.commonwl.org/v1.0/Workflow.html#ExpressionTool)
-- [`envValue`](http://www.commonwl.org/v1.0/CommandLineTool.html#EnvironmentDef)
-- [`glob`](http://www.commonwl.org/v1.0/CommandLineTool.html#CommandOutputBinding)
-- [`listing`](http://www.commonwl.org/v1.0/CommandLineTool.html#InitialWorkDirRequirement)
-- [`outdirMin`](http://www.commonwl.org/v1.0/CommandLineTool.html#ResourceRequirement)
-- [`outdirMax`](http://www.commonwl.org/v1.0/CommandLineTool.html#ResourceRequirement)
-- [`outputEval`](http://www.commonwl.org/v1.0/CommandLineTool.html#CommandOutputBinding)
-- `secondaryFiles` (in a [CommandInputParameter](http://www.commonwl.org/v1.0/CommandLineTool.html#CommandInputParameter), [CommandOutputParamater](http://www.commonwl.org/v1.0/CommandLineTool.html#CommandOutputParameter), [WorkflowOutputParameter](http://www.commonwl.org/v1.0/Workflow.html#WorkflowOutputParameter), or [ExpressionToolOutputParameter](http://www.commonwl.org/v1.0/Workflow.html#ExpressionToolOutputParameter))
-- [`ramMin`](http://www.commonwl.org/v1.0/CommandLineTool.html#ResourceRequirement)
-- [`ramMax`](http://www.commonwl.org/v1.0/CommandLineTool.html#ResourceRequirement)
-- [`stdin`](http://www.commonwl.org/v1.0/CommandLineTool.html#CommandLineTool)
-- [`stdout`](http://www.commonwl.org/v1.0/CommandLineTool.html#CommandLineTool)
-- [`stderr`](http://www.commonwl.org/v1.0/CommandLineTool.html#CommandLineTool)
-- [`tmpdirMin`](http://www.commonwl.org/v1.0/CommandLineTool.html#ResourceRequirement)
-- [`tmpdirMax`](http://www.commonwl.org/v1.0/CommandLineTool.html#ResourceRequirement)
-- `valueFrom` (in a [CommandLineBinding](http://www.commonwl.org/v1.0/CommandLineTool.html#CommandLineBinding), or [WorkflowStepInput](http://www.commonwl.org/v1.0/Workflow.html#WorkflowStepInput))
+> ## Where are JavaScript expressions allowed?
+> Just like [parameter references]({{ page.root }}{% link _episodes/06-params.md %}), you can use JavaScript Expressions
+> only in certain fields.  These are:
+> 
+> - From [`CommandLineTool`](http://www.commonwl.org/v1.0/CommandLineTool.html#CommandLineTool)
+>   - `arguments`
+>     - `valueFrom`
+>   - `stdin`
+>   - `stdout`
+>   - `stderr`
+>   - From [CommandInputParameter](http://www.commonwl.org/v1.0/CommandLineTool.html#CommandInputParameter)
+>     - `format`
+>     - `secondaryFiles`
+>     - From [`inputBinding`](http://www.commonwl.org/v1.0/CommandLineTool.html#CommandLineBinding)
+>       - `valueFrom`
+>   - From [CommandOutputParamater](http://www.commonwl.org/v1.0/CommandLineTool.html#CommandOutputParameter)
+>     - `format`
+>     - `secondaryFiles`
+>     - From [CommandOutputBinding](http://www.commonwl.org/v1.0/CommandLineTool.html#CommandOutputBinding)
+>       - `glob`
+>       - `outputEval`
+> - From `Workflow`
+>   - From [InputParameter](http://www.commonwl.org/v1.0/Workflow.html#InputParameter) and [WorkflowOutputParameter](http://www.commonwl.org/v1.0/Workflow.html#WorkflowOutputParameter)
+>     - `format`
+>     - `secondaryFiles`
+>     - From `steps`
+>       - From [WorkflowStepInput](http://www.commonwl.org/v1.0/Workflow.html#WorkflowStepInput)
+>         - `valueFrom`
+> - From [ExpressionTool](https://www.commonwl.org/v1.0/Workflow.html#ExpressionTool)
+>   - `expression`
+>   - From [InputParameter](http://www.commonwl.org/v1.0/Workflow.html#InputParameter) and [ExpressionToolOutputParameter](http://www.commonwl.org/v1.0/Workflow.html#ExpressionToolOutputParameter)
+>     - `format`
+>     - `secondaryFiles`
+> - From [`ResourceRequirement`](http://www.commonwl.org/v1.0/CommandLineTool.html#ResourceRequirement)
+>   - `coresMin`
+>   - `coresMax`
+>   - `ramMin`
+>   - `ramMax`
+>   - `tmpdirMin`
+>   - `tmpdirMax`
+>   - `outdirMin`
+>   - `outdirMax`
+> - From [`InitialWorkDirRequirement`](http://www.commonwl.org/v1.0/CommandLineTool.html#InitialWorkDirRequirement)
+>   - `listing`
+>   - in [Dirent](http://www.commonwl.org/v1.0/CommandLineTool.html#Dirent)
+>     - `entry`
+>     - `entryname`
+> - From `EnvVarRequirement`
+>   - From [EnvironmentDef](http://www.commonwl.org/v1.0/CommandLineTool.html#EnvironmentDef)
+>     - `envValue`
+{: .callout }
 
 
 [file-prop]: http://www.commonwl.org/v1.0/CommandLineTool.html#File

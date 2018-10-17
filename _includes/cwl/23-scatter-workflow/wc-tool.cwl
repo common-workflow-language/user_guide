@@ -2,13 +2,11 @@
 
 cwlVersion: v1.0
 class: CommandLineTool
-baseCommand: echo
-stdout: output.txt
+baseCommand: wc
+arguments: ["-c"]
 inputs:
-  message:
-    type: string
+  input_file:
+    type: File
     inputBinding:
       position: 1
-outputs:
-  example_out:
-    type: stdout
+outputs: []

@@ -37,7 +37,7 @@ $ cwl-runner stdout.cwl echo-job.yml
     'Hello world!' > /tmp/tmpE0gTz7/output.txt
 [job stdout.cwl] completed success
 {
-    "output": {
+    "example_out": {
         "checksum": "sha1$47a013e660d408619d894b20806b1d5086aab03b",
         "basename": "output.txt",
         "nameroot": "output",

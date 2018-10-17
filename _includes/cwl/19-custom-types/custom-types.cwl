@@ -1,67 +1,64 @@
+#!/usr/bin/env cwl-runner 
 cwlVersion: v1.0
 class: CommandLineTool
 
-label: "InterProScan: protein sequence classifier"
-
-doc: |
-      Version 5.21-60 can be downloaded here:
-      https://github.com/ebi-pf-team/interproscan/wiki/HowToDownload
-
-      Documentation on how to run InterProScan 5 can be found here:
-      https://github.com/ebi-pf-team/interproscan/wiki/HowToRun
-
 requirements:
+  InlineJavascriptRequirement: {}
   ResourceRequirement:
-    ramMin: 10240
-    coresMin: 3
+    coresMax: 1
+    ramMin: 100  # just a default, could be lowered
   SchemaDefRequirement:
     types:
-      - $import: InterProScan-apps.yml
+      - $import: biom-convert-table.yaml
 
 hints:
+  DockerRequirement:
+    dockerPull: 'quay.io/biocontainers/biom-format:2.1.6--py27_0'
   SoftwareRequirement:
     packages:
-      interproscan:
-        specs: [ "https://identifiers.org/rrid/RRID:SCR_005829" ]
-        version: [ "5.21-60" ]
+      biom-format:
+        specs: [ "https://doi.org/10.1186/2047-217X-1-7" ]
+        version: [ "2.1.6" ]
 
 inputs:
-  proteinFile:
+  biom:
     type: File
+    format: edam:format_3746  # BIOM
     inputBinding:
-      prefix: --input
-  applications:
-    type: InterProScan-apps.yml#apps[]?
+      prefix: --input-fp
+  table_type:
+    type: biom-convert-table.yaml#table_type
     inputBinding:
-      itemSeparator: ','
-      prefix: --applications
+      prefix: --table-type
 
-baseCommand: interproscan.sh
+  header_key:
+    type: string?
+    doc: |
+      The observation metadata to include from the input BIOM table file when
+      creating a tsv table file. By default no observation metadata will be
+      included.
+    inputBinding:
+      prefix: --header-key
+
+baseCommand: [ biom, convert ]
 
 arguments:
- - valueFrom: $(inputs.proteinFile.nameroot).i5_annotations
-   prefix: --outfile
- - valueFrom: TSV
-   prefix: --formats
- - --disable-precalc
- - --goterms
- - --pathways
- - valueFrom: $(runtime.tmpdir)
-   prefix: --tempdir
-
+  - valueFrom: $(inputs.biom.nameroot).hdf5  
+    prefix: --output-fp
+  - --to-hdf5
 
 outputs:
-  i5Annotations:
+  result:
     type: File
-    format: iana:text/tab-separated-values
-    outputBinding:
-      glob: $(inputs.proteinFile.nameroot).i5_annotations
+    outputBinding: { glob: "$(inputs.biom.nameroot)*" }
 
 $namespaces:
- iana: https://www.iana.org/assignments/media-types/
- s: http://schema.org/
+  edam: http://edamontology.org/
+  s: http://schema.org/
+
 $schemas:
- - https://schema.org/docs/schema_org_rdfa.html
+  - http://edamontology.org/EDAM_1.16.owl
+  - https://schema.org/docs/schema_org_rdfa.html
 
 s:license: "https://www.apache.org/licenses/LICENSE-2.0"
 s:copyrightHolder: "EMBL - European Bioinformatics Institute"
