@@ -80,3 +80,54 @@ Note that because `File` parameters are objects, to get the path to an
 input file you must reference the path field on a file object; to
 reference the path to the tar file in the above example you would write
 `$(inputs.tarfile.path)`.
+
+> ## Where are parameter references allowed?
+> You can only use parameter references in certain fields.  These are:
+>
+> - From [`CommandLineTool`](http://www.commonwl.org/v1.0/CommandLineTool.html#CommandLineTool)
+>   - `arguments`
+>     - `valueFrom`
+>   - `stdin`
+>   - `stdout`
+>   - `stderr`
+>   - From [CommandInputParameter](http://www.commonwl.org/v1.0/CommandLineTool.html#CommandInputParameter)
+>     - `format`
+>     - `secondaryFiles`
+>     - From [`inputBinding`](http://www.commonwl.org/v1.0/CommandLineTool.html#CommandLineBinding)
+>       - `valueFrom`
+>   - From [CommandOutputParamater](http://www.commonwl.org/v1.0/CommandLineTool.html#CommandOutputParameter)
+>     - `format`
+>     - `secondaryFiles`
+>     - From [CommandOutputBinding](http://www.commonwl.org/v1.0/CommandLineTool.html#CommandOutputBinding)
+>       - `glob`
+>       - `outputEval`
+> - From `Workflow`
+>   - From [InputParameter](http://www.commonwl.org/v1.0/Workflow.html#InputParameter) and [WorkflowOutputParameter](http://www.commonwl.org/v1.0/Workflow.html#WorkflowOutputParameter)
+>     - `format`
+>     - `secondaryFiles`
+>     - From `steps`
+>       - From [WorkflowStepInput](http://www.commonwl.org/v1.0/Workflow.html#WorkflowStepInput)
+>         - `valueFrom`
+> - From [ExpressionTool](https://www.commonwl.org/v1.0/Workflow.html#ExpressionTool)
+>   - `expression`
+>   - From [InputParameter](http://www.commonwl.org/v1.0/Workflow.html#InputParameter) and [ExpressionToolOutputParameter](http://www.commonwl.org/v1.0/Workflow.html#ExpressionToolOutputParameter)
+>     - `format`
+>     - `secondaryFiles`
+> - From [`ResourceRequirement`](http://www.commonwl.org/v1.0/CommandLineTool.html#ResourceRequirement)
+>   - `coresMin`
+>   - `coresMax`
+>   - `ramMin`
+>   - `ramMax`
+>   - `tmpdirMin`
+>   - `tmpdirMax`
+>   - `outdirMin`
+>   - `outdirMax`
+> - From [`InitialWorkDirRequirement`](http://www.commonwl.org/v1.0/CommandLineTool.html#InitialWorkDirRequirement)
+>   - `listing`
+>   - in [Dirent](http://www.commonwl.org/v1.0/CommandLineTool.html#Dirent)
+>     - `entry`
+>     - `entryname`
+> - From `EnvVarRequirement`
+>   - From [EnvironmentDef](http://www.commonwl.org/v1.0/CommandLineTool.html#EnvironmentDef)
+>     - `envValue`
+{: .callout }

@@ -13,4 +13,7 @@ requirements:
 
 inputs:
   message: string
-outputs: []
+outputs:
+  example_out:
+    type: stdout
+stdout: output.txt
