@@ -70,7 +70,7 @@ Using the following input file:
 *scatter-job.yml*
 
 ~~~
-{% include cwl/23-scatter-workflow/scatter-job.cwl %}
+{% include cwl/23-scatter-workflow/scatter-job.yml %}
 ~~~
 {: .source}
 
