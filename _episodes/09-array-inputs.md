@@ -13,7 +13,7 @@ keypoints:
 `type: array`."
 - "The appearance of array parameters on the command line differs depending on
 with the `inputBinding` field is provided in the description."
-- "Use the `itemSeperator` field to control concatenatation of array
+- "Use the `itemSeparator` field to control concatenatation of array
 parameters."
 ---
 It is easy to add arrays of input parameters represented to the command
@@ -40,17 +40,36 @@ on the command line:
 
 ~~~
 $ cwl-runner array-inputs.cwl array-inputs-job.yml
-[job 140334923640912] /home/example$ echo -A one two three -B=four -B=five -B=six -C=seven,eight,nine
--A one two three -B=four -B=five -B=six -C=seven,eight,nine
+[job array-inputs.cwl] /home/examples$ echo \
+    -A \
+    one \
+    two \
+    three \
+    -B=four \
+    -B=five \
+    -B=six \
+    -C=seven,eight,nine > /home/examples/output.txt
+[job array-inputs.cwl] completed success
+{
+    "example_out": {
+        "location": "file:///home/examples/output.txt",
+        "basename": "output.txt",
+        "class": "File",
+        "checksum": "sha1$91038e29452bc77dcd21edef90a15075f3071540",
+        "size": 60,
+        "path": "/home/examples/output.txt"
+    }
+}
 Final process status is success
-{}
+$ cat output.txt
+-A one two three -B=four -B=five -B=six -C=seven,eight,nine
 ~~~
 {: .output}
 
 The `inputBinding` can appear either on the outer array parameter definition
 or the inner array element definition, and these produce different behavior when
 constructing the command line, as shown above.
-In addition, the `itemSeperator` field, if provided, specifies that array
+In addition, the `itemSeparator` field, if provided, specifies that array
 values should be concatenated into a single argument separated by the item
 separator string.
 

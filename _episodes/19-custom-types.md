@@ -20,9 +20,8 @@ descriptions that all use the same type, and also allow for additional
 customisation/configuration of a tool/analysis without the need to fiddle with
 the CWL description directly.
 
-The example below is a CWL description of the [InterProScan][ips] tool for
-simultaneously searching protein sequences against a wide variety of resources.
-It is a good example of a number of good practices in CWL.
+The example below is a CWL description of the [biom convert format][biom] tool for
+converting a standard biom table file to hd5 format.
 
 *custom-types.cwl*
 
@@ -38,40 +37,41 @@ It is a good example of a number of good practices in CWL.
 ~~~
 {: .source}
 
-___Note:___ To follow the example below, you need to download the example input file, *test_proteins.fasta*. The file is available from [https://github.com/common-workflow-language/user_guide/raw/gh-pages/_includes/cwl/test_proteins.fasta](https://github.com/common-workflow-language/user_guide/raw/gh-pages/_includes/cwl/test_proteins.fasta) and can be downloaded e.g. via `wget`:
+___Note:___ To follow the example below, you need to download the example input file, *rich_sparse_otu_table.biom*. The file is available from [https://raw.githubusercontent.com/common-workflow-language/user_guide/gh-pages/_includes/cwl/19-custom-types/rich_sparse_otu_table.biom](https://raw.githubusercontent.com/common-workflow-language/user_guide/gh-pages/_includes/cwl/19-custom-types/rich_sparse_otu_table.biom) and can be downloaded e.g. via `wget`:
 
 ~~~
-wget https://github.com/common-workflow-language/user_guide/raw/gh-pages/_includes/cwl/test_proteins.fasta
+wget https://raw.githubusercontent.com/common-workflow-language/user_guide/gh-pages/_includes/cwl/19-custom-types/rich_sparse_otu_table.biom
 ~~~
 {: .source}
 
-On line 34, in `inputs:applications`, a list of applications to be used in the
-search are imported as a custom object:
+On line 34, in `inputs:table_type`, a list of allowable table options to be used in the
+table conversion are imported as a custom object:
 
 ```
 inputs:
-  proteinFile:
+  biom:
     type: File
+    format: edam:format_3746  # BIOM
     inputBinding:
-      prefix: --input
-  applications:
-    type: InterProScan-apps.yml#apps[]?
+      prefix: --input-fp
+  table_type:
+    type: biom-convert-table.yaml#table_type
     inputBinding:
-      itemSeparator: ','
-      prefix: --applications
+      prefix: --table-type
 ```
 {: .source}
 
 The reference to a custom type is a combination of the name of the file in which
-the object is defined (`InterProScan-apps.yml`) and the name of the object
-within that file (`apps`) that defines the custom type. The square brackets `[]`
-mean that an array of the preceding type is expected, in this case the `apps`
-type from the imported `InterProScan-apps.yml` file
+the object is defined (`biom-convert-table.yaml`) and the name of the object
+within that file (`table_type`) that defines the custom type. In this case the `symbols`
+array from the imported `biom-convert-table.yaml` file define the allowable table options.
+For example, in custom-types.yml, we pass `OTU table` as an `input` that 
+tells the tool to create an OTU table in hd5 format. 
 
 The contents of the YAML file describing the custom type are given below:
 
 ~~~
-{% include cwl/19-custom-types/InterProScan-apps.yml %}
+{% include cwl/19-custom-types/biom-convert-table.yaml %}
 ~~~
 {: .source}
 
@@ -81,12 +81,13 @@ below in the example `custom-types.cwl` description:
 
 ```
 requirements:
+  InlineJavascriptRequirement: {}
   ResourceRequirement:
-    ramMin: 10240
-    coresMin: 3
+    coresMax: 1
+    ramMin: 100
   SchemaDefRequirement:
     types:
-      - $import: InterProScan-apps.yml
+      - $import: biom-convert-table.yaml
 ```
 {: .source}
 
@@ -96,4 +97,4 @@ required for the tool to run successfully, as well as details of the version of
 the software that the description was written for and other useful metadata.
 These features are discussed further in other chapters of this user guide.
 
-[ips]: https://github.com/ebi-pf-team/interproscan
+[biom]: http://biom-format.org/

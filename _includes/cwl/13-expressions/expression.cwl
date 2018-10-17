@@ -8,7 +8,10 @@ requirements:
   - class: InlineJavascriptRequirement
 
 inputs: []
-outputs: []
+outputs:
+  example_out:
+    type: stdout
+stdout: output.txt
 arguments:
   - prefix: -A
     valueFrom: $(1+1)

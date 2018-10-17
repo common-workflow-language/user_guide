@@ -53,7 +53,7 @@ $ cwl-runner docker.cwl docker-job.yml
     -i \
     --volume=/tmp/tmpgugLND:/var/spool/cwl:rw \
     --volume=/tmp/tmpSs5JoN:/tmp:rw \
-    --volume=/home/me/cwl/user_guide/hello.js:/var/lib/cwl/stg16848d97-e6ba-4b35-b666-4546d9965a2d/hello.js:ro \
+    --volume=/home/me/cwl/user_guide/hello.js:/var/lib/cwl/job369354770_examples/hello.js:ro \
     --workdir=/var/spool/cwl \
     --read-only=true \
     --user=1000 \
@@ -62,11 +62,21 @@ $ cwl-runner docker.cwl docker-job.yml
     --env=HOME=/var/spool/cwl \
     node:slim \
     node \
-    /var/lib/cwl/stg16848d97-e6ba-4b35-b666-4546d9965a2d/hello.js
-Hello World
+    /var/lib/cwl/job369354770_examples/hello.js > /tmp/tmpgugLND/output.txt
 [job docker.cwl] completed success
-{}
+{
+    "example_out": {
+        "location": "file:///home/me/cwl/user_guide/output.txt",
+        "basename": "output.txt",
+        "class": "File",
+        "checksum": "sha1$648a6a6ffffdaa0badb23b8baf90b6168dd16b3a",
+        "size": 12,
+        "path": "/home/me/cwl/user_guide/output.txt"
+    }
+}
 Final process status is success
+$ cat output.txt
+Hello World
 ~~~
 {: .output}
 

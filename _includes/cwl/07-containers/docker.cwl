@@ -11,4 +11,7 @@ inputs:
     type: File
     inputBinding:
       position: 1
-outputs: []
+outputs:
+  example_out:
+    type: stdout
+stdout: output.txt
