@@ -22,6 +22,9 @@ a file format initially for quick development before sharing your tool with
 others. You can browse existing file format listings for IANA [here][IANA] and
 for EDAM [here][EDAM].
 
+In the next tutorial, we explain  the `$namespace` and `$schema` section of the
+document in greater detail, so don't worry about these for now.  
+
 Note that for added value `cwltool` can do some basic reasoning based on file
 formats and warn you if there seem to be some obvious mismatches.
 
@@ -31,6 +34,10 @@ formats and warn you if there seem to be some obvious mismatches.
 {% include cwl/16-file-formats/metadata_example.cwl %}
 ~~~
 {: .source}
+
+The equivalent of this CWL description in command line format is:
+
+`wc -l /path/to/aligned_sequences.ext > output.txt`
 
 #### Sample Parameter Files
 

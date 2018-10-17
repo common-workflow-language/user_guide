@@ -29,7 +29,7 @@
   job: 05-stdout/echo-job.yml
   tool: 05-stdout/stdout.cwl
   output:
-    output:
+    example_out:
       class: File
       checksum: sha1$47a013e660d408619d894b20806b1d5086aab03b
       basename: output.txt
@@ -48,7 +48,17 @@
       location: Any
       size: 0
 
-# Section 7 depends on side-effects
+# Section 7
+- doc: Test for section 7
+  job: 07-containers/docker-job.yml
+  tool: 07-containers/docker.cwl
+  output:
+    example_out:
+      class: File
+      checksum: sha1$648a6a6ffffdaa0badb23b8baf90b6168dd16b3a
+      basename: output.txt
+      location: Any
+      size: 12
 
 # Section 8
 - doc: Test for section 8
@@ -62,7 +72,17 @@
       location: Any
       size: 184
 
-# Section 9 depends on side-effects
+# Section 9
+- doc: Test for section 9
+  job: 09-array-inputs/array-inputs-job.yml
+  tool: 09-array-inputs/array-inputs.cwl
+  output:
+    example_out:
+      class: File
+      checksum: sha1$91038e29452bc77dcd21edef90a15075f3071540
+      basename: output.txt
+      location: Any
+      size: 60
 
 # Section 10
 - doc: Test for section 10
@@ -82,15 +102,66 @@
         size: 0
 
 # Section 11 depends on side-effects
-# Rest two examples in Section 11 depend on side-effects
 - doc: Test for section 11 (1st example)
   job: 11-records/record-job1.yml
   tool: 11-records/record.cwl
   should_fail: true
 
-# Section 12 depends on side-effects
-# Section 13 depends on side-effects
-# Section 14 depends on side-effects
+- doc: Test for section 11 (2nd example)
+  job: 11-records/record-job2.yml
+  tool: 11-records/record.cwl
+  output:
+    example_out:
+      class: File
+      checksum: sha1$329fe3b598fed0dfd40f511522eaf386edb2d077
+      basename: output.txt
+      location: Any
+      size: 23
+
+- doc: Test for section 11 (3rd example)
+  job: 11-records/record-job3.yml
+  tool: 11-records/record.cwl
+  output:
+    example_out:
+      class: File
+      checksum: sha1$77f572b28e441240a5e30eb14f1d300bcc13a3b4
+      basename: output.txt
+      location: Any
+      size: 22
+
+# Section 12
+- doc: Test for section 12
+  job: 12-env/echo-job.yml
+  tool: 12-env/env.cwl
+  output:
+    example_out:
+      class: File
+      basename: output.txt
+      location: Any
+
+# Section 13
+- doc: Test for section 13
+  job: 13-expressions/empty.yml
+  tool: 13-expressions/expression.cwl
+  output:
+    example_out:
+      class: File
+      checksum: sha1$a739a6ff72d660d32111265e508ed2fc91f01a7c
+      basename: output.txt
+      location: Any
+      size: 36
+
+# Section 14
+- doc: Test for section 14
+  job: 14-runtime/echo-job.yml
+  tool: 14-runtime/createfile.cwl
+  output:
+    example_out:
+      class: File
+      checksum: sha1$5509385b089c054ac9f9890dccef666eda7eb79d
+      basename: output.txt
+      location: Any
+      size: 23
 
 # Section 15
 - doc: Test for section 15
@@ -136,16 +207,16 @@
       location: Any
 
 # Section 19
-# See: Issue #48
-# - doc: Test for section 19
-#   job: 19-custom-types/custom-types.yml
-#   tool: 19-custom-types/costom-types.cwl
-#   output:
-#     i5Annotations:
-#       class: File
-#       basename: test_proteins.i5_annotations
-#       location: Any
-#       size: Any # To be fixed
+# Note: The checksum is always changed for every executions
+- doc: Test for section 19
+  job: 19-custom-types/custom-types.yml
+  tool: 19-custom-types/custom-types.cwl
+  output:
+    result:
+      class: File
+      basename: rich_sparse_otu_table.hdf5
+      location: Any
+      size: 46992
 
 # Section 20
 # See: Issue #48

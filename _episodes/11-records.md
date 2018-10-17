@@ -32,9 +32,10 @@ parameters together to describe these two conditions.
 
 ~~~
 $ cwl-runner record.cwl record-job1.yml
-Workflow error:
-  Error validating input record, could not validate field `dependent_parameters` because
-  missing required field `itemB`
+Workflow error, try again with --debug for more information:
+Invalid job input record:
+record-job1.yml:1:1: the `dependent_parameters` field is not valid because
+                       missing required field `itemB`
 ~~~
 {: .output}
 
@@ -49,10 +50,28 @@ In the first example, you can't provide `itemA` without also providing `itemB`.
 
 ~~~
 $ cwl-runner record.cwl record-job2.yml
-[job 140566927111376] /home/example$ echo -A one -B two -C three
--A one -B two -C three
+record-job2.yml:6:3: invalid field `itemD`, expected one of: 'itemC'
+[job record.cwl] /home/example$ echo \
+    -A \
+    one \
+    -B \
+    two \
+    -C \
+    three > /home/example/output.txt
+[job record.cwl] completed success
+{
+    "example_out": {
+        "location": "file:///home/example/11-records/output.txt",
+        "basename": "output.txt",
+        "class": "File",
+        "checksum": "sha1$329fe3b598fed0dfd40f511522eaf386edb2d077",
+        "size": 23,
+        "path": "/home/example/output.txt"
+    }
+}
 Final process status is success
-{}
+$ cat output.txt
+-A one -B two -C three
 ~~~
 {: .output}
 
@@ -68,10 +87,27 @@ is added to the command line and `itemD` is ignored.
 
 ~~~
 $ cwl-runner record.cwl record-job3.yml
-[job 140606932172880] /home/example$ echo -A one -B two -D four
--A one -B two -D four
+[job record.cwl] /home/example$ echo \
+    -A \
+    one \
+    -B \
+    two \
+    -D \
+    four > /home/example/output.txt
+[job record.cwl] completed success
+{
+    "example_out": {
+        "location": "file:///home/example/output.txt",
+        "basename": "output.txt",
+        "class": "File",
+        "checksum": "sha1$77f572b28e441240a5e30eb14f1d300bcc13a3b4",
+        "size": 22,
+        "path": "/home/example/output.txt"
+    }
+}
 Final process status is success
-{}
+$ cat output.txt
+-A one -B two -D four
 ~~~
 {: .output}
 

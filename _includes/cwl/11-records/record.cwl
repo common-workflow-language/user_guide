@@ -32,5 +32,8 @@ inputs:
             type: string
             inputBinding:
               prefix: -D
-outputs: []
+outputs:
+  example_out:
+    type: stdout
+stdout: output.txt
 baseCommand: echo
