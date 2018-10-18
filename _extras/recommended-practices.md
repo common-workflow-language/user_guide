@@ -4,12 +4,19 @@ title: "Recommended Practices"
 permalink: /rec-practices/
 ---
 
-Below are a set of recommended good practices to keep in mind when writing a Common Workflow Language description for a tool or workflow. These guidelines are presented for consideration on a scale of usefulness: more is better, not all are required.
+Below are a set of recommended good practices to keep in mind when writing a Common Workflow Language 
+description for a tool or workflow. These guidelines are presented for consideration on a scale of 
+usefulness: more is better, not all are required.
 
 &#9744; Reproducibility and Portability are essential goals of scientific workflow developers. 
 
-- The best way to ensure portability and reproducibility is to rigidly specify the exact environment a tool should run in. Currently a linux image (commonly called a `Docker image`), packaging the exact environment intended by the developer, is the best way to distribute a tool executable. Use `DockerPull` to specify the image. Use an image identifier that is resilient to updates to the container.
-- If this is not possible, carefully specifying software tools and dependencies using `SoftwareRequirement` is the next best resort. Be aware that changes in the tool repositories the tools are being pulled from may silently change the behavior of the tool at each run.
+- Currently (2018) the best way to ensure portability and reproducibility is to rigidly specify the exact environment 
+a tool should run in. Currently a linux image (commonly called a `Docker image`), packaging the exact 
+environment intended by the developer, is the best way to distribute a tool executable. Use `DockerPull` 
+to specify the image. Use an image identifier that is resilient to updates to the container.
+- If this is not possible, carefully specifying software tools and dependencies using `SoftwareRequirement` 
+is the next best resort. Be aware that changes in the tool repositories the tools are being pulled from 
+may silently change the behavior of the tool at each run.
 - Not specifying a docker image or software requirements will result in a non-reproducible, non-portable workflow!
 
 &#9744; No `type: string` parameters for names of input or reference files/directories; use `type: File` or `type: Directory` as appropriate.
