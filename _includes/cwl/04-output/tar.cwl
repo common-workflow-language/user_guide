@@ -2,12 +2,12 @@
 
 cwlVersion: v1.0
 class: CommandLineTool
-baseCommand: [tar, xf]
+baseCommand: [tar, --extract]
 inputs:
   tarfile:
     type: File
     inputBinding:
-      position: 1
+      prefix: --file
 outputs:
   example_out:
     type: File

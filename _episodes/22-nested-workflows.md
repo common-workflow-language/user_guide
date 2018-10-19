@@ -24,7 +24,7 @@ used as a step in another CWL workflow, if the workflow engine supports the
 
 ~~~
 requirements:
-  - class: SubworkflowFeatureRequirement
+  SubworkflowFeatureRequirement: {}
 ~~~
 {: .source}
 
@@ -35,6 +35,20 @@ workflow:
 {% include cwl/22-nested-workflows/nestedworkflows.cwl %}
 ~~~
 {: .source}
+
+> ## Visualization of the workflow and the inner workflow from its `compile` step
+> This two-step workflow starts with the `create-tar` step which is connected to
+> the `compile` step in orange; `compile` is another workflow, diagrammed on the
+> right. In purple we see the fixed string `"Hello.java"` being supplied as the
+> `name_of_file_to_extract`.
+> 
+> <a href="https://view.commonwl.org/workflows/github.com/common-workflow-language/user_guide/blob/gh-pages/_includes/cwl/22-nested-workflows/nestedworkflows.cwl"><img
+src="https://view.commonwl.org/graph/svg/github.com/common-workflow-language/user_guide/blob/gh-pages/_includes/cwl/22-nested-workflows/nestedworkflows.cwl"
+alt="Visualization of nestedworkflows.cwl" /></a>
+> <a href="https://view.commonwl.org/workflows/github.com/common-workflow-language/user_guide/blob/gh-pages/_includes/cwl/22-nested-workflows/1st-workflow.cwl"><img
+src="https://view.commonwl.org/graph/svg/github.com/common-workflow-language/user_guide/blob/gh-pages/_includes/cwl/22-nested-workflows/1st-workflow.cwl"
+alt="Visualization of 1st-workflow.cwl" /></a>
+{: .callout}
 
 A CWL `Workflow` can be used as a `step` just like a `CommandLineTool`, it's CWL
 file is included with `run`. The workflow inputs (`inp` and `ex`) and outputs
@@ -71,7 +85,7 @@ requirement, before adding it to a tar file.
 ~~~
   create-tar:
     requirements:
-      - class: InitialWorkDirRequirement
+      InitialWorkDirRequirement:
         listing:
           - entryname: Hello.java
             entry: |
@@ -91,7 +105,7 @@ supports the `ShellCommandRequirement`:
   run:
     class: CommandLineTool
     requirements:
-      - class: ShellCommandRequirement
+      ShellCommandRequirement: {}
     arguments:
       - shellQuote: false
         valueFrom: >
@@ -126,3 +140,5 @@ simplify its usage as a tool step in other workflows.
 Nested workflows can be a powerful feature to generate higher-level functional
 and reusable workflow units - but just like for creating a CWL Tool description,
 care must be taken to improve its usability in multiple workflows.
+
+{% include links.md %}

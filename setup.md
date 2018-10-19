@@ -1,7 +1,5 @@
 ---
-layout: page
 title: Setup
-permalink: /setup/
 ---
 To follow the Common Workflow Language user guide, you will need an up-to-date
 Linux or Mac OS X system, with the following software installed:
@@ -19,4 +17,5 @@ also need:
   - Docker (optional)
 
 [ref-imp]: https://github.com/common-workflow-language/cwltool#install
-[commonwl]: http://www.commonwl.org/
+[commonwl]: https://www.commonwl.org/
+{% include links.md %}
