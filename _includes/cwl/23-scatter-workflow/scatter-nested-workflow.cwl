@@ -4,8 +4,8 @@ cwlVersion: v1.0
 class: Workflow
 
 requirements:
-- class: ScatterFeatureRequirement
-- class: SubworkflowFeatureRequirement
+ ScatterFeatureRequirement: {}
+ SubworkflowFeatureRequirement: {}
 
 inputs:
   message_array: string[] 

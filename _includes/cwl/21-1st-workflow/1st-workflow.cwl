@@ -3,11 +3,11 @@
 cwlVersion: v1.0
 class: Workflow
 inputs:
-  inp: File
-  ex: string
+  tarball: File
+  name_of_file_to_extract: string
 
 outputs:
-  classout:
+  compiled_class:
     type: File
     outputSource: compile/classfile
 
@@ -15,12 +15,12 @@ steps:
   untar:
     run: tar-param.cwl
     in:
-      tarfile: inp
-      extractfile: ex
-    out: [example_out]
+      tarfile: tarball
+      extractfile: name_of_file_to_extract
+    out: [extracted_file]
 
   compile:
     run: arguments.cwl
     in:
-      src: untar/example_out
+      src: untar/extracted_file
     out: [classfile]

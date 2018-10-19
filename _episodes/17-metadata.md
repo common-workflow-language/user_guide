@@ -44,4 +44,5 @@ requirements in order to use the tool, and a few more metadata fields.
 ~~~
 {: .source}
 
-[schema-salad]: http://www.commonwl.org/v1.0/SchemaSalad.html#Explicit_context
+[schema-salad]: https://www.commonwl.org/v1.0/SchemaSalad.html#Explicit_context
+{% include links.md %}

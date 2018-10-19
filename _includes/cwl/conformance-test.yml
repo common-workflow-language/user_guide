@@ -41,7 +41,7 @@
   job: 06-params/tar-param-job.yml
   tool: 06-params/tar-param.cwl
   output:
-    example_out:
+    extracted_file:
       class: File
       checksum: sha1$da39a3ee5e6b4b0d3255bfef95601890afd80709
       basename: goodbye.txt
@@ -235,7 +235,7 @@
   job: 21-1st-workflow/1st-workflow-job.yml
   tool: 21-1st-workflow/1st-workflow.cwl
   output:
-    classout:
+    compiled_class:
       class: File
       checksum: sha1$39e3219327347c05aa3e82236f83aa6d77fe6bfd
       basename: Hello.class

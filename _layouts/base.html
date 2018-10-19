@@ -1,5 +1,8 @@
 ---
 ---
+{% include base_path.html %}
+{% include gh_variables.html %}
+
 <!doctype html>
 <html lang="en">
   <head>
@@ -8,35 +11,14 @@
     <meta http-equiv="last-modified" content="{{ site.time }}">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- meta "search-domain" used for google site search function google_search() -->
-    <meta name="search-domain" value="{{ site.github.url }}">
-    <link rel="stylesheet" type="text/css" href="{{ page.root }}/assets/css/bootstrap.css" />
-    <link rel="stylesheet" type="text/css" href="{{ page.root }}/assets/css/bootstrap-theme.css" />
-    <link rel="stylesheet" type="text/css" href="{{ page.root }}/assets/css/lesson.css" />
-    {% if site.carpentry == "swc" %}
-    <link rel="shortcut icon" type="image/x-icon" href="/favicon-swc.ico" />
-    {% elsif site.carpentry == "dc" %}
-    <link rel="shortcut icon" type="image/x-icon" href="/favicon-dc.ico" />
-    {% elsif site.carpentry == "lc" %}
-    <link rel="shortcut icon" type="image/x-icon" href="/favicon-lc.ico" />
-    {% elsif site.carpentry == "cwl" %}
-    <link rel="apple-touch-icon" sizes="57x57" href="{{ page.root }}/assets/img/cwl-apple-icon-57x57.png">
-    <link rel="apple-touch-icon" sizes="60x60" href="{{ page.root }}/assets/img/cwl-apple-icon-60x60.png">
-    <link rel="apple-touch-icon" sizes="72x72" href="{{ page.root }}/assets/img/cwl-apple-icon-72x72.png">
-    <link rel="apple-touch-icon" sizes="76x76" href="{{ page.root }}/assets/img/cwl-apple-icon-76x76.png">
-    <link rel="apple-touch-icon" sizes="114x114" href="{{ page.root }}/assets/img/cwl-apple-icon-114x114.png">
-    <link rel="apple-touch-icon" sizes="120x120" href="{{ page.root }}/assets/img/cwl-apple-icon-120x120.png">
-    <link rel="apple-touch-icon" sizes="144x144" href="{{ page.root }}/assets/img/cwl-apple-icon-144x144.png">
-    <link rel="apple-touch-icon" sizes="152x152" href="{{ page.root }}/assets/img/cwl-apple-icon-152x152.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="{{ page.root }}/assets/img/cwl-apple-icon-180x180.png">
-    <link rel="icon" type="image/png" sizes="192x192"  href="{{ page.root }}/assets/img/cwl-android-icon-192x192.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="{{ page.root }}/assets/img/cwl-favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="96x96" href="{{ page.root }}/assets/img/cwl-favicon-96x96.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="{{ page.root }}/assets/img/cwl-favicon-16x16.png">
-    <link rel="manifest" href="/manifest.json">
-    <meta name="msapplication-TileColor" content="#ffffff">
-    <meta name="msapplication-TileImage" content="{{ page.root }}/assets/img/cwl-ms-icon-144x144.png">
-    <meta name="theme-color" content="#ffffff">
-    {% endif %}
+    <meta name="search-domain" value="{{ search_domain_url }}">
+    <link rel="stylesheet" type="text/css" href="{{ relative_root_path }}/assets/css/bootstrap.css" />
+    <link rel="stylesheet" type="text/css" href="{{ relative_root_path }}/assets/css/bootstrap-theme.css" />
+    <link rel="stylesheet" type="text/css" href="{{ relative_root_path }}/assets/css/lesson.css" />
+    <link rel="stylesheet" type="text/css" href="{{ relative_root_path }}/assets/css/syntax.css" />
+
+    {% include favicons.html %}
+
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -46,6 +28,9 @@
     <title>{{ site.title }}{% if page.title %}: {{ page.title }}{% endif %}</title>
   </head>
   <body>
+
+    {% include life_cycle.html %}
+
     <div class="container">
       {% include navbar.html %}
 {{ content }}

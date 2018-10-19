@@ -52,3 +52,4 @@ $ cat output.txt
 CONFIGVAR=Hello world!
 ~~~
 {: .output}
+{% include links.md %}

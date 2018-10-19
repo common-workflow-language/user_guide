@@ -1,7 +1,7 @@
 ---
 layout: page
 title: "Licenses"
-permalink: /license/
+root: .
 ---
 ## Instructional Material
 
@@ -30,7 +30,7 @@ Under the following terms:
 * **Attribution**---You must give appropriate credit (mentioning that
   your work is derived from work that is Copyright © the Common Workflow
   Language project, and Copyright © Software Carpentry, and, where practical, linking to
-  http://www.commonwl.org/ and http://software-carpentry.org/), provide a [link to the
+  https://www.commonwl.org/ and https://software-carpentry.org/), provide a [link to the
   license][cc-by-human], and indicate if changes were made. You may do
   so in any reasonable manner, but not in any way that suggests the
   licensor endorses you or your use.
@@ -65,10 +65,10 @@ limitations under the License.
 ## Trademark
 
 "Software Carpentry" and "Data Carpentry" and their respective logos
-are registered trademarks of [NumFOCUS][numfocus].
+are registered trademarks of [Community Initiatives][CI].
 
 [cc-by-human]: https://creativecommons.org/licenses/by/4.0/
 [cc-by-legal]: https://creativecommons.org/licenses/by/4.0/legalcode
 [apache-2.0-license]: https://opensource.org/licenses/Apache-2.0
-[numfocus]: http://numfocus.org/
-[osi]: http://opensource.org
+[ci]: http://communityin.org/
+[osi]: https://opensource.org

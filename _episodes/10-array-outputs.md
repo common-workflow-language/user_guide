@@ -38,13 +38,13 @@ Final process status is success
   "output": [
     {
       "size": 0,
-      "location": "/home/peter/work/common-workflow-language/draft-3/examples/foo.txt",
+      "location": "foo.txt",
       "checksum": "sha1$da39a3ee5e6b4b0d3255bfef95601890afd80709",
       "class": "File"
     },
     {
       "size": 0,
-      "location": "/home/peter/work/common-workflow-language/draft-3/examples/baz.txt",
+      "location": "baz.txt",
       "checksum": "sha1$da39a3ee5e6b4b0d3255bfef95601890afd80709",
       "class": "File"
     }
@@ -56,3 +56,5 @@ Final process status is success
 The array of expected outputs is specified in `array-outputs-job.yml` with each
 entry marked by a leading `-`. This format can also be used in CWL descriptions
 to mark entries in arrays, as demonstrated in several of the upcoming sections.
+
+{% include links.md %}
