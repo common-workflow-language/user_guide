@@ -4,6 +4,7 @@
 # Settings
 MAKEFILES=Makefile $(wildcard *.mk)
 JEKYLL=jekyll
+JEKYLL_VERSION=3.7.3
 PARSER=bin/markdown_ast.rb
 DST=_site
 
@@ -15,6 +16,10 @@ all : commands
 ## commands         : show all commands.
 commands :
 	@grep -h -E '^##' ${MAKEFILES} | sed -e 's/## //g'
+
+## docker-serve     : use docker to build the site
+docker-serve :
+	docker run --rm -it -v ${PWD}:/srv/jekyll -p 127.0.0.1:4000:4000 jekyll/jekyll:${JEKYLL_VERSION} make serve
 
 ## serve            : run a local server.
 serve : lesson-md
@@ -38,7 +43,7 @@ clean :
 	@find . -name '*.pyc' -exec rm {} \;
 
 ## clean-rmd        : clean intermediate R files (that need to be committed to the repo).
-clear-rmd :
+clean-rmd :
 	@rm -rf ${RMD_DST}
 	@rm -rf fig/rmd-*
 
@@ -83,9 +88,8 @@ HTML_DST = \
 ## lesson-md        : convert Rmarkdown files to markdown
 lesson-md : ${RMD_DST}
 
-# Use of .NOTPARALLEL makes rule execute only once
-${RMD_DST} : ${RMD_SRC}
-	@bin/knit_lessons.sh ${RMD_SRC}
+_episodes/%.md: _episodes_rmd/%.Rmd
+	@bin/knit_lessons.sh $< $@
 
 ## lesson-check     : validate lesson Markdown.
 lesson-check : lesson-fixme
@@ -93,11 +97,11 @@ lesson-check : lesson-fixme
 
 ## lesson-check-all : validate lesson Markdown, checking line lengths and trailing whitespace.
 lesson-check-all :
-	@bin/lesson_check.py -s . -p ${PARSER} -l -w
+	@bin/lesson_check.py -s . -p ${PARSER} -r _includes/links.md -l -w --permissive
 
 ## unittest         : run unit tests on checking tools.
 unittest :
-	python bin/test_lesson_check.py
+	@bin/test_lesson_check.py
 
 ## lesson-files     : show expected names of generated files for debugging.
 lesson-files :

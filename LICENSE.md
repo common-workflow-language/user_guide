@@ -1,6 +1,7 @@
 ---
 layout: page
 title: "Licenses"
+root: .
 ---
 ## Instructional Material
 
@@ -64,10 +65,10 @@ limitations under the License.
 ## Trademark
 
 "Software Carpentry" and "Data Carpentry" and their respective logos
-are registered trademarks of [NumFOCUS][numfocus].
+are registered trademarks of [Community Initiatives][CI].
 
 [cc-by-human]: https://creativecommons.org/licenses/by/4.0/
 [cc-by-legal]: https://creativecommons.org/licenses/by/4.0/legalcode
 [apache-2.0-license]: https://opensource.org/licenses/Apache-2.0
-[numfocus]: https://numfocus.org/
+[ci]: http://communityin.org/
 [osi]: https://opensource.org

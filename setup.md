@@ -18,3 +18,4 @@ also need:
 
 [ref-imp]: https://github.com/common-workflow-language/cwltool#install
 [commonwl]: https://www.commonwl.org/
+{% include links.md %}
