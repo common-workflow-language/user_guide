@@ -113,3 +113,5 @@ $ cat output.txt
 
 In the third example, only `itemD` is provided, so it appears on the
 command line.
+
+{% include links.md %}

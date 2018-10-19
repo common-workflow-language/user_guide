@@ -1,4 +1,4 @@
-inp:
+tarball:
   class: File
   path: hello.tar
-ex: Hello.java
+name_of_file_to_extract: Hello.java

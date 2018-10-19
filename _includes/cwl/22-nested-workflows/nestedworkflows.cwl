@@ -8,47 +8,40 @@ inputs: []
 outputs:
   classout:
     type: File
-    outputSource: compile/classout
+    outputSource: compile/compiled_class
 
 requirements:
-  - class: SubworkflowFeatureRequirement
+  SubworkflowFeatureRequirement: {}
 
 steps:
   compile:
     run: 1st-workflow.cwl
     in:
-      inp:
-        source: create-tar/tar
-      ex:
+      tarball: create-tar/tar_compressed_java_file
+      name_of_file_to_extract:
         default: "Hello.java"
-    out: [classout]
+    out: [compiled_class]
 
   create-tar:
-    requirements:
-      - class: InitialWorkDirRequirement
-        listing:
-          - entryname: Hello.java
-            entry: |
-              public class Hello {
-                public static void main(String[] argv) {
-                    System.out.println("Hello from Java");
-                }
-              }
     in: []
-    out: [tar]
+    out: [tar_compressed_java_file]
     run:
       class: CommandLineTool
       requirements:
-        - class: ShellCommandRequirement
-      arguments:
-        - shellQuote: false
-          valueFrom: |
-            date
-            tar cf hello.tar Hello.java
-            date
+        InitialWorkDirRequirement:
+          listing:
+            - entryname: Hello.java
+              entry: |
+                public class Hello {
+                  public static void main(String[] argv) {
+                      System.out.println("Hello from Java");
+                  }
+                }
       inputs: []
+      baseCommand: [tar, --create, --file=hello.tar, Hello.java]
       outputs:
-        tar:
+        tar_compressed_java_file:
           type: File
+          streamable: true
           outputBinding:
             glob: "hello.tar"
