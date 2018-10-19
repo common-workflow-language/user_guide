@@ -21,7 +21,7 @@ on multiple inputs without having to generate many different commands or input y
 
 ~~~
 requirements:
-  - class: ScatterFeatureRequirement
+  ScatterFeatureRequirement: {}
 ~~~
 {: .source}
 

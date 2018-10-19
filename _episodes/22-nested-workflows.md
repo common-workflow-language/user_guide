@@ -24,7 +24,7 @@ used as a step in another CWL workflow, if the workflow engine supports the
 
 ~~~
 requirements:
-  - class: SubworkflowFeatureRequirement
+  SubworkflowFeatureRequirement: {}
 ~~~
 {: .source}
 
@@ -85,7 +85,7 @@ requirement, before adding it to a tar file.
 ~~~
   create-tar:
     requirements:
-      - class: InitialWorkDirRequirement
+      InitialWorkDirRequirement:
         listing:
           - entryname: Hello.java
             entry: |
@@ -105,7 +105,7 @@ supports the `ShellCommandRequirement`:
   run:
     class: CommandLineTool
     requirements:
-      - class: ShellCommandRequirement
+      ShellCommandRequirement: {}
     arguments:
       - shellQuote: false
         valueFrom: >
