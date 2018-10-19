@@ -167,9 +167,4 @@ two step workflow to a single step subworkflow:
 Now the scatter acts on a single step, but that step consists of two steps so each step is performed
 in parallel.
 
-> ## Visualization of scatter-nested-workflow.cwl
-> <a href="https://view.commonwl.org/workflows/github.com/common-workflow-language/user_guide/blob/gh-pages/_includes/cwl/23-scatter-workflow/scatter-nested-workflow.cwl"><img src="https://view.commonwl.org/graph/svg/github.com/common-workflow-language/user_guide/blob/gh-pages/_includes/cwl/23-scatter-workflow/scatter-nested-workflow.cwl"
-alt="Visualization of scatter-nested-workflow.cwl" /></a>
-+{: .callout}
-
 {% include links.md %}
