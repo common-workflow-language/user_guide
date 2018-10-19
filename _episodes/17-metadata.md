@@ -15,10 +15,11 @@ encourage correct citation."
 Implementation extensions not required for correct execution (for example,
 fields related to GUI presentation) and metadata about the tool or workflow
 itself (for example, authorship for use in citations) may be provided as
-additional fields on any object. Such extensions fields (e.g. format: edam:format_2572 ) 
-must use a namespace prefix listed in the `$namespaces`section of the document 
+additional fields on any object. Such extensions fields (e.g. `format: edam:format_2572`)
+can use a namespace prefix listed in the `$namespaces`section of the document 
 (e.g edam: http://edamontology.org/) as described in the [Schema Salad specification][schema-salad].
 Once you add the namespace prefix, you can access it anywhere in the document as shown below.
+Otherwise one must use full URLs: `format: http://edamontology.org/format_2572`.
 
 
 For all developers, we recommend the following minimal metadata for your tool
