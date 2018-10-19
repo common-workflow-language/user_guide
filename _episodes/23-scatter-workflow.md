@@ -43,6 +43,7 @@ going on here?
 inputs:
   message_array: string[] 
 ~~~
+{: .source}
 
 First of all, notice that the workflow level input here accepts an array of strings.
 
@@ -55,6 +56,7 @@ steps:
       message: message_array
     out: []
 ~~~
+{: .source}
 
 Here we've added a new field to the step `echo` called `scatter`. This field tells the
 runner that we'd like to scatter over this input for this particular step. Note that
@@ -105,6 +107,7 @@ Hallo welt!
 {}
 Final process status is success
 ~~~ 
+{: .source}
 
 You can see that the workflow calls echo multiple times on each element of our 
 `message_array`. Ok, so how about if we want to scatter over two steps in a workflow?
@@ -119,6 +122,7 @@ outputs:
   echo_out:
     type: stdout
 ~~~
+{: .source}
 
 And add a second step that uses `wc` to count the characters in each file. See the tool
 below:
@@ -128,12 +132,14 @@ below:
 ~~~
 {% include cwl/23-scatter-workflow/wc-tool.cwl %}
 ~~~
+{: .source}
 
 Now, how do we incorporate scatter? Remember the scatter field is under each step:
 
 ~~~
 {% include cwl/23-scatter-workflow/scatter-two-steps.cwl %}
 ~~~
+{: .source}
 
 Here we have placed the scatter field under each step. This is fine for this example since
 it runs quickly, but if you're runnung many samples for a more complex workflow, you may 
@@ -156,8 +162,9 @@ two step workflow to a single step subworkflow:
 ~~~
 {% include cwl/23-scatter-workflow/scatter-nested-workflow.cwl %}
 ~~~
+{: .source}
 
 Now the scatter acts on a single step, but that step consists of two steps so each step is performed
 in parallel.
 
-
+{% include links.md %}
