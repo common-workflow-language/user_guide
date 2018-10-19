@@ -5,7 +5,7 @@ class: CommandLineTool
 baseCommand: echo
 
 requirements:
-  - class: InlineJavascriptRequirement
+  InlineJavascriptRequirement: {}
 
 inputs: []
 outputs:

@@ -77,3 +77,5 @@ Note that the arrays of inputs are specified inside square brackets `[]` in `arr
 array values that are not defined with an associated key is marked by a leading
 `-`, as demonstrated in the next lesson. 
 You can specify arrays of arrays, arrays of records, and other complex types.
+
+{% include links.md %}

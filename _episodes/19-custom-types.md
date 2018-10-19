@@ -98,3 +98,4 @@ the software that the description was written for and other useful metadata.
 These features are discussed further in other chapters of this user guide.
 
 [biom]: http://biom-format.org/
+{% include links.md %}

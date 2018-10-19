@@ -90,36 +90,36 @@ syntax is used to describe the additional command line arguments.
 > Just like [parameter references]({{ page.root }}{% link _episodes/06-params.md %}), you can use JavaScript Expressions
 > only in certain fields.  These are:
 > 
-> - From [`CommandLineTool`](http://www.commonwl.org/v1.0/CommandLineTool.html#CommandLineTool)
+> - From [`CommandLineTool`](https://www.commonwl.org/v1.0/CommandLineTool.html#CommandLineTool)
 >   - `arguments`
 >     - `valueFrom`
 >   - `stdin`
 >   - `stdout`
 >   - `stderr`
->   - From [CommandInputParameter](http://www.commonwl.org/v1.0/CommandLineTool.html#CommandInputParameter)
+>   - From [CommandInputParameter](https://www.commonwl.org/v1.0/CommandLineTool.html#CommandInputParameter)
 >     - `format`
 >     - `secondaryFiles`
->     - From [`inputBinding`](http://www.commonwl.org/v1.0/CommandLineTool.html#CommandLineBinding)
+>     - From [`inputBinding`](https://www.commonwl.org/v1.0/CommandLineTool.html#CommandLineBinding)
 >       - `valueFrom`
->   - From [CommandOutputParamater](http://www.commonwl.org/v1.0/CommandLineTool.html#CommandOutputParameter)
+>   - From [CommandOutputParamater](https://www.commonwl.org/v1.0/CommandLineTool.html#CommandOutputParameter)
 >     - `format`
 >     - `secondaryFiles`
->     - From [CommandOutputBinding](http://www.commonwl.org/v1.0/CommandLineTool.html#CommandOutputBinding)
+>     - From [CommandOutputBinding](https://www.commonwl.org/v1.0/CommandLineTool.html#CommandOutputBinding)
 >       - `glob`
 >       - `outputEval`
 > - From `Workflow`
->   - From [InputParameter](http://www.commonwl.org/v1.0/Workflow.html#InputParameter) and [WorkflowOutputParameter](http://www.commonwl.org/v1.0/Workflow.html#WorkflowOutputParameter)
+>   - From [InputParameter](https://www.commonwl.org/v1.0/Workflow.html#InputParameter) and [WorkflowOutputParameter](https://www.commonwl.org/v1.0/Workflow.html#WorkflowOutputParameter)
 >     - `format`
 >     - `secondaryFiles`
 >     - From `steps`
->       - From [WorkflowStepInput](http://www.commonwl.org/v1.0/Workflow.html#WorkflowStepInput)
+>       - From [WorkflowStepInput](https://www.commonwl.org/v1.0/Workflow.html#WorkflowStepInput)
 >         - `valueFrom`
 > - From [ExpressionTool](https://www.commonwl.org/v1.0/Workflow.html#ExpressionTool)
 >   - `expression`
->   - From [InputParameter](http://www.commonwl.org/v1.0/Workflow.html#InputParameter) and [ExpressionToolOutputParameter](http://www.commonwl.org/v1.0/Workflow.html#ExpressionToolOutputParameter)
+>   - From [InputParameter](https://www.commonwl.org/v1.0/Workflow.html#InputParameter) and [ExpressionToolOutputParameter](https://www.commonwl.org/v1.0/Workflow.html#ExpressionToolOutputParameter)
 >     - `format`
 >     - `secondaryFiles`
-> - From [`ResourceRequirement`](http://www.commonwl.org/v1.0/CommandLineTool.html#ResourceRequirement)
+> - From [`ResourceRequirement`](https://www.commonwl.org/v1.0/CommandLineTool.html#ResourceRequirement)
 >   - `coresMin`
 >   - `coresMax`
 >   - `ramMin`
@@ -128,16 +128,17 @@ syntax is used to describe the additional command line arguments.
 >   - `tmpdirMax`
 >   - `outdirMin`
 >   - `outdirMax`
-> - From [`InitialWorkDirRequirement`](http://www.commonwl.org/v1.0/CommandLineTool.html#InitialWorkDirRequirement)
+> - From [`InitialWorkDirRequirement`](https://www.commonwl.org/v1.0/CommandLineTool.html#InitialWorkDirRequirement)
 >   - `listing`
->   - in [Dirent](http://www.commonwl.org/v1.0/CommandLineTool.html#Dirent)
+>   - in [Dirent](https://www.commonwl.org/v1.0/CommandLineTool.html#Dirent)
 >     - `entry`
 >     - `entryname`
 > - From `EnvVarRequirement`
->   - From [EnvironmentDef](http://www.commonwl.org/v1.0/CommandLineTool.html#EnvironmentDef)
+>   - From [EnvironmentDef](https://www.commonwl.org/v1.0/CommandLineTool.html#EnvironmentDef)
 >     - `envValue`
 {: .callout }
 
 
-[file-prop]: http://www.commonwl.org/v1.0/CommandLineTool.html#File
-[rec-practices]: http://www.commonwl.org/user_guide/rec-practices/
+[file-prop]: https://www.commonwl.org/v1.0/CommandLineTool.html#File
+[rec-practices]: https://www.commonwl.org/user_guide/rec-practices/
+{% include links.md %}
