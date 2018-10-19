@@ -35,6 +35,10 @@ formats and warn you if there seem to be some obvious mismatches.
 ~~~
 {: .source}
 
+The equivalent of this CWL description in command line format is:
+
+`wc -l /path/to/aligned_sequences.ext > output.txt`
+
 #### Sample Parameter Files
 
 Below is an example of a parameter file for the example above. We encourage
