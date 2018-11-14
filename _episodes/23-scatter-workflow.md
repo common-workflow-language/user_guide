@@ -136,6 +136,8 @@ below:
 
 Now, how do we incorporate scatter? Remember the scatter field is under each step:
 
+*scatter-two-steps.cwl*
+
 ~~~
 {% include cwl/23-scatter-workflow/scatter-two-steps.cwl %}
 ~~~
