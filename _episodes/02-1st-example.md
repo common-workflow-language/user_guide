@@ -33,7 +33,7 @@ Next, create a file called `echo-job.yml`, containing the following boxed text, 
 ~~~
 {: .source}
 
-Now, invoke `cwl-runner` with the tool wrapper `1st-too.cwl` and the input object echo-job.yml on the command line. The command
+Now, invoke `cwl-runner` with the tool wrapper `1st-tool.cwl` and the input object echo-job.yml on the command line. The command
 is  `cwl-runner 1st-tool.cwl echo-job.yml`. The boxed text below shows this command and the expected output.
 
 ~~~
