@@ -84,17 +84,19 @@
 	{% endif %}
 	{% comment %} Add dropdown for language {% endcomment %}
 	<li class="dropdown">
-            <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" aria-expanded="false" title="EN">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
                 EN
-            </a>
-            <div class="dropdown-menu">
-            {% for lang in language %}
-                <a class="dropdown-item" href="https://translate.google.com/translate?hl=jp&sl=en&tl={{ lang }}&u=https%3A%2F%2Fcommonwl.org%2Fuser_guide&edit-text=&act=url" title="{{ inst[0] }}">
-                {{ lang | upcase }}
-                </a>
-            {% endfor %}
-            </div>
-         </li>
+          <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+          {% for lang in language %}
+            <li>
+              <a class="dropdown-item" href="https://translate.google.com/translate?hl=jp&sl=en&tl={{ lang }}&u=https%3A%2F%2Fcommonwl.org%2Fuser_guide&edit-text=&act=url" title="{{ inst[0] }}">
+              {{ lang | upcase }}
+              </a>
+            </li>
+          {% endfor %}
+          </ul>
+        </li>
       </ul>
       <form class="navbar-form navbar-right" role="search" id="search" onsubmit="google_search(); return false;">
         <div class="form-group">
