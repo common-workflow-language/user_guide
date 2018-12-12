@@ -88,7 +88,7 @@
                 EN
           <span class="caret"></span></a>
           <ul class="dropdown-menu">
-          {% for lang in language %}
+          {% for lang in site.other_languages %}
             <li>
               <a class="dropdown-item" href="https://translate.google.com/translate?hl=jp&sl=en&tl={{ lang }}&u=https%3A%2F%2Fcommonwl.org%2Fuser_guide&edit-text=&act=url" title="{{ inst[0] }}">
               {{ lang | upcase }}
