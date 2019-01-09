@@ -206,11 +206,11 @@
       basename: output.txt
       location: Any
 
-# Section 19
+# Section 18
 # Note: The checksum is always changed for every executions
-- doc: Test for section 19
-  job: 19-custom-types/custom-types.yml
-  tool: 19-custom-types/custom-types.cwl
+- doc: Test for section 18
+  job: 18-custom-types/custom-types.yml
+  tool: 18-custom-types/custom-types.cwl
   output:
     result:
       class: File
@@ -218,9 +218,9 @@
       location: Any
       size: 46992
 
-# Section 20
+# Section 19
 # See: Issue #48
-# - doc: Test for section 20
+# - doc: Test for section 19
 #   job: 20-software-requirements/custom-types.yml
 #   tool: 20-software-requirements/costom-types.cwl
 #   output:
@@ -230,10 +230,10 @@
 #       location: Any
 #       size: Any # To be fixed
 
-# Section 21
-- doc: Test for section 21
-  job: 21-1st-workflow/1st-workflow-job.yml
-  tool: 21-1st-workflow/1st-workflow.cwl
+# Section 20
+- doc: Test for section 20
+  job: 20-1st-workflow/1st-workflow-job.yml
+  tool: 20-1st-workflow/1st-workflow.cwl
   output:
     compiled_class:
       class: File
@@ -242,9 +242,9 @@
       location: Any
       size: 419
 
-# Section 22
-- doc: Test for section 22
-  tool: 22-nested-workflows/nestedworkflows.cwl
+# Section 21
+- doc: Test for section 21
+  tool: 21-nested-workflows/nestedworkflows.cwl
   output:
     classout:
       class: File
