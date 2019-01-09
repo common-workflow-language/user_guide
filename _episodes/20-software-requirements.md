@@ -19,7 +19,7 @@ This may also help to avoid confusion about which version of a tool the
 description was written for.
 
 ~~~
-{% include cwl/20-software-requirements/custom-types.cwl %}
+{% include cwl/19-software-requirements/custom-types.cwl %}
 ~~~
 {: .source}
 

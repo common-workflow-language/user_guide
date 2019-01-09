@@ -26,21 +26,21 @@ converting a standard biom table file to hd5 format.
 *custom-types.cwl*
 
 ~~~
-{% include cwl/19-custom-types/custom-types.cwl %}
+{% include cwl/18-custom-types/custom-types.cwl %}
 ~~~
 {: .source}
 
 *custom-types.yml*
 
 ~~~
-{% include cwl/19-custom-types/custom-types.yml %}
+{% include cwl/18-custom-types/custom-types.yml %}
 ~~~
 {: .source}
 
-___Note:___ To follow the example below, you need to download the example input file, *rich_sparse_otu_table.biom*. The file is available from [https://raw.githubusercontent.com/common-workflow-language/user_guide/gh-pages/_includes/cwl/19-custom-types/rich_sparse_otu_table.biom](https://raw.githubusercontent.com/common-workflow-language/user_guide/gh-pages/_includes/cwl/19-custom-types/rich_sparse_otu_table.biom) and can be downloaded e.g. via `wget`:
+___Note:___ To follow the example below, you need to download the example input file, *rich_sparse_otu_table.biom*. The file is available from [https://raw.githubusercontent.com/common-workflow-language/user_guide/gh-pages/_includes/cwl/18-custom-types/rich_sparse_otu_table.biom](https://raw.githubusercontent.com/common-workflow-language/user_guide/gh-pages/_includes/cwl/18-custom-types/rich_sparse_otu_table.biom) and can be downloaded e.g. via `wget`:
 
 ~~~
-wget https://raw.githubusercontent.com/common-workflow-language/user_guide/gh-pages/_includes/cwl/19-custom-types/rich_sparse_otu_table.biom
+wget https://raw.githubusercontent.com/common-workflow-language/user_guide/gh-pages/_includes/cwl/18-custom-types/rich_sparse_otu_table.biom
 ~~~
 {: .source}
 
@@ -71,7 +71,7 @@ tells the tool to create an OTU table in hd5 format.
 The contents of the YAML file describing the custom type are given below:
 
 ~~~
-{% include cwl/19-custom-types/biom-convert-table.yaml %}
+{% include cwl/18-custom-types/biom-convert-table.yaml %}
 ~~~
 {: .source}
 

@@ -32,7 +32,7 @@ an array of strings as input to the workflow:
 *scatter-workflow.cwl*
 
 ~~~
-{% include cwl/23-scatter-workflow/scatter-workflow.cwl %}
+{% include cwl/22-scatter-workflow/scatter-workflow.cwl %}
 ~~~
 {: .source}
 
@@ -72,7 +72,7 @@ Using the following input file:
 *scatter-job.yml*
 
 ~~~
-{% include cwl/23-scatter-workflow/scatter-job.yml %}
+{% include cwl/22-scatter-workflow/scatter-job.yml %}
 ~~~
 {: .source}
 
@@ -130,7 +130,7 @@ below:
 *wc-tool.cwl*
 
 ~~~
-{% include cwl/23-scatter-workflow/wc-tool.cwl %}
+{% include cwl/22-scatter-workflow/wc-tool.cwl %}
 ~~~
 {: .source}
 
@@ -139,7 +139,7 @@ Now, how do we incorporate scatter? Remember the scatter field is under each ste
 *scatter-two-steps.cwl*
 
 ~~~
-{% include cwl/23-scatter-workflow/scatter-two-steps.cwl %}
+{% include cwl/22-scatter-workflow/scatter-two-steps.cwl %}
 ~~~
 {: .source}
 
@@ -156,13 +156,13 @@ because the first step must wait on `echo Hallo welt!`. You can see how this mig
 well. 
 
 Ok, so how do we scatter on steps that can proceed independent of other samples? Remember from
-chapter 22, that we can make an entire workflow a single step in another workflow! Convert our
+chapter 21, that we can make an entire workflow a single step in another workflow! Convert our
 two step workflow to a single step subworkflow:
 
 *scatter-nested-workflow.cwl*
 
 ~~~
-{% include cwl/23-scatter-workflow/scatter-nested-workflow.cwl %}
+{% include cwl/22-scatter-workflow/scatter-nested-workflow.cwl %}
 ~~~
 {: .source}
 

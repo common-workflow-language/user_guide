@@ -34,7 +34,7 @@ workflow:
 *nestedworkflows.cwl*
 
 ~~~
-{% include cwl/22-nested-workflows/nestedworkflows.cwl %}
+{% include cwl/21-nested-workflows/nestedworkflows.cwl %}
 ~~~
 {: .source}
 
@@ -44,11 +44,11 @@ workflow:
 > right. In purple we see the fixed string `"Hello.java"` being supplied as the
 > `name_of_file_to_extract`.
 > 
-> <a href="https://view.commonwl.org/workflows/github.com/common-workflow-language/user_guide/blob/gh-pages/_includes/cwl/22-nested-workflows/nestedworkflows.cwl"><img
-src="https://view.commonwl.org/graph/svg/github.com/common-workflow-language/user_guide/blob/gh-pages/_includes/cwl/22-nested-workflows/nestedworkflows.cwl"
+> <a href="https://view.commonwl.org/workflows/github.com/common-workflow-language/user_guide/blob/gh-pages/_includes/cwl/21-nested-workflows/nestedworkflows.cwl"><img
+src="https://view.commonwl.org/graph/svg/github.com/common-workflow-language/user_guide/blob/gh-pages/_includes/cwl/21-nested-workflows/nestedworkflows.cwl"
 alt="Visualization of nestedworkflows.cwl" /></a>
-> <a href="https://view.commonwl.org/workflows/github.com/common-workflow-language/user_guide/blob/gh-pages/_includes/cwl/22-nested-workflows/1st-workflow.cwl"><img
-src="https://view.commonwl.org/graph/svg/github.com/common-workflow-language/user_guide/blob/gh-pages/_includes/cwl/22-nested-workflows/1st-workflow.cwl"
+> <a href="https://view.commonwl.org/workflows/github.com/common-workflow-language/user_guide/blob/gh-pages/_includes/cwl/21-nested-workflows/1st-workflow.cwl"><img
+src="https://view.commonwl.org/graph/svg/github.com/common-workflow-language/user_guide/blob/gh-pages/_includes/cwl/21-nested-workflows/1st-workflow.cwl"
 alt="Visualization of 1st-workflow.cwl" /></a>
 {: .callout}
 
