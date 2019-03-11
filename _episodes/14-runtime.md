@@ -4,8 +4,11 @@ teaching: 10
 exercises: 0
 questions:
 - "How do I create required input files from input parameters at runtime?"
+- "How do I invoke a script rather than just a simple command line?"
+- "How do I make inputs available to my script?"
 objectives:
 - "Learn how to create files on the fly during runtime."
+- "Learn how to use expressions in bash scripts."
 keypoints:
 - "Use `InitialWorkDirRequirement` to specify input files that need to be
 created during tool runtime."
@@ -34,22 +37,26 @@ command line:
 
 ~~~
 $ cwl-runner createfile.cwl echo-job.yml
-[job createfile.cwl] /home/example$ cat \
-    example.conf > /home/example/output.txt
+[job createfile.cwl] /private/tmp/docker_tmphrqxxcdl$ sh \
+    example.sh > /private/tmp/docker_tmphrqxxcdl/output.txt
+Could not collect memory usage, job ended before monitoring began.
 [job createfile.cwl] completed success
 {
     "example_out": {
         "location": "file:///home/example/output.txt",
         "basename": "output.txt",
         "class": "File",
-        "checksum": "sha1$5d3f955d1bb862ec618bc2f7ca4c5fa29fa39e89",
-        "size": 22,
+        "checksum": "sha1$9045abe4bd04dd8ccfe50c6ff61820b784b64aa7",
+        "size": 25,
         "path": "/home/example/output.txt"
     }
 }
 Final process status is success
 $ cat output.txt
-CONFIGVAR=Hello world!
+Message is: Hello world!
 ~~~
 {: .output}
+
+
+
 {% include links.md %}
