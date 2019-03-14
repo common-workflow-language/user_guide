@@ -16,7 +16,8 @@ created during tool runtime."
 Sometimes you need to create a file on the fly from input parameters,
 such as tools which expect to read their input configuration from a file
 rather than the command line parameters, or need a small wrapper shell script.  
-To do this, use `InitialWorkDirRequirement`.
+
+To generate such files we can use the `InitialWorkDirRequirement`.
 
 *createfile.cwl*
 
@@ -24,6 +25,12 @@ To do this, use `InitialWorkDirRequirement`.
 {% include cwl/14-runtime/createfile.cwl %}
 ~~~
 {: .source}
+
+Any [expressions](../13-expressions) like `$(inputs.message)` are expanded by the CWL engine before creating the file; here inserting the value at the input `message`. 
+
+> **Tip:** CWL expressions are independent of any shell variables used later during command line tool invocation. That means that any genuine need for the character `$` should be _escaped_ with `\`, for instance `\${PREFIX}` above is expanded to `${PREFIX}` in the generated file as it is to be evaluated by the shell script instead of the CWL engine.
+
+To test the above CWL tool use this job to provide the input value `message`:
 
 *echo-job.yml*
 
