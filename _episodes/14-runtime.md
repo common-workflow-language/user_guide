@@ -28,7 +28,7 @@ To generate such files we can use the `InitialWorkDirRequirement`.
 
 Any [expressions](../13-expressions/index.html) like `$(inputs.message)` are expanded by the CWL engine before creating the file; here inserting the value at the input `message`. 
 
-> **Tip:** The _CWL expressions_ are independent of any _shell variables_ used later during command line tool invocation. That means that any genuine need for the character `$` should be **_escaped** with `\`, for instance `\${PREFIX}` above is expanded to `${PREFIX}` in the generated file to be evaluated by the shell script instead of the CWL engine.
+> **Tip:** The _CWL expressions_ are independent of any _shell variables_ used later during command line tool invocation. That means that any genuine need for the character `$` should be **escaped** with `\`, for instance `\${PREFIX}` above is expanded to `${PREFIX}` in the generated file to be evaluated by the shell script instead of the CWL engine.
 
 To test the above CWL tool use this job to provide the input value `message`:
 
