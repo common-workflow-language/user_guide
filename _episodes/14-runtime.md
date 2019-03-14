@@ -15,8 +15,8 @@ created during tool runtime."
 ---
 Sometimes you need to create a file on the fly from input parameters,
 such as tools which expect to read their input configuration from a file
-rather than the command line parameters.  To do this, use
-`InitialWorkDirRequirement`.
+rather than the command line parameters, or need a small wrapper shell script.  
+To do this, use `InitialWorkDirRequirement`.
 
 *createfile.cwl*
 
