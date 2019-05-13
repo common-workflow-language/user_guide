@@ -67,7 +67,7 @@ baseCommand: echo
 ~~~
 {: .source}
 
-The `baseCommand` provides the name of program that will actually run (`echo`). [`echo`] is a built-in program in the bash and
+The `baseCommand` provides the name of program that will actually run (`echo`). `echo` is a built-in program in the bash and
 C shells.
 
 ~~~
