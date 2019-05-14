@@ -23,6 +23,15 @@ its results in the form of files created in the output directory.  The
 output parameters returned by the CWL tool are either the output files
 themselves, or come from examining the content of those files.
 
+The following example demonstrates how to return a file that has been extracted from a tar file.
+
+> ## Passing mandatory arguments to the `baseCommand`
+>
+> In previous examples, the `baseCommand` was just a string with any arguments passed as inputs.
+> Instead of a string array of strings can be used.  The first element is the command to run, and
+> any subsequent elements are mandatory command line arguments
+{: .callout}
+
 *tar.cwl*
 
 ~~~
