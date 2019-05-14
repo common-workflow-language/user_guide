@@ -27,8 +27,8 @@ The following example demonstrates how to return a file that has been extracted 
 
 > ## Passing mandatory arguments to the `baseCommand`
 >
-> In previous examples, the `baseCommand` was just a string with any arguments passed as inputs.
-> Instead of a string array of strings can be used.  The first element is the command to run, and
+> In previous examples, the `baseCommand` was just a string, with any arguments passed as CWL inputs.
+> Instead of a single string we can use an _array of strings_.  The first element is the command to run, and
 > any subsequent elements are mandatory command line arguments
 {: .callout}
 
