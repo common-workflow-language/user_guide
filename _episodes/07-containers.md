@@ -44,7 +44,7 @@ then print "Hello World" to the standard output.
 {: .source}
 
 Before we run this, lets just break it down and see what some bits do.  Most of this
-has been explained in previous sections, the only bit that is really new is the docker
+has been explained in previous sections, the only part that is really new is the `dockerRequirement`
 section.
 
 ~~~
