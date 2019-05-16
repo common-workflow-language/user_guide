@@ -39,6 +39,10 @@ To test the above CWL tool use this job to provide the input value `message`:
 ~~~
 {: .source}
 
+Before we run this, lets look at each step in a little more detail.  The base command `baseCommand: ["sh", "example.sh"]` will execute the command `sh example.sh`. This will just run the file we create in the shell.
+
+`InitialWorkDirRequirement` requires a `listing`.  As the `listing` is an array we need a `-` on the first field of each element of the array, in this case we have just one element.  `entryname:` can have any value, but it must match what was specified in the `baseCommand`.  The final part is `entry:`, this is followed by `|-` which is YAML, and means that you are using a multiline string (without it we would need to write the whole script on one line).
+
 Now invoke `cwl-runner` with the tool wrapper and the input object on the
 command line:
 
