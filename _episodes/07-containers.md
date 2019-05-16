@@ -55,7 +55,7 @@ hints:
 ~~~
 
 `baseCommand: node` tells CWL that we will be running this command in a container. We 
-then need to specify some `hints` for how to run the container.  In this case we list 
+then need to specify some `hints` for how to find the container we want.  In this case we list 
 just our requirements for the docker container in `DockerRequirements`.  The `dockerPull:`
 parameter takes the same value that you would pass to a `docker pull` command. That is,
 the name of the container image (you can even specify the tag, which is good idea for 
