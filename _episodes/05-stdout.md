@@ -38,14 +38,12 @@ $ cwl-runner stdout.cwl echo-job.yml
 [job stdout.cwl] completed success
 {
     "example_out": {
-        "checksum": "sha1$47a013e660d408619d894b20806b1d5086aab03b",
-        "basename": "output.txt",
-        "nameroot": "output",
-        "nameext": ".txt",
         "location": "file:///home/me/cwl/user_guide/output.txt",
-        "path": "/home/me/cwl/user_guide/output.txt",
+        "basename": "output.txt",
         "class": "File",
-        "size": 13
+        "checksum": "sha1$47a013e660d408619d894b20806b1d5086aab03b",
+        "size": 13,
+        "path": "/home/me/cwl/user_guide/output.txt"
     }
 }
 Final process status is success
