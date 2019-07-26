@@ -12,12 +12,12 @@ all are required.
 &#9744; No `type: string` parameters for names of input or reference
 files/directories; use `type: File` or `type: Directory` as appropriate.
 
-&#9744; Include a license that allows for re-use by anyone, e.g.
+&#9744; Include a license that allows for re-use by anyone, for example
 [Apache 2.0][apache-license]. If possible, the license should be specified with
 its corresponding [SPDX identifier][spdx]. Construct the metadata field for the
 licence by providing a URL of the form `https://spdx.org/licenses/[SPDX-ID]`
-where `SPDX-ID` is the taken from the list of identifiers linked above. See the
-example snippet below for guidance. For non-standard licenses without an SPDX
+where `SPDX-ID` is the taken from the list of identifiers linked above. Consult
+https://choosealicense.com/ if needed. For non-standard licenses without an SPDX
 identifier, provide a URL to the license.
 
 _Example of metadata field for license with SPDX identifier:_
