@@ -8,7 +8,7 @@ This is a collection of examples and short notes
 about some operations that fall outside the scope of the User Guide
 and/or have not yet been implemented in a clean way in the CWL standards.
 
-### Get output values of a specific type using `evalFrom`
+### Non "`File`" types using `evalFrom`
 
 ```yaml
 cwlVersion: v1.0  # or v1.1
