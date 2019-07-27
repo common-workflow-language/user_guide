@@ -193,10 +193,8 @@ and should be used sparingly.
 ### Reference
 
 The [Learn YAML in Y Minutes][yaml-y-mins] reference was very helpful for us
-while we wrote this guide.
-If you'd like to learn about some of the other features of YAML,
-which aren't valid for use with CWL,
-we highly recommend that you read it.
+while we wrote this guide,
+though it also covers features that are not valid in CWL.
 
 [camelCase]: https://en.wikipedia.org/wiki/Camel_case
 [yaml-y-mins]: https://learnxinyminutes.com/docs/yaml/
