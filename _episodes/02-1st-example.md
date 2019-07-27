@@ -84,9 +84,16 @@ inputs:
 ~~~
 {: .source}
 
-The `inputs` section describes the inputs of the tool.  This is a list of input parameters and each parameter includes an
-identifier, a data type, and optionally an `inputBinding` which describes how this input parameter should appear on the command
-line.  In this example, the `position` field indicates where it should appear on the command line.
+The `inputs` section describes the inputs of the tool.
+This is a mapped list of input parameters
+(see the [YAML Guide](/yaml#mapped-objects) for more about the format)
+and each parameter includes an identifier,
+a data type,
+and optionally an `inputBinding`.
+The `inputBinding` describes how this input parameter should appear
+on the command line.
+In this example,
+the `position` field indicates where it should appear on the command line.
 
 ~~~
 outputs: []
@@ -95,8 +102,6 @@ outputs: []
 
 This tool has no formal output, so the `outputs` section is an empty list.
 
-[json]: http://json.org
-[yaml-homepage]: http://yaml.org
 [echo]: http://www.linfo.org/echo.html
 
 {% include links.md %}
