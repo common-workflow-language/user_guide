@@ -4,7 +4,7 @@ teaching: 10
 exercises: 0
 questions:
 - "How do I specify arguments that don't require input values?"
-- "How do I refer to parameters that are only defined at runtime?"
+- "How do I refer to runtime parameters?"
 objectives:
 - "Learn how to add additional options to a command."
 - "Learn how to reference runtime parameters."
