@@ -3,7 +3,8 @@ title: "Returning Output Files"
 teaching: 10
 exercises: 0
 questions:
-- "How do I describe outputs from a command?"
+- "Where does the output of a command go?"
+- "How can I save the output of a command?"
 objectives:
 - "Learn how to describe and handle outputs from a tool."
 keypoints:

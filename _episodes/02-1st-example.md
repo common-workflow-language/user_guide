@@ -3,7 +3,7 @@ title: "First Example"
 teaching: 5
 exercises: 0
 questions:
-- "How do I wrap a simple command line tool?"
+- "How do I write a CWL description of a simple command line tool?"
 objectives:
 - "Learn the basic structure of a CWL description."
 keypoints:

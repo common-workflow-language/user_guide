@@ -3,7 +3,7 @@ title: "Array Inputs"
 teaching: 10
 exercises: 0
 questions:
-- "How do I specify input parameters in arrays?"
+- "How do I provide multiple values for a single argument?"
 objectives:
 - "Learn how to provide parameter arrays as input to a tool."
 - "Learn how to control the organization of array parameters on the command
@@ -75,7 +75,6 @@ separator string.
 
 Note that the arrays of inputs are specified inside square brackets `[]` in `array-inputs-job.yml`. Arrays can also be expressed over multiple lines, where
 array values that are not defined with an associated key is marked by a leading
-`-`.
 This will be demonstrated in the next lesson
 and is discussed in more detail in the [YAML Guide](/yaml#arrays).
 You can specify arrays of arrays, arrays of records, and other complex types.

@@ -3,7 +3,8 @@ title: "Array Outputs"
 teaching: 10
 exercises: 0
 questions:
-- "How do I specify tool outputs as arrays?"
+- "What do I do when a tool produces output in more than one file?"
+- "How do I specify which output files should be kept?"
 objectives:
 - "Learn how to create arrays of output files."
 keypoints:

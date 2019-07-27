@@ -3,7 +3,7 @@ title: "Parameter References"
 teaching: 10
 exercises: 0
 questions:
-- "How do I reference input parameters in other fields?"
+- "How can I re-use parameter values in another location?"
 objectives:
 - "Learn how to make parameter references in descriptions."
 keypoints:
