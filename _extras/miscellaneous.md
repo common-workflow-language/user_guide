@@ -6,7 +6,7 @@ permalink: /misc/
 
 This is a collection of examples and short notes
 about some operations that fall outside the scope of the User Guide
-and/or have not yet been implemented in a clean way in the CWL specification.
+and/or have not yet been implemented in a clean way in the CWL standards.
 
 ### Get output values of a specific type using `evalFrom`
 
