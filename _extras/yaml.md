@@ -35,7 +35,7 @@ For example:
 first_name: Bilbo
 last_name:  Baggins
 age_years:  111
-home:      Bag End, Hobbiton
+home:       Bag End, Hobbiton
 ```
 
 The YAML above defines four keys -
