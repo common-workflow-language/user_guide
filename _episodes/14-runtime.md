@@ -5,7 +5,7 @@ exercises: 0
 questions:
 - "How do I create required input files from input parameters at runtime?"
 - "How do I invoke a script rather than just a simple command line?"
-- "How do I pass arguments to my script?"
+- "Besides `inputBinding`, how else can I pass arguments to the tool?"
 objectives:
 - "Learn how to create files on the fly during runtime."
 - "Learn how to use expressions in bash scripts."
