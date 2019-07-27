@@ -7,10 +7,10 @@ permalink: /yaml/
 <script src="https://unpkg.com/mermaid@8.0.0/dist/mermaid.min.js"></script>
 <script>mermaid.initialize({startOnLoad:true});</script>
 
-[YAML][yaml-homepage] is a file format specification
+[YAML][yaml-homepage] is a file format 
 designed to be readable by both computers and humans.
 This guide introduces the features of YAML
-relevant when writing CWL descriptions and inpout parameter files.
+relevant when writing CWL descriptions and input parameter files.
 
 ### Contents
 
@@ -24,7 +24,7 @@ relevant when writing CWL descriptions and inpout parameter files.
 
 Fundamentally, a file written in YAML consists of a set of _key-value pairs_.
 Each pair is written as `key: value`,
-where whitespace before/after the `:` is optional.
+where whitespace after the `:` is optional.
 Key names in CWL files should not contain whitespace -
 We use [_camelCase_][camelCase] for multi-word key names
 that have special meaning in the CWL specification
@@ -50,7 +50,7 @@ or more complex nested types (see below).
 ### Comments
 
 You may use `#` to add comments to your CWL and parameter files.
-Any characters to the right of `#` will be ignored by the program interpreting
+Any characters to the right of ` #` will be ignored by the program interpreting
 the YAML.
 For example:
 
@@ -62,7 +62,10 @@ age_years:  111
 home:       Bag End, Hobbiton # this is ignored too
 ```
 
-### Mapped Objects
+If there is anything on the line before the comment,
+be sure to add at least one space before the `#`!
+
+### Maps
 
 When describing a tool or workflow with CWL,
 it is usually necessary to construct more complex, nested representations.
