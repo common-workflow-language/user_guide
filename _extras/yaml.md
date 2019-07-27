@@ -85,7 +85,7 @@ additional key-value pairs as the value of any key.
 These pairs (sometimes referred to as "children") are written
 on new lines under the key to which they belong (the "parent"),
 and should be indented with two spaces
-(tab characters are not allowed).
+(⇥tab characters are not allowed).
 For example:
 
 ```yaml
