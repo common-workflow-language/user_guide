@@ -177,6 +177,15 @@ However, as the second example above shows,
 it can severely affect the readability of a YAML file
 and should be used sparingly.
 
+### Reference
+
+The [Learn YAML in Y Minutes][yaml-y-mins] reference was very helpful for us
+while we wrote this guide.
+If you'd like to learn about some of the other features of YAML,
+which aren't valid for use with CWL,
+we highly recommend that you read it.
+
 [camelCase]: https://en.wikipedia.org/wiki/Camel_case
-[json]: http://json.org
-[yaml-homepage]: http://yaml.org
+[yaml-y-mins]: https://learnxinyminutes.com/docs/yaml/
+
+{% include links.md %}
