@@ -75,7 +75,8 @@ separator string.
 
 Note that the arrays of inputs are specified inside square brackets `[]` in `array-inputs-job.yml`. Arrays can also be expressed over multiple lines, where
 array values that are not defined with an associated key is marked by a leading
-`-`, as demonstrated in the next lesson.
+This will be demonstrated in the next lesson
+and is discussed in more detail in the [YAML Guide](/yaml#arrays).
 You can specify arrays of arrays, arrays of records, and other complex types.
 
 {% include links.md %}
