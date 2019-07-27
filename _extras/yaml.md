@@ -14,11 +14,11 @@ relevant when writing CWL descriptions and input parameter files.
 
 ### Contents
 
-- [Key-Value Pairs](/yaml/#key-value-pairs)
-- [Comments](/yaml/#comments)
-- [Mapped Objects](/yaml/#mapped-objects)
-- [Arrays](/yaml/#arrays)
-- [JSON Style](/yaml/#json-style)
+- [Key-Value Pairs]({{ page.root }}{% link _extras/yaml.md %}#key-value-pairs)
+- [Comments]({{ page.root }}{% link _extras/yaml.md %}#comments)
+- [Maps]({{ page.root }}{% link _extras/yaml.md %}#maps)
+- [Arrays]({{ page.root }}{% link _extras/yaml.md %}#arrays)
+- [JSON Style]({{ page.root }}{% link _extras/yaml.md %}#json-style)
 
 ### Key-Value Pairs
 
