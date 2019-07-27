@@ -55,7 +55,7 @@ This distinction can be important,
 for example when describing parameters to a command:
 in CWL all parts of `baseCommand` must be strings so,
 if you want to specify a fixed numeric value to a command,
-make sure that you wrap that numeric value in quotes.
+make sure that you wrap that numeric value in quotes: `baseCommand: [echo, "42"]`.
 
 ### Comments
 
