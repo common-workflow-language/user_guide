@@ -19,7 +19,7 @@ CWL documents are written in [JSON][json] or [YAML][yaml-homepage], or a mix of 
 We will use YAML throughout this guide.
 If you are not familiar with YAML,
 you may find it helpful to refer to
-[this quick tutorial for the subset of YAML used in CWL](/yaml).
+[this quick tutorial for the subset of YAML used in CWL]({{ page.root }}{% link _extras/yaml.md %}).
 
 First, create a file called `1st-tool.cwl`, containing the boxed text below. It will help you to use a text editor that can be
 specified to produce text in YAML or JSON. Whatever text editor you use, the indents you see should not be created using tabs.
@@ -86,7 +86,7 @@ inputs:
 
 The `inputs` section describes the inputs of the tool.
 This is a mapped list of input parameters
-(see the [YAML Guide](/yaml#mapped-objects) for more about the format)
+(see the [YAML Guide]({{ page.root }}{% link _extras/yaml.md %}#maps) for more about the format)
 and each parameter includes an identifier,
 a data type,
 and optionally an `inputBinding`.
