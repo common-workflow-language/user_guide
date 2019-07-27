@@ -68,7 +68,7 @@ Final process status is success
 >
 > The CWL reference runner (cwltool) and other runners create temporary
 > directories with symbolic ("soft") links to your input files to ensure that
-> the tools aren't accidently accessing files that were not explicitly
+> the tools aren't accidentally accessing files that were not explicitly
 > specified
 {: .callout}
 
