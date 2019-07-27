@@ -3,7 +3,8 @@ title: "File Formats"
 teaching: 10
 exercises: 0
 questions:
-- "How do I check that input and output files are formatted correctly?"
+- "How can I mark the required file format for input files?"
+- "How can I mark the produced file format of output files?"
 objectives:
 - "Learn how to unambiguously specify the format of `File` objects."
 keypoints:
