@@ -59,7 +59,7 @@ first_name: Bilbo
 last_name:  Baggins
 age_years:  111
 # this line will be ignored by the interpreter
-home:      Bag End, Hobbiton # this is ignored too
+home:       Bag End, Hobbiton # this is ignored too
 ```
 
 ### Mapped Objects
