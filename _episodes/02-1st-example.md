@@ -17,7 +17,7 @@ The simplest "hello world" program.  This accepts one input parameter, writes a 
 no permanent output.
 CWL documents are written in [JSON][json] or [YAML][yaml-homepage], or a mix of the two.
 We will use YAML throughout this guide.
-If you are not familiar with this markup language,
+If you are not familiar with YAML,
 you may find it helpful to refer to
 [this quick tutorial for the subset of YAML used in CWL](/yaml).
 
