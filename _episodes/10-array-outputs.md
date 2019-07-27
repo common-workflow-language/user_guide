@@ -53,7 +53,8 @@ Final process status is success
 ~~~
 {: .output}
 
-The array of expected outputs is specified in `array-outputs-job.yml` with each
+As described in the [YAML Guide](/yaml#arrays),
+the array of expected outputs is specified in `array-outputs-job.yml` with each
 entry marked by a leading `-`. This format can also be used in CWL descriptions
 to mark entries in arrays, as demonstrated in several of the upcoming sections.
 
