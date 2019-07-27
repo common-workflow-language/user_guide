@@ -19,7 +19,7 @@ CWL documents are written in [JSON][json] or [YAML][yaml-homepage], or a mix of 
 We will use YAML throughout this guide.
 If you are not familiar with this markup language,
 you may find it helpful to refer to
-[this quick reference for the subset of YAML used in CWL](/yaml).
+[this quick tutorial for the subset of YAML used in CWL](/yaml).
 
 First, create a file called `1st-tool.cwl`, containing the boxed text below. It will help you to use a text editor that can be
 specified to produce text in YAML or JSON. Whatever text editor you use, the indents you see should not be created using tabs.
