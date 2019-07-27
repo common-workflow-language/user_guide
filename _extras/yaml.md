@@ -7,7 +7,7 @@ permalink: /yaml/
 <script src="https://unpkg.com/mermaid@8.0.0/dist/mermaid.min.js"></script>
 <script>mermaid.initialize({startOnLoad:true});</script>
 
-[YAML][yaml-homepage] is a file format 
+[YAML][yaml-homepage] is a file format
 designed to be readable by both computers and humans.
 This guide introduces the features of YAML
 relevant when writing CWL descriptions and input parameter files.
@@ -46,6 +46,16 @@ character strings,
 numeric (integer, floating point, or scientfic representation),
 Boolean (`true` or `false`),
 or more complex nested types (see below).
+
+Values may be wrapped in quotation marks
+but be aware that this may change the way that they are interpreted
+i.e. `"1234"` will be treated as a character string
+, while `1234` will be treated as an integer.
+This distinction can be important,
+for example when describing parameters to a command:
+in CWL all parts of `baseCommand` must be strings so,
+if you want to specify a fixed numeric value to a command,
+make sure that you wrap that numeric value in quotes.
 
 ### Comments
 
