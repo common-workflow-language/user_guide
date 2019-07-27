@@ -3,7 +3,7 @@ title: "Capturing Standard Output"
 teaching: 10
 exercises: 0
 questions:
-- "How do I capture a tool's standard output stream?"
+- "How do I capture the standard output stream of a command?"
 objectives:
 - "Learn how to capture streamed output from a tool."
 keypoints:

@@ -5,7 +5,7 @@ exercises: 0
 questions:
 - "How do I create required input files from input parameters at runtime?"
 - "How do I invoke a script rather than just a simple command line?"
-- "How do I make inputs available to my script?"
+- "How do I pass arguments to my script?"
 objectives:
 - "Learn how to create files on the fly during runtime."
 - "Learn how to use expressions in bash scripts."
@@ -15,7 +15,7 @@ created during tool runtime."
 ---
 Sometimes you need to create a file on the fly from input parameters,
 such as tools which expect to read their input configuration from a file
-rather than the command line parameters, or need a small wrapper shell script.  
+rather than the command line parameters, or need a small wrapper shell script.
 
 To generate such files we can use the `InitialWorkDirRequirement`.
 
@@ -26,7 +26,7 @@ To generate such files we can use the `InitialWorkDirRequirement`.
 ~~~
 {: .source}
 
-Any [expressions](../13-expressions/index.html) like `$(inputs.message)` are expanded by the CWL engine before creating the file; here inserting the value at the input `message`. 
+Any [expressions](../13-expressions/index.html) like `$(inputs.message)` are expanded by the CWL engine before creating the file; here inserting the value at the input `message`.
 
 > **Tip:** The _CWL expressions_ are independent of any _shell variables_ used later during command line tool invocation. That means that any genuine need for the character `$` should be **escaped** with `\`, for instance `\${PREFIX}` above is expanded to `${PREFIX}` in the generated file to be evaluated by the shell script instead of the CWL engine.
 

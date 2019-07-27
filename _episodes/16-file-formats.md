@@ -3,7 +3,7 @@ title: "File Formats"
 teaching: 10
 exercises: 0
 questions:
-- "How can I allow type-checking of input and output files?"
+- "How do I check that input and output files are formatted correctly?"
 objectives:
 - "Learn how to unambiguously specify the format of `File` objects."
 keypoints:
@@ -23,7 +23,7 @@ others. You can browse existing file format listings for IANA [here][IANA] and
 for EDAM [here][EDAM].
 
 In the next tutorial, we explain  the `$namespace` and `$schema` section of the
-document in greater detail, so don't worry about these for now.  
+document in greater detail, so don't worry about these for now.
 
 Note that for added value `cwltool` can do some basic reasoning based on file
 formats and warn you if there seem to be some obvious mismatches.

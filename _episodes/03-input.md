@@ -3,8 +3,8 @@ title: "Essential Input Parameters"
 teaching: 10
 exercises: 0
 questions:
-- "How do I describe inputs to a command?"
-- "How do I specify the order in which inputs appear in a command?"
+- "How can I pass arguments to a command?"
+- "How is the order of parameters defined for a command?"
 objectives:
 - "Learn how to describe and handle input parameters and files to a tool."
 keypoints:

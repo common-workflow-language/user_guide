@@ -3,7 +3,7 @@ title: "Staging Input Files"
 teaching: 10
 exercises: 0
 questions:
-- "How do I stage input files in the working directory?"
+- "What can I do if a tool needs to be able to write output to the location where its input files are stored?"
 objectives:
 - "Learn how to handle situations where a tool expects to write output files to
 the same directory as its input files."
