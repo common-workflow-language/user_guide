@@ -167,7 +167,10 @@ and:
 inputs: {example_flag: {type: boolean, inputBinding: {position: 1, prefix: -f}}}
 ```
 
-Native JSON can be useful to save space and where it makes more sense
+Native JSON can be useful
+to indicate where a field is being left intentionally empty
+(such as `[]` for an empty array),
+and where it makes more sense
 for the values to be located on the same line
 (such as when providing option flags and their values in a shell command).
 However, as the second example above shows,
