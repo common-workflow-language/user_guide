@@ -3,7 +3,7 @@ title: "Parameter References"
 teaching: 10
 exercises: 0
 questions:
-- "How do I reference input parameters in other fields?"
+- "How can I re-use parameter values in another location?"
 objectives:
 - "Learn how to make parameter references in descriptions."
 keypoints:
@@ -12,9 +12,13 @@ keypoints:
 ---
 In a previous example, we extracted a file using the "tar" program.
 However, that example was very limited because it assumed that the file
-we were interested in was called "hello.txt".  In this example, you will
-see how to reference the value of input parameters dynamically from other
-fields.
+we were interested in was called "hello.txt", and this was written into the
+`.cwl` file. This is not the best way to do this, as the "hello.txt" filename
+may vary or be dependant on the input file(s) used.  To avoid this we can
+specify the name of the file we want in the job parameters file (`.yml`). In
+this example, you will see how to reference the value of input parameters
+dynamically from other fields, which will allow us to then specify the name of
+the file to extract.
 
 *tar-param.cwl*
 
