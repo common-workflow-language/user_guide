@@ -1,15 +1,15 @@
-#!/usr/bin/env cwl-runner
-
 class: CommandLineTool
 cwlVersion: v1.0
-baseCommand: ["cat", "example.conf"]
+baseCommand: ["sh", "example.sh"]
 
 requirements:
   InitialWorkDirRequirement:
     listing:
-      - entryname: example.conf
-        entry: |
-          CONFIGVAR=$(inputs.message)
+      - entryname: example.sh
+        entry: |-
+          PREFIX='Message is:'
+          MSG="\${PREFIX} $(inputs.message)"
+          echo \${MSG}
 
 inputs:
   message: string

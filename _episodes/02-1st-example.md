@@ -3,7 +3,7 @@ title: "First Example"
 teaching: 5
 exercises: 0
 questions:
-- "How do I wrap a simple command line tool?"
+- "How do I write a CWL description of a simple command line tool?"
 objectives:
 - "Learn the basic structure of a CWL description."
 keypoints:
@@ -14,7 +14,12 @@ keypoints:
 - "The tool description and input files are provided as arguments to a CWL runner."
 ---
 The simplest "hello world" program.  This accepts one input parameter, writes a message to the terminal or job log, and produces
-no permanent output. CWL documents are written in [JSON][json] or [YAML][yaml], or a mix of the two.
+no permanent output.
+CWL documents are written in [JSON][json] or [YAML][yaml-homepage], or a mix of the two.
+We will use YAML throughout this guide.
+If you are not familiar with YAML,
+you may find it helpful to refer to
+[this quick tutorial for the subset of YAML used in CWL]({{ page.root }}{% link _extras/yaml.md %}).
 
 First, create a file called `1st-tool.cwl`, containing the boxed text below. It will help you to use a text editor that can be
 specified to produce text in YAML or JSON. Whatever text editor you use, the indents you see should not be created using tabs.
@@ -67,7 +72,7 @@ baseCommand: echo
 ~~~
 {: .source}
 
-The `baseCommand` provides the name of program that will actually run (`echo`). [`echo`] is a built-in program in the bash and
+The `baseCommand` provides the name of program that will actually run (`echo`). `echo` is a built-in program in the bash and
 C shells.
 
 ~~~
@@ -79,9 +84,16 @@ inputs:
 ~~~
 {: .source}
 
-The `inputs` section describes the inputs of the tool.  This is a list of input parameters and each parameter includes an
-identifier, a data type, and optionally an `inputBinding` which describes how this input parameter should appear on the command
-line.  In this example, the `position` field indicates where it should appear on the command line.
+The `inputs` section describes the inputs of the tool.
+This is a mapped list of input parameters
+(see the [YAML Guide]({{ page.root }}{% link _extras/yaml.md %}#maps) for more about the format)
+and each parameter includes an identifier,
+a data type,
+and optionally an `inputBinding`.
+The `inputBinding` describes how this input parameter should appear
+on the command line.
+In this example,
+the `position` field indicates where it should appear on the command line.
 
 ~~~
 outputs: []
@@ -90,8 +102,6 @@ outputs: []
 
 This tool has no formal output, so the `outputs` section is an empty list.
 
-[json]: http://json.org
-[yaml]: http://yaml.org
 [echo]: http://www.linfo.org/echo.html
 
 {% include links.md %}

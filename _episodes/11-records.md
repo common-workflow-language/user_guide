@@ -3,7 +3,7 @@ title: "Advanced Inputs"
 teaching: 10
 exercises: 0
 questions:
-- "How do I describe dependent and exclusive parameters?"
+- "How do I describe which parameters must and must not be used in combination?"
 objectives:
 - "Learn how to use records to describe the relationships between inputs."
 keypoints:
