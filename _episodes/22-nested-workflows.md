@@ -31,6 +31,8 @@ requirements:
 Here's an example workflow that uses our `1st-workflow.cwl` as a nested
 workflow:
 
+*nestedworkflows.cwl*
+
 ~~~
 {% include cwl/22-nested-workflows/nestedworkflows.cwl %}
 ~~~

@@ -26,7 +26,8 @@ One of the responsibilities of the CWL runner is to adjust the paths of
 input files to reflect the location where they appear inside the container.  
 
 
-This example runs a simple Node.js script inside a Docker container.
+This example runs a simple Node.js script inside a Docker container which will
+then print "Hello World" to the standard output.
 
 *docker.cwl*
 
@@ -40,6 +41,27 @@ This example runs a simple Node.js script inside a Docker container.
 ~~~
 {% include cwl/07-containers/docker-job.yml %}
 ~~~
+{: .source}
+
+Before we run this, lets just break it down and see what some bits do.  Most of this
+has been explained in previous sections, the only part that is really new is the `dockerRequirement`
+section.
+
+~~~
+baseCommand: node
+hints:
+  DockerRequirement:
+    dockerPull: node:slim
+~~~
+
+`baseCommand: node` tells CWL that we will be running this command in a container. We 
+then need to specify some `hints` for how to find the container we want.  In this case we list 
+just our requirements for the docker container in `DockerRequirements`.  The `dockerPull:`
+parameter takes the same value that you would pass to a `docker pull` command. That is,
+the name of the container image (you can even specify the tag, which is good idea for 
+best practises when using containers for reproducible research). In this case we have
+used a container called `node:slime`.
+
 {: .source}
 
 Provide a "hello.js" and invoke `cwl-runner` providing the tool wrapper and the

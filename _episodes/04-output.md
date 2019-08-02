@@ -3,7 +3,8 @@ title: "Returning Output Files"
 teaching: 10
 exercises: 0
 questions:
-- "How do I describe outputs from a command?"
+- "Where does the output of a command go?"
+- "How can I save the output of a command?"
 objectives:
 - "Learn how to describe and handle outputs from a tool."
 keypoints:
@@ -22,6 +23,15 @@ designated output directory.  The underlying tool or script must record
 its results in the form of files created in the output directory.  The
 output parameters returned by the CWL tool are either the output files
 themselves, or come from examining the content of those files.
+
+The following example demonstrates how to return a file that has been extracted from a tar file.
+
+> ## Passing mandatory arguments to the `baseCommand`
+>
+> In previous examples, the `baseCommand` was just a string, with any arguments passed as CWL inputs.
+> Instead of a single string we can use an _array of strings_.  The first element is the command to run, and
+> any subsequent elements are mandatory command line arguments
+{: .callout}
 
 *tar.cwl*
 
@@ -49,14 +59,12 @@ $ cwl-runner tar.cwl tar-job.yml
 [job tar.cwl] completed success
 {
     "example_out": {
-        "checksum": "sha1$da39a3ee5e6b4b0d3255bfef95601890afd80709",
-        "basename": "hello.txt",
-        "nameroot": "hello",
-        "nameext": ".txt",
         "location": "file:///home/me/cwl/user_guide/hello.txt",
-        "path": "/home/me/cwl/user_guide/hello.txt",
+        "basename": "hello.txt",
         "class": "File",
-        "size": 0
+        "checksum": "sha1$da39a3ee5e6b4b0d3255bfef95601890afd80709",
+        "size": 0,
+        "path": "/home/me/cwl/user_guide/hello.txt"
     }
 }
 Final process status is success

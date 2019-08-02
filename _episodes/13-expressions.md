@@ -111,9 +111,9 @@ syntax is used to describe the additional command line arguments.
 >   - From [InputParameter](https://www.commonwl.org/v1.0/Workflow.html#InputParameter) and [WorkflowOutputParameter](https://www.commonwl.org/v1.0/Workflow.html#WorkflowOutputParameter)
 >     - `format`
 >     - `secondaryFiles`
->     - From `steps`
->       - From [WorkflowStepInput](https://www.commonwl.org/v1.0/Workflow.html#WorkflowStepInput)
->         - `valueFrom`
+>   - From `steps`
+>     - From [WorkflowStepInput](https://www.commonwl.org/v1.0/Workflow.html#WorkflowStepInput)
+>       - `valueFrom`
 > - From [ExpressionTool](https://www.commonwl.org/v1.0/Workflow.html#ExpressionTool)
 >   - `expression`
 >   - From [InputParameter](https://www.commonwl.org/v1.0/Workflow.html#InputParameter) and [ExpressionToolOutputParameter](https://www.commonwl.org/v1.0/Workflow.html#ExpressionToolOutputParameter)
