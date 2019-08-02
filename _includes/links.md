@@ -18,6 +18,7 @@
 [jekyll-windows]: http://jekyll-windows.juthilo.com/
 [jekyll]: https://jekyllrb.com/
 [jupyter]: https://jupyter.org/
+[json]: http://json.org
 [lc-lessons]: https://librarycarpentry.org/#portfolio
 [lesson-example]: https://carpentries.github.io/lesson-example/
 [mit-license]: https://opensource.org/licenses/mit-license.html
@@ -37,4 +38,4 @@
 [swc-lessons]: https://software-carpentry.org/lessons/
 [swc-releases]: https://github.com/swcarpentry/swc-releases
 [workshop-repo]: {{ site.workshop_repo }}
-[yaml]: http://yaml.org/
+[yaml-homepage]: http://yaml.org/

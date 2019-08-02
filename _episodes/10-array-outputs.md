@@ -3,7 +3,8 @@ title: "Array Outputs"
 teaching: 10
 exercises: 0
 questions:
-- "How do I specify tool outputs as arrays?"
+- "What do I do when a tool produces output in more than one file?"
+- "How do I specify which output files should be kept?"
 objectives:
 - "Learn how to create arrays of output files."
 keypoints:
@@ -53,7 +54,8 @@ Final process status is success
 ~~~
 {: .output}
 
-The array of expected outputs is specified in `array-outputs-job.yml` with each
+As described in the [YAML Guide]({{ page.root }}{% link _extras/yaml.md %}#arrays),
+the array of expected outputs is specified in `array-outputs-job.yml` with each
 entry marked by a leading `-`. This format can also be used in CWL descriptions
 to mark entries in arrays, as demonstrated in several of the upcoming sections.
 

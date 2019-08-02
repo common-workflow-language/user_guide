@@ -3,7 +3,8 @@ title: "Returning Output Files"
 teaching: 10
 exercises: 0
 questions:
-- "How do I describe outputs from a command?"
+- "Where does the output of a command go?"
+- "How can I save the output of a command?"
 objectives:
 - "Learn how to describe and handle outputs from a tool."
 keypoints:
@@ -58,14 +59,12 @@ $ cwl-runner tar.cwl tar-job.yml
 [job tar.cwl] completed success
 {
     "example_out": {
-        "checksum": "sha1$da39a3ee5e6b4b0d3255bfef95601890afd80709",
-        "basename": "hello.txt",
-        "nameroot": "hello",
-        "nameext": ".txt",
         "location": "file:///home/me/cwl/user_guide/hello.txt",
-        "path": "/home/me/cwl/user_guide/hello.txt",
+        "basename": "hello.txt",
         "class": "File",
-        "size": 0
+        "checksum": "sha1$da39a3ee5e6b4b0d3255bfef95601890afd80709",
+        "size": 0,
+        "path": "/home/me/cwl/user_guide/hello.txt"
     }
 }
 Final process status is success

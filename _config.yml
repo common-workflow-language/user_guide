@@ -24,6 +24,11 @@ life_cycle: "stable"
 # What kind of thing is this ("workshop" or "lesson")?
 kind: "lesson"
 
+# Languages
+# Order is from https://en.wikipedia.org/wiki/List_of_languages_by_total_number_of_speakers#Ethnologue_(2019,_22nd_edition)
+# followed by the remaining entries from https://en.wikipedia.org/wiki/List_of_languages_by_number_of_native_speakers#Ethnologue_(2019,_22nd_edition)
+other_languages: ["zh-CN", "zh-TW", "hi", "es", "fr", "ar", "bn", "ru", "pt", "id", "ur", "de", "ja", "sw", "mr", "te", "pa", "ta", "tr", "ko", "vi", "jw", "it", "ha", "th", "gu", "kn", "fa", "ms", "pl", "yo", "ml", "su", "uz", "ig", "ro", "nl", "az", "ku", "am", "mg", "sr", "ne", "km", "so", "ceb", "si", "el", "kk", "hu", "zu", "cs"]
+
 # Magic to make URLs resolve both locally and on GitHub.
 # See https://help.github.com/articles/repository-metadata-on-github-pages/.
 repository: common-workflow-language/user-guide

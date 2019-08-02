@@ -5,7 +5,7 @@ exercises: 0
 questions:
 - "How do I create required input files from input parameters at runtime?"
 - "How do I invoke a script rather than just a simple command line?"
-- "How do I make inputs available to my script?"
+- "Besides `inputBinding`, how else can I pass arguments to the tool?"
 objectives:
 - "Learn how to create files on the fly during runtime."
 - "Learn how to use expressions in bash scripts."
@@ -15,7 +15,7 @@ created during tool runtime."
 ---
 Sometimes you need to create a file on the fly from input parameters,
 such as tools which expect to read their input configuration from a file
-rather than the command line parameters, or need a small wrapper shell script.  
+rather than the command line parameters, or need a small wrapper shell script.
 
 To generate such files we can use the `InitialWorkDirRequirement`.
 
@@ -26,9 +26,17 @@ To generate such files we can use the `InitialWorkDirRequirement`.
 ~~~
 {: .source}
 
-Any [expressions](../13-expressions/index.html) like `$(inputs.message)` are expanded by the CWL engine before creating the file; here inserting the value at the input `message`. 
+Any [expressions](../13-expressions/index.html) like `$(inputs.message)` are
+expanded by the CWL engine before creating the file;
+here inserting the value at the input `message`.
 
-> **Tip:** The _CWL expressions_ are independent of any _shell variables_ used later during command line tool invocation. That means that any genuine need for the character `$` should be **escaped** with `\`, for instance `\${PREFIX}` above is expanded to `${PREFIX}` in the generated file to be evaluated by the shell script instead of the CWL engine.
+> ## Tip
+> The _CWL expressions_ are independent of any _shell variables_
+used later during command line tool invocation. That means that any genuine
+need for the character `$` must be **escaped** with `\`,
+for instance `\${PREFIX}` above is expanded to `${PREFIX}` in the generated file
+to be evaluated by the shell script instead of the CWL engine.
+{: .callout}
 
 To test the above CWL tool use this job to provide the input value `message`:
 
@@ -38,6 +46,22 @@ To test the above CWL tool use this job to provide the input value `message`:
 {% include cwl/14-runtime/echo-job.yml %}
 ~~~
 {: .source}
+
+Before we run this, lets look at each step in a little more detail.
+The base command `baseCommand: ["sh", "example.sh"]`
+will execute the command `sh example.sh`.
+This will run the file we create in the shell.
+
+`InitialWorkDirRequirement` requires a `listing`.
+As the `listing` is a YAML array we need a `-` on the first line of
+each element of the array, in this case we have just one element.
+`entryname:` can have any value,
+but it must match what was specified in the `baseCommand`.
+The final part is `entry:`, this is followed by `|-`
+which is YAML quoting syntax, and means that you are using a multiline string
+(without it we would need to write the whole script on one line).
+(see the [YAML Guide]({{ page.root }}{% link _extras/yaml.md %}#maps)
+for more about the formating)
 
 Now invoke `cwl-runner` with the tool wrapper and the input object on the
 command line:
