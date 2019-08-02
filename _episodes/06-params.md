@@ -47,14 +47,12 @@ $ cwl-runner tar-param.cwl tar-param-job.yml
 [job tar-param.cwl] completed success
 {
     "extracted_file": {
-        "checksum": "sha1$da39a3ee5e6b4b0d3255bfef95601890afd80709",
-        "basename": "goodbye.txt",
-        "nameroot": "goodbye",
-        "nameext": ".txt",
         "location": "file:///home/me/cwl/user_guide/goodbye.txt",
-        "path": "/home/me/cwl/user_guide/goodbye.txt",
+        "basename": "goodbye.txt",
         "class": "File",
-        "size": 0
+        "checksum": "sha1$da39a3ee5e6b4b0d3255bfef95601890afd80709",
+        "size": 0,
+        "path": "/home/me/cwl/user_guide/goodbye.txt"
     }
 }
 Final process status is success
