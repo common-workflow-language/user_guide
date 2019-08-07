@@ -133,18 +133,18 @@ outputs: []
 
 Using [`MultipleInputFeatureRequirement`](https://www.commonwl.org/v1.0/Workflow.html#MultipleInputFeatureRequirement)
 along with
-[`linkMerge: merge_flattened`](https://www.commonwl.org/v1.0/Workflow.html#WorkflowStepInput)
+[`linkMerge: merge_nested`](https://www.commonwl.org/v1.0/Workflow.html#WorkflowStepInput)
 
-> merge_flattened
+>   merge_nested
 
->   1. The source and sink parameters must be compatible types,
->      or the source type must be compatible with single element from the "items" type of the destination array parameter.
->   2. Source parameters which are arrays are concatenated.
->      Source parameters which are single element types are appended as single elements.
+> The input must be an array consisting of exactly one entry for each input link.
+> If "merge_nested" is specified with a single link, the value from the link must be wrapped in a single-item list.
+
+Which means "create a list with exactly these sources as elements"
 
 Or in other words: if the destination is of type `File[]` (an array of `File`s)
-and the source is a single `File` then add `MultipleInputFeatureRequirement` to the `requirements`
-and add `linkMerge: merge_flattened` under the appropriate `in` entry of the destination step.
+and the source is a single `File` then add `MultipleInputFeatureRequirement` to the Workflow level `requirements`
+and add `linkMerge: merge_nested` under the appropriate `in` entry of the destination step.
 
 ```yaml
 cwlVersion: v1.0
@@ -162,7 +162,7 @@ steps:
     in:
      cat_in:  # type is File[]
        source: [ readme ]  # but the source is of type File
-       linkMerge: merge_flattened
+       linkMerge: merge_nested
     out: [txt]
 
 outputs:
