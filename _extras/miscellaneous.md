@@ -128,3 +128,45 @@ baseCommand: echo
 
 outputs: []
 ```
+
+### Connect a solo value to an input that expects an array of that type
+
+Using [`MultipleInputFeatureRequirement`](https://www.commonwl.org/v1.0/Workflow.html#MultipleInputFeatureRequirement)
+along with
+[`linkMerge: merge_flattened`](https://www.commonwl.org/v1.0/Workflow.html#WorkflowStepInput)
+
+> merge_flattened
+
+>   1. The source and sink parameters must be compatible types,
+>      or the source type must be compatible with single element from the "items" type of the destination array parameter.
+>   2. Source parameters which are arrays are concatenated.
+>      Source parameters which are single element types are appended as single elements.
+
+Or in other words: if the destination is of type `File[]` (an array of `File`s)
+and the source is a single `File` then add `MultipleInputFeatureRequirement` to the `requirements`
+and add `linkMerge: merge_flattened` under the appropriate `in` entry of the destination step.
+
+```yaml
+cwlVersion: v1.0
+class: Workflow
+
+requirements:
+  MultipleInputFeatureRequirement: {}
+
+inputs:
+  readme: File
+
+steps:
+  first:
+    run: tests/checker_wf/cat.cwl
+    in:
+     cat_in:  # type is File[]
+       source: [ readme ]  # but the source is of type File
+       linkMerge: merge_flattened
+    out: [txt]
+
+outputs:
+  result:
+    type: File
+    outputSource: first/txt
+```
