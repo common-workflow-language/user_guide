@@ -170,3 +170,21 @@ outputs:
     type: File
     outputSource: first/txt
 ```
+
+### If you want to handling the filename has space character at `cwltool`.
+
+`cwltool` has some illegal charcters by default.
+Such kind of situation , error message something like this.
+
+This case filename is `a space is here.txt` , include 3 space characters.
+
+> ERROR Workflow error, try again with --debug for more information:
+Invalid filename: 'a space is here.txt' contains illegal characters
+
+
+`cwltool` has options to avoid this error.
+Just pass
+
+```
+--relax-path-checks
+```
