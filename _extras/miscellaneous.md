@@ -136,7 +136,7 @@ along with
 [`linkMerge: merge_nested`](https://www.commonwl.org/v1.0/Workflow.html#WorkflowStepInput)
 
 >   merge_nested
-
+>
 > The input must be an array consisting of exactly one entry for each input link.
 > If "merge_nested" is specified with a single link, the value from the link must be wrapped in a single-item list.
 
@@ -176,9 +176,11 @@ outputs:
 
 For example, the filename is `a space is here.txt` includes 3 space characters.
 
-> ERROR Workflow error, try again with --debug for more information:
->
-> Invalid filename: 'a space is here.txt' contains illegal characters
+```console
+ERROR Workflow error, try again with --debug for more information:
+
+Invalid filename: 'a space is here.txt' contains illegal characters
+```
 
 If you can not avoid these dangerous characters, then pass `--relax-path-checks` to `cwltool`.
 

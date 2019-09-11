@@ -53,6 +53,7 @@ hints:
   DockerRequirement:
     dockerPull: node:slim
 ~~~
+{: .source}
 
 `baseCommand: node` tells CWL that we will be running this command in a container. We 
 then need to specify some `hints` for how to find the container we want.  In this case we list 
@@ -62,7 +63,6 @@ the name of the container image (you can even specify the tag, which is good ide
 best practises when using containers for reproducible research). In this case we have
 used a container called `node:slime`.
 
-{: .source}
 
 Provide a "hello.js" and invoke `cwl-runner` providing the tool wrapper and the
 input object on the command line:
