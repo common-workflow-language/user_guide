@@ -191,3 +191,5 @@ Workaround for `cwltool` is to use one of the following:
 --tmpdir-prefix TMPDIR_PREFIX Path prefix for temporary directories
 --tmp-outdir-prefix TMP_OUTDIR_PREFIX Path prefix for intermediate output directories
 ```
+
+Or if you using a Mac, increase `Memory` size (Default: `2GB` ) more bigger, the half of memory using as tmpfs.
