@@ -136,7 +136,7 @@ along with
 [`linkMerge: merge_nested`](https://www.commonwl.org/v1.0/Workflow.html#WorkflowStepInput)
 
 >   merge_nested
-
+>
 > The input must be an array consisting of exactly one entry for each input link.
 > If "merge_nested" is specified with a single link, the value from the link must be wrapped in a single-item list.
 
@@ -192,3 +192,86 @@ Specific workaround for `cwltool` is to use one of the following options:
 ```
 
 Or if you using a Mac, increase the Docker Virtual Machine `Memory` size (Default: `2GB` ) to be bigger, as half of VM memory is used for the `/tmp` tmpfs.
+
+### `cwltool` errors due to filenames with space characters inside
+
+`cwltool` does not allow some characters in filenames by default.
+
+For example, the filename is `a space is here.txt` includes 3 space characters.
+
+```console
+ERROR Workflow error, try again with --debug for more information:
+
+Invalid filename: 'a space is here.txt' contains illegal characters
+```
+
+If you can not avoid these dangerous characters, then pass `--relax-path-checks` to `cwltool`.
+
+### CWL Paramter Reference error due to hyphen in input identifier
+
+If `cwltool --validate` returns valid
+
+```console
+$ cwltool --validate cwl/qiime.cwl
+INFO /usr/local/bin/cwltool 1.0.20190831161204
+INFO Resolved 'cwl/qiime.cwl' to 'file:///workspace/cwl/qiime.cwl'
+cwl/qiime.cwl is valid CWL.
+```
+
+But executing it causes an error like:
+
+```console
+$ cwltool cwl/qiime.cwl --sample-input metadata.tsv 
+INFO /usr/local/bin/cwltool 1.0.20190831161204
+INFO Resolved 'cwl/qiime.cwl' to 'file:///workspace/cwl/qiime.cwl'
+ERROR Workflow error, try again with --debug for more information:
+cwl/qiime.cwl:14:5: Expression evaluation error:
+                    Syntax error in parameter reference '(inputs.sample-input)'. This could be due
+                    to using Javascript code without specifying InlineJavascriptRequirement.
+```
+
+The file is here
+
+```cwl
+cwlVersion: v1.0
+class: CommandLineTool
+baseCommand: [qiime, metadata, tabulate]
+arguments:
+  - prefix: --m-input-file
+    valueFrom: $(inputs.sample-input)
+inputs:
+  sample-input: File
+outputs: []
+```
+
+Problem caused by `-` (hyphen charcter). 
+
+```cwl
+valueFrom: $(inputs.sample-input)
+                        # ^ this is problem
+...
+
+inputs:
+  sample-input: File
+      # ^ this is problem
+```
+
+
+Fix this error is change `-` (hyphen) to `_` (underscore)
+
+```cwl
+valueFrom: $(inputs.sample_input)
+                        # ^ changed here
+
+...
+
+inputs:
+  sample_input: File
+      # ^ changed here
+```
+
+If is not possible to change the input identifier, then you can use an alternative CWL Parameter Reference syntax:
+
+```cwl
+valueFrom: $(inputs["sample-input"])
+```
