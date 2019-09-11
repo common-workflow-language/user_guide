@@ -173,7 +173,7 @@ outputs:
 
 ### No space left on `/tmp`
 
-When your storage space fills up, sometimes you get this kind of error.
+When you execute the tools like sort which consuming a lot of amount of `/tmp` space , you get this kind of error.
 
 > [Errno 28] No space left on device on device: '/tmp/q0aq3bde
 
@@ -181,6 +181,7 @@ This kind of error is happens mainly two cases.
 
 1. tool using huge amount under `/tmp` .
 2. You run on Mac.
+    - Default Mac `/tmp` only has `1GB`. almost case is good but sometimes `1GB` is not enough.
 
 Both case one WORKAROUND is that temporary space is located under your home directory, or scratch storage if your computing environment has.
 
