@@ -173,23 +173,22 @@ outputs:
 
 ### No space left on `/tmp`
 
-When you execute the tools like sort which consuming a lot of amount of `/tmp` space , you get this kind of error.
+When you execute tools like `sort` which consume a lot of `/tmp` space, you can get this kind of error:
 
 > [Errno 28] No space left on device on device: '/tmp/q0aq3bde
 
-This kind of error is happens mainly two cases.
+This kind of error happens in mainly two cases:
 
-1. tool using huge amount under `/tmp` .
-2. You run on Mac.
-    - Default Mac `/tmp` only has `1GB`. almost case is good but sometimes `1GB` is not enough.
+1. The tool using huge amount of disk space under `/tmp` (perhaps via `$(runtime.tmpdir)`)
+2. You are running on Mac with Docker and the `/tmp` in the Docker Virtual Machine is only 1GB in size and this is not enough.
 
-Both case one WORKAROUND is that temporary space is located under your home directory, or scratch storage if your computing environment has.
+Generic workaround: find a new temporary space, perhaps located under your home directory, or scratch storage if your computing environment has that.
 
-Workaround for `cwltool` is to use one of the following:
+Specific workaround for `cwltool` is to use one of the following options:
 
 ```
 --tmpdir-prefix TMPDIR_PREFIX Path prefix for temporary directories
 --tmp-outdir-prefix TMP_OUTDIR_PREFIX Path prefix for intermediate output directories
 ```
 
-Or if you using a Mac, increase `Memory` size (Default: `2GB` ) more bigger, the half of memory using as tmpfs.
+Or if you using a Mac, increase the Docker Virtual Machine `Memory` size (Default: `2GB` ) to be bigger, as half of VM memory is used for the `/tmp` tmpfs.
