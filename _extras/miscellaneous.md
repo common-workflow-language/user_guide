@@ -170,7 +170,6 @@ outputs:
     type: File
     outputSource: first/txt
 ```
-
 ### `cwltool` errors due to filenames with space characters inside
 
 `cwltool` does not allow some characters in filenames by default.
@@ -182,3 +181,72 @@ For example, the filename is `a space is here.txt` includes 3 space characters.
 > Invalid filename: 'a space is here.txt' contains illegal characters
 
 If you can not avoid these dangerous characters, then pass `--relax-path-checks` to `cwltool`.
+
+### CWL Paramter Reference error due to hyphen in input identifier
+
+If `cwltool --validate` returns valid
+
+```console
+$ cwltool --validate cwl/qiime.cwl
+INFO /usr/local/bin/cwltool 1.0.20190831161204
+INFO Resolved 'cwl/qiime.cwl' to 'file:///workspace/cwl/qiime.cwl'
+cwl/qiime.cwl is valid CWL.
+```
+
+But executing it causes an error like:
+
+```console
+$ cwltool cwl/qiime.cwl --sample-input metadata.tsv 
+INFO /usr/local/bin/cwltool 1.0.20190831161204
+INFO Resolved 'cwl/qiime.cwl' to 'file:///workspace/cwl/qiime.cwl'
+ERROR Workflow error, try again with --debug for more information:
+cwl/qiime.cwl:14:5: Expression evaluation error:
+                    Syntax error in parameter reference '(inputs.sample-input)'. This could be due
+                    to using Javascript code without specifying InlineJavascriptRequirement.
+```
+
+The file is here
+
+```cwl
+cwlVersion: v1.0
+class: CommandLineTool
+baseCommand: [qiime, metadata, tabulate]
+arguments:
+  - prefix: --m-input-file
+    valueFrom: $(inputs.sample-input)
+inputs:
+  sample-input: File
+outputs: []
+```
+
+Problem caused by `-` (hyphen charcter). 
+
+```cwl
+valueFrom: $(inputs.sample-input)
+                        # ^ this is problem
+...
+
+inputs:
+  sample-input: File
+      # ^ this is problem
+```
+
+
+Fix this error is change `-` (hyphen) to `_` (underscore)
+
+```cwl
+valueFrom: $(inputs.sample_input)
+                        # ^ changed here
+
+...
+
+inputs:
+  sample_input: File
+      # ^ changed here
+```
+
+If is not possible to change the input identifier, then you can use an alternative CWL Parameter Reference syntax:
+
+```cwl
+valueFrom: $(inputs["sample-input"])
+```
