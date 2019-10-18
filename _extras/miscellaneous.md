@@ -170,6 +170,135 @@ outputs:
     type: File
     outputSource: first/txt
 ```
+### Optional Inputs 💯
+
+In CWL unlike WDL optional input settings are defined in the type section of the yaml and not on the declaration. Notice the question mark is on the type.
+
+```yaml
+inputs:
+  InputRead1:
+    type: File
+    inputBinding:
+      position: 100
+
+  #Optional Inputs
+  isCasava:
+    type: boolean?
+    inputBinding:
+      position: 1
+      prefix: "--casava"
+```
+<a name="enuminputs"></a>
+### Enum Inputs ⚜️
+
+For commandline flags that require a specific input as the argument an enum type can be declared in CWL. **Specifying null here is known as long form style. It does the same thing as the question mark on the other inputs.**
+
+```yaml
+Format:
+  type:
+    - "null"
+    - type: enum
+      symbols:
+        - bam
+        - sam
+        - bam_mapped
+        - sam_mapped
+        - fastq
+  inputBinding:
+    position: 2
+    prefix: "--format"
+```
+<a name="recordinputs"></a>
+### Record Inputs 📀
+
+For commandline flags that are either **mutually exclusive** or **dependent** a special record type can be defined. You can also specify null here to create optional inputs.
+
+```yaml
+#Using record inputs to create mutually exclusive inputs
+
+  Strand:
+    type:
+      - "null"
+      - type: record
+        name: forward
+        fields:
+          forward:
+              type: boolean
+              inputBinding:
+                prefix: "--fr-stranded"
+
+      - type: record
+        name: reverse
+        fields:
+          reverse:
+            type: boolean
+            inputBinding:
+              prefix: "--rf-stranded"
+
+  PseudoBam:
+    type: boolean?
+    inputBinding:
+      prefix: "--pseudobam"
+
+#Using record inputs to create dependent inputs
+  
+  GenomeBam:
+    type:
+      - "null"
+      - type: record
+        name: genome_bam
+        fields:
+          genomebam:
+            type: boolean
+            inputBinding:
+              prefix: "--genomebam"
+
+          gtf:
+            type: File
+            inputBinding:
+              prefix: "--gtf"
+
+          chromosomes:
+            type: File
+            inputBinding:
+              prefix: "--chromosomes"
+```
+### Setting Mutually Exclusive Parameters
+
+In order to properly set fields in a record input type, you need to pass a dictionary to the input to properly set the parameters. This is done by using inline javascript and returning the dictionary with the key of the field you want to set. The source field is set to indicate the input from the workflow to be used as the value. 
+
+```yaml
+steps:
+
+  build_hisat2_index:
+    run: ../Tools/Hisat2-Index.cwl
+    in:
+      InputFiles:
+        source: FastaFiles
+        valueFrom : | 
+          ${return {"fasta": self};}
+
+      IndexName: IndexName
+    
+    out: [indexes]
+```
+
+### Setting Booleans
+
+These can be set by using the default field
+```yaml
+input:
+  default:true
+```
+### Concating Strings in Inputs
+
+The valueFrom field must be used instead of default.
+
+```yaml
+input:
+  valueFrom: $("My String:" + input.stringvalue)
+```
+
 ### `cwltool` errors due to filenames with space characters inside
 
 `cwltool` does not allow some characters in filenames by default.
