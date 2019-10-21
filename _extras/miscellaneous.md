@@ -172,7 +172,7 @@ outputs:
 ```
 ### Optional Inputs 💯
 
-In CWL unlike WDL optional input settings are defined in the type section of the yaml and not on the declaration. Notice the question mark is on the type.
+To make an input parameter optional, add a question mark to the type declaration.
 
 ```yaml
 inputs:
