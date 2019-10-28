@@ -7,7 +7,7 @@ permalink: /yaml/
 <script src="https://unpkg.com/mermaid@8.0.0/dist/mermaid.min.js"></script>
 <script>mermaid.initialize({startOnLoad:true});</script>
 
-[YAML][yaml-homepage] is a file format
+[YAML][yaml] is a file format
 designed to be readable by both computers and humans.
 This guide introduces the features of YAML
 relevant when writing CWL descriptions and input parameter files.
