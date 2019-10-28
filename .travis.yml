@@ -1,11 +1,13 @@
-sudo: required
 services:
   - docker
 
 language: python
 python:
   - 2.7
-  - 3.6
+  - 3.8
+
+cache:
+  pip: true
 
 branches:
   only:
@@ -13,6 +15,7 @@ branches:
     - /.*/
 
 before_script:
+  - pip install -U pip setuptools wheel
   - pip install cwltool cwltest html5lib
 
 script:
