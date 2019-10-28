@@ -15,7 +15,7 @@ branches:
     - /.*/
 
 before_script:
-  - pip install -U pip setuptools wheel
+  - pip install -U pip setuptools wheel typing
   - pip install cwltool cwltest html5lib
 
 script:
