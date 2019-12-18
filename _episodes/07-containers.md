@@ -61,7 +61,7 @@ just our requirements for the docker container in `DockerRequirements`.  The `do
 parameter takes the same value that you would pass to a `docker pull` command. That is,
 the name of the container image (you can even specify the tag, which is good idea for 
 best practises when using containers for reproducible research). In this case we have
-used a container called `node:slime`.
+used a container called `node:slim`.
 
 
 Provide a "hello.js" and invoke `cwl-runner` providing the tool wrapper and the
