@@ -106,7 +106,7 @@ The `inputs` map contains a single key, `example_flag`,
 which itself contains two keys, `type` and `inputBinding`,
 while one of these children, `inputBinding`,
 contains a further two key-value pairs (`position` and `prefix`).
-See the "Arrays" section below for more information about providing multiple
+See the [Arrays](#arrays) section below for more information about providing multiple
 values/key-value pairs for a single key.
 For comparison with the example YAML above,
 here is a graphical representation of the `inputs` object it describes.
@@ -127,7 +127,7 @@ graph TD
 
 In certain circumstances it is necessary to provide
 multiple values or objects for a single key.
-As we've already seen in the "Mapped Objects" section above,
+As we've already seen in the [Maps](#Maps) section above,
 more than one key-value pair can be mapped to a single key.
 However, it is also possible to define multiple values for a key
 without having to provide a unique key for each value.
@@ -176,7 +176,7 @@ touchfiles: [foo.txt, bar.dat, baz.txt] # equivalent to first Arrays example
 and:
 
 ```yaml
-# equivalent to the `inputs` example in "Mapped Objects" above
+# equivalent to the `inputs` example in "Maps" above
 inputs: {example_flag: {type: boolean, inputBinding: {position: 1, prefix: -f}}}
 ```
 
