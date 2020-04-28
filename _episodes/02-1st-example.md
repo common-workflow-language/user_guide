@@ -15,7 +15,7 @@ keypoints:
 ---
 The simplest "hello world" program.  This accepts one input parameter, writes a message to the terminal or job log, and produces
 no permanent output.
-CWL documents are written in [JSON][json] or [YAML][yaml-homepage], or a mix of the two.
+CWL documents are written in [JSON][json] or [YAML][yaml], or a mix of the two.
 We will use YAML throughout this guide.
 If you are not familiar with YAML,
 you may find it helpful to refer to
