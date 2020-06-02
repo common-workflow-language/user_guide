@@ -118,7 +118,7 @@ another may run in parallel.
 The first step, `untar` runs `tar-param.cwl` (described previously in
 [Parameter references]({{ page.root }}{% link _episodes/06-params.md %})).
 This tool has two input parameters, `tarfile` and `extractfile` and one output
-parameter `example_out`.
+parameter `extracted_file`.
 
 The ``in`` section of the workflow step connects these two input parameters to
 the inputs of the workflow, `tarball` and `name_of_file_to_extract` using
