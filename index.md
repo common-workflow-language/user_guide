@@ -36,5 +36,5 @@ You also may be interested in:
 
 [cwl-runners-list]: https://www.commonwl.org/#Implementations
 [cwltool-install]: https://github.com/common-workflow-language/cwltool#install
-[repo]: https://github.com/common-workflow-language/user-guide/issues
+[repo]: https://github.com/common-workflow-language/user_guide/issues
 {% include links.md %}
