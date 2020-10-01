@@ -57,7 +57,7 @@ requirements:
   MultipleInputFeatureRequirement: {}
 ```
 
-The first thing you'll notice is that this workflow is only compatible for cwl 1.2+
+The first thing you'll notice is that this workflow is only compatible for version 1.2 or greater of the CWL standards.
 
 ```
 class: Workflow
@@ -136,4 +136,3 @@ WARNING Final process status is permanentFail
 ```
 
 {% include links.md %}
-
