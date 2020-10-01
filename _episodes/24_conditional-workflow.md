@@ -14,12 +14,6 @@ This allows workflows to skip additional steps based on input parameters given a
 
 *conditional-workflow.cwl*
 
-<!-- 
-~~~
-{% include cwl/conditional-workflow/conditional-workflow.cwl %}
-~~~
- -->
-
 ```
 class: Workflow
 cwlVersion: v1.2
