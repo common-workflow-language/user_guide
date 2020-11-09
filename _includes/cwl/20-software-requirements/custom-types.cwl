@@ -61,7 +61,7 @@ $namespaces:
  iana: https://www.iana.org/assignments/media-types/
  s: https://schema.org/
 $schemas:
- - https://schema.org/version/latest/schema.rdf
+ - http://schema.org/version/9.0/schemaorg-current-http.rdf
 
 s:license: https://spdx.org/licenses/Apache-2.0
 s:copyrightHolder: "EMBL - European Bioinformatics Institute"

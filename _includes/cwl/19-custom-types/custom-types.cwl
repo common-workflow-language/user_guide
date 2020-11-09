@@ -58,7 +58,7 @@ $namespaces:
 
 $schemas:
   - http://edamontology.org/EDAM_1.16.owl
-  - https://schema.org/version/latest/schema.rdf
+  - http://schema.org/version/9.0/schemaorg-current-http.rdf
 
 s:license: https://spdx.org/licenses/Apache-2.0
 s:copyrightHolder: "EMBL - European Bioinformatics Institute"
