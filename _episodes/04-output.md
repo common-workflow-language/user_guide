@@ -71,7 +71,7 @@ Final process status is success
 ~~~
 {: .output}
 
-The field `outputBinding` describes how to to set the value of each
+The field `outputBinding` describes how to set the value of each
 output parameter.
 
 ~~~
