@@ -170,6 +170,29 @@ outputs:
     type: File
     outputSource: first/txt
 ```
+
+### No space left on `/tmp`
+
+When you execute tools like `sort` which consume a lot of `/tmp` space, you can get this kind of error:
+
+> [Errno 28] No space left on device on device: '/tmp/q0aq3bde
+
+This kind of error happens in mainly two cases:
+
+1. The tool using huge amount of disk space under `/tmp` (perhaps via `$(runtime.tmpdir)`)
+2. You are running on Mac with Docker and the `/tmp` in the Docker Virtual Machine is only 1GB in size and this is not enough.
+
+Generic workaround: find a new temporary space, perhaps located under your home directory, or scratch storage if your computing environment has that.
+
+Specific workaround for `cwltool` is to use one of the following options:
+
+```
+--tmpdir-prefix TMPDIR_PREFIX Path prefix for temporary directories
+--tmp-outdir-prefix TMP_OUTDIR_PREFIX Path prefix for intermediate output directories
+```
+
+Or if you using a Mac, increase the Docker Virtual Machine `Memory` size (Default: `2GB` ) to be bigger, as half of VM memory is used for the `/tmp` tmpfs.
+
 ### `cwltool` errors due to filenames with space characters inside
 
 `cwltool` does not allow some characters in filenames by default.
