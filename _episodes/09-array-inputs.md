@@ -17,9 +17,10 @@ with the `inputBinding` field is provided in the description."
 parameters."
 ---
 It is easy to add arrays of input parameters represented to the command
-line.  To specify an array parameter, the array definition is nested
-under the `type` field with `type: array` and `items` defining the valid
-data types that may appear in the array.
+line. There are two ways to specify an array parameter. First is to provide
+`type` field with `type: array` and `items` defining the valid data types
+that may appear in the array. Alternatively, brackets `[]` may be added after
+the type name to indicate that input parameter is array of that type.
 
 *array-inputs.cwl*
 
@@ -74,7 +75,7 @@ values should be concatenated into a single argument separated by the item
 separator string.
 
 Note that the arrays of inputs are specified inside square brackets `[]` in `array-inputs-job.yml`. Arrays can also be expressed over multiple lines, where
-array values that are not defined with an associated key is marked by a leading
+array values that are not defined with an associated key are marked by a leading `-`.
 This will be demonstrated in the next lesson
 and is discussed in more detail in the [YAML Guide]({{ page.root }}{% link _extras/yaml.md %}#arrays).
 You can specify arrays of arrays, arrays of records, and other complex types.

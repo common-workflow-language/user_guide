@@ -314,7 +314,7 @@ Invalid filename: 'a space is here.txt' contains illegal characters
 
 If you can not avoid these dangerous characters, then pass `--relax-path-checks` to `cwltool`.
 
-### CWL Paramter Reference error due to hyphen in input identifier
+### CWL Parameter Reference error due to hyphen in input identifier
 
 If `cwltool --validate` returns valid
 

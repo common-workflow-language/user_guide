@@ -156,7 +156,7 @@ because the first step must wait on `echo Hallo welt!`. You can see how this mig
 well. 
 
 Ok, so how do we scatter on steps that can proceed independent of other samples? Remember from
-chapter 22, that we can make an entire workflow a single step in another workflow! Convert our
+[chapter 21]({{ page.root }}/22-nested-workflows/), that we can make an entire workflow a single step in another workflow! Convert our
 two step workflow to a single step subworkflow:
 
 *scatter-nested-workflow.cwl*
