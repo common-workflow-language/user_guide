@@ -296,7 +296,8 @@ The valueFrom field must be used instead of default.
 
 ```yaml
 input:
-  valueFrom: $("My String:" + input.stringvalue)
+  valueFrom: |
+     My String: $(input.stringvalue)
 ```
 
 ### `cwltool` errors due to filenames with space characters inside
