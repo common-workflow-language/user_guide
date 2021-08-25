@@ -52,7 +52,7 @@ src="https://view.commonwl.org/graph/svg/github.com/common-workflow-language/use
 alt="Visualization of 1st-workflow.cwl" /></a>
 {: .callout}
 
-A CWL `Workflow` can be used as a `step` just like a `CommandLineTool`, it's CWL
+A CWL `Workflow` can be used as a `step` just like a `CommandLineTool`, its CWL
 file is included with `run`. The workflow inputs (`inp` and `ex`) and outputs
 (`classout`) then can be mapped to become the step's input/outputs.
 
