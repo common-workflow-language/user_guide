@@ -13,7 +13,7 @@ keypoints:
 - "Software requirements should be specified under `hints:SoftwareRequirement`."
 ---
 Often tool descriptions will be written for a specific version of a software. To
-make it easier for others to make use of your descriptions, you can include a
+make it easier for others to use your descriptions, you can include a
 `SoftwareRequirement` field in the `hints` section.
 This may also help to avoid confusion about which version of a tool the
 description was written for.
