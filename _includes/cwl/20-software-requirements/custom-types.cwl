@@ -5,10 +5,10 @@ label: "InterProScan: protein sequence classifier"
 
 doc: |
       Version 5.21-60 can be downloaded here:
-      https://github.com/ebi-pf-team/interproscan/wiki/HowToDownload
+      https://interproscan-docs.readthedocs.io/en/latest/HowToDownload.html
 
       Documentation on how to run InterProScan 5 can be found here:
-      https://github.com/ebi-pf-team/interproscan/wiki/HowToRun
+      https://interproscan-docs.readthedocs.io/en/latest/HowToRun.html
 
 requirements:
   ResourceRequirement:
