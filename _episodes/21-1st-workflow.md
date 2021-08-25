@@ -116,7 +116,7 @@ instead the order is determined by the dependencies between steps (using
 another may run in parallel.
 
 The first step, `untar` runs `tar-param.cwl` (described previously in
-[Parameter references]({{ page.root }}{% link _episodes/06-params.md %})).
+[Parameter References]({{ page.root }}{% link _episodes/06-params.md %})).
 This tool has two input parameters, `tarfile` and `extractfile` and one output
 parameter `extracted_file`.
 
@@ -140,7 +140,9 @@ expected from the tool.
 
 The second step `compile` depends on the results from the first step by
 connecting the input parameter `src` to the output parameter of `untar` using
-`untar/extracted_file`.  The output of this step `classfile` is connected to the
+`untar/extracted_file`.  It runs `arguments.cwl` (described previously in
+[Additional Arguments and Parameters]({{ page.root }}{% link _episodes/08-arguments.md %})).
+The output of this step `classfile` is connected to the
 `outputs` section for the Workflow, described above.
 
 {% include links.md %}
