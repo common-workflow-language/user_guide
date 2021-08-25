@@ -65,7 +65,7 @@ The reference to a custom type is a combination of the name of the file in which
 the object is defined (`biom-convert-table.yaml`) and the name of the object
 within that file (`table_type`) that defines the custom type. In this case the `symbols`
 array from the imported `biom-convert-table.yaml` file define the allowable table options.
-For example, in custom-types.yml, we pass `OTU table` as an `input` that 
+For example, in `custom-types.yml`, we pass `OTU table` as an `input` that 
 tells the tool to create an OTU table in hd5 format. 
 
 The contents of the YAML file describing the custom type are given below:
