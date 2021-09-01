@@ -57,7 +57,7 @@ $ cwl-runner arguments.cwl arguments-job.yml
  --rm \
  --env=TMPDIR=/tmp \
  --env=HOME=/var/spool/cwl \
- java:7 \
+ openjdk:9.0.1-11-slim \
  javac \
  -d \
  /var/spool/cwl \
