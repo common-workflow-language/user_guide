@@ -53,18 +53,17 @@ alt="Visualization of 1st-workflow.cwl" /></a>
 {: .callout}
 
 A CWL `Workflow` can be used as a `step` just like a `CommandLineTool`, its CWL
-file is included with `run`. The workflow inputs (`inp` and `ex`) and outputs
-(`classout`) then can be mapped to become the step's input/outputs.
+file is included with `run`. The workflow inputs (`tarball` and `name_of_file_to_extract`) and outputs
+(`compiled_class`) then can be mapped to become the step's input/outputs.
 
 ~~~
   compile:
     run: 1st-workflow.cwl
     in:
-      inp:
-        source: create-tar/tar
-      ex:
+      tarball: create-tar/tar_compressed_java_file
+      name_of_file_to_extract:
         default: "Hello.java"
-    out: [classout]
+    out: [compiled_class]
 ~~~
 {: .source}
 
@@ -73,9 +72,9 @@ it we had to provide a job file to denote the tar file and `*.java` filename.
 This is generally best-practice, as it means it can be reused in multiple parent
 workflows, or even in multiple steps within the same workflow.
 
-Here we use `default:` to hard-code `"Hello.java"` as the `ex` input, however
-our workflow also requires a tar file at `inp`, which we will prepare in the
-`create-tar` step. At this point it is probably a good idea to refactor
+Here we use `default:` to hard-code `"Hello.java"` as the `name_of_file_to_extract`
+input, however our workflow also requires a tar file at `tarball`, which we will
+prepare in the `create-tar` step. At this point it is probably a good idea to refactor
 `1st-workflow.cwl` to have more specific input/output names, as those also
 appear in its usage as a tool.
 
@@ -100,35 +99,24 @@ requirement, before adding it to a tar file.
 {: .source}
 
 In this case our step can assume `Hello.java` rather than be parameterized, so
-we can use a simpler `arguments` form as long as the CWL workflow engine
-supports the `ShellCommandRequirement`:
+we can use hardcoded values `hello.tar` and `Hello.java` in a `baseCommand` and
+the resulting `outputs`:
 
 ~~~
   run:
     class: CommandLineTool
-    requirements:
-      ShellCommandRequirement: {}
-    arguments:
-      - shellQuote: false
-        valueFrom: >
-          tar cf hello.tar Hello.java
+    inputs: []
+    baseCommand: [tar, --create, --file=hello.tar, Hello.java]
+    outputs:
+      tar_compressed_java_file:
+        type: File
+        streamable: true
+        outputBinding:
+          glob: "hello.tar"
 ~~~
 {: .source}
 
-Note the use of `shellQuote: false` here, otherwise the shell will try to
-execute the quoted binary `"tar cf hello.tar Hello.java"`.
-
-Here the `>` block means that newlines are stripped, so it's possible to write
-the single command on multiple lines. Similarly, the `|` we used above will
-preserve newlines, combined with `ShellCommandRequirement` this would allow
-embedding a shell script.
-Shell commands should however be used sparingly in CWL, as it means you
-"jump out" of the workflow and no longer get reusable components, provenance or
-scalability. For reproducibility and portability it is recommended to only use
-shell commands together with a `DockerRequirement` hint, so that the commands
-are executed in a predictable shell environment.
-
-Did you notice that we didn't split out the `tar cf` tool to a separate file,
+Did you notice that we didn't split out the `tar --create` tool to a separate file,
 but rather embedded it within the CWL Workflow file? This is generally not best
 practice, as the tool then can't be reused. The reason for doing it in this case
 is because the command line is hard-coded with filenames that only make sense
