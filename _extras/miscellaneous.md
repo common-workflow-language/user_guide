@@ -351,7 +351,7 @@ inputs:
 outputs: []
 ```
 
-Problem caused by `-` (hyphen charcter). 
+Problem caused by `-` (hyphen character). 
 
 ```cwl
 valueFrom: $(inputs.sample-input)
