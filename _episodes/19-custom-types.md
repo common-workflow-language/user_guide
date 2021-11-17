@@ -44,7 +44,7 @@ wget https://raw.githubusercontent.com/common-workflow-language/user_guide/gh-pa
 ~~~
 {: .source}
 
-On line 34, in `inputs:table_type`, a list of allowable table options to be used in the
+On line 29, in `inputs:table_type`, a list of allowable table options to be used in the
 table conversion are imported as a custom object:
 
 ```
