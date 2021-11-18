@@ -82,9 +82,22 @@ $ cat output.txt
 ~~~
 {: .output}
 
-Note that requirements must be provided as an array, with each entry (in this
-case, only `class: InlineJavascriptRequirement`) marked by a `-`. The same
-syntax is used to describe the additional command line arguments.
+Note that requirements can be provided with the map syntax, as in the example above:
+
+~~~
+requirements:
+  InlineJavascriptRequirement: {}
+~~~
+{: .source}
+
+Or as an array, with each entry (in this case, only `class: InlineJavascriptRequirement`) marked by a `-`. 
+The same syntax is used to describe the additional command line arguments.
+
+~~~
+requirements:
+  - class: InlineJavascriptRequirement
+~~~
+{: .source}
 
 > ## Where are JavaScript expressions allowed?
 > Just like [parameter references]({{ page.root }}{% link _episodes/06-params.md %}), you can use JavaScript Expressions
