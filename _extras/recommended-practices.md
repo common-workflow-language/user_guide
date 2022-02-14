@@ -40,7 +40,7 @@ the CWL tool or workflow description. Use  unambiguous identifiers like
 &#9744; In tool descriptions, list dependencies using short name(s) under
 `SoftwareRequirement`.
 
-&#9744; Include [SciCrunch][scicrunch-issue] identifiers for dependencies in
+&#9744; Include [SciCrunch][scicrunch] identifiers for dependencies in
 `https://identifiers.org/rrid/RRID:SCR_NNNNNN` format.
 
 &#9744; All `input` and `output` identifiers should reflect their conceptual
@@ -95,7 +95,7 @@ workflow modular and allow sections of them to be easily reused.
 [containers]: https://doi.org/10.12688/f1000research.15140.1
 [apache-license]: https://spdx.org/licenses/Apache-2.0.html
 [license-example]: https://github.com/ProteinsWebTeam/ebi-metagenomics-cwl/blob/master/workflows/emg-assembly.cwl#L200
-[scicrunch-issue]: https://github.com/common-workflow-language/common-workflow-language/issues/scicrunch.org
+[scicrunch]: https://scicrunch.org
 [edam-example]: http://edamontology.org/format_1915
 [iana-types]: https://www.iana.org/assignments/media-types/media-types.xhtml
 [file-prop]: https://www.commonwl.org/v1.0/CommandLineTool.html#File
