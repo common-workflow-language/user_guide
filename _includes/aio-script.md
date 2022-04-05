@@ -1,10 +1,9 @@
-{% comment %}
-As a maintainer, you don't need to edit this file.
-If you notice that something doesn't work, please
-open an issue: https://github.com/carpentries/styles/issues/new
-{% endcomment %}
+% As a maintainer, you don't need to edit this file.
+% If you notice that something doesn't work, please
+% open an issue: https://github.com/carpentries/styles/issues/new
 
-{% include manual_episode_order.html %}
+```{include} /_includes/manual_episode_order.html
+```
 
 <script>
   window.onload = function() {
@@ -38,7 +37,7 @@ open an issue: https://github.com/carpentries/styles/issues/new
   }
 </script>
 
-{% comment %} Create an anchor for every episode.  {% endcomment %}
+% Create an anchor for every episode.
 
 {% for lesson_episode in lesson_episodes %}
   {% if site.episode_order %}

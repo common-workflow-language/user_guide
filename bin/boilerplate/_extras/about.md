@@ -1,5 +1,7 @@
 ---
 title: About
 ---
-{% include carpentries.html %}
-{% include links.md %}
+```{include} _includes/carpentries.md
+```
+```{include} _includes/links.md
+```

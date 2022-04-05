@@ -1,6 +1,6 @@
 # Contributing
 
-The [Common Workflow Language project](cwl-site) is an open source project,
+The [Common Workflow Language project][cwl-site] is an open source project,
 and we welcome contributions of all kinds:
 new lessons,
 fixes to existing material,
@@ -10,12 +10,12 @@ and reviews of proposed changes are all welcome.
 ## Contributor Agreement
 
 By contributing,
-you agree that we may redistribute your work under [our license](LICENSE.md).
+you agree that we may redistribute your work under [our license](/LICENSE.md).
 In exchange,
 we will address your issues and/or assess your change proposal as promptly as we can,
 and help you become a member of our community.
-Everyone involved in the [Common Workflow Language project](cwl-site)
-agrees to abide by our [code of conduct](CONDUCT.md).
+Everyone involved in the [Common Workflow Language project][cwl-site]
+agrees to abide by our [code of conduct](/CODE_OF_CONDUCT.md).
 
 ## How to Contribute
 
@@ -41,7 +41,7 @@ and to meet some of our community members.
 3.  If you are comfortable with Git,
     and would like to add or change material,
     you can submit a pull request (PR).
-    Instructions for doing this are [included below](#using-github).
+    Instructions for doing this are [included below][#using-github].
 
 ## Where to Contribute
 
@@ -73,7 +73,7 @@ and submitting [bug reports][issues]
 about things that don't work, aren't clear, or are missing.
 If you are looking for ideas,
 please see [the list of issues for this repository][issues],
-or the issues for [Common Workflow Language](cwl-issues) project itself.
+or the issues for [Common Workflow Language][cwl-issues] project itself.
 
 Comments on issues and reviews of pull requests are just as welcome:
 we are smarter together than we are on our own.
@@ -128,7 +128,7 @@ repository for reference while revising.
 
 ## Other Resources
 
-General discussion of [Common Workflow Language](cwl-site) project
+General discussion of [Common Workflow Language][cwl-site] project
 happens on the [discussion mailing list][discuss-list],
 which everyone is welcome to join.
 

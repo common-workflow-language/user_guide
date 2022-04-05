@@ -1,13 +1,11 @@
-{% comment %}
-This is adapted from: https://ricostacruz.com/til/relative-paths-in-jekyll
-
-`page.url` gives the URL of the current page with a leading /:
-
-- when the URL ends with the extension (e.g., /foo/bar.html) then we can get
-  the depth by counting the number of / and remove - 1
-- when the URL ends with a / (e.g. /foo/bar/) then the number / gives the depth
-  directly
-{% endcomment %}
+% This is adapted from: https://ricostacruz.com/til/relative-paths-in-jekyll
+%
+% `page.url` gives the URL of the current page with a leading /:
+%
+% - when the URL ends with the extension (e.g., /foo/bar.html) then we can get
+%   the depth by counting the number of / and remove - 1
+% - when the URL ends with a / (e.g. /foo/bar/) then the number / gives the depth
+%   directly
 
 {% assign relative_root_path = '' %}
 

@@ -17,9 +17,9 @@ We'd like to ask you to familiarize yourself with our [Contribution Guide](CONTR
 the [more detailed guidelines][lesson-example] on proper formatting, ways to render the lesson locally, and even
 how to write new episodes.
 
-- The text files for each tutorial can be found in the directory [_episodes](_episodes)
+- The text files for each tutorial can be found in the directory [_episodes](/_episodes/index.md)
 
-- The cwl and yaml code files linked to each tutorial can be found in the directory [_includes/cwl](_includes/cwl)
+- The cwl and yaml code files linked to each tutorial can be found in the directory [_includes/cwl](https://github.com/common-workflow-language/user_guide/tree/gh-pages/_includes/cwl)
 
 This repo is based upon https://github.com/swcarpentry/styles and should be periodically resynced.
 

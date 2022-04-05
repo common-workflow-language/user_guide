@@ -7,11 +7,12 @@ FIXME: home page introduction
 
 <!-- this is an html comment -->
 
-{% comment %} This is a comment in Liquid {% endcomment %}
+% This is a comment in MyST
 
 > ## Prerequisites
 >
 > FIXME
 {: .prereq}
 
-{% include links.md %}
+```{include} _includes/links.md
+```

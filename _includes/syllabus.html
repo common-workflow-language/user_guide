@@ -1,11 +1,11 @@
-{% include base_path.html %}
+```{include} /_includes/base_path.html
+```
 
-{% comment %}
-  Display syllabus in tabular form.
-  Days are displayed if at least one episode has 'start = true'.
-{% endcomment %}
+% Display syllabus in tabular form.
+% Days are displayed if at least one episode has 'start = true'.
 
-{% include manual_episode_order.html %}
+```{include} /_includes/manual_episode_order.html
+```
 
 <div class="syllabus">
   <h2 id="schedule">Schedule</h2>
@@ -36,9 +36,9 @@
     {% else %}
       {% assign episode = lesson_episode %}
     {% endif %}
-    {% if episode.start %} {% comment %} Starting a new day? {% endcomment %}
+    {% if episode.start %} % Starting a new day?
       {% assign day = day | plus: 1 %}
-      {% if day > 1 %} {% comment %} If about to start day 2 or later, show finishing time for previous day {% endcomment %}
+      {% if day > 1 %} % If about to start day 2 or later, show finishing time for previous day
         {% assign hours = current | divided_by: 60 %}
         {% assign minutes = current | modulo: 60 %}
         <tr>
@@ -48,7 +48,7 @@
           <td class="col-md-7"></td>
         </tr>
       {% endif %}
-      {% assign current = site.start_time %} {% comment %}Re-set start time of this episode to general daily start time {% endcomment %}
+      {% assign current = site.start_time %} % Re-set start time of this episode to general daily start time
     {% endif %}
     {% assign hours = current | divided_by: 60 %}
     {% assign minutes = current | modulo: 60 %}

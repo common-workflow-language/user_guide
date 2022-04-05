@@ -1,19 +1,15 @@
-{% comment %}
-For some reason, the relative_root_path seems out of scope in this file, so we
-need to re-assign it here
-{% endcomment %}
+% For some reason, the relative_root_path seems out of scope in this file, so we
+% need to re-assign it here
 
-{% include base_path.html %}
+```{include} /_includes/base_path.html
+```
 
-{% comment %}
-  Navigation bar for an episode.
-{% endcomment %}
+% Navigation bar for an episode.
 
-{% include manual_episode_order.html %}
-{% comment %}
-    'previous_episode' and 'next_episodes' are defined in 'manual_episode_order.html'.
-    These replace 'page.previous' and 'page.next' objects, correspondingly.
-{% endcomment %}
+```{include} /_includes/manual_episode_order.html
+```
+% 'previous_episode' and 'next_episodes' are defined in 'manual_episode_order.html'.
+% These replace 'page.previous' and 'page.next' objects, correspondingly.
 
 <div class="row">
   <div class="col-xs-1">

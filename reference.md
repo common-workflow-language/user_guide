@@ -1,5 +1,7 @@
----
-layout: reference
----
+# Reference
 
-{% include links.md %}
+```{include} /_includes/all_keypoints.html
+```
+
+```{include} /_includes/links.md
+```

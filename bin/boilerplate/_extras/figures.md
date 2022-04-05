@@ -2,8 +2,10 @@
 title: Figures
 ---
 
-{% include base_path.html %}
-{% include manual_episode_order.html %}
+```{include} /_includes/base_path.html
+```
+```{include} /_includes/manual_episode_order.html
+```
 
 <script>
   window.onload = function() {
@@ -65,7 +67,7 @@ title: Figures
   }
 </script>
 
-{% comment %} Create anchor for each one of the episodes.  {% endcomment %}
+% Create anchor for each one of the episodes.
 
 {% for lesson_episode in lesson_episodes %}
   {% if site.episode_order %}
@@ -76,4 +78,5 @@ title: Figures
 <article id="{{ episode.url }}" class="figures"></article>
 {% endfor %}
 
-{% include links.md %}
+```{include} _includes/links.md
+```

@@ -4,4 +4,5 @@ title: Setup
 FIXME
 
 
-{% include links.md %}
+```{include} _includes/links.md
+```

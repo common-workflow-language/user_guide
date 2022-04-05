@@ -1,8 +1,5 @@
----
-layout: page
-title: "Licenses"
-root: .
----
+# Licenses
+
 ## Instructional Material
 
 This material is derived from a framework created by the Software Carpentry

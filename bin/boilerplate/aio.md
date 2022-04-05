@@ -1,7 +1,8 @@
 ---
 ---
 
-{% include base_path.html %}
+```{include} /_includes/base_path.html
+```
 
 <script>
   window.onload = function() {
@@ -29,9 +30,7 @@
     }
   }
 </script>
-{% comment %}
-Create anchor for each one of the episodes.
-{% endcomment %}
+% Create anchor for each one of the episodes.
 {% for episode in site.episodes %}
 <article id="{{ episode.url }}"></article>
 {% endfor %}
