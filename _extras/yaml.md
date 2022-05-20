@@ -148,19 +148,19 @@ and a more complex example combining maps and arrays:
 exclusive_parameters:
   type:
     - type: record
-       name: itemC
-       fields:
-         itemC:
-           type: string
-           inputBinding:
-              prefix: -C
+      name: itemC
+      fields:
+        itemC:
+          type: string
+          inputBinding:
+            prefix: -C
     - type: record
-       name: itemD
-       fields:
-         itemD:
-            type: string
-            inputBinding:
-              prefix: -D
+      name: itemD
+      fields:
+        itemD:
+          type: string
+          inputBinding:
+            prefix: -D
 ```
 
 ### JSON Style
