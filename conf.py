@@ -119,13 +119,16 @@ html_theme_options = {
             "icon": "fab fa-github-square",
         },
     ],
-    "switcher": {
-        "json_url": json_url,
-        "version_match": version_match,
-    },
+    # "switcher": {
+    #     "json_url": json_url,
+    #     "version_match": version_match,
+    # },
     "use_edit_page_button": True,
     "navbar_align": "content",
-    "navbar_end": ["version-switcher", "navbar-icon-links"],
+    "navbar_end": [
+        # "version-switcher",
+        "navbar-icon-links"
+    ],
     "show_nav_level": 2,
     "navigation_depth": 2,
     "collapse_navigation": True,
