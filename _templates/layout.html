@@ -1,12 +1,22 @@
 {% extends '!layout.html' %}
 
 {% block footer %}
-<div class="container-xl">
-    <ul class="navbar-nav">
-        <li class="nav-end-item">
-            <a class="nav-link nav-external" href="#">TODO: add more links</a>
+<div class="container">
+  <div class="row">
+    <div class="col d-flex flex-row-reverse">
+      <ul class="nav">
+        <li class="nav-item">
+          <a class="nav-link" href="https://github.com/common-workflow-language/user_guide/blob/gh-pages/CONTRIBUTING.md">Contributing</a>
         </li>
-    </ul>
+        <li class="nav-item">
+          <a class="nav-link" href="https://github.com/common-workflow-language/user_guide/">Source</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="https://github.com/common-workflow-language/user_guide/blob/gh-pages/CITATION">Cite</a>
+        </li>
+      </ul>
+    </div>
+  </div>
 </div>
 
 {{ super() }}
