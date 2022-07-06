@@ -9,7 +9,8 @@ Hello!
 This guide will introduce you to writing tool wrappers and workflows using the Common Workflow Language (CWL). This guide describes the stable specification, version 1.0. Updates to the guide for more recent versions are ongoing.
 
 ```{note}
-## Contributions and Feedback are Welcome!
+<p class="rubric">Contributions and Feedback are Welcome!</p>
+
 This document is a work in progress. Not all features are covered, yet.
 If you find that something is missing from this guide,
 or if you'd like to provide other feedback,

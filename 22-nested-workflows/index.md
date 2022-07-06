@@ -38,7 +38,7 @@ workflow:
 ```
 
 ```{note}
-## Visualization of the workflow and the inner workflow from its `compile` step
+<p class="rubric">Visualization of the workflow and the inner workflow from its `compile` step</a>
 
 This two-step workflow starts with the `create-tar` step which is connected to
 the `compile` step in orange; `compile` is another workflow, diagrammed on the

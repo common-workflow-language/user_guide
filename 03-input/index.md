@@ -64,7 +64,7 @@ Final process status is success
 ````
 
 ```{tip}
-## Where did those `/tmp` paths come from?
+<p class="rubric">Where did those `/tmp` paths come from?</p>
 
 The CWL reference runner (cwltool) and other runners create temporary
 directories with symbolic ("soft") links to your input files to ensure that
