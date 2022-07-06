@@ -104,13 +104,6 @@ html_static_path = ['_static']
 html_logo = '_static/images/logos/cwl/CWL-Logo-HD-cropped2.png'
 html_favicon = '_static/images/favicons/cwl/favicon.ico'
 
-html_sidebars = {
-    # TODO: this removes the sidebar with links from the episodes pages, but also
-    #       removes the Episodes from the navigation-center template?
-    # "_episodes/*": [],
-    "**": ["search-field.html", "sidebar-nav-bs.html"]
-}
-
 html_theme_options = {
     "icon_links": [
         {
