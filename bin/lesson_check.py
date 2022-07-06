@@ -36,7 +36,6 @@ REQUIRED_FILES = {
     #'%/_extras/discuss.md': True,
     #'%/_extras/guide.md': True,
     '%/index.md': True,
-    '%/reference.md': True,
     '%/setup.md': True,
 }
 
