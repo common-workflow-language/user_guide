@@ -17,12 +17,13 @@ example snippet below for guidance. For non-standard licenses without an SPDX
 identifier, provide a URL to the license.
 
 _Example of metadata field for license with SPDX identifier:_
-~~~
+
+```cwl
 $namespaces:
   s: https://schema.org/
 s:license: https://spdx.org/licenses/Apache-2.0
 # other s: declarations
-~~~
+```
 
 For more examples of providing metadata within CWL descriptions, see the
 [Metadata and Authorship section](/17-metadata/index.md)

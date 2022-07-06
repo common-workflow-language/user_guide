@@ -21,20 +21,20 @@ This may also help to avoid confusion about which version of a tool the
 description was written for.
 
 ```{literalinclude} /_includes/cwl/20-software-requirements/custom-types.cwl
-:language: yaml
+:language: cwl
 ```
 
 In this example, the software requirement being described is InterProScan
 version 5.21-60.
 
-~~~
+```cwl
 hints:
   SoftwareRequirement:
     packages:
       interproscan:
         specs: [ "https://identifiers.org/rrid/RRID:SCR_005829" ]
         version: [ "5.21-60" ]
-~~~
+```
 
 Depending on your CWL runner, these hints may be used to check
 that required software is installed and available before the job is run. To enable
@@ -57,5 +57,3 @@ include the DOI for the main tool citation and the URL to the tool.
 [dependencies]: https://github.com/common-workflow-language/cwltool#leveraging-softwarerequirements-beta
 [identifiers]: https://identifiers.org/
 [scicrunch-add-tool]: https://scicrunch.org/page/tutorials/336
-```{include} ../_includes/links.md
-```

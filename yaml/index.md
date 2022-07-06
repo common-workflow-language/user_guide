@@ -193,7 +193,6 @@ while we wrote this guide,
 though it also covers features that are not valid in CWL.
 
 [camelCase]: https://en.wikipedia.org/wiki/Camel_case
+[json]: http://json.org/
+[yaml]: http://yaml.org/
 [yaml-y-mins]: https://learnxinyminutes.com/docs/yaml/
-
-```{include} /_includes/links.md
-```

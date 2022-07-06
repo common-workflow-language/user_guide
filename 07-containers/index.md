@@ -34,7 +34,7 @@ then print "Hello World" to the standard output.
 *docker.cwl*
 
 ```{literalinclude} /_includes/cwl/07-containers/docker.cwl
-:language: yaml
+:language: cwl
 ```
 
 *docker-job.yml*
@@ -47,12 +47,12 @@ Before we run this, lets just break it down and see what some bits do.  Most of 
 has been explained in previous sections, the only part that is really new is the `dockerRequirement`
 section.
 
-~~~
+```cwl
 baseCommand: node
 hints:
   DockerRequirement:
     dockerPull: node:slim
-~~~
+```
 
 `baseCommand: node` tells CWL that we will be running this command in a container. We
 then need to specify some `hints` for how to find the container we want.  In this case we list
@@ -66,7 +66,7 @@ used a container called `node:slim`.
 Provide a "hello.js" and invoke `cwl-runner` providing the tool wrapper and the
 input object on the command line:
 
-~~~
+```bash
 $ echo "console.log(\"Hello World\");" > hello.js
 $ cwl-runner docker.cwl docker-job.yml
 [job docker.cwl] /tmp/tmpgugLND$ docker \
@@ -98,7 +98,7 @@ $ cwl-runner docker.cwl docker-job.yml
 Final process status is success
 $ cat output.txt
 Hello World
-~~~
+```
 
 Notice the CWL runner has constructed a Docker command line to run the
 script.
@@ -107,7 +107,4 @@ In this example, the path to the script `hello.js` is `/home/me/cwl/user_guide/h
 outside the container but `/var/lib/cwl/job369354770_examples/hello.js` inside
 the container, as reflected in the invocation of the `node` command.
 
-
 [docker]: https://docker.io
-```{include} ../_includes/links.md
-```

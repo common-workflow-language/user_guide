@@ -21,10 +21,10 @@ of inputs. The workflow then takes the input(s) as an array and will run the spe
 on each element of the array as if it were a single input. This allows you to run the same workflow
 on multiple inputs without having to generate many different commands or input yaml files.
 
-~~~
+```cwl
 requirements:
   ScatterFeatureRequirement: {}
-~~~
+```
 
 The most common reason a new user might want to use scatter is to perform the same analysis on
 different samples. Let's start with a simple workflow that calls our first example and takes
@@ -33,20 +33,20 @@ an array of strings as input to the workflow:
 *scatter-workflow.cwl*
 
 ```{literalinclude} /_includes/cwl/23-scatter-workflow/scatter-workflow.cwl
-:language: yaml
+:language: cwl
 ```
 
 Aside from the `requirements` section including `ScatterFeatureRequirement`, what is
 going on here?
 
-~~~
+```cwl
 inputs:
   message_array: string[]
-~~~
+```
 
 First of all, notice that the main workflow level input here requires an array of strings.
 
-~~~
+```cwl
 steps:
   echo:
     run: 1st-tool.cwl
@@ -54,7 +54,7 @@ steps:
     in:
       message: message_array
     out: []
-~~~
+```
 
 Here we've added a new field to the step `echo` called `scatter`. This field tells the
 runner that we'd like to scatter over this input for this particular step. Note that
@@ -76,7 +76,7 @@ Using the following input file:
 As a reminder, `1st-tool.cwl` simply calls the command `echo` on a message. If we invoke
 `cwl-runner scatter-workflow.cwl scatter-job.yml` on the command line:
 
-~~~
+```bash
 $ cwl-runner scatter-workflow.cwl scatter-job.yml
 [workflow scatter-workflow.cwl] start
 [step echo] start
@@ -103,7 +103,7 @@ Hallo welt!
 [workflow scatter-workflow.cwl] completed success
 {}
 Final process status is success
-~~~
+```
 
 You can see that the workflow calls echo multiple times on each element of our
 `message_array`. Ok, so how about if we want to scatter over two steps in a workflow?
@@ -113,11 +113,11 @@ lines instead of `outputs: []`
 
 *1st-tool-mod.cwl*
 
-~~~
+```cwl
 outputs:
   echo_out:
     type: stdout
-~~~
+```
 
 And add a second step that uses `wc` to count the characters in each file. See the tool
 below:
@@ -125,7 +125,7 @@ below:
 *wc-tool.cwl*
 
 ```{literalinclude} /_includes/cwl/23-scatter-workflow/wc-tool.cwl
-:language: yaml
+:language: cwl
 ```
 
 Now, how do we incorporate scatter? Remember the scatter field is under each step:
@@ -133,7 +133,7 @@ Now, how do we incorporate scatter? Remember the scatter field is under each ste
 *scatter-two-steps.cwl*
 
 ```{literalinclude} /_includes/cwl/23-scatter-workflow/scatter-two-steps.cwl
-:language: yaml
+:language: cwl
 ```
 
 Here we have placed the scatter field under each step. This is fine for this example since
@@ -155,11 +155,8 @@ two step workflow to a single step subworkflow:
 *scatter-nested-workflow.cwl*
 
 ```{literalinclude} /_includes/cwl/23-scatter-workflow/scatter-nested-workflow.cwl
-:language: yaml
+:language: cwl
 ```
 
 Now the scatter acts on a single step, but that step consists of two steps so each step is performed
 in parallel.
-
-```{include} ../_includes/links.md
-```

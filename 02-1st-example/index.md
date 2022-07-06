@@ -29,7 +29,7 @@ specified to produce text in YAML or JSON. Whatever text editor you use, the ind
 *1st-tool.cwl*
 
 ```{literalinclude} /_includes/cwl/02-1st-example/1st-tool.cwl
-:language: yaml
+:language: cwl
 ```
 
 Next, create a file called `echo-job.yml`, containing the following boxed text, which will describe the input of a run:
@@ -59,7 +59,7 @@ CWL. The general form is `cwl-runner [tool-or-workflow-description] [input-job-s
 
 What's going on here?  Let's break down the contents of `1st-tool.cwl`:
 
-```yaml
+```cwl
 cwlVersion: v1.0
 class: CommandLineTool
 ```
@@ -67,7 +67,7 @@ class: CommandLineTool
 The `cwlVersion` field indicates the version of the CWL spec used by the document.  The `class` field indicates this document
 describes a command line tool.
 
-```yaml
+```cwl
 baseCommand: echo
 ```
 
@@ -93,13 +93,12 @@ on the command line.
 In this example,
 the `position` field indicates where it should appear on the command line.
 
-```yaml
+```cwl
 outputs: []
 ```
 
 This tool has no formal output, so the `outputs` section is an empty list.
 
 [echo]: http://www.linfo.org/echo.html
-
-```{include} ../_includes/links.md
-```
+[json]: http://json.org/
+[yaml]: http://yaml.org/

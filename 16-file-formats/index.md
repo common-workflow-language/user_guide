@@ -34,7 +34,7 @@ formats and warn you if there seem to be some obvious mismatches.
 *metadata_example.cwl*
 
 ```{literalinclude} /_includes/cwl/16-file-formats/metadata_example.cwl
-:language: yaml
+:language: cwl
 ```
 
 The equivalent of this CWL description in command line format is:
@@ -57,14 +57,14 @@ parameterization.
 ___Note:___ To follow the example below, you need to download the example input file, *file-formats.bam*. The file is available from [https://github.com/common-workflow-language/user_guide/raw/gh-pages/_includes/cwl/16-file-formats/file-formats.bam
 ](https://github.com/common-workflow-language/user_guide/raw/gh-pages/_includes/cwl/16-file-formats/file-formats.bam) and can be downloaded e.g. via `wget`:
 
-~~~
+```bash
 wget https://github.com/common-workflow-language/user_guide/raw/gh-pages/_includes/cwl/16-file-formats/file-formats.bam
-~~~
+```
 
 Now invoke `cwl-runner` with the tool wrapper and the input object on the
 command line:
 
-~~~
+```bash
 $ cwltool metadata_example.cwl sample.yml
 /usr/local/bin/cwltool 1.0.20161114152756
 Resolved 'metadata_example.cwl' to 'file:///media/large_volume/testing/cwl_tutorial2/metadata_example.cwl'
@@ -83,9 +83,7 @@ Final process status is success
     "size": 80
   }
 }
-~~~
+```
 
 [IANA]: https://www.iana.org/assignments/media-types/media-types.xhtml
 [EDAM]: https://www.ebi.ac.uk/ols/ontologies/edam/terms?iri=http%3A%2F%2Fedamontology.org%2Fformat_1915
-```{include} ../_includes/links.md
-```

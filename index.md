@@ -8,22 +8,19 @@ Hello!
 
 This guide will introduce you to writing tool wrappers and workflows using the Common Workflow Language (CWL). This guide describes the stable specification, version 1.0. Updates to the guide for more recent versions are ongoing.
 
-```{tip}
-<p class="rubric">Contributions and Feedback are Welcome!</p>
-<p>This document is a work in progress. Not all features are covered, yet.
+```{note}
+## Contributions and Feedback are Welcome!
+This document is a work in progress. Not all features are covered, yet.
 If you find that something is missing from this guide,
 or if you'd like to provide other feedback,
 we would be delighted if you would file an Issue on the
-<a href="https://github.com/common-workflow-language/user_guide/issues">
-project repository for this guide</a>.
+[project repository for this guide][repo].
 You can also suggest changes directly
 by clicking the "Edit on GitHub" button at the top-right
-of the relevant page.</p>
+of the relevant page.
 ```
 
-```{note}
-<p class="rubric">Prerequisites</p>
-
+```{admonition} Prerequisites
 * A text editor
 
 * A CWL runner. It is recommended to start with the [reference implementation][cwltool-install]. The full list of CWL runners is on [the project homepage][cwl-runners-list].
@@ -61,5 +58,4 @@ extras.md
 LICENSE.md
 ```
 
-```{include} /_includes/links.md
-```
+[repo]: https://github.com/common-workflow-language/user_guide/issues

@@ -77,6 +77,3 @@ title: Figures
   {% endif %}
 <article id="{{ episode.url }}" class="figures"></article>
 {% endfor %}
-
-```{include} _includes/links.md
-```

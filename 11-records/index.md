@@ -21,7 +21,7 @@ parameters together to describe these two conditions.
 *record.cwl*
 
 ```{literalinclude} /_includes/cwl/11-records/record.cwl
-:language: yaml
+:language: cwl
 ```
 
 *record-job1.yml*
@@ -30,13 +30,13 @@ parameters together to describe these two conditions.
 :language: yaml
 ```
 
-~~~
+```bash
 $ cwl-runner record.cwl record-job1.yml
 Workflow error, try again with --debug for more information:
 Invalid job input record:
 record-job1.yml:1:1: the `dependent_parameters` field is not valid because
                        missing required field `itemB`
-~~~
+```
 
 In the first example, you can't provide `itemA` without also providing `itemB`.
 
@@ -46,7 +46,7 @@ In the first example, you can't provide `itemA` without also providing `itemB`.
 :language: yaml
 ```
 
-~~~
+```cwl
 $ cwl-runner record.cwl record-job2.yml
 record-job2.yml:6:3: invalid field `itemD`, expected one of: 'itemC'
 [job record.cwl] /home/example$ echo \
@@ -70,7 +70,7 @@ record-job2.yml:6:3: invalid field `itemD`, expected one of: 'itemC'
 Final process status is success
 $ cat output.txt
 -A one -B two -C three
-~~~
+```
 
 In the second example, `itemC` and `itemD` are exclusive, so only `itemC`
 is added to the command line and `itemD` is ignored.
@@ -81,7 +81,7 @@ is added to the command line and `itemD` is ignored.
 :language: yaml
 ```
 
-~~~
+```bash
 $ cwl-runner record.cwl record-job3.yml
 [job record.cwl] /home/example$ echo \
     -A \
@@ -104,10 +104,7 @@ $ cwl-runner record.cwl record-job3.yml
 Final process status is success
 $ cat output.txt
 -A one -B two -D four
-~~~
+```
 
 In the third example, only `itemD` is provided, so it appears on the
 command line.
-
-```{include} ../_includes/links.md
-```

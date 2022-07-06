@@ -23,10 +23,10 @@ We can also think of a workflow as being a tool itself; a CWL workflow can be
 used as a step in another CWL workflow, if the workflow engine supports the
 `SubworkflowFeatureRequirement`:
 
-~~~
+```cwl
 requirements:
   SubworkflowFeatureRequirement: {}
-~~~
+```
 
 Here's an example workflow that uses our `1st-workflow.cwl` as a nested
 workflow:
@@ -34,20 +34,21 @@ workflow:
 *nestedworkflows.cwl*
 
 ```{literalinclude} /_includes/cwl/22-nested-workflows/nestedworkflows.cwl
-:language: yaml
+:language: cwl
 ```
 
 ```{note}
-> <p class="rubric">Visualization of the workflow and the inner workflow from its `compile` step</p>
-> This two-step workflow starts with the `create-tar` step which is connected to
-> the `compile` step in orange; `compile` is another workflow, diagrammed on the
-> right. In purple we see the fixed string `"Hello.java"` being supplied as the
-> `name_of_file_to_extract`.
->
-> <a href="https://view.commonwl.org/workflows/github.com/common-workflow-language/user_guide/blob/gh-pages/_includes/cwl/22-nested-workflows/nestedworkflows.cwl"><img
+## Visualization of the workflow and the inner workflow from its `compile` step
+
+This two-step workflow starts with the `create-tar` step which is connected to
+the `compile` step in orange; `compile` is another workflow, diagrammed on the
+right. In purple we see the fixed string `"Hello.java"` being supplied as the
+`name_of_file_to_extract`.
+
+<a href="https://view.commonwl.org/workflows/github.com/common-workflow-language/user_guide/blob/gh-pages/_includes/cwl/22-nested-workflows/nestedworkflows.cwl"><img
 src="https://view.commonwl.org/graph/svg/github.com/common-workflow-language/user_guide/blob/gh-pages/_includes/cwl/22-nested-workflows/nestedworkflows.cwl"
 alt="Visualization of nestedworkflows.cwl" /></a>
-> <a href="https://view.commonwl.org/workflows/github.com/common-workflow-language/user_guide/blob/gh-pages/_includes/cwl/22-nested-workflows/1st-workflow.cwl"><img
+<a href="https://view.commonwl.org/workflows/github.com/common-workflow-language/user_guide/blob/gh-pages/_includes/cwl/22-nested-workflows/1st-workflow.cwl"><img
 src="https://view.commonwl.org/graph/svg/github.com/common-workflow-language/user_guide/blob/gh-pages/_includes/cwl/22-nested-workflows/1st-workflow.cwl"
 alt="Visualization of 1st-workflow.cwl" /></a>
 ```
@@ -56,7 +57,7 @@ A CWL `Workflow` can be used as a `step` just like a `CommandLineTool`, its CWL
 file is included with `run`. The workflow inputs (`tarball` and `name_of_file_to_extract`) and outputs
 (`compiled_class`) then can be mapped to become the step's input/outputs.
 
-~~~
+```cwl
   compile:
     run: 1st-workflow.cwl
     in:
@@ -64,7 +65,7 @@ file is included with `run`. The workflow inputs (`tarball` and `name_of_file_to
       name_of_file_to_extract:
         default: "Hello.java"
     out: [compiled_class]
-~~~
+```
 
 Our `1st-workflow.cwl` was parameterized with workflow inputs, so when running
 it we had to provide a job file to denote the tar file and `*.java` filename.
@@ -82,7 +83,7 @@ dependencies in the job file. So in this workflow we can generate a hard-coded
 `Hello.java` file using the previously mentioned `InitialWorkDirRequirement`
 requirement, before adding it to a tar file.
 
-~~~
+```cwl
   create-tar:
     requirements:
       InitialWorkDirRequirement:
@@ -94,13 +95,13 @@ requirement, before adding it to a tar file.
                     System.out.println("Hello from Java");
                 }
               }
-~~~
+```
 
 In this case our step can assume `Hello.java` rather than be parameterized, so
 we can use hardcoded values `hello.tar` and `Hello.java` in a `baseCommand` and
 the resulting `outputs`:
 
-~~~
+```cwl
   run:
     class: CommandLineTool
     inputs: []
@@ -111,7 +112,7 @@ the resulting `outputs`:
         streamable: true
         outputBinding:
           glob: "hello.tar"
-~~~
+```
 
 Did you notice that we didn't split out the `tar --create` tool to a separate file,
 but rather embedded it within the CWL Workflow file? This is generally not best
@@ -127,6 +128,3 @@ simplify its usage as a tool step in other workflows.
 Nested workflows can be a powerful feature to generate higher-level functional
 and reusable workflow units - but just like for creating a CWL Tool description,
 care must be taken to improve its usability in multiple workflows.
-
-```{include} ../_includes/links.md
-```

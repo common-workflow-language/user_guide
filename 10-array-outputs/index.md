@@ -19,7 +19,7 @@ You can also capture multiple output files into an array of files using `glob`.
 *array-outputs.cwl*
 
 ```{literalinclude} /_includes/cwl/10-array-outputs/array-outputs.cwl
-:language: yaml
+:language: cwl
 ```
 
 *array-outputs-job.yml*
@@ -31,7 +31,7 @@ You can also capture multiple output files into an array of files using `glob`.
 Now invoke `cwl-runner` providing the tool wrapper and the input object
 on the command line:
 
-~~~
+```bash
 $ cwl-runner array-outputs.cwl array-outputs-job.yml
 [job 140190876078160] /home/example$ touch foo.txt bar.dat baz.txt
 Final process status is success
@@ -51,12 +51,9 @@ Final process status is success
     }
   ]
 }
-~~~
+```
 
 As described in the [YAML Guide](../yaml/index.md#arrays),
 the array of expected outputs is specified in `array-outputs-job.yml` with each
 entry marked by a leading `-`. This format can also be used in CWL descriptions
 to mark entries in arrays, as demonstrated in several of the upcoming sections.
-
-```{include} ../_includes/links.md
-```

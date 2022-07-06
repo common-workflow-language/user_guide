@@ -8,7 +8,7 @@ objectives:
 - "Learn how to describe and handle outputs from a tool."
 keypoints:
 - "Outputs are described in the `outputs` section of a CWL description."
-- "The field `outputBinding` describes how to to set the value of each
+- "The field `outputBinding` describes how to set the value of each
 output parameter."
 - "Wildcards are allowed in the `glob` field."
 ---
@@ -28,18 +28,18 @@ themselves, or come from examining the content of those files.
 
 The following example demonstrates how to return a file that has been extracted from a tar file.
 
-```{note}
-> <p class="rubric">Passing mandatory arguments to the `baseCommand`</p>
->
-> In previous examples, the `baseCommand` was just a string, with any arguments passed as CWL inputs.
-> Instead of a single string we can use an _array of strings_.  The first element is the command to run, and
-> any subsequent elements are mandatory command line arguments
+```{tip}
+Passing mandatory arguments to the `baseCommand`
+
+In previous examples, the `baseCommand` was just a string, with any arguments passed as CWL inputs.
+Instead of a single string we can use an _array of strings_.  The first element is the command to run, and
+any subsequent elements are mandatory command line arguments
 ```
 
 *tar.cwl*
 
 ```{literalinclude} /_includes/cwl/04-output/tar.cwl
-:language: yaml
+:language: cwl
 ```
 
 *tar-job.yml*
@@ -51,7 +51,7 @@ The following example demonstrates how to return a file that has been extracted 
 Next, create a tar file for the example and invoke `cwl-runner` with the tool
 wrapper and the input object on the command line:
 
-~~~
+```bash
 $ touch hello.txt && tar -cvf hello.tar hello.txt
 $ cwl-runner tar.cwl tar-job.yml
 [job tar.cwl] /tmp/tmpqOeawQ$ tar \
@@ -69,21 +69,18 @@ $ cwl-runner tar.cwl tar-job.yml
     }
 }
 Final process status is success
-~~~
+```
 
 The field `outputBinding` describes how to set the value of each
 output parameter.
 
-~~~
+```cwl
 outputs:
   example_out:
     type: File
     outputBinding:
       glob: hello.txt
-~~~
+```
 
 The `glob` field consists of the name of a file in the output directory.
 If you don't know name of the file in advance, you can use a wildcard pattern like `glob: '*.txt'`.
-
-```{include} ../_includes/links.md
-```

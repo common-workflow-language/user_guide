@@ -18,6 +18,3 @@ Anyone who violates this code of conduct may be sanctioned or expelled from
 these spaces at the discretion of the leadership team.
 
 For more details, see the [complete CWL project code of conduct](https://github.com/common-workflow-language/common-workflow-language/blob/master/CODE_OF_CONDUCT.md).
-
-```{include} /_includes/links.md
-```

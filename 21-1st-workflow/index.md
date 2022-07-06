@@ -21,12 +21,11 @@ compiles it.
 *1st-workflow.cwl*
 
 ```{literalinclude} /_includes/cwl/21-1st-workflow/1st-workflow.cwl
-:language: yaml
+:language: cwl
 ```
 
-```
-> ## Visualization of 1st-workflow.cwl
-> <a href="https://view.commonwl.org/workflows/github.com/common-workflow-language/user_guide/blob/gh-pages/_includes/cwl/21-1st-workflow/1st-workflow.cwl"><img src="https://view.commonwl.org/graph/svg/github.com/common-workflow-language/user_guide/blob/gh-pages/_includes/cwl/21-1st-workflow/1st-workflow.cwl" alt="Visualization of 1st-workflow.cwl" /></a>
+```{admonition} Visualization of 1st-workflow.cwl
+[![Visualization of 1st-workflow.cwl](https://view.commonwl.org/graph/svg/github.com/common-workflow-language/user_guide/blob/gh-pages/_includes/cwl/21-1st-workflow/1st-workflow.cwl)](https://view.commonwl.org/workflows/github.com/common-workflow-language/user_guide/blob/gh-pages/_includes/cwl/21-1st-workflow/1st-workflow.cwl)
 ```
 
 Use a YAML or a JSON object in a separate file to describe the input of a run:
@@ -40,7 +39,7 @@ Use a YAML or a JSON object in a separate file to describe the input of a run:
 Now invoke `cwl-runner` with the tool wrapper and the input object on the
 command line:
 
-~~~
+```bash
 $ echo "public class Hello {}" > Hello.java && tar -cvf hello.tar Hello.java
 $ cwl-runner 1st-workflow.cwl 1st-workflow-job.yml
 [job untar] /tmp/tmp94qFiM$ tar --create --file /home/example/hello.tar Hello.java
@@ -57,43 +56,42 @@ Final process status is success
     "size": 416
   }
 }
-~~~
+```
 
 What's going on here?  Let's break it down:
 
-~~~
+```cwl
 cwlVersion: v1.0
 class: Workflow
-~~~
+```
 
 The `cwlVersion` field indicates the version of the CWL spec used by the
 document.  The `class` field indicates this document describes a workflow.
 
-
-~~~
+```cwl
 inputs:
   tarball: File
   name_of_file_to_extract: string
-~~~
+```
 
 The `inputs` section describes the inputs of the workflow.  This is a
 list of input parameters where each parameter consists of an identifier
 and a data type.  These parameters can be used as sources for input to
 specific workflows steps.
 
-~~~
+```cwl
 outputs:
   compiled_class:
     type: File
     outputSource: compile/classfile
-~~~
+```
 
 The `outputs` section describes the outputs of the workflow.  This is a
 list of output parameters where each parameter consists of an identifier
 and a data type.  The `outputSource` connects the output parameter `classfile`
 of the `compile` step to the workflow output parameter `compiled_class`.
 
-~~~
+```cwl
 steps:
   untar:
     run: tar-param.cwl
@@ -101,7 +99,7 @@ steps:
       tarfile: tarball
       extractfile: name_of_file_to_extract
     out: [extracted_file]
-~~~
+```
 
 The `steps` section describes the actual steps of the workflow.  In this
 example, the first step extracts a file from a tar file, and the second
@@ -125,13 +123,13 @@ parameters `tarfile` and `extractfile` in order to run the tool.
 The `out` section of the workflow step lists the output parameters that are
 expected from the tool.
 
-~~~
+```cwl
   compile:
     run: arguments.cwl
     in:
       src: untar/extracted_file
     out: [classfile]
-~~~
+```
 
 The second step `compile` depends on the results from the first step by
 connecting the input parameter `src` to the output parameter of `untar` using
@@ -139,6 +137,3 @@ connecting the input parameter `src` to the output parameter of `untar` using
 [Additional Arguments and Parameters](/08-arguments/index.md)).
 The output of this step `classfile` is connected to the
 `outputs` section for the Workflow, described above.
-
-```{include} ../_includes/links.md
-```

@@ -21,7 +21,7 @@ the tool using `EnvVarRequirement`.
 *env.cwl*
 
 ```{literalinclude} /_includes/cwl/12-env/env.cwl
-:language: yaml
+:language: cwl
 ```
 
 *echo-job.yml*
@@ -33,7 +33,7 @@ the tool using `EnvVarRequirement`.
 Now invoke `cwl-runner` with the tool wrapper and the input object on the
 command line:
 
-~~~
+```bash
 $ cwl-runner env.cwl echo-job.yml
 [job env.cwl] /home/example$ env > /home/example/output.txt
 [job env.cwl] completed success
@@ -53,6 +53,4 @@ HELLO=Hello world!
 PATH=/bin:/usr/bin:/usr/local/bin
 HOME=/home/example
 TMPDIR=/tmp/tmp63Obpk
-~~~
-```{include} ../_includes/links.md
 ```

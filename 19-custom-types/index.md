@@ -27,7 +27,7 @@ converting a standard biom table file to hd5 format.
 *custom-types.cwl*
 
 ```{literalinclude} /_includes/cwl/19-custom-types/custom-types.cwl
-:language: yaml
+:language: cwl
 ```
 
 *custom-types.yml*
@@ -38,14 +38,14 @@ converting a standard biom table file to hd5 format.
 
 ___Note:___ To follow the example below, you need to download the example input file, *rich_sparse_otu_table.biom*. The file is available from [https://raw.githubusercontent.com/common-workflow-language/user_guide/gh-pages/_includes/cwl/19-custom-types/rich_sparse_otu_table.biom](https://raw.githubusercontent.com/common-workflow-language/user_guide/gh-pages/_includes/cwl/19-custom-types/rich_sparse_otu_table.biom) and can be downloaded e.g. via `wget`:
 
-~~~
+```bash
 wget https://raw.githubusercontent.com/common-workflow-language/user_guide/gh-pages/_includes/cwl/19-custom-types/rich_sparse_otu_table.biom
-~~~
+```
 
 On line 29, in `inputs:table_type`, a list of allowable table options to be used in the
 table conversion are imported as a custom object:
 
-```
+```cwl
 inputs:
   biom:
     type: File
@@ -75,7 +75,7 @@ In order for the custom type to be used in the CWL description, it must be
 imported. Imports are described in `requirements:SchemaDefRequirement`, as
 below in the example `custom-types.cwl` description:
 
-```
+```cwl
 requirements:
   InlineJavascriptRequirement: {}
   ResourceRequirement:
@@ -93,5 +93,3 @@ the software that the description was written for and other useful metadata.
 These features are discussed further in other chapters of this user guide.
 
 [biom]: http://biom-format.org/
-```{include} ../_includes/links.md
-```

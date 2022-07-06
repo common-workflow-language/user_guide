@@ -24,7 +24,7 @@ To generate such files we can use the `InitialWorkDirRequirement`.
 *createfile.cwl*
 
 ```{literalinclude} /_includes/cwl/14-runtime/createfile.cwl
-:language: yaml
+:language: cwl
 ```
 
 Any [expressions](/13-expressions/index.md) like `$(inputs.message)` are
@@ -32,7 +32,7 @@ expanded by the CWL engine before creating the file;
 here inserting the value at the input `message`.
 
 ```{tip}
-> The _CWL expressions_ are independent of any _shell variables_
+The _CWL expressions_ are independent of any _shell variables_
 used later during command line tool invocation. That means that any genuine
 need for the character `$` must be **escaped** with `\`,
 for instance `\${PREFIX}` above is expanded to `${PREFIX}` in the generated file
@@ -66,7 +66,7 @@ for more about the formating)
 Now invoke `cwl-runner` with the tool wrapper and the input object on the
 command line:
 
-~~~
+```bash
 $ cwl-runner createfile.cwl echo-job.yml
 [job createfile.cwl] /private/tmp/docker_tmphrqxxcdl$ sh \
     example.sh > /private/tmp/docker_tmphrqxxcdl/output.txt
@@ -85,7 +85,4 @@ Could not collect memory usage, job ended before monitoring began.
 Final process status is success
 $ cat output.txt
 Message is: Hello world!
-~~~
-
-```{include} ../_includes/links.md
 ```

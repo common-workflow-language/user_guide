@@ -23,7 +23,7 @@ input file from its leading directory path.
 *linkfile.cwl*
 
 ```{literalinclude} /_includes/cwl/15-staging/linkfile.cwl
-:language: yaml
+:language: cwl
 ```
 
 *arguments-job.yml*
@@ -35,7 +35,7 @@ input file from its leading directory path.
 Now invoke `cwl-runner` with the tool wrapper and the input object on the
 command line:
 
-~~~
+```bash
 $ cwl-runner linkfile.cwl arguments-job.yml
 [job 139928309171664] /home/example$ docker run -i --volume=/home/example/Hello.java:/var/lib/cwl/job557617295_examples/Hello.java:ro --volume=/home/example:/var/spool/cwl:rw --volume=/tmp/tmpmNbApw:/tmp:rw --workdir=/var/spool/cwl --read-only=true --net=none --user=1001 --rm --env=TMPDIR=/tmp openjdk:9.0.1-11-slim javac Hello.java
 Final process status is success
@@ -47,6 +47,4 @@ Final process status is success
   "class": "File"
   }
 }
-~~~
-```{include} ../_includes/links.md
 ```

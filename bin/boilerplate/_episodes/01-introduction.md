@@ -10,7 +10,3 @@ keypoints:
 - "First key point. Brief Answer to questions. (FIXME)"
 ---
 FIXME
-
-```{include} _includes/links.md
-```
-

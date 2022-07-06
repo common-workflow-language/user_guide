@@ -13,6 +13,3 @@ FIXME: home page introduction
 >
 > FIXME
 {: .prereq}
-
-```{include} _includes/links.md
-```

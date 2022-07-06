@@ -16,7 +16,7 @@ This allows workflows to skip additional steps based on input parameters given a
 
 *conditional-workflow.cwl*
 
-```
+```cwl
 class: Workflow
 cwlVersion: v1.2
 inputs:
@@ -55,14 +55,14 @@ requirements:
 
 The first thing you'll notice is that this workflow is only compatible for version 1.2 or greater of the CWL standards.
 
-```
+```cwl
 class: Workflow
 cwlVersion: v1.2
 ```
 
 The first step of the worklfow (step1) contains two input properties and will execute foo.cwl when the conditions are met. The new property `when` is where the condition validation takes place. In this case only when `in1`  from the workflow contains a value `< 1` this step will be executed.
 
-```
+```cwl
 steps:
 
   step1:
@@ -76,7 +76,7 @@ steps:
 
 Using the following command `cwltool cond-wf-003.1.cwl --val 0` the value will pass the first conditional step and will therefor be executed and is shown in the log by `INFO [step step1] start` whereas the second step is skipped as indicated by `INFO [step step2] will be skipped`.
 
-```
+```bash
 INFO [workflow ] start
 INFO [workflow ] starting step step1
 INFO [step step1] start
@@ -96,7 +96,7 @@ INFO Final process status is success
 
 When a value of 3 is given the first conditional step will not be executed but the second step will `cwltool cond-wf-003.1.cwl --val 3`.
 
-```
+```bash
 INFO [workflow ] start
 INFO [workflow ] starting step step1
 INFO [step step1] will be skipped
@@ -116,7 +116,7 @@ INFO Final process status is success
 
 If no conditions are met for example when using `--val 2` the workflow will raise a permanentFail.
 
-```
+```bash
 cwltool cond-wf-003.1.cwl --val 2
 
 INFO [workflow ] start
@@ -129,7 +129,4 @@ INFO [step step2] completed skipped
 ERROR [workflow ] Cannot collect workflow output: All sources for 'out1' are null
 INFO [workflow ] completed permanentFail
 WARNING Final process status is permanentFail
-```
-
-```{include} ../_includes/links.md
 ```

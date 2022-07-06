@@ -27,7 +27,7 @@ the type name to indicate that input parameter is array of that type.
 *array-inputs.cwl*
 
 ```{literalinclude} /_includes/cwl/09-array-inputs/array-inputs.cwl
-:language: yaml
+:language: cwl
 ```
 
 *array-inputs-job.yml*
@@ -39,7 +39,7 @@ the type name to indicate that input parameter is array of that type.
 Now invoke `cwl-runner` providing the tool wrapper and the input object
 on the command line:
 
-~~~
+```bash
 $ cwl-runner array-inputs.cwl array-inputs-job.yml
 [job array-inputs.cwl] /home/examples$ echo \
     -A \
@@ -64,7 +64,7 @@ $ cwl-runner array-inputs.cwl array-inputs-job.yml
 Final process status is success
 $ cat output.txt
 -A one two three -B=four -B=five -B=six -C=seven,eight,nine
-~~~
+```
 
 The `inputBinding` can appear either on the outer array parameter definition
 or the inner array element definition, and these produce different behavior when
@@ -78,6 +78,3 @@ array values that are not defined with an associated key are marked by a leading
 This will be demonstrated in the next lesson
 and is discussed in more detail in the [YAML Guide](../yaml/index.md#arrays).
 You can specify arrays of arrays, arrays of records, and other complex types.
-
-```{include} ../_includes/links.md
-```
