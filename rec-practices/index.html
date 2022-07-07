@@ -1,0 +1,351 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Recommended Practices &#8212; Common Workflow Language User Guide 0.1 documentation</title>
+    
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="YAML Guide" href="../yaml/index.html" />
+    <link rel="prev" title="Miscellaneous" href="../misc/index.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+      
+      <link rel="icon" sizes="16x16" href="../_static/images/favicons/cwl/favicon-16x16.png">
+      
+    
+      
+      <link rel="icon" sizes="32x32" href="../_static/images/favicons/cwl/favicon-32x32.png">
+      
+    
+      
+      <link rel="icon" sizes="96x96" href="../_static/images/favicons/cwl/favicon-96x96.png">
+      
+    
+      
+      <link rel="icon" sizes="128x128" href="../_static/images/favicons/cwl/favicon-128.png">
+      
+    
+      
+      <link rel="icon" sizes="196x196" href="../_static/images/favicons/cwl/favicon-196x196.png">
+      
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+    <nav class="navbar navbar-light navbar-expand-lg bg-light fixed-top bd-navbar" id="navbar-main"><div class="container-xl">
+
+  <div id="navbar-start">
+    
+    
+
+<a class="navbar-brand" href="../index.html">
+  <img src="../_static/CWL-Logo-HD-cropped2.png" class="logo" alt="logo">
+</a>
+
+
+    
+  </div>
+
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-collapsible" aria-controls="navbar-collapsible" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  
+  <div id="navbar-collapsible" class="col-lg-9 collapse navbar-collapse">
+    <div id="navbar-center" class="mr-auto">
+      
+      <div class="navbar-center-item">
+        <ul id="navbar-main-elements" class="navbar-nav">
+    <li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../CODE_OF_CONDUCT.html">
+  Code of Conduct
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../setup.html">
+  Setup
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../episodes.html">
+  Episodes
+ </a>
+</li>
+
+<li class="toctree-l1 current active nav-item">
+ <a class="reference internal nav-link" href="../extras.html">
+  Extras
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../LICENSE.html">
+  Licenses
+ </a>
+</li>
+
+    
+</ul>
+      </div>
+      
+    </div>
+
+    <div id="navbar-end">
+      
+      <div class="navbar-end-item">
+        <ul id="navbar-icon-links" class="navbar-nav" aria-label="Icon Links">
+        <li class="nav-item">
+          <a class="nav-link" href="https://github.com/common-workflow-language/user_guide/" rel="noopener" target="_blank" title="GitHub"><span><i class="fab fa-github-square"></i></span>
+            <label class="sr-only">GitHub</label></a>
+        </li>
+      </ul>
+      </div>
+      
+    </div>
+  </div>
+</div>
+    </nav>
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+            
+            <!-- Only show if we have sidebars configured, else just a small margin  -->
+            <div class="col-12 col-md-3 bd-sidebar">
+              <div class="sidebar-start-items"><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" >
+</form><nav class="bd-links d-none d-md-block" id="bd-docs-nav" aria-label="Main navigation">
+  <div class="bd-toc-item active">
+    <ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../misc/index.html">
+   Miscellaneous
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Recommended Practices
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../yaml/index.html">
+   YAML Guide
+  </a>
+ </li>
+</ul>
+
+  </div>
+</nav>
+              </div>
+              <div class="sidebar-end-items">
+              </div>
+            </div>
+            
+          
+
+          
+          <div class="d-none d-xl-block col-xl-2 bd-toc">
+            
+              
+              <div class="toc-item">
+                
+
+<nav id="bd-toc-nav">
+    
+</nav>
+              </div>
+              
+              <div class="toc-item">
+                
+
+<div class="tocsection editthispage">
+    <a href="https://github.com/common-workflow-language/user_guide/edit/gh-pages/rec-practices/index.md">
+        <i class="fas fa-pencil-alt"></i> Edit this page
+    </a>
+</div>
+
+              </div>
+              
+            
+          </div>
+          
+
+          
+          
+            
+          
+          <main class="col-12 col-md-9 col-xl-7 py-md-5 pl-md-5 pr-md-4 bd-content" role="main">
+              
+              <div>
+                
+  <section id="recommended-practices">
+<h1>Recommended Practices<a class="headerlink" href="#recommended-practices" title="Permalink to this headline">#</a></h1>
+<p>Below are a set of recommended good practices to keep in mind when writing a
+Common Workflow Language description for a tool or workflow. These guidelines
+are presented for consideration on a scale of usefulness: more is better, not
+all are required.</p>
+<p>☐ No <code class="docutils literal notranslate"><span class="pre">type:</span> <span class="pre">string</span></code> parameters for names of input or reference
+files/directories; use <code class="docutils literal notranslate"><span class="pre">type:</span> <span class="pre">File</span></code> or <code class="docutils literal notranslate"><span class="pre">type:</span> <span class="pre">Directory</span></code> as appropriate.</p>
+<p>☐ Include a license that allows for re-use by anyone, e.g.
+<a class="reference external" href="https://spdx.org/licenses/Apache-2.0.html">Apache 2.0</a>. If possible, the license should be specified with
+its corresponding <a class="reference external" href="https://spdx.org/licenses/">SPDX identifier</a>. Construct the metadata field for the
+licence by providing a URL of the form <code class="docutils literal notranslate"><span class="pre">https://spdx.org/licenses/[SPDX-ID]</span></code>
+where <code class="docutils literal notranslate"><span class="pre">SPDX-ID</span></code> is the taken from the list of identifiers linked above. See the
+example snippet below for guidance. For non-standard licenses without an SPDX
+identifier, provide a URL to the license.</p>
+<p><em>Example of metadata field for license with SPDX identifier:</em></p>
+<div class="highlight-cwl notranslate"><div class="highlight"><pre><span></span><span class="nt">$namespaces</span><span class="p">:</span><span class="w"></span>
+<span class="w">  </span><span class="nt">s</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://schema.org/</span><span class="w"></span>
+<span class="l l-Scalar l-Scalar-Plain">s:license</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://spdx.org/licenses/Apache-2.0</span><span class="w"></span>
+<span class="c1"># other s: declarations</span><span class="w"></span>
+</pre></div>
+</div>
+<p>For more examples of providing metadata within CWL descriptions, see the
+<a class="reference internal" href="../17-metadata/index.html"><span class="doc std std-doc">Metadata and Authorship section</span></a>
+of this User Guide.</p>
+<p>☐ Include <a class="reference external" href="https://github.com/ProteinsWebTeam/ebi-metagenomics-cwl/blob/master/workflows/emg-assembly.cwl#L200">attribution information</a> for the author(s) of
+the CWL tool or workflow description. Use  unambiguous identifiers like
+<a class="reference external" href="https://orcid.org">ORCID</a>.</p>
+<p>☐ In tool descriptions, list dependencies using short name(s) under
+<code class="docutils literal notranslate"><span class="pre">SoftwareRequirement</span></code>.</p>
+<p>☐ Include <a class="reference external" href="https://scicrunch.org">SciCrunch</a> identifiers for dependencies in
+<code class="docutils literal notranslate"><span class="pre">https://identifiers.org/rrid/RRID:SCR_NNNNNN</span></code> format.</p>
+<p>☐ All <code class="docutils literal notranslate"><span class="pre">input</span></code> and <code class="docutils literal notranslate"><span class="pre">output</span></code> identifiers should reflect their conceptual
+identity. Use informative names like <code class="docutils literal notranslate"><span class="pre">unaligned_sequences</span></code>, <code class="docutils literal notranslate"><span class="pre">reference_genome</span></code>,
+<code class="docutils literal notranslate"><span class="pre">phylogeny</span></code>, or <code class="docutils literal notranslate"><span class="pre">aligned_sequences</span></code> instead of  <code class="docutils literal notranslate"><span class="pre">foo_input</span></code>, <code class="docutils literal notranslate"><span class="pre">foo_file</span></code>,
+<code class="docutils literal notranslate"><span class="pre">result</span></code>, <code class="docutils literal notranslate"><span class="pre">input</span></code>, <code class="docutils literal notranslate"><span class="pre">output</span></code>, and so forth.</p>
+<p>☐ In tool descriptions, include a list of version(s) of the tool that are
+known to work with this description under <code class="docutils literal notranslate"><span class="pre">SoftwareRequirement</span></code>.</p>
+<p>☐ <code class="docutils literal notranslate"><span class="pre">format</span></code> should be specified for all input and output <code class="docutils literal notranslate"><span class="pre">File</span></code>s.
+Bioinformatics tools should use format identifiers from <a class="reference external" href="http://edamontology.org/format_1915">EDAM</a>.
+See also <code class="docutils literal notranslate"><span class="pre">iana:text/plain</span></code>, <code class="docutils literal notranslate"><span class="pre">iana:text/tab-separated-values</span></code> with
+<code class="docutils literal notranslate"><span class="pre">$namespaces:</span> <span class="pre">{</span> <span class="pre">iana:</span> <span class="pre">&quot;https://www.iana.org/assignments/media-types/&quot;</span> <span class="pre">}</span></code>.
+<a class="reference external" href="https://www.iana.org/assignments/media-types/media-types.xhtml">Full IANA media type list</a> (also known as MIME types). For
+non-bioinformatics tools use or build an appropriate ontology/controlled
+vocabulary in the same way. Please edit this page to let us know about it.</p>
+<p>☐ Mark all input and output <code class="docutils literal notranslate"><span class="pre">File</span></code>s that are read from or written to in a
+streaming compatible way (only once, no random-access), as <code class="docutils literal notranslate"><span class="pre">streamable:</span> <span class="pre">true</span></code>.</p>
+<p>☐ Each <code class="docutils literal notranslate"><span class="pre">CommandLineTool</span></code> description should focus on a single operation
+only, even if the (sub)command is capable of more. Don’t overcomplicate your
+tool descriptions with options that you don’t need/use.</p>
+<p>☐ Custom types should be defined with one external YAML per type
+definition for re-use.</p>
+<p>☐ Include a top level short <code class="docutils literal notranslate"><span class="pre">label</span></code> summarising the tool/workflow.</p>
+<p>☐ If useful, include a top level <code class="docutils literal notranslate"><span class="pre">doc</span></code> as well. This should provide a
+longer, more detailed description than was provided in the top level <code class="docutils literal notranslate"><span class="pre">label</span></code>
+(see above).</p>
+<p>☐ Use <code class="docutils literal notranslate"><span class="pre">type:</span> <span class="pre">enum</span></code> instead of <code class="docutils literal notranslate"><span class="pre">type:</span> <span class="pre">string</span></code> for elements with a fixed
+list of valid values.</p>
+<p>☐ Evaluate all use of JavaScript for possible elimination or replacement.
+One common example: manipulating <code class="docutils literal notranslate"><span class="pre">File</span></code> names and paths? Consider whether one
+of the <a class="reference external" href="https://www.commonwl.org/v1.0/CommandLineTool.html#File">built in <code class="docutils literal notranslate"><span class="pre">File</span></code> properties</a> like <code class="docutils literal notranslate"><span class="pre">basename</span></code>, <code class="docutils literal notranslate"><span class="pre">nameroot</span></code>,
+<code class="docutils literal notranslate"><span class="pre">nameext</span></code>, etc, could be used instead.</p>
+<p>☐ Give the tool description to a colleague (preferably at a different
+institution) to test and provide feedback.</p>
+<p>☐ Complex workflows with individual components which can be abstracted
+should utilise the <a class="reference external" href="https://www.commonwl.org/v1.0/Workflow.html#SubworkflowFeatureRequirement"><code class="docutils literal notranslate"><span class="pre">SubworkflowFeatureRequirement</span></code></a> to make their
+workflow modular and allow sections of them to be easily reused.</p>
+<p>☐ Software containers should be made to be conformant to the <a class="reference external" href="https://doi.org/10.12688/f1000research.15140.1">“Recommendations for the packaging and containerizing of bioinformatics software”</a> (also useful to other disciplines).</p>
+</section>
+
+
+              </div>
+              
+              
+              <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+    <a class='left-prev' id="prev-link" href="../misc/index.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Miscellaneous</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="../yaml/index.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">YAML Guide</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+              
+          </main>
+          
+
+      </div>
+    </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
+<div class="container">
+  <div class="row">
+    <div class="col d-flex flex-row-reverse">
+      <ul class="nav">
+        <li class="nav-item">
+          <a class="nav-link" href="https://github.com/common-workflow-language/user_guide/blob/gh-pages/CONTRIBUTING.md">Contributing</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="https://github.com/common-workflow-language/user_guide/">Source</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="https://github.com/common-workflow-language/user_guide/blob/gh-pages/CITATION">Cite</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<footer class="footer mt-5 mt-md-0">
+  <div class="container">
+    
+    <div class="footer-item">
+      <p class="copyright">
+    &copy; Copyright 2013, CWL Project Team.<br>
+</p>
+    </div>
+    
+  </div>
+</footer>
+
+  </body>
+</html>

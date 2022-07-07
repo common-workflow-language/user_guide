@@ -1,0 +1,738 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Miscellaneous &#8212; Common Workflow Language User Guide 0.1 documentation</title>
+    
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Recommended Practices" href="../rec-practices/index.html" />
+    <link rel="prev" title="Extras" href="../extras.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+      
+      <link rel="icon" sizes="16x16" href="../_static/images/favicons/cwl/favicon-16x16.png">
+      
+    
+      
+      <link rel="icon" sizes="32x32" href="../_static/images/favicons/cwl/favicon-32x32.png">
+      
+    
+      
+      <link rel="icon" sizes="96x96" href="../_static/images/favicons/cwl/favicon-96x96.png">
+      
+    
+      
+      <link rel="icon" sizes="128x128" href="../_static/images/favicons/cwl/favicon-128.png">
+      
+    
+      
+      <link rel="icon" sizes="196x196" href="../_static/images/favicons/cwl/favicon-196x196.png">
+      
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+    <nav class="navbar navbar-light navbar-expand-lg bg-light fixed-top bd-navbar" id="navbar-main"><div class="container-xl">
+
+  <div id="navbar-start">
+    
+    
+
+<a class="navbar-brand" href="../index.html">
+  <img src="../_static/CWL-Logo-HD-cropped2.png" class="logo" alt="logo">
+</a>
+
+
+    
+  </div>
+
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-collapsible" aria-controls="navbar-collapsible" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  
+  <div id="navbar-collapsible" class="col-lg-9 collapse navbar-collapse">
+    <div id="navbar-center" class="mr-auto">
+      
+      <div class="navbar-center-item">
+        <ul id="navbar-main-elements" class="navbar-nav">
+    <li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../CODE_OF_CONDUCT.html">
+  Code of Conduct
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../setup.html">
+  Setup
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../episodes.html">
+  Episodes
+ </a>
+</li>
+
+<li class="toctree-l1 current active nav-item">
+ <a class="reference internal nav-link" href="../extras.html">
+  Extras
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../LICENSE.html">
+  Licenses
+ </a>
+</li>
+
+    
+</ul>
+      </div>
+      
+    </div>
+
+    <div id="navbar-end">
+      
+      <div class="navbar-end-item">
+        <ul id="navbar-icon-links" class="navbar-nav" aria-label="Icon Links">
+        <li class="nav-item">
+          <a class="nav-link" href="https://github.com/common-workflow-language/user_guide/" rel="noopener" target="_blank" title="GitHub"><span><i class="fab fa-github-square"></i></span>
+            <label class="sr-only">GitHub</label></a>
+        </li>
+      </ul>
+      </div>
+      
+    </div>
+  </div>
+</div>
+    </nav>
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+            
+            <!-- Only show if we have sidebars configured, else just a small margin  -->
+            <div class="col-12 col-md-3 bd-sidebar">
+              <div class="sidebar-start-items"><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" >
+</form><nav class="bd-links d-none d-md-block" id="bd-docs-nav" aria-label="Main navigation">
+  <div class="bd-toc-item active">
+    <ul class="current nav bd-sidenav">
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Miscellaneous
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../rec-practices/index.html">
+   Recommended Practices
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../yaml/index.html">
+   YAML Guide
+  </a>
+ </li>
+</ul>
+
+  </div>
+</nav>
+              </div>
+              <div class="sidebar-end-items">
+              </div>
+            </div>
+            
+          
+
+          
+          <div class="d-none d-xl-block col-xl-2 bd-toc">
+            
+              
+              <div class="toc-item">
+                
+<div class="tocsection onthispage mt-5 pt-1 pb-3">
+    <i class="fas fa-list"></i> On this page
+</div>
+
+<nav id="bd-toc-nav">
+    <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#non-file-types-using-evalfrom">
+   Non “
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     File
+    </span>
+   </code>
+   ” types using
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     evalFrom
+    </span>
+   </code>
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#rename-an-input-file">
+   Rename an input file
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#rename-an-output-file">
+   Rename an output file
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#setting-self-based-input-bindings-for-optional-inputs">
+   Setting
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     self
+    </span>
+   </code>
+   -based input bindings for optional inputs
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#model-a-one-or-the-other-parameter">
+   Model a “one-or-the-other” parameter
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#connect-a-solo-value-to-an-input-that-expects-an-array-of-that-type">
+   Connect a solo value to an input that expects an array of that type
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#optional-inputs">
+   Optional Inputs 💯
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#enum-inputs">
+   Enum Inputs ⚜️
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#record-inputs">
+   Record Inputs 📀
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#setting-mutually-exclusive-parameters">
+   Setting Mutually Exclusive Parameters
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#setting-booleans">
+   Setting Booleans
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#concating-strings-in-inputs">
+   Concating Strings in Inputs
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#cwltool-errors-due-to-filenames-with-space-characters-inside">
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     cwltool
+    </span>
+   </code>
+   errors due to filenames with space characters inside
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#cwl-parameter-reference-error-due-to-hyphen-in-input-identifier">
+   CWL Parameter Reference error due to hyphen in input identifier
+  </a>
+ </li>
+</ul>
+
+</nav>
+              </div>
+              
+              <div class="toc-item">
+                
+
+<div class="tocsection editthispage">
+    <a href="https://github.com/common-workflow-language/user_guide/edit/gh-pages/misc/index.md">
+        <i class="fas fa-pencil-alt"></i> Edit this page
+    </a>
+</div>
+
+              </div>
+              
+            
+          </div>
+          
+
+          
+          
+            
+          
+          <main class="col-12 col-md-9 col-xl-7 py-md-5 pl-md-5 pr-md-4 bd-content" role="main">
+              
+              <div>
+                
+  <section id="miscellaneous">
+<h1>Miscellaneous<a class="headerlink" href="#miscellaneous" title="Permalink to this headline">#</a></h1>
+<p>This is a collection of examples and short notes
+about some operations that fall outside the scope of the User Guide
+and/or have not yet been implemented in a clean way in the CWL standards.</p>
+<section id="non-file-types-using-evalfrom">
+<h2>Non “<code class="docutils literal notranslate"><span class="pre">File</span></code>” types using <code class="docutils literal notranslate"><span class="pre">evalFrom</span></code><a class="headerlink" href="#non-file-types-using-evalfrom" title="Permalink to this headline">#</a></h2>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">cwlVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">v1.0</span><span class="w">  </span><span class="c1"># or v1.1</span><span class="w"></span>
+<span class="nt">class</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">CommandLineTool</span><span class="w"></span>
+<span class="nt">requirements</span><span class="p">:</span><span class="w"></span>
+<span class="w">  </span><span class="nt">InlineJavascriptRequirement</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">{}</span><span class="w"></span>
+
+<span class="nt">baseCommand</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="w"> </span><span class="nv">echo</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="s">&quot;42&quot;</span><span class="w"> </span><span class="p p-Indicator">]</span><span class="w"></span>
+
+<span class="nt">inputs</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[]</span><span class="w"></span>
+
+<span class="nt">stdout</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">my_number.txt</span><span class="w"></span>
+
+<span class="nt">outputs</span><span class="p">:</span><span class="w"></span>
+<span class="w">  </span><span class="nt">my_number</span><span class="p">:</span><span class="w"></span>
+<span class="w">    </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">int</span><span class="w"></span>
+<span class="w">    </span><span class="nt">outputBinding</span><span class="p">:</span><span class="w"></span>
+<span class="w">       </span><span class="nt">glob</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">my_number.txt</span><span class="w"></span>
+<span class="w">       </span><span class="nt">loadContents</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">True</span><span class="w"></span>
+<span class="w">       </span><span class="nt">outputEval</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">$(parselnt(self[0].contents))</span><span class="w"></span>
+
+<span class="w">  </span><span class="nt">my_number_as_string</span><span class="p">:</span><span class="w"></span>
+<span class="w">    </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">string</span><span class="w"></span>
+<span class="w">    </span><span class="nt">outputBinding</span><span class="p">:</span><span class="w"></span>
+<span class="w">       </span><span class="nt">glob</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">my_number.txt</span><span class="w"></span>
+<span class="w">       </span><span class="nt">loadContents</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">True</span><span class="w"></span>
+<span class="w">       </span><span class="nt">outputEval</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">$(self[0].contents)</span><span class="w"></span>
+</pre></div>
+</div>
+</section>
+<section id="rename-an-input-file">
+<h2>Rename an input file<a class="headerlink" href="#rename-an-input-file" title="Permalink to this headline">#</a></h2>
+<p>This example shows how you can change the name of an input file
+as part of a tool description.
+This could be useful when you are taking files produced from another
+step in a workflow and don’t want to work with the default names that these
+files were given when they were created.</p>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">requirements</span><span class="p">:</span><span class="w"></span>
+<span class="w">  </span><span class="nt">InitialWorkDirRequirement</span><span class="p">:</span><span class="w"></span>
+<span class="w">    </span><span class="nt">listing</span><span class="p">:</span><span class="w"></span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">entry</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">$(inputs.src1)</span><span class="w"></span>
+<span class="w">        </span><span class="nt">entryName</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">newName</span><span class="w"></span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">entry</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">$(inputs.src2)</span><span class="w"></span>
+<span class="w">        </span><span class="nt">entryName</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">$(inputs.src1.basename)_custom_extension</span><span class="w"></span>
+</pre></div>
+</div>
+</section>
+<section id="rename-an-output-file">
+<h2>Rename an output file<a class="headerlink" href="#rename-an-output-file" title="Permalink to this headline">#</a></h2>
+<p>This example shows how you can change the name an output file
+from the default name given to it by a tool:</p>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">cwlVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">v1.0</span><span class="w"> </span><span class="c1"># or v1.1</span><span class="w"></span>
+<span class="nt">class</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">CommandLineTool</span><span class="w"></span>
+<span class="nt">requirements</span><span class="p">:</span><span class="w"></span>
+<span class="w">  </span><span class="nt">InlineJavascriptRequirement</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">{}</span><span class="w"></span>
+
+<span class="nt">baseCommand</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[]</span><span class="w"></span>
+
+<span class="nt">inputs</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[]</span><span class="w"></span>
+
+<span class="nt">outputs</span><span class="p">:</span><span class="w"></span>
+<span class="w"> </span><span class="nt">otu_table</span><span class="p">:</span><span class="w"></span>
+<span class="w">    </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">File</span><span class="w"></span>
+<span class="w">    </span><span class="nt">outputBinding</span><span class="p">:</span><span class="w"></span>
+<span class="w">      </span><span class="nt">glob</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">otu_table.txt</span><span class="w"></span>
+<span class="w">      </span><span class="nt">outputEval</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">${self[0].basename=inputs.otu_table_name; return self;}</span><span class="w"></span>
+</pre></div>
+</div>
+</section>
+<section id="setting-self-based-input-bindings-for-optional-inputs">
+<h2>Setting <code class="docutils literal notranslate"><span class="pre">self</span></code>-based input bindings for optional inputs<a class="headerlink" href="#setting-self-based-input-bindings-for-optional-inputs" title="Permalink to this headline">#</a></h2>
+<p>Currently, <code class="docutils literal notranslate"><span class="pre">cwltool</span></code> can’t cope with missing optional inputs if their
+input binding makes use of <code class="docutils literal notranslate"><span class="pre">self</span></code>.
+Below is an example workaround for this,
+pending a more sophisticated fix.</p>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="c1">#!/usr/bin/env cwl-runner</span><span class="w"></span>
+<span class="nt">cwlVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">v1.0</span><span class="w"></span>
+<span class="nt">class</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">CommandLineTool</span><span class="w"></span>
+
+<span class="nt">requirements</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">{</span><span class="nt"> InlineJavascriptRequirement</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">{}</span><span class="w"> </span><span class="p p-Indicator">}</span><span class="w"></span>
+
+<span class="nt">inputs</span><span class="p">:</span><span class="w"></span>
+<span class="w">  </span><span class="nt">cfg</span><span class="p">:</span><span class="w"></span>
+<span class="w">    </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">File?</span><span class="w"></span>
+<span class="w">    </span><span class="nt">inputBinding</span><span class="p">:</span><span class="w"></span>
+<span class="w">      </span><span class="nt">prefix</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">-cfg</span><span class="w"></span>
+<span class="w">      </span><span class="nt">valueFrom</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">|</span><span class="w"></span>
+<span class="w">        </span><span class="no">${ if(self === null) { return null;} else { return self.basename; } }</span><span class="w"></span>
+
+<span class="nt">baseCommand</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">echo</span><span class="w"></span>
+
+<span class="nt">outputs</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[]</span><span class="w"></span>
+</pre></div>
+</div>
+</section>
+<section id="model-a-one-or-the-other-parameter">
+<h2>Model a “one-or-the-other” parameter<a class="headerlink" href="#model-a-one-or-the-other-parameter" title="Permalink to this headline">#</a></h2>
+<p>Below is an example of how
+you can specify different strings to be added to a command line
+based on the value given to a Boolean parameter.</p>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">cwlVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">v1.0</span><span class="w"></span>
+<span class="nt">class</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">CommandLineTool</span><span class="w"></span>
+<span class="nt">requirements</span><span class="p">:</span><span class="w"></span>
+<span class="w">  </span><span class="nt">InlineJavascriptRequirement</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">{}</span><span class="w"></span>
+<span class="nt">inputs</span><span class="p">:</span><span class="w"></span>
+<span class="w">  </span><span class="nt">fancy_bool</span><span class="p">:</span><span class="w"></span>
+<span class="w">     </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">boolean</span><span class="w"></span>
+<span class="w">     </span><span class="nt">default</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span><span class="w">  </span><span class="c1"># or true</span><span class="w"></span>
+<span class="w">     </span><span class="nt">inputBinding</span><span class="p">:</span><span class="w"></span>
+<span class="w">        </span><span class="nt">valueFrom</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">${if (self) { return &quot;foo&quot;;} else { return &quot;bar&quot;;}}</span><span class="w"></span>
+
+<span class="nt">baseCommand</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">echo</span><span class="w"></span>
+
+<span class="nt">outputs</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[]</span><span class="w"></span>
+</pre></div>
+</div>
+</section>
+<section id="connect-a-solo-value-to-an-input-that-expects-an-array-of-that-type">
+<h2>Connect a solo value to an input that expects an array of that type<a class="headerlink" href="#connect-a-solo-value-to-an-input-that-expects-an-array-of-that-type" title="Permalink to this headline">#</a></h2>
+<p>Using <a class="reference external" href="https://www.commonwl.org/v1.0/Workflow.html#MultipleInputFeatureRequirement"><code class="docutils literal notranslate"><span class="pre">MultipleInputFeatureRequirement</span></code></a>
+along with
+<a class="reference external" href="https://www.commonwl.org/v1.0/Workflow.html#WorkflowStepInput"><code class="docutils literal notranslate"><span class="pre">linkMerge:</span> <span class="pre">merge_nested</span></code></a></p>
+<blockquote>
+<div><p>merge_nested</p>
+<p>The input must be an array consisting of exactly one entry for each input link.
+If “merge_nested” is specified with a single link, the value from the link must be wrapped in a single-item list.</p>
+</div></blockquote>
+<p>Which means “create a list with exactly these sources as elements”</p>
+<p>Or in other words: if the destination is of type <code class="docutils literal notranslate"><span class="pre">File[]</span></code> (an array of <code class="docutils literal notranslate"><span class="pre">File</span></code>s)
+and the source is a single <code class="docutils literal notranslate"><span class="pre">File</span></code> then add <code class="docutils literal notranslate"><span class="pre">MultipleInputFeatureRequirement</span></code> to the Workflow level <code class="docutils literal notranslate"><span class="pre">requirements</span></code>
+and add <code class="docutils literal notranslate"><span class="pre">linkMerge:</span> <span class="pre">merge_nested</span></code> under the appropriate <code class="docutils literal notranslate"><span class="pre">in</span></code> entry of the destination step.</p>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">cwlVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">v1.0</span><span class="w"></span>
+<span class="nt">class</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Workflow</span><span class="w"></span>
+
+<span class="nt">requirements</span><span class="p">:</span><span class="w"></span>
+<span class="w">  </span><span class="nt">MultipleInputFeatureRequirement</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">{}</span><span class="w"></span>
+
+<span class="nt">inputs</span><span class="p">:</span><span class="w"></span>
+<span class="w">  </span><span class="nt">readme</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">File</span><span class="w"></span>
+
+<span class="nt">steps</span><span class="p">:</span><span class="w"></span>
+<span class="w">  </span><span class="nt">first</span><span class="p">:</span><span class="w"></span>
+<span class="w">    </span><span class="nt">run</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">tests/checker_wf/cat.cwl</span><span class="w"></span>
+<span class="w">    </span><span class="nt">in</span><span class="p">:</span><span class="w"></span>
+<span class="w">     </span><span class="nt">cat_in</span><span class="p">:</span><span class="w">  </span><span class="c1"># type is File[]</span><span class="w"></span>
+<span class="w">       </span><span class="nt">source</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="w"> </span><span class="nv">readme</span><span class="w"> </span><span class="p p-Indicator">]</span><span class="w">  </span><span class="c1"># but the source is of type File</span><span class="w"></span>
+<span class="w">       </span><span class="nt">linkMerge</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">merge_nested</span><span class="w"></span>
+<span class="w">    </span><span class="nt">out</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="nv">txt</span><span class="p p-Indicator">]</span><span class="w"></span>
+
+<span class="nt">outputs</span><span class="p">:</span><span class="w"></span>
+<span class="w">  </span><span class="nt">result</span><span class="p">:</span><span class="w"></span>
+<span class="w">    </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">File</span><span class="w"></span>
+<span class="w">    </span><span class="nt">outputSource</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">first/txt</span><span class="w"></span>
+</pre></div>
+</div>
+</section>
+<section id="optional-inputs">
+<h2>Optional Inputs 💯<a class="headerlink" href="#optional-inputs" title="Permalink to this headline">#</a></h2>
+<p>To make an input parameter optional, add a question mark to the type declaration.</p>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">inputs</span><span class="p">:</span><span class="w"></span>
+<span class="w">  </span><span class="nt">InputRead1</span><span class="p">:</span><span class="w"></span>
+<span class="w">    </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">File</span><span class="w"></span>
+<span class="w">    </span><span class="nt">inputBinding</span><span class="p">:</span><span class="w"></span>
+<span class="w">      </span><span class="nt">position</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">100</span><span class="w"></span>
+
+<span class="w">  </span><span class="c1">#Optional Inputs</span><span class="w"></span>
+<span class="w">  </span><span class="nt">isCasava</span><span class="p">:</span><span class="w"></span>
+<span class="w">    </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">boolean?</span><span class="w"></span>
+<span class="w">    </span><span class="nt">inputBinding</span><span class="p">:</span><span class="w"></span>
+<span class="w">      </span><span class="nt">position</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1</span><span class="w"></span>
+<span class="w">      </span><span class="nt">prefix</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;--casava&quot;</span><span class="w"></span>
+</pre></div>
+</div>
+<p><a name="enuminputs"></a></p>
+</section>
+<section id="enum-inputs">
+<h2>Enum Inputs ⚜️<a class="headerlink" href="#enum-inputs" title="Permalink to this headline">#</a></h2>
+<p>For commandline flags that require a specific input as the argument an enum type can be declared in CWL. <strong>Specifying null here is known as long form style. It does the same thing as the question mark on the other inputs.</strong></p>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">Format</span><span class="p">:</span><span class="w"></span>
+<span class="w">  </span><span class="nt">type</span><span class="p">:</span><span class="w"></span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&quot;null&quot;</span><span class="w"></span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">enum</span><span class="w"></span>
+<span class="w">      </span><span class="nt">symbols</span><span class="p">:</span><span class="w"></span>
+<span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">bam</span><span class="w"></span>
+<span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">sam</span><span class="w"></span>
+<span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">bam_mapped</span><span class="w"></span>
+<span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">sam_mapped</span><span class="w"></span>
+<span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">fastq</span><span class="w"></span>
+<span class="w">  </span><span class="nt">inputBinding</span><span class="p">:</span><span class="w"></span>
+<span class="w">    </span><span class="nt">position</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">2</span><span class="w"></span>
+<span class="w">    </span><span class="nt">prefix</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;--format&quot;</span><span class="w"></span>
+</pre></div>
+</div>
+<p><a name="recordinputs"></a></p>
+</section>
+<section id="record-inputs">
+<h2>Record Inputs 📀<a class="headerlink" href="#record-inputs" title="Permalink to this headline">#</a></h2>
+<p>For commandline flags that are either <strong>mutually exclusive</strong> or <strong>dependent</strong> a special record type can be defined. You can also specify null here to create optional inputs.</p>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="c1">#Using record inputs to create mutually exclusive inputs</span><span class="w"></span>
+
+<span class="w">  </span><span class="nt">Strand</span><span class="p">:</span><span class="w"></span>
+<span class="w">    </span><span class="nt">type</span><span class="p">:</span><span class="w"></span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&quot;null&quot;</span><span class="w"></span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">record</span><span class="w"></span>
+<span class="w">        </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">forward</span><span class="w"></span>
+<span class="w">        </span><span class="nt">fields</span><span class="p">:</span><span class="w"></span>
+<span class="w">          </span><span class="nt">forward</span><span class="p">:</span><span class="w"></span>
+<span class="w">              </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">boolean</span><span class="w"></span>
+<span class="w">              </span><span class="nt">inputBinding</span><span class="p">:</span><span class="w"></span>
+<span class="w">                </span><span class="nt">prefix</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;--fr-stranded&quot;</span><span class="w"></span>
+
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">record</span><span class="w"></span>
+<span class="w">        </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">reverse</span><span class="w"></span>
+<span class="w">        </span><span class="nt">fields</span><span class="p">:</span><span class="w"></span>
+<span class="w">          </span><span class="nt">reverse</span><span class="p">:</span><span class="w"></span>
+<span class="w">            </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">boolean</span><span class="w"></span>
+<span class="w">            </span><span class="nt">inputBinding</span><span class="p">:</span><span class="w"></span>
+<span class="w">              </span><span class="nt">prefix</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;--rf-stranded&quot;</span><span class="w"></span>
+
+<span class="w">  </span><span class="nt">PseudoBam</span><span class="p">:</span><span class="w"></span>
+<span class="w">    </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">boolean?</span><span class="w"></span>
+<span class="w">    </span><span class="nt">inputBinding</span><span class="p">:</span><span class="w"></span>
+<span class="w">      </span><span class="nt">prefix</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;--pseudobam&quot;</span><span class="w"></span>
+
+<span class="c1">#Using record inputs to create dependent inputs</span><span class="w"></span>
+
+<span class="w">  </span><span class="nt">GenomeBam</span><span class="p">:</span><span class="w"></span>
+<span class="w">    </span><span class="nt">type</span><span class="p">:</span><span class="w"></span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&quot;null&quot;</span><span class="w"></span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">record</span><span class="w"></span>
+<span class="w">        </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">genome_bam</span><span class="w"></span>
+<span class="w">        </span><span class="nt">fields</span><span class="p">:</span><span class="w"></span>
+<span class="w">          </span><span class="nt">genomebam</span><span class="p">:</span><span class="w"></span>
+<span class="w">            </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">boolean</span><span class="w"></span>
+<span class="w">            </span><span class="nt">inputBinding</span><span class="p">:</span><span class="w"></span>
+<span class="w">              </span><span class="nt">prefix</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;--genomebam&quot;</span><span class="w"></span>
+
+<span class="w">          </span><span class="nt">gtf</span><span class="p">:</span><span class="w"></span>
+<span class="w">            </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">File</span><span class="w"></span>
+<span class="w">            </span><span class="nt">inputBinding</span><span class="p">:</span><span class="w"></span>
+<span class="w">              </span><span class="nt">prefix</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;--gtf&quot;</span><span class="w"></span>
+
+<span class="w">          </span><span class="nt">chromosomes</span><span class="p">:</span><span class="w"></span>
+<span class="w">            </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">File</span><span class="w"></span>
+<span class="w">            </span><span class="nt">inputBinding</span><span class="p">:</span><span class="w"></span>
+<span class="w">              </span><span class="nt">prefix</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;--chromosomes&quot;</span><span class="w"></span>
+</pre></div>
+</div>
+</section>
+<section id="setting-mutually-exclusive-parameters">
+<h2>Setting Mutually Exclusive Parameters<a class="headerlink" href="#setting-mutually-exclusive-parameters" title="Permalink to this headline">#</a></h2>
+<p>In order to properly set fields in a record input type, you need to pass a dictionary to the input to properly set the parameters. This is done by using inline javascript and returning the dictionary with the key of the field you want to set. The source field is set to indicate the input from the workflow to be used as the value.</p>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">steps</span><span class="p">:</span><span class="w"></span>
+
+<span class="w">  </span><span class="nt">build_hisat2_index</span><span class="p">:</span><span class="w"></span>
+<span class="w">    </span><span class="nt">run</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">../Tools/Hisat2-Index.cwl</span><span class="w"></span>
+<span class="w">    </span><span class="nt">in</span><span class="p">:</span><span class="w"></span>
+<span class="w">      </span><span class="nt">InputFiles</span><span class="p">:</span><span class="w"></span>
+<span class="w">        </span><span class="nt">source</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">FastaFiles</span><span class="w"></span>
+<span class="w">        </span><span class="nt">valueFrom </span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">|</span><span class="w"></span>
+<span class="w">          </span><span class="no">${return {&quot;fasta&quot;: self};}</span><span class="w"></span>
+
+<span class="w">      </span><span class="nt">IndexName</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">IndexName</span><span class="w"></span>
+
+<span class="w">    </span><span class="nt">out</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="nv">indexes</span><span class="p p-Indicator">]</span><span class="w"></span>
+</pre></div>
+</div>
+</section>
+<section id="setting-booleans">
+<h2>Setting Booleans<a class="headerlink" href="#setting-booleans" title="Permalink to this headline">#</a></h2>
+<p>These can be set by using the default field</p>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">input</span><span class="p">:</span><span class="w"></span>
+<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">default:true</span><span class="w"></span>
+</pre></div>
+</div>
+</section>
+<section id="concating-strings-in-inputs">
+<h2>Concating Strings in Inputs<a class="headerlink" href="#concating-strings-in-inputs" title="Permalink to this headline">#</a></h2>
+<p>The valueFrom field must be used instead of default.</p>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">input</span><span class="p">:</span><span class="w"></span>
+<span class="w">  </span><span class="nt">valueFrom</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">|</span><span class="w"></span>
+<span class="w">     </span><span class="no">My String: $(input.stringvalue)</span><span class="w"></span>
+</pre></div>
+</div>
+</section>
+<section id="cwltool-errors-due-to-filenames-with-space-characters-inside">
+<h2><code class="docutils literal notranslate"><span class="pre">cwltool</span></code> errors due to filenames with space characters inside<a class="headerlink" href="#cwltool-errors-due-to-filenames-with-space-characters-inside" title="Permalink to this headline">#</a></h2>
+<p><code class="docutils literal notranslate"><span class="pre">cwltool</span></code> does not allow some characters in filenames by default.</p>
+<p>For example, the filename is <code class="docutils literal notranslate"><span class="pre">a</span> <span class="pre">space</span> <span class="pre">is</span> <span class="pre">here.txt</span></code> includes 3 space characters.</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">ERROR Workflow error, try again with --debug for more information:</span>
+
+<span class="go">Invalid filename: &#39;a space is here.txt&#39; contains illegal characters</span>
+</pre></div>
+</div>
+<p>If you can not avoid these dangerous characters, then pass <code class="docutils literal notranslate"><span class="pre">--relax-path-checks</span></code> to <code class="docutils literal notranslate"><span class="pre">cwltool</span></code>.</p>
+</section>
+<section id="cwl-parameter-reference-error-due-to-hyphen-in-input-identifier">
+<h2>CWL Parameter Reference error due to hyphen in input identifier<a class="headerlink" href="#cwl-parameter-reference-error-due-to-hyphen-in-input-identifier" title="Permalink to this headline">#</a></h2>
+<p>If <code class="docutils literal notranslate"><span class="pre">cwltool</span> <span class="pre">--validate</span></code> returns valid</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>cwltool --validate cwl/qiime.cwl
+<span class="go">INFO /usr/local/bin/cwltool 1.0.20190831161204</span>
+<span class="go">INFO Resolved &#39;cwl/qiime.cwl&#39; to &#39;file:///workspace/cwl/qiime.cwl&#39;</span>
+<span class="go">cwl/qiime.cwl is valid CWL.</span>
+</pre></div>
+</div>
+<p>But executing it causes an error like:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>cwltool cwl/qiime.cwl --sample-input metadata.tsv
+<span class="go">INFO /usr/local/bin/cwltool 1.0.20190831161204</span>
+<span class="go">INFO Resolved &#39;cwl/qiime.cwl&#39; to &#39;file:///workspace/cwl/qiime.cwl&#39;</span>
+<span class="go">ERROR Workflow error, try again with --debug for more information:</span>
+<span class="go">cwl/qiime.cwl:14:5: Expression evaluation error:</span>
+<span class="go">                    Syntax error in parameter reference &#39;(inputs.sample-input)&#39;. This could be due</span>
+<span class="go">                    to using Javascript code without specifying InlineJavascriptRequirement.</span>
+</pre></div>
+</div>
+<p>The file is here</p>
+<div class="highlight-cwl notranslate"><div class="highlight"><pre><span></span><span class="nt">cwlVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">v1.0</span><span class="w"></span>
+<span class="nt">class</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">CommandLineTool</span><span class="w"></span>
+<span class="nt">baseCommand</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="nv">qiime</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">metadata</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">tabulate</span><span class="p p-Indicator">]</span><span class="w"></span>
+<span class="nt">arguments</span><span class="p">:</span><span class="w"></span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">prefix</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">--m-input-file</span><span class="w"></span>
+<span class="w">    </span><span class="nt">valueFrom</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">$(inputs.sample-input)</span><span class="w"></span>
+<span class="nt">inputs</span><span class="p">:</span><span class="w"></span>
+<span class="w">  </span><span class="nt">sample-input</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">File</span><span class="w"></span>
+<span class="nt">outputs</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[]</span><span class="w"></span>
+</pre></div>
+</div>
+<p>Problem caused by <code class="docutils literal notranslate"><span class="pre">-</span></code> (hyphen character).</p>
+<div class="highlight-cwl notranslate"><div class="highlight"><pre><span></span><span class="nt">valueFrom</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">$(inputs.sample-input)</span><span class="w"></span>
+<span class="w">                        </span><span class="l l-Scalar l-Scalar-Plain"># ^ this is problem</span><span class="w"></span>
+<span class="nn">...</span><span class="w"></span>
+
+<span class="nt">inputs</span><span class="p">:</span><span class="w"></span>
+<span class="w">  </span><span class="nt">sample-input</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">File</span><span class="w"></span>
+<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain"># ^ this is problem</span><span class="w"></span>
+</pre></div>
+</div>
+<p>Fix this error is change <code class="docutils literal notranslate"><span class="pre">-</span></code> (hyphen) to <code class="docutils literal notranslate"><span class="pre">_</span></code> (underscore)</p>
+<div class="highlight-cwl notranslate"><div class="highlight"><pre><span></span><span class="nt">valueFrom</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">$(inputs.sample_input)</span><span class="w"></span>
+<span class="w">                        </span><span class="l l-Scalar l-Scalar-Plain"># ^ changed here</span><span class="w"></span>
+
+<span class="nn">...</span><span class="w"></span>
+
+<span class="nt">inputs</span><span class="p">:</span><span class="w"></span>
+<span class="w">  </span><span class="nt">sample_input</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">File</span><span class="w"></span>
+<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain"># ^ changed here</span><span class="w"></span>
+</pre></div>
+</div>
+<p>If is not possible to change the input identifier, then you can use an alternative CWL Parameter Reference syntax:</p>
+<div class="highlight-cwl notranslate"><div class="highlight"><pre><span></span><span class="nt">valueFrom</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">$(inputs[&quot;sample-input&quot;])</span><span class="w"></span>
+</pre></div>
+</div>
+</section>
+</section>
+
+
+              </div>
+              
+              
+              <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+    <a class='left-prev' id="prev-link" href="../extras.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Extras</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="../rec-practices/index.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Recommended Practices</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+              
+          </main>
+          
+
+      </div>
+    </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
+<div class="container">
+  <div class="row">
+    <div class="col d-flex flex-row-reverse">
+      <ul class="nav">
+        <li class="nav-item">
+          <a class="nav-link" href="https://github.com/common-workflow-language/user_guide/blob/gh-pages/CONTRIBUTING.md">Contributing</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="https://github.com/common-workflow-language/user_guide/">Source</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="https://github.com/common-workflow-language/user_guide/blob/gh-pages/CITATION">Cite</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<footer class="footer mt-5 mt-md-0">
+  <div class="container">
+    
+    <div class="footer-item">
+      <p class="copyright">
+    &copy; Copyright 2013, CWL Project Team.<br>
+</p>
+    </div>
+    
+  </div>
+</footer>
+
+  </body>
+</html>

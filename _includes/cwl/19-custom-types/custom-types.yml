@@ -1,5 +1,0 @@
-biom:
-    class: File
-    format: http://edamontology.org/format_3746
-    path: rich_sparse_otu_table.biom
-table_type: OTU table

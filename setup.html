@@ -1,0 +1,286 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Setup &#8212; Common Workflow Language User Guide 0.1 documentation</title>
+    
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <link rel="shortcut icon" href="_static/favicon.ico"/>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Episodes" href="episodes.html" />
+    <link rel="prev" title="Code of Conduct" href="CODE_OF_CONDUCT.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+      
+      <link rel="icon" sizes="16x16" href="_static/images/favicons/cwl/favicon-16x16.png">
+      
+    
+      
+      <link rel="icon" sizes="32x32" href="_static/images/favicons/cwl/favicon-32x32.png">
+      
+    
+      
+      <link rel="icon" sizes="96x96" href="_static/images/favicons/cwl/favicon-96x96.png">
+      
+    
+      
+      <link rel="icon" sizes="128x128" href="_static/images/favicons/cwl/favicon-128.png">
+      
+    
+      
+      <link rel="icon" sizes="196x196" href="_static/images/favicons/cwl/favicon-196x196.png">
+      
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+    <nav class="navbar navbar-light navbar-expand-lg bg-light fixed-top bd-navbar" id="navbar-main"><div class="container-xl">
+
+  <div id="navbar-start">
+    
+    
+
+<a class="navbar-brand" href="index.html">
+  <img src="_static/CWL-Logo-HD-cropped2.png" class="logo" alt="logo">
+</a>
+
+
+    
+  </div>
+
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-collapsible" aria-controls="navbar-collapsible" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  
+  <div id="navbar-collapsible" class="col-lg-9 collapse navbar-collapse">
+    <div id="navbar-center" class="mr-auto">
+      
+      <div class="navbar-center-item">
+        <ul id="navbar-main-elements" class="navbar-nav">
+    <li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="CODE_OF_CONDUCT.html">
+  Code of Conduct
+ </a>
+</li>
+
+<li class="toctree-l1 current active nav-item">
+ <a class="current reference internal nav-link" href="#">
+  Setup
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="episodes.html">
+  Episodes
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="extras.html">
+  Extras
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="LICENSE.html">
+  Licenses
+ </a>
+</li>
+
+    
+</ul>
+      </div>
+      
+    </div>
+
+    <div id="navbar-end">
+      
+      <div class="navbar-end-item">
+        <ul id="navbar-icon-links" class="navbar-nav" aria-label="Icon Links">
+        <li class="nav-item">
+          <a class="nav-link" href="https://github.com/common-workflow-language/user_guide/" rel="noopener" target="_blank" title="GitHub"><span><i class="fab fa-github-square"></i></span>
+            <label class="sr-only">GitHub</label></a>
+        </li>
+      </ul>
+      </div>
+      
+    </div>
+  </div>
+</div>
+    </nav>
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+            
+            <!-- Only show if we have sidebars configured, else just a small margin  -->
+            <div class="col-12 col-md-3 bd-sidebar">
+              <div class="sidebar-start-items"><form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" >
+</form><nav class="bd-links d-none d-md-block" id="bd-docs-nav" aria-label="Main navigation">
+  <div class="bd-toc-item active">
+    
+  </div>
+</nav>
+              </div>
+              <div class="sidebar-end-items">
+              </div>
+            </div>
+            
+          
+
+          
+          <div class="d-none d-xl-block col-xl-2 bd-toc">
+            
+              
+              <div class="toc-item">
+                
+
+<nav id="bd-toc-nav">
+    
+</nav>
+              </div>
+              
+              <div class="toc-item">
+                
+
+<div class="tocsection editthispage">
+    <a href="https://github.com/common-workflow-language/user_guide/edit/gh-pages/setup.md">
+        <i class="fas fa-pencil-alt"></i> Edit this page
+    </a>
+</div>
+
+              </div>
+              
+            
+          </div>
+          
+
+          
+          
+            
+          
+          <main class="col-12 col-md-9 col-xl-7 py-md-5 pl-md-5 pr-md-4 bd-content" role="main">
+              
+              <div>
+                
+  <section id="setup">
+<h1>Setup<a class="headerlink" href="#setup" title="Permalink to this headline">#</a></h1>
+<p>To follow the Common Workflow Language user guide, you will need an up-to-date
+Linux or Mac OS X system, with the following software installed:</p>
+<ul class="simple">
+<li><p>A text editor with YAML support, for example <a class="reference external" href="https://github.com/rabix/benten#install-vs-code-extension">Visual Studio Code with the Benten (CWL) plugin</a>. If you want to use a different text editor then review <a class="reference external" href="https://www.commonwl.org/#Editors_and_viewers">this list of plugins that add CWL support to code editors</a></p></li>
+<li><p>A CWL implementation to run the described tools and workflows. When first
+getting started with CWL, we recommend the reference implementation,
+<a class="reference external" href="https://github.com/common-workflow-language/cwltool#install"><code class="docutils literal notranslate"><span class="pre">cwltool</span></code></a>. You can find a full list on
+<a class="reference external" href="https://www.commonwl.org/">the project homepage</a>.</p></li>
+<li><p>Most of the software tools used in the user guide are standard UNIX commands
+(<code class="docutils literal notranslate"><span class="pre">cat</span></code>, <code class="docutils literal notranslate"><span class="pre">echo</span></code>, <code class="docutils literal notranslate"><span class="pre">env</span></code>, <code class="docutils literal notranslate"><span class="pre">tar</span></code>, <code class="docutils literal notranslate"><span class="pre">touch</span></code>, <code class="docutils literal notranslate"><span class="pre">wc</span></code>), but to run all examples you will
+also need:</p>
+<ul>
+<li><p>node.js</p></li>
+<li><p>Java compiler</p></li>
+<li><p>Docker (optional)</p></li>
+</ul>
+</li>
+</ul>
+</section>
+
+
+              </div>
+              
+              
+              <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+    <a class='left-prev' id="prev-link" href="CODE_OF_CONDUCT.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Code of Conduct</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="episodes.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Episodes</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+              
+          </main>
+          
+
+      </div>
+    </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
+<div class="container">
+  <div class="row">
+    <div class="col d-flex flex-row-reverse">
+      <ul class="nav">
+        <li class="nav-item">
+          <a class="nav-link" href="https://github.com/common-workflow-language/user_guide/blob/gh-pages/CONTRIBUTING.md">Contributing</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="https://github.com/common-workflow-language/user_guide/">Source</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="https://github.com/common-workflow-language/user_guide/blob/gh-pages/CITATION">Cite</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<footer class="footer mt-5 mt-md-0">
+  <div class="container">
+    
+    <div class="footer-item">
+      <p class="copyright">
+    &copy; Copyright 2013, CWL Project Team.<br>
+</p>
+    </div>
+    
+  </div>
+</footer>
+
+  </body>
+</html>

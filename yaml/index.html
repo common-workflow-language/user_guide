@@ -1,0 +1,502 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>YAML Guide &#8212; Common Workflow Language User Guide 0.1 documentation</title>
+    
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Licenses" href="../LICENSE.html" />
+    <link rel="prev" title="Recommended Practices" href="../rec-practices/index.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+      
+      <link rel="icon" sizes="16x16" href="../_static/images/favicons/cwl/favicon-16x16.png">
+      
+    
+      
+      <link rel="icon" sizes="32x32" href="../_static/images/favicons/cwl/favicon-32x32.png">
+      
+    
+      
+      <link rel="icon" sizes="96x96" href="../_static/images/favicons/cwl/favicon-96x96.png">
+      
+    
+      
+      <link rel="icon" sizes="128x128" href="../_static/images/favicons/cwl/favicon-128.png">
+      
+    
+      
+      <link rel="icon" sizes="196x196" href="../_static/images/favicons/cwl/favicon-196x196.png">
+      
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+    <nav class="navbar navbar-light navbar-expand-lg bg-light fixed-top bd-navbar" id="navbar-main"><div class="container-xl">
+
+  <div id="navbar-start">
+    
+    
+
+<a class="navbar-brand" href="../index.html">
+  <img src="../_static/CWL-Logo-HD-cropped2.png" class="logo" alt="logo">
+</a>
+
+
+    
+  </div>
+
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-collapsible" aria-controls="navbar-collapsible" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  
+  <div id="navbar-collapsible" class="col-lg-9 collapse navbar-collapse">
+    <div id="navbar-center" class="mr-auto">
+      
+      <div class="navbar-center-item">
+        <ul id="navbar-main-elements" class="navbar-nav">
+    <li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../CODE_OF_CONDUCT.html">
+  Code of Conduct
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../setup.html">
+  Setup
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../episodes.html">
+  Episodes
+ </a>
+</li>
+
+<li class="toctree-l1 current active nav-item">
+ <a class="reference internal nav-link" href="../extras.html">
+  Extras
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../LICENSE.html">
+  Licenses
+ </a>
+</li>
+
+    
+</ul>
+      </div>
+      
+    </div>
+
+    <div id="navbar-end">
+      
+      <div class="navbar-end-item">
+        <ul id="navbar-icon-links" class="navbar-nav" aria-label="Icon Links">
+        <li class="nav-item">
+          <a class="nav-link" href="https://github.com/common-workflow-language/user_guide/" rel="noopener" target="_blank" title="GitHub"><span><i class="fab fa-github-square"></i></span>
+            <label class="sr-only">GitHub</label></a>
+        </li>
+      </ul>
+      </div>
+      
+    </div>
+  </div>
+</div>
+    </nav>
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+            
+            <!-- Only show if we have sidebars configured, else just a small margin  -->
+            <div class="col-12 col-md-3 bd-sidebar">
+              <div class="sidebar-start-items"><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" >
+</form><nav class="bd-links d-none d-md-block" id="bd-docs-nav" aria-label="Main navigation">
+  <div class="bd-toc-item active">
+    <ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../misc/index.html">
+   Miscellaneous
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../rec-practices/index.html">
+   Recommended Practices
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   YAML Guide
+  </a>
+ </li>
+</ul>
+
+  </div>
+</nav>
+              </div>
+              <div class="sidebar-end-items">
+              </div>
+            </div>
+            
+          
+
+          
+          <div class="d-none d-xl-block col-xl-2 bd-toc">
+            
+              
+              <div class="toc-item">
+                
+<div class="tocsection onthispage mt-5 pt-1 pb-3">
+    <i class="fas fa-list"></i> On this page
+</div>
+
+<nav id="bd-toc-nav">
+    <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#contents">
+   Contents
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#key-value-pairs">
+   Key-Value Pairs
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#comments">
+   Comments
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#maps">
+   Maps
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#arrays">
+   Arrays
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#json-style">
+   JSON Style
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#reference">
+   Reference
+  </a>
+ </li>
+</ul>
+
+</nav>
+              </div>
+              
+              <div class="toc-item">
+                
+
+<div class="tocsection editthispage">
+    <a href="https://github.com/common-workflow-language/user_guide/edit/gh-pages/yaml/index.md">
+        <i class="fas fa-pencil-alt"></i> Edit this page
+    </a>
+</div>
+
+              </div>
+              
+            
+          </div>
+          
+
+          
+          
+            
+          
+          <main class="col-12 col-md-9 col-xl-7 py-md-5 pl-md-5 pr-md-4 bd-content" role="main">
+              
+              <div>
+                
+  <section id="yaml-guide">
+<h1>YAML Guide<a class="headerlink" href="#yaml-guide" title="Permalink to this headline">#</a></h1>
+<script src="https://unpkg.com/mermaid@8.0.0/dist/mermaid.min.js"></script>
+<script>mermaid.initialize({startOnLoad:true});</script>
+<p><a class="reference external" href="http://yaml.org/">YAML</a> is a file format
+designed to be readable by both computers and humans.
+This guide introduces the features of YAML
+relevant when writing CWL descriptions and input parameter files.</p>
+<section id="contents">
+<h2>Contents<a class="headerlink" href="#contents" title="Permalink to this headline">#</a></h2>
+<ul class="simple">
+<li><p><a class="reference internal" href="#key-value-pairs"><span class="std std-doc">Key-Value Pairs</span></a></p></li>
+<li><p><a class="reference internal" href="#comments"><span class="std std-doc">Comments</span></a></p></li>
+<li><p><a class="reference internal" href="#maps"><span class="std std-doc">Maps</span></a></p></li>
+<li><p><a class="reference internal" href="#arrays"><span class="std std-doc">Arrays</span></a></p></li>
+<li><p><a class="reference internal" href="#json-style"><span class="std std-doc">JSON Style</span></a></p></li>
+</ul>
+</section>
+<section id="key-value-pairs">
+<h2>Key-Value Pairs<a class="headerlink" href="#key-value-pairs" title="Permalink to this headline">#</a></h2>
+<p>Fundamentally, a file written in YAML consists of a set of <em>key-value pairs</em>.
+Each pair is written as <code class="docutils literal notranslate"><span class="pre">key:</span> <span class="pre">value</span></code>,
+where whitespace after the <code class="docutils literal notranslate"><span class="pre">:</span></code> is optional.
+Key names in CWL files should not contain whitespace -
+We use <a class="reference external" href="https://en.wikipedia.org/wiki/Camel_case"><em>camelCase</em></a> for multi-word key names
+that have special meaning in the CWL specification
+and underscored key names otherwise.
+For example:</p>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">first_name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Bilbo</span><span class="w"></span>
+<span class="nt">last_name</span><span class="p">:</span><span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">Baggins</span><span class="w"></span>
+<span class="nt">age_years</span><span class="p">:</span><span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">111</span><span class="w"></span>
+<span class="nt">home</span><span class="p">:</span><span class="w">       </span><span class="l l-Scalar l-Scalar-Plain">Bag End, Hobbiton</span><span class="w"></span>
+</pre></div>
+</div>
+<p>The YAML above defines four keys -
+<code class="docutils literal notranslate"><span class="pre">first_name</span></code>, <code class="docutils literal notranslate"><span class="pre">last_name</span></code>, <code class="docutils literal notranslate"><span class="pre">age_years</span></code>, and <code class="docutils literal notranslate"><span class="pre">home</span></code> -
+with their four respective values.
+Values can be
+character strings,
+numeric (integer, floating point, or scientfic representation),
+Boolean (<code class="docutils literal notranslate"><span class="pre">true</span></code> or <code class="docutils literal notranslate"><span class="pre">false</span></code>),
+or more complex nested types (see below).</p>
+<p>Values may be wrapped in quotation marks
+but be aware that this may change the way that they are interpreted
+i.e. <code class="docutils literal notranslate"><span class="pre">&quot;1234&quot;</span></code> will be treated as a character string
+, while <code class="docutils literal notranslate"><span class="pre">1234</span></code> will be treated as an integer.
+This distinction can be important,
+for example when describing parameters to a command:
+in CWL all parts of <code class="docutils literal notranslate"><span class="pre">baseCommand</span></code> must be strings so,
+if you want to specify a fixed numeric value to a command,
+make sure that you wrap that numeric value in quotes: <code class="docutils literal notranslate"><span class="pre">baseCommand:</span> <span class="pre">[echo,</span> <span class="pre">&quot;42&quot;]</span></code>.</p>
+</section>
+<section id="comments">
+<h2>Comments<a class="headerlink" href="#comments" title="Permalink to this headline">#</a></h2>
+<p>You may use <code class="docutils literal notranslate"><span class="pre">#</span></code> to add comments to your CWL and parameter files.
+Any characters to the right of <code class="docutils literal notranslate"> <span class="pre">#</span></code> will be ignored by the program interpreting
+the YAML.
+For example:</p>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">first_name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Bilbo</span><span class="w"></span>
+<span class="nt">last_name</span><span class="p">:</span><span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">Baggins</span><span class="w"></span>
+<span class="nt">age_years</span><span class="p">:</span><span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">111</span><span class="w"></span>
+<span class="c1"># this line will be ignored by the interpreter</span><span class="w"></span>
+<span class="nt">home</span><span class="p">:</span><span class="w">       </span><span class="l l-Scalar l-Scalar-Plain">Bag End, Hobbiton</span><span class="w"> </span><span class="c1"># this is ignored too</span><span class="w"></span>
+</pre></div>
+</div>
+<p>If there is anything on the line before the comment,
+be sure to add at least one space before the <code class="docutils literal notranslate"><span class="pre">#</span></code>!</p>
+</section>
+<section id="maps">
+<h2>Maps<a class="headerlink" href="#maps" title="Permalink to this headline">#</a></h2>
+<p>When describing a tool or workflow with CWL,
+it is usually necessary to construct more complex, nested representations.
+Called <em>maps</em>,
+these hierarchical structures are described in YAML by providing
+additional key-value pairs as the value of any key.
+These pairs (sometimes referred to as “children”) are written
+on new lines under the key to which they belong (the “parent”),
+and should be indented with two spaces
+(⇥tab characters are not allowed).
+For example:</p>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">cwlVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">v1.0</span><span class="w"></span>
+<span class="nt">class</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">CommandLineTool</span><span class="w"></span>
+<span class="nt">baseCommand</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">echo</span><span class="w"></span>
+<span class="nt">inputs</span><span class="p">:</span><span class="w"> </span><span class="c1"># this key has an object value</span><span class="w"></span>
+<span class="w">  </span><span class="nt">example_flag</span><span class="p">:</span><span class="w"> </span><span class="c1"># so does this one</span><span class="w"></span>
+<span class="w">    </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">boolean</span><span class="w"></span>
+<span class="w">    </span><span class="nt">inputBinding</span><span class="p">:</span><span class="w"> </span><span class="c1"># and this one too</span><span class="w"></span>
+<span class="w">      </span><span class="nt">position</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1</span><span class="w"></span>
+<span class="w">      </span><span class="nt">prefix</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">-f</span><span class="w"></span>
+</pre></div>
+</div>
+<p>The YAML above illustrates how you can build up complex nested object
+descriptions relatively quickly.
+The <code class="docutils literal notranslate"><span class="pre">inputs</span></code> map contains a single key, <code class="docutils literal notranslate"><span class="pre">example_flag</span></code>,
+which itself contains two keys, <code class="docutils literal notranslate"><span class="pre">type</span></code> and <code class="docutils literal notranslate"><span class="pre">inputBinding</span></code>,
+while one of these children, <code class="docutils literal notranslate"><span class="pre">inputBinding</span></code>,
+contains a further two key-value pairs (<code class="docutils literal notranslate"><span class="pre">position</span></code> and <code class="docutils literal notranslate"><span class="pre">prefix</span></code>).
+See the <a class="reference internal" href="#arrays"><span class="std std-doc">Arrays</span></a> section below for more information about providing multiple
+values/key-value pairs for a single key.
+For comparison with the example YAML above,
+here is a graphical representation of the <code class="docutils literal notranslate"><span class="pre">inputs</span></code> object it describes.</p>
+<div class="mermaid">
+graph TD
+  inputs --> example_flag
+  example_flag --> type
+  type --- bool((boolean))
+  example_flag --> inputBinding
+  inputBinding --> position
+  inputBinding --> prefix
+  position --- posval((1))
+  prefix --- prefval(('-f'))
+</div>
+</section>
+<section id="arrays">
+<h2>Arrays<a class="headerlink" href="#arrays" title="Permalink to this headline">#</a></h2>
+<p>In certain circumstances it is necessary to provide
+multiple values or objects for a single key.
+As we’ve already seen in the <a class="reference internal" href="#maps"><span class="std std-doc">Maps</span></a> section above,
+more than one key-value pair can be mapped to a single key.
+However, it is also possible to define multiple values for a key
+without having to provide a unique key for each value.
+We can achieve this with an <em>array</em>,
+where each value is defined on its own line and preceded by <code class="docutils literal notranslate"><span class="pre">-</span></code>.
+For example:</p>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">touchfiles</span><span class="p">:</span><span class="w"></span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">foo.txt</span><span class="w"></span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">bar.dat</span><span class="w"></span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">baz.txt</span><span class="w"></span>
+</pre></div>
+</div>
+<p>and a more complex example combining maps and arrays:</p>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">exclusive_parameters</span><span class="p">:</span><span class="w"></span>
+<span class="w">  </span><span class="nt">type</span><span class="p">:</span><span class="w"></span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">record</span><span class="w"></span>
+<span class="w">      </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">itemC</span><span class="w"></span>
+<span class="w">      </span><span class="nt">fields</span><span class="p">:</span><span class="w"></span>
+<span class="w">        </span><span class="nt">itemC</span><span class="p">:</span><span class="w"></span>
+<span class="w">          </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">string</span><span class="w"></span>
+<span class="w">          </span><span class="nt">inputBinding</span><span class="p">:</span><span class="w"></span>
+<span class="w">            </span><span class="nt">prefix</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">-C</span><span class="w"></span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">record</span><span class="w"></span>
+<span class="w">      </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">itemD</span><span class="w"></span>
+<span class="w">      </span><span class="nt">fields</span><span class="p">:</span><span class="w"></span>
+<span class="w">        </span><span class="nt">itemD</span><span class="p">:</span><span class="w"></span>
+<span class="w">          </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">string</span><span class="w"></span>
+<span class="w">          </span><span class="nt">inputBinding</span><span class="p">:</span><span class="w"></span>
+<span class="w">            </span><span class="nt">prefix</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">-D</span><span class="w"></span>
+</pre></div>
+</div>
+</section>
+<section id="json-style">
+<h2>JSON Style<a class="headerlink" href="#json-style" title="Permalink to this headline">#</a></h2>
+<p>YAML is based on <a class="reference external" href="http://json.org/">JavaScript Object Notation (JSON)</a>
+and maps and arrays can also be defined in YAML using the native JSON syntax.
+For example:</p>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">touchfiles</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="nv">foo.txt</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">bar.dat</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">baz.txt</span><span class="p p-Indicator">]</span><span class="w"> </span><span class="c1"># equivalent to first Arrays example</span><span class="w"></span>
+</pre></div>
+</div>
+<p>and:</p>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="c1"># equivalent to the `inputs` example in &quot;Maps&quot; above</span><span class="w"></span>
+<span class="nt">inputs</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">{</span><span class="nt">example_flag</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">{</span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="nv">boolean</span><span class="p p-Indicator">,</span><span class="nt"> inputBinding</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">{</span><span class="nt">position</span><span class="p">:</span><span class="w"> </span><span class="nv">1</span><span class="p p-Indicator">,</span><span class="nt"> prefix</span><span class="p">:</span><span class="w"> </span><span class="nv">-f</span><span class="p p-Indicator">}}}</span><span class="w"></span>
+</pre></div>
+</div>
+<p>Native JSON can be useful
+to indicate where a field is being left intentionally empty
+(such as <code class="docutils literal notranslate"><span class="pre">[]</span></code> for an empty array),
+and where it makes more sense
+for the values to be located on the same line
+(such as when providing option flags and their values in a shell command).
+However, as the second example above shows,
+it can severely affect the readability of a YAML file
+and should be used sparingly.</p>
+</section>
+<section id="reference">
+<h2>Reference<a class="headerlink" href="#reference" title="Permalink to this headline">#</a></h2>
+<p>The <a class="reference external" href="https://learnxinyminutes.com/docs/yaml/">Learn YAML in Y Minutes</a> reference was very helpful for us
+while we wrote this guide,
+though it also covers features that are not valid in CWL.</p>
+</section>
+</section>
+
+
+              </div>
+              
+              
+              <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+    <a class='left-prev' id="prev-link" href="../rec-practices/index.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Recommended Practices</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="../LICENSE.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Licenses</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+              
+          </main>
+          
+
+      </div>
+    </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
+<div class="container">
+  <div class="row">
+    <div class="col d-flex flex-row-reverse">
+      <ul class="nav">
+        <li class="nav-item">
+          <a class="nav-link" href="https://github.com/common-workflow-language/user_guide/blob/gh-pages/CONTRIBUTING.md">Contributing</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="https://github.com/common-workflow-language/user_guide/">Source</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="https://github.com/common-workflow-language/user_guide/blob/gh-pages/CITATION">Cite</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<footer class="footer mt-5 mt-md-0">
+  <div class="container">
+    
+    <div class="footer-item">
+      <p class="copyright">
+    &copy; Copyright 2013, CWL Project Team.<br>
+</p>
+    </div>
+    
+  </div>
+</footer>
+
+  </body>
+</html>

@@ -1,0 +1,514 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Writing Workflows &#8212; Common Workflow Language User Guide 0.1 documentation</title>
+    
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Nested Workflows" href="../22-nested-workflows/index.html" />
+    <link rel="prev" title="Specifying Software Requirements" href="../20-software-requirements/index.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+      
+      <link rel="icon" sizes="16x16" href="../_static/images/favicons/cwl/favicon-16x16.png">
+      
+    
+      
+      <link rel="icon" sizes="32x32" href="../_static/images/favicons/cwl/favicon-32x32.png">
+      
+    
+      
+      <link rel="icon" sizes="96x96" href="../_static/images/favicons/cwl/favicon-96x96.png">
+      
+    
+      
+      <link rel="icon" sizes="128x128" href="../_static/images/favicons/cwl/favicon-128.png">
+      
+    
+      
+      <link rel="icon" sizes="196x196" href="../_static/images/favicons/cwl/favicon-196x196.png">
+      
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+    <nav class="navbar navbar-light navbar-expand-lg bg-light fixed-top bd-navbar" id="navbar-main"><div class="container-xl">
+
+  <div id="navbar-start">
+    
+    
+
+<a class="navbar-brand" href="../index.html">
+  <img src="../_static/CWL-Logo-HD-cropped2.png" class="logo" alt="logo">
+</a>
+
+
+    
+  </div>
+
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-collapsible" aria-controls="navbar-collapsible" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  
+  <div id="navbar-collapsible" class="col-lg-9 collapse navbar-collapse">
+    <div id="navbar-center" class="mr-auto">
+      
+      <div class="navbar-center-item">
+        <ul id="navbar-main-elements" class="navbar-nav">
+    <li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../CODE_OF_CONDUCT.html">
+  Code of Conduct
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../setup.html">
+  Setup
+ </a>
+</li>
+
+<li class="toctree-l1 current active nav-item">
+ <a class="reference internal nav-link" href="../episodes.html">
+  Episodes
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../extras.html">
+  Extras
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../LICENSE.html">
+  Licenses
+ </a>
+</li>
+
+    
+</ul>
+      </div>
+      
+    </div>
+
+    <div id="navbar-end">
+      
+      <div class="navbar-end-item">
+        <ul id="navbar-icon-links" class="navbar-nav" aria-label="Icon Links">
+        <li class="nav-item">
+          <a class="nav-link" href="https://github.com/common-workflow-language/user_guide/" rel="noopener" target="_blank" title="GitHub"><span><i class="fab fa-github-square"></i></span>
+            <label class="sr-only">GitHub</label></a>
+        </li>
+      </ul>
+      </div>
+      
+    </div>
+  </div>
+</div>
+    </nav>
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+            
+            <!-- Only show if we have sidebars configured, else just a small margin  -->
+            <div class="col-12 col-md-3 bd-sidebar">
+              <div class="sidebar-start-items"><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" >
+</form><nav class="bd-links d-none d-md-block" id="bd-docs-nav" aria-label="Main navigation">
+  <div class="bd-toc-item active">
+    <ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../01-introduction/index.html">
+   Introduction
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../02-1st-example/index.html">
+   First Example
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../03-input/index.html">
+   Essential Input Parameters
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../04-output/index.html">
+   Returning Output Files
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../05-stdout/index.html">
+   Capturing Standard Output
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../06-params/index.html">
+   Parameter References
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../07-containers/index.html">
+   Running Tools Inside Docker
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../08-arguments/index.html">
+   Additional Arguments and Parameters
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../09-array-inputs/index.html">
+   Array Inputs
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../10-array-outputs/index.html">
+   Array Outputs
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../11-records/index.html">
+   Advanced Inputs
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../12-env/index.html">
+   Environment Variables
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../13-expressions/index.html">
+   JavaScript Expressions
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../14-runtime/index.html">
+   Creating Files at Runtime
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../15-staging/index.html">
+   Staging Input Files
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../16-file-formats/index.html">
+   File Formats
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../17-metadata/index.html">
+   Metadata and Authorship
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../19-custom-types/index.html">
+   Custom Types
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../20-software-requirements/index.html">
+   Specifying Software Requirements
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Writing Workflows
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../22-nested-workflows/index.html">
+   Nested Workflows
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../23-scatter-workflow/index.html">
+   Scattering Workflows
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../24_conditional-workflow/index.html">
+   Conditional workflows
+  </a>
+ </li>
+</ul>
+
+  </div>
+</nav>
+              </div>
+              <div class="sidebar-end-items">
+              </div>
+            </div>
+            
+          
+
+          
+          <div class="d-none d-xl-block col-xl-2 bd-toc">
+            
+              
+              <div class="toc-item">
+                
+
+<nav id="bd-toc-nav">
+    
+</nav>
+              </div>
+              
+              <div class="toc-item">
+                
+
+<div class="tocsection editthispage">
+    <a href="https://github.com/common-workflow-language/user_guide/edit/gh-pages/21-1st-workflow/index.md">
+        <i class="fas fa-pencil-alt"></i> Edit this page
+    </a>
+</div>
+
+              </div>
+              
+            
+          </div>
+          
+
+          
+          
+            
+          
+          <main class="col-12 col-md-9 col-xl-7 py-md-5 pl-md-5 pr-md-4 bd-content" role="main">
+              
+              <div>
+                
+  <section id="writing-workflows">
+<h1>Writing Workflows<a class="headerlink" href="#writing-workflows" title="Permalink to this headline">#</a></h1>
+<p>This workflow extracts a java source file from a tar file and then
+compiles it.</p>
+<p><em>1st-workflow.cwl</em></p>
+<div class="highlight-cwl notranslate"><div class="highlight"><pre><span></span><span class="c1">#!/usr/bin/env cwl-runner</span><span class="w"></span>
+
+<span class="nt">cwlVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">v1.0</span><span class="w"></span>
+<span class="nt">class</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Workflow</span><span class="w"></span>
+<span class="nt">inputs</span><span class="p">:</span><span class="w"></span>
+<span class="w">  </span><span class="nt">tarball</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">File</span><span class="w"></span>
+<span class="w">  </span><span class="nt">name_of_file_to_extract</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">string</span><span class="w"></span>
+
+<span class="nt">outputs</span><span class="p">:</span><span class="w"></span>
+<span class="w">  </span><span class="nt">compiled_class</span><span class="p">:</span><span class="w"></span>
+<span class="w">    </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">File</span><span class="w"></span>
+<span class="w">    </span><span class="nt">outputSource</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">compile/classfile</span><span class="w"></span>
+
+<span class="nt">steps</span><span class="p">:</span><span class="w"></span>
+<span class="w">  </span><span class="nt">untar</span><span class="p">:</span><span class="w"></span>
+<span class="w">    </span><span class="nt">run</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">tar-param.cwl</span><span class="w"></span>
+<span class="w">    </span><span class="nt">in</span><span class="p">:</span><span class="w"></span>
+<span class="w">      </span><span class="nt">tarfile</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">tarball</span><span class="w"></span>
+<span class="w">      </span><span class="nt">extractfile</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">name_of_file_to_extract</span><span class="w"></span>
+<span class="w">    </span><span class="nt">out</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="nv">extracted_file</span><span class="p p-Indicator">]</span><span class="w"></span>
+
+<span class="w">  </span><span class="nt">compile</span><span class="p">:</span><span class="w"></span>
+<span class="w">    </span><span class="nt">run</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">arguments.cwl</span><span class="w"></span>
+<span class="w">    </span><span class="nt">in</span><span class="p">:</span><span class="w"></span>
+<span class="w">      </span><span class="nt">src</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">untar/extracted_file</span><span class="w"></span>
+<span class="w">    </span><span class="nt">out</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="nv">classfile</span><span class="p p-Indicator">]</span><span class="w"></span>
+</pre></div>
+</div>
+<div class="admonition-visualization-of-1st-workflow-cwl admonition">
+<p class="admonition-title">Visualization of 1st-workflow.cwl</p>
+<p><a class="reference external" href="https://view.commonwl.org/workflows/github.com/common-workflow-language/user_guide/blob/gh-pages/_includes/cwl/21-1st-workflow/1st-workflow.cwl"><img alt="Visualization of 1st-workflow.cwl" src="https://view.commonwl.org/graph/svg/github.com/common-workflow-language/user_guide/blob/gh-pages/_includes/cwl/21-1st-workflow/1st-workflow.cwl" /></a></p>
+</div>
+<p>Use a YAML or a JSON object in a separate file to describe the input of a run:</p>
+<p><em>1st-workflow-job.yml</em></p>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">tarball</span><span class="p">:</span><span class="w"></span>
+<span class="w">  </span><span class="nt">class</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">File</span><span class="w"></span>
+<span class="w">  </span><span class="nt">path</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">hello.tar</span><span class="w"></span>
+<span class="nt">name_of_file_to_extract</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Hello.java</span><span class="w"></span>
+</pre></div>
+</div>
+<p>Now invoke <code class="docutils literal notranslate"><span class="pre">cwl-runner</span></code> with the tool wrapper and the input object on the
+command line:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ <span class="nb">echo</span> <span class="s2">&quot;public class Hello {}&quot;</span> &gt; Hello.java <span class="o">&amp;&amp;</span> tar -cvf hello.tar Hello.java
+$ cwl-runner 1st-workflow.cwl 1st-workflow-job.yml
+<span class="o">[</span>job untar<span class="o">]</span> /tmp/tmp94qFiM$ tar --create --file /home/example/hello.tar Hello.java
+<span class="o">[</span>step untar<span class="o">]</span> completion status is success
+<span class="o">[</span>job compile<span class="o">]</span> /tmp/tmpu1iaKL$ docker run -i --volume<span class="o">=</span>/tmp/tmp94qFiM/Hello.java:/var/lib/cwl/job301600808_tmp94qFiM/Hello.java:ro --volume<span class="o">=</span>/tmp/tmpu1iaKL:/var/spool/cwl:rw --volume<span class="o">=</span>/tmp/tmpfZnNdR:/tmp:rw --workdir<span class="o">=</span>/var/spool/cwl --read-only<span class="o">=</span><span class="nb">true</span> --net<span class="o">=</span>none --user<span class="o">=</span><span class="m">1001</span> --rm --env<span class="o">=</span><span class="nv">TMPDIR</span><span class="o">=</span>/tmp java:7 javac -d /var/spool/cwl /var/lib/cwl/job301600808_tmp94qFiM/Hello.java
+<span class="o">[</span>step compile<span class="o">]</span> completion status is success
+<span class="o">[</span>workflow 1st-workflow.cwl<span class="o">]</span> outdir is /home/example
+Final process status is success
+<span class="o">{</span>
+  <span class="s2">&quot;compiled_class&quot;</span>: <span class="o">{</span>
+    <span class="s2">&quot;location&quot;</span>: <span class="s2">&quot;/home/example/Hello.class&quot;</span>,
+    <span class="s2">&quot;checksum&quot;</span>: <span class="s2">&quot;sha1</span><span class="nv">$e68df795c0686e9aa1a1195536bd900f5f417b18</span><span class="s2">&quot;</span>,
+    <span class="s2">&quot;class&quot;</span>: <span class="s2">&quot;File&quot;</span>,
+    <span class="s2">&quot;size&quot;</span>: <span class="m">416</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+</pre></div>
+</div>
+<p>What’s going on here?  Let’s break it down:</p>
+<div class="highlight-cwl notranslate"><div class="highlight"><pre><span></span><span class="nt">cwlVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">v1.0</span><span class="w"></span>
+<span class="nt">class</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Workflow</span><span class="w"></span>
+</pre></div>
+</div>
+<p>The <code class="docutils literal notranslate"><span class="pre">cwlVersion</span></code> field indicates the version of the CWL spec used by the
+document.  The <code class="docutils literal notranslate"><span class="pre">class</span></code> field indicates this document describes a workflow.</p>
+<div class="highlight-cwl notranslate"><div class="highlight"><pre><span></span><span class="nt">inputs</span><span class="p">:</span><span class="w"></span>
+<span class="w">  </span><span class="nt">tarball</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">File</span><span class="w"></span>
+<span class="w">  </span><span class="nt">name_of_file_to_extract</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">string</span><span class="w"></span>
+</pre></div>
+</div>
+<p>The <code class="docutils literal notranslate"><span class="pre">inputs</span></code> section describes the inputs of the workflow.  This is a
+list of input parameters where each parameter consists of an identifier
+and a data type.  These parameters can be used as sources for input to
+specific workflows steps.</p>
+<div class="highlight-cwl notranslate"><div class="highlight"><pre><span></span><span class="nt">outputs</span><span class="p">:</span><span class="w"></span>
+<span class="w">  </span><span class="nt">compiled_class</span><span class="p">:</span><span class="w"></span>
+<span class="w">    </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">File</span><span class="w"></span>
+<span class="w">    </span><span class="nt">outputSource</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">compile/classfile</span><span class="w"></span>
+</pre></div>
+</div>
+<p>The <code class="docutils literal notranslate"><span class="pre">outputs</span></code> section describes the outputs of the workflow.  This is a
+list of output parameters where each parameter consists of an identifier
+and a data type.  The <code class="docutils literal notranslate"><span class="pre">outputSource</span></code> connects the output parameter <code class="docutils literal notranslate"><span class="pre">classfile</span></code>
+of the <code class="docutils literal notranslate"><span class="pre">compile</span></code> step to the workflow output parameter <code class="docutils literal notranslate"><span class="pre">compiled_class</span></code>.</p>
+<div class="highlight-cwl notranslate"><div class="highlight"><pre><span></span><span class="nt">steps</span><span class="p">:</span><span class="w"></span>
+<span class="w">  </span><span class="nt">untar</span><span class="p">:</span><span class="w"></span>
+<span class="w">    </span><span class="nt">run</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">tar-param.cwl</span><span class="w"></span>
+<span class="w">    </span><span class="nt">in</span><span class="p">:</span><span class="w"></span>
+<span class="w">      </span><span class="nt">tarfile</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">tarball</span><span class="w"></span>
+<span class="w">      </span><span class="nt">extractfile</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">name_of_file_to_extract</span><span class="w"></span>
+<span class="w">    </span><span class="nt">out</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="nv">extracted_file</span><span class="p p-Indicator">]</span><span class="w"></span>
+</pre></div>
+</div>
+<p>The <code class="docutils literal notranslate"><span class="pre">steps</span></code> section describes the actual steps of the workflow.  In this
+example, the first step extracts a file from a tar file, and the second
+step compiles the file from the first step using the java compiler.
+Workflow steps are not necessarily run in the order they are listed,
+instead the order is determined by the dependencies between steps (using
+<code class="docutils literal notranslate"><span class="pre">source</span></code>).  In addition, workflow steps which do not depend on one
+another may run in parallel.</p>
+<p>The first step, <code class="docutils literal notranslate"><span class="pre">untar</span></code> runs <code class="docutils literal notranslate"><span class="pre">tar-param.cwl</span></code> (described previously in
+<a class="reference internal" href="../06-params/index.html"><span class="doc std std-doc">Parameter References</span></a>).
+This tool has two input parameters, <code class="docutils literal notranslate"><span class="pre">tarfile</span></code> and <code class="docutils literal notranslate"><span class="pre">extractfile</span></code> and one output
+parameter <code class="docutils literal notranslate"><span class="pre">extracted_file</span></code>.</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">in</span></code> section of the workflow step connects these two input parameters to
+the inputs of the workflow, <code class="docutils literal notranslate"><span class="pre">tarball</span></code> and <code class="docutils literal notranslate"><span class="pre">name_of_file_to_extract</span></code> using
+<code class="docutils literal notranslate"><span class="pre">source</span></code>.  This means that when the workflow step is executed, the values
+assigned to <code class="docutils literal notranslate"><span class="pre">tarball</span></code> and <code class="docutils literal notranslate"><span class="pre">name_of_file_to_extract</span></code> will be used for the
+parameters <code class="docutils literal notranslate"><span class="pre">tarfile</span></code> and <code class="docutils literal notranslate"><span class="pre">extractfile</span></code> in order to run the tool.</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">out</span></code> section of the workflow step lists the output parameters that are
+expected from the tool.</p>
+<div class="highlight-cwl notranslate"><div class="highlight"><pre><span></span><span class="w">  </span><span class="nt">compile</span><span class="p">:</span><span class="w"></span>
+<span class="w">    </span><span class="nt">run</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">arguments.cwl</span><span class="w"></span>
+<span class="w">    </span><span class="nt">in</span><span class="p">:</span><span class="w"></span>
+<span class="w">      </span><span class="nt">src</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">untar/extracted_file</span><span class="w"></span>
+<span class="w">    </span><span class="nt">out</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="nv">classfile</span><span class="p p-Indicator">]</span><span class="w"></span>
+</pre></div>
+</div>
+<p>The second step <code class="docutils literal notranslate"><span class="pre">compile</span></code> depends on the results from the first step by
+connecting the input parameter <code class="docutils literal notranslate"><span class="pre">src</span></code> to the output parameter of <code class="docutils literal notranslate"><span class="pre">untar</span></code> using
+<code class="docutils literal notranslate"><span class="pre">untar/extracted_file</span></code>.  It runs <code class="docutils literal notranslate"><span class="pre">arguments.cwl</span></code> (described previously in
+<a class="reference internal" href="../08-arguments/index.html"><span class="doc std std-doc">Additional Arguments and Parameters</span></a>).
+The output of this step <code class="docutils literal notranslate"><span class="pre">classfile</span></code> is connected to the
+<code class="docutils literal notranslate"><span class="pre">outputs</span></code> section for the Workflow, described above.</p>
+</section>
+
+
+              </div>
+              
+              
+              <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+    <a class='left-prev' id="prev-link" href="../20-software-requirements/index.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Specifying Software Requirements</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="../22-nested-workflows/index.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Nested Workflows</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+              
+          </main>
+          
+
+      </div>
+    </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
+<div class="container">
+  <div class="row">
+    <div class="col d-flex flex-row-reverse">
+      <ul class="nav">
+        <li class="nav-item">
+          <a class="nav-link" href="https://github.com/common-workflow-language/user_guide/blob/gh-pages/CONTRIBUTING.md">Contributing</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="https://github.com/common-workflow-language/user_guide/">Source</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="https://github.com/common-workflow-language/user_guide/blob/gh-pages/CITATION">Cite</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<footer class="footer mt-5 mt-md-0">
+  <div class="container">
+    
+    <div class="footer-item">
+      <p class="copyright">
+    &copy; Copyright 2013, CWL Project Team.<br>
+</p>
+    </div>
+    
+  </div>
+</footer>
+
+  </body>
+</html>

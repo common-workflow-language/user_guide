@@ -1,0 +1,463 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Creating Files at Runtime &#8212; Common Workflow Language User Guide 0.1 documentation</title>
+    
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Staging Input Files" href="../15-staging/index.html" />
+    <link rel="prev" title="JavaScript Expressions" href="../13-expressions/index.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+      
+      <link rel="icon" sizes="16x16" href="../_static/images/favicons/cwl/favicon-16x16.png">
+      
+    
+      
+      <link rel="icon" sizes="32x32" href="../_static/images/favicons/cwl/favicon-32x32.png">
+      
+    
+      
+      <link rel="icon" sizes="96x96" href="../_static/images/favicons/cwl/favicon-96x96.png">
+      
+    
+      
+      <link rel="icon" sizes="128x128" href="../_static/images/favicons/cwl/favicon-128.png">
+      
+    
+      
+      <link rel="icon" sizes="196x196" href="../_static/images/favicons/cwl/favicon-196x196.png">
+      
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+    <nav class="navbar navbar-light navbar-expand-lg bg-light fixed-top bd-navbar" id="navbar-main"><div class="container-xl">
+
+  <div id="navbar-start">
+    
+    
+
+<a class="navbar-brand" href="../index.html">
+  <img src="../_static/CWL-Logo-HD-cropped2.png" class="logo" alt="logo">
+</a>
+
+
+    
+  </div>
+
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-collapsible" aria-controls="navbar-collapsible" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  
+  <div id="navbar-collapsible" class="col-lg-9 collapse navbar-collapse">
+    <div id="navbar-center" class="mr-auto">
+      
+      <div class="navbar-center-item">
+        <ul id="navbar-main-elements" class="navbar-nav">
+    <li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../CODE_OF_CONDUCT.html">
+  Code of Conduct
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../setup.html">
+  Setup
+ </a>
+</li>
+
+<li class="toctree-l1 current active nav-item">
+ <a class="reference internal nav-link" href="../episodes.html">
+  Episodes
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../extras.html">
+  Extras
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../LICENSE.html">
+  Licenses
+ </a>
+</li>
+
+    
+</ul>
+      </div>
+      
+    </div>
+
+    <div id="navbar-end">
+      
+      <div class="navbar-end-item">
+        <ul id="navbar-icon-links" class="navbar-nav" aria-label="Icon Links">
+        <li class="nav-item">
+          <a class="nav-link" href="https://github.com/common-workflow-language/user_guide/" rel="noopener" target="_blank" title="GitHub"><span><i class="fab fa-github-square"></i></span>
+            <label class="sr-only">GitHub</label></a>
+        </li>
+      </ul>
+      </div>
+      
+    </div>
+  </div>
+</div>
+    </nav>
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+            
+            <!-- Only show if we have sidebars configured, else just a small margin  -->
+            <div class="col-12 col-md-3 bd-sidebar">
+              <div class="sidebar-start-items"><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" >
+</form><nav class="bd-links d-none d-md-block" id="bd-docs-nav" aria-label="Main navigation">
+  <div class="bd-toc-item active">
+    <ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../01-introduction/index.html">
+   Introduction
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../02-1st-example/index.html">
+   First Example
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../03-input/index.html">
+   Essential Input Parameters
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../04-output/index.html">
+   Returning Output Files
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../05-stdout/index.html">
+   Capturing Standard Output
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../06-params/index.html">
+   Parameter References
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../07-containers/index.html">
+   Running Tools Inside Docker
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../08-arguments/index.html">
+   Additional Arguments and Parameters
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../09-array-inputs/index.html">
+   Array Inputs
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../10-array-outputs/index.html">
+   Array Outputs
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../11-records/index.html">
+   Advanced Inputs
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../12-env/index.html">
+   Environment Variables
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../13-expressions/index.html">
+   JavaScript Expressions
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Creating Files at Runtime
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../15-staging/index.html">
+   Staging Input Files
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../16-file-formats/index.html">
+   File Formats
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../17-metadata/index.html">
+   Metadata and Authorship
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../19-custom-types/index.html">
+   Custom Types
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../20-software-requirements/index.html">
+   Specifying Software Requirements
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../21-1st-workflow/index.html">
+   Writing Workflows
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../22-nested-workflows/index.html">
+   Nested Workflows
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../23-scatter-workflow/index.html">
+   Scattering Workflows
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../24_conditional-workflow/index.html">
+   Conditional workflows
+  </a>
+ </li>
+</ul>
+
+  </div>
+</nav>
+              </div>
+              <div class="sidebar-end-items">
+              </div>
+            </div>
+            
+          
+
+          
+          <div class="d-none d-xl-block col-xl-2 bd-toc">
+            
+              
+              <div class="toc-item">
+                
+
+<nav id="bd-toc-nav">
+    
+</nav>
+              </div>
+              
+              <div class="toc-item">
+                
+
+<div class="tocsection editthispage">
+    <a href="https://github.com/common-workflow-language/user_guide/edit/gh-pages/14-runtime/index.md">
+        <i class="fas fa-pencil-alt"></i> Edit this page
+    </a>
+</div>
+
+              </div>
+              
+            
+          </div>
+          
+
+          
+          
+            
+          
+          <main class="col-12 col-md-9 col-xl-7 py-md-5 pl-md-5 pr-md-4 bd-content" role="main">
+              
+              <div>
+                
+  <section id="creating-files-at-runtime">
+<h1>Creating Files at Runtime<a class="headerlink" href="#creating-files-at-runtime" title="Permalink to this headline">#</a></h1>
+<p>Sometimes you need to create a file on the fly from input parameters,
+such as tools which expect to read their input configuration from a file
+rather than the command line parameters, or need a small wrapper shell script.</p>
+<p>To generate such files we can use the <code class="docutils literal notranslate"><span class="pre">InitialWorkDirRequirement</span></code>.</p>
+<p><em>createfile.cwl</em></p>
+<div class="highlight-cwl notranslate"><div class="highlight"><pre><span></span><span class="nt">class</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">CommandLineTool</span><span class="w"></span>
+<span class="nt">cwlVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">v1.0</span><span class="w"></span>
+<span class="nt">baseCommand</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="s">&quot;sh&quot;</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="s">&quot;example.sh&quot;</span><span class="p p-Indicator">]</span><span class="w"></span>
+
+<span class="nt">requirements</span><span class="p">:</span><span class="w"></span>
+<span class="w">  </span><span class="nt">InitialWorkDirRequirement</span><span class="p">:</span><span class="w"></span>
+<span class="w">    </span><span class="nt">listing</span><span class="p">:</span><span class="w"></span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">entryname</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">example.sh</span><span class="w"></span>
+<span class="w">        </span><span class="nt">entry</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">|-</span><span class="w"></span>
+<span class="w">          </span><span class="no">PREFIX=&#39;Message is:&#39;</span><span class="w"></span>
+<span class="w">          </span><span class="no">MSG=&quot;\${PREFIX} $(inputs.message)&quot;</span><span class="w"></span>
+<span class="w">          </span><span class="no">echo \${MSG}</span><span class="w"></span>
+
+<span class="nt">inputs</span><span class="p">:</span><span class="w"></span>
+<span class="w">  </span><span class="nt">message</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">string</span><span class="w"></span>
+<span class="nt">outputs</span><span class="p">:</span><span class="w"></span>
+<span class="w">  </span><span class="nt">example_out</span><span class="p">:</span><span class="w"></span>
+<span class="w">    </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">stdout</span><span class="w"></span>
+<span class="nt">stdout</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">output.txt</span><span class="w"></span>
+</pre></div>
+</div>
+<p>Any <a class="reference internal" href="../13-expressions/index.html"><span class="doc std std-doc">expressions</span></a> like <code class="docutils literal notranslate"><span class="pre">$(inputs.message)</span></code> are
+expanded by the CWL engine before creating the file;
+here inserting the value at the input <code class="docutils literal notranslate"><span class="pre">message</span></code>.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>The <em>CWL expressions</em> are independent of any <em>shell variables</em>
+used later during command line tool invocation. That means that any genuine
+need for the character <code class="docutils literal notranslate"><span class="pre">$</span></code> must be <strong>escaped</strong> with <code class="docutils literal notranslate"><span class="pre">\</span></code>,
+for instance <code class="docutils literal notranslate"><span class="pre">\${PREFIX}</span></code> above is expanded to <code class="docutils literal notranslate"><span class="pre">${PREFIX}</span></code> in the generated file
+to be evaluated by the shell script instead of the CWL engine.</p>
+</div>
+<p>To test the above CWL tool use this job to provide the input value <code class="docutils literal notranslate"><span class="pre">message</span></code>:</p>
+<p><em>echo-job.yml</em></p>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">message</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Hello world!</span><span class="w"></span>
+</pre></div>
+</div>
+<p>Before we run this, lets look at each step in a little more detail.
+The base command <code class="docutils literal notranslate"><span class="pre">baseCommand:</span> <span class="pre">[&quot;sh&quot;,</span> <span class="pre">&quot;example.sh&quot;]</span></code>
+will execute the command <code class="docutils literal notranslate"><span class="pre">sh</span> <span class="pre">example.sh</span></code>.
+This will run the file we create in the shell.</p>
+<p><code class="docutils literal notranslate"><span class="pre">InitialWorkDirRequirement</span></code> requires a <code class="docutils literal notranslate"><span class="pre">listing</span></code>.
+As the <code class="docutils literal notranslate"><span class="pre">listing</span></code> is a YAML array we need a <code class="docutils literal notranslate"><span class="pre">-</span></code> on the first line of
+each element of the array, in this case we have just one element.
+<code class="docutils literal notranslate"><span class="pre">entryname:</span></code> can have any value,
+but it must match what was specified in the <code class="docutils literal notranslate"><span class="pre">baseCommand</span></code>.
+The final part is <code class="docutils literal notranslate"><span class="pre">entry:</span></code>, this is followed by <code class="docutils literal notranslate"><span class="pre">|-</span></code>
+which is YAML quoting syntax, and means that you are using a multiline string
+(without it we would need to write the whole script on one line).
+(see the <a class="reference internal" href="../yaml/index.html#maps"><span class="std std-doc">YAML Guide</span></a>
+for more about the formating)</p>
+<p>Now invoke <code class="docutils literal notranslate"><span class="pre">cwl-runner</span></code> with the tool wrapper and the input object on the
+command line:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ cwl-runner createfile.cwl echo-job.yml
+<span class="o">[</span>job createfile.cwl<span class="o">]</span> /private/tmp/docker_tmphrqxxcdl$ sh <span class="se">\</span>
+    example.sh &gt; /private/tmp/docker_tmphrqxxcdl/output.txt
+Could not collect memory usage, job ended before monitoring began.
+<span class="o">[</span>job createfile.cwl<span class="o">]</span> completed success
+<span class="o">{</span>
+    <span class="s2">&quot;example_out&quot;</span>: <span class="o">{</span>
+        <span class="s2">&quot;location&quot;</span>: <span class="s2">&quot;file:///home/example/output.txt&quot;</span>,
+        <span class="s2">&quot;basename&quot;</span>: <span class="s2">&quot;output.txt&quot;</span>,
+        <span class="s2">&quot;class&quot;</span>: <span class="s2">&quot;File&quot;</span>,
+        <span class="s2">&quot;checksum&quot;</span>: <span class="s2">&quot;sha1</span><span class="nv">$9045</span><span class="s2">abe4bd04dd8ccfe50c6ff61820b784b64aa7&quot;</span>,
+        <span class="s2">&quot;size&quot;</span>: <span class="m">25</span>,
+        <span class="s2">&quot;path&quot;</span>: <span class="s2">&quot;/home/example/output.txt&quot;</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+Final process status is success
+$ cat output.txt
+Message is: Hello world!
+</pre></div>
+</div>
+</section>
+
+
+              </div>
+              
+              
+              <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+    <a class='left-prev' id="prev-link" href="../13-expressions/index.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">JavaScript Expressions</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="../15-staging/index.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Staging Input Files</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+              
+          </main>
+          
+
+      </div>
+    </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
+<div class="container">
+  <div class="row">
+    <div class="col d-flex flex-row-reverse">
+      <ul class="nav">
+        <li class="nav-item">
+          <a class="nav-link" href="https://github.com/common-workflow-language/user_guide/blob/gh-pages/CONTRIBUTING.md">Contributing</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="https://github.com/common-workflow-language/user_guide/">Source</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="https://github.com/common-workflow-language/user_guide/blob/gh-pages/CITATION">Cite</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<footer class="footer mt-5 mt-md-0">
+  <div class="container">
+    
+    <div class="footer-item">
+      <p class="copyright">
+    &copy; Copyright 2013, CWL Project Team.<br>
+</p>
+    </div>
+    
+  </div>
+</footer>
+
+  </body>
+</html>

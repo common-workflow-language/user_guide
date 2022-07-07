@@ -1,3 +1,0 @@
-proteinFile:
-    class: File
-    path: test_proteins.fasta
