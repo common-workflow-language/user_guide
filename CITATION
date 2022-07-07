@@ -46,7 +46,7 @@ Luka Stojanovic
   year = {2016}
 }
 
-# the above is from https://github.com/common-workflow-language/common-workflow-language/blob/master/CITATION
+# the above is from https://github.com/common-workflow-language/common-workflow-language/blob/main/CITATION
 
 Our preferred DOI for the "CWL User Guide" is http://doi.org/10.5281/zenodo.840129
 
