@@ -1,7 +1,0 @@
----
-layout: reference
----
-
-## Glossary
-
-FIXME

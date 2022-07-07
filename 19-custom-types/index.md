@@ -36,10 +36,10 @@ converting a standard biom table file to hd5 format.
 :language: yaml
 ```
 
-___Note:___ To follow the example below, you need to download the example input file, *rich_sparse_otu_table.biom*. The file is available from [https://raw.githubusercontent.com/common-workflow-language/user_guide/gh-pages/_includes/cwl/19-custom-types/rich_sparse_otu_table.biom](https://raw.githubusercontent.com/common-workflow-language/user_guide/gh-pages/_includes/cwl/19-custom-types/rich_sparse_otu_table.biom) and can be downloaded e.g. via `wget`:
+___Note:___ To follow the example below, you need to download the example input file, *rich_sparse_otu_table.biom*. The file is available from [https://raw.githubusercontent.com/common-workflow-language/user_guide/main/_includes/cwl/19-custom-types/rich_sparse_otu_table.biom](https://raw.githubusercontent.com/common-workflow-language/user_guide/main/_includes/cwl/19-custom-types/rich_sparse_otu_table.biom) and can be downloaded e.g. via `wget`:
 
 ```bash
-wget https://raw.githubusercontent.com/common-workflow-language/user_guide/gh-pages/_includes/cwl/19-custom-types/rich_sparse_otu_table.biom
+wget https://raw.githubusercontent.com/common-workflow-language/user_guide/main/_includes/cwl/19-custom-types/rich_sparse_otu_table.biom
 ```
 
 On line 29, in `inputs:table_type`, a list of allowable table options to be used in the
