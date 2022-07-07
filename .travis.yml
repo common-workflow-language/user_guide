@@ -10,7 +10,7 @@ cache:
 
 branches:
   only:
-    - gh-pages
+    - main
     - /.*/
 
 before_script:

@@ -25,7 +25,7 @@ compiles it.
 ```
 
 ```{admonition} Visualization of 1st-workflow.cwl
-[![Visualization of 1st-workflow.cwl](https://view.commonwl.org/graph/svg/github.com/common-workflow-language/user_guide/blob/gh-pages/_includes/cwl/21-1st-workflow/1st-workflow.cwl)](https://view.commonwl.org/workflows/github.com/common-workflow-language/user_guide/blob/gh-pages/_includes/cwl/21-1st-workflow/1st-workflow.cwl)
+[![Visualization of 1st-workflow.cwl](https://view.commonwl.org/graph/svg/github.com/common-workflow-language/user_guide/blob/main/_includes/cwl/21-1st-workflow/1st-workflow.cwl)](https://view.commonwl.org/workflows/github.com/common-workflow-language/user_guide/blob/main/_includes/cwl/21-1st-workflow/1st-workflow.cwl)
 ```
 
 Use a YAML or a JSON object in a separate file to describe the input of a run:

@@ -1,4 +1,0 @@
----
-title: "Instructor Notes"
----
-FIXME
