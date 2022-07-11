@@ -31,6 +31,7 @@ You also may be interested in:
 1. [A quick tutorial for the subset of YAML used in CWL](/yaml/index.md)
 2. [CWL Recommended Practices](/rec-practices/index.md)
 3. [Miscellaneous CWL tips](/misc/index.md)
+4. [CWL patterns](https://github.com/common-workflow-library/cwl-patterns)
 
 [cwl-runners-list]: https://www.commonwl.org/#Implementations
 [cwltool-install]: https://github.com/common-workflow-language/cwltool#install
