@@ -13,9 +13,9 @@ branches:
     - main
     - /.*/
 
-before_script:
+install:
   - pip install -U pip setuptools wheel typing
-  - pip install cwltool cwltest html5lib
+  - pip install -e .[all]
 
 script:
   - make RUNNER=cwltool unittest-examples

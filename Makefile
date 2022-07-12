@@ -3,38 +3,45 @@
 
 # You can set these variables from the command line, and also
 # from the environment for the first two.
-SPHINXOPTS    = "-W"
-SPHINXBUILD   = sphinx-build
-SOURCEDIR     = .
-BUILDDIR      = _build
+SPHINXOPTS		= "-W"
+SPHINXBUILD		= sphinx-build
+SOURCEDIR		= src
+BUILDDIR		= _build
+RUNNER			= cwl-runner
 
 # User-friendly check for sphinx-build
 ifeq ($(shell which $(SPHINXBUILD) >/dev/null 2>&1; echo $$?), 1)
-$(error The '$(SPHINXBUILD)' command was not found. Make sure you have Sphinx installed, then set the SPHINXBUILD environment variable to point to the full path of the '$(SPHINXBUILD)' executable. Alternatively you can add the directory with the executable to your PATH. If you don't have Sphinx installed, grab it from http://sphinx-doc.org/)
+$(error The '$(SPHINXBUILD)' command was not found. Make sure you have Sphinx installed, then set the SPHINXBUILD environment variable to point to the full path of the '$(SPHINXBUILD)' executable. Alternatively you can add the directory with the executable to your PATH. If you don't have Sphinx installed, grab it from https://sphinx-doc.org/)
 endif
 
 # Put it first so that "make" without argument is like "make help".
 help:
 	@$(SPHINXBUILD) -M help "$(SOURCEDIR)" "$(BUILDDIR)" $(SPHINXOPTS) $(O)
 
-.PHONY: help Makefile
+clean:
+	@$(SPHINXBUILD) -M clean "$(SOURCEDIR)" "$(BUILDDIR)" $(SPHINXOPTS) $(O)
+	# Add any other directories to be removed below this line.
 
-watch:
+watch: clean
 	@echo
 	@echo "Building and watching for changes in the documentation."
-	sphinx-autobuild --ignore venv . _build/html
+	sphinx-autobuild "$(SOURCEDIR)" "$(BUILDDIR)" \
+			--ignore='**venv' \
+			--ignore='**.github' \
+			--ignore='*.egg-info' \
+			--watch='cwl'
 
-## unittest         : run unit tests on checking tools.
-unittest :
-	@bin/test_lesson_check.py
+## unittest-examples	:
+unittest-examples:
+	cd src/_includes/cwl; cwltest --test=conformance-test.yml --tool=${RUNNER}
 
-#-------------------------------------------------------------------------------
-# Include extra commands if available.
-#-------------------------------------------------------------------------------
+## check-json			:
+check-json:
+	python -m json.tool < src/.zenodo.json >> /dev/null && exit 0 || echo "NOT valid JSON"; exit 1
 
--include commands.mk
+.PHONY: help clean watch unittest-examples check-json Makefile
 
-# Catch-all target: route all unknown targets to Sphinx using the new
+# Catch-all target		: route all unknown targets to Sphinx using the new
 # "make mode" option.  $(O) is meant as a shortcut for $(SPHINXOPTS).
 %: Makefile
 	@$(SPHINXBUILD) -M $@ "$(SOURCEDIR)" "$(BUILDDIR)" $(SPHINXOPTS) $(O)
