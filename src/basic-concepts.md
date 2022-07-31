@@ -12,6 +12,12 @@ content, you may want to skip this section.
 ```{include} /_includes/what-is-cwl.md
 ```
 
+```{image} /_static/images/logos/cwl/CWL-Logo-HD-cropped2.png
+:name: cwl-logo
+:width: 300px
+:align: center
+```
+
 The CWL specification is a document written and maintained by the CWL community.
 The specification has different versions. The version covered in this user guide
 is the {{ cwl_version }}.
