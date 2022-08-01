@@ -6,8 +6,7 @@ command-line-tool.md
 expressions.md
 inputs.md
 outputs.md
-records.md
-enums.md
+custom-types.md
 steps.md
 operations.md
 expression-tool.md

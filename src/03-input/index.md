@@ -14,6 +14,13 @@ appears in the command."
 orphan: true
 ---
 
+```{attention}
+
+This page is out-of-date and was kept here to preserve the links of the old
+User Guide. The information on this page has been migrated to the
+[Inputs](/core-concepts/inputs.md) section of the new user guide.
+```
+
 # Essential Input Parameters
 
 The `inputs` of a tool is a list of input parameters that control how to

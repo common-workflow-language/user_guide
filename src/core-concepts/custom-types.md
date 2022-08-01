@@ -1,27 +1,3 @@
----
-teaching: 10
-exercises: 0
-questions:
-- "How do I create and import my own custom types into a CWL description?"
-objectives:
-- "Learn how to write custom CWL object types."
-- "Learn how to import these custom objects into a tool description."
-keypoints:
-- "You can create your own custom types to load into descriptions."
-- "These custom types allow the user to configure the behaviour of a tool
-   without tinkering directly with the tool description."
-- "Custom types are described in separate YAML files and imported as needed."
-orphan: true
----
-
-```{attention}
-
-This page is out-of-date and was kept here to preserve the links of the old
-User Guide. The information on this page has been migrated to the
-[Custom Types](/core-concepts/custom-types.md) section of
-the new user guide.
-```
-
 # Custom Types
 
 Sometimes you may want to write your own custom types for use and reuse in CWL
@@ -102,3 +78,13 @@ the software that the description was written for and other useful metadata.
 These features are discussed further in other chapters of this user guide.
 
 [biom]: http://biom-format.org/
+
+% TODO (enums)
+%
+% - https://github.com/common-workflow-language/user_guide/issues/155
+% - Maybe show an example with booleans, pros and cons - https://github.com/common-workflow-language/user_guide/issues/89
+%
+% TODO (records)
+%
+% - https://github.com/common-workflow-language/common-workflow-language/issues/202
+% - Document corner cases & workarounds - https://github.com/common-workflow-language/common-workflow-language/issues/241

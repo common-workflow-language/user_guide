@@ -14,6 +14,13 @@ supports the `ScatterFeatureRequirement`."
 orphan: true
 ---
 
+```{attention}
+
+This page is out-of-date and was kept here to preserve the links of the old
+User Guide. The information on this page has been migrated to the
+[Workflows](/core-concepts/workflows.md) section of the new user guide.
+```
+
 # Scattering Workflows
 
 Now that we know how to write workflows, we can start utilizing the `ScatterFeatureRequirement`.

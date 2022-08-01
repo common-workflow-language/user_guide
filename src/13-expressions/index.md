@@ -14,6 +14,13 @@ expressions that will be evaluated by the CWL runner."
 orphan: true
 ---
 
+```{attention}
+
+This page is out-of-date and was kept here to preserve the links of the old
+User Guide. The information on this page has been migrated to the
+[Expressions](/core-concepts/expressions.md) section of the new user guide.
+```
+
 # JavaScript Expressions
 
 If you need to manipulate input parameters, include the requirement

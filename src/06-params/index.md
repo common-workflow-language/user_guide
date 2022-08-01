@@ -11,6 +11,13 @@ keypoints:
 orphan: true
 ---
 
+```{attention}
+
+This page is out-of-date and was kept here to preserve the links of the old
+User Guide. The information on this page has been migrated to the
+[Outputs](/core-concepts/outputs.md) section of the new user guide.
+```
+
 # Parameter References
 
 In a previous example, we extracted a file using the "tar" program.

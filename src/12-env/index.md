@@ -13,6 +13,14 @@ tool's environment."
 orphan: true
 ---
 
+```{attention}
+
+This page is out-of-date and was kept here to preserve the links of the old
+User Guide. The information on this page has been migrated to the
+[Environment Variables](/core-concepts/environment-variables.md) section of
+the new user guide.
+```
+
 # Environment Variables
 
 Tools run in a restricted environment and do not inherit most environment

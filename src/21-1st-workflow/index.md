@@ -14,6 +14,13 @@ and `outputs` fields respectively."
 orphan: true
 ---
 
+```{attention}
+
+This page is out-of-date and was kept here to preserve the links of the old
+User Guide. The information on this page has been migrated to the
+[Workflows](/core-concepts/workflows.md) section of the new user guide.
+```
+
 # Writing Workflows
 
 This workflow extracts a java source file from a tar file and then

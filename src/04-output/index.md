@@ -14,6 +14,13 @@ output parameter."
 orphan: true
 ---
 
+```{attention}
+
+This page is out-of-date and was kept here to preserve the links of the old
+User Guide. The information on this page has been migrated to the
+[Outputs](/core-concepts/outputs.md) section of the new user guide.
+```
+
 # Returning Output Files
 
 The `outputs` of a tool is a list of output parameters that should be

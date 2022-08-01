@@ -17,6 +17,13 @@ overwritten by a value in the input object."
 orphan: true
 ---
 
+```{attention}
+
+This page is out-of-date and was kept here to preserve the links of the old
+User Guide. The information on this page has been migrated to the
+[Workflows](/core-concepts/workflows.md) section of the new user guide.
+```
+
 # Nested Workflows
 
 Workflows are ways to combine multiple tools to perform a larger operations.

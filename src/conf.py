@@ -77,6 +77,7 @@ exclude_patterns = [
     '.idea',
     '.github',
     '_build',
+    '_includes',
     'cwl',
     'venv',
     'README.md',
