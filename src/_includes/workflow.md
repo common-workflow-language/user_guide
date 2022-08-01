@@ -2,8 +2,13 @@ A workflow is a CWL processing unit that executes command-line tools,
 expression tools, or workflows (sub-workflows) as steps. It must have
 `inputs`, `outputs`, and `steps` defined in the CWL document.
 
+% TODO: Fix the missing link the graph below. We cannot have
+%       it here as this file is included in two other files.
+%       Sphinx prohibits it for the case where this could lead
+%       to duplicate anchors in a page (e.g. single-html).
+%       :name: workflow-graph
+
 ```{graphviz}
-:name: workflow-graph
 :caption: CWL workflow.
 :align: center
 
@@ -35,8 +40,13 @@ The CWL document `echo-uppercase.cwl` defines a workflow that runs
 the command-line tool, and the expression tool showed in the earlier
 examples.
 
+% TODO: Fix the missing link the code below. We cannot have
+%       it here as this file is included in two other files.
+%       Sphinx prohibits it for the case where this could lead
+%       to duplicate anchors in a page (e.g. single-html).
+%       :name: echo-uppercase.cwl
+
 ```{code-block} cwl
-:name: echo-uppercase.cwl
 :caption: "`echo-uppercase.cwl`"
 cwlVersion: v1.2
 class: Workflow
@@ -70,9 +80,14 @@ A command-line tool or expression tool can also be written directly
 in the same CWL document as the workflow. For example, we can rewrite
 the `echo-uppercase.cwl` workflow as a single file:
 
+% TODO: Fix the missing link the code below. We cannot have
+%       it here as this file is included in two other files.
+%       Sphinx prohibits it for the case where this could lead
+%       to duplicate anchors in a page (e.g. single-html).
+%       :name: echo-uppercase-single-file.cwl
+
 ```{code-block} cwl
 
-:name: echo-uppercase-single-file.cwl
 :caption: "`echo-uppercase-single-file.cwl`"
 cwlVersion: v1.2
 class: Workflow

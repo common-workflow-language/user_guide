@@ -8,8 +8,13 @@ The following example contains a minimal example of a CWL
 command-line tool for the `echo` Linux command, using inputs and
 outputs.
 
+% TODO: Fix the missing link the graph below. We cannot have
+%       it here as this file is included in two other files.
+%       Sphinx prohibits it for the case where this could lead
+%       to duplicate anchors in a page (e.g. single-html).
+%       :name: command-line-tool-graph
+
 ```{graphviz}
-:name: command-line-tool-graph
 :caption: CWL command-line tool.
 :align: center
 
@@ -34,8 +39,13 @@ digraph G {
 }
 ```
 
+% TODO: Fix the missing link the code below. We cannot have
+%       it here as this file is included in two other files.
+%       Sphinx prohibits it for the case where this could lead
+%       to duplicate anchors in a page (e.g. single-html).
+%       :name: echo.cwl
+
 ```{code-block} cwl
-:name: echo.cwl
 :caption: "`echo.cwl`"
 cwlVersion: v1.2
 class: CommandLineTool
@@ -60,6 +70,6 @@ outputs:
 ```{note}
 
 The example above uses a simplified form to define inputs and outputs.
-You will learn more about in the [Inputs](core-concepts/inputs.md)
-and in the [Outputs](core-concepts/outputs.md) sections.
+You will learn more about in the [Inputs](../core-concepts/inputs.md)
+and in the [Outputs](../core-concepts/outputs.md) sections.
 ```

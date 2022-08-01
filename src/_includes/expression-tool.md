@@ -6,8 +6,13 @@ that need to operate on input data and produce some result as output.
 Similar to the command-line tool it requires `inputs` and `outputs`.
 But instead of `baseCommand`, it requires an `expression` attribute.
 
+% TODO: Fix the missing link the graph below. We cannot have
+%       it here as this file is included in two other files.
+%       Sphinx prohibits it for the case where this could lead
+%       to duplicate anchors in a page (e.g. single-html).
+%       :name: expression-tool-graph
+
 ```{graphviz}
-:name: expression-tool-graph
 :caption: CWL expression tool.
 :align: center
 
@@ -32,8 +37,13 @@ digraph G {
 }
 ```
 
+% TODO: Fix the missing link the code below. We cannot have
+%       it here as this file is included in two other files.
+%       Sphinx prohibits it for the case where this could lead
+%       to duplicate anchors in a page (e.g. single-html).
+%       :name: uppercase.cwl
+
 ```{code-block} cwl
-:name: uppercase.cwl
 :caption: "`uppercase.cwl`"
 cwlVersion: v1.2
 class: ExpressionTool
