@@ -1,8 +1,10 @@
 # Workflows
 
-TODO
+```{include} /_includes/workflow.md
+```
 
-- The current User Guide covers it in the **episode 21** - https://www.commonwl.org/user_guide/21-1st-workflow/index.html
+TODO
+% - The current User Guide covers it in the **episode 21** - https://www.commonwl.org/user_guide/21-1st-workflow/index.html
 - Scatter
   - ScatterMethod https://github.com/common-workflow-language/user_guide/issues/29
   - Also in the **episode 23** of the current User Guide - https://www.commonwl.org/user_guide/23-scatter-workflow/index.html

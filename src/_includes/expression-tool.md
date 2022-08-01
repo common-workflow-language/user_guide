@@ -1,0 +1,58 @@
+An expression tool is a type of Process that can be run by itself or
+as a Workflow step. It executes a pure JavaScript expression. It is
+meant to be used as a way to isolate complex JavaScript expressions
+that need to operate on input data and produce some result as output.
+
+Similar to the command-line tool it requires `inputs` and `outputs`.
+But instead of `baseCommand`, it requires an `expression` attribute.
+
+```{graphviz}
+:name: expression-tool-graph
+:caption: CWL expression tool.
+:align: center
+
+digraph G {
+    compound=true;
+    rankdir="LR";
+    fontname="Verdana";
+    fontsize="10";
+    graph [splines=ortho];
+
+    node [fontname="Verdana", fontsize="10", shape=box];
+    edge [fontname="Verdana", fontsize="10"];
+
+    subgraph cluster_0 {
+      expression[style="filled" label="JavaScript"];
+      label="expression";
+      fill=gray;
+    }
+
+    inputs -> expression [lhead=cluster_0];
+    expression -> outputs [ltail=cluster_0];
+}
+```
+
+```{code-block} cwl
+:name: uppercase.cwl
+:caption: "`uppercase.cwl`"
+cwlVersion: v1.2
+class: ExpressionTool
+
+requirements:
+  InlineJavascriptRequirement: {}
+
+inputs:
+  message: string
+outputs:
+  uppercase_message: string
+
+expression: |
+  ${ return {"uppercase_message": inputs.message.toUpperCase()}; }
+```
+
+```{note}
+
+We had to use an `InlineJavascriptRequirement` as our expression
+contains a JavaScript call in `.toUpperCase()`. This means to tools
+using the expression tool that JavaScript is a requirement.
+```

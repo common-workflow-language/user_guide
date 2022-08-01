@@ -1,5 +1,8 @@
 # CommandLineTool
 
+```{include} /_includes/command-line-tool.md
+```
+
 TODO
 
 - Spaces in commands https://github.com/common-workflow-language/user_guide/issues/39
