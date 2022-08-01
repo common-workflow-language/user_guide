@@ -28,6 +28,12 @@ the removal of deprecated features. The second is the minor release number,
 used for new features or smaller changes that are backward-compatible. The last number
 is used for bug fixes, like typos and other corrections to the specification.
 
+```{note}
+
+The model used for the specification version is called Semantic Versioning. See
+the end of this section to [learn more](#learn-more) about it.
+```
+
 ## Implementations
 
 An implementation of the CWL specification is any software written following
@@ -40,6 +46,60 @@ cloud and high performance computing environments where tasks are scheduled
 in parallel across many nodes.
 
 % TODO: add a link to the Core Concepts -> Requirements section below?
+
+```{graphviz}
+:name: specification-and-implementations-graph
+:caption: CWL specification, implementations, and other tools.
+:align: center
+
+digraph G {
+    compound=true;
+    rankdir="LR";
+    ranksep=0.75;
+    fontname="Verdana";
+    fontsize="10";
+    graph [splines=ortho];
+    node [fontname="Verdana", fontsize="10", shape=box];
+    edge [fontname="Verdana", fontsize="10"];
+    subgraph cluster_0 {
+        label="Implementations";
+        ranksep=0.25;
+
+        cwltool;
+        toil;
+        Arvados;
+        runner_others[label="..."];
+        label="CWL Runners";
+    }
+
+    subgraph cluster_1 {
+        label="Tools";
+        ranksep=0.25;
+
+        subgraph cluster_2 {
+            "vscode-cwl";
+            "vim-cwl";
+            benten;
+            editor_others[label="..."];
+            label="Editors";
+        }
+
+        subgraph cluster_3 {
+            "CWL Viewer";
+            "vue-cwl";
+            viewer_others[label="..."];
+            label="Viewers";
+        }
+
+        "And more";
+    }
+    cwltool -> "CWL Specification" [ltail=cluster_0, dir=back];
+    "CWL Specification" -> "vscode-cwl" [lhead=cluster_1];
+    "vscode-cwl" -> "CWL Viewer" [style=invis];
+    "CWL Viewer" -> "And more" [style=invis];
+}
+
+```
 
 ## Requirements
 
@@ -54,8 +114,9 @@ There are many requirements defined in the CWL specification, for instance:
 
 Some CWL runners may provide requirements that are not in the specification.
 For example, GPU requirements are supported in `cwltool` through the
-`cwltool:CUDARequirement`, but it is not part of the {{ cwl_version }}
-specification, and won't be supported by every CWL runner.
+`cwltool:CUDARequirement` requirement, but it is not part of the
+{{ cwl_version }} specification and may not be supported by other CWL
+runners.
 
 Implementations may also decide to implement only a few requirements. For
 example, if you want to use sub-workflows, first you may want to confirm
@@ -100,13 +161,24 @@ outputs.
 :caption: CWL command-line tool.
 :align: center
 
-digraph "CWL command-line tool" {
+digraph G {
+    compound=true;
     rankdir="LR";
+    fontname="Verdana";
+    fontsize="10";
     graph [splines=ortho];
 
     node [fontname="Verdana", fontsize="10", shape=box];
     edge [fontname="Verdana", fontsize="10"];
-    inputs -> baseComand -> outputs;
+
+    subgraph cluster_0 {
+      command[style="filled" label=<<FONT FACE='sans-serif;'>echo</FONT>>];
+      label="baseCommand";
+      fill=gray;
+    }
+
+    inputs -> command [lhead=cluster_0];
+    command -> outputs [ltail=cluster_0];
 }
 ```
 
@@ -155,13 +227,24 @@ But instead of `baseCommand`, it requires an `expression` attribute.
 :caption: CWL expression tool.
 :align: center
 
-digraph "CWL command-line tool" {
+digraph G {
+    compound=true;
     rankdir="LR";
+    fontname="Verdana";
+    fontsize="10";
     graph [splines=ortho];
 
     node [fontname="Verdana", fontsize="10", shape=box];
     edge [fontname="Verdana", fontsize="10"];
-    inputs -> expression -> outputs;
+
+    subgraph cluster_0 {
+      expression[style="filled" label="JavaScript"];
+      label="expression";
+      fill=gray;
+    }
+
+    inputs -> expression [lhead=cluster_0];
+    expression -> outputs [ltail=cluster_0];
 }
 ```
 
@@ -201,13 +284,27 @@ expression tools, or workflows (sub-workflows) as steps. It must have
 :caption: CWL workflow.
 :align: center
 
-digraph "CWL Inputs, Steps, and Outputs" {
+digraph G {
+    compound=true;
     rankdir="LR";
+    fontname="Verdana";
+    fontsize="10";
     graph [splines=ortho];
 
     node [fontname="Verdana", fontsize="10", shape=box];
     edge [fontname="Verdana", fontsize="10"];
-    inputs -> steps -> outputs;
+
+    subgraph cluster_0 {
+      node [width = 1.75];
+      steps_0[style="filled" label="Command-line tools"];
+      steps_1[style="filled" label="Expression tools"];
+      steps_2[style="filled" label="Sub-workflows"];
+      label="steps";
+      fill=gray;
+    }
+
+    inputs -> steps_1 [lhead=cluster_0];
+    steps_1 -> outputs [ltail=cluster_0];
 }
 ```
 
@@ -351,7 +448,8 @@ vendors.
 
 ## Learn more
 
+- Semantic Versioning - <https://semver.org/>
 - The CWL Specification page in the CWL website: <https://www.commonwl.org/specification/>
 - The current CWL specification on GitHub: {{ '<https://github.com/common-workflow-language/cwl-{}>'.format(cwl_version_text) }}
 - The list of Implementations in the CWL website: <https://www.commonwl.org/implementations/>
-- Semantic Versioning - <https://semver.org/>
+- PROV-O: The PROV Ontology - <https://www.w3.org/TR/prov-o/>
