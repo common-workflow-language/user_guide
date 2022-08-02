@@ -11,6 +11,7 @@
 % - Using containers - https://www.synapse.org/#!Synapse:syn2813589/wiki/401462 & clarify on a common question about using non-docker tools, like singularity
 %   - Features offered by other runners (or runner-specific features)
 %   - Using TypeScript for JS Expressions - https://github.com/umccr/cwl-ica/wiki/TypeScript
+% - https://github.com/common-workflow-language/user_guide/issues/160#issuecomment-547475842
 
 ```{toctree}
 :maxdepth: 2
