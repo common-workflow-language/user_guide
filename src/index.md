@@ -36,6 +36,7 @@ quick-start.md
 prerequisites.md
 basic-concepts.md
 core-concepts/index.md
+advanced-topics/index.md
 how-tos.md
 tutorials.md
 faq.md

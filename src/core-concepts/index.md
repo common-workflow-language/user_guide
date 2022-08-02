@@ -12,6 +12,4 @@ expression-tool.md
 workflows.md
 environment-variables.md
 requirements-and-hints.md
-advanced-topics.md
-best-practices.md
 ```
