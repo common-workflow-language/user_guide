@@ -1,3 +1,15 @@
+---
+orphan: true
+---
+
+```{attention}
+
+This page is out-of-date and was kept here to preserve the links of the old
+User Guide. The information on this page has been migrated to the
+[Best Practices](/advanced-topics/best-practices.md) section of the new
+user guide.
+```
+
 # Recommended Practices
 
 Below are a set of recommended good practices to keep in mind when writing a
