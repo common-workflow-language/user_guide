@@ -1,27 +1,4 @@
----
-teaching: 10
-exercises: 0
-questions:
-- "How do I make it easier for people to cite my tool descriptions?"
-objectives:
-- "Learn how to add authorship information and other metadata to a CWL
-description."
-keypoints:
-- "Metadata can be provided in CWL descriptions."
-- "Developers should provide a minimal amount of authorship information to
-encourage correct citation."
-orphan: true
----
-
-```{attention}
-
-This page is out-of-date and was kept here to preserve the links of the old
-User Guide. The information on this page has been migrated to the
-[Metadata and authorship](/advanced-topics/metadata-and-authorship.md) section of the new user
-guide.
-```
-
-# Metadata and Authorship
+# Metadata and authorship
 
 Implementation extensions not required for correct execution (for example,
 fields related to GUI presentation) and metadata about the tool or workflow

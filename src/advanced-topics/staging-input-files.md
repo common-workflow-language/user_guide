@@ -1,27 +1,4 @@
----
-teaching: 10
-exercises: 0
-questions:
-- "What can I do if a tool needs to be able to write output to the location where its input files are stored?"
-objectives:
-- "Learn how to handle situations where a tool expects to write output files to
-the same directory as its input files."
-keypoints:
-- "Input files are normally kept in a read-only directory."
-- "Use `InitialWorkDirRequirement` to stage input files in the working
-directory."
-orphan: true
----
-
-```{attention}
-
-This page is out-of-date and was kept here to preserve the links of the old
-User Guide. The information on this page has been migrated to the
-[Staging input files](/advanced-topics/staging-input-files.md)
-section of the new user guide.
-```
-
-# Staging Input Files
+# Staging input files
 
 Normally, input files are located in a read-only directory separate from
 the output directory.  This causes problems if the underlying tool expects to

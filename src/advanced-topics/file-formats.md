@@ -1,27 +1,4 @@
----
-teaching: 10
-exercises: 0
-questions:
-- "How can I mark the required file format for input files?"
-- "How can I mark the produced file format of output files?"
-objectives:
-- "Learn how to unambiguously specify the format of `File` objects."
-keypoints:
-- "You can document the expected format of input and output `File`s."
-- "Once your tool is mature, we recommend specifying formats by referencing
-existing ontologies e.g. EDAM."
-orphan: true
----
-
-```{attention}
-
-This page is out-of-date and was kept here to preserve the links of the old
-User Guide. The information on this page has been migrated to the
-[File formats](/advanced-topics/file-formats.md) section of the new user
-guide.
-```
-
-# File Formats
+# File formats
 
 Tools and workflows can take `File` types as input and produce them as output.
 We also recommend indicating the format for `File` types. This helps document

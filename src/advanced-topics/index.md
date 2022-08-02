@@ -16,5 +16,11 @@
 ```{toctree}
 :maxdepth: 2
 
+using-containers.md
+creating-files-at-runtime.md
+staging-input-files.md
 best-practices.md
+file-formats.md
+metadata-and-authorship.md
+specifying-software-requirements.md
 ```

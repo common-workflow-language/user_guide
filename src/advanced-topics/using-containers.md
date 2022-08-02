@@ -1,27 +1,6 @@
----
-teaching: 10
-exercises: 0
-questions:
-- "How do I run tools inside a Docker container?"
-objectives:
-- "Learn how to invoke tools inside a complete controlled runtime."
-keypoints:
-- "Containers can help to simplify management of the software requirements of
-a tool."
-- "Specify a Docker image for a tool with `DockerRequirement` in the `hints`
-section."
-orphan: true
----
+# Using containers
 
-```{attention}
-
-This page is out-of-date and was kept here to preserve the links of the old
-User Guide. The information on this page has been migrated to the
-[Using Containers](/advanced-topics/using-containers.md) section of the new
-user guide.
-```
-
-# Running Tools Inside Docker
+## Running tools inside Docker
 
 [Docker][docker] containers simplify software installation by providing a
 complete known-good runtime for software and its dependencies.  However,

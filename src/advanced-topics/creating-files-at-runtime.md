@@ -1,28 +1,4 @@
----
-teaching: 10
-exercises: 0
-questions:
-- "How do I create required input files from input parameters at runtime?"
-- "How do I invoke a script rather than just a simple command line?"
-- "Besides `inputBinding`, how else can I pass arguments to the tool?"
-objectives:
-- "Learn how to create files on the fly during runtime."
-- "Learn how to use expressions in bash scripts."
-keypoints:
-- "Use `InitialWorkDirRequirement` to specify input files that need to be
-created during tool runtime."
-orphan: true
----
-
-```{attention}
-
-This page is out-of-date and was kept here to preserve the links of the old
-User Guide. The information on this page has been migrated to the
-[Creating files at runtime](/advanced-topics/creating-files-at-runtime.md)
-section of the new user guide.
-```
-
-# Creating Files at Runtime
+# Creating files at runtime
 
 Sometimes you need to create a file on the fly from input parameters,
 such as tools which expect to read their input configuration from a file
