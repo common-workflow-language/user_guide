@@ -38,7 +38,8 @@ json_url = "https://common-workflow-languageuser-guide.readthedocs.io/en/latest/
 # ones.
 extensions = [
     'myst_parser',
-    'sphinx.ext.graphviz'
+    'sphinx.ext.graphviz',
+    'sphinx_reredirects'
 ]
 
 # myst-parser settings
@@ -87,6 +88,37 @@ exclude_patterns = [
 ]
 
 source_suffix = ['.rst', '.md']
+
+# -- Options for URL redirects -----------------------------------------------
+
+redirects = {
+    '01-introduction/index.md': '../quick-start.html',
+    '02-1st-example/index.md': '../quick-start.html',
+    '03-input/index.md': '../core-concepts/inputs.html',
+    '04-output/index.md': '../core-concepts/outputs.html',
+    '05-stdout/index.md': '../core-concepts/outputs.html',
+    '06-params/index.md': '../core-concepts/outputs.html',
+    '07-containers/index.md': '../advanced-topics/using-containers.html',
+    '08-arguments/index.md': '../core-concepts/inputs.html',
+    '09-array-inputs/index.md': '../core-concepts/inputs.html',
+    '10-array-outputs/index.md': '../core-concepts/outputs.html',
+    '11-records/index.md': '../core-concepts/inputs.html',
+    '12-env/index.md': '../core-concepts/environment-variables.html',
+    '13-expressions/index.md': '../core-concepts/expressions.html',
+    '14-runtime/index.md': '../advanced-topics/creating-files-at-runtime.html',
+    '15-staging/index.md': '../advanced-topics/staging-input-files.html',
+    '16-file-formats/index.md': '../advanced-topics/file-formats.html',
+    '17-metadata/index.md': '../advanced-topics/metadata-and-authorship.html',
+    '19-custom-types/index.md': '../core-concepts/custom-types.html',
+    '20-software-requirements/index.md': '../advanced-topics/specifying-software-requirements.html',
+    '21-1st-workflow/index.md': '../core-concepts/workflows.html',
+    '22-nested-workflows/index.md': '../core-concepts/workflows.html#nested-workflows',
+    '23-scatter-workflow/index.md': '../core-concepts/workflows.html#scattering-workflows',
+    '24_conditional-workflow/index.md': '../core-concepts/workflows.html#conditional-workflows',
+    'rec-practices/index.md': '../advanced-topics/best-practices.html',
+    'episodes.md': 'index.html#table-of-contents',
+    'setup.md': 'prerequisites.html'
+}
 
 # -- Options for Pygments ----------------------------------------------------
 

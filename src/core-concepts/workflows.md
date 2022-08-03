@@ -277,7 +277,7 @@ First of all, notice that the main workflow level input here requires an array o
 ```cwl
 steps:
   echo:
-    run: 1st-tool.cwl
+    run: hello_world.cwl
     scatter: message
     in:
       message: message_array
@@ -301,8 +301,9 @@ Using the following input file:
 :language: yaml
 ```
 
-As a reminder, `1st-tool.cwl` simply calls the command `echo` on a message. If we invoke
-`cwl-runner scatter-workflow.cwl scatter-job.yml` on the command line:
+As a reminder, [`hello_world.cwl`](/introduction/quick-start.html) simply calls the command
+`echo` on a message. If we invoke `cwl-runner scatter-workflow.cwl scatter-job.yml` on the
+command line:
 
 ```bash
 $ cwl-runner scatter-workflow.cwl scatter-job.yml
@@ -339,7 +340,7 @@ You can see that the workflow calls echo multiple times on each element of our
 Let's perform a simple echo like above, but capturing `stdout` by adding the following
 lines instead of `outputs: []`
 
-*1st-tool-mod.cwl*
+*hello_world.cwl*
 
 ```cwl
 outputs:

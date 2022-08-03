@@ -20,7 +20,6 @@ help:
 
 clean:
 	@$(SPHINXBUILD) -M clean "$(SOURCEDIR)" "$(BUILDDIR)" $(SPHINXOPTS) $(O)
-	# Add any other directories to be removed below this line.
 
 watch: clean
 	@echo

@@ -1,7 +1,7 @@
 # Section 2
 - doc: Test for section 2
   job: 02-1st-example/echo-job.yml
-  tool: 02-1st-example/1st-tool.cwl
+  tool: hello_world.cwl
   should_fail: false
   output: {}
 
