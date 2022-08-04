@@ -7,9 +7,7 @@ expressions.md
 inputs.md
 outputs.md
 custom-types.md
-operations.md
 expression-tool.md
 workflows.md
 environment-variables.md
-requirements-and-hints.md
 ```
