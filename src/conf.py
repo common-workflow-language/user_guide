@@ -116,6 +116,7 @@ redirects = {
     '23-scatter-workflow/index.md': '../core-concepts/workflows.html#scattering-workflows',
     '24_conditional-workflow/index.md': '../core-concepts/workflows.html#conditional-workflows',
     'rec-practices/index.md': '../advanced-topics/best-practices.html',
+    'misc/index.md': '../how-tos.html',
     'episodes.md': 'index.html#table-of-contents',
     'setup.md': 'prerequisites.html'
 }
