@@ -1,5 +1,10 @@
 # Advanced Topics
 
+In this section advanced concepts for CWL are explained to users who are
+already familiar with CWL, and write and maintain workflows. This content
+will give more tools and techniques for writing simpler workflows,
+publishing high-quality workflows, and running workflows in production.
+
 % TODO
 %
 % - File Formats. Move the **episode 16** about File Formats from the current User Guide here? - https://www.commonwl.org/user_guide/16-file-formats/index.html

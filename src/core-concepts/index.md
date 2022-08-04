@@ -1,5 +1,8 @@
 # Core Concepts
 
+In this section you will find fundamental concepts for CWL. This content
+should be enough to get you started reading and writing CWL workflows.
+
 ```{toctree}
 :maxdepth: 2
 command-line-tool.md
