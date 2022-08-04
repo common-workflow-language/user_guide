@@ -10,7 +10,7 @@ JavaScript expressions should only be used when absolutely necessary.
 When manipulating file names, extensions, paths etc, consider whether one of the
 [built in `File` properties][file-prop] like `basename`, `nameroot`, `nameext`,
 etc, could be used instead.
-See the [list of recommended practices][rec-practices].
+See the [list of best practices](../advanced-topics/best-practices).
 
 *expression.cwl*
 
@@ -84,7 +84,7 @@ requirements:
 
 ```{admonition} Where are JavaScript expressions allowed?
 
-Just like [parameter references](/06-params/index.md), you can use JavaScript Expressions
+Just like [parameter references](outputs.md#parameter-references), you can use JavaScript Expressions
 only in certain fields.  These are:
 - From [`CommandLineTool`](https://www.commonwl.org/v1.0/CommandLineTool.html#CommandLineTool)
   - `arguments`
@@ -135,7 +135,6 @@ only in certain fields.  These are:
 ```
 
 [file-prop]: https://www.commonwl.org/v1.0/CommandLineTool.html#File
-[rec-practices]: https://www.commonwl.org/user_guide/rec-practices/
 
 
 % TODO

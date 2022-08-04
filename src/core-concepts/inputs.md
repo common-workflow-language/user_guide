@@ -121,7 +121,7 @@ parameter were not provided in the input, nothing would appear on the
 command line.
 
 Input files are read-only.  If you wish to update an input file, you must
-[first copy it to the output directory](/15-staging/index.md).
+[first copy it to the output directory](../advanced-topics/staging-input-files.md).
 
 The value of `position` is used to determine where parameter should
 appear on the command line.  Positions are relative to one another, not

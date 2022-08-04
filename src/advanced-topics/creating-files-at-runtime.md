@@ -12,7 +12,7 @@ To generate such files we can use the `InitialWorkDirRequirement`.
 :language: cwl
 ```
 
-Any [expressions](/13-expressions/index.md) like `$(inputs.message)` are
+Any [expressions](../core-concepts/expressions.md) like `$(inputs.message)` are
 expanded by the CWL engine before creating the file;
 here inserting the value at the input `message`.
 
@@ -44,9 +44,12 @@ each element of the array, in this case we have just one element.
 but it must match what was specified in the `baseCommand`.
 The final part is `entry:`, this is followed by `|-`
 which is YAML quoting syntax, and means that you are using a multiline string
-(without it we would need to write the whole script on one line).
-(see the [YAML Guide](../yaml/index.md#maps)
-for more about the formating)
+(without it, we would need to write the whole script on one line).
+
+```{note}
+
+See the [YAML Guide](../yaml/index.md#maps) for more about the formatting.
+```
 
 Now invoke `cwl-runner` with the tool wrapper and the input object on the
 command line:

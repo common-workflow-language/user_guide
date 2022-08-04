@@ -12,6 +12,6 @@ if you would like to add another tutorial to the list.
 
 ## Bioinformatics Tutorials
 
-- [rnaseq with CWL](https://github.com/arvados/rnaseq-cwl-training)
+- [rnaseq with CWL](https://arvados.github.io/rnaseq-cwl-training/)
 
-% - Running CWL in Production (on Linux, HPC, with containers, k8s, etc? We can link existing docs)
+% - Running CWL in Production (on Linux, HPC, with containers, k8s, etc.? We can link existing docs)
