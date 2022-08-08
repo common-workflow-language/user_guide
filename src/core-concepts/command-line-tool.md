@@ -1,4 +1,4 @@
-# CommandLineTool
+# Command Line Tool
 
 ```{include} /_includes/command-line-tool.md
 ```

@@ -12,5 +12,6 @@ outputs.md
 custom-types.md
 expression-tool.md
 workflows.md
+operations.md
 environment-variables.md
 ```

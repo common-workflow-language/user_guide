@@ -189,3 +189,4 @@ vendors.
 - The current CWL specification on GitHub: {{ '<https://github.com/common-workflow-language/cwl-{}>'.format(cwl_version_text) }}
 - The list of Implementations in the CWL website: <https://www.commonwl.org/implementations/>
 - PROV-O: The PROV Ontology - <https://www.w3.org/TR/prov-o/>
+- CWL Operations are covered in the [Operations](core-concepts/operations.md) section of this user guide.

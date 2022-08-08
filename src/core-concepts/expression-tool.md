@@ -1,4 +1,4 @@
-# ExpressionTool
+# Expression Tool
 
 ```{include} /_includes/expression-tool.md
 ```
