@@ -73,7 +73,8 @@ Using the following input file:
 :language: yaml
 ```
 
-As a reminder, `1st-tool.cwl` simply calls the command `echo` on a message. If we invoke
+As a reminder, `1st-tool.cwl`(described previously in
+[First Example](/02-1st-example/index.md)) simply calls the command `echo` on a message. If we invoke
 `cwl-runner scatter-workflow.cwl scatter-job.yml` on the command line:
 
 ```bash
