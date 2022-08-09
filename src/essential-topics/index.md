@@ -1,4 +1,4 @@
-# Core Concepts
+# Essential Topics
 
 In this section you will find fundamental concepts for CWL. This content
 should be enough to get you started reading and writing CWL workflows.

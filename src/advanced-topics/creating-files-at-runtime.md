@@ -12,7 +12,7 @@ To generate such files we can use the `InitialWorkDirRequirement`.
 :name: createfile.cwl
 ```
 
-Any [expressions](../core-concepts/expressions.md) like `$(inputs.message)` are
+Any [expressions](../essential-topics/expressions.md) like `$(inputs.message)` are
 expanded by the CWL engine before creating the file;
 here inserting the value at the input `message`.
 
