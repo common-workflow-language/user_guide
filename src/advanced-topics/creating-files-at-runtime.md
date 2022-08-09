@@ -48,7 +48,7 @@ which is YAML quoting syntax, and means that you are using a multiline string
 
 ```{note}
 
-See the [YAML Guide](../yaml/index.md#maps) for more about the formatting.
+See the [YAML Guide](../essential-topics/yaml-guide.md#maps) for more about the formatting.
 ```
 
 Now invoke `cwl-runner` with the tool wrapper and the input object on the

@@ -8,6 +8,11 @@ designed to be readable by both computers and humans.
 This guide introduces the features of YAML
 relevant when writing CWL descriptions and input parameter files.
 
+```{note}
+
+You can skip this section if you are already comfortable with YAML.
+```
+
 ## Contents
 
 - [Key-Value Pairs](#key-value-pairs)

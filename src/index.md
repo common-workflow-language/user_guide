@@ -38,7 +38,6 @@ advanced-topics/index.md
 how-tos.md
 tutorials.md
 faq.md
-extras.md
 ```
 
 [repo]: https://github.com/common-workflow-language/user_guide/issues

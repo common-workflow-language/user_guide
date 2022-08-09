@@ -5,6 +5,7 @@ should be enough to get you started reading and writing CWL workflows.
 
 ```{toctree}
 :maxdepth: 2
+yaml-guide.md
 command-line-tool.md
 expressions.md
 inputs.md
