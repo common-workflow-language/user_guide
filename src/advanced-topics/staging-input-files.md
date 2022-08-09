@@ -15,7 +15,6 @@ input file from its leading directory path.
 ```{literalinclude} /_includes/cwl/15-staging/arguments-job.yml
 :language: yaml
 :caption: "`arguments-job.yml`"
-:name: arguments-job.yml
 ```
 
 Now invoke `cwl-runner` with the tool wrapper and the input object on the

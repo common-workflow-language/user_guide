@@ -13,7 +13,6 @@ the tool using `EnvVarRequirement`.
 ```{literalinclude} /_includes/cwl/12-env/echo-job.yml
 :language: yaml
 :caption: "`echo-job.yml`"
-:name: echo-job.yml
 ```
 
 Now invoke `cwl-runner` with the tool wrapper and the input object on the

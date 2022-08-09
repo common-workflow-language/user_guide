@@ -319,7 +319,6 @@ instead.
 ```{literalinclude} /_includes/cwl/08-arguments/arguments-job.yml
 :language: yaml
 :caption: "`arguments-job.yml`"
-:name: arguments-job.yml
 ```
 
 Now create a sample Java file and invoke `cwl-runner` providing the tool wrapper

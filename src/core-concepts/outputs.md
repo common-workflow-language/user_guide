@@ -87,13 +87,12 @@ stdout` on the corresponding output parameter.
 ```{literalinclude} /_includes/cwl/05-stdout/echo-job.yml
 :language: yaml
 :caption: "`echo-job.yml`"
-:name: echo-job.yml
 ```
 
 Now invoke `cwl-runner` providing the tool wrapper and the input object
 on the command line:
 
-```{code-block} console console
+```{code-block} console
 $ cwl-runner stdout.cwl echo-job.yml
 [job stdout.cwl] /tmp/tmpE0gTz7$ echo \
     'Hello world!' > /tmp/tmpE0gTz7/output.txt
@@ -138,7 +137,7 @@ the file to extract.
 Create your input files and invoke `cwl-runner` with the tool wrapper and the
 input object on the command line:
 
-```{code-block} console console
+```{code-block} console
 $ rm hello.tar || true && touch goodbye.txt && tar -cvf hello.tar goodbye.txt
 $ cwl-runner tar-param.cwl tar-param-job.yml
 [job tar-param.cwl] /tmp/tmpwH4ouT$ tar \
@@ -253,7 +252,7 @@ You can also capture multiple output files into an array of files using `glob`.
 Now invoke `cwl-runner` providing the tool wrapper and the input object
 on the command line:
 
-```{code-block} console console
+```{code-block} console
 $ cwl-runner array-outputs.cwl array-outputs-job.yml
 [job 140190876078160] /home/example$ touch foo.txt bar.dat baz.txt
 Final process status is success
