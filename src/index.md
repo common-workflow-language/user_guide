@@ -16,9 +16,8 @@ each page.
 
 ## Navigating the User Guide
 
-If you are a beginner user get started with the [Quick Start](/quick-start.md),
-[Prerequisites](/prerequisites.md), and the [Basic Concepts](/basic-concepts.md)
-sections. For advanced users the subsections of the
+If you are a beginner user get started with the [Introduction](/introduction.md)
+section. For advanced users the subsections of the
 [Core Concepts](/core-concepts/index.md) have detailed information about the
 most common topics for CWL.
 
@@ -33,9 +32,7 @@ the left sidebar.
 :maxdepth: 2
 :numbered:
 
-quick-start.md
-prerequisites.md
-basic-concepts.md
+introduction.md
 core-concepts/index.md
 advanced-topics/index.md
 how-tos.md
