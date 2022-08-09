@@ -31,6 +31,7 @@ the left sidebar.
 
 ```{toctree}
 :maxdepth: 2
+:numbered:
 
 quick-start.md
 prerequisites.md
