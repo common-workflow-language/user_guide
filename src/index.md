@@ -16,7 +16,7 @@ each page.
 
 ## Navigating the User Guide
 
-If you are a beginner user get started with the [Introduction](/introduction.md)
+If you are a beginner user get started with the [Introduction](/introduction/index.md)
 section. For advanced users the subsections of the
 [Core Concepts](/essential-topics/index.md) have detailed information about the
 most common topics for CWL.
@@ -32,7 +32,7 @@ the left sidebar.
 :maxdepth: 2
 :numbered:
 
-introduction.md
+introduction/index.md
 essential-topics/index.md
 advanced-topics/index.md
 how-tos.md
