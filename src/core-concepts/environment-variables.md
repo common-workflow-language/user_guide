@@ -4,22 +4,22 @@ Tools run in a restricted environment and do not inherit most environment
 variables from the parent process.  You can set environment variables for
 the tool using `EnvVarRequirement`.
 
-*env.cwl*
-
 ```{literalinclude} /_includes/cwl/12-env/env.cwl
 :language: cwl
+:caption: "`env.cwl`"
+:name: env.cwl
 ```
-
-*echo-job.yml*
 
 ```{literalinclude} /_includes/cwl/12-env/echo-job.yml
 :language: yaml
+:caption: "`echo-job.yml`"
+:name: echo-job.yml
 ```
 
 Now invoke `cwl-runner` with the tool wrapper and the input object on the
 command line:
 
-```bash
+```{code-block} console
 $ cwl-runner env.cwl echo-job.yml
 [job env.cwl] /home/example$ env > /home/example/output.txt
 [job env.cwl] completed success

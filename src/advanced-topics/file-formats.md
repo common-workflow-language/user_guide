@@ -17,15 +17,17 @@ document in greater detail, so don't worry about these for now.
 Note that for added value `cwltool` can do some basic reasoning based on file
 formats and warn you if there seem to be some obvious mismatches.
 
-*metadata_example.cwl*
-
 ```{literalinclude} /_includes/cwl/16-file-formats/metadata_example.cwl
 :language: cwl
+:caption: "`metadata_example.cwl`"
+:name: metadata_example.cwl
 ```
 
 The equivalent of this CWL description in command line format is:
 
-`wc -l /path/to/aligned_sequences.ext > output.txt`
+```bash
+wc -l /path/to/aligned_sequences.ext > output.txt
+```
 
 ## Sample Parameter Files
 
@@ -34,10 +36,10 @@ checking in working examples of parameter files for your tool. This allows
 others to quickly work with your tool, starting from a "known good"
 parameterization.
 
-*sample.yml*
-
 ```{literalinclude} /_includes/cwl/16-file-formats/sample.yml
 :language: yaml
+:caption: "`sample.yml`"
+:name: sample.yml
 ```
 
 ___Note:___ To follow the example below, you need to download the example input file, *file-formats.bam*. The file is available from [https://github.com/common-workflow-language/user_guide/raw/main/_includes/cwl/16-file-formats/file-formats.bam
@@ -50,7 +52,7 @@ wget https://github.com/common-workflow-language/user_guide/raw/main/_includes/c
 Now invoke `cwl-runner` with the tool wrapper and the input object on the
 command line:
 
-```bash
+```{code-block} console
 $ cwltool metadata_example.cwl sample.yml
 /usr/local/bin/cwltool 1.0.20161114152756
 Resolved 'metadata_example.cwl' to 'file:///media/large_volume/testing/cwl_tutorial2/metadata_example.cwl'

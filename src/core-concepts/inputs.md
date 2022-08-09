@@ -16,10 +16,10 @@ types and appearing on the command line in different ways.
 First, create a file called inp.cwl, containing the following:
 
 
-*inp.cwl*
-
 ```{literalinclude} /_includes/cwl/03-input/inp.cwl
 :language: cwl
+:caption: "`inp.cwl`"
+:name: inp.cwl
 ```
 
 Create a file called inp-job.yml:
@@ -28,6 +28,8 @@ Create a file called inp-job.yml:
 
 ```{literalinclude} /_includes/cwl/03-input/inp-job.yml
 :language: yaml
+:caption: "`inp-job.yml`"
+:name: inp-job.yml
 ```
 
 Notice that "example_file", as a `File` type, must be provided as an
@@ -35,7 +37,7 @@ object with the fields `class: File` and `path`.
 
 Next, create a whale.txt using [touch] by typing `touch whale.txt` on the command line and then invoke `cwl-runner` with the tool wrapper and the input object on the command line, using the command `cwl-runner inp.cwl inp-job.yml`. The following boxed text describes these two commands and the expected output from the command line:
 
-```bash
+```{code-block} console
 $ touch whale.txt
 $ cwl-runner inp.cwl inp-job.yml
 [job inp.cwl] /tmp/tmpzrSnfX$ echo \
@@ -143,22 +145,22 @@ line. There are two ways to specify an array parameter. First is to provide
 that may appear in the array. Alternatively, brackets `[]` may be added after
 the type name to indicate that input parameter is array of that type.
 
-*array-inputs.cwl*
-
 ```{literalinclude} /_includes/cwl/09-array-inputs/array-inputs.cwl
 :language: cwl
+:caption: "`array-inputs.cwl`"
+:name: array-inputs.cwl
 ```
-
-*array-inputs-job.yml*
 
 ```{literalinclude} /_includes/cwl/09-array-inputs/array-inputs-job.yml
 :language: yaml
+:caption: "`array-inputs-job.yml`"
+:name: array-inputs-job.yml
 ```
 
 Now invoke `cwl-runner` providing the tool wrapper and the input object
 on the command line:
 
-```bash
+```{code-block} console
 $ cwl-runner array-inputs.cwl array-inputs-job.yml
 [job array-inputs.cwl] /home/examples$ echo \
     -A \
@@ -205,19 +207,19 @@ together (they are dependent) or several arguments that cannot be provided
 together (they are exclusive).  You can use records and type unions to group
 parameters together to describe these two conditions.
 
-*record.cwl*
-
 ```{literalinclude} /_includes/cwl/11-records/record.cwl
 :language: cwl
+:caption: "`record.cwl`"
+:name: record.cwl
 ```
-
-*record-job1.yml*
 
 ```{literalinclude} /_includes/cwl/11-records/record-job1.yml
 :language: yaml
+:caption: "`record-job1.yml`"
+:name: record-job1.yml
 ```
 
-```bash
+```{code-block} console
 $ cwl-runner record.cwl record-job1.yml
 Workflow error, try again with --debug for more information:
 Invalid job input record:
@@ -227,10 +229,10 @@ record-job1.yml:1:1: the `dependent_parameters` field is not valid because
 
 In the first example, you can't provide `itemA` without also providing `itemB`.
 
-*record-job2.yml*
-
 ```{literalinclude} /_includes/cwl/11-records/record-job2.yml
 :language: yaml
+:caption: "`record-job2.yml`"
+:name: record-job2.yml
 ```
 
 ```cwl
@@ -262,13 +264,13 @@ $ cat output.txt
 In the second example, `itemC` and `itemD` are exclusive, so only `itemC`
 is added to the command line and `itemD` is ignored.
 
-*record-job3.yml*
-
 ```{literalinclude} /_includes/cwl/11-records/record-job3.yml
 :language: yaml
+:caption: "`record-job3.yml`"
+:name: record-job3.yml
 ```
 
-```bash
+```{code-block} console
 $ cwl-runner record.cwl record-job3.yml
 [job record.cwl] /home/example$ echo \
     -A \
@@ -308,22 +310,22 @@ directories in which they appear) may be read-only, so we need to
 instruct "javac" to write the class file to the designated output directory
 instead.
 
-*arguments.cwl*
-
 ```{literalinclude} /_includes/cwl/08-arguments/arguments.cwl
 :language: cwl
+:caption: "`arguments.cwl`"
+:name: arguments.cwl
 ```
-
-*arguments-job.yml*
 
 ```{literalinclude} /_includes/cwl/08-arguments/arguments-job.yml
 :language: yaml
+:caption: "`arguments-job.yml`"
+:name: arguments-job.yml
 ```
 
 Now create a sample Java file and invoke `cwl-runner` providing the tool wrapper
 and the input object on the command line:
 
-```bash
+```{code-block} console
 $ echo "public class Hello {}" > Hello.java
 $ cwl-runner arguments.cwl arguments-job.yml
 [job arguments.cwl] /tmp/tmpwYALo1$ docker \

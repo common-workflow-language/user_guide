@@ -8,10 +8,10 @@
 This workflow extracts a java source file from a tar file and then
 compiles it.
 
-*1st-workflow.cwl*
-
 ```{literalinclude} /_includes/cwl/21-1st-workflow/1st-workflow.cwl
 :language: cwl
+:caption: "`1st-workflow.cwl`"
+:name: 1st-workflow.cwl
 ```
 
 ```{admonition} Visualization of 1st-workflow.cwl
@@ -20,16 +20,16 @@ compiles it.
 
 Use a YAML or a JSON object in a separate file to describe the input of a run:
 
-*1st-workflow-job.yml*
-
 ```{literalinclude} /_includes/cwl/21-1st-workflow/1st-workflow-job.yml
 :language: yaml
+:caption: "`1st-workflow-job.yml`"
+:name: 1st-workflow-job.yml
 ```
 
 Now invoke `cwl-runner` with the tool wrapper and the input object on the
 command line:
 
-```bash
+```{code-block} console
 $ echo "public class Hello {}" > Hello.java && tar -cvf hello.tar Hello.java
 $ cwl-runner 1st-workflow.cwl 1st-workflow-job.yml
 [job untar] /tmp/tmp94qFiM$ tar --create --file /home/example/hello.tar Hello.java
@@ -143,10 +143,10 @@ requirements:
 Here's an example workflow that uses our `1st-workflow.cwl` as a nested
 workflow:
 
-*nestedworkflows.cwl*
-
 ```{literalinclude} /_includes/cwl/22-nested-workflows/nestedworkflows.cwl
 :language: cwl
+:caption: "`nestedworkflows.cwl`"
+:name: nestedworkflows.cwl
 ```
 
 ```{note}
@@ -258,10 +258,10 @@ The most common reason a new user might want to use scatter is to perform the sa
 different samples. Let's start with a simple workflow that calls our first example and takes
 an array of strings as input to the workflow:
 
-*scatter-workflow.cwl*
-
 ```{literalinclude} /_includes/cwl/23-scatter-workflow/scatter-workflow.cwl
 :language: cwl
+:caption: "`scatter-workflow.cwl`"
+:name: scatter-workflow.cwl
 ```
 
 Aside from the `requirements` section including `ScatterFeatureRequirement`, what is
@@ -295,10 +295,10 @@ as well!
 
 Using the following input file:
 
-*scatter-job.yml*
-
 ```{literalinclude} /_includes/cwl/23-scatter-workflow/scatter-job.yml
 :language: yaml
+:caption: "`scatter-job.yml`"
+:name: scatter-job.yml
 ```
 
 As a reminder, [`hello_world.cwl`](/introduction/quick-start.html) simply calls the command
@@ -340,9 +340,9 @@ You can see that the workflow calls echo multiple times on each element of our
 Let's perform a simple echo like above, but capturing `stdout` by adding the following
 lines instead of `outputs: []`
 
-*hello_world.cwl*
-
-```cwl
+```{code-block} cwl
+:caption: "`hello_world.cwl*"
+:name: hello_world.cwl*
 outputs:
   echo_out:
     type: stdout
@@ -351,18 +351,18 @@ outputs:
 And add a second step that uses `wc` to count the characters in each file. See the tool
 below:
 
-*wc-tool.cwl*
-
 ```{literalinclude} /_includes/cwl/23-scatter-workflow/wc-tool.cwl
 :language: cwl
+:caption: "`wc-tool.cwl`"
+:name: wc-tool.cwl
 ```
 
 Now, how do we incorporate scatter? Remember the scatter field is under each step:
 
-*scatter-two-steps.cwl*
-
 ```{literalinclude} /_includes/cwl/23-scatter-workflow/scatter-two-steps.cwl
 :language: cwl
+:caption: "`scatter-two-steps.cwl`"
+:name: scatter-two-steps.cwl
 ```
 
 Here we have placed the scatter field under each step. This is fine for this example since
@@ -379,12 +379,12 @@ well.
 
 Ok, so how do we scatter on steps that can proceed independent of other samples? Remember from
 [chapter 21](/22-nested-workflows/index.md), that we can make an entire workflow a single step in another workflow! Convert our
-two step workflow to a single step subworkflow:
-
-*scatter-nested-workflow.cwl*
+two-step workflow to a single step subworkflow:
 
 ```{literalinclude} /_includes/cwl/23-scatter-workflow/scatter-nested-workflow.cwl
 :language: cwl
+:caption: "`scatter-nested-workflow.cwl`"
+:name: scatter-nested-workflow.cwl
 ```
 
 Now the scatter acts on a single step, but that step consists of two steps so each step is performed
@@ -395,9 +395,9 @@ in parallel.
 This workflow contains a conditional step and is executed based on the input.
 This allows workflows to skip additional steps based on input parameters given at the start of the program or by previous steps.
 
-*conditional-workflow.cwl*
-
-```cwl
+```{code-block} cwl
+:caption: "`conditional-workflow.cwl`"
+:name: conditional-workflow.cwl
 class: Workflow
 cwlVersion: v1.2
 inputs:
@@ -457,7 +457,7 @@ steps:
 
 Using the following command `cwltool cond-wf-003.1.cwl --val 0` the value will pass the first conditional step and will therefor be executed and is shown in the log by `INFO [step step1] start` whereas the second step is skipped as indicated by `INFO [step step2] will be skipped`.
 
-```bash
+```{code-block} console
 INFO [workflow ] start
 INFO [workflow ] starting step step1
 INFO [step step1] start
@@ -477,7 +477,7 @@ INFO Final process status is success
 
 When a value of 3 is given the first conditional step will not be executed but the second step will `cwltool cond-wf-003.1.cwl --val 3`.
 
-```bash
+```{code-block} console
 INFO [workflow ] start
 INFO [workflow ] starting step step1
 INFO [step step1] will be skipped
@@ -497,8 +497,8 @@ INFO Final process status is success
 
 If no conditions are met for example when using `--val 2` the workflow will raise a permanentFail.
 
-```bash
-cwltool cond-wf-003.1.cwl --val 2
+```{code-block} console
+$ cwltool cond-wf-003.1.cwl --val 2
 
 INFO [workflow ] start
 INFO [workflow ] starting step step1
@@ -511,7 +511,6 @@ ERROR [workflow ] Cannot collect workflow output: All sources for 'out1' are nul
 INFO [workflow ] completed permanentFail
 WARNING Final process status is permanentFail
 ```
-
 
 % TODO
 % - Scatter

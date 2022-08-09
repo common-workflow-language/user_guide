@@ -12,19 +12,19 @@ When manipulating file names, extensions, paths etc, consider whether one of the
 etc, could be used instead.
 See the [list of best practices](../advanced-topics/best-practices).
 
-*expression.cwl*
-
 ```{literalinclude} /_includes/cwl/13-expressions/expression.cwl
 :language: cwl
+:caption: "`expression.cwl`"
+:name: expression.cwl
 ```
 
 As this tool does not require any `inputs` we can run it with an (almost) empty
 job file:
 
-*empty.yml*
-
 ```{literalinclude} /_includes/cwl/13-expressions/empty.yml
 :language: yaml
+:caption: "`empty.yml`"
+:name: empty.cwl
 ```
 
 `empty.yml` contains a description of an empty JSON object. JSON objects
@@ -33,7 +33,10 @@ represented simply by a set of empty brackets.
 
 We can then run `expression.cwl`:
 
-```bash
+```{code-block} console
+:name: running-expression.cwl
+:caption: Running `expression.cwl`
+
 $ cwl-runner expression.cwl empty.yml
 [job expression.cwl] /home/example$ echo \
     -A \

@@ -6,16 +6,16 @@ write its output files alongside the input file in the same directory.  You use 
 In this example, we use a JavaScript expression to extract the base name of the
 input file from its leading directory path.
 
-*linkfile.cwl*
-
 ```{literalinclude} /_includes/cwl/15-staging/linkfile.cwl
 :language: cwl
+:caption: "`linkfile.cwl`"
+:name: linkfile.cwl
 ```
-
-*arguments-job.yml*
 
 ```{literalinclude} /_includes/cwl/15-staging/arguments-job.yml
 :language: yaml
+:caption: "`arguments-job.yml`"
+:name: arguments-job.yml
 ```
 
 Now invoke `cwl-runner` with the tool wrapper and the input object on the

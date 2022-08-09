@@ -6,10 +6,10 @@ rather than the command line parameters, or need a small wrapper shell script.
 
 To generate such files we can use the `InitialWorkDirRequirement`.
 
-*createfile.cwl*
-
 ```{literalinclude} /_includes/cwl/14-runtime/createfile.cwl
 :language: cwl
+:caption: "`createfile.cwl`"
+:name: createfile.cwl
 ```
 
 Any [expressions](../core-concepts/expressions.md) like `$(inputs.message)` are
@@ -26,10 +26,10 @@ to be evaluated by the shell script instead of the CWL engine.
 
 To test the above CWL tool use this job to provide the input value `message`:
 
-*echo-job.yml*
-
 ```{literalinclude} /_includes/cwl/14-runtime/echo-job.yml
 :language: yaml
+:caption: "`echo-job.yml`"
+:name: echo-job.yml
 ```
 
 Before we run this, lets look at each step in a little more detail.
@@ -54,7 +54,7 @@ See the [YAML Guide](../yaml/index.md#maps) for more about the formatting.
 Now invoke `cwl-runner` with the tool wrapper and the input object on the
 command line:
 
-```bash
+```{code-block} console
 $ cwl-runner createfile.cwl echo-job.yml
 [job createfile.cwl] /private/tmp/docker_tmphrqxxcdl$ sh \
     example.sh > /private/tmp/docker_tmphrqxxcdl/output.txt

@@ -23,22 +23,22 @@ Instead of a single string we can use an _array of strings_.  The first element 
 any subsequent elements are mandatory command line arguments
 ```
 
-*tar.cwl*
-
 ```{literalinclude} /_includes/cwl/04-output/tar.cwl
 :language: cwl
+:caption: "`tar.cwl`"
+:name: tar.cwl
 ```
-
-*tar-job.yml*
 
 ```{literalinclude} /_includes/cwl/04-output/tar-job.yml
 :language: yaml
+:caption: "`tar-job.yml`"
+:name: tar-job.yml
 ```
 
 Next, create a tar file for the example and invoke `cwl-runner` with the tool
 wrapper and the input object on the command line:
 
-```bash
+```{code-block} console
 $ touch hello.txt && tar -cvf hello.tar hello.txt
 $ cwl-runner tar.cwl tar-job.yml
 [job tar.cwl] /tmp/tmpqOeawQ$ tar \
@@ -78,22 +78,22 @@ To capture a tool's standard output stream, add the `stdout` field with
 the name of the file where the output stream should go.  Then add `type:
 stdout` on the corresponding output parameter.
 
-*stdout.cwl*
-
 ```{literalinclude} /_includes/cwl/05-stdout/stdout.cwl
 :language: cwl
+:caption: "`stdout.cwl`"
+:name: stdout.cwl
 ```
-
-*echo-job.yml*
 
 ```{literalinclude} /_includes/cwl/05-stdout/echo-job.yml
 :language: yaml
+:caption: "`echo-job.yml`"
+:name: echo-job.yml
 ```
 
 Now invoke `cwl-runner` providing the tool wrapper and the input object
 on the command line:
 
-```bash
+```{code-block} console console
 $ cwl-runner stdout.cwl echo-job.yml
 [job stdout.cwl] /tmp/tmpE0gTz7$ echo \
     'Hello world!' > /tmp/tmpE0gTz7/output.txt
@@ -123,22 +123,22 @@ this example, you will see how to reference the value of input parameters
 dynamically from other fields, which will allow us to then specify the name of
 the file to extract.
 
-*tar-param.cwl*
-
 ```{literalinclude} /_includes/cwl/06-params/tar-param.cwl
 :language: cwl
+:caption: "`tar-param.cwl`"
+:name: tar-param.cwl
 ```
-
-*tar-param-job.yml*
 
 ```{literalinclude} /_includes/cwl/06-params/tar-param-job.yml
 :language: yaml
+:caption: "`tar-param-job.yml`"
+:name: tar-param-job.yml
 ```
 
 Create your input files and invoke `cwl-runner` with the tool wrapper and the
 input object on the command line:
 
-```bash
+```{code-block} console console
 $ rm hello.tar || true && touch goodbye.txt && tar -cvf hello.tar goodbye.txt
 $ cwl-runner tar-param.cwl tar-param-job.yml
 [job tar-param.cwl] /tmp/tmpwH4ouT$ tar \
@@ -238,22 +238,22 @@ You can only use parameter references in certain fields.  These are:
 
 You can also capture multiple output files into an array of files using `glob`.
 
-*array-outputs.cwl*
-
 ```{literalinclude} /_includes/cwl/10-array-outputs/array-outputs.cwl
 :language: cwl
+:caption: "`array-outputs.cwl`"
+:name: array-outputs.cwl
 ```
-
-*array-outputs-job.yml*
 
 ```{literalinclude} /_includes/cwl/10-array-outputs/array-outputs-job.yml
 :language: yaml
+:caption: "`array-outputs-job.yml`"
+:name: array-outputs-job.yml
 ```
 
 Now invoke `cwl-runner` providing the tool wrapper and the input object
 on the command line:
 
-```bash
+```{code-block} console console
 $ cwl-runner array-outputs.cwl array-outputs-job.yml
 [job 140190876078160] /home/example$ touch foo.txt bar.dat baz.txt
 Final process status is success

@@ -15,20 +15,19 @@ containers.
 One of the responsibilities of the CWL runner is to adjust the paths of
 input files to reflect the location where they appear inside the container.
 
-
 This example runs a simple Node.js script inside a Docker container which will
 then print "Hello World" to the standard output.
 
-*docker.cwl*
-
 ```{literalinclude} /_includes/cwl/07-containers/docker.cwl
 :language: cwl
+:caption: "`docker.cwl`"
+:name: docker.cwl
 ```
-
-*docker-job.yml*
 
 ```{literalinclude} /_includes/cwl/07-containers/docker-job.yml
 :language: yaml
+:caption: "`docker-job.yml`"
+:name: docker-job.yml
 ```
 
 Before we run this, lets just break it down and see what some bits do.  Most of this
@@ -50,11 +49,10 @@ the name of the container image (you can even specify the tag, which is good ide
 best practises when using containers for reproducible research). In this case we have
 used a container called `node:slim`.
 
-
 Provide a "hello.js" and invoke `cwl-runner` providing the tool wrapper and the
 input object on the command line:
 
-```bash
+```{code-block} console
 $ echo "console.log(\"Hello World\");" > hello.js
 $ cwl-runner docker.cwl docker-job.yml
 [job docker.cwl] /tmp/tmpgugLND$ docker \
