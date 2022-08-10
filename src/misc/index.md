@@ -7,6 +7,6 @@ orphan: true
 ```{attention}
 
 This page is out-of-date and was kept here to preserve the links of the old
-User Guide. Please use the new [How-Tos](/how-tos.md) page for
+User Guide. Please use the new [FAQ](/faq.md) page for
 installation instructions.
 ```

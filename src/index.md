@@ -35,7 +35,6 @@ the left sidebar.
 introduction/index.md
 essential-topics/index.md
 advanced-topics/index.md
-how-tos.md
 tutorials.md
 faq.md
 ```
