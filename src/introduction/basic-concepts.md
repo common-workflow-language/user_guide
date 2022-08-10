@@ -101,33 +101,11 @@ digraph G {
 
 ```
 
-## Requirements
+## Processes and Requirements
 
-The CWL specification allows for implementations to provide extra
-functionality and specify prerequisites to workflows through *requirements*.
-There are many requirements defined in the CWL specification, for instance:
-
-- `InlineJavascriptWorkflow`
-- `SubworkflowFeatureRequirement`
-- `InitialWorkDirRequirement`
-- `DockerRequirement`
-
-Some CWL runners may provide requirements that are not in the specification.
-For example, GPU requirements are supported in `cwltool` through the
-`cwltool:CUDARequirement` requirement, but it is not part of the
-{{ cwl_version }} specification and may not be supported by other CWL
-runners.
-
-Implementations may also decide to implement only a few requirements. For
-example, if you want to use sub-workflows, first you may want to confirm
-that the CWL runner you are using supports the
-`SubworkflowFeatureRequirement` requirement.
-
-Requirements are explained in detail in another section.
-
-## Processing units
-
-There are four types of processing units defined in the CWL specification
+A process is a computing unit that takes inputs and produces outputs. The
+behavior of a process can be affected by the inputs, requirements, and hints.
+There are four types of processes defined in the CWL specification
 {{ cwl_version }}:
 
 - A command-line tool;
@@ -137,27 +115,41 @@ There are four types of processing units defined in the CWL specification
 
 {{ CWL_PROCESSING_UNITS_GRAPH }}
 
-In `cwltool` you can execute a CWL document with a command-line tool,
-an expression tool, or a workflow. Operation is a special unit, not
-covered in this section.
+A command-line tool is a wrapper for a command-line utility like `echo`,
+`ls`, and `tar`. A command-line tool can be called from a workflow.
 
-You define the processing unit in your CWL document using the
-`class` attribute, e.g. `class: Workflow`.
+An expression tool is a wrapper for a JavaScript expression. It can
+be used to simplify workflows and command-line tools, moving common
+parts of a workflow execution into reusable JavaScript code, that
+takes inputs and produces outputs like a command-line tool.
 
-### Command-line tool
+The workflow is a process that contains steps. Steps can be other
+workflows (nested workflows), command-line tools, or expression tools.
+The inputs of a workflow can be passed to any of its steps, and
+the outputs produced by its steps can be used in the final output
+of the workflow.
 
-```{include} /_includes/command-line-tool.md
-```
+Operation is an abstract process that also takes inputs, produces
+outputs, and can be used in a workflow. But it is a special operation
+not so commonly used. It is discussed in another section.
 
-### Expression tool
+The CWL specification allows for implementations to provide extra
+functionality and specify prerequisites to workflows through *requirements*.
+There are many requirements defined in the CWL specification, for instance:
 
-```{include} /_includes/expression-tool.md
-```
+- `InlineJavascriptWorkflow`, enables JavaScript in expressions.
+- `SubworkflowFeatureRequirement`, enables nested workflows.
+- `InitialWorkDirRequirement`, controls staging files in the input directory.
 
-### Workflow
+Some CWL runners may provide requirements that are not in the specification.
+For example, GPU requirements are supported in `cwltool` through the
+`cwltool:CUDARequirement` requirement, but it is not part of the
+{{ cwl_version }} specification and may not be supported by other CWL
+runners.
 
-```{include} /_includes/workflow.md
-```
+Hints are similar to requirements, but while requirements list features
+that are required, hints list optional features. Requirements are explained
+in detail in another section.
 
 ## FAIR workflows
 
