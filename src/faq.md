@@ -3,6 +3,11 @@
 % The items here do not look like questions, because we merged the
 % How-Tos with the FAQ. We can/need to change it later.
 
+```{contents}
+:local:
+:backlinks: "top"
+```
+
 ## Non "`File`" types using `evalFrom`
 
 ```yaml
