@@ -401,7 +401,7 @@ Nested workflows can be a powerful feature to generate higher-level functional
 and reusable workflow units - but just like for creating a CWL Tool description,
 care must be taken to improve its usability in multiple workflows.
 
-## Scattering Workflows
+## Scattering Steps
 
 Now that we know how to write workflows, we can start utilizing the `ScatterFeatureRequirement`.
 This feature tells the runner that you wish to run a tool or workflow multiple times over a list
