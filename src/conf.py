@@ -83,8 +83,7 @@ exclude_patterns = [
     'venv',
     'README.md',
     'CODE_OF_CONDUCT.md',
-    'CONTRIBUTING.md',
-    'LICENSE.md'
+    'CONTRIBUTING.md'
 ]
 
 source_suffix = ['.rst', '.md']
@@ -92,8 +91,8 @@ source_suffix = ['.rst', '.md']
 # -- Options for URL redirects -----------------------------------------------
 
 redirects = {
-    '01-introduction/index.md': '../quick-start.html',
-    '02-1st-example/index.md': '../quick-start.html',
+    '01-introduction/index.md': '../introduction/quick-start.html',
+    '02-1st-example/index.md': '../introduction/quick-start.html',
     '03-input/index.md': '../essential-topics/inputs.html',
     '04-output/index.md': '../essential-topics/outputs.html',
     '05-stdout/index.md': '../essential-topics/outputs.html',
@@ -116,9 +115,12 @@ redirects = {
     '23-scatter-workflow/index.md': '../essential-topics/workflows.html#scattering-workflows',
     '24_conditional-workflow/index.md': '../essential-topics/workflows.html#conditional-workflows',
     'rec-practices/index.md': '../advanced-topics/best-practices.html',
-    'misc/index.md': '../how-tos.html',
+    'misc/index.md': '../faq.html',
     'episodes.md': 'index.html#table-of-contents',
-    'setup.md': 'prerequisites.html'
+    'setup.md': 'introduction/prerequisites.html',
+    'extras.md': '/index.html',
+    'yaml/index.md': '../essential-topics/yaml-guide.html',
+    'CODE_OF_CONDUCT.html': 'https://github.com/common-workflow-language/user_guide/blob/main/CODE_OF_CONDUCT.md'
 }
 
 # -- Options for Pygments ----------------------------------------------------
