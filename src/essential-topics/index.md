@@ -9,6 +9,7 @@ yaml-guide.md
 command-line-tool.md
 expressions.md
 inputs.md
+parameter-references.md
 outputs.md
 custom-types.md
 expression-tool.md

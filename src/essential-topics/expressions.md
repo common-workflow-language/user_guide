@@ -87,7 +87,7 @@ requirements:
 
 ```{admonition} Where are JavaScript expressions allowed?
 
-Just like [parameter references](outputs.md#parameter-references), you can use JavaScript Expressions
+Just like [parameter references](parameter-references.md), you can use JavaScript Expressions
 only in certain fields.  These are:
 - From [`CommandLineTool`](https://www.commonwl.org/v1.0/CommandLineTool.html#CommandLineTool)
   - `arguments`
