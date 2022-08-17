@@ -1,9 +1,8 @@
 # Common Workflow Language User Guide
 
 This guide will introduce you to writing workflows using the
-Common Workflow Language (CWL). This guide describes the latest
-specification, {{ cwl_version }}. Updates to the guide for more recent
-versions are ongoing.
+[Common Workflow Language](https://www.commonwl.org/) (CWL)
+open standards. This guide describes the latest specification {{ cwl_version }}.
 
 ```{admonition} Contributions and Feedback are Welcome!
 
