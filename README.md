@@ -15,6 +15,19 @@ To edit the user guide:
 
 We'd like to ask you to familiarize yourself with our [Contribution Guide](CONTRIBUTING.md).
 
+## Style Guide
+
+We must use CWL standards or CWL open standards when talking about CWL.
+We must use specification only when talking specifically about the CWL
+specification document.
+
+Whenever a page is updated we must verify that it does not break existing
+links. The `make html` command will fail if Sphinx detects broken links.
+It only works for links managed by Sphinx (i.e. table of contents links,
+or links to Markdown pages). For simple HTML links (e.g. `< href=>` or
+markdown external links) pull request reviewers must verify that links
+are still working after the change.
+
 ### Code examples
 
 To include code into a Markdown file you have two options. For external files use
@@ -39,7 +52,7 @@ you will have to customize the Sphinx and Pygments settings.
 To preview Pygments output with different styles, use their
 [Pygments demo tool](https://pygments.org/demo/).
 
-### Links
+### Creating Links
 
 Sphinx and the theme are configured to auto-generate anchor slug
 links for sections. So sections like ``## cwl standard`` are translated
