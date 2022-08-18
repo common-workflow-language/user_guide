@@ -85,6 +85,27 @@ your clone of the originating `main` branch.
 Lastly, published copies of all the sections are available in the `main` branch of the originating
 repository for reference while revising.
 
+## Building
+
+The user guide uses [Sphinx](https://www.sphinx-doc.org/), a Python documentation
+tool. You must have a recent version of Python 3.6+ installed to build the project
+locally. It is also recommended having `make` (otherwise look at the commands used
+in `Makefile`).
+
+```bash
+# Create and activate a virtual environment
+python -m venv venv
+source venv/bin/activate
+# Install the dependencies in your virtual environment
+(venv) pip install -e .[all]
+# Create the HTML to visualize locally
+(venv) make html
+(venv) firefox _build/index.html
+# Or you can start a serve that watches for local file changes
+(venv) make watch
+# Open <http://localhost:8000/> in your browser
+```
+
 ## Other Resources
 
 General discussion of [Common Workflow Language][cwl-site] project
