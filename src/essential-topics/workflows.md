@@ -260,7 +260,7 @@ instead the order is determined by the dependencies between steps (using
 another may run in parallel.
 
 The first step, `untar` runs `tar-param.cwl` (described previously in
-[Parameter References](/06-params/index.md)).
+[Parameter References](parameter-references.md).
 This tool has two input parameters, `tarfile` and `extractfile` and one output
 parameter `extracted_file`.
 
@@ -284,7 +284,7 @@ expected from the tool.
 The second step `compile` depends on the results from the first step by
 connecting the input parameter `src` to the output parameter of `untar` using
 `untar/extracted_file`.  It runs `arguments.cwl` (described previously in
-[Additional Arguments and Parameters](/08-arguments/index.md)).
+[Additional Arguments and Parameters](additional-arguments-and-parameters.md)).
 The output of this step `classfile` is connected to the
 `outputs` section for the Workflow, described above.
 
@@ -461,7 +461,7 @@ Using the following input file:
 :name: scatter-job.yml
 ```
 
-As a reminder, [`hello_world.cwl`](/introduction/quick-start.html) simply calls the command
+As a reminder, [`hello_world.cwl`](../introduction/quick-start.md) simply calls the command
 `echo` on a message. If we invoke `cwl-runner scatter-workflow.cwl scatter-job.yml` on the
 command line:
 
@@ -538,7 +538,7 @@ because the first step must wait on `echo Hallo welt!`. You can see how this mig
 well.
 
 Ok, so how do we scatter on steps that can proceed independent of other samples? Remember from
-[chapter 21](/22-nested-workflows/index.md), that we can make an entire workflow a single step in another workflow! Convert our
+[Nested Workflows](#nested-workflows), that we can make an entire workflow a single step in another workflow! Convert our
 two-step workflow to a single step subworkflow:
 
 ```{literalinclude} /_includes/cwl/23-scatter-workflow/scatter-nested-workflow.cwl
