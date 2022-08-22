@@ -12,7 +12,7 @@ To generate such files we can use the `InitialWorkDirRequirement`.
 :name: createfile.cwl
 ```
 
-Any [expressions](../essential-topics/expressions.md) like `$(inputs.message)` are
+Any [expressions](../topics/expressions.md) like `$(inputs.message)` are
 expanded by the CWL engine before creating the file;
 here inserting the value at the input `message`.
 
@@ -48,7 +48,7 @@ which is YAML quoting syntax, and means that you are using a multiline string
 
 ```{note}
 
-See the [YAML Guide](../essential-topics/yaml-guide.md#maps) for more about the formatting.
+See the [YAML Guide](../topics/yaml-guide.md#maps) for more about the formatting.
 ```
 
 Now invoke `cwl-runner` with the tool wrapper and the input object on the

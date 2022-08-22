@@ -72,8 +72,8 @@ outputs:
 ```{note}
 
 The example above uses a simplified form to define inputs and outputs.
-You will learn more about in the [Inputs](../essential-topics/inputs.md)
-and in the [Outputs](../essential-topics/outputs.md) sections.
+You will learn more about in the [Inputs](../topics/inputs.md)
+and in the [Outputs](../topics/outputs.md) sections.
 ```
 
 % TODO

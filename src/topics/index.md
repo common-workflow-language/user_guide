@@ -1,7 +1,4 @@
-# Essential Topics
-
-In this section you will find fundamental concepts for CWL. This content
-should be enough to get you started reading and writing CWL workflows.
+# Topics
 
 ```{toctree}
 :maxdepth: 2
@@ -17,4 +14,11 @@ expression-tool.md
 workflows.md
 operations.md
 environment-variables.md
+using-containers.md
+creating-files-at-runtime.md
+staging-input-files.md
+best-practices.md
+file-formats.md
+metadata-and-authorship.md
+specifying-software-requirements.md
 ```

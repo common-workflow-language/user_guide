@@ -17,7 +17,7 @@ each page.
 
 If you are a beginner user get started with the [Introduction](/introduction/index.md)
 section. For advanced users the subsections of the
-[Core Concepts](/essential-topics/index.md) have detailed information about the
+[Core Concepts](/topics/index.md) have detailed information about the
 most common topics for CWL.
 
 The Table of Contents is displayed at the top menu and also on the left sidebar.
@@ -32,8 +32,7 @@ the left sidebar.
 :numbered:
 
 introduction/index.md
-essential-topics/index.md
-advanced-topics/index.md
+topics/index.md
 tutorials.md
 faq.md
 LICENSE.md

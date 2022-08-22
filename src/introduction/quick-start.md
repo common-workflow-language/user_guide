@@ -9,7 +9,7 @@ must be comfortable following instructions for the command-line.
 ```{include} /_includes/what-is-cwl.md
 ```
 
-CWL documents are written in [YAML](../essential-topics/index.md) (and/or JSON).
+CWL documents are written in [YAML](../topics/index.md) (and/or JSON).
 The example below shows a simple CWL “Hello World” workflow annotated
 with comments:
 

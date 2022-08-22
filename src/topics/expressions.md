@@ -10,7 +10,7 @@ JavaScript expressions should only be used when absolutely necessary.
 When manipulating file names, extensions, paths etc, consider whether one of the
 [built in `File` properties][file-prop] like `basename`, `nameroot`, `nameext`,
 etc, could be used instead.
-See the [list of best practices](../advanced-topics/best-practices).
+See the [list of best practices](best-practices.md).
 
 ```{literalinclude} /_includes/cwl/13-expressions/expression.cwl
 :language: cwl
