@@ -1,62 +1,40 @@
 # Common Workflow Language User Guide
 
-Hello!
+This guide will introduce you to writing workflows using the
+[Common Workflow Language](https://www.commonwl.org/) (CWL)
+open standards. This guide describes the latest specification {{ cwl_version }}.
 
-<!-- this is an html comment -->
+```{admonition} Contributions and Feedback are Welcome!
 
-% This is a comment in MyST
-
-This guide will introduce you to writing tool wrappers and workflows using the Common Workflow Language (CWL). This guide describes the stable specification, version 1.0. Updates to the guide for more recent versions are ongoing.
-
-```{note}
-<p class="rubric">Contributions and Feedback are Welcome!</p>
-
-This document is a work in progress. Not all features are covered, yet.
-If you find that something is missing from this guide,
-or if you'd like to provide other feedback,
-we would be delighted if you would file an Issue on the
-[project repository for this guide][repo].
-You can also suggest changes directly
-by clicking the "Edit on GitHub" button at the top-right
-of the relevant page.
+If you find that something is missing from this guide, or if you would
+like to provide other feedback, file an Issue on the [project repository
+for this guide][repo]. You can also suggest changes directly in a Pull
+Request by clicking the "Edit this page" button at the right sidebar of
+each page.
 ```
 
-```{admonition} Prerequisites
-* A text editor
+## Navigating the User Guide
 
-* A CWL runner. It is recommended to start with the [reference implementation][cwltool-install]. The full list of CWL runners is on [the project homepage][cwl-runners-list].
-```
+If you are a beginner user get started with the [Introduction](/introduction/index.md)
+section. For advanced users the subsections of the
+[Core Concepts](/topics/index.md) have detailed information about the
+most common topics for CWL.
 
-You also may be interested in:
-1. [A quick tutorial for the subset of YAML used in CWL](/yaml/index.md)
-2. [CWL Recommended Practices](/rec-practices/index.md)
-3. [Miscellaneous CWL tips](/misc/index.md)
-4. [CWL patterns](https://github.com/common-workflow-library/cwl-patterns)
+The Table of Contents is displayed at the top menu and also on the left sidebar.
+It also appears further down this page but with links to subsections. The right
+sidebar contains links to the sections of each page, and the Search form is on
+the left sidebar.
 
-[cwl-runners-list]: https://www.commonwl.org/#Implementations
-[cwltool-install]: https://github.com/common-workflow-language/cwltool#install
-
-## Schedule
-
-```{toctree}
-:maxdepth: 1
-:hidden:
-
-CODE_OF_CONDUCT.md
-setup.md
-```
+## Table of Contents
 
 ```{toctree}
 :maxdepth: 2
+:numbered:
 
-episodes.md
-```
-
-```{toctree}
-:maxdepth: 1
-:hidden:
-
-extras.md
+introduction/index.md
+topics/index.md
+tutorials.md
+faq.md
 LICENSE.md
 ```
 

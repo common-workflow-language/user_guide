@@ -1,0 +1,521 @@
+
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+    <title>2.13. Using containers &#8212; Common Workflow Language User Guide 0.1 documentation</title>
+<script>
+  document.documentElement.dataset.mode = localStorage.getItem("mode") || "light";
+  document.documentElement.dataset.theme = localStorage.getItem("theme") || "light"
+</script>
+
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=92025949c220c2e29695" rel="stylesheet">
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=92025949c220c2e29695" rel="stylesheet">
+
+
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/graphviz.css" />
+    <link rel="icon" sizes="16x16" type="image/png" href="../_static/images/favicons/cwl/favicon-16x16.png" />
+    <link rel="icon" sizes="32x32" type="image/png" href="../_static/images/favicons/cwl/favicon-32x32.png" />
+    <link rel="icon" sizes="96x96" type="image/png" href="../_static/images/favicons/cwl/favicon-96x96.png" />
+    <link rel="icon" sizes="128x128" type="image/png" href="../_static/images/favicons/cwl/favicon-128.png" />
+    <link rel="icon" sizes="196x196" type="image/png" href="../_static/images/favicons/cwl/favicon-196x196.png" />
+
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=92025949c220c2e29695">
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="2.14. Creating files at runtime" href="creating-files-at-runtime.html" />
+    <link rel="prev" title="2.12. Environment Variables" href="environment-variables.html" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="docsearch:language" content="en">
+  </head>
+  
+  
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="180" data-default-mode="light">
+    <div class="bd-header-announcement container-fluid" id="banner">
+      
+
+    </div>
+
+    
+    <nav class="bd-header navbar navbar-light navbar-expand-lg bg-light fixed-top bd-navbar" id="navbar-main"><div class="bd-header__inner container-xl">
+
+  <div id="navbar-start">
+    
+    
+  
+
+
+<a class="navbar-brand logo" href="../index.html">
+  
+  
+  
+  
+    <img src="../_static/CWL-Logo-HD-cropped2.png" class="logo__image only-light" alt="Logo image">
+    <img src="../_static/CWL-Logo-HD-cropped2.png" class="logo__image only-dark" alt="Logo image">
+  
+  
+</a>
+    
+  </div>
+
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-collapsible" aria-controls="navbar-collapsible" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="fas fa-bars"></span>
+  </button>
+
+  
+  <div id="navbar-collapsible" class="col-lg-9 collapse navbar-collapse">
+    <div id="navbar-center" class="mr-auto">
+      
+      <div class="navbar-center-item">
+        <ul id="navbar-main-elements" class="navbar-nav">
+    <li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../introduction/index.html">
+  1. Introduction
+ </a>
+</li>
+
+<li class="toctree-l1 current active nav-item">
+ <a class="reference internal nav-link" href="index.html">
+  2. Topics
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../tutorials.html">
+  3. Tutorials
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../faq.html">
+  4. FAQ
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../LICENSE.html">
+  5. Licenses
+ </a>
+</li>
+
+    
+</ul>
+      </div>
+      
+    </div>
+
+    <div id="navbar-end">
+      
+      <div class="navbar-end-item">
+        <span id="theme-switch" class="btn btn-sm btn-outline-primary navbar-btn rounded-circle">
+    <a class="theme-switch" data-mode="light"><i class="fas fa-sun"></i></a>
+    <a class="theme-switch" data-mode="dark"><i class="far fa-moon"></i></a>
+    <a class="theme-switch" data-mode="auto"><i class="fas fa-adjust"></i></a>
+</span>
+      </div>
+      
+      <div class="navbar-end-item">
+        <ul id="navbar-icon-links" class="navbar-nav" aria-label="Icon Links">
+        <li class="nav-item">
+          <a class="nav-link" href="https://github.com/common-workflow-language/user_guide/" rel="noopener" target="_blank" title="GitHub"><span><i class="fab fa-github-square"></i></span>
+            <label class="sr-only">GitHub</label></a>
+        </li>
+      </ul>
+      </div>
+      
+    </div>
+  </div>
+</div>
+    </nav>
+    
+
+    <div class="bd-container container-xl">
+      <div class="bd-container__inner row">
+          
+
+<!-- Only show if we have sidebars configured, else just a small margin  -->
+<div class="bd-sidebar-primary col-12 col-md-3 bd-sidebar">
+  <div class="sidebar-start-items"><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" >
+</form><nav class="bd-links d-none d-md-block" id="bd-docs-nav" aria-label="Main navigation">
+  <div class="bd-toc-item active">
+    <ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../introduction/index.html">
+   1. Introduction
+  </a>
+ </li>
+ <li class="toctree-l1 current active has-children">
+  <a class="reference internal" href="index.html">
+   2. Topics
+  </a>
+  <input checked class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul class="current">
+   <li class="toctree-l2">
+    <a class="reference internal" href="yaml-guide.html">
+     2.1. YAML Guide
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="command-line-tool.html">
+     2.2. Command Line Tool
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="expressions.html">
+     2.3. Expressions
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="inputs.html">
+     2.4. Inputs
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="additional-arguments-and-parameters.html">
+     2.5. Additional Arguments and Parameters
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="parameter-references.html">
+     2.6. Parameter References
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="outputs.html">
+     2.7. Outputs
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="custom-types.html">
+     2.8. Custom Types
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="expression-tool.html">
+     2.9. Expression Tool
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="workflows.html">
+     2.10. Workflows
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="operations.html">
+     2.11. Operations
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="environment-variables.html">
+     2.12. Environment Variables
+    </a>
+   </li>
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     2.13. Using containers
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="creating-files-at-runtime.html">
+     2.14. Creating files at runtime
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="staging-input-files.html">
+     2.15. Staging input files
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="best-practices.html">
+     2.16. Best practices
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="file-formats.html">
+     2.17. File formats
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="metadata-and-authorship.html">
+     2.18. Metadata and authorship
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="specifying-software-requirements.html">
+     2.19. Specifying software requirements
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../tutorials.html">
+   3. Tutorials
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../faq.html">
+   4. FAQ
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../LICENSE.html">
+   5. Licenses
+  </a>
+ </li>
+</ul>
+
+  </div>
+</nav>
+  </div>
+  <div class="sidebar-end-items">
+  </div>
+</div>
+
+
+          
+
+
+<div class="bd-sidebar-secondary d-none d-xl-block col-xl-2 bd-toc">
+  
+    
+    <div class="toc-item">
+      
+<div class="tocsection onthispage mt-5 pt-1 pb-3">
+    <i class="fas fa-list"></i> On this page
+</div>
+
+<nav id="bd-toc-nav">
+    <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#running-tools-inside-docker">
+   2.13.1. Running tools inside Docker
+  </a>
+ </li>
+</ul>
+
+</nav>
+    </div>
+    
+    <div class="toc-item">
+      
+
+<div class="tocsection editthispage">
+    <a href="https://github.com/common-workflow-language/user_guide/edit/main/topics/using-containers.md">
+        <i class="fas fa-pencil-alt"></i> Edit this page
+    </a>
+</div>
+
+    </div>
+    
+  
+</div>
+
+
+          
+          
+          <div class="bd-content col-12 col-md-9 col-xl-7">
+              
+              <article class="bd-article" role="main">
+                
+  <section id="using-containers">
+<h1><span class="section-number">2.13. </span>Using containers<a class="headerlink" href="#using-containers" title="Permalink to this heading">#</a></h1>
+<section id="running-tools-inside-docker">
+<h2><span class="section-number">2.13.1. </span>Running tools inside Docker<a class="headerlink" href="#running-tools-inside-docker" title="Permalink to this heading">#</a></h2>
+<p><a class="reference external" href="https://docker.io">Docker</a> containers simplify software installation by providing a
+complete known-good runtime for software and its dependencies.  However,
+containers are also purposefully isolated from the host system, so in
+order to run a tool inside a Docker container there is additional work to
+ensure that input files are available inside the container and output
+files can be recovered from the container.  A CWL runner can perform this work
+automatically, allowing you to use Docker to simplify your software
+management while avoiding the complexity of invoking and managing Docker
+containers.</p>
+<p>One of the responsibilities of the CWL runner is to adjust the paths of
+input files to reflect the location where they appear inside the container.</p>
+<p>This example runs a simple Node.js script inside a Docker container which will
+then print “Hello World” to the standard output.</p>
+<div class="literal-block-wrapper docutils container" id="docker-cwl">
+<div class="code-block-caption"><span class="caption-text"><code class="docutils literal notranslate"><span class="pre">docker.cwl</span></code></span><a class="headerlink" href="#docker-cwl" title="Permalink to this code">#</a></div>
+<div class="highlight-cwl notranslate"><div class="highlight"><pre><span></span><span class="c1">#!/usr/bin/env cwl-runner</span><span class="w"></span>
+
+<span class="nt">cwlVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">v1.0</span><span class="w"></span>
+<span class="nt">class</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">CommandLineTool</span><span class="w"></span>
+<span class="nt">baseCommand</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">node</span><span class="w"></span>
+<span class="nt">hints</span><span class="p">:</span><span class="w"></span>
+<span class="w">  </span><span class="nt">DockerRequirement</span><span class="p">:</span><span class="w"></span>
+<span class="w">    </span><span class="nt">dockerPull</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">node:slim</span><span class="w"></span>
+<span class="nt">inputs</span><span class="p">:</span><span class="w"></span>
+<span class="w">  </span><span class="nt">src</span><span class="p">:</span><span class="w"></span>
+<span class="w">    </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">File</span><span class="w"></span>
+<span class="w">    </span><span class="nt">inputBinding</span><span class="p">:</span><span class="w"></span>
+<span class="w">      </span><span class="nt">position</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1</span><span class="w"></span>
+<span class="nt">outputs</span><span class="p">:</span><span class="w"></span>
+<span class="w">  </span><span class="nt">example_out</span><span class="p">:</span><span class="w"></span>
+<span class="w">    </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">stdout</span><span class="w"></span>
+<span class="nt">stdout</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">output.txt</span><span class="w"></span>
+</pre></div>
+</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="docker-job-yml">
+<div class="code-block-caption"><span class="caption-text"><code class="docutils literal notranslate"><span class="pre">docker-job.yml</span></code></span><a class="headerlink" href="#docker-job-yml" title="Permalink to this code">#</a></div>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">src</span><span class="p">:</span><span class="w"></span>
+<span class="w">  </span><span class="nt">class</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">File</span><span class="w"></span>
+<span class="w">  </span><span class="nt">path</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">hello.js</span><span class="w"></span>
+</pre></div>
+</div>
+</div>
+<p>Before we run this, lets just break it down and see what some bits do.  Most of this
+has been explained in previous sections, the only part that is really new is the <code class="docutils literal notranslate"><span class="pre">dockerRequirement</span></code>
+section.</p>
+<div class="highlight-cwl notranslate"><div class="highlight"><pre><span></span><span class="nt">baseCommand</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">node</span><span class="w"></span>
+<span class="nt">hints</span><span class="p">:</span><span class="w"></span>
+<span class="w">  </span><span class="nt">DockerRequirement</span><span class="p">:</span><span class="w"></span>
+<span class="w">    </span><span class="nt">dockerPull</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">node:slim</span><span class="w"></span>
+</pre></div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">baseCommand:</span> <span class="pre">node</span></code> tells CWL that we will be running this command in a container. We
+then need to specify some <code class="docutils literal notranslate"><span class="pre">hints</span></code> for how to find the container we want.  In this case we list
+just our requirements for the docker container in <code class="docutils literal notranslate"><span class="pre">DockerRequirements</span></code>.  The <code class="docutils literal notranslate"><span class="pre">dockerPull:</span></code>
+parameter takes the same value that you would pass to a <code class="docutils literal notranslate"><span class="pre">docker</span> <span class="pre">pull</span></code> command. That is,
+the name of the container image (you can even specify the tag, which is good idea for
+best practises when using containers for reproducible research). In this case we have
+used a container called <code class="docutils literal notranslate"><span class="pre">node:slim</span></code>.</p>
+<p>Provide a “hello.js” and invoke <code class="docutils literal notranslate"><span class="pre">cwl-runner</span></code> providing the tool wrapper and the
+input object on the command line:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span><span class="nb">echo</span> <span class="s2">&quot;console.log(\&quot;Hello World\&quot;);&quot;</span> &gt; hello.js
+<span class="gp">$ </span>cwl-runner docker.cwl docker-job.yml
+<span class="go">[job docker.cwl] /tmp/tmpgugLND$ docker \</span>
+<span class="go">    run \</span>
+<span class="go">    -i \</span>
+<span class="go">    --volume=/tmp/tmpgugLND:/var/spool/cwl:rw \</span>
+<span class="go">    --volume=/tmp/tmpSs5JoN:/tmp:rw \</span>
+<span class="go">    --volume=/home/me/cwl/user_guide/hello.js:/var/lib/cwl/job369354770_examples/hello.js:ro \</span>
+<span class="go">    --workdir=/var/spool/cwl \</span>
+<span class="go">    --read-only=true \</span>
+<span class="go">    --user=1000 \</span>
+<span class="go">    --rm \</span>
+<span class="go">    --env=TMPDIR=/tmp \</span>
+<span class="go">    --env=HOME=/var/spool/cwl \</span>
+<span class="go">    node:slim \</span>
+<span class="go">    node \</span>
+<span class="go">    /var/lib/cwl/job369354770_examples/hello.js &gt; /tmp/tmpgugLND/output.txt</span>
+<span class="go">[job docker.cwl] completed success</span>
+<span class="go">{</span>
+<span class="go">    &quot;example_out&quot;: {</span>
+<span class="go">        &quot;location&quot;: &quot;file:///home/me/cwl/user_guide/output.txt&quot;,</span>
+<span class="go">        &quot;basename&quot;: &quot;output.txt&quot;,</span>
+<span class="go">        &quot;class&quot;: &quot;File&quot;,</span>
+<span class="go">        &quot;checksum&quot;: &quot;sha1$648a6a6ffffdaa0badb23b8baf90b6168dd16b3a&quot;,</span>
+<span class="go">        &quot;size&quot;: 12,</span>
+<span class="go">        &quot;path&quot;: &quot;/home/me/cwl/user_guide/output.txt&quot;</span>
+<span class="go">    }</span>
+<span class="go">}</span>
+<span class="go">Final process status is success</span>
+<span class="gp">$ </span>cat output.txt
+<span class="go">Hello World</span>
+</pre></div>
+</div>
+<p>Notice the CWL runner has constructed a Docker command line to run the
+script.</p>
+<p>In this example, the path to the script <code class="docutils literal notranslate"><span class="pre">hello.js</span></code> is <code class="docutils literal notranslate"><span class="pre">/home/me/cwl/user_guide/hello.js</span></code>
+outside the container but <code class="docutils literal notranslate"><span class="pre">/var/lib/cwl/job369354770_examples/hello.js</span></code> inside
+the container, as reflected in the invocation of the <code class="docutils literal notranslate"><span class="pre">node</span></code> command.</p>
+</section>
+</section>
+
+
+              </article>
+              
+
+              
+              <footer class="bd-footer-article">
+                  <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+  <a class='left-prev' id="prev-link" href="environment-variables.html" title="previous page">
+      <i class="fas fa-angle-left"></i>
+      <div class="prev-next-info">
+          <p class="prev-next-subtitle">previous</p>
+          <p class="prev-next-title"><span class="section-number">2.12. </span>Environment Variables</p>
+      </div>
+  </a>
+  <a class='right-next' id="next-link" href="creating-files-at-runtime.html" title="next page">
+  <div class="prev-next-info">
+      <p class="prev-next-subtitle">next</p>
+      <p class="prev-next-title"><span class="section-number">2.14. </span>Creating files at runtime</p>
+  </div>
+  <i class="fas fa-angle-right"></i>
+  </a>
+</div>
+              </footer>
+              
+          </div>
+          
+      </div>
+    </div>
+
+  
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/pydata-sphinx-theme.js?digest=92025949c220c2e29695"></script>
+
+<div class="container">
+  <div class="row">
+    <div class="col d-flex flex-row-reverse">
+      <ul class="nav">
+        <li class="nav-item">
+          <a class="nav-link" href="https://github.com/common-workflow-language/user_guide/blob/main/CODE_OF_CONDUCT.md">Code of Conduct</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="https://github.com/common-workflow-language/user_guide/blob/main/CONTRIBUTING.md">Contributing</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="https://github.com/common-workflow-language/user_guide/">Source</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="https://github.com/common-workflow-language/user_guide/blob/main/CITATION">Cite</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+
+<footer class="bd-footer"><div class="bd-footer__inner container">
+  
+  <div class="footer-item">
+    <p class="copyright">
+    &copy; Copyright 2013, CWL Project Team.<br>
+</p>
+  </div>
+  
+</div>
+</footer>
+
+  </body>
+</html>

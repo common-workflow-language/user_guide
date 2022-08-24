@@ -1,0 +1,572 @@
+
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+    <title>1.2. Prerequisites &#8212; Common Workflow Language User Guide 0.1 documentation</title>
+<script>
+  document.documentElement.dataset.mode = localStorage.getItem("mode") || "light";
+  document.documentElement.dataset.theme = localStorage.getItem("theme") || "light"
+</script>
+
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=92025949c220c2e29695" rel="stylesheet">
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=92025949c220c2e29695" rel="stylesheet">
+
+
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/graphviz.css" />
+    <link rel="icon" sizes="16x16" type="image/png" href="../_static/images/favicons/cwl/favicon-16x16.png" />
+    <link rel="icon" sizes="32x32" type="image/png" href="../_static/images/favicons/cwl/favicon-32x32.png" />
+    <link rel="icon" sizes="96x96" type="image/png" href="../_static/images/favicons/cwl/favicon-96x96.png" />
+    <link rel="icon" sizes="128x128" type="image/png" href="../_static/images/favicons/cwl/favicon-128.png" />
+    <link rel="icon" sizes="196x196" type="image/png" href="../_static/images/favicons/cwl/favicon-196x196.png" />
+
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=92025949c220c2e29695">
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="1.3. Basic Concepts" href="basic-concepts.html" />
+    <link rel="prev" title="1.1. Quick Start" href="quick-start.html" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="docsearch:language" content="en">
+  </head>
+  
+  
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="180" data-default-mode="light">
+    <div class="bd-header-announcement container-fluid" id="banner">
+      
+
+    </div>
+
+    
+    <nav class="bd-header navbar navbar-light navbar-expand-lg bg-light fixed-top bd-navbar" id="navbar-main"><div class="bd-header__inner container-xl">
+
+  <div id="navbar-start">
+    
+    
+  
+
+
+<a class="navbar-brand logo" href="../index.html">
+  
+  
+  
+  
+    <img src="../_static/CWL-Logo-HD-cropped2.png" class="logo__image only-light" alt="Logo image">
+    <img src="../_static/CWL-Logo-HD-cropped2.png" class="logo__image only-dark" alt="Logo image">
+  
+  
+</a>
+    
+  </div>
+
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-collapsible" aria-controls="navbar-collapsible" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="fas fa-bars"></span>
+  </button>
+
+  
+  <div id="navbar-collapsible" class="col-lg-9 collapse navbar-collapse">
+    <div id="navbar-center" class="mr-auto">
+      
+      <div class="navbar-center-item">
+        <ul id="navbar-main-elements" class="navbar-nav">
+    <li class="toctree-l1 current active nav-item">
+ <a class="reference internal nav-link" href="index.html">
+  1. Introduction
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../topics/index.html">
+  2. Topics
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../tutorials.html">
+  3. Tutorials
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../faq.html">
+  4. FAQ
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../LICENSE.html">
+  5. Licenses
+ </a>
+</li>
+
+    
+</ul>
+      </div>
+      
+    </div>
+
+    <div id="navbar-end">
+      
+      <div class="navbar-end-item">
+        <span id="theme-switch" class="btn btn-sm btn-outline-primary navbar-btn rounded-circle">
+    <a class="theme-switch" data-mode="light"><i class="fas fa-sun"></i></a>
+    <a class="theme-switch" data-mode="dark"><i class="far fa-moon"></i></a>
+    <a class="theme-switch" data-mode="auto"><i class="fas fa-adjust"></i></a>
+</span>
+      </div>
+      
+      <div class="navbar-end-item">
+        <ul id="navbar-icon-links" class="navbar-nav" aria-label="Icon Links">
+        <li class="nav-item">
+          <a class="nav-link" href="https://github.com/common-workflow-language/user_guide/" rel="noopener" target="_blank" title="GitHub"><span><i class="fab fa-github-square"></i></span>
+            <label class="sr-only">GitHub</label></a>
+        </li>
+      </ul>
+      </div>
+      
+    </div>
+  </div>
+</div>
+    </nav>
+    
+
+    <div class="bd-container container-xl">
+      <div class="bd-container__inner row">
+          
+
+<!-- Only show if we have sidebars configured, else just a small margin  -->
+<div class="bd-sidebar-primary col-12 col-md-3 bd-sidebar">
+  <div class="sidebar-start-items"><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" >
+</form><nav class="bd-links d-none d-md-block" id="bd-docs-nav" aria-label="Main navigation">
+  <div class="bd-toc-item active">
+    <ul class="current nav bd-sidenav">
+ <li class="toctree-l1 current active has-children">
+  <a class="reference internal" href="index.html">
+   1. Introduction
+  </a>
+  <input checked class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul class="current">
+   <li class="toctree-l2">
+    <a class="reference internal" href="quick-start.html">
+     1.1. Quick Start
+    </a>
+   </li>
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     1.2. Prerequisites
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="basic-concepts.html">
+     1.3. Basic Concepts
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../topics/index.html">
+   2. Topics
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../tutorials.html">
+   3. Tutorials
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../faq.html">
+   4. FAQ
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../LICENSE.html">
+   5. Licenses
+  </a>
+ </li>
+</ul>
+
+  </div>
+</nav>
+  </div>
+  <div class="sidebar-end-items">
+  </div>
+</div>
+
+
+          
+
+
+<div class="bd-sidebar-secondary d-none d-xl-block col-xl-2 bd-toc">
+  
+    
+    <div class="toc-item">
+      
+<div class="tocsection onthispage mt-5 pt-1 pb-3">
+    <i class="fas fa-list"></i> On this page
+</div>
+
+<nav id="bd-toc-nav">
+    <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#operating-system">
+   1.2.1. Operating System
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#cwl-runner">
+   1.2.2. CWL runner
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#cwl-runner-python-module">
+     1.2.2.1. cwl-runner Python module
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#text-editor">
+   1.2.3. Text Editor
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#docker">
+   1.2.4. Docker
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#learn-more">
+   1.2.5. Learn more
+  </a>
+ </li>
+</ul>
+
+</nav>
+    </div>
+    
+    <div class="toc-item">
+      
+
+<div class="tocsection editthispage">
+    <a href="https://github.com/common-workflow-language/user_guide/edit/main/introduction/prerequisites.md">
+        <i class="fas fa-pencil-alt"></i> Edit this page
+    </a>
+</div>
+
+    </div>
+    
+  
+</div>
+
+
+          
+          
+          <div class="bd-content col-12 col-md-9 col-xl-7">
+              
+              <article class="bd-article" role="main">
+                
+  <section id="prerequisites">
+<h1><span class="section-number">1.2. </span>Prerequisites<a class="headerlink" href="#prerequisites" title="Permalink to this heading">#</a></h1>
+<p>The software and configurations listed in this section are prerequisites for
+following this user guide. The CWL Specification is implemented by multiple
+CWL Runners. This list of requirements focuses on the <code class="docutils literal notranslate"><span class="pre">cwltool</span></code> runner. You
+can use another CWL Runner but the examples may produce a different output.</p>
+<div class="admonition-cwl-implementations admonition">
+<p class="admonition-title">CWL Implementations</p>
+<p>There are many CWL Implementations. Some are complete CWL Runners,
+others are plug-ins or extensions to Workflow Engines. We have a better
+explanation in the <a class="reference internal" href="basic-concepts.html#implementations"><span class="std std-doc">Implementations</span></a> section.</p>
+</div>
+<section id="operating-system">
+<h2><span class="section-number">1.2.1. </span>Operating System<a class="headerlink" href="#operating-system" title="Permalink to this heading">#</a></h2>
+<p>We recommend using an up-to-date operating system. You can choose any
+of the following options for your operating system:</p>
+<ul class="simple">
+<li><p>Linux</p></li>
+<li><p>macOS</p></li>
+</ul>
+<p>You can try to use Window Subsystem for Linux 2 (WSL) to follow the
+User Guide documentation, but some examples may not work as expected.</p>
+<p>Your operating system also needs Internet access and a recent version
+of Python 3.</p>
+</section>
+<section id="cwl-runner">
+<h2><span class="section-number">1.2.2. </span>CWL runner<a class="headerlink" href="#cwl-runner" title="Permalink to this heading">#</a></h2>
+<p>The first thing you will need for running CWL workflows is a CWL runner.
+<code class="docutils literal notranslate"><span class="pre">cwltool</span></code> is a Python Open Source project maintained by the CWL community. It
+is also the CWL reference runner, which means it must support everything in the
+current CWL specification, <code class="docutils literal notranslate"><span class="pre">v1.2</span></code>.</p>
+<p><code class="docutils literal notranslate"><span class="pre">cwltool</span></code> can be installed with <code class="docutils literal notranslate"><span class="pre">pip</span></code>. We recommend using a virtual environment
+like <code class="docutils literal notranslate"><span class="pre">venv</span></code> or <code class="docutils literal notranslate"><span class="pre">conda</span></code>. The following commands will create and activate a Python
+virtual environment using the <code class="docutils literal notranslate"><span class="pre">venv</span></code> module, and install <code class="docutils literal notranslate"><span class="pre">cwltool</span></code> in that
+environment:</p>
+<div class="literal-block-wrapper docutils container" id="installing-cwltool-with-pip-and-venv">
+<div class="code-block-caption"><span class="caption-text">Installing <code class="docutils literal notranslate"><span class="pre">cwltool</span></code> with <code class="docutils literal notranslate"><span class="pre">pip</span></code> and <code class="docutils literal notranslate"><span class="pre">venv</span></code>.</span><a class="headerlink" href="#installing-cwltool-with-pip-and-venv" title="Permalink to this code">#</a></div>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>python -m venv venv
+<span class="gp">$ </span><span class="nb">source</span> venv/bin/activate
+<span class="gp">$ </span><span class="o">(</span>venv<span class="o">)</span> pip install cwltool
+</pre></div>
+</div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Visit the <code class="docutils literal notranslate"><span class="pre">cwltool</span></code> <a class="reference external" href="https://github.com/common-workflow-language/cwltool#install">documentation</a>
+for other ways to install <code class="docutils literal notranslate"><span class="pre">cwltool</span></code> with <code class="docutils literal notranslate"><span class="pre">apt</span></code> and <code class="docutils literal notranslate"><span class="pre">conda</span></code>.</p>
+</div>
+<p>Let’s use a simple workflow <code class="docutils literal notranslate"><span class="pre">true.cwl</span></code> with <code class="docutils literal notranslate"><span class="pre">cwltool</span></code>.</p>
+<div class="literal-block-wrapper docutils container" id="true-cwl">
+<div class="code-block-caption"><span class="caption-text"><code class="docutils literal notranslate"><span class="pre">true.cwl</span></code></span><a class="headerlink" href="#true-cwl" title="Permalink to this code">#</a></div>
+<div class="highlight-cwl notranslate"><div class="highlight"><pre><span></span><span class="nt">cwlVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">v1.2</span><span class="w"></span>
+<span class="nt">class</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">CommandLineTool</span><span class="w"></span>
+<span class="nt">inputs</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[]</span><span class="w"></span>
+<span class="nt">outputs</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[]</span><span class="w"></span>
+<span class="c1"># `true` is a Linux command that exits with exit code `0` (success).</span><span class="w"></span>
+<span class="nt">baseCommand</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;true&quot;</span><span class="w"></span>
+</pre></div>
+</div>
+</div>
+<p>The <code class="docutils literal notranslate"><span class="pre">cwltool</span></code> command has an option to validate CWL workflows. It will parse the
+CWL workflow, look for syntax errors, and verify that the workflow is compliant
+with the CWL specification, without running the workflow. To use it you just need
+to pass <code class="docutils literal notranslate"><span class="pre">--validate</span></code> to the <code class="docutils literal notranslate"><span class="pre">cwltool</span></code> command:</p>
+<div class="literal-block-wrapper docutils container" id="validating-truecwl-with-cwltool">
+<div class="code-block-caption"><span class="caption-text">Validating <code class="docutils literal notranslate"><span class="pre">true.cwl</span></code> with <code class="docutils literal notranslate"><span class="pre">cwltool</span></code>.</span><a class="headerlink" href="#validating-truecwl-with-cwltool" title="Permalink to this code">#</a></div>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>cwltool --validate true.cwl
+<span class="go">INFO /home/kinow/Development/python/workspace/user_guide/venv/bin/cwltool 3.1.20220406080846</span>
+<span class="go">INFO Resolved &#39;true.cwl&#39; to &#39;file:///tmp/true.cwl&#39;</span>
+<span class="go">true.cwl is valid CWL.</span>
+</pre></div>
+</div>
+</div>
+<p>You can run the CWL workflow now that you know it is valid:</p>
+<div class="literal-block-wrapper docutils container" id="running-true-cwl-with-cwltool">
+<div class="code-block-caption"><span class="caption-text">Running <code class="docutils literal notranslate"><span class="pre">true.cwl</span></code> with <code class="docutils literal notranslate"><span class="pre">cwltool</span></code>.</span><a class="headerlink" href="#running-true-cwl-with-cwltool" title="Permalink to this code">#</a></div>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>cwltool true.cwl
+<span class="go">INFO /home/kinow/Development/python/workspace/user_guide/venv/bin/cwltool 3.1.20220406080846</span>
+<span class="go">INFO Resolved &#39;true.cwl&#39; to &#39;file:///tmp/true.cwl&#39;</span>
+<span class="go">INFO [job true.cwl] /tmp/f8xlh1pl$ true</span>
+<span class="go">INFO [job true.cwl] completed success</span>
+<span class="go">{}</span>
+<span class="go">INFO Final process status is success</span>
+</pre></div>
+</div>
+</div>
+<section id="cwl-runner-python-module">
+<h3><span class="section-number">1.2.2.1. </span>cwl-runner Python module<a class="headerlink" href="#cwl-runner-python-module" title="Permalink to this heading">#</a></h3>
+<p><code class="docutils literal notranslate"><span class="pre">cwl-runner</span></code> is an implementation agnostic alias for CWL Runners.
+Users can invoke <code class="docutils literal notranslate"><span class="pre">cwl-runner</span></code> instead of invoking a CWL runner like <code class="docutils literal notranslate"><span class="pre">cwltool</span></code>
+directly. The <code class="docutils literal notranslate"><span class="pre">cwl-runner</span></code> alias command then chooses the correct CWL runner.
+This is convenient for environments with multiple CWL runners.</p>
+<p>The CWL community publishes a Python module with the same name,
+<code class="docutils literal notranslate"><span class="pre">cwl-runner</span></code>, that defaults to <code class="docutils literal notranslate"><span class="pre">cwltool</span></code>. <code class="docutils literal notranslate"><span class="pre">cwl-runner</span></code> will be used in
+the rest of this user guide. You can use <code class="docutils literal notranslate"><span class="pre">pip</span></code> to install the <code class="docutils literal notranslate"><span class="pre">cwl-runner</span></code>
+Python module:</p>
+<div class="literal-block-wrapper docutils container" id="installing-cwlrunner-with-pip">
+<div class="code-block-caption"><span class="caption-text">Installing <code class="docutils literal notranslate"><span class="pre">cwl-runner</span></code> with <code class="docutils literal notranslate"><span class="pre">pip</span></code>.</span><a class="headerlink" href="#installing-cwlrunner-with-pip" title="Permalink to this code">#</a></div>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>pip install cwl-runner
+</pre></div>
+</div>
+</div>
+<p>Now you can validate and run your workflow with <code class="docutils literal notranslate"><span class="pre">cwl-runner</span></code> executable,
+which will invoke <code class="docutils literal notranslate"><span class="pre">cwltool</span></code>. You should have the same results and output
+as in the previous section.</p>
+<div class="literal-block-wrapper docutils container" id="validating-true-cwl-with-cwl-runner">
+<div class="code-block-caption"><span class="caption-text">Validating <code class="docutils literal notranslate"><span class="pre">true.cwl</span></code> with <code class="docutils literal notranslate"><span class="pre">cwl-runner</span></code>.</span><a class="headerlink" href="#validating-true-cwl-with-cwl-runner" title="Permalink to this code">#</a></div>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>cwl-runner --validate true.cwl
+<span class="go">INFO /home/kinow/Development/python/workspace/user_guide/venv/bin/cwl-runner 3.1.20220406080846</span>
+<span class="go">INFO Resolved &#39;true.cwl&#39; to &#39;file:///tmp/true.cwl&#39;</span>
+<span class="go">true.cwl is valid CWL.</span>
+</pre></div>
+</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="running-true-cwl-with-cwl-runner">
+<div class="code-block-caption"><span class="caption-text">Running <code class="docutils literal notranslate"><span class="pre">true.cwl</span></code> with <code class="docutils literal notranslate"><span class="pre">cwl-runner</span></code>.</span><a class="headerlink" href="#running-true-cwl-with-cwl-runner" title="Permalink to this code">#</a></div>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>cwl-runner true.cwl
+<span class="go">INFO /home/kinow/Development/python/workspace/user_guide/venv/bin/cwl-runner 3.1.20220406080846</span>
+<span class="go">INFO Resolved &#39;true.cwl&#39; to &#39;file:///tmp/true.cwl&#39;</span>
+<span class="go">INFO [job true.cwl] /tmp/7a2gf1nh$ true</span>
+<span class="go">INFO [job true.cwl] completed success</span>
+<span class="go">{}</span>
+<span class="go">INFO Final process status is success</span>
+</pre></div>
+</div>
+</div>
+<p>Another way to execute <code class="docutils literal notranslate"><span class="pre">cwl-runner</span></code> is invoking the file directly. For that,
+the first thing you need is to modify the <code class="docutils literal notranslate"><span class="pre">true.cwl</span></code> workflow and include
+a special first line, a <em>shebang</em>:</p>
+<div class="literal-block-wrapper docutils container" id="cwltool-with-a-shebang">
+<div class="code-block-caption"><span class="caption-text"><code class="docutils literal notranslate"><span class="pre">cwltool</span></code> with a shebang</span><a class="headerlink" href="#cwltool-with-a-shebang" title="Permalink to this code">#</a></div>
+<div class="highlight-cwl notranslate"><div class="highlight"><pre><span></span><span class="c1">#!/usr/bin/env cwl-runner</span><span class="w"></span>
+
+<span class="nt">cwlVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">v1.2</span><span class="w"></span>
+<span class="nt">class</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">CommandLineTool</span><span class="w"></span>
+<span class="nt">inputs</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[]</span><span class="w"></span>
+<span class="nt">outputs</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[]</span><span class="w"></span>
+<span class="c1"># `true` is a Linux command that exits with exit code `0` (success).</span><span class="w"></span>
+<span class="nt">baseCommand</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;true&quot;</span><span class="w"></span>
+</pre></div>
+</div>
+</div>
+<p>Now, after you make the file <code class="docutils literal notranslate"><span class="pre">true.cwl</span></code> executable with <code class="docutils literal notranslate"><span class="pre">chmod</span> <span class="pre">u+x</span></code>,
+you can execute it directly in the command-line and the program
+specified in the shebang (<code class="docutils literal notranslate"><span class="pre">cwl-runner</span></code>) will be used to execute the
+rest of the file.</p>
+<div class="literal-block-wrapper docutils container" id="making-true-cwl-executable-and-running-it">
+<div class="code-block-caption"><span class="caption-text">Making <code class="docutils literal notranslate"><span class="pre">true.cwl</span></code> executable and running it.</span><a class="headerlink" href="#making-true-cwl-executable-and-running-it" title="Permalink to this code">#</a></div>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>chmod u+x true.cwl
+<span class="gp">$ </span>./true.cwl
+<span class="go">INFO /home/kinow/Development/python/workspace/user_guide/venv/bin/cwl-runner 3.1.20220406080846</span>
+<span class="go">INFO Resolved &#39;./true.cwl&#39; to &#39;file:///tmp/true.cwl&#39;</span>
+<span class="go">INFO [job true.cwl] /tmp/jz7ups99$ true</span>
+<span class="go">INFO [job true.cwl] completed success</span>
+<span class="go">{}</span>
+<span class="go">INFO Final process status is success</span>
+</pre></div>
+</div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The <em>shebang</em> is the two-character sequence <code class="docutils literal notranslate"><span class="pre">#!</span></code> at the beginning of a
+script. When the script is executable, the operating system will execute
+the script using the executable specified after the shebang. It is
+considered a good practice to use <code class="docutils literal notranslate"><span class="pre">/usr/bin/env</span> <span class="pre">&lt;executable&gt;</span></code> since it
+looks for the <code class="docutils literal notranslate"><span class="pre">&lt;executable&gt;</span></code> program in the system <code class="docutils literal notranslate"><span class="pre">PATH</span></code>, instead of
+using a hard-coded location.</p>
+</div>
+</section>
+</section>
+<section id="text-editor">
+<h2><span class="section-number">1.2.3. </span>Text Editor<a class="headerlink" href="#text-editor" title="Permalink to this heading">#</a></h2>
+<p>You can use any text editor with CWL, but for syntax highlighting we recommend
+an editor with YAML support. Popular editors are Visual Studio Code, Sublime,
+WebStorm, vim/neovim, and Emacs.</p>
+<p>There are extensions for Visual Studio Code and WebStorm that provide
+integration with CWL, with customized syntax highlighting and better
+auto-complete:</p>
+<ul class="simple">
+<li><p>Visual Studio Code with the Benten (CWL) plugin - <a class="reference external" href="https://github.com/rabix/benten#install-vs-code-extension">https://github.com/rabix/benten#install-vs-code-extension</a></p></li>
+<li><p>cwl-plugin for IntelliJ - <a class="reference external" href="https://plugins.jetbrains.com/plugin/10040-cwl-plugin">https://plugins.jetbrains.com/plugin/10040-cwl-plugin</a></p></li>
+</ul>
+<p>The CWL community also maintains a list of editors and viewers:
+<a class="reference external" href="https://www.commonwl.org/#Editors_and_viewers">https://www.commonwl.org/#Editors_and_viewers</a></p>
+</section>
+<section id="docker">
+<h2><span class="section-number">1.2.4. </span>Docker<a class="headerlink" href="#docker" title="Permalink to this heading">#</a></h2>
+<p><code class="docutils literal notranslate"><span class="pre">cwltool</span></code> uses Docker to run workflows or workflow steps with containers.
+Follow the instructions in the Docker documentation to install it for your
+operating system: <a class="reference external" href="https://docs.docker.com/">https://docs.docker.com/</a>.</p>
+<p>You do not need to know how to write and build Docker containers. In the
+rest of the user guide we will use existing Docker images for running
+examples, and to clarify the differences between the execution models
+with and without containers.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><code class="docutils literal notranslate"><span class="pre">cwltool</span></code> supports running containers with Docker, Podman, udocker, and
+Singularity. You can also use alternative container registries for pulling
+images.</p>
+</div>
+</section>
+<section id="learn-more">
+<h2><span class="section-number">1.2.5. </span>Learn more<a class="headerlink" href="#learn-more" title="Permalink to this heading">#</a></h2>
+<ul class="simple">
+<li><p>The <a class="reference internal" href="basic-concepts.html#implementations"><span class="std std-doc">Implementations</span></a> topic in the next section, Basic Concepts.</p></li>
+<li><p>The Python <code class="docutils literal notranslate"><span class="pre">venv</span></code> module: <a class="reference external" href="https://docs.python.org/3/library/venv.html">https://docs.python.org/3/library/venv.html</a></p></li>
+</ul>
+</section>
+</section>
+
+
+              </article>
+              
+
+              
+              <footer class="bd-footer-article">
+                  <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+  <a class='left-prev' id="prev-link" href="quick-start.html" title="previous page">
+      <i class="fas fa-angle-left"></i>
+      <div class="prev-next-info">
+          <p class="prev-next-subtitle">previous</p>
+          <p class="prev-next-title"><span class="section-number">1.1. </span>Quick Start</p>
+      </div>
+  </a>
+  <a class='right-next' id="next-link" href="basic-concepts.html" title="next page">
+  <div class="prev-next-info">
+      <p class="prev-next-subtitle">next</p>
+      <p class="prev-next-title"><span class="section-number">1.3. </span>Basic Concepts</p>
+  </div>
+  <i class="fas fa-angle-right"></i>
+  </a>
+</div>
+              </footer>
+              
+          </div>
+          
+      </div>
+    </div>
+
+  
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/pydata-sphinx-theme.js?digest=92025949c220c2e29695"></script>
+
+<div class="container">
+  <div class="row">
+    <div class="col d-flex flex-row-reverse">
+      <ul class="nav">
+        <li class="nav-item">
+          <a class="nav-link" href="https://github.com/common-workflow-language/user_guide/blob/main/CODE_OF_CONDUCT.md">Code of Conduct</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="https://github.com/common-workflow-language/user_guide/blob/main/CONTRIBUTING.md">Contributing</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="https://github.com/common-workflow-language/user_guide/">Source</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="https://github.com/common-workflow-language/user_guide/blob/main/CITATION">Cite</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+
+<footer class="bd-footer"><div class="bd-footer__inner container">
+  
+  <div class="footer-item">
+    <p class="copyright">
+    &copy; Copyright 2013, CWL Project Team.<br>
+</p>
+  </div>
+  
+</div>
+</footer>
+
+  </body>
+</html>

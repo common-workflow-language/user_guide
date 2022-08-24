@@ -1,0 +1,622 @@
+
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+    <title>2.7. Outputs &#8212; Common Workflow Language User Guide 0.1 documentation</title>
+<script>
+  document.documentElement.dataset.mode = localStorage.getItem("mode") || "light";
+  document.documentElement.dataset.theme = localStorage.getItem("theme") || "light"
+</script>
+
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=92025949c220c2e29695" rel="stylesheet">
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=92025949c220c2e29695" rel="stylesheet">
+
+
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/graphviz.css" />
+    <link rel="icon" sizes="16x16" type="image/png" href="../_static/images/favicons/cwl/favicon-16x16.png" />
+    <link rel="icon" sizes="32x32" type="image/png" href="../_static/images/favicons/cwl/favicon-32x32.png" />
+    <link rel="icon" sizes="96x96" type="image/png" href="../_static/images/favicons/cwl/favicon-96x96.png" />
+    <link rel="icon" sizes="128x128" type="image/png" href="../_static/images/favicons/cwl/favicon-128.png" />
+    <link rel="icon" sizes="196x196" type="image/png" href="../_static/images/favicons/cwl/favicon-196x196.png" />
+
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=92025949c220c2e29695">
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="2.8. Custom Types" href="custom-types.html" />
+    <link rel="prev" title="2.6. Parameter References" href="parameter-references.html" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="docsearch:language" content="en">
+  </head>
+  
+  
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="180" data-default-mode="light">
+    <div class="bd-header-announcement container-fluid" id="banner">
+      
+
+    </div>
+
+    
+    <nav class="bd-header navbar navbar-light navbar-expand-lg bg-light fixed-top bd-navbar" id="navbar-main"><div class="bd-header__inner container-xl">
+
+  <div id="navbar-start">
+    
+    
+  
+
+
+<a class="navbar-brand logo" href="../index.html">
+  
+  
+  
+  
+    <img src="../_static/CWL-Logo-HD-cropped2.png" class="logo__image only-light" alt="Logo image">
+    <img src="../_static/CWL-Logo-HD-cropped2.png" class="logo__image only-dark" alt="Logo image">
+  
+  
+</a>
+    
+  </div>
+
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-collapsible" aria-controls="navbar-collapsible" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="fas fa-bars"></span>
+  </button>
+
+  
+  <div id="navbar-collapsible" class="col-lg-9 collapse navbar-collapse">
+    <div id="navbar-center" class="mr-auto">
+      
+      <div class="navbar-center-item">
+        <ul id="navbar-main-elements" class="navbar-nav">
+    <li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../introduction/index.html">
+  1. Introduction
+ </a>
+</li>
+
+<li class="toctree-l1 current active nav-item">
+ <a class="reference internal nav-link" href="index.html">
+  2. Topics
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../tutorials.html">
+  3. Tutorials
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../faq.html">
+  4. FAQ
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../LICENSE.html">
+  5. Licenses
+ </a>
+</li>
+
+    
+</ul>
+      </div>
+      
+    </div>
+
+    <div id="navbar-end">
+      
+      <div class="navbar-end-item">
+        <span id="theme-switch" class="btn btn-sm btn-outline-primary navbar-btn rounded-circle">
+    <a class="theme-switch" data-mode="light"><i class="fas fa-sun"></i></a>
+    <a class="theme-switch" data-mode="dark"><i class="far fa-moon"></i></a>
+    <a class="theme-switch" data-mode="auto"><i class="fas fa-adjust"></i></a>
+</span>
+      </div>
+      
+      <div class="navbar-end-item">
+        <ul id="navbar-icon-links" class="navbar-nav" aria-label="Icon Links">
+        <li class="nav-item">
+          <a class="nav-link" href="https://github.com/common-workflow-language/user_guide/" rel="noopener" target="_blank" title="GitHub"><span><i class="fab fa-github-square"></i></span>
+            <label class="sr-only">GitHub</label></a>
+        </li>
+      </ul>
+      </div>
+      
+    </div>
+  </div>
+</div>
+    </nav>
+    
+
+    <div class="bd-container container-xl">
+      <div class="bd-container__inner row">
+          
+
+<!-- Only show if we have sidebars configured, else just a small margin  -->
+<div class="bd-sidebar-primary col-12 col-md-3 bd-sidebar">
+  <div class="sidebar-start-items"><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" >
+</form><nav class="bd-links d-none d-md-block" id="bd-docs-nav" aria-label="Main navigation">
+  <div class="bd-toc-item active">
+    <ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../introduction/index.html">
+   1. Introduction
+  </a>
+ </li>
+ <li class="toctree-l1 current active has-children">
+  <a class="reference internal" href="index.html">
+   2. Topics
+  </a>
+  <input checked class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul class="current">
+   <li class="toctree-l2">
+    <a class="reference internal" href="yaml-guide.html">
+     2.1. YAML Guide
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="command-line-tool.html">
+     2.2. Command Line Tool
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="expressions.html">
+     2.3. Expressions
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="inputs.html">
+     2.4. Inputs
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="additional-arguments-and-parameters.html">
+     2.5. Additional Arguments and Parameters
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="parameter-references.html">
+     2.6. Parameter References
+    </a>
+   </li>
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     2.7. Outputs
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="custom-types.html">
+     2.8. Custom Types
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="expression-tool.html">
+     2.9. Expression Tool
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="workflows.html">
+     2.10. Workflows
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="operations.html">
+     2.11. Operations
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="environment-variables.html">
+     2.12. Environment Variables
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="using-containers.html">
+     2.13. Using containers
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="creating-files-at-runtime.html">
+     2.14. Creating files at runtime
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="staging-input-files.html">
+     2.15. Staging input files
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="best-practices.html">
+     2.16. Best practices
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="file-formats.html">
+     2.17. File formats
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="metadata-and-authorship.html">
+     2.18. Metadata and authorship
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="specifying-software-requirements.html">
+     2.19. Specifying software requirements
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../tutorials.html">
+   3. Tutorials
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../faq.html">
+   4. FAQ
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../LICENSE.html">
+   5. Licenses
+  </a>
+ </li>
+</ul>
+
+  </div>
+</nav>
+  </div>
+  <div class="sidebar-end-items">
+  </div>
+</div>
+
+
+          
+
+
+<div class="bd-sidebar-secondary d-none d-xl-block col-xl-2 bd-toc">
+  
+    
+    <div class="toc-item">
+      
+<div class="tocsection onthispage mt-5 pt-1 pb-3">
+    <i class="fas fa-list"></i> On this page
+</div>
+
+<nav id="bd-toc-nav">
+    <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#returning-output-files">
+   2.7.1. Returning Output Files
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#capturing-standard-output">
+   2.7.2. Capturing Standard Output
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#array-outputs">
+   2.7.3. Array Outputs
+  </a>
+ </li>
+</ul>
+
+</nav>
+    </div>
+    
+    <div class="toc-item">
+      
+
+<div class="tocsection editthispage">
+    <a href="https://github.com/common-workflow-language/user_guide/edit/main/topics/outputs.md">
+        <i class="fas fa-pencil-alt"></i> Edit this page
+    </a>
+</div>
+
+    </div>
+    
+  
+</div>
+
+
+          
+          
+          <div class="bd-content col-12 col-md-9 col-xl-7">
+              
+              <article class="bd-article" role="main">
+                
+  <section id="outputs">
+<h1><span class="section-number">2.7. </span>Outputs<a class="headerlink" href="#outputs" title="Permalink to this heading">#</a></h1>
+<section id="returning-output-files">
+<h2><span class="section-number">2.7.1. </span>Returning Output Files<a class="headerlink" href="#returning-output-files" title="Permalink to this heading">#</a></h2>
+<p>The <code class="docutils literal notranslate"><span class="pre">outputs</span></code> of a tool is a list of output parameters that should be
+returned after running the tool.  Each parameter has an <code class="docutils literal notranslate"><span class="pre">id</span></code> for the name
+of parameter, and <code class="docutils literal notranslate"><span class="pre">type</span></code> describing what types of values are valid for
+that parameter.</p>
+<p>When a tool runs under CWL, the starting working directory is the
+designated output directory.  The underlying tool or script must record
+its results in the form of files created in the output directory.  The
+output parameters returned by the CWL tool are either the output files
+themselves, or come from examining the content of those files.</p>
+<p>The following example demonstrates how to return a file that has been extracted from a tar file.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Passing mandatory arguments to the <code class="docutils literal notranslate"><span class="pre">baseCommand</span></code></p>
+<p>In previous examples, the <code class="docutils literal notranslate"><span class="pre">baseCommand</span></code> was just a string, with any arguments passed as CWL inputs.
+Instead of a single string we can use an <em>array of strings</em>.  The first element is the command to run, and
+any subsequent elements are mandatory command line arguments</p>
+</div>
+<div class="literal-block-wrapper docutils container" id="tar-cwl">
+<div class="code-block-caption"><span class="caption-text"><code class="docutils literal notranslate"><span class="pre">tar.cwl</span></code></span><a class="headerlink" href="#tar-cwl" title="Permalink to this code">#</a></div>
+<div class="highlight-cwl notranslate"><div class="highlight"><pre><span></span><span class="c1">#!/usr/bin/env cwl-runner</span><span class="w"></span>
+
+<span class="nt">cwlVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">v1.0</span><span class="w"></span>
+<span class="nt">class</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">CommandLineTool</span><span class="w"></span>
+<span class="nt">baseCommand</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="nv">tar</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">--extract</span><span class="p p-Indicator">]</span><span class="w"></span>
+<span class="nt">inputs</span><span class="p">:</span><span class="w"></span>
+<span class="w">  </span><span class="nt">tarfile</span><span class="p">:</span><span class="w"></span>
+<span class="w">    </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">File</span><span class="w"></span>
+<span class="w">    </span><span class="nt">inputBinding</span><span class="p">:</span><span class="w"></span>
+<span class="w">      </span><span class="nt">prefix</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">--file</span><span class="w"></span>
+<span class="nt">outputs</span><span class="p">:</span><span class="w"></span>
+<span class="w">  </span><span class="nt">example_out</span><span class="p">:</span><span class="w"></span>
+<span class="w">    </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">File</span><span class="w"></span>
+<span class="w">    </span><span class="nt">outputBinding</span><span class="p">:</span><span class="w"></span>
+<span class="w">      </span><span class="nt">glob</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">hello.txt</span><span class="w"></span>
+</pre></div>
+</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="tar-job-yml">
+<div class="code-block-caption"><span class="caption-text"><code class="docutils literal notranslate"><span class="pre">tar-job.yml</span></code></span><a class="headerlink" href="#tar-job-yml" title="Permalink to this code">#</a></div>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">tarfile</span><span class="p">:</span><span class="w"></span>
+<span class="w">  </span><span class="nt">class</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">File</span><span class="w"></span>
+<span class="w">  </span><span class="nt">path</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">hello.tar</span><span class="w"></span>
+</pre></div>
+</div>
+</div>
+<p>Next, create a tar file for the example and invoke <code class="docutils literal notranslate"><span class="pre">cwl-runner</span></code> with the tool
+wrapper and the input object on the command line:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>touch hello.txt <span class="o">&amp;&amp;</span> tar -cvf hello.tar hello.txt
+<span class="gp">$ </span>cwl-runner tar.cwl tar-job.yml
+<span class="go">[job tar.cwl] /tmp/tmpqOeawQ$ tar \</span>
+<span class="go">    --extract --file \</span>
+<span class="go">    /tmp/tmpGDk8Y1/stg80bbad20-494d-47af-8075-dffc32df03a3/hello.tar</span>
+<span class="go">[job tar.cwl] completed success</span>
+<span class="go">{</span>
+<span class="go">    &quot;example_out&quot;: {</span>
+<span class="go">        &quot;location&quot;: &quot;file:///home/me/cwl/user_guide/hello.txt&quot;,</span>
+<span class="go">        &quot;basename&quot;: &quot;hello.txt&quot;,</span>
+<span class="go">        &quot;class&quot;: &quot;File&quot;,</span>
+<span class="go">        &quot;checksum&quot;: &quot;sha1$da39a3ee5e6b4b0d3255bfef95601890afd80709&quot;,</span>
+<span class="go">        &quot;size&quot;: 0,</span>
+<span class="go">        &quot;path&quot;: &quot;/home/me/cwl/user_guide/hello.txt&quot;</span>
+<span class="go">    }</span>
+<span class="go">}</span>
+<span class="go">Final process status is success</span>
+</pre></div>
+</div>
+<p>The field <code class="docutils literal notranslate"><span class="pre">outputBinding</span></code> describes how to set the value of each
+output parameter.</p>
+<div class="highlight-cwl notranslate"><div class="highlight"><pre><span></span><span class="nt">outputs</span><span class="p">:</span><span class="w"></span>
+<span class="w">  </span><span class="nt">example_out</span><span class="p">:</span><span class="w"></span>
+<span class="w">    </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">File</span><span class="w"></span>
+<span class="w">    </span><span class="nt">outputBinding</span><span class="p">:</span><span class="w"></span>
+<span class="w">      </span><span class="nt">glob</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">hello.txt</span><span class="w"></span>
+</pre></div>
+</div>
+<p>The <code class="docutils literal notranslate"><span class="pre">glob</span></code> field consists of the name of a file in the output directory.
+If you don’t know name of the file in advance, you can use a wildcard pattern like <code class="docutils literal notranslate"><span class="pre">glob:</span> <span class="pre">'*.txt'</span></code>.</p>
+</section>
+<section id="capturing-standard-output">
+<h2><span class="section-number">2.7.2. </span>Capturing Standard Output<a class="headerlink" href="#capturing-standard-output" title="Permalink to this heading">#</a></h2>
+<p>To capture a tool’s standard output stream, add the <code class="docutils literal notranslate"><span class="pre">stdout</span></code> field with
+the name of the file where the output stream should go.  Then add <code class="docutils literal notranslate"><span class="pre">type:</span> <span class="pre">stdout</span></code> on the corresponding output parameter.</p>
+<div class="literal-block-wrapper docutils container" id="stdout-cwl">
+<div class="code-block-caption"><span class="caption-text"><code class="docutils literal notranslate"><span class="pre">stdout.cwl</span></code></span><a class="headerlink" href="#stdout-cwl" title="Permalink to this code">#</a></div>
+<div class="highlight-cwl notranslate"><div class="highlight"><pre><span></span><span class="c1">#!/usr/bin/env cwl-runner</span><span class="w"></span>
+
+<span class="nt">cwlVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">v1.0</span><span class="w"></span>
+<span class="nt">class</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">CommandLineTool</span><span class="w"></span>
+<span class="nt">baseCommand</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">echo</span><span class="w"></span>
+<span class="nt">stdout</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">output.txt</span><span class="w"></span>
+<span class="nt">inputs</span><span class="p">:</span><span class="w"></span>
+<span class="w">  </span><span class="nt">message</span><span class="p">:</span><span class="w"></span>
+<span class="w">    </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">string</span><span class="w"></span>
+<span class="w">    </span><span class="nt">inputBinding</span><span class="p">:</span><span class="w"></span>
+<span class="w">      </span><span class="nt">position</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1</span><span class="w"></span>
+<span class="nt">outputs</span><span class="p">:</span><span class="w"></span>
+<span class="w">  </span><span class="nt">example_out</span><span class="p">:</span><span class="w"></span>
+<span class="w">    </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">stdout</span><span class="w"></span>
+</pre></div>
+</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id1">
+<div class="code-block-caption"><span class="caption-text"><code class="docutils literal notranslate"><span class="pre">echo-job.yml</span></code></span><a class="headerlink" href="#id1" title="Permalink to this code">#</a></div>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">message</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Hello world!</span><span class="w"></span>
+</pre></div>
+</div>
+</div>
+<p>Now invoke <code class="docutils literal notranslate"><span class="pre">cwl-runner</span></code> providing the tool wrapper and the input object
+on the command line:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>cwl-runner stdout.cwl echo-job.yml
+<span class="go">[job stdout.cwl] /tmp/tmpE0gTz7$ echo \</span>
+<span class="go">    &#39;Hello world!&#39; &gt; /tmp/tmpE0gTz7/output.txt</span>
+<span class="go">[job stdout.cwl] completed success</span>
+<span class="go">{</span>
+<span class="go">    &quot;example_out&quot;: {</span>
+<span class="go">        &quot;location&quot;: &quot;file:///home/me/cwl/user_guide/output.txt&quot;,</span>
+<span class="go">        &quot;basename&quot;: &quot;output.txt&quot;,</span>
+<span class="go">        &quot;class&quot;: &quot;File&quot;,</span>
+<span class="go">        &quot;checksum&quot;: &quot;sha1$47a013e660d408619d894b20806b1d5086aab03b&quot;,</span>
+<span class="go">        &quot;size&quot;: 13,</span>
+<span class="go">        &quot;path&quot;: &quot;/home/me/cwl/user_guide/output.txt&quot;</span>
+<span class="go">    }</span>
+<span class="go">}</span>
+<span class="go">Final process status is success</span>
+</pre></div>
+</div>
+</section>
+<section id="array-outputs">
+<h2><span class="section-number">2.7.3. </span>Array Outputs<a class="headerlink" href="#array-outputs" title="Permalink to this heading">#</a></h2>
+<p>You can also capture multiple output files into an array of files using <code class="docutils literal notranslate"><span class="pre">glob</span></code>.</p>
+<div class="literal-block-wrapper docutils container" id="array-outputs-cwl">
+<div class="code-block-caption"><span class="caption-text"><code class="docutils literal notranslate"><span class="pre">array-outputs.cwl</span></code></span><a class="headerlink" href="#array-outputs-cwl" title="Permalink to this code">#</a></div>
+<div class="highlight-cwl notranslate"><div class="highlight"><pre><span></span><span class="c1">#!/usr/bin/env cwl-runner</span><span class="w"></span>
+
+<span class="nt">cwlVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">v1.0</span><span class="w"></span>
+<span class="nt">class</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">CommandLineTool</span><span class="w"></span>
+<span class="nt">baseCommand</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">touch</span><span class="w"></span>
+<span class="nt">inputs</span><span class="p">:</span><span class="w"></span>
+<span class="w">  </span><span class="nt">touchfiles</span><span class="p">:</span><span class="w"></span>
+<span class="w">    </span><span class="nt">type</span><span class="p">:</span><span class="w"></span>
+<span class="w">      </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">array</span><span class="w"></span>
+<span class="w">      </span><span class="nt">items</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">string</span><span class="w"></span>
+<span class="w">    </span><span class="nt">inputBinding</span><span class="p">:</span><span class="w"></span>
+<span class="w">      </span><span class="nt">position</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1</span><span class="w"></span>
+<span class="nt">outputs</span><span class="p">:</span><span class="w"></span>
+<span class="w">  </span><span class="nt">output</span><span class="p">:</span><span class="w"></span>
+<span class="w">    </span><span class="nt">type</span><span class="p">:</span><span class="w"></span>
+<span class="w">      </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">array</span><span class="w"></span>
+<span class="w">      </span><span class="nt">items</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">File</span><span class="w"></span>
+<span class="w">    </span><span class="nt">outputBinding</span><span class="p">:</span><span class="w"></span>
+<span class="w">      </span><span class="nt">glob</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;*.txt&quot;</span><span class="w"></span>
+</pre></div>
+</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="array-outputs-job-yml">
+<div class="code-block-caption"><span class="caption-text"><code class="docutils literal notranslate"><span class="pre">array-outputs-job.yml</span></code></span><a class="headerlink" href="#array-outputs-job-yml" title="Permalink to this code">#</a></div>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">touchfiles</span><span class="p">:</span><span class="w"></span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">foo.txt</span><span class="w"></span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">bar.dat</span><span class="w"></span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">baz.txt</span><span class="w"></span>
+</pre></div>
+</div>
+</div>
+<p>Now invoke <code class="docutils literal notranslate"><span class="pre">cwl-runner</span></code> providing the tool wrapper and the input object
+on the command line:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>cwl-runner array-outputs.cwl array-outputs-job.yml
+<span class="go">[job 140190876078160] /home/example$ touch foo.txt bar.dat baz.txt</span>
+<span class="go">Final process status is success</span>
+<span class="go">{</span>
+<span class="go">  &quot;output&quot;: [</span>
+<span class="go">    {</span>
+<span class="go">      &quot;size&quot;: 0,</span>
+<span class="go">      &quot;location&quot;: &quot;foo.txt&quot;,</span>
+<span class="go">      &quot;checksum&quot;: &quot;sha1$da39a3ee5e6b4b0d3255bfef95601890afd80709&quot;,</span>
+<span class="go">      &quot;class&quot;: &quot;File&quot;</span>
+<span class="go">    },</span>
+<span class="go">    {</span>
+<span class="go">      &quot;size&quot;: 0,</span>
+<span class="go">      &quot;location&quot;: &quot;baz.txt&quot;,</span>
+<span class="go">      &quot;checksum&quot;: &quot;sha1$da39a3ee5e6b4b0d3255bfef95601890afd80709&quot;,</span>
+<span class="go">      &quot;class&quot;: &quot;File&quot;</span>
+<span class="go">    }</span>
+<span class="go">  ]</span>
+<span class="go">}</span>
+</pre></div>
+</div>
+<p>As described in the <a class="reference internal" href="yaml-guide.html#arrays"><span class="std std-doc">YAML Guide</span></a>,
+the array of expected outputs is specified in <code class="docutils literal notranslate"><span class="pre">array-outputs-job.yml</span></code> with each
+entry marked by a leading <code class="docutils literal notranslate"><span class="pre">-</span></code>. This format can also be used in CWL descriptions
+to mark entries in arrays, as demonstrated in several of the upcoming sections.</p>
+</section>
+</section>
+
+
+              </article>
+              
+
+              
+              <footer class="bd-footer-article">
+                  <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+  <a class='left-prev' id="prev-link" href="parameter-references.html" title="previous page">
+      <i class="fas fa-angle-left"></i>
+      <div class="prev-next-info">
+          <p class="prev-next-subtitle">previous</p>
+          <p class="prev-next-title"><span class="section-number">2.6. </span>Parameter References</p>
+      </div>
+  </a>
+  <a class='right-next' id="next-link" href="custom-types.html" title="next page">
+  <div class="prev-next-info">
+      <p class="prev-next-subtitle">next</p>
+      <p class="prev-next-title"><span class="section-number">2.8. </span>Custom Types</p>
+  </div>
+  <i class="fas fa-angle-right"></i>
+  </a>
+</div>
+              </footer>
+              
+          </div>
+          
+      </div>
+    </div>
+
+  
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/pydata-sphinx-theme.js?digest=92025949c220c2e29695"></script>
+
+<div class="container">
+  <div class="row">
+    <div class="col d-flex flex-row-reverse">
+      <ul class="nav">
+        <li class="nav-item">
+          <a class="nav-link" href="https://github.com/common-workflow-language/user_guide/blob/main/CODE_OF_CONDUCT.md">Code of Conduct</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="https://github.com/common-workflow-language/user_guide/blob/main/CONTRIBUTING.md">Contributing</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="https://github.com/common-workflow-language/user_guide/">Source</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="https://github.com/common-workflow-language/user_guide/blob/main/CITATION">Cite</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+
+<footer class="bd-footer"><div class="bd-footer__inner container">
+  
+  <div class="footer-item">
+    <p class="copyright">
+    &copy; Copyright 2013, CWL Project Team.<br>
+</p>
+  </div>
+  
+</div>
+</footer>
+
+  </body>
+</html>
