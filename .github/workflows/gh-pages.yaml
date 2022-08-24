@@ -6,12 +6,18 @@ on:
       - main
   workflow_dispatch:
 
+# NOTE: If you modify this file to install a package with pip or apt, please
+#       verify if we need the same package added to our readthedocs build.
 jobs:
   # Ref: https://stackoverflow.com/questions/57989790/using-github-actions-to-publish-documentation
   deploy:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
+
+      - name: Install apt packages
+        run: |
+          sudo apt-get install -y graphviz
 
       - name: Set up Python
         uses: actions/setup-python@v4

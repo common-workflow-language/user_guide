@@ -111,6 +111,13 @@ source venv/bin/activate
 # Open <http://localhost:8000/> in your browser
 ```
 
+> NOTE: When you modify the packages installed with apt or pip, please verify
+> if the change needs to be applied to either or to both of CI and readthedocs.
+> ReadTheDocs builds and deploys previews. CI builds and deploys production
+> (GitHub Actions). Failing to update both may result in previews generated
+> correctly, but failure to deploy the production version after the pull request
+> gets merged.
+
 ## Other Resources
 
 General discussion of [Common Workflow Language][cwl-site] project
