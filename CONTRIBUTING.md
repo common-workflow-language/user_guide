@@ -26,22 +26,27 @@ or a factual error.
 This is a good way to introduce yourself
 and to meet some of our community members.
 
-1.  If you do not have a [GitHub][github] account,
+1. If you do not have a [GitHub][github] account,
     you can [send us comments by email][discuss-list].
     However,
     we will be able to respond more quickly if you use one of the other methods described below.
 
-2.  If you have a [GitHub][github] account,
+2. If you have a [GitHub][github] account,
     or are willing to [create one][github-join],
     but do not know how to use Git,
     you can report problems or suggest improvements by [creating an issue][issues].
     This allows us to assign the item to someone
     and to respond to it in a threaded discussion.
 
-3.  If you are comfortable with Git,
+3. If you are comfortable with Git,
     and would like to add or change material,
     you can submit a pull request (PR).
     Instructions for doing this are [included below][#using-github].
+
+4. To build and run the user guide locally, see [building][#building].
+
+Pull requests include an automatic preview provided by
+[ReadTheDocs](https://readthedocs.org/projects/common-workflow-languageuser-guide/).
 
 ## What to Contribute
 
@@ -84,6 +89,27 @@ Additionally, please only work from your newly-created branch(es) and *not*
 your clone of the originating `main` branch.
 Lastly, published copies of all the sections are available in the `main` branch of the originating
 repository for reference while revising.
+
+## Building
+
+The user guide uses [Sphinx](https://www.sphinx-doc.org/), a Python documentation
+tool. You must have a recent version of Python 3.6+ installed to build the project
+locally. It is also recommended having `make` (otherwise look at the commands used
+in `Makefile`).
+
+```bash
+# Create and activate a virtual environment
+python -m venv venv
+source venv/bin/activate
+# Install the dependencies in your virtual environment
+(venv) pip install -e .[all]
+# Create the HTML to visualize locally
+(venv) make html
+(venv) firefox _build/index.html
+# Or you can start a serve that watches for local file changes
+(venv) make watch
+# Open <http://localhost:8000/> in your browser
+```
 
 ## Other Resources
 

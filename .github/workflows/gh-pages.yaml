@@ -34,7 +34,7 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-pip-
       - name: Install dependencies
-        run: python3 -m pip install -U -r ./requirements.txt
+        run: python3 -m pip install -U -e .[all]
 
       - name: Build documentation
         run: make html
