@@ -11,7 +11,7 @@ inputs:
 
 steps:
   echo:
-    run: 1st-tool-mod.cwl
+    run: hello_world_to_stdout.cwl
     scatter: message
     in:
       message: message_array
