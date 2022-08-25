@@ -1,7 +1,3 @@
----
-orphan: true
----
-
 # Operations
 
 Operation is a type of CWL process just like a workflow, a command line tool, or
