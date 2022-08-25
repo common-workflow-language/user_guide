@@ -428,8 +428,9 @@ examples.</p>
 <p>A command-line tool or expression tool can also be written directly
 in the same CWL document as the workflow. For example, we can rewrite
 the <code class="docutils literal notranslate"><span class="pre">echo-uppercase.cwl</span></code> workflow as a single file:</p>
-<div class="highlight-cwl notranslate"><div class="highlight"><pre><span></span><span class="l l-Scalar l-Scalar-Plain">:caption</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="s">&quot;`echo-uppercase-single-file.cwl`&quot;</span><span class="w"></span>
-<span class="nt">cwlVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">v1.2</span><span class="w"></span>
+<div class="literal-block-wrapper docutils container" id="id3">
+<div class="code-block-caption"><span class="caption-text"><code class="docutils literal notranslate"><span class="pre">echo-uppercase-single-file.cwl</span></code></span><a class="headerlink" href="#id3" title="Permalink to this code">#</a></div>
+<div class="highlight-cwl notranslate"><div class="highlight"><pre><span></span><span class="nt">cwlVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">v1.2</span><span class="w"></span>
 <span class="nt">class</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Workflow</span><span class="w"></span>
 
 <span class="nt">requirements</span><span class="p">:</span><span class="w"></span>
@@ -485,6 +486,7 @@ the <code class="docutils literal notranslate"><span class="pre">echo-uppercase.
 <span class="w">        </span><span class="nt">source</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">echo/out</span><span class="w"></span>
 <span class="w">    </span><span class="nt">out</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="nv">uppercase_message</span><span class="p p-Indicator">]</span><span class="w"></span>
 </pre></div>
+</div>
 </div>
 <p>Having separate files helps with modularity and code organization. But
 it can be helpful writing everything in a single file for development.
@@ -789,8 +791,8 @@ on multiple inputs without having to generate many different commands or input y
 </pre></div>
 </div>
 <p>The most common reason a new user might want to use scatter is to perform the same analysis on
-different samples. Let’s start with a simple workflow that calls our first example and takes
-an array of strings as input to the workflow:</p>
+different samples. Let’s start with a simple workflow that calls our first example
+(<code class="docutils literal notranslate"><span class="pre">hello_world.cwl</span></code>) and takes an array of strings as input to the workflow:</p>
 <div class="literal-block-wrapper docutils container" id="scatter-workflow-cwl">
 <div class="code-block-caption"><span class="caption-text"><code class="docutils literal notranslate"><span class="pre">scatter-workflow.cwl</span></code></span><a class="headerlink" href="#scatter-workflow-cwl" title="Permalink to this code">#</a></div>
 <div class="highlight-cwl notranslate"><div class="highlight"><pre><span></span><span class="c1">#!/usr/bin/env cwl-runner</span><span class="w"></span>
@@ -806,7 +808,7 @@ an array of strings as input to the workflow:</p>
 
 <span class="nt">steps</span><span class="p">:</span><span class="w"></span>
 <span class="w">  </span><span class="nt">echo</span><span class="p">:</span><span class="w"></span>
-<span class="w">    </span><span class="nt">run</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1st-tool.cwl</span><span class="w"></span>
+<span class="w">    </span><span class="nt">run</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">hello_world.cwl</span><span class="w"></span>
 <span class="w">    </span><span class="nt">scatter</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">message</span><span class="w"></span>
 <span class="w">    </span><span class="nt">in</span><span class="p">:</span><span class="w"></span>
 <span class="w">      </span><span class="nt">message</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">message_array</span><span class="w"></span>
@@ -885,8 +887,8 @@ Final process status is success
 <code class="docutils literal notranslate"><span class="pre">message_array</span></code>. Ok, so how about if we want to scatter over two steps in a workflow?</p>
 <p>Let’s perform a simple echo like above, but capturing <code class="docutils literal notranslate"><span class="pre">stdout</span></code> by adding the following
 lines instead of <code class="docutils literal notranslate"><span class="pre">outputs:</span> <span class="pre">[]</span></code></p>
-<div class="literal-block-wrapper docutils container" id="hello-world-cwl">
-<div class="code-block-caption"><span class="caption-text">`hello_world.cwl*</span><a class="headerlink" href="#hello-world-cwl" title="Permalink to this code">#</a></div>
+<div class="literal-block-wrapper docutils container" id="hello-world-to-stdout-cwl">
+<div class="code-block-caption"><span class="caption-text"><code class="docutils literal notranslate"><span class="pre">hello_world_to_stdout.cwl</span></code></span><a class="headerlink" href="#hello-world-to-stdout-cwl" title="Permalink to this code">#</a></div>
 <div class="highlight-cwl notranslate"><div class="highlight"><pre><span></span><span class="nt">outputs</span><span class="p">:</span><span class="w"></span>
 <span class="w">  </span><span class="nt">echo_out</span><span class="p">:</span><span class="w"></span>
 <span class="w">    </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">stdout</span><span class="w"></span>
@@ -928,7 +930,7 @@ below:</p>
 
 <span class="nt">steps</span><span class="p">:</span><span class="w"></span>
 <span class="w">  </span><span class="nt">echo</span><span class="p">:</span><span class="w"></span>
-<span class="w">    </span><span class="nt">run</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1st-tool-mod.cwl</span><span class="w"></span>
+<span class="w">    </span><span class="nt">run</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">hello_world_to_stdout.cwl</span><span class="w"></span>
 <span class="w">    </span><span class="nt">scatter</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">message</span><span class="w"></span>
 <span class="w">    </span><span class="nt">in</span><span class="p">:</span><span class="w"></span>
 <span class="w">      </span><span class="nt">message</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">message_array</span><span class="w"></span>
@@ -981,7 +983,7 @@ two-step workflow to a single step subworkflow:</p>
 <span class="w">      </span><span class="nt">outputs</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[]</span><span class="w"></span>
 <span class="w">      </span><span class="nt">steps</span><span class="p">:</span><span class="w"></span>
 <span class="w">        </span><span class="nt">echo</span><span class="p">:</span><span class="w"></span>
-<span class="w">          </span><span class="nt">run</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1st-tool-mod.cwl</span><span class="w"></span>
+<span class="w">          </span><span class="nt">run</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">hello_world_to_stdout.cwl</span><span class="w"></span>
 <span class="w">          </span><span class="nt">in</span><span class="p">:</span><span class="w"></span>
 <span class="w">            </span><span class="nt">message</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">message</span><span class="w"></span>
 <span class="w">          </span><span class="nt">out</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="nv">echo_out</span><span class="p p-Indicator">]</span><span class="w"></span>
