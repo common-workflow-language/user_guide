@@ -381,17 +381,17 @@ input file from its leading directory path.</p>
 </div>
 <p>Now invoke <code class="docutils literal notranslate"><span class="pre">cwl-runner</span></code> with the tool wrapper and the input object on the
 command line:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ cwl-runner linkfile.cwl arguments-job.yml
-<span class="o">[</span>job <span class="m">139928309171664</span><span class="o">]</span> /home/example$ docker run -i --volume<span class="o">=</span>/home/example/Hello.java:/var/lib/cwl/job557617295_examples/Hello.java:ro --volume<span class="o">=</span>/home/example:/var/spool/cwl:rw --volume<span class="o">=</span>/tmp/tmpmNbApw:/tmp:rw --workdir<span class="o">=</span>/var/spool/cwl --read-only<span class="o">=</span><span class="nb">true</span> --net<span class="o">=</span>none --user<span class="o">=</span><span class="m">1001</span> --rm --env<span class="o">=</span><span class="nv">TMPDIR</span><span class="o">=</span>/tmp openjdk:9.0.1-11-slim javac Hello.java
-Final process status is success
-<span class="o">{</span>
-<span class="s2">&quot;classfile&quot;</span>: <span class="o">{</span>
-  <span class="s2">&quot;size&quot;</span>: <span class="m">416</span>,
-  <span class="s2">&quot;location&quot;</span>: <span class="s2">&quot;/home/example/Hello.class&quot;</span>,
-  <span class="s2">&quot;checksum&quot;</span>: <span class="s2">&quot;sha1</span><span class="nv">$2</span><span class="s2">f7ac33c1f3aac3f1fec7b936b6562422c85b38a&quot;</span>,
-  <span class="s2">&quot;class&quot;</span>: <span class="s2">&quot;File&quot;</span>
-  <span class="o">}</span>
-<span class="o">}</span>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>cwl-runner linkfile.cwl arguments-job.yml
+<span class="go">[job 139928309171664] /home/example$ docker run -i --volume=/home/example/Hello.java:/var/lib/cwl/job557617295_examples/Hello.java:ro --volume=/home/example:/var/spool/cwl:rw --volume=/tmp/tmpmNbApw:/tmp:rw --workdir=/var/spool/cwl --read-only=true --net=none --user=1001 --rm --env=TMPDIR=/tmp openjdk:9.0.1-11-slim javac Hello.java</span>
+<span class="go">Final process status is success</span>
+<span class="go">{</span>
+<span class="go">&quot;classfile&quot;: {</span>
+<span class="go">  &quot;size&quot;: 416,</span>
+<span class="go">  &quot;location&quot;: &quot;/home/example/Hello.class&quot;,</span>
+<span class="go">  &quot;checksum&quot;: &quot;sha1$2f7ac33c1f3aac3f1fec7b936b6562422c85b38a&quot;,</span>
+<span class="go">  &quot;class&quot;: &quot;File&quot;</span>
+<span class="go">  }</span>
+<span class="go">}</span>
 </pre></div>
 </div>
 </section>

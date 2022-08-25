@@ -552,19 +552,30 @@ compiles it.</p>
 command line:</p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span><span class="nb">echo</span> <span class="s2">&quot;public class Hello {}&quot;</span> &gt; Hello.java <span class="o">&amp;&amp;</span> tar -cvf hello.tar Hello.java
 <span class="gp">$ </span>cwl-runner 1st-workflow.cwl 1st-workflow-job.yml
-<span class="go">[job untar] /tmp/tmp94qFiM$ tar --create --file /home/example/hello.tar Hello.java</span>
-<span class="go">[step untar] completion status is success</span>
-<span class="go">[job compile] /tmp/tmpu1iaKL$ docker run -i --volume=/tmp/tmp94qFiM/Hello.java:/var/lib/cwl/job301600808_tmp94qFiM/Hello.java:ro --volume=/tmp/tmpu1iaKL:/var/spool/cwl:rw --volume=/tmp/tmpfZnNdR:/tmp:rw --workdir=/var/spool/cwl --read-only=true --net=none --user=1001 --rm --env=TMPDIR=/tmp java:7 javac -d /var/spool/cwl /var/lib/cwl/job301600808_tmp94qFiM/Hello.java</span>
-<span class="go">[step compile] completion status is success</span>
-<span class="go">[workflow 1st-workflow.cwl] outdir is /home/example</span>
-<span class="go">Final process status is success</span>
+<span class="go">INFO /usr/bin/cwl-runner 3.1.20220802125926</span>
+<span class="go">INFO Resolved &#39;1st-workflow.cwl&#39; to &#39;file:///home/example/1st-workflow.cwl&#39;</span>
+<span class="go">INFO [workflow ] start</span>
+<span class="go">INFO [workflow ] starting step untar</span>
+<span class="go">INFO [step untar] start</span>
+<span class="go">INFO [job untar] /tmp/rzlj4nsg$ tar --extract --file /tmp/1yikucse/stg4148c64f-2489-449c-bef7-12d059758b13/hello.tar Hello.java</span>
+<span class="go">INFO [job untar] completed success</span>
+<span class="go">INFO [step untar] completed success</span>
+<span class="go">INFO [workflow ] starting step compile</span>
+<span class="go">INFO [step compile] start</span>
+<span class="go">INFO [job compile] /tmp/r0kmwijd$ docker run -i --mount=type=bind,source=/tmp/r0kmwijd,target=/zurNsS --mount=type=bind,source=/tmp/bza6s5oh,target=/tmp --mount=type=bind,source=/tmp/rzlj4nsg/Hello.java,target=/var/lib/cwl/stg37272664-b5b2-4bbd-b254-1ef521ebbe3d/Hello.java,readonly --workdir=/zurNsS --read-only=true --user=1000:1000 --rm --cidfile=/tmp/4d8t2lj2/20220825125241-159808.cid --env=TMPDIR=/tmp --env=HOME=/zurNsS openjdk:9.0.1-11-slim javac -d /zurNsS /var/lib/cwl/stg37272664-b5b2-4bbd-b254-1ef521ebbe3d/Hello.java</span>
+<span class="go">INFO [job compile] Max memory used: 28MiB</span>
+<span class="go">INFO [job compile] completed success</span>
+<span class="go">INFO [step compile] completed success</span>
+<span class="go">INFO [workflow ] completed success</span>
 <span class="go">{</span>
-<span class="go">  &quot;compiled_class&quot;: {</span>
-<span class="go">    &quot;location&quot;: &quot;/home/example/Hello.class&quot;,</span>
-<span class="go">    &quot;checksum&quot;: &quot;sha1$e68df795c0686e9aa1a1195536bd900f5f417b18&quot;,</span>
-<span class="go">    &quot;class&quot;: &quot;File&quot;,</span>
-<span class="go">    &quot;size&quot;: 416</span>
-<span class="go">  }</span>
+<span class="go">    &quot;compiled_class&quot;: {</span>
+<span class="go">        &quot;location&quot;: &quot;file:///home/example/Hello.class&quot;,</span>
+<span class="go">        &quot;basename&quot;: &quot;Hello.class&quot;,</span>
+<span class="go">        &quot;class&quot;: &quot;File&quot;,</span>
+<span class="go">        &quot;checksum&quot;: &quot;sha1$fdb876b40ad9ebc7fee873212e02d5940588642e&quot;,</span>
+<span class="go">        &quot;size&quot;: 184,</span>
+<span class="go">        &quot;path&quot;: &quot;/home/example/Hello.class&quot;</span>
+<span class="go">    }</span>
 <span class="go">}</span>
 </pre></div>
 </div>
@@ -855,32 +866,32 @@ as well!</p>
 <p>As a reminder, <a class="reference internal" href="../introduction/quick-start.html"><span class="doc std std-doc"><code class="docutils literal notranslate"><span class="pre">hello_world.cwl</span></code></span></a> simply calls the command
 <code class="docutils literal notranslate"><span class="pre">echo</span></code> on a message. If we invoke <code class="docutils literal notranslate"><span class="pre">cwl-runner</span> <span class="pre">scatter-workflow.cwl</span> <span class="pre">scatter-job.yml</span></code> on the
 command line:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ cwl-runner scatter-workflow.cwl scatter-job.yml
-<span class="o">[</span>workflow scatter-workflow.cwl<span class="o">]</span> start
-<span class="o">[</span>step echo<span class="o">]</span> start
-<span class="o">[</span>job echo<span class="o">]</span> /tmp/tmp0hqmg400$ <span class="nb">echo</span> <span class="se">\</span>
-    <span class="s1">&#39;Hello world!&#39;</span>
-Hello world!
-<span class="o">[</span>job echo<span class="o">]</span> completed success
-<span class="o">[</span>step echo<span class="o">]</span> start
-<span class="o">[</span>job echo_2<span class="o">]</span> /tmp/tmpu65_m1zw$ <span class="nb">echo</span> <span class="se">\</span>
-    <span class="s1">&#39;Hola mundo!&#39;</span>
-Hola mundo!
-<span class="o">[</span>job echo_2<span class="o">]</span> completed success
-<span class="o">[</span>step echo<span class="o">]</span> start
-<span class="o">[</span>job echo_3<span class="o">]</span> /tmp/tmp5cs7a2wh$ <span class="nb">echo</span> <span class="se">\</span>
-    <span class="s1">&#39;Bonjour le monde!&#39;</span>
-Bonjour le monde!
-<span class="o">[</span>job echo_3<span class="o">]</span> completed success
-<span class="o">[</span>step echo<span class="o">]</span> start
-<span class="o">[</span>job echo_4<span class="o">]</span> /tmp/tmp301wo7p8$ <span class="nb">echo</span> <span class="se">\</span>
-    <span class="s1">&#39;Hallo welt!&#39;</span>
-Hallo welt!
-<span class="o">[</span>job echo_4<span class="o">]</span> completed success
-<span class="o">[</span>step echo<span class="o">]</span> completed success
-<span class="o">[</span>workflow scatter-workflow.cwl<span class="o">]</span> completed success
-<span class="o">{}</span>
-Final process status is success
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>cwl-runner scatter-workflow.cwl scatter-job.yml
+<span class="go">[workflow scatter-workflow.cwl] start</span>
+<span class="go">[step echo] start</span>
+<span class="go">[job echo] /tmp/tmp0hqmg400$ echo \</span>
+<span class="go">    &#39;Hello world!&#39;</span>
+<span class="go">Hello world!</span>
+<span class="go">[job echo] completed success</span>
+<span class="go">[step echo] start</span>
+<span class="go">[job echo_2] /tmp/tmpu65_m1zw$ echo \</span>
+<span class="go">    &#39;Hola mundo!&#39;</span>
+<span class="go">Hola mundo!</span>
+<span class="go">[job echo_2] completed success</span>
+<span class="go">[step echo] start</span>
+<span class="go">[job echo_3] /tmp/tmp5cs7a2wh$ echo \</span>
+<span class="go">    &#39;Bonjour le monde!&#39;</span>
+<span class="go">Bonjour le monde!</span>
+<span class="go">[job echo_3] completed success</span>
+<span class="go">[step echo] start</span>
+<span class="go">[job echo_4] /tmp/tmp301wo7p8$ echo \</span>
+<span class="go">    &#39;Hallo welt!&#39;</span>
+<span class="go">Hallo welt!</span>
+<span class="go">[job echo_4] completed success</span>
+<span class="go">[step echo] completed success</span>
+<span class="go">[workflow scatter-workflow.cwl] completed success</span>
+<span class="go">{}</span>
+<span class="go">Final process status is success</span>
 </pre></div>
 </div>
 <p>You can see that the workflow calls echo multiple times on each element of our
