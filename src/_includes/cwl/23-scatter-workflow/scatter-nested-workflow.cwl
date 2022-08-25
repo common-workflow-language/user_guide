@@ -19,7 +19,7 @@ steps:
       outputs: []
       steps:
         echo:
-          run: 1st-tool-mod.cwl
+          run: hello_world_to_stdout.cwl
           in:
             message: message
           out: [echo_out]

@@ -89,7 +89,6 @@ the `echo-uppercase.cwl` workflow as a single file:
 %       :name: echo-uppercase-single-file.cwl
 
 ```{code-block} cwl
-
 :caption: "`echo-uppercase-single-file.cwl`"
 cwlVersion: v1.2
 class: Workflow
@@ -415,8 +414,8 @@ requirements:
 ```
 
 The most common reason a new user might want to use scatter is to perform the same analysis on
-different samples. Let's start with a simple workflow that calls our first example and takes
-an array of strings as input to the workflow:
+different samples. Let's start with a simple workflow that calls our first example
+(`hello_world.cwl`) and takes an array of strings as input to the workflow:
 
 ```{literalinclude} /_includes/cwl/23-scatter-workflow/scatter-workflow.cwl
 :language: cwl
@@ -501,8 +500,8 @@ Let's perform a simple echo like above, but capturing `stdout` by adding the fol
 lines instead of `outputs: []`
 
 ```{code-block} cwl
-:caption: "`hello_world.cwl*"
-:name: hello_world.cwl*
+:caption: "`hello_world_to_stdout.cwl`"
+:name: hello_world_to_stdout.cwl
 outputs:
   echo_out:
     type: stdout
