@@ -464,7 +464,7 @@ As a reminder, [`hello_world.cwl`](../introduction/quick-start.md) simply calls 
 `echo` on a message. If we invoke `cwl-runner scatter-workflow.cwl scatter-job.yml` on the
 command line:
 
-```bash
+```{code-block} console
 $ cwl-runner scatter-workflow.cwl scatter-job.yml
 [workflow scatter-workflow.cwl] start
 [step echo] start
