@@ -191,19 +191,30 @@ command line:
 ```{code-block} console
 $ echo "public class Hello {}" > Hello.java && tar -cvf hello.tar Hello.java
 $ cwl-runner 1st-workflow.cwl 1st-workflow-job.yml
-[job untar] /tmp/tmp94qFiM$ tar --create --file /home/example/hello.tar Hello.java
-[step untar] completion status is success
-[job compile] /tmp/tmpu1iaKL$ docker run -i --volume=/tmp/tmp94qFiM/Hello.java:/var/lib/cwl/job301600808_tmp94qFiM/Hello.java:ro --volume=/tmp/tmpu1iaKL:/var/spool/cwl:rw --volume=/tmp/tmpfZnNdR:/tmp:rw --workdir=/var/spool/cwl --read-only=true --net=none --user=1001 --rm --env=TMPDIR=/tmp java:7 javac -d /var/spool/cwl /var/lib/cwl/job301600808_tmp94qFiM/Hello.java
-[step compile] completion status is success
-[workflow 1st-workflow.cwl] outdir is /home/example
-Final process status is success
+INFO /usr/bin/cwl-runner 3.1.20220802125926
+INFO Resolved '1st-workflow.cwl' to 'file:///home/example/1st-workflow.cwl'
+INFO [workflow ] start
+INFO [workflow ] starting step untar
+INFO [step untar] start
+INFO [job untar] /tmp/rzlj4nsg$ tar --extract --file /tmp/1yikucse/stg4148c64f-2489-449c-bef7-12d059758b13/hello.tar Hello.java
+INFO [job untar] completed success
+INFO [step untar] completed success
+INFO [workflow ] starting step compile
+INFO [step compile] start
+INFO [job compile] /tmp/r0kmwijd$ docker run -i --mount=type=bind,source=/tmp/r0kmwijd,target=/zurNsS --mount=type=bind,source=/tmp/bza6s5oh,target=/tmp --mount=type=bind,source=/tmp/rzlj4nsg/Hello.java,target=/var/lib/cwl/stg37272664-b5b2-4bbd-b254-1ef521ebbe3d/Hello.java,readonly --workdir=/zurNsS --read-only=true --user=1000:1000 --rm --cidfile=/tmp/4d8t2lj2/20220825125241-159808.cid --env=TMPDIR=/tmp --env=HOME=/zurNsS openjdk:9.0.1-11-slim javac -d /zurNsS /var/lib/cwl/stg37272664-b5b2-4bbd-b254-1ef521ebbe3d/Hello.java
+INFO [job compile] Max memory used: 28MiB
+INFO [job compile] completed success
+INFO [step compile] completed success
+INFO [workflow ] completed success
 {
-  "compiled_class": {
-    "location": "/home/example/Hello.class",
-    "checksum": "sha1$e68df795c0686e9aa1a1195536bd900f5f417b18",
-    "class": "File",
-    "size": 416
-  }
+    "compiled_class": {
+        "location": "file:///home/example/Hello.class",
+        "basename": "Hello.class",
+        "class": "File",
+        "checksum": "sha1$fdb876b40ad9ebc7fee873212e02d5940588642e",
+        "size": 184,
+        "path": "/home/example/Hello.class"
+    }
 }
 ```
 
