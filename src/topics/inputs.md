@@ -35,7 +35,7 @@ Create a file called inp-job.yml:
 Notice that "example_file", as a `File` type, must be provided as an
 object with the fields `class: File` and `path`.
 
-Next, create a whale.txt using [touch] by typing `touch whale.txt` on the command line and then invoke `cwl-runner` with the tool wrapper and the input object on the command line, using the command `cwl-runner inp.cwl inp-job.yml`. The following boxed text describes these two commands and the expected output from the command line:
+Next, create a whale.txt using [touch] by typing `touch whale.txt` on the command line and then invoke `cwl-runner` with the tool description and the input object on the command line, using the command `cwl-runner inp.cwl inp-job.yml`. The following boxed text describes these two commands and the expected output from the command line:
 
 ```{code-block} console
 $ touch whale.txt
@@ -157,7 +157,7 @@ the type name to indicate that input parameter is array of that type.
 :name: array-inputs-job.yml
 ```
 
-Now invoke `cwl-runner` providing the tool wrapper and the input object
+Now invoke `cwl-runner` providing the tool description and the input object
 on the command line:
 
 ```{code-block} console

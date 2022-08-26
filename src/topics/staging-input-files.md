@@ -17,7 +17,7 @@ input file from its leading directory path.
 :caption: "`arguments-job.yml`"
 ```
 
-Now invoke `cwl-runner` with the tool wrapper and the input object on the
+Now invoke `cwl-runner` with the tool description and the input object on the
 command line:
 
 ```{code-block} console

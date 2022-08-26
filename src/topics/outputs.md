@@ -35,11 +35,16 @@ any subsequent elements are mandatory command line arguments
 :name: tar-job.yml
 ```
 
-Next, create a tar file for the example and invoke `cwl-runner` with the tool
-wrapper and the input object on the command line:
+Next, create a tar file for the example.
 
 ```{code-block} console
 $ touch hello.txt && tar -cvf hello.tar hello.txt
+hello.txt
+```
+
+And now invoke `cwl-runner` with the tool description and the input object on the command line:
+
+```{code-block} console
 $ cwl-runner tar.cwl tar-job.yml
 [job tar.cwl] /tmp/tmpqOeawQ$ tar \
     --extract --file \
@@ -89,7 +94,7 @@ stdout` on the corresponding output parameter.
 :caption: "`echo-job.yml`"
 ```
 
-Now invoke `cwl-runner` providing the tool wrapper and the input object
+Now invoke `cwl-runner` providing the tool description and the input object
 on the command line:
 
 ```{code-block} console
@@ -126,7 +131,7 @@ You can also capture multiple output files into an array of files using `glob`.
 :name: array-outputs-job.yml
 ```
 
-Now invoke `cwl-runner` providing the tool wrapper and the input object
+Now invoke `cwl-runner` providing the tool description and the input object
 on the command line:
 
 ```{code-block} console

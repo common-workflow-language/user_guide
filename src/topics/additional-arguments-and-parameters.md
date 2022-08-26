@@ -21,11 +21,15 @@ instead.
 :caption: "`arguments-job.yml`"
 ```
 
-Now create a sample Java file and invoke `cwl-runner` providing the tool wrapper
-and the input object on the command line:
+Next, create a sample Java file to use with the command-line tool.
 
 ```{code-block} console
 $ echo "public class Hello {}" > Hello.java
+```
+
+And now invoke `cwl-runner` providing the tool description and the input object on the command line:
+
+```{code-block} console
 $ cwl-runner arguments.cwl arguments-job.yml
 [job arguments.cwl] /tmp/tmpwYALo1$ docker \
  run \
