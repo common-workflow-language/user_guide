@@ -185,11 +185,17 @@ Use a YAML or a JSON object in a separate file to describe the input of a run:
 :name: 1st-workflow-job.yml
 ```
 
+Next, create a sample Java file and add it to a tar file to use with the command-line tool.
+
+```{code-block} console
+$ echo "public class Hello {}" > Hello.java && tar -cvf hello.tar Hello.java
+Hello.java
+```
+
 Now invoke `cwl-runner` with the tool wrapper and the input object on the
 command line:
 
 ```{code-block} console
-$ echo "public class Hello {}" > Hello.java && tar -cvf hello.tar Hello.java
 $ cwl-runner 1st-workflow.cwl 1st-workflow-job.yml
 INFO /usr/bin/cwl-runner 3.1.20220802125926
 INFO Resolved '1st-workflow.cwl' to 'file:///home/example/1st-workflow.cwl'
