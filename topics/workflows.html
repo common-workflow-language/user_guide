@@ -548,10 +548,14 @@ compiles it.</p>
 </pre></div>
 </div>
 </div>
-<p>Now invoke <code class="docutils literal notranslate"><span class="pre">cwl-runner</span></code> with the tool wrapper and the input object on the
-command line:</p>
+<p>Next, create a sample Java file and add it to a tar file to use with the command-line tool.</p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span><span class="nb">echo</span> <span class="s2">&quot;public class Hello {}&quot;</span> &gt; Hello.java <span class="o">&amp;&amp;</span> tar -cvf hello.tar Hello.java
-<span class="gp">$ </span>cwl-runner 1st-workflow.cwl 1st-workflow-job.yml
+<span class="go">Hello.java</span>
+</pre></div>
+</div>
+<p>Now invoke <code class="docutils literal notranslate"><span class="pre">cwl-runner</span></code> with the tool description and the input object on the
+command line:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>cwl-runner 1st-workflow.cwl 1st-workflow-job.yml
 <span class="go">INFO /usr/bin/cwl-runner 3.1.20220802125926</span>
 <span class="go">INFO Resolved &#39;1st-workflow.cwl&#39; to &#39;file:///home/example/1st-workflow.cwl&#39;</span>
 <span class="go">INFO [workflow ] start</span>

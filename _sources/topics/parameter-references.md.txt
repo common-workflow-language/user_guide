@@ -22,7 +22,7 @@ the file to extract.
 :name: tar-param-job.yml
 ```
 
-Create your input files and invoke `cwl-runner` with the tool wrapper and the
+Create your input files and invoke `cwl-runner` with the tool description and the
 input object on the command line:
 
 ```{code-block} console

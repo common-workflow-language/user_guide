@@ -406,7 +406,7 @@ parameter takes the same value that you would pass to a <code class="docutils li
 the name of the container image (you can even specify the tag, which is good idea for
 best practises when using containers for reproducible research). In this case we have
 used a container called <code class="docutils literal notranslate"><span class="pre">node:slim</span></code>.</p>
-<p>Provide a “hello.js” and invoke <code class="docutils literal notranslate"><span class="pre">cwl-runner</span></code> providing the tool wrapper and the
+<p>Provide a “hello.js” and invoke <code class="docutils literal notranslate"><span class="pre">cwl-runner</span></code> providing the tool description and the
 input object on the command line:</p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span><span class="nb">echo</span> <span class="s2">&quot;console.log(\&quot;Hello World\&quot;);&quot;</span> &gt; hello.js
 <span class="gp">$ </span>cwl-runner docker.cwl docker-job.yml

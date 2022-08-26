@@ -49,7 +49,7 @@ ___Note:___ To follow the example below, you need to download the example input 
 wget https://github.com/common-workflow-language/user_guide/raw/main/_includes/cwl/16-file-formats/file-formats.bam
 ```
 
-Now invoke `cwl-runner` with the tool wrapper and the input object on the
+Now invoke `cwl-runner` with the tool description and the input object on the
 command line:
 
 ```{code-block} console

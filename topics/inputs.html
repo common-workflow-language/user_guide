@@ -416,7 +416,7 @@ types and appearing on the command line in different ways.</p>
 </div>
 <p>Notice that “example_file”, as a <code class="docutils literal notranslate"><span class="pre">File</span></code> type, must be provided as an
 object with the fields <code class="docutils literal notranslate"><span class="pre">class:</span> <span class="pre">File</span></code> and <code class="docutils literal notranslate"><span class="pre">path</span></code>.</p>
-<p>Next, create a whale.txt using <a class="reference external" href="http://www.linfo.org/touch.html">touch</a> by typing <code class="docutils literal notranslate"><span class="pre">touch</span> <span class="pre">whale.txt</span></code> on the command line and then invoke <code class="docutils literal notranslate"><span class="pre">cwl-runner</span></code> with the tool wrapper and the input object on the command line, using the command <code class="docutils literal notranslate"><span class="pre">cwl-runner</span> <span class="pre">inp.cwl</span> <span class="pre">inp-job.yml</span></code>. The following boxed text describes these two commands and the expected output from the command line:</p>
+<p>Next, create a whale.txt using <a class="reference external" href="http://www.linfo.org/touch.html">touch</a> by typing <code class="docutils literal notranslate"><span class="pre">touch</span> <span class="pre">whale.txt</span></code> on the command line and then invoke <code class="docutils literal notranslate"><span class="pre">cwl-runner</span></code> with the tool description and the input object on the command line, using the command <code class="docutils literal notranslate"><span class="pre">cwl-runner</span> <span class="pre">inp.cwl</span> <span class="pre">inp-job.yml</span></code>. The following boxed text describes these two commands and the expected output from the command line:</p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>touch whale.txt
 <span class="gp">$ </span>cwl-runner inp.cwl inp-job.yml
 <span class="go">[job inp.cwl] /tmp/tmpzrSnfX$ echo \</span>
@@ -555,7 +555,7 @@ the type name to indicate that input parameter is array of that type.</p>
 </pre></div>
 </div>
 </div>
-<p>Now invoke <code class="docutils literal notranslate"><span class="pre">cwl-runner</span></code> providing the tool wrapper and the input object
+<p>Now invoke <code class="docutils literal notranslate"><span class="pre">cwl-runner</span></code> providing the tool description and the input object
 on the command line:</p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>cwl-runner array-inputs.cwl array-inputs-job.yml
 <span class="go">[job array-inputs.cwl] /home/examples$ echo \</span>

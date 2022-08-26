@@ -402,10 +402,13 @@ any subsequent elements are mandatory command line arguments</p>
 </pre></div>
 </div>
 </div>
-<p>Next, create a tar file for the example and invoke <code class="docutils literal notranslate"><span class="pre">cwl-runner</span></code> with the tool
-wrapper and the input object on the command line:</p>
+<p>Next, create a tar file for the example.</p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>touch hello.txt <span class="o">&amp;&amp;</span> tar -cvf hello.tar hello.txt
-<span class="gp">$ </span>cwl-runner tar.cwl tar-job.yml
+<span class="go">hello.txt</span>
+</pre></div>
+</div>
+<p>And now invoke <code class="docutils literal notranslate"><span class="pre">cwl-runner</span></code> with the tool description and the input object on the command line:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>cwl-runner tar.cwl tar-job.yml
 <span class="go">[job tar.cwl] /tmp/tmpqOeawQ$ tar \</span>
 <span class="go">    --extract --file \</span>
 <span class="go">    /tmp/tmpGDk8Y1/stg80bbad20-494d-47af-8075-dffc32df03a3/hello.tar</span>
@@ -464,7 +467,7 @@ the name of the file where the output stream should go.  Then add <code class="d
 </pre></div>
 </div>
 </div>
-<p>Now invoke <code class="docutils literal notranslate"><span class="pre">cwl-runner</span></code> providing the tool wrapper and the input object
+<p>Now invoke <code class="docutils literal notranslate"><span class="pre">cwl-runner</span></code> providing the tool description and the input object
 on the command line:</p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>cwl-runner stdout.cwl echo-job.yml
 <span class="go">[job stdout.cwl] /tmp/tmpE0gTz7$ echo \</span>
@@ -520,7 +523,7 @@ on the command line:</p>
 </pre></div>
 </div>
 </div>
-<p>Now invoke <code class="docutils literal notranslate"><span class="pre">cwl-runner</span></code> providing the tool wrapper and the input object
+<p>Now invoke <code class="docutils literal notranslate"><span class="pre">cwl-runner</span></code> providing the tool description and the input object
 on the command line:</p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>cwl-runner array-outputs.cwl array-outputs-job.yml
 <span class="go">[job 140190876078160] /home/example$ touch foo.txt bar.dat baz.txt</span>

@@ -376,10 +376,12 @@ instead.</p>
 </pre></div>
 </div>
 </div>
-<p>Now create a sample Java file and invoke <code class="docutils literal notranslate"><span class="pre">cwl-runner</span></code> providing the tool wrapper
-and the input object on the command line:</p>
+<p>Next, create a sample Java file to use with the command-line tool.</p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span><span class="nb">echo</span> <span class="s2">&quot;public class Hello {}&quot;</span> &gt; Hello.java
-<span class="gp">$ </span>cwl-runner arguments.cwl arguments-job.yml
+</pre></div>
+</div>
+<p>And now invoke <code class="docutils literal notranslate"><span class="pre">cwl-runner</span></code> providing the tool description and the input object on the command line:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>cwl-runner arguments.cwl arguments-job.yml
 <span class="go">[job arguments.cwl] /tmp/tmpwYALo1$ docker \</span>
 <span class="go"> run \</span>
 <span class="go"> -i \</span>
