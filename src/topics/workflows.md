@@ -192,7 +192,7 @@ $ echo "public class Hello {}" > Hello.java && tar -cvf hello.tar Hello.java
 Hello.java
 ```
 
-Now invoke `cwl-runner` with the tool wrapper and the input object on the
+Now invoke `cwl-runner` with the tool description and the input object on the
 command line:
 
 ```{code-block} console

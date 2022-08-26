@@ -51,7 +51,7 @@ which is YAML quoting syntax, and means that you are using a multiline string
 See the [YAML Guide](../topics/yaml-guide.md#maps) for more about the formatting.
 ```
 
-Now invoke `cwl-runner` with the tool wrapper and the input object on the
+Now invoke `cwl-runner` with the tool description and the input object on the
 command line:
 
 ```{code-block} console

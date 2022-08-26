@@ -28,6 +28,9 @@ or links to Markdown pages). For simple HTML links (e.g. `< href=>` or
 markdown external links) pull request reviewers must verify that links
 are still working after the change.
 
+Use “tool description” not “tool wrapper” for describing the first argument
+given to the `cwl-runner` or `cwltool` commands.
+
 ### Code examples
 
 To include code into a Markdown file you have two options. For external files use
