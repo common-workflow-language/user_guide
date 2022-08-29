@@ -109,9 +109,9 @@ For more:
 
 ## Authors
 
-A list of contributors to these materials can be found in [AUTHORS](AUTHORS)
+A list of contributors to these materials can be found in [AUTHORS](AUTHORS.md)
 
 ## Citation
 
-To cite these materials, please consult with [CITATION](CITATION)
+To cite these materials, please consult with [CITATION](CITATION.md)
 
