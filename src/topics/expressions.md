@@ -112,7 +112,59 @@ only in certain fields.  These are:
 
 [file-prop]: https://www.commonwl.org/v1.0/CommandLineTool.html#File
 
+## Using external libraries and inline JavaScript code with `expressionLib`
 
-% TODO
-% - (maybe not before other concepts? move this to after inputs/outputs/etc?)
-% - External libraries and expressionLib - https://github.com/common-workflow-language/user_guide/issues/126
+The requirement `InlineJavascriptRequirement` supports an `expressionLib` attribute
+that allows users to load external JavaScript files, or provide inline JavaScript
+code.
+
+Entries added to the `expressionLib` attribute are parsed with the JavaScript engine
+of the CWL Runner. This can be used to include external files or to create JavaScript
+functions that can be called in other parts of the CWL document.
+
+For example, we can write a JavaScript function to an external file `functions.js`:
+
+```{literalinclude} /_includes/cwl/functions.js
+:language: javascript
+:caption: "`functions.js`"
+:name: "`functions.js`"
+```
+
+The following CWL document includes the `functions.js` file, and uses the function
+`capitalizeWords`:
+
+```{literalinclude} /_includes/cwl/hello-world-expressionlib.cwl
+:language: cwl
+:caption: "`hello-world-expressionlib.cwl`"
+:name: "`hello-world-expressionlib.cwl`"
+```
+
+```{note}
+In `expressionLib`, `$include` supports both relative and absolute paths.
+```
+
+The `functions.js` file is included in the CWL document with the `$include: functions.js`
+statement. That makes the functions and variables available to be used in other parts of
+the CWL document.
+
+In another entry to the `expressionLib` attribute we then create another function,
+`createHelloWorldMessage`, that calls the `capitalizeWords` from `functions.js`. This
+is just to show that you can either include external JavaScript files, or define
+inline functions in your CWL document.
+
+Running this CWL workflow will invoke the JavaScript functions and result in
+the `echo` command printing the input message with capital initial letters:
+
+```{code-block} console
+:caption: "Running `hello-world-expressionlib.cwl`."
+:name: running-hell-world-expressionlib-cwl
+$ cwltool hello-world-expressionlib.cwl --message "hello world"
+INFO /home/kinow/Development/python/workspace/cwltool/venv/bin/cwltool 3.1.20220821233356
+INFO Resolved 'hello-world-expressionlib.cwl' to 'file:///tmp/hello-world-expressionlib.cwl'
+INFO [job hello-world-expressionlib.cwl] /tmp/39sql4b4$ echo \
+    'Hello World'
+Hello World
+INFO [job hello-world-expressionlib.cwl] completed success
+{}
+INFO Final process status is success
+```
