@@ -10,6 +10,10 @@ if you would like to add another tutorial to the list.
 
 - [Introduction to Workflows with Common Workflow Language: For Contributors.](https://carpentries-incubator.github.io/cwl-novice-tutorial/)
 
+## Intermediate Tutorials
+
+- [Typescript in CWL](https://github.com/umccr/cwl-ica/wiki/TypeScript)
+
 ## Bioinformatics Tutorials
 
 - [rnaseq with CWL](https://arvados.github.io/rnaseq-cwl-training/)
