@@ -124,7 +124,8 @@ functions that can be called in other parts of the CWL document.
 
 ```{note}
 
-The `cwltool` CWL Runner, uses a JavaScript Engine that supports
+The CWL standards (versions 1.0 through 1.2) [states](https://www.commonwl.org/v1.0/CommandLineTool.html#Expressions)
+ that the only version of JavaScript valid in CWL expressions is
 [ECMAScript 5.1](https://262.ecma-international.org/5.1/). This means that any
 code that you include or write in your CWL Document must be compliant with
 ECMAScript 5.1.
