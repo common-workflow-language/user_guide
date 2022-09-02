@@ -119,7 +119,7 @@ that allows users to load external JavaScript files, or to provide inline JavaSc
 code.
 
 Entries added to the `expressionLib` attribute are parsed with the JavaScript engine
-of the CWL Runner. This can be used to include external files or to create JavaScript
+of a CWL runner. This can be used to include external files or to create JavaScript
 functions that can be called in other parts of the CWL document.
 
 ```{note}
