@@ -10,7 +10,7 @@ if you would like to add another tutorial to the list.
 
 - [Introduction to Workflows with Common Workflow Language: For Contributors.](https://carpentries-incubator.github.io/cwl-novice-tutorial/)
 
-## Intermediate Tutorials
+## Advanced Tutorials
 
 - [Typescript in CWL](https://github.com/umccr/cwl-ica/wiki/TypeScript)
 
