@@ -122,15 +122,15 @@ Entries added to the `expressionLib` attribute are parsed with the JavaScript en
 of the CWL Runner. This can be used to include external files or to create JavaScript
 functions that can be called in other parts of the CWL document.
 
-For example, we can write a JavaScript function to an external file `functions.js`:
+For example, we can write a JavaScript function to an external file `custom-functions.js`:
 
-```{literalinclude} /_includes/cwl/functions.js
+```{literalinclude} /_includes/cwl/custom-functions.js
 :language: javascript
-:caption: "`functions.js`"
-:name: "`functions.js`"
+:caption: "`custom-functions.js`"
+:name: "`custom-functions.js`"
 ```
 
-The following CWL document includes the `functions.js` file, and uses the function
+The following CWL document includes the `custom-functions.js` file, and uses the function
 `capitalizeWords`:
 
 ```{literalinclude} /_includes/cwl/hello-world-expressionlib.cwl
@@ -143,12 +143,12 @@ The following CWL document includes the `functions.js` file, and uses the functi
 In `expressionLib`, `$include` supports both relative and absolute paths.
 ```
 
-The `functions.js` file is included in the CWL document with the `$include: functions.js`
+The `custom-functions.js` file is included in the CWL document with the `$include: custom-functions.js`
 statement. That makes the functions and variables available to be used in other parts of
 the CWL document.
 
 In another entry to the `expressionLib` attribute we then create another function,
-`createHelloWorldMessage`, that calls the `capitalizeWords` from `functions.js`. This
+`createHelloWorldMessage`, that calls the `capitalizeWords` from `custom-functions.js`. This
 is just to show that you can either include external JavaScript files, or define
 inline functions in your CWL document.
 

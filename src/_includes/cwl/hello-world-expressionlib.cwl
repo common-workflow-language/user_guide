@@ -3,11 +3,11 @@ class: CommandLineTool
 requirements:
   - class: InlineJavascriptRequirement
     expressionLib:
-      - { $include: functions.js }
+      - { $include: custom-functions.js }
       - |
         /**
          * An example function that uses a function from the included
-         * functions.js file to create a Hello World message.
+         * custom-functions.js file to create a Hello World message.
          * @param {Object} message - CWL document input message
          */
         var createHelloWorldMessage = function (message) {
