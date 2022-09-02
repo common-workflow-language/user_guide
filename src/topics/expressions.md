@@ -115,12 +115,20 @@ only in certain fields.  These are:
 ## Using external libraries and inline JavaScript code with `expressionLib`
 
 The requirement `InlineJavascriptRequirement` supports an `expressionLib` attribute
-that allows users to load external JavaScript files, or provide inline JavaScript
+that allows users to load external JavaScript files, or to provide inline JavaScript
 code.
 
 Entries added to the `expressionLib` attribute are parsed with the JavaScript engine
 of the CWL Runner. This can be used to include external files or to create JavaScript
 functions that can be called in other parts of the CWL document.
+
+```{note}
+
+The `cwltool` CWL Runner, uses a JavaScript Engine that supports
+[ECMAScript 5.1](https://262.ecma-international.org/5.1/). This means that any
+code that you include or write in your CWL Document must be compliant with
+ECMAScript 5.1.
+```
 
 For example, we can write a JavaScript function to an external file `custom-functions.js`:
 
@@ -130,7 +138,7 @@ For example, we can write a JavaScript function to an external file `custom-func
 :name: "`custom-functions.js`"
 ```
 
-The following CWL document includes the `custom-functions.js` file, and uses the function
+The following CWL document includes the `custom-functions.js` file and uses its function
 `capitalizeWords`:
 
 ```{literalinclude} /_includes/cwl/hello-world-expressionlib.cwl
@@ -148,9 +156,9 @@ statement. That makes the functions and variables available to be used in other 
 the CWL document.
 
 In another entry to the `expressionLib` attribute we then create another function,
-`createHelloWorldMessage`, that calls the `capitalizeWords` from `custom-functions.js`. This
-is just to show that you can either include external JavaScript files, or define
-inline functions in your CWL document.
+`createHelloWorldMessage`, that calls the `capitalizeWords` function from `custom-functions.js`.
+This is just to show that you can include external JavaScript files as well as define
+functions directly in your CWL document.
 
 Running this CWL workflow will invoke the JavaScript functions and result in
 the `echo` command printing the input message with capital initial letters:
