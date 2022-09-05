@@ -1,20 +1,21 @@
 # Troubleshooting
 
-In this section you will find ways to troubleshoot when you have problems executing CWL,
-specifically when using `cwltool` but some of these techniques may apply to different
-CWL Runners as well.
+In this section you will find ways to troubleshoot when you have problems executing CWL.
+We focus on `cwltool` here but some of these techniques may apply to other CWL Runners.
 
 ## Run `cwltool` with `cachedir`
 
 You can use the `--cachedir` option when running a workflow to tell `cwltool` to
 cache intermediate files (files that are not input nor output files, but created
-during runtime for the execution). By default, these files are created in the
-temporary directory, but writing them to a separate directory makes it easier.
+while your workflow is running). By default, these files are created in a
+temporary directory but writing them to a separate directory makes accessing
+them easier.
 
-The following example `troubleshooting-wf1.cwl` has a **typo in the second step**,
-where instead of calling `touch` is it calling `ouch`. We enforce the execution
-of `step_a`, followed by `step_b`. This means that the `step_a.txt` is produced
-before the `step_b` fails to produce a file.
+In the following example `troubleshooting-wf1.cwl` we have two steps, `step_a` and `step_b`.
+These two steps are executed in order (we enforce it, see note below). The first step,
+`step_a`, executes the `touch` command. The second step, `step_b`, **has a typo**,
+where instead of also executing the `touch` command it tries to execute `ouch`, which
+fails.
 
 ```{code-block} cwl
 :name: "`troubleshooting-wf1.cwl`"
@@ -58,8 +59,8 @@ CWL document we enforce the order by chaining the output of `step_a` into an inp
 of `step_b`.
 ```
 
-Let's execute this workflow with `/tmp/cachedir/` as the `--cachedir` value (`cwltool` create the
-directory for you if it does not already exist):
+Let's execute this workflow with `/tmp/cachedir/` as the `--cachedir` value (`cwltool` will
+create the directory for you if it does not exist already):
 
 ```{code-block} console
 :emphasize-lines: 12-14, 19-21
@@ -92,8 +93,10 @@ INFO [workflow ] completed permanentFail
 WARNING Final process status is permanentFail
 ```
 
-The workflow is in the `permanentFail` status, but you can inspect the intermediate
-files created:
+The workflow is in the `permanentFail` status due to `step_b` failing to execute the
+non-existent `ouch` command. The `step_a` was executed successfully and its output
+has been cached in your `cachedir` location. You can inspect the intermediate files
+created:
 
 ```{code-block} console
 :emphasize-lines: 4
@@ -109,15 +112,15 @@ $ tree /tmp/cachedir
 3 directories, 3 files
 ```
 
-The `.status` files display the status of each step executed by the workflow. And
-the `step_a.txt` is visible in the output. Note that `cwltool` shows what where
-the workflow step outputs are being cached near “`Output of job will be cached (…)`”.
+Each workflow step has received a unique ID (the long value that looks like a hash).
+The `${HASH}.status` files display the status of each step executed by the workflow.
+And the `step_a` output file `step_a.txt` is visible in the output of the command above.
 
-The next time you execute the same command, `cwltool` will use the cached output
-of the workflow steps. Before doing so, fix the typo so `step_b` now runs `touch`.
-After fixing the typo, when you execute `cwltool` with the same arguments as the
-previous time, note that `cwltool` output will contain information about pre-cached
-outputs, and about a new cache entry for the output of `step_b`.
+Now fix the typo so `step_b` executes `touch` (i.e. replace `ouch` by `touch` in the
+`step_b`). After fixing the typo, when you execute `cwltool` with the same arguments
+as the previous time, note that now `cwltool` output contains information about
+pre-cached outputs for `step_a`, and about a new cache entry for the output of `step_b`.
+Also note that the status of `step_b` is now of success.
 
 ```{code-block} console
 :emphasize-lines: 12, 16-18
@@ -146,6 +149,8 @@ INFO [workflow ] completed success
 INFO Final process status is success
 ```
 
-In this example, the workflow step `step_a` was executed only once as its output was cached,
-even though we executed `cwltool` twice. This can be useful for troubleshooting your CWL document,
-while also avoiding recomputing steps.
+In this example the workflow step `step_a` was not re-evaluated as it had been cached, and
+there was no change in its execution or output. Furthermore, `cwltool` was able to recognize
+when it had to re-evaluate `step_b` after we fixed its executable name. This technique is
+useful for troubleshooting your CWL documents and also as a way to prevent `cwltool` to
+re-evaluate steps unnecessarily.
