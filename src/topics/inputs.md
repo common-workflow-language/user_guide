@@ -29,6 +29,26 @@ Create a file called `inp-job.yml`:
 :name: inp-job.yml
 ```
 
+````{note}
+You can use `cwltool` to create a template input object. That saves you from having
+to type all the input parameters in a input object file:
+
+```bash
+$ cwltool --make-template inp.cwl
+INFO /home/kinow/Development/python/workspace/cwltool/venv/bin/cwltool 3.1.20220621073108
+INFO Resolved 'inp.cwl' to 'file:///tmp/inp.cwl'
+example_string: a_string  # type "string"
+example_int: 0  # type "int"
+example_flag: false  # type "boolean"
+example_file:  # type "File" (optional)
+    class: File
+    path: a/file/path
+```
+
+You can redirect the output to a file, i.e. `cwltool --make-template inp.cwl > inp-job.yml`,
+and then modify the default values with your desired input values.
+````
+
 Notice that "example_file", as a `File` type, must be provided as an
 object with the fields `class: File` and `path`.
 
