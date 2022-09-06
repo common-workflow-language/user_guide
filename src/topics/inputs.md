@@ -207,13 +207,13 @@ together (they are dependent) or several arguments that cannot be provided
 together (they are exclusive).  You can use records and type unions to group
 parameters together to describe these two conditions.
 
-```{literalinclude} /_includes/cwl/11-records/record.cwl
+```{literalinclude} /_includes/cwl/inputs/record.cwl
 :language: cwl
 :caption: "`record.cwl`"
 :name: record.cwl
 ```
 
-```{literalinclude} /_includes/cwl/11-records/record-job1.yml
+```{literalinclude} /_includes/cwl/inputs/record-job1.yml
 :language: yaml
 :caption: "`record-job1.yml`"
 :name: record-job1.yml
@@ -232,7 +232,7 @@ record-job1.yml:1:1: the `dependent_parameters` field is not valid because
 
 In the first example, you can't provide `itemA` without also providing `itemB`.
 
-```{literalinclude} /_includes/cwl/11-records/record-job2.yml
+```{literalinclude} /_includes/cwl/inputs/record-job2.yml
 :language: yaml
 :caption: "`record-job2.yml`"
 :name: record-job2.yml
@@ -269,7 +269,7 @@ $ cat output.txt
 In the second example, `itemC` and `itemD` are exclusive, so only `itemC`
 is added to the command line and `itemD` is ignored.
 
-```{literalinclude} /_includes/cwl/11-records/record-job3.yml
+```{literalinclude} /_includes/cwl/inputs/record-job3.yml
 :language: yaml
 :caption: "`record-job3.yml`"
 :name: record-job3.yml
@@ -306,7 +306,67 @@ $ cat output.txt
 In the third example, only `itemD` is provided, so it appears on the
 command line.
 
-```{note}```
+### Exclusive Input Parameters with Expressions
+
+If you use exclusive input parameters combined with expressions, you need to be
+aware that the `inputs` JavaScript object will contain one of the exclusive
+input values. This means that you might need to use an **or** boolean operator
+to check which values are present.
+
+Let's use an example that contains an exclusive `output_format` input parameter
+that accepts `null` (i.e. no value provided), or any value from an enum.
+
+```{literalinclude} /_includes/cwl/inputs/exclusive-parameter-expressions.cwl
+:language: cwl
+:caption: "`exclusive-parameter-expressions.cwl`"
+:name: exclusive-parameter-expressions.cwl
+:emphasize-lines: 7, 21-23
+```
+
+Note how the JavaScript expression uses the value of the exclusive input parameter
+without taking into consideration a `null` value. If you provide a valid value,
+such as “fasta” (one of the values of the enum), your command should execute
+successfully:
+
+```{code-block} console
+$ cwltool exclusive-parameter-expressions.cwl --output_format fasta
+INFO /home/kinow/Development/python/workspace/user_guide/venv/bin/cwltool 3.1.20220830195442
+INFO Resolved 'exclusive-parameter-expressions.cwl' to 'file:///tmp/exclusive-parameter-expressions.cwl'
+INFO [job exclusive-parameter-expressions.cwl] /tmp/j02lo8ky$ true \
+    --format \
+    fasta
+INFO [job exclusive-parameter-expressions.cwl] completed success
+{
+    "text_output": "fasta"
+}
+INFO Final process status is success
+```
+
+However, if you do not provide any input value, then `output_format` will be
+evaluated to a `null` value, which does not match the expected type for the
+output field (a `string`), resulting in failure when running your workflow.
+
+```{code-block} console
+:emphasize-lines: 6-10
+$ cwltool exclusive-parameter-expressions.cwl
+INFO /home/kinow/Development/python/workspace/user_guide/venv/bin/cwltool 3.1.20220830195442
+INFO Resolved 'exclusive-parameter-expressions.cwl' to 'file:///tmp/exclusive-parameter-expressions.cwl'
+INFO [job exclusive-parameter-expressions.cwl] /tmp/jmq3nqap$ true
+ERROR [job exclusive-parameter-expressions.cwl] Job error:
+Error validating output record. the `text_output` field is not valid because
+  the value is not string
+ in {
+    "text_output": null
+}
+WARNING [job exclusive-parameter-expressions.cwl] completed permanentFail
+{}
+WARNING Final process status is permanentFail
+```
+
+To correct it, you must remember to use an or operator in your JavaScript expression
+when using exclusive parameters, or any parameter that allows `null`. For example,
+the expression could be changed to `$(inputs.output_format || 'auto')`, to have
+a default value if none was provided in the command line or job input file.
 
 % TODO
 %

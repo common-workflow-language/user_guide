@@ -103,13 +103,13 @@
 
 # Section 11 depends on side-effects
 - doc: Test for section 11 (1st example)
-  job: 11-records/record-job1.yml
-  tool: 11-records/record.cwl
+  job: inputs/record-job1.yml
+  tool: inputs/record.cwl
   should_fail: true
 
 - doc: Test for section 11 (2nd example)
-  job: 11-records/record-job2.yml
-  tool: 11-records/record.cwl
+  job: inputs/record-job2.yml
+  tool: inputs/record.cwl
   output:
     example_out:
       class: File
@@ -119,8 +119,8 @@
       size: 23
 
 - doc: Test for section 11 (3rd example)
-  job: 11-records/record-job3.yml
-  tool: 11-records/record.cwl
+  job: inputs/record-job3.yml
+  tool: inputs/record.cwl
   output:
     example_out:
       class: File
