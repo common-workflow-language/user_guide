@@ -200,7 +200,7 @@ This will be demonstrated in the next lesson
 and is discussed in more detail in the [YAML Guide](yaml-guide.md#arrays).
 You can specify arrays of arrays, arrays of records, and other complex types.
 
-## Advanced Inputs
+## Inclusive and Exclusive Inputs
 
 Sometimes an underlying tool has several arguments that must be provided
 together (they are dependent) or several arguments that cannot be provided
@@ -306,10 +306,11 @@ $ cat output.txt
 In the third example, only `itemD` is provided, so it appears on the
 command line.
 
+```{note}```
+
 % TODO
 %
 % - Explain its fields, such as default, valueFrom, etc. - https://github.com/common-workflow-language/common-workflow-language/issues/359
-% - Exclusive parameters https://github.com/common-workflow-language/user_guide/issues/162
 % - Optional Inputs https://github.com/common-workflow-language/user_guide/issues/44
 % - Several ways of defining inputs/arguments to tools and workflows - https://github.com/common-workflow-language/user_guide/issues/33
 % - Using an input output in another input - https://github.com/common-workflow-language/user_guide/issues/90
