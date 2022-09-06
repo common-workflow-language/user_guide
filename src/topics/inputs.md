@@ -220,8 +220,11 @@ parameters together to describe these two conditions.
 ```
 
 ```{code-block} console
+:emphasize-lines: 6-7
 $ cwl-runner record.cwl record-job1.yml
-Workflow error, try again with --debug for more information:
+INFO /home/kinow/Development/python/workspace/user_guide/venv/bin/cwl-runner 3.1.20220830195442
+INFO Resolved 'record.cwl' to 'file:///tmp/record.cwl'
+ERROR Workflow error, try again with --debug for more information:
 Invalid job input record:
 record-job1.yml:1:1: the `dependent_parameters` field is not valid because
                        missing required field `itemB`
@@ -235,28 +238,30 @@ In the first example, you can't provide `itemA` without also providing `itemB`.
 :name: record-job2.yml
 ```
 
-```cwl
-$ cwl-runner record.cwl record-job2.yml
-record-job2.yml:6:3: invalid field `itemD`, expected one of: 'itemC'
-[job record.cwl] /home/example$ echo \
+```{code-block} cwl
+:emphasize-lines: 3, 9-10, 24
+INFO /home/kinow/Development/python/workspace/user_guide/venv/bin/cwl-runner 3.1.20220830195442
+INFO Resolved 'record.cwl' to 'file:///tmp/record.cwl'
+record-job2.yml:6:3: Warning: invalid field `itemD`, expected one of: 'itemC'
+INFO [job record.cwl] /tmp/r15et6qm$ echo \
     -A \
     one \
     -B \
     two \
     -C \
-    three > /home/example/output.txt
-[job record.cwl] completed success
+    three > /tmp/r15et6qm/output.txt
+INFO [job record.cwl] completed success
 {
     "example_out": {
-        "location": "file:///home/example/11-records/output.txt",
+        "location": "file:///tmp/output.txt",
         "basename": "output.txt",
         "class": "File",
         "checksum": "sha1$329fe3b598fed0dfd40f511522eaf386edb2d077",
         "size": 23,
-        "path": "/home/example/output.txt"
+        "path": "/tmp/output.txt"
     }
 }
-Final process status is success
+INFO Final process status is success
 $ cat output.txt
 -A one -B two -C three
 ```
@@ -271,26 +276,29 @@ is added to the command line and `itemD` is ignored.
 ```
 
 ```{code-block} console
+:emphasize-lines: 9-10, 24
 $ cwl-runner record.cwl record-job3.yml
-[job record.cwl] /home/example$ echo \
+INFO /home/kinow/Development/python/workspace/user_guide/venv/bin/cwl-runner 3.1.20220830195442
+INFO Resolved 'record.cwl' to 'file:///tmp/record.cwl'
+INFO [job record.cwl] /tmp/6qz6choj$ echo \
     -A \
     one \
     -B \
     two \
     -D \
-    four > /home/example/output.txt
-[job record.cwl] completed success
+    four > /tmp/6qz6choj/output.txt
+INFO [job record.cwl] completed success
 {
     "example_out": {
-        "location": "file:///home/example/output.txt",
+        "location": "file:///tmp/output.txt",
         "basename": "output.txt",
         "class": "File",
         "checksum": "sha1$77f572b28e441240a5e30eb14f1d300bcc13a3b4",
         "size": 22,
-        "path": "/home/example/output.txt"
+        "path": "/tmp/output.txt"
     }
 }
-Final process status is success
+INFO Final process status is success
 $ cat output.txt
 -A one -B two -D four
 ```
