@@ -6,7 +6,7 @@ make it easier for others to use your descriptions, you can include a
 This may also help to avoid confusion about which version of a tool the
 description was written for.
 
-```{literalinclude} /_includes/cwl/20-software-requirements/custom-types.cwl
+```{literalinclude} /_includes/cwl/specifying-software-requirements/custom-types.cwl
 :language: cwl
 ```
 

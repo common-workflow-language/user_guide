@@ -9,22 +9,22 @@ the CWL description directly.
 The example below is a CWL description of the [biom convert format][biom] tool for
 converting a standard biom table file to hd5 format.
 
-```{literalinclude} /_includes/cwl/19-custom-types/custom-types.cwl
+```{literalinclude} /_includes/cwl/custom-types/custom-types.cwl
 :language: cwl
 :caption: "`custom-types.cwl`"
 :name: custom-types.cwl
 ```
 
-```{literalinclude} /_includes/cwl/19-custom-types/custom-types.yml
+```{literalinclude} /_includes/cwl/custom-types/custom-types.yml
 :language: yaml
 :caption: "`custom-types.yml`"
 :name: custom-types.yml
 ```
 
-___Note:___ To follow the example below, you need to download the example input file, *rich_sparse_otu_table.biom*. The file is available from [https://raw.githubusercontent.com/common-workflow-language/user_guide/main/_includes/cwl/19-custom-types/rich_sparse_otu_table.biom](https://raw.githubusercontent.com/common-workflow-language/user_guide/main/_includes/cwl/19-custom-types/rich_sparse_otu_table.biom) and can be downloaded e.g. via `wget`:
+___Note:___ To follow the example below, you need to download the example input file, *rich_sparse_otu_table.biom*. The file is available from [https://raw.githubusercontent.com/common-workflow-language/user_guide/main/_includes/cwl/custom-types/rich_sparse_otu_table.biom](https://raw.githubusercontent.com/common-workflow-language/user_guide/main/_includes/cwl/custom-types/rich_sparse_otu_table.biom) and can be downloaded e.g. via `wget`:
 
-```bash
-wget https://raw.githubusercontent.com/common-workflow-language/user_guide/main/_includes/cwl/19-custom-types/rich_sparse_otu_table.biom
+```{code-block} console
+$ wget https://raw.githubusercontent.com/common-workflow-language/user_guide/main/src/_includes/cwl/custom-types/rich_sparse_otu_table.biom
 ```
 
 On line 29, in `inputs:table_type`, a list of allowable table options to be used in the
@@ -52,7 +52,7 @@ tells the tool to create an OTU table in hd5 format.
 
 The contents of the YAML file describing the custom type are given below:
 
-```{literalinclude} /_includes/cwl/19-custom-types/biom-convert-table.yaml
+```{literalinclude} /_includes/cwl/custom-types/biom-convert-table.yaml
 :language: yaml
 :caption: "`biom-convert-table.yaml`"
 :name: biom-convert-table.yaml

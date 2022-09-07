@@ -10,13 +10,13 @@ this example, you will see how to reference the value of input parameters
 dynamically from other fields, which will allow us to then specify the name of
 the file to extract.
 
-```{literalinclude} /_includes/cwl/06-params/tar-param.cwl
+```{literalinclude} /_includes/cwl/parameter-references/tar-param.cwl
 :language: cwl
 :caption: "`tar-param.cwl`"
 :name: tar-param.cwl
 ```
 
-```{literalinclude} /_includes/cwl/06-params/tar-param-job.yml
+```{literalinclude} /_includes/cwl/parameter-references/tar-param-job.yml
 :language: yaml
 :caption: "`tar-param-job.yml`"
 :name: tar-param-job.yml
@@ -27,23 +27,10 @@ input object on the command line:
 
 ```{code-block} console
 $ rm hello.tar || true && touch goodbye.txt && tar -cvf hello.tar goodbye.txt
-$ cwl-runner tar-param.cwl tar-param-job.yml
-[job tar-param.cwl] /tmp/tmpwH4ouT$ tar \
-    --extract --file \
-    /tmp/tmpREYiEt/stgd7764383-99c9-4848-af51-7c2d6e5527d9/hello.tar \
-    goodbye.txt
-[job tar-param.cwl] completed success
-{
-    "extracted_file": {
-        "location": "file:///home/me/cwl/user_guide/goodbye.txt",
-        "basename": "goodbye.txt",
-        "class": "File",
-        "checksum": "sha1$da39a3ee5e6b4b0d3255bfef95601890afd80709",
-        "size": 0,
-        "path": "/home/me/cwl/user_guide/goodbye.txt"
-    }
-}
-Final process status is success
+```
+
+```{runcmd} cwl-runner tar-param.cwl tar-param-job.yml
+:working-directory: src/_includes/cwl/parameter-references
 ```
 
 Certain fields permit parameter references which are enclosed in `$(...)`.

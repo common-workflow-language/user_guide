@@ -13,20 +13,17 @@ special types *File*, *Directory* and *Any*.
 The following example demonstrates some input parameters with different
 types and appearing on the command line in different ways.
 
-First, create a file called inp.cwl, containing the following:
+First, create a file called `inp.cwl`, containing the following:
 
-
-```{literalinclude} /_includes/cwl/03-input/inp.cwl
+```{literalinclude} /_includes/cwl/inputs/inp.cwl
 :language: cwl
 :caption: "`inp.cwl`"
 :name: inp.cwl
 ```
 
-Create a file called inp-job.yml:
+Create a file called `inp-job.yml`:
 
-*inp-job.yml*
-
-```{literalinclude} /_includes/cwl/03-input/inp-job.yml
+```{literalinclude} /_includes/cwl/inputs/inp-job.yml
 :language: yaml
 :caption: "`inp-job.yml`"
 :name: inp-job.yml
@@ -35,21 +32,18 @@ Create a file called inp-job.yml:
 Notice that "example_file", as a `File` type, must be provided as an
 object with the fields `class: File` and `path`.
 
-Next, create a whale.txt using [touch] by typing `touch whale.txt` on the command line and then invoke `cwl-runner` with the tool description and the input object on the command line, using the command `cwl-runner inp.cwl inp-job.yml`. The following boxed text describes these two commands and the expected output from the command line:
+Next, create a whale.txt using [touch] by typing `touch whale.txt` on the command line.
 
 ```{code-block} console
 $ touch whale.txt
-$ cwl-runner inp.cwl inp-job.yml
-[job inp.cwl] /tmp/tmpzrSnfX$ echo \
-    -f \
-    -i42 \
-    --example-string \
-    hello \
-    --file=/tmp/tmpRBSHIG/stg979b6d24-d50a-47e3-9e9e-90097eed2cbc/whale.txt
--f -i42 --example-string hello --file=/tmp/tmpRBSHIG/stg979b6d24-d50a-47e3-9e9e-90097eed2cbc/whale.txt
-[job inp.cwl] completed success
-{}
-Final process status is success
+```
+
+Now invoke `cwl-runner` with the tool description and the input object on the command line,
+using the command `cwl-runner inp.cwl inp-job.yml`. The following boxed text describes these
+two commands and the expected output from the command line:
+
+```{runcmd} cwl-runner inp.cwl inp-job.yml
+:working-directory: src/_includes/cwl/inputs
 ````
 
 ```{tip}
@@ -145,13 +139,13 @@ line. There are two ways to specify an array parameter. First is to provide
 that may appear in the array. Alternatively, brackets `[]` may be added after
 the type name to indicate that input parameter is array of that type.
 
-```{literalinclude} /_includes/cwl/09-array-inputs/array-inputs.cwl
+```{literalinclude} /_includes/cwl/inputs/array-inputs.cwl
 :language: cwl
 :caption: "`array-inputs.cwl`"
 :name: array-inputs.cwl
 ```
 
-```{literalinclude} /_includes/cwl/09-array-inputs/array-inputs-job.yml
+```{literalinclude} /_includes/cwl/inputs/array-inputs-job.yml
 :language: yaml
 :caption: "`array-inputs-job.yml`"
 :name: array-inputs-job.yml
@@ -160,29 +154,11 @@ the type name to indicate that input parameter is array of that type.
 Now invoke `cwl-runner` providing the tool description and the input object
 on the command line:
 
+```{runcmd} cwl-runner array-inputs.cwl array-inputs-job.yml
+:working-directory: src/_includes/cwl/inputs/
+```
+
 ```{code-block} console
-$ cwl-runner array-inputs.cwl array-inputs-job.yml
-[job array-inputs.cwl] /home/examples$ echo \
-    -A \
-    one \
-    two \
-    three \
-    -B=four \
-    -B=five \
-    -B=six \
-    -C=seven,eight,nine > /home/examples/output.txt
-[job array-inputs.cwl] completed success
-{
-    "example_out": {
-        "location": "file:///home/examples/output.txt",
-        "basename": "output.txt",
-        "class": "File",
-        "checksum": "sha1$91038e29452bc77dcd21edef90a15075f3071540",
-        "size": 60,
-        "path": "/home/examples/output.txt"
-    }
-}
-Final process status is success
 $ cat output.txt
 -A one two three -B=four -B=five -B=six -C=seven,eight,nine
 ```
@@ -207,56 +183,35 @@ together (they are dependent) or several arguments that cannot be provided
 together (they are exclusive).  You can use records and type unions to group
 parameters together to describe these two conditions.
 
-```{literalinclude} /_includes/cwl/11-records/record.cwl
+```{literalinclude} /_includes/cwl/inputs/record.cwl
 :language: cwl
 :caption: "`record.cwl`"
 :name: record.cwl
 ```
 
-```{literalinclude} /_includes/cwl/11-records/record-job1.yml
+```{literalinclude} /_includes/cwl/inputs/record-job1.yml
 :language: yaml
 :caption: "`record-job1.yml`"
 :name: record-job1.yml
 ```
 
-```{code-block} console
-$ cwl-runner record.cwl record-job1.yml
-Workflow error, try again with --debug for more information:
-Invalid job input record:
-record-job1.yml:1:1: the `dependent_parameters` field is not valid because
-                       missing required field `itemB`
+```{runcmd} cwl-runner record.cwl record-job1.yml
+:working-directory: src/_includes/cwl/inputs/
 ```
 
 In the first example, you can't provide `itemA` without also providing `itemB`.
 
-```{literalinclude} /_includes/cwl/11-records/record-job2.yml
+```{literalinclude} /_includes/cwl/inputs/record-job2.yml
 :language: yaml
 :caption: "`record-job2.yml`"
 :name: record-job2.yml
 ```
 
-```cwl
-$ cwl-runner record.cwl record-job2.yml
-record-job2.yml:6:3: invalid field `itemD`, expected one of: 'itemC'
-[job record.cwl] /home/example$ echo \
-    -A \
-    one \
-    -B \
-    two \
-    -C \
-    three > /home/example/output.txt
-[job record.cwl] completed success
-{
-    "example_out": {
-        "location": "file:///home/example/11-records/output.txt",
-        "basename": "output.txt",
-        "class": "File",
-        "checksum": "sha1$329fe3b598fed0dfd40f511522eaf386edb2d077",
-        "size": 23,
-        "path": "/home/example/output.txt"
-    }
-}
-Final process status is success
+```{runcmd} cwl-runner record.cwl record-job2.yml
+:working-directory: src/_includes/cwl/inputs
+````
+
+```{code-block} console
 $ cat output.txt
 -A one -B two -C three
 ```
@@ -264,33 +219,17 @@ $ cat output.txt
 In the second example, `itemC` and `itemD` are exclusive, so only `itemC`
 is added to the command line and `itemD` is ignored.
 
-```{literalinclude} /_includes/cwl/11-records/record-job3.yml
+```{literalinclude} /_includes/cwl/inputs/record-job3.yml
 :language: yaml
 :caption: "`record-job3.yml`"
 :name: record-job3.yml
 ```
 
+```{runcmd} cwl-runner record.cwl record-job3.yml
+:working-directory: src/_includes/cwl/inputs
+````
+
 ```{code-block} console
-$ cwl-runner record.cwl record-job3.yml
-[job record.cwl] /home/example$ echo \
-    -A \
-    one \
-    -B \
-    two \
-    -D \
-    four > /home/example/output.txt
-[job record.cwl] completed success
-{
-    "example_out": {
-        "location": "file:///home/example/output.txt",
-        "basename": "output.txt",
-        "class": "File",
-        "checksum": "sha1$77f572b28e441240a5e30eb14f1d300bcc13a3b4",
-        "size": 22,
-        "path": "/home/example/output.txt"
-    }
-}
-Final process status is success
 $ cat output.txt
 -A one -B two -D four
 ```

@@ -4,6 +4,8 @@ import shlex
 import subprocess
 import sys
 
+from pathlib import Path
+
 from docutils.parsers.rst import directives
 from sphinx.directives import code
 
@@ -116,7 +118,12 @@ class RunCmdDirective(code.CodeBlock):
         # change to that working directory before running the desired command.
         # The working directory is omitted from the final output.
         # TODO: PATCHED
-        working_directory = self.options.get('working-directory', 'src/_includes/cwl/')
+        includes_dir = Path('src/_includes/cwl/')
+        if not includes_dir.exists():
+            # You can run Sphinx from the root directory, with `make watch`
+            # for instance, or from the src directory (RTD does that).
+            includes_dir = Path('_includes/cwl')
+        working_directory = self.options.get('working-directory', includes_dir)
         if working_directory == '':
             # subprocess default value, so that we can disable it if needed.
             working_directory = None
