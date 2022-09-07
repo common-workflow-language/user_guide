@@ -12,3 +12,5 @@ _site
 
 _build/
 *.egg-info/
+
+src/_includes/cwl/**/output.txt

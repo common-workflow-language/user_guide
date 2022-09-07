@@ -73,13 +73,13 @@ templates_path = ['_templates']
 # CONTRIBUTING.md is referenced in the footer, but not linked via Sphinx
 # aio.md is also referenced in one page, but not directly via Sphinx, hence the exclusions here.
 exclude_patterns = [
-    'Thumbs.db',
-    '.DS_Store',
-    '.git',
+    '**/Thumbs.db',
+    '**/.DS_Store',
+    '**/.git',
     '.idea',
     '.github',
-    '_build',
-    '_includes',
+    '**/_build',
+    '**/_includes',
     'cwl',
     'venv',
     'README.md',

@@ -28,6 +28,7 @@ watch: clean
 			--ignore='**venv' \
 			--ignore='**.github' \
 			--ignore='*.egg-info' \
+			--ignore='**_includes/**/*.txt' \
 			--watch='cwl'
 
 ## unittest-examples	:
