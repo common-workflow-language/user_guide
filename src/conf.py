@@ -39,7 +39,8 @@ json_url = "https://common-workflow-languageuser-guide.readthedocs.io/en/latest/
 extensions = [
     'myst_parser',
     'sphinx.ext.graphviz',
-    'sphinx_reredirects'
+    'sphinx_reredirects',
+    'cwl.sphinx.runcmd'
 ]
 
 # myst-parser settings
