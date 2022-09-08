@@ -118,15 +118,16 @@ class RunCmdDirective(code.CodeBlock):
         # change to that working directory before running the desired command.
         # The working directory is omitted from the final output.
         # TODO: PATCHED
-        includes_dir = Path('src/_includes/cwl/')
-        if not includes_dir.exists():
-            # You can run Sphinx from the root directory, with `make watch`
-            # for instance, or from the src directory (RTD does that).
-            includes_dir = Path('_includes/cwl')
-        working_directory = self.options.get('working-directory', includes_dir)
+        working_directory = self.options.get('working-directory', 'src/_includes/cwl/')
         if working_directory == '':
             # subprocess default value, so that we can disable it if needed.
             working_directory = None
+        else:
+            # You can run Sphinx from the root directory, with `make watch`
+            # for instance, or from the src directory (RTD does that).
+            working_directory_path = Path(working_directory)
+            if not working_directory_path.exists() and str(working_directory_path).startswith('src/'):
+                working_directory = Path(working_directory[4:])
 
         # Get the command output
         command = " ".join(self.arguments)
