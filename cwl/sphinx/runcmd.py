@@ -1,4 +1,5 @@
 import csv
+import os
 import re
 import shlex
 import subprocess
@@ -57,13 +58,21 @@ def run_command(command, working_directory):
         # The subprocess Popen function takes a ``cwd`` argument that
         # conveniently changes the working directory to run the command.
         #
-        # Furthermore, we also patched the stderr to redirect to STDOUT,
+        # We also patched the stderr to redirect to STDOUT,
         # so that stderr and stdout appear in order, as you would see in
         # a terminal.
+        #
+        # Finally, note that ``cwltool`` by default emits ANSI colors in the
+        # terminal, which are harder to be parsed and/or rendered in Sphinx.
+        # For that reason, we define --disable-color in the CWLTOOL_OPTIONS
+        # environment variable, which is used by ``cwltool``.
         # TODO: PATCHED
+        env = os.environ
+        env['CWLTOOL_OPTIONS'] = '--disable-color'
         subp = subprocess.Popen(
             true_cmd,
             cwd=working_directory,
+            env=env,
             stdout=subprocess.PIPE,
             stderr=subprocess.STDOUT
         )
@@ -135,11 +144,7 @@ class RunCmdDirective(code.CodeBlock):
 
         # Grab our custom commands
         syntax = self.options.get("syntax", "bash")  # TODO: PATCHED
-        # N.B. ``cwltool`` by default emits output with colors, unless disabled
-        #      via a command line flag. There is no way to disable via env-vars
-        #      so we replace it via regexes.
-        #      Source: https://superuser.com/questions/380772/removing-ansi-color-codes-from-text-stream
-        replace = self.options.get("replace", '"\\[[0-9;]+m/","\\x1b/"')  # TODO: PATCHED
+        replace = self.options.get("replace", '')
         reader = csv.reader([replace], delimiter=",", escapechar="\\")
         # prompt = "prompt" in self.options
         # We patched this so that the prompt is displayed by default, similar
