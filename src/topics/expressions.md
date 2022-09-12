@@ -149,7 +149,9 @@ The following CWL document includes the `custom-functions.js` file and uses its 
 ```
 
 ```{note}
-In `expressionLib`, `$include` supports both relative and absolute paths.
+The `$include` statement can be used to include a file from the local disk or from a remote location.
+It works with both relative and absolute paths. Read the [text about `$include`](https://www.commonwl.org/v1.0/SchemaSalad.html#Include)
+from the CWL specification to learn more about it.
 ```
 
 The `custom-functions.js` file is included in the CWL document with the `$include: custom-functions.js`
