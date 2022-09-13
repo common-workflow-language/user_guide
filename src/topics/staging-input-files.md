@@ -17,9 +17,9 @@ input file from its leading directory path.
 :caption: "`arguments-job.yml`"
 ```
 
-Now invoke `cwl-runner` with the tool description and the input object on the
+Now invoke `cwltool` with the tool description and the input object on the
 command line:
 
-```{runcmd} cwl-runner linkfile.cwl arguments-job.yml
+```{runcmd} cwltool linkfile.cwl arguments-job.yml
 :working-directory: src/_includes/cwl/staging-input-files/
 ```

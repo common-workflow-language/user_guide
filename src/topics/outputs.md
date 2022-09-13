@@ -42,9 +42,9 @@ $ touch hello.txt && tar -cvf hello.tar hello.txt
 hello.txt
 ```
 
-And now invoke `cwl-runner` with the tool description and the input object on the command line:
+And now invoke `cwltool` with the tool description and the input object on the command line:
 
-```{runcmd} cwl-runner tar.cwl tar-job.yml
+```{runcmd} cwltool tar.cwl tar-job.yml
 :working-directory: src/_includes/cwl/outputs/
 ```
 
@@ -79,10 +79,10 @@ stdout` on the corresponding output parameter.
 :caption: "`echo-job.yml`"
 ```
 
-Now invoke `cwl-runner` providing the tool description and the input object
+Now invoke `cwltool` providing the tool description and the input object
 on the command line:
 
-```{runcmd} cwl-runner stdout.cwl echo-job.yml
+```{runcmd} cwltool stdout.cwl echo-job.yml
 :working-directory: src/_includes/cwl/outputs/
 ```
 
@@ -102,10 +102,10 @@ You can also capture multiple output files into an array of files using `glob`.
 :name: array-outputs-job.yml
 ```
 
-Now invoke `cwl-runner` providing the tool description and the input object
+Now invoke `cwltool` providing the tool description and the input object
 on the command line:
 
-```{runcmd} cwl-runner array-outputs.cwl array-outputs-job.yml
+```{runcmd} cwltool array-outputs.cwl array-outputs-job.yml
 :working-directory: src/_includes/cwl/outputs/
 ```
 

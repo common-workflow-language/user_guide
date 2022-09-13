@@ -49,14 +49,14 @@ the name of the container image (you can even specify the tag, which is good ide
 best practises when using containers for reproducible research). In this case we have
 used a container called `node:slim`.
 
-Provide a "hello.js" and invoke `cwl-runner` providing the tool description and the
+Provide a "hello.js" and invoke `cwltool` providing the tool description and the
 input object on the command line:
 
 ```{code-block} console
 $ echo "console.log(\"Hello World\");" > hello.js
 ```
 
-```{runcmd} cwl-runner docker.cwl docker-job.yml
+```{runcmd} cwltool docker.cwl docker-job.yml
 :working-directory: src/_includes/cwl/using-containers/
 ```
 

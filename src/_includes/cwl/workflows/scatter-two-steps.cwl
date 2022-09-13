@@ -1,4 +1,4 @@
-#!/usr/bin/env cwl-runner
+#!/usr/bin/env cwltool
 
 cwlVersion: v1.0
 class: Workflow
@@ -7,7 +7,7 @@ requirements:
  ScatterFeatureRequirement: {}
 
 inputs:
-  message_array: string[] 
+  message_array: string[]
 
 steps:
   echo:

@@ -1,4 +1,4 @@
-#!/usr/bin/env cwl-runner
+#!/usr/bin/env cwltool
 
 cwlVersion: v1.0
 class: Workflow
@@ -8,13 +8,13 @@ requirements:
  SubworkflowFeatureRequirement: {}
 
 inputs:
-  message_array: string[] 
+  message_array: string[]
 
 steps:
   subworkflow:
-    run: 
+    run:
       class: Workflow
-      inputs: 
+      inputs:
         message: string
       outputs: []
       steps:
@@ -29,7 +29,7 @@ steps:
             input_file: echo/echo_out
           out: []
     scatter: message
-    in: 
+    in:
       message: message_array
     out: []
 outputs: []

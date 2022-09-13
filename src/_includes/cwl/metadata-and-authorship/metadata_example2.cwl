@@ -1,4 +1,4 @@
-#!/usr/bin/env cwl-runner
+#!/usr/bin/env cwltool
 cwlVersion: v1.0
 class: CommandLineTool
 
@@ -38,7 +38,7 @@ s:contributor:
 s:citation: https://dx.doi.org/10.6084/m9.figshare.3115156.v2
 s:codeRepository: https://github.com/common-workflow-language/common-workflow-language
 s:dateCreated: "2016-12-13"
-s:license: https://spdx.org/licenses/Apache-2.0 
+s:license: https://spdx.org/licenses/Apache-2.0
 
 $namespaces:
   s: https://schema.org/

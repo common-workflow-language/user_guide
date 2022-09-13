@@ -15,10 +15,10 @@ the tool using `EnvVarRequirement`.
 :caption: "`echo-job.yml`"
 ```
 
-Now invoke `cwl-runner` with the tool description and the input object on the
+Now invoke `cwltool` with the tool description and the input object on the
 command line:
 
-```{runcmd} cwl-runner env.cwl echo-job.yml
+```{runcmd} cwltool env.cwl echo-job.yml
 :working-directory: src/_includes/cwl/environment-variables/
 ```
 

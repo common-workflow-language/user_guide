@@ -195,10 +195,10 @@ $ echo "public class Hello {}" > Hello.java && tar -cvf hello.tar Hello.java
 Hello.java
 ```
 
-Now invoke `cwl-runner` with the tool description and the input object on the
+Now invoke `cwltool` with the tool description and the input object on the
 command line:
 
-```{runcmd} cwl-runner 1st-workflow.cwl 1st-workflow-job.yml
+```{runcmd} cwltool 1st-workflow.cwl 1st-workflow-job.yml
 :working-directory: src/_includes/cwl/workflows/
 ```
 
@@ -456,10 +456,10 @@ Using the following input file:
 ```
 
 As a reminder, [`hello_world.cwl`](../introduction/quick-start.md) simply calls the command
-`echo` on a message. If we invoke `cwl-runner scatter-workflow.cwl scatter-job.yml` on the
+`echo` on a message. If we invoke `cwltool scatter-workflow.cwl scatter-job.yml` on the
 command line:
 
-```{runcmd} cwl-runner scatter-workflow.cwl scatter-job.yml
+```{runcmd} cwltool scatter-workflow.cwl scatter-job.yml
 :working-directory: src/_includes/cwl/workflows/
 ```
 

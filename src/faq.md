@@ -87,7 +87,7 @@ Below is an example workaround for this,
 pending a more sophisticated fix.
 
 ```yaml
-#!/usr/bin/env cwl-runner
+#!/usr/bin/env cwltool
 cwlVersion: v1.0
 class: CommandLineTool
 
