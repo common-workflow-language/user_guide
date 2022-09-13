@@ -3,7 +3,7 @@ version: 2
 # NOTE: If you modify this file to install a package with pip or apt, please
 #       verify if we need the same package added to our CI.
 build:
-  os: ubuntu-20.04
+  os: ubuntu-22.04
   tools:
     python: "3.9"
   apt_packages:
