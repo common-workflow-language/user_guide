@@ -25,7 +25,6 @@ RE_SPLIT = re.compile(r"(?P<pattern>.*)(?<!\\)/(?P<replacement>.*)")
 
 
 # These classes were in the .util module of the original directive.
-# TODO: PATCHED
 class _Singleton(type):
     _instances = {}
 
@@ -66,7 +65,6 @@ def run_command(command, working_directory):
         # terminal, which are harder to be parsed and/or rendered in Sphinx.
         # For that reason, we define --disable-color in the CWLTOOL_OPTIONS
         # environment variable, which is used by ``cwltool``.
-        # TODO: PATCHED
         env = os.environ
         env['CWLTOOL_OPTIONS'] = '--disable-color'
         subp = subprocess.Popen(
@@ -113,7 +111,6 @@ class RunCmdDirective(code.CodeBlock):
         "replace": directives.unchanged,
         "prompt": directives.flag,
         "dedent-output": int,
-        # TODO: PATCHED
         "working-directory": directives.unchanged
     }
 
@@ -126,7 +123,6 @@ class RunCmdDirective(code.CodeBlock):
         # allow the directive to receive a working directory, so that we
         # change to that working directory before running the desired command.
         # The working directory is omitted from the final output.
-        # TODO: PATCHED
         working_directory = self.options.get('working-directory', 'src/_includes/cwl/')
         if working_directory == '':
             # subprocess default value, so that we can disable it if needed.
@@ -143,13 +139,13 @@ class RunCmdDirective(code.CodeBlock):
         output = cache.get(command, working_directory)
 
         # Grab our custom commands
-        syntax = self.options.get("syntax", "bash")  # TODO: PATCHED
+        syntax = self.options.get("syntax", "bash")
         replace = self.options.get("replace", '')
         reader = csv.reader([replace], delimiter=",", escapechar="\\")
         # prompt = "prompt" in self.options
         # We patched this so that the prompt is displayed by default, similar
         # to how ``{code-block} console`` works.
-        prompt = True  # TODO: PATCHED
+        prompt = True
         dedent_output = self.options.get("dedent-output", 0)
 
         # Dedent the output if required
