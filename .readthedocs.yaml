@@ -9,6 +9,7 @@ build:
   apt_packages:
     - graphviz
     - nodejs
+    - podman-docker
 
 sphinx:
   configuration: src/conf.py
