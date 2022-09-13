@@ -66,7 +66,9 @@ def run_command(command, working_directory):
         # For that reason, we define --disable-color in the CWLTOOL_OPTIONS
         # environment variable, which is used by ``cwltool``.
         env = os.environ
-        env['CWLTOOL_OPTIONS'] = '--disable-color'
+        cwl_options = set(env.get('CWLTOOL_OPTIONS', '').split(' '))
+        cwl_options.add('--disable-color')
+        env['CWLTOOL_OPTIONS'] = ' '.join(cwl_options)
         subp = subprocess.Popen(
             true_cmd,
             cwd=working_directory,
