@@ -8,6 +8,7 @@ build:
     python: "3.9"
   apt_packages:
     - graphviz
+    - nodejs
 
 sphinx:
   configuration: src/conf.py
