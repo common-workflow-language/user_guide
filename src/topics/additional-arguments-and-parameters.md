@@ -27,9 +27,9 @@ Next, create a sample Java file to use with the command-line tool.
 $ echo "public class Hello {}" > Hello.java
 ```
 
-And now invoke `cwl-runner` providing the tool description and the input object on the command line:
+And now invoke `cwltool` providing the tool description and the input object on the command line:
 
-```{runcmd} cwl-runner arguments.cwl arguments-job.yml
+```{runcmd} cwltool arguments.cwl arguments-job.yml
 :working-directory: src/_includes/cwl/additional-arguments-and-parameters
 ```
 

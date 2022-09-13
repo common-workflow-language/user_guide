@@ -22,14 +22,14 @@ the file to extract.
 :name: tar-param-job.yml
 ```
 
-Create your input files and invoke `cwl-runner` with the tool description and the
+Create your input files and invoke `cwltool` with the tool description and the
 input object on the command line:
 
 ```{code-block} console
 $ rm hello.tar || true && touch goodbye.txt && tar -cvf hello.tar goodbye.txt
 ```
 
-```{runcmd} cwl-runner tar-param.cwl tar-param-job.yml
+```{runcmd} cwltool tar-param.cwl tar-param-job.yml
 :working-directory: src/_includes/cwl/parameter-references
 ```
 

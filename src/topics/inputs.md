@@ -38,11 +38,11 @@ Next, create a whale.txt using [touch] by typing `touch whale.txt` on the comman
 $ touch whale.txt
 ```
 
-Now invoke `cwl-runner` with the tool description and the input object on the command line,
-using the command `cwl-runner inp.cwl inp-job.yml`. The following boxed text describes these
+Now invoke `cwltool` with the tool description and the input object on the command line,
+using the command `cwltool inp.cwl inp-job.yml`. The following boxed text describes these
 two commands and the expected output from the command line:
 
-```{runcmd} cwl-runner inp.cwl inp-job.yml
+```{runcmd} cwltool inp.cwl inp-job.yml
 :working-directory: src/_includes/cwl/inputs
 ````
 
@@ -151,10 +151,10 @@ the type name to indicate that input parameter is array of that type.
 :name: array-inputs-job.yml
 ```
 
-Now invoke `cwl-runner` providing the tool description and the input object
+Now invoke `cwltool` providing the tool description and the input object
 on the command line:
 
-```{runcmd} cwl-runner array-inputs.cwl array-inputs-job.yml
+```{runcmd} cwltool array-inputs.cwl array-inputs-job.yml
 :working-directory: src/_includes/cwl/inputs/
 ```
 
@@ -195,7 +195,7 @@ parameters together to describe these two conditions.
 :name: record-job1.yml
 ```
 
-```{runcmd} cwl-runner record.cwl record-job1.yml
+```{runcmd} cwltool record.cwl record-job1.yml
 :working-directory: src/_includes/cwl/inputs/
 ```
 
@@ -207,7 +207,7 @@ In the first example, you can't provide `itemA` without also providing `itemB`.
 :name: record-job2.yml
 ```
 
-```{runcmd} cwl-runner record.cwl record-job2.yml
+```{runcmd} cwltool record.cwl record-job2.yml
 :working-directory: src/_includes/cwl/inputs
 ````
 
@@ -225,7 +225,7 @@ is added to the command line and `itemD` is ignored.
 :name: record-job3.yml
 ```
 
-```{runcmd} cwl-runner record.cwl record-job3.yml
+```{runcmd} cwltool record.cwl record-job3.yml
 :working-directory: src/_includes/cwl/inputs
 ````
 

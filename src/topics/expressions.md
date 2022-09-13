@@ -33,7 +33,7 @@ represented simply by a set of empty brackets.
 
 We can then run `expression.cwl`:
 
-```{runcmd} cwl-runner expression.cwl empty.yml
+```{runcmd} cwltool expression.cwl empty.yml
 :name: running-expression.cwl
 :caption: Running `expression.cwl`
 :working-directory: src/_includes/cwl/expressions/

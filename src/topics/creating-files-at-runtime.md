@@ -51,10 +51,10 @@ which is YAML quoting syntax, and means that you are using a multiline string
 See the [YAML Guide](../topics/yaml-guide.md#maps) for more about the formatting.
 ```
 
-Now invoke `cwl-runner` with the tool description and the input object on the
+Now invoke `cwltool` with the tool description and the input object on the
 command line:
 
-```{runcmd} cwl-runner createfile.cwl echo-job.yml
+```{runcmd} cwltool createfile.cwl echo-job.yml
 :working-directory: src/_includes/cwl/creating-files-at-runtime/
 ```
 

@@ -1,4 +1,4 @@
-#!/usr/bin/env cwl-runner
+#!/usr/bin/env cwltool
 
 cwlVersion: v1.0
 class: CommandLineTool
@@ -8,6 +8,6 @@ inputs:
     type: string
     inputBinding:
       position: 1
-outputs: 
+outputs:
   echo_out:
     type: stdout

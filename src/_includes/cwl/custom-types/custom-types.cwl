@@ -1,4 +1,4 @@
-#!/usr/bin/env cwl-runner 
+#!/usr/bin/env cwltool
 cwlVersion: v1.0
 class: CommandLineTool
 
@@ -43,7 +43,7 @@ inputs:
 baseCommand: [ biom, convert ]
 
 arguments:
-  - valueFrom: $(inputs.biom.nameroot).hdf5  
+  - valueFrom: $(inputs.biom.nameroot).hdf5
     prefix: --output-fp
   - --to-hdf5
 
