@@ -6,6 +6,9 @@ on:
       - main
   workflow_dispatch:
 
+env:
+  CWLTOOL_OPTIONS: '--user-space-docker=udocker'
+
 # NOTE: If you modify this file to install a package with pip or apt, please
 #       verify if we need the same package added to our readthedocs build.
 jobs:
