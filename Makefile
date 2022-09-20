@@ -39,6 +39,9 @@ unittest-examples:
 check-json:
 	python -m json.tool < src/.zenodo.json >> /dev/null && exit 0 || echo "NOT valid JSON"; exit 1
 
+container-pull:
+	for container in $$(git grep dockerPull $$(git ls-files *.cwl) | awk '-F: ' '{print $$3}'); do docker pull $${container}; done
+
 .PHONY: help clean watch unittest-examples check-json Makefile
 
 # Catch-all target		: route all unknown targets to Sphinx using the new
