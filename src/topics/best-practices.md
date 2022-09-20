@@ -1,4 +1,4 @@
-# Best practices
+# Best Practices
 
 Below are a set of recommended good practices to keep in mind when writing a
 Common Workflow Language description for a tool or workflow. These guidelines

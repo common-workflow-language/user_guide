@@ -1,6 +1,6 @@
-# Using containers
+# Using Containers
 
-## Running tools inside Docker
+## Running Tools Inside Docker
 
 [Docker][docker] containers simplify software installation by providing a
 complete known-good runtime for software and its dependencies.  However,
