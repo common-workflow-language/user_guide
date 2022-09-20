@@ -1,4 +1,4 @@
-# Specifying software requirements
+# Specifying Software Requirements
 
 Often tool descriptions will be written for a specific version of a software. To
 make it easier for others to use your descriptions, you can include a

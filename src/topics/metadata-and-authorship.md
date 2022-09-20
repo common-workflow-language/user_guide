@@ -1,4 +1,4 @@
-# Metadata and authorship
+# Metadata and Authorship
 
 Implementation extensions not required for correct execution (for example,
 fields related to GUI presentation) and metadata about the tool or workflow

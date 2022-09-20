@@ -1,4 +1,4 @@
-# Staging input files
+# Staging Input Files
 
 Normally, input files are located in a read-only directory separate from
 the output directory.  This causes problems if the underlying tool expects to
