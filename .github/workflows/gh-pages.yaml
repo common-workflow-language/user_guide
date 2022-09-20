@@ -42,6 +42,9 @@ jobs:
       - name: Install dependencies
         run: python3 -m pip install -U -e .[all]
 
+      - name: pre-pull container images
+        run: make container-pull
+
       - name: Build documentation
         run: make html
 
