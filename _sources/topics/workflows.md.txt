@@ -167,19 +167,22 @@ of this user guide in more detail.
 This workflow extracts a java source file from a tar file and then
 compiles it.
 
-```{literalinclude} /_includes/cwl/21-1st-workflow/1st-workflow.cwl
+```{literalinclude} /_includes/cwl/workflows/1st-workflow.cwl
 :language: cwl
 :caption: "`1st-workflow.cwl`"
 :name: 1st-workflow.cwl
 ```
 
+% TODO: The link below is for a previous commit with the workflow above. Ideally, I think we should either use `cwltool`
+%       or Python to add the graph here. Or, maybe re-create the graph for the latest main version?
+
 ```{admonition} Visualization of 1st-workflow.cwl
-[![Visualization of 1st-workflow.cwl](https://view.commonwl.org/graph/svg/github.com/common-workflow-language/user_guide/blob/main/_includes/cwl/21-1st-workflow/1st-workflow.cwl)](https://view.commonwl.org/workflows/github.com/common-workflow-language/user_guide/blob/main/_includes/cwl/21-1st-workflow/1st-workflow.cwl)
+[![Visualization of 1st-workflow.cwl](https://view.commonwl.org/graph/png/github.com/common-workflow-language/user_guide/blob/a29e7eae0006660946fc705a310b37a21a7e1edc/_includes/cwl/21-1st-workflow/1st-workflow.cwl)](https://view.commonwl.org/graph/png/github.com/common-workflow-language/user_guide/blob/a29e7eae0006660946fc705a310b37a21a7e1edc/_includes/cwl/21-1st-workflow/1st-workflow.cwl)
 ```
 
 Use a YAML or a JSON object in a separate file to describe the input of a run:
 
-```{literalinclude} /_includes/cwl/21-1st-workflow/1st-workflow-job.yml
+```{literalinclude} /_includes/cwl/workflows/1st-workflow-job.yml
 :language: yaml
 :caption: "`1st-workflow-job.yml`"
 :name: 1st-workflow-job.yml
@@ -192,36 +195,11 @@ $ echo "public class Hello {}" > Hello.java && tar -cvf hello.tar Hello.java
 Hello.java
 ```
 
-Now invoke `cwl-runner` with the tool description and the input object on the
+Now invoke `cwltool` with the tool description and the input object on the
 command line:
 
-```{code-block} console
-$ cwl-runner 1st-workflow.cwl 1st-workflow-job.yml
-INFO /usr/bin/cwl-runner 3.1.20220802125926
-INFO Resolved '1st-workflow.cwl' to 'file:///home/example/1st-workflow.cwl'
-INFO [workflow ] start
-INFO [workflow ] starting step untar
-INFO [step untar] start
-INFO [job untar] /tmp/rzlj4nsg$ tar --extract --file /tmp/1yikucse/stg4148c64f-2489-449c-bef7-12d059758b13/hello.tar Hello.java
-INFO [job untar] completed success
-INFO [step untar] completed success
-INFO [workflow ] starting step compile
-INFO [step compile] start
-INFO [job compile] /tmp/r0kmwijd$ docker run -i --mount=type=bind,source=/tmp/r0kmwijd,target=/zurNsS --mount=type=bind,source=/tmp/bza6s5oh,target=/tmp --mount=type=bind,source=/tmp/rzlj4nsg/Hello.java,target=/var/lib/cwl/stg37272664-b5b2-4bbd-b254-1ef521ebbe3d/Hello.java,readonly --workdir=/zurNsS --read-only=true --user=1000:1000 --rm --cidfile=/tmp/4d8t2lj2/20220825125241-159808.cid --env=TMPDIR=/tmp --env=HOME=/zurNsS openjdk:9.0.1-11-slim javac -d /zurNsS /var/lib/cwl/stg37272664-b5b2-4bbd-b254-1ef521ebbe3d/Hello.java
-INFO [job compile] Max memory used: 28MiB
-INFO [job compile] completed success
-INFO [step compile] completed success
-INFO [workflow ] completed success
-{
-    "compiled_class": {
-        "location": "file:///home/example/Hello.class",
-        "basename": "Hello.class",
-        "class": "File",
-        "checksum": "sha1$fdb876b40ad9ebc7fee873212e02d5940588642e",
-        "size": 184,
-        "path": "/home/example/Hello.class"
-    }
-}
+```{runcmd} cwltool 1st-workflow.cwl 1st-workflow-job.yml
+:working-directory: src/_includes/cwl/workflows/
 ```
 
 What's going on here?  Let's break it down:
@@ -276,7 +254,7 @@ instead the order is determined by the dependencies between steps (using
 another may run in parallel.
 
 The first step, `untar` runs `tar-param.cwl` (described previously in
-[Parameter References](parameter-references.md).
+[Parameter References](parameter-references.md)).
 This tool has two input parameters, `tarfile` and `extractfile` and one output
 parameter `extracted_file`.
 
@@ -319,7 +297,7 @@ requirements:
 Here's an example workflow that uses our `1st-workflow.cwl` as a nested
 workflow:
 
-```{literalinclude} /_includes/cwl/22-nested-workflows/nestedworkflows.cwl
+```{literalinclude} /_includes/cwl/workflows/nestedworkflows.cwl
 :language: cwl
 :caption: "`nestedworkflows.cwl`"
 :name: nestedworkflows.cwl
@@ -333,11 +311,11 @@ the `compile` step in orange; `compile` is another workflow, diagrammed on the
 right. In purple we see the fixed string `"Hello.java"` being supplied as the
 `name_of_file_to_extract`.
 
-<a href="https://view.commonwl.org/workflows/github.com/common-workflow-language/user_guide/blob/main/_includes/cwl/22-nested-workflows/nestedworkflows.cwl"><img
-src="https://view.commonwl.org/graph/svg/github.com/common-workflow-language/user_guide/blob/main/_includes/cwl/22-nested-workflows/nestedworkflows.cwl"
+<a href="https://view.commonwl.org/workflows/github.com/common-workflow-language/user_guide/blob/main/_includes/cwl/workflows/nestedworkflows.cwl"><img
+src="https://view.commonwl.org/graph/svg/github.com/common-workflow-language/user_guide/blob/main/_includes/cwl/workflows/nestedworkflows.cwl"
 alt="Visualization of nestedworkflows.cwl" /></a>
-<a href="https://view.commonwl.org/workflows/github.com/common-workflow-language/user_guide/blob/main/_includes/cwl/22-nested-workflows/1st-workflow.cwl"><img
-src="https://view.commonwl.org/graph/svg/github.com/common-workflow-language/user_guide/blob/main/_includes/cwl/22-nested-workflows/1st-workflow.cwl"
+<a href="https://view.commonwl.org/workflows/github.com/common-workflow-language/user_guide/blob/main/_includes/cwl/workflows/1st-workflow.cwl"><img
+src="https://view.commonwl.org/graph/svg/github.com/common-workflow-language/user_guide/blob/main/_includes/cwl/workflows/1st-workflow.cwl"
 alt="Visualization of 1st-workflow.cwl" /></a>
 ```
 
@@ -434,7 +412,7 @@ The most common reason a new user might want to use scatter is to perform the sa
 different samples. Let's start with a simple workflow that calls our first example
 (`hello_world.cwl`) and takes an array of strings as input to the workflow:
 
-```{literalinclude} /_includes/cwl/23-scatter-workflow/scatter-workflow.cwl
+```{literalinclude} /_includes/cwl/workflows/scatter-workflow.cwl
 :language: cwl
 :caption: "`scatter-workflow.cwl`"
 :name: scatter-workflow.cwl
@@ -471,43 +449,18 @@ as well!
 
 Using the following input file:
 
-```{literalinclude} /_includes/cwl/23-scatter-workflow/scatter-job.yml
+```{literalinclude} /_includes/cwl/workflows/scatter-job.yml
 :language: yaml
 :caption: "`scatter-job.yml`"
 :name: scatter-job.yml
 ```
 
 As a reminder, [`hello_world.cwl`](../introduction/quick-start.md) simply calls the command
-`echo` on a message. If we invoke `cwl-runner scatter-workflow.cwl scatter-job.yml` on the
+`echo` on a message. If we invoke `cwltool scatter-workflow.cwl scatter-job.yml` on the
 command line:
 
-```{code-block} console
-$ cwl-runner scatter-workflow.cwl scatter-job.yml
-[workflow scatter-workflow.cwl] start
-[step echo] start
-[job echo] /tmp/tmp0hqmg400$ echo \
-    'Hello world!'
-Hello world!
-[job echo] completed success
-[step echo] start
-[job echo_2] /tmp/tmpu65_m1zw$ echo \
-    'Hola mundo!'
-Hola mundo!
-[job echo_2] completed success
-[step echo] start
-[job echo_3] /tmp/tmp5cs7a2wh$ echo \
-    'Bonjour le monde!'
-Bonjour le monde!
-[job echo_3] completed success
-[step echo] start
-[job echo_4] /tmp/tmp301wo7p8$ echo \
-    'Hallo welt!'
-Hallo welt!
-[job echo_4] completed success
-[step echo] completed success
-[workflow scatter-workflow.cwl] completed success
-{}
-Final process status is success
+```{runcmd} cwltool scatter-workflow.cwl scatter-job.yml
+:working-directory: src/_includes/cwl/workflows/
 ```
 
 You can see that the workflow calls echo multiple times on each element of our
@@ -527,7 +480,7 @@ outputs:
 And add a second step that uses `wc` to count the characters in each file. See the tool
 below:
 
-```{literalinclude} /_includes/cwl/23-scatter-workflow/wc-tool.cwl
+```{literalinclude} /_includes/cwl/workflows/wc-tool.cwl
 :language: cwl
 :caption: "`wc-tool.cwl`"
 :name: wc-tool.cwl
@@ -535,7 +488,7 @@ below:
 
 Now, how do we incorporate scatter? Remember the scatter field is under each step:
 
-```{literalinclude} /_includes/cwl/23-scatter-workflow/scatter-two-steps.cwl
+```{literalinclude} /_includes/cwl/workflows/scatter-two-steps.cwl
 :language: cwl
 :caption: "`scatter-two-steps.cwl`"
 :name: scatter-two-steps.cwl
@@ -557,7 +510,7 @@ Ok, so how do we scatter on steps that can proceed independent of other samples?
 [Nested Workflows](#nested-workflows), that we can make an entire workflow a single step in another workflow! Convert our
 two-step workflow to a single step subworkflow:
 
-```{literalinclude} /_includes/cwl/23-scatter-workflow/scatter-nested-workflow.cwl
+```{literalinclude} /_includes/cwl/workflows/scatter-nested-workflow.cwl
 :language: cwl
 :caption: "`scatter-nested-workflow.cwl`"
 :name: scatter-nested-workflow.cwl
@@ -617,7 +570,7 @@ class: Workflow
 cwlVersion: v1.2
 ```
 
-The first step of the worklfow (step1) contains two input properties and will execute foo.cwl when the conditions are met. The new property `when` is where the condition validation takes place. In this case only when `in1`  from the workflow contains a value `< 1` this step will be executed.
+The first step of the workflow (step1) contains two input properties and will execute foo.cwl when the conditions are met. The new property `when` is where the condition validation takes place. In this case only when `in1`  from the workflow contains a value `< 1` this step will be executed.
 
 ```cwl
 steps:
@@ -631,7 +584,7 @@ steps:
     out: [out1]
 ```
 
-Using the following command `cwltool cond-wf-003.1.cwl --val 0` the value will pass the first conditional step and will therefor be executed and is shown in the log by `INFO [step step1] start` whereas the second step is skipped as indicated by `INFO [step step2] will be skipped`.
+Using the following command `cwltool cond-wf-003.1.cwl --val 0` the value will pass the first conditional step and will therefore be executed and is shown in the log by `INFO [step step1] start` whereas the second step is skipped as indicated by `INFO [step step2] will be skipped`.
 
 ```{code-block} console
 INFO [workflow ] start
@@ -691,8 +644,8 @@ WARNING Final process status is permanentFail
 % TODO
 % - Scatter
 %   - ScatterMethod https://github.com/common-workflow-language/user_guide/issues/29
-%   - Also in the **episode 23** of the current User Guide - https://www.commonwl.org/user_guide/23-scatter-workflow/index.html
+%   - Also in the **episode 23** of the current User Guide - https://www.commonwl.org/user_guide/workflows/index.html
 % - Subworkflows/nested workflows
-%   - Covered in the **episode 22** from the current User Guide -  https://www.commonwl.org/user_guide/22-nested-workflows/index.html
+%   - Covered in the **episode 22** from the current User Guide -  https://www.commonwl.org/user_guide/workflows/index.html
 % - Conditionals https://github.com/common-workflow-language/user_guide/issues/191 & https://github.com/common-workflow-language/user_guide/issues/188
 %   - Also in the **episode 24** of the current User Guide - https://www.commonwl.org/user_guide/24_conditional-workflow/index.html

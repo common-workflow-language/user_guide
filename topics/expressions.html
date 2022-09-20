@@ -518,39 +518,43 @@ represented simply by a set of empty brackets.</p>
 <p>We can then run <code class="docutils literal notranslate"><span class="pre">expression.cwl</span></code>:</p>
 <div class="literal-block-wrapper docutils container" id="running-expression-cwl">
 <div class="code-block-caption"><span class="caption-text">Running <code class="docutils literal notranslate"><span class="pre">expression.cwl</span></code></span><a class="headerlink" href="#running-expression-cwl" title="Permalink to this code">#</a></div>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>cwl-runner expression.cwl empty.yml
-<span class="go">[job expression.cwl] /home/example$ echo \</span>
-<span class="go">    -A \</span>
-<span class="go">    2 \</span>
-<span class="go">    -B \</span>
-<span class="go">    baz \</span>
-<span class="go">    -C \</span>
-<span class="go">    10 \</span>
-<span class="go">    9 \</span>
-<span class="go">    8 \</span>
-<span class="go">    7 \</span>
-<span class="go">    6 \</span>
-<span class="go">    5 \</span>
-<span class="go">    4 \</span>
-<span class="go">    3 \</span>
-<span class="go">    2 \</span>
-<span class="go">    1 &gt; /home/example/output.txt</span>
-<span class="go">[job expression.cwl] completed success</span>
-<span class="go">{</span>
-<span class="go">    &quot;example_out&quot;: {</span>
-<span class="go">        &quot;location&quot;: &quot;file:///home/example/output.txt&quot;,</span>
-<span class="go">        &quot;basename&quot;: &quot;output.txt&quot;,</span>
-<span class="go">        &quot;class&quot;: &quot;File&quot;,</span>
-<span class="go">        &quot;checksum&quot;: &quot;sha1$a739a6ff72d660d32111265e508ed2fc91f01a7c&quot;,</span>
-<span class="go">        &quot;size&quot;: 36,</span>
-<span class="go">        &quot;path&quot;: &quot;/home/example/output.txt&quot;</span>
-<span class="go">    }</span>
-<span class="go">}</span>
-<span class="go">Final process status is success</span>
-<span class="gp">$ </span>cat output.txt
-<span class="go">-A 2 -B baz -C 10 9 8 7 6 5 4 3 2 1</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ cwltool expression.cwl empty.yml
+INFO /opt/hostedtoolcache/Python/3.9.13/x64/bin/cwltool <span class="m">3</span>.1.20220913185150
+INFO Resolved <span class="s1">&#39;expression.cwl&#39;</span> to <span class="s1">&#39;file:///home/runner/work/user_guide/user_guide/src/_includes/cwl/expressions/expression.cwl&#39;</span>
+INFO <span class="o">[</span>job expression.cwl<span class="o">]</span> /tmp/ewwpr16o$ <span class="nb">echo</span> <span class="se">\</span>
+    -A <span class="se">\</span>
+    <span class="m">2</span> <span class="se">\</span>
+    -B <span class="se">\</span>
+    baz <span class="se">\</span>
+    -C <span class="se">\</span>
+    <span class="m">10</span> <span class="se">\</span>
+    <span class="m">9</span> <span class="se">\</span>
+    <span class="m">8</span> <span class="se">\</span>
+    <span class="m">7</span> <span class="se">\</span>
+    <span class="m">6</span> <span class="se">\</span>
+    <span class="m">5</span> <span class="se">\</span>
+    <span class="m">4</span> <span class="se">\</span>
+    <span class="m">3</span> <span class="se">\</span>
+    <span class="m">2</span> <span class="se">\</span>
+    <span class="m">1</span> &gt; /tmp/ewwpr16o/output.txt
+INFO <span class="o">[</span>job expression.cwl<span class="o">]</span> completed success
+<span class="o">{</span>
+    <span class="s2">&quot;example_out&quot;</span>: <span class="o">{</span>
+        <span class="s2">&quot;location&quot;</span>: <span class="s2">&quot;file:///home/runner/work/user_guide/user_guide/src/_includes/cwl/expressions/output.txt&quot;</span>,
+        <span class="s2">&quot;basename&quot;</span>: <span class="s2">&quot;output.txt&quot;</span>,
+        <span class="s2">&quot;class&quot;</span>: <span class="s2">&quot;File&quot;</span>,
+        <span class="s2">&quot;checksum&quot;</span>: <span class="s2">&quot;sha1</span><span class="nv">$a739a6ff72d660d32111265e508ed2fc91f01a7c</span><span class="s2">&quot;</span>,
+        <span class="s2">&quot;size&quot;</span>: <span class="m">36</span>,
+        <span class="s2">&quot;path&quot;</span>: <span class="s2">&quot;/home/runner/work/user_guide/user_guide/src/_includes/cwl/expressions/output.txt&quot;</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+INFO Final process status is success
 </pre></div>
 </div>
+</div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ cat output.txt
+Message is: Hello world!
+</pre></div>
 </div>
 <p>Note that requirements can be provided with the map syntax, as in the example above:</p>
 <div class="highlight-cwl notranslate"><div class="highlight"><pre><span></span><span class="nt">requirements</span><span class="p">:</span><span class="w"></span>

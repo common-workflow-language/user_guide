@@ -12,7 +12,7 @@ When manipulating file names, extensions, paths etc, consider whether one of the
 etc, could be used instead.
 See the [list of best practices](best-practices.md).
 
-```{literalinclude} /_includes/cwl/13-expressions/expression.cwl
+```{literalinclude} /_includes/cwl/expressions/expression.cwl
 :language: cwl
 :caption: "`expression.cwl`"
 :name: expression.cwl
@@ -21,7 +21,7 @@ See the [list of best practices](best-practices.md).
 As this tool does not require any `inputs` we can run it with an (almost) empty
 job file:
 
-```{literalinclude} /_includes/cwl/13-expressions/empty.yml
+```{literalinclude} /_includes/cwl/expressions/empty.yml
 :language: yaml
 :caption: "`empty.yml`"
 :name: empty.cwl
@@ -33,41 +33,14 @@ represented simply by a set of empty brackets.
 
 We can then run `expression.cwl`:
 
-```{code-block} console
+```{runcmd} cwltool expression.cwl empty.yml
 :name: running-expression.cwl
 :caption: Running `expression.cwl`
+:working-directory: src/_includes/cwl/expressions/
+```
 
-$ cwl-runner expression.cwl empty.yml
-[job expression.cwl] /home/example$ echo \
-    -A \
-    2 \
-    -B \
-    baz \
-    -C \
-    10 \
-    9 \
-    8 \
-    7 \
-    6 \
-    5 \
-    4 \
-    3 \
-    2 \
-    1 > /home/example/output.txt
-[job expression.cwl] completed success
-{
-    "example_out": {
-        "location": "file:///home/example/output.txt",
-        "basename": "output.txt",
-        "class": "File",
-        "checksum": "sha1$a739a6ff72d660d32111265e508ed2fc91f01a7c",
-        "size": 36,
-        "path": "/home/example/output.txt"
-    }
-}
-Final process status is success
-$ cat output.txt
--A 2 -B baz -C 10 9 8 7 6 5 4 3 2 1
+```{runcmd} cat output.txt
+:working-directory: src/_includes/cwl/expressions/
 ```
 
 Note that requirements can be provided with the map syntax, as in the example above:

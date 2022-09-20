@@ -443,23 +443,23 @@ with the CWL specification, without running the workflow. To use it you just nee
 to pass <code class="docutils literal notranslate"><span class="pre">--validate</span></code> to the <code class="docutils literal notranslate"><span class="pre">cwltool</span></code> command:</p>
 <div class="literal-block-wrapper docutils container" id="validating-truecwl-with-cwltool">
 <div class="code-block-caption"><span class="caption-text">Validating <code class="docutils literal notranslate"><span class="pre">true.cwl</span></code> with <code class="docutils literal notranslate"><span class="pre">cwltool</span></code>.</span><a class="headerlink" href="#validating-truecwl-with-cwltool" title="Permalink to this code">#</a></div>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>cwltool --validate true.cwl
-<span class="go">INFO /home/kinow/Development/python/workspace/user_guide/venv/bin/cwltool 3.1.20220406080846</span>
-<span class="go">INFO Resolved &#39;true.cwl&#39; to &#39;file:///tmp/true.cwl&#39;</span>
-<span class="go">true.cwl is valid CWL.</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ cwltool --validate true.cwl
+INFO /opt/hostedtoolcache/Python/3.9.13/x64/bin/cwltool <span class="m">3</span>.1.20220913185150
+INFO Resolved <span class="s1">&#39;true.cwl&#39;</span> to <span class="s1">&#39;file:///home/runner/work/user_guide/user_guide/src/_includes/cwl/true.cwl&#39;</span>
+true.cwl is valid CWL.
 </pre></div>
 </div>
 </div>
 <p>You can run the CWL workflow now that you know it is valid:</p>
 <div class="literal-block-wrapper docutils container" id="running-true-cwl-with-cwltool">
 <div class="code-block-caption"><span class="caption-text">Running <code class="docutils literal notranslate"><span class="pre">true.cwl</span></code> with <code class="docutils literal notranslate"><span class="pre">cwltool</span></code>.</span><a class="headerlink" href="#running-true-cwl-with-cwltool" title="Permalink to this code">#</a></div>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>cwltool true.cwl
-<span class="go">INFO /home/kinow/Development/python/workspace/user_guide/venv/bin/cwltool 3.1.20220406080846</span>
-<span class="go">INFO Resolved &#39;true.cwl&#39; to &#39;file:///tmp/true.cwl&#39;</span>
-<span class="go">INFO [job true.cwl] /tmp/f8xlh1pl$ true</span>
-<span class="go">INFO [job true.cwl] completed success</span>
-<span class="go">{}</span>
-<span class="go">INFO Final process status is success</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ cwltool true.cwl
+INFO /opt/hostedtoolcache/Python/3.9.13/x64/bin/cwltool <span class="m">3</span>.1.20220913185150
+INFO Resolved <span class="s1">&#39;true.cwl&#39;</span> to <span class="s1">&#39;file:///home/runner/work/user_guide/user_guide/src/_includes/cwl/true.cwl&#39;</span>
+INFO <span class="o">[</span>job true.cwl<span class="o">]</span> /tmp/1zezsd5g$ <span class="nb">true</span>
+INFO <span class="o">[</span>job true.cwl<span class="o">]</span> completed success
+<span class="o">{}</span>
+INFO Final process status is success
 </pre></div>
 </div>
 </div>
@@ -484,30 +484,30 @@ which will invoke <code class="docutils literal notranslate"><span class="pre">c
 as in the previous section.</p>
 <div class="literal-block-wrapper docutils container" id="validating-true-cwl-with-cwl-runner">
 <div class="code-block-caption"><span class="caption-text">Validating <code class="docutils literal notranslate"><span class="pre">true.cwl</span></code> with <code class="docutils literal notranslate"><span class="pre">cwl-runner</span></code>.</span><a class="headerlink" href="#validating-true-cwl-with-cwl-runner" title="Permalink to this code">#</a></div>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>cwl-runner --validate true.cwl
-<span class="go">INFO /home/kinow/Development/python/workspace/user_guide/venv/bin/cwl-runner 3.1.20220406080846</span>
-<span class="go">INFO Resolved &#39;true.cwl&#39; to &#39;file:///tmp/true.cwl&#39;</span>
-<span class="go">true.cwl is valid CWL.</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ cwl-runner --validate true.cwl
+INFO /opt/hostedtoolcache/Python/3.9.13/x64/bin/cwl-runner <span class="m">3</span>.1.20220913185150
+INFO Resolved <span class="s1">&#39;true.cwl&#39;</span> to <span class="s1">&#39;file:///home/runner/work/user_guide/user_guide/src/_includes/cwl/true.cwl&#39;</span>
+true.cwl is valid CWL.
 </pre></div>
 </div>
 </div>
 <div class="literal-block-wrapper docutils container" id="running-true-cwl-with-cwl-runner">
 <div class="code-block-caption"><span class="caption-text">Running <code class="docutils literal notranslate"><span class="pre">true.cwl</span></code> with <code class="docutils literal notranslate"><span class="pre">cwl-runner</span></code>.</span><a class="headerlink" href="#running-true-cwl-with-cwl-runner" title="Permalink to this code">#</a></div>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>cwl-runner true.cwl
-<span class="go">INFO /home/kinow/Development/python/workspace/user_guide/venv/bin/cwl-runner 3.1.20220406080846</span>
-<span class="go">INFO Resolved &#39;true.cwl&#39; to &#39;file:///tmp/true.cwl&#39;</span>
-<span class="go">INFO [job true.cwl] /tmp/7a2gf1nh$ true</span>
-<span class="go">INFO [job true.cwl] completed success</span>
-<span class="go">{}</span>
-<span class="go">INFO Final process status is success</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ cwl-runner true.cwl
+INFO /opt/hostedtoolcache/Python/3.9.13/x64/bin/cwl-runner <span class="m">3</span>.1.20220913185150
+INFO Resolved <span class="s1">&#39;true.cwl&#39;</span> to <span class="s1">&#39;file:///home/runner/work/user_guide/user_guide/src/_includes/cwl/true.cwl&#39;</span>
+INFO <span class="o">[</span>job true.cwl<span class="o">]</span> /tmp/j5wq2j20$ <span class="nb">true</span>
+INFO <span class="o">[</span>job true.cwl<span class="o">]</span> completed success
+<span class="o">{}</span>
+INFO Final process status is success
 </pre></div>
 </div>
 </div>
 <p>Another way to execute <code class="docutils literal notranslate"><span class="pre">cwl-runner</span></code> is invoking the file directly. For that,
-the first thing you need is to modify the <code class="docutils literal notranslate"><span class="pre">true.cwl</span></code> workflow and include
-a special first line, a <em>shebang</em>:</p>
-<div class="literal-block-wrapper docutils container" id="cwltool-with-a-shebang">
-<div class="code-block-caption"><span class="caption-text"><code class="docutils literal notranslate"><span class="pre">cwltool</span></code> with a shebang</span><a class="headerlink" href="#cwltool-with-a-shebang" title="Permalink to this code">#</a></div>
+the first thing you need to copy <code class="docutils literal notranslate"><span class="pre">true.cwl</span></code> workflow into a new file
+<code class="docutils literal notranslate"><span class="pre">true_shebang.cwl</span></code> and include a special first line, a <em>shebang</em>:</p>
+<div class="literal-block-wrapper docutils container" id="true-shebang-cwl">
+<div class="code-block-caption"><span class="caption-text"><code class="docutils literal notranslate"><span class="pre">true_shebang.cwl</span></code></span><a class="headerlink" href="#true-shebang-cwl" title="Permalink to this code">#</a></div>
 <div class="highlight-cwl notranslate"><div class="highlight"><pre><span></span><span class="c1">#!/usr/bin/env cwl-runner</span><span class="w"></span>
 
 <span class="nt">cwlVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">v1.2</span><span class="w"></span>
@@ -519,20 +519,25 @@ a special first line, a <em>shebang</em>:</p>
 </pre></div>
 </div>
 </div>
-<p>Now, after you make the file <code class="docutils literal notranslate"><span class="pre">true.cwl</span></code> executable with <code class="docutils literal notranslate"><span class="pre">chmod</span> <span class="pre">u+x</span></code>,
-you can execute it directly in the command-line and the program
+<p>Now you can make the file <code class="docutils literal notranslate"><span class="pre">true_shebang.cwl</span></code> executable with <code class="docutils literal notranslate"><span class="pre">chmod</span> <span class="pre">u+x</span></code>.</p>
+<div class="literal-block-wrapper docutils container" id="making-true-cwl-executable">
+<div class="code-block-caption"><span class="caption-text">Making <code class="docutils literal notranslate"><span class="pre">true.cwl</span></code> executable.</span><a class="headerlink" href="#making-true-cwl-executable" title="Permalink to this code">#</a></div>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>chmod u+x true.cwl
+</pre></div>
+</div>
+</div>
+<p>And finally you can execute it directly in the command-line and the program
 specified in the shebang (<code class="docutils literal notranslate"><span class="pre">cwl-runner</span></code>) will be used to execute the
 rest of the file.</p>
-<div class="literal-block-wrapper docutils container" id="making-true-cwl-executable-and-running-it">
-<div class="code-block-caption"><span class="caption-text">Making <code class="docutils literal notranslate"><span class="pre">true.cwl</span></code> executable and running it.</span><a class="headerlink" href="#making-true-cwl-executable-and-running-it" title="Permalink to this code">#</a></div>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>chmod u+x true.cwl
-<span class="gp">$ </span>./true.cwl
-<span class="go">INFO /home/kinow/Development/python/workspace/user_guide/venv/bin/cwl-runner 3.1.20220406080846</span>
-<span class="go">INFO Resolved &#39;./true.cwl&#39; to &#39;file:///tmp/true.cwl&#39;</span>
-<span class="go">INFO [job true.cwl] /tmp/jz7ups99$ true</span>
-<span class="go">INFO [job true.cwl] completed success</span>
-<span class="go">{}</span>
-<span class="go">INFO Final process status is success</span>
+<div class="literal-block-wrapper docutils container" id="running-true-shebang-cwl-with-a-shebang">
+<div class="code-block-caption"><span class="caption-text">Running <code class="docutils literal notranslate"><span class="pre">true_shebang.cwl</span></code> with a shebang.</span><a class="headerlink" href="#running-true-shebang-cwl-with-a-shebang" title="Permalink to this code">#</a></div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ ./true_shebang.cwl
+INFO /opt/hostedtoolcache/Python/3.9.13/x64/bin/cwl-runner <span class="m">3</span>.1.20220913185150
+INFO Resolved <span class="s1">&#39;./true_shebang.cwl&#39;</span> to <span class="s1">&#39;file:///home/runner/work/user_guide/user_guide/src/_includes/cwl/true_shebang.cwl&#39;</span>
+INFO <span class="o">[</span>job true_shebang.cwl<span class="o">]</span> /tmp/wip3290b$ <span class="nb">true</span>
+INFO <span class="o">[</span>job true_shebang.cwl<span class="o">]</span> completed success
+<span class="o">{}</span>
+INFO Final process status is success
 </pre></div>
 </div>
 </div>

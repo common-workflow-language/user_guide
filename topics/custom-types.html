@@ -468,7 +468,7 @@ the CWL description directly.</p>
 converting a standard biom table file to hd5 format.</p>
 <div class="literal-block-wrapper docutils container" id="custom-types-cwl">
 <div class="code-block-caption"><span class="caption-text"><code class="docutils literal notranslate"><span class="pre">custom-types.cwl</span></code></span><a class="headerlink" href="#custom-types-cwl" title="Permalink to this code">#</a></div>
-<div class="highlight-cwl notranslate"><div class="highlight"><pre><span></span><span class="c1">#!/usr/bin/env cwl-runner </span><span class="w"></span>
+<div class="highlight-cwl notranslate"><div class="highlight"><pre><span></span><span class="c1">#!/usr/bin/env cwl-runner</span><span class="w"></span>
 <span class="nt">cwlVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">v1.0</span><span class="w"></span>
 <span class="nt">class</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">CommandLineTool</span><span class="w"></span>
 
@@ -513,7 +513,7 @@ converting a standard biom table file to hd5 format.</p>
 <span class="nt">baseCommand</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="w"> </span><span class="nv">biom</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">convert</span><span class="w"> </span><span class="p p-Indicator">]</span><span class="w"></span>
 
 <span class="nt">arguments</span><span class="p">:</span><span class="w"></span>
-<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">valueFrom</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">$(inputs.biom.nameroot).hdf5</span><span class="w">  </span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">valueFrom</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">$(inputs.biom.nameroot).hdf5</span><span class="w"></span>
 <span class="w">    </span><span class="nt">prefix</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">--output-fp</span><span class="w"></span>
 <span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">--to-hdf5</span><span class="w"></span>
 
@@ -545,8 +545,8 @@ converting a standard biom table file to hd5 format.</p>
 </pre></div>
 </div>
 </div>
-<p><em><strong>Note:</strong></em> To follow the example below, you need to download the example input file, <em>rich_sparse_otu_table.biom</em>. The file is available from <a class="reference external" href="https://raw.githubusercontent.com/common-workflow-language/user_guide/main/_includes/cwl/19-custom-types/rich_sparse_otu_table.biom">https://raw.githubusercontent.com/common-workflow-language/user_guide/main/_includes/cwl/19-custom-types/rich_sparse_otu_table.biom</a> and can be downloaded e.g. via <code class="docutils literal notranslate"><span class="pre">wget</span></code>:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>wget https://raw.githubusercontent.com/common-workflow-language/user_guide/main/_includes/cwl/19-custom-types/rich_sparse_otu_table.biom
+<p><em><strong>Note:</strong></em> To follow the example below, you need to download the example input file, <em>rich_sparse_otu_table.biom</em>. The file is available from <a class="reference external" href="https://raw.githubusercontent.com/common-workflow-language/user_guide/main/_includes/cwl/custom-types/rich_sparse_otu_table.biom">https://raw.githubusercontent.com/common-workflow-language/user_guide/main/_includes/cwl/custom-types/rich_sparse_otu_table.biom</a> and can be downloaded e.g. via <code class="docutils literal notranslate"><span class="pre">wget</span></code>:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>wget https://raw.githubusercontent.com/common-workflow-language/user_guide/main/src/_includes/cwl/custom-types/rich_sparse_otu_table.biom
 </pre></div>
 </div>
 <p>On line 29, in <code class="docutils literal notranslate"><span class="pre">inputs:table_type</span></code>, a list of allowable table options to be used in the

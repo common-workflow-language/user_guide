@@ -635,7 +635,7 @@ compiles it.</p>
 </div>
 <div class="admonition-visualization-of-1st-workflow-cwl admonition">
 <p class="admonition-title">Visualization of 1st-workflow.cwl</p>
-<p><a class="reference external" href="https://view.commonwl.org/workflows/github.com/common-workflow-language/user_guide/blob/main/_includes/cwl/21-1st-workflow/1st-workflow.cwl"><img alt="Visualization of 1st-workflow.cwl" src="https://view.commonwl.org/graph/svg/github.com/common-workflow-language/user_guide/blob/main/_includes/cwl/21-1st-workflow/1st-workflow.cwl" /></a></p>
+<p><a class="reference external" href="https://view.commonwl.org/graph/png/github.com/common-workflow-language/user_guide/blob/a29e7eae0006660946fc705a310b37a21a7e1edc/_includes/cwl/21-1st-workflow/1st-workflow.cwl"><img alt="Visualization of 1st-workflow.cwl" src="https://view.commonwl.org/graph/png/github.com/common-workflow-language/user_guide/blob/a29e7eae0006660946fc705a310b37a21a7e1edc/_includes/cwl/21-1st-workflow/1st-workflow.cwl" /></a></p>
 </div>
 <p>Use a YAML or a JSON object in a separate file to describe the input of a run:</p>
 <div class="literal-block-wrapper docutils container" id="st-workflow-job-yml">
@@ -652,34 +652,56 @@ compiles it.</p>
 <span class="go">Hello.java</span>
 </pre></div>
 </div>
-<p>Now invoke <code class="docutils literal notranslate"><span class="pre">cwl-runner</span></code> with the tool description and the input object on the
+<p>Now invoke <code class="docutils literal notranslate"><span class="pre">cwltool</span></code> with the tool description and the input object on the
 command line:</p>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>cwl-runner 1st-workflow.cwl 1st-workflow-job.yml
-<span class="go">INFO /usr/bin/cwl-runner 3.1.20220802125926</span>
-<span class="go">INFO Resolved &#39;1st-workflow.cwl&#39; to &#39;file:///home/example/1st-workflow.cwl&#39;</span>
-<span class="go">INFO [workflow ] start</span>
-<span class="go">INFO [workflow ] starting step untar</span>
-<span class="go">INFO [step untar] start</span>
-<span class="go">INFO [job untar] /tmp/rzlj4nsg$ tar --extract --file /tmp/1yikucse/stg4148c64f-2489-449c-bef7-12d059758b13/hello.tar Hello.java</span>
-<span class="go">INFO [job untar] completed success</span>
-<span class="go">INFO [step untar] completed success</span>
-<span class="go">INFO [workflow ] starting step compile</span>
-<span class="go">INFO [step compile] start</span>
-<span class="go">INFO [job compile] /tmp/r0kmwijd$ docker run -i --mount=type=bind,source=/tmp/r0kmwijd,target=/zurNsS --mount=type=bind,source=/tmp/bza6s5oh,target=/tmp --mount=type=bind,source=/tmp/rzlj4nsg/Hello.java,target=/var/lib/cwl/stg37272664-b5b2-4bbd-b254-1ef521ebbe3d/Hello.java,readonly --workdir=/zurNsS --read-only=true --user=1000:1000 --rm --cidfile=/tmp/4d8t2lj2/20220825125241-159808.cid --env=TMPDIR=/tmp --env=HOME=/zurNsS openjdk:9.0.1-11-slim javac -d /zurNsS /var/lib/cwl/stg37272664-b5b2-4bbd-b254-1ef521ebbe3d/Hello.java</span>
-<span class="go">INFO [job compile] Max memory used: 28MiB</span>
-<span class="go">INFO [job compile] completed success</span>
-<span class="go">INFO [step compile] completed success</span>
-<span class="go">INFO [workflow ] completed success</span>
-<span class="go">{</span>
-<span class="go">    &quot;compiled_class&quot;: {</span>
-<span class="go">        &quot;location&quot;: &quot;file:///home/example/Hello.class&quot;,</span>
-<span class="go">        &quot;basename&quot;: &quot;Hello.class&quot;,</span>
-<span class="go">        &quot;class&quot;: &quot;File&quot;,</span>
-<span class="go">        &quot;checksum&quot;: &quot;sha1$fdb876b40ad9ebc7fee873212e02d5940588642e&quot;,</span>
-<span class="go">        &quot;size&quot;: 184,</span>
-<span class="go">        &quot;path&quot;: &quot;/home/example/Hello.class&quot;</span>
-<span class="go">    }</span>
-<span class="go">}</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ cwltool 1st-workflow.cwl 1st-workflow-job.yml
+INFO /opt/hostedtoolcache/Python/3.9.13/x64/bin/cwltool <span class="m">3</span>.1.20220913185150
+INFO Resolved <span class="s1">&#39;1st-workflow.cwl&#39;</span> to <span class="s1">&#39;file:///home/runner/work/user_guide/user_guide/src/_includes/cwl/workflows/1st-workflow.cwl&#39;</span>
+INFO <span class="o">[</span>workflow <span class="o">]</span> start
+INFO <span class="o">[</span>workflow <span class="o">]</span> starting step untar
+INFO <span class="o">[</span>step untar<span class="o">]</span> start
+INFO <span class="o">[</span>job untar<span class="o">]</span> /tmp/o74imuom$ tar <span class="se">\</span>
+    --extract <span class="se">\</span>
+    --file <span class="se">\</span>
+    /tmp/h1922r7i/stg40ba52e5-20d6-40b1-8594-6de79bc3cc28/hello.tar <span class="se">\</span>
+    Hello.java
+INFO <span class="o">[</span>job untar<span class="o">]</span> completed success
+INFO <span class="o">[</span>step untar<span class="o">]</span> completed success
+INFO <span class="o">[</span>workflow <span class="o">]</span> starting step compile
+INFO <span class="o">[</span>step compile<span class="o">]</span> start
+INFO <span class="o">[</span>job compile<span class="o">]</span> /tmp/i2xong1g$ docker <span class="se">\</span>
+    run <span class="se">\</span>
+    -i <span class="se">\</span>
+    --mount<span class="o">=</span><span class="nv">type</span><span class="o">=</span>bind,source<span class="o">=</span>/tmp/i2xong1g,target<span class="o">=</span>/LcFIWN <span class="se">\</span>
+    --mount<span class="o">=</span><span class="nv">type</span><span class="o">=</span>bind,source<span class="o">=</span>/tmp/fl37k8jr,target<span class="o">=</span>/tmp <span class="se">\</span>
+    --mount<span class="o">=</span><span class="nv">type</span><span class="o">=</span>bind,source<span class="o">=</span>/tmp/o74imuom/Hello.java,target<span class="o">=</span>/var/lib/cwl/stg4bea6a0f-4ac3-44de-93e7-601984e8ce3b/Hello.java,readonly <span class="se">\</span>
+    --workdir<span class="o">=</span>/LcFIWN <span class="se">\</span>
+    --read-only<span class="o">=</span><span class="nb">true</span> <span class="se">\</span>
+    --user<span class="o">=</span><span class="m">1001</span>:121 <span class="se">\</span>
+    --rm <span class="se">\</span>
+    --cidfile<span class="o">=</span>/tmp/ydcnmako/20220920141413-281047.cid <span class="se">\</span>
+    --env<span class="o">=</span><span class="nv">TMPDIR</span><span class="o">=</span>/tmp <span class="se">\</span>
+    --env<span class="o">=</span><span class="nv">HOME</span><span class="o">=</span>/LcFIWN <span class="se">\</span>
+    openjdk:9.0.1-11-slim <span class="se">\</span>
+    javac <span class="se">\</span>
+    -d <span class="se">\</span>
+    /LcFIWN <span class="se">\</span>
+    /var/lib/cwl/stg4bea6a0f-4ac3-44de-93e7-601984e8ce3b/Hello.java
+INFO <span class="o">[</span>job compile<span class="o">]</span> Max memory used: 0MiB
+INFO <span class="o">[</span>job compile<span class="o">]</span> completed success
+INFO <span class="o">[</span>step compile<span class="o">]</span> completed success
+INFO <span class="o">[</span>workflow <span class="o">]</span> completed success
+<span class="o">{</span>
+    <span class="s2">&quot;compiled_class&quot;</span>: <span class="o">{</span>
+        <span class="s2">&quot;location&quot;</span>: <span class="s2">&quot;file:///home/runner/work/user_guide/user_guide/src/_includes/cwl/workflows/Hello.class&quot;</span>,
+        <span class="s2">&quot;basename&quot;</span>: <span class="s2">&quot;Hello.class&quot;</span>,
+        <span class="s2">&quot;class&quot;</span>: <span class="s2">&quot;File&quot;</span>,
+        <span class="s2">&quot;checksum&quot;</span>: <span class="s2">&quot;sha1</span><span class="nv">$39</span><span class="s2">e3219327347c05aa3e82236f83aa6d77fe6bfd&quot;</span>,
+        <span class="s2">&quot;size&quot;</span>: <span class="m">419</span>,
+        <span class="s2">&quot;path&quot;</span>: <span class="s2">&quot;/home/runner/work/user_guide/user_guide/src/_includes/cwl/workflows/Hello.class&quot;</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+INFO Final process status is success
 </pre></div>
 </div>
 <p>What’s going on here?  Let’s break it down:</p>
@@ -725,7 +747,7 @@ instead the order is determined by the dependencies between steps (using
 <code class="docutils literal notranslate"><span class="pre">source</span></code>).  In addition, workflow steps which do not depend on one
 another may run in parallel.</p>
 <p>The first step, <code class="docutils literal notranslate"><span class="pre">untar</span></code> runs <code class="docutils literal notranslate"><span class="pre">tar-param.cwl</span></code> (described previously in
-<a class="reference internal" href="parameter-references.html"><span class="doc std std-doc">Parameter References</span></a>.
+<a class="reference internal" href="parameter-references.html"><span class="doc std std-doc">Parameter References</span></a>).
 This tool has two input parameters, <code class="docutils literal notranslate"><span class="pre">tarfile</span></code> and <code class="docutils literal notranslate"><span class="pre">extractfile</span></code> and one output
 parameter <code class="docutils literal notranslate"><span class="pre">extracted_file</span></code>.</p>
 <p>The <code class="docutils literal notranslate"><span class="pre">in</span></code> section of the workflow step connects these two input parameters to
@@ -820,11 +842,11 @@ workflow:</p>
 the <code class="docutils literal notranslate"><span class="pre">compile</span></code> step in orange; <code class="docutils literal notranslate"><span class="pre">compile</span></code> is another workflow, diagrammed on the
 right. In purple we see the fixed string <code class="docutils literal notranslate"><span class="pre">&quot;Hello.java&quot;</span></code> being supplied as the
 <code class="docutils literal notranslate"><span class="pre">name_of_file_to_extract</span></code>.</p>
-<p><a href="https://view.commonwl.org/workflows/github.com/common-workflow-language/user_guide/blob/main/_includes/cwl/22-nested-workflows/nestedworkflows.cwl"><img
-src="https://view.commonwl.org/graph/svg/github.com/common-workflow-language/user_guide/blob/main/_includes/cwl/22-nested-workflows/nestedworkflows.cwl"
+<p><a href="https://view.commonwl.org/workflows/github.com/common-workflow-language/user_guide/blob/main/_includes/cwl/workflows/nestedworkflows.cwl"><img
+src="https://view.commonwl.org/graph/svg/github.com/common-workflow-language/user_guide/blob/main/_includes/cwl/workflows/nestedworkflows.cwl"
 alt="Visualization of nestedworkflows.cwl" /></a>
-<a href="https://view.commonwl.org/workflows/github.com/common-workflow-language/user_guide/blob/main/_includes/cwl/22-nested-workflows/1st-workflow.cwl"><img
-src="https://view.commonwl.org/graph/svg/github.com/common-workflow-language/user_guide/blob/main/_includes/cwl/22-nested-workflows/1st-workflow.cwl"
+<a href="https://view.commonwl.org/workflows/github.com/common-workflow-language/user_guide/blob/main/_includes/cwl/workflows/1st-workflow.cwl"><img
+src="https://view.commonwl.org/graph/svg/github.com/common-workflow-language/user_guide/blob/main/_includes/cwl/workflows/1st-workflow.cwl"
 alt="Visualization of 1st-workflow.cwl" /></a></p>
 </div>
 <p>A CWL <code class="docutils literal notranslate"><span class="pre">Workflow</span></code> can be used as a <code class="docutils literal notranslate"><span class="pre">step</span></code> just like a <code class="docutils literal notranslate"><span class="pre">CommandLineTool</span></code>, its CWL
@@ -918,7 +940,7 @@ different samples. Let’s start with a simple workflow that calls our first exa
 <span class="w">  </span><span class="nt">ScatterFeatureRequirement</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">{}</span><span class="w"></span>
 
 <span class="nt">inputs</span><span class="p">:</span><span class="w"></span>
-<span class="w">  </span><span class="nt">message_array</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">string[]</span><span class="w"> </span>
+<span class="w">  </span><span class="nt">message_array</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">string[]</span><span class="w"></span>
 
 <span class="nt">steps</span><span class="p">:</span><span class="w"></span>
 <span class="w">  </span><span class="nt">echo</span><span class="p">:</span><span class="w"></span>
@@ -967,34 +989,33 @@ as well!</p>
 </div>
 </div>
 <p>As a reminder, <a class="reference internal" href="../introduction/quick-start.html"><span class="doc std std-doc"><code class="docutils literal notranslate"><span class="pre">hello_world.cwl</span></code></span></a> simply calls the command
-<code class="docutils literal notranslate"><span class="pre">echo</span></code> on a message. If we invoke <code class="docutils literal notranslate"><span class="pre">cwl-runner</span> <span class="pre">scatter-workflow.cwl</span> <span class="pre">scatter-job.yml</span></code> on the
+<code class="docutils literal notranslate"><span class="pre">echo</span></code> on a message. If we invoke <code class="docutils literal notranslate"><span class="pre">cwltool</span> <span class="pre">scatter-workflow.cwl</span> <span class="pre">scatter-job.yml</span></code> on the
 command line:</p>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>cwl-runner scatter-workflow.cwl scatter-job.yml
-<span class="go">[workflow scatter-workflow.cwl] start</span>
-<span class="go">[step echo] start</span>
-<span class="go">[job echo] /tmp/tmp0hqmg400$ echo \</span>
-<span class="go">    &#39;Hello world!&#39;</span>
-<span class="go">Hello world!</span>
-<span class="go">[job echo] completed success</span>
-<span class="go">[step echo] start</span>
-<span class="go">[job echo_2] /tmp/tmpu65_m1zw$ echo \</span>
-<span class="go">    &#39;Hola mundo!&#39;</span>
-<span class="go">Hola mundo!</span>
-<span class="go">[job echo_2] completed success</span>
-<span class="go">[step echo] start</span>
-<span class="go">[job echo_3] /tmp/tmp5cs7a2wh$ echo \</span>
-<span class="go">    &#39;Bonjour le monde!&#39;</span>
-<span class="go">Bonjour le monde!</span>
-<span class="go">[job echo_3] completed success</span>
-<span class="go">[step echo] start</span>
-<span class="go">[job echo_4] /tmp/tmp301wo7p8$ echo \</span>
-<span class="go">    &#39;Hallo welt!&#39;</span>
-<span class="go">Hallo welt!</span>
-<span class="go">[job echo_4] completed success</span>
-<span class="go">[step echo] completed success</span>
-<span class="go">[workflow scatter-workflow.cwl] completed success</span>
-<span class="go">{}</span>
-<span class="go">Final process status is success</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ cwltool scatter-workflow.cwl scatter-job.yml
+INFO /opt/hostedtoolcache/Python/3.9.13/x64/bin/cwltool <span class="m">3</span>.1.20220913185150
+INFO Resolved <span class="s1">&#39;scatter-workflow.cwl&#39;</span> to <span class="s1">&#39;file:///home/runner/work/user_guide/user_guide/src/_includes/cwl/workflows/scatter-workflow.cwl&#39;</span>
+INFO <span class="o">[</span>workflow <span class="o">]</span> start
+INFO <span class="o">[</span>workflow <span class="o">]</span> starting step <span class="nb">echo</span>
+INFO <span class="o">[</span>step echo<span class="o">]</span> start
+INFO <span class="o">[</span>job echo<span class="o">]</span> /tmp/fcx7tv3l$ <span class="nb">echo</span> <span class="se">\</span>
+    <span class="s1">&#39;Hello world!&#39;</span> &gt; /tmp/fcx7tv3l/3f8f180805bc1795e077d75bc6dbec026a376483
+INFO <span class="o">[</span>job echo<span class="o">]</span> completed success
+INFO <span class="o">[</span>step echo<span class="o">]</span> start
+INFO <span class="o">[</span>job echo_2<span class="o">]</span> /tmp/xoqmisjk$ <span class="nb">echo</span> <span class="se">\</span>
+    <span class="s1">&#39;Hola mundo!&#39;</span> &gt; /tmp/xoqmisjk/3f8f180805bc1795e077d75bc6dbec026a376483
+INFO <span class="o">[</span>job echo_2<span class="o">]</span> completed success
+INFO <span class="o">[</span>step echo<span class="o">]</span> start
+INFO <span class="o">[</span>job echo_3<span class="o">]</span> /tmp/bpd4uyz_$ <span class="nb">echo</span> <span class="se">\</span>
+    <span class="s1">&#39;Bonjour le monde!&#39;</span> &gt; /tmp/bpd4uyz_/3f8f180805bc1795e077d75bc6dbec026a376483
+INFO <span class="o">[</span>job echo_3<span class="o">]</span> completed success
+INFO <span class="o">[</span>step echo<span class="o">]</span> start
+INFO <span class="o">[</span>job echo_4<span class="o">]</span> /tmp/y0l0ypf1$ <span class="nb">echo</span> <span class="se">\</span>
+    <span class="s1">&#39;Hallo welt!&#39;</span> &gt; /tmp/y0l0ypf1/3f8f180805bc1795e077d75bc6dbec026a376483
+INFO <span class="o">[</span>job echo_4<span class="o">]</span> completed success
+INFO <span class="o">[</span>step echo<span class="o">]</span> completed success
+INFO <span class="o">[</span>workflow <span class="o">]</span> completed success
+<span class="o">{}</span>
+INFO Final process status is success
 </pre></div>
 </div>
 <p>You can see that the workflow calls echo multiple times on each element of our
@@ -1040,7 +1061,7 @@ below:</p>
 <span class="w"> </span><span class="nt">ScatterFeatureRequirement</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">{}</span><span class="w"></span>
 
 <span class="nt">inputs</span><span class="p">:</span><span class="w"></span>
-<span class="w">  </span><span class="nt">message_array</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">string[]</span><span class="w"> </span>
+<span class="w">  </span><span class="nt">message_array</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">string[]</span><span class="w"></span>
 
 <span class="nt">steps</span><span class="p">:</span><span class="w"></span>
 <span class="w">  </span><span class="nt">echo</span><span class="p">:</span><span class="w"></span>
@@ -1086,13 +1107,13 @@ two-step workflow to a single step subworkflow:</p>
 <span class="w"> </span><span class="nt">SubworkflowFeatureRequirement</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">{}</span><span class="w"></span>
 
 <span class="nt">inputs</span><span class="p">:</span><span class="w"></span>
-<span class="w">  </span><span class="nt">message_array</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">string[]</span><span class="w"> </span>
+<span class="w">  </span><span class="nt">message_array</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">string[]</span><span class="w"></span>
 
 <span class="nt">steps</span><span class="p">:</span><span class="w"></span>
 <span class="w">  </span><span class="nt">subworkflow</span><span class="p">:</span><span class="w"></span>
-<span class="w">    </span><span class="nt">run</span><span class="p">:</span><span class="w"> </span>
+<span class="w">    </span><span class="nt">run</span><span class="p">:</span><span class="w"></span>
 <span class="w">      </span><span class="nt">class</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Workflow</span><span class="w"></span>
-<span class="w">      </span><span class="nt">inputs</span><span class="p">:</span><span class="w"> </span>
+<span class="w">      </span><span class="nt">inputs</span><span class="p">:</span><span class="w"></span>
 <span class="w">        </span><span class="nt">message</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">string</span><span class="w"></span>
 <span class="w">      </span><span class="nt">outputs</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[]</span><span class="w"></span>
 <span class="w">      </span><span class="nt">steps</span><span class="p">:</span><span class="w"></span>
@@ -1107,7 +1128,7 @@ two-step workflow to a single step subworkflow:</p>
 <span class="w">            </span><span class="nt">input_file</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">echo/echo_out</span><span class="w"></span>
 <span class="w">          </span><span class="nt">out</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[]</span><span class="w"></span>
 <span class="w">    </span><span class="nt">scatter</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">message</span><span class="w"></span>
-<span class="w">    </span><span class="nt">in</span><span class="p">:</span><span class="w"> </span>
+<span class="w">    </span><span class="nt">in</span><span class="p">:</span><span class="w"></span>
 <span class="w">      </span><span class="nt">message</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">message_array</span><span class="w"></span>
 <span class="w">    </span><span class="nt">out</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[]</span><span class="w"></span>
 <span class="nt">outputs</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[]</span><span class="w"></span>
@@ -1165,7 +1186,7 @@ This allows workflows to skip additional steps based on input parameters given a
 <span class="nt">cwlVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">v1.2</span><span class="w"></span>
 </pre></div>
 </div>
-<p>The first step of the worklfow (step1) contains two input properties and will execute foo.cwl when the conditions are met. The new property <code class="docutils literal notranslate"><span class="pre">when</span></code> is where the condition validation takes place. In this case only when <code class="docutils literal notranslate"><span class="pre">in1</span></code>  from the workflow contains a value <code class="docutils literal notranslate"><span class="pre">&lt;</span> <span class="pre">1</span></code> this step will be executed.</p>
+<p>The first step of the workflow (step1) contains two input properties and will execute foo.cwl when the conditions are met. The new property <code class="docutils literal notranslate"><span class="pre">when</span></code> is where the condition validation takes place. In this case only when <code class="docutils literal notranslate"><span class="pre">in1</span></code>  from the workflow contains a value <code class="docutils literal notranslate"><span class="pre">&lt;</span> <span class="pre">1</span></code> this step will be executed.</p>
 <div class="highlight-cwl notranslate"><div class="highlight"><pre><span></span><span class="nt">steps</span><span class="p">:</span><span class="w"></span>
 
 <span class="w">  </span><span class="nt">step1</span><span class="p">:</span><span class="w"></span>
@@ -1177,7 +1198,7 @@ This allows workflows to skip additional steps based on input parameters given a
 <span class="w">    </span><span class="nt">out</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="nv">out1</span><span class="p p-Indicator">]</span><span class="w"></span>
 </pre></div>
 </div>
-<p>Using the following command <code class="docutils literal notranslate"><span class="pre">cwltool</span> <span class="pre">cond-wf-003.1.cwl</span> <span class="pre">--val</span> <span class="pre">0</span></code> the value will pass the first conditional step and will therefor be executed and is shown in the log by <code class="docutils literal notranslate"><span class="pre">INFO</span> <span class="pre">[step</span> <span class="pre">step1]</span> <span class="pre">start</span></code> whereas the second step is skipped as indicated by <code class="docutils literal notranslate"><span class="pre">INFO</span> <span class="pre">[step</span> <span class="pre">step2]</span> <span class="pre">will</span> <span class="pre">be</span> <span class="pre">skipped</span></code>.</p>
+<p>Using the following command <code class="docutils literal notranslate"><span class="pre">cwltool</span> <span class="pre">cond-wf-003.1.cwl</span> <span class="pre">--val</span> <span class="pre">0</span></code> the value will pass the first conditional step and will therefore be executed and is shown in the log by <code class="docutils literal notranslate"><span class="pre">INFO</span> <span class="pre">[step</span> <span class="pre">step1]</span> <span class="pre">start</span></code> whereas the second step is skipped as indicated by <code class="docutils literal notranslate"><span class="pre">INFO</span> <span class="pre">[step</span> <span class="pre">step2]</span> <span class="pre">will</span> <span class="pre">be</span> <span class="pre">skipped</span></code>.</p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">INFO [workflow ] start</span>
 <span class="go">INFO [workflow ] starting step step1</span>
 <span class="go">INFO [step step1] start</span>

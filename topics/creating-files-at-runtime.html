@@ -521,26 +521,29 @@ which is YAML quoting syntax, and means that you are using a multiline string
 <p class="admonition-title">Note</p>
 <p>See the <a class="reference internal" href="yaml-guide.html#maps"><span class="std std-doc">YAML Guide</span></a> for more about the formatting.</p>
 </div>
-<p>Now invoke <code class="docutils literal notranslate"><span class="pre">cwl-runner</span></code> with the tool description and the input object on the
+<p>Now invoke <code class="docutils literal notranslate"><span class="pre">cwltool</span></code> with the tool description and the input object on the
 command line:</p>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>cwl-runner createfile.cwl echo-job.yml
-<span class="go">[job createfile.cwl] /private/tmp/docker_tmphrqxxcdl$ sh \</span>
-<span class="go">    example.sh &gt; /private/tmp/docker_tmphrqxxcdl/output.txt</span>
-<span class="go">Could not collect memory usage, job ended before monitoring began.</span>
-<span class="go">[job createfile.cwl] completed success</span>
-<span class="go">{</span>
-<span class="go">    &quot;example_out&quot;: {</span>
-<span class="go">        &quot;location&quot;: &quot;file:///home/example/output.txt&quot;,</span>
-<span class="go">        &quot;basename&quot;: &quot;output.txt&quot;,</span>
-<span class="go">        &quot;class&quot;: &quot;File&quot;,</span>
-<span class="go">        &quot;checksum&quot;: &quot;sha1$9045abe4bd04dd8ccfe50c6ff61820b784b64aa7&quot;,</span>
-<span class="go">        &quot;size&quot;: 25,</span>
-<span class="go">        &quot;path&quot;: &quot;/home/example/output.txt&quot;</span>
-<span class="go">    }</span>
-<span class="go">}</span>
-<span class="go">Final process status is success</span>
-<span class="gp">$ </span>cat output.txt
-<span class="go">Message is: Hello world!</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ cwltool createfile.cwl echo-job.yml
+INFO /opt/hostedtoolcache/Python/3.9.13/x64/bin/cwltool <span class="m">3</span>.1.20220913185150
+INFO Resolved <span class="s1">&#39;createfile.cwl&#39;</span> to <span class="s1">&#39;file:///home/runner/work/user_guide/user_guide/src/_includes/cwl/creating-files-at-runtime/createfile.cwl&#39;</span>
+INFO <span class="o">[</span>job createfile.cwl<span class="o">]</span> /tmp/fx51tw_p$ sh <span class="se">\</span>
+    example.sh &gt; /tmp/fx51tw_p/output.txt
+INFO <span class="o">[</span>job createfile.cwl<span class="o">]</span> completed success
+<span class="o">{</span>
+    <span class="s2">&quot;example_out&quot;</span>: <span class="o">{</span>
+        <span class="s2">&quot;location&quot;</span>: <span class="s2">&quot;file:///home/runner/work/user_guide/user_guide/src/_includes/cwl/creating-files-at-runtime/output.txt&quot;</span>,
+        <span class="s2">&quot;basename&quot;</span>: <span class="s2">&quot;output.txt&quot;</span>,
+        <span class="s2">&quot;class&quot;</span>: <span class="s2">&quot;File&quot;</span>,
+        <span class="s2">&quot;checksum&quot;</span>: <span class="s2">&quot;sha1</span><span class="nv">$9045</span><span class="s2">abe4bd04dd8ccfe50c6ff61820b784b64aa7&quot;</span>,
+        <span class="s2">&quot;size&quot;</span>: <span class="m">25</span>,
+        <span class="s2">&quot;path&quot;</span>: <span class="s2">&quot;/home/runner/work/user_guide/user_guide/src/_includes/cwl/creating-files-at-runtime/output.txt&quot;</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+INFO Final process status is success
+</pre></div>
+</div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ cat output.txt
+Message is: Hello world!
 </pre></div>
 </div>
 </section>

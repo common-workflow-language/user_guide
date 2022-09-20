@@ -469,7 +469,7 @@ and <em>null</em>; complex types are <em>array</em> and <em>record</em>; in addi
 special types <em>File</em>, <em>Directory</em> and <em>Any</em>.</p>
 <p>The following example demonstrates some input parameters with different
 types and appearing on the command line in different ways.</p>
-<p>First, create a file called inp.cwl, containing the following:</p>
+<p>First, create a file called <code class="docutils literal notranslate"><span class="pre">inp.cwl</span></code>, containing the following:</p>
 <div class="literal-block-wrapper docutils container" id="inp-cwl">
 <div class="code-block-caption"><span class="caption-text"><code class="docutils literal notranslate"><span class="pre">inp.cwl</span></code></span><a class="headerlink" href="#inp-cwl" title="Permalink to this code">#</a></div>
 <div class="highlight-cwl notranslate"><div class="highlight"><pre><span></span><span class="c1">#!/usr/bin/env cwl-runner</span><span class="w"></span>
@@ -505,8 +505,7 @@ types and appearing on the command line in different ways.</p>
 </pre></div>
 </div>
 </div>
-<p>Create a file called inp-job.yml:</p>
-<p><em>inp-job.yml</em></p>
+<p>Create a file called <code class="docutils literal notranslate"><span class="pre">inp-job.yml</span></code>:</p>
 <div class="literal-block-wrapper docutils container" id="inp-job-yml">
 <div class="code-block-caption"><span class="caption-text"><code class="docutils literal notranslate"><span class="pre">inp-job.yml</span></code></span><a class="headerlink" href="#inp-job-yml" title="Permalink to this code">#</a></div>
 <div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">example_flag</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span><span class="w"></span>
@@ -520,19 +519,26 @@ types and appearing on the command line in different ways.</p>
 </div>
 <p>Notice that “example_file”, as a <code class="docutils literal notranslate"><span class="pre">File</span></code> type, must be provided as an
 object with the fields <code class="docutils literal notranslate"><span class="pre">class:</span> <span class="pre">File</span></code> and <code class="docutils literal notranslate"><span class="pre">path</span></code>.</p>
-<p>Next, create a whale.txt using <a class="reference external" href="http://www.linfo.org/touch.html">touch</a> by typing <code class="docutils literal notranslate"><span class="pre">touch</span> <span class="pre">whale.txt</span></code> on the command line and then invoke <code class="docutils literal notranslate"><span class="pre">cwl-runner</span></code> with the tool description and the input object on the command line, using the command <code class="docutils literal notranslate"><span class="pre">cwl-runner</span> <span class="pre">inp.cwl</span> <span class="pre">inp-job.yml</span></code>. The following boxed text describes these two commands and the expected output from the command line:</p>
+<p>Next, create a whale.txt using <a class="reference external" href="http://www.linfo.org/touch.html">touch</a> by typing <code class="docutils literal notranslate"><span class="pre">touch</span> <span class="pre">whale.txt</span></code> on the command line.</p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>touch whale.txt
-<span class="gp">$ </span>cwl-runner inp.cwl inp-job.yml
-<span class="go">[job inp.cwl] /tmp/tmpzrSnfX$ echo \</span>
-<span class="go">    -f \</span>
-<span class="go">    -i42 \</span>
-<span class="go">    --example-string \</span>
-<span class="go">    hello \</span>
-<span class="go">    --file=/tmp/tmpRBSHIG/stg979b6d24-d50a-47e3-9e9e-90097eed2cbc/whale.txt</span>
-<span class="go">-f -i42 --example-string hello --file=/tmp/tmpRBSHIG/stg979b6d24-d50a-47e3-9e9e-90097eed2cbc/whale.txt</span>
-<span class="go">[job inp.cwl] completed success</span>
-<span class="go">{}</span>
-<span class="go">Final process status is success</span>
+</pre></div>
+</div>
+<p>Now invoke <code class="docutils literal notranslate"><span class="pre">cwltool</span></code> with the tool description and the input object on the command line,
+using the command <code class="docutils literal notranslate"><span class="pre">cwltool</span> <span class="pre">inp.cwl</span> <span class="pre">inp-job.yml</span></code>. The following boxed text describes these
+two commands and the expected output from the command line:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ cwltool inp.cwl inp-job.yml
+INFO /opt/hostedtoolcache/Python/3.9.13/x64/bin/cwltool <span class="m">3</span>.1.20220913185150
+INFO Resolved <span class="s1">&#39;inp.cwl&#39;</span> to <span class="s1">&#39;file:///home/runner/work/user_guide/user_guide/src/_includes/cwl/inputs/inp.cwl&#39;</span>
+INFO <span class="o">[</span>job inp.cwl<span class="o">]</span> /tmp/uspscu3z$ <span class="nb">echo</span> <span class="se">\</span>
+    -f <span class="se">\</span>
+    -i42 <span class="se">\</span>
+    --example-string <span class="se">\</span>
+    hello <span class="se">\</span>
+    --file<span class="o">=</span>/tmp/x2kg5v0k/stgb621eca2-cfb0-4f10-bac0-cc14278b0861/whale.txt
+-f -i42 --example-string hello --file<span class="o">=</span>/tmp/x2kg5v0k/stgb621eca2-cfb0-4f10-bac0-cc14278b0861/whale.txt
+INFO <span class="o">[</span>job inp.cwl<span class="o">]</span> completed success
+<span class="o">{}</span>
+INFO Final process status is success
 </pre></div>
 </div>
 <div class="admonition tip">
@@ -659,31 +665,35 @@ the type name to indicate that input parameter is array of that type.</p>
 </pre></div>
 </div>
 </div>
-<p>Now invoke <code class="docutils literal notranslate"><span class="pre">cwl-runner</span></code> providing the tool description and the input object
+<p>Now invoke <code class="docutils literal notranslate"><span class="pre">cwltool</span></code> providing the tool description and the input object
 on the command line:</p>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>cwl-runner array-inputs.cwl array-inputs-job.yml
-<span class="go">[job array-inputs.cwl] /home/examples$ echo \</span>
-<span class="go">    -A \</span>
-<span class="go">    one \</span>
-<span class="go">    two \</span>
-<span class="go">    three \</span>
-<span class="go">    -B=four \</span>
-<span class="go">    -B=five \</span>
-<span class="go">    -B=six \</span>
-<span class="go">    -C=seven,eight,nine &gt; /home/examples/output.txt</span>
-<span class="go">[job array-inputs.cwl] completed success</span>
-<span class="go">{</span>
-<span class="go">    &quot;example_out&quot;: {</span>
-<span class="go">        &quot;location&quot;: &quot;file:///home/examples/output.txt&quot;,</span>
-<span class="go">        &quot;basename&quot;: &quot;output.txt&quot;,</span>
-<span class="go">        &quot;class&quot;: &quot;File&quot;,</span>
-<span class="go">        &quot;checksum&quot;: &quot;sha1$91038e29452bc77dcd21edef90a15075f3071540&quot;,</span>
-<span class="go">        &quot;size&quot;: 60,</span>
-<span class="go">        &quot;path&quot;: &quot;/home/examples/output.txt&quot;</span>
-<span class="go">    }</span>
-<span class="go">}</span>
-<span class="go">Final process status is success</span>
-<span class="gp">$ </span>cat output.txt
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ cwltool array-inputs.cwl array-inputs-job.yml
+INFO /opt/hostedtoolcache/Python/3.9.13/x64/bin/cwltool <span class="m">3</span>.1.20220913185150
+INFO Resolved <span class="s1">&#39;array-inputs.cwl&#39;</span> to <span class="s1">&#39;file:///home/runner/work/user_guide/user_guide/src/_includes/cwl/inputs/array-inputs.cwl&#39;</span>
+INFO <span class="o">[</span>job array-inputs.cwl<span class="o">]</span> /tmp/fjmdigid$ <span class="nb">echo</span> <span class="se">\</span>
+    -A <span class="se">\</span>
+    one <span class="se">\</span>
+    two <span class="se">\</span>
+    three <span class="se">\</span>
+    -B<span class="o">=</span>four <span class="se">\</span>
+    -B<span class="o">=</span>five <span class="se">\</span>
+    -B<span class="o">=</span>six <span class="se">\</span>
+    -C<span class="o">=</span>seven,eight,nine &gt; /tmp/fjmdigid/output.txt
+INFO <span class="o">[</span>job array-inputs.cwl<span class="o">]</span> completed success
+<span class="o">{</span>
+    <span class="s2">&quot;example_out&quot;</span>: <span class="o">{</span>
+        <span class="s2">&quot;location&quot;</span>: <span class="s2">&quot;file:///home/runner/work/user_guide/user_guide/src/_includes/cwl/inputs/output.txt&quot;</span>,
+        <span class="s2">&quot;basename&quot;</span>: <span class="s2">&quot;output.txt&quot;</span>,
+        <span class="s2">&quot;class&quot;</span>: <span class="s2">&quot;File&quot;</span>,
+        <span class="s2">&quot;checksum&quot;</span>: <span class="s2">&quot;sha1</span><span class="nv">$91038</span><span class="s2">e29452bc77dcd21edef90a15075f3071540&quot;</span>,
+        <span class="s2">&quot;size&quot;</span>: <span class="m">60</span>,
+        <span class="s2">&quot;path&quot;</span>: <span class="s2">&quot;/home/runner/work/user_guide/user_guide/src/_includes/cwl/inputs/output.txt&quot;</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+INFO Final process status is success
+</pre></div>
+</div>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>cat output.txt
 <span class="go">-A one two three -B=four -B=five -B=six -C=seven,eight,nine</span>
 </pre></div>
 </div>
@@ -758,11 +768,13 @@ parameters together to describe these two conditions.</p>
 </pre></div>
 </div>
 </div>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>cwl-runner record.cwl record-job1.yml
-<span class="go">Workflow error, try again with --debug for more information:</span>
-<span class="go">Invalid job input record:</span>
-<span class="go">record-job1.yml:1:1: the `dependent_parameters` field is not valid because</span>
-<span class="go">                       missing required field `itemB`</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ cwltool record.cwl record-job1.yml
+INFO /opt/hostedtoolcache/Python/3.9.13/x64/bin/cwltool <span class="m">3</span>.1.20220913185150
+INFO Resolved <span class="s1">&#39;record.cwl&#39;</span> to <span class="s1">&#39;file:///home/runner/work/user_guide/user_guide/src/_includes/cwl/inputs/record.cwl&#39;</span>
+ERROR Workflow error, try again with --debug <span class="k">for</span> more information:
+Invalid job input record:
+record-job1.yml:1:1: the <span class="sb">`</span>dependent_parameters<span class="sb">`</span> field is not valid because
+                       missing required field <span class="sb">`</span>itemB<span class="sb">`</span>
 </pre></div>
 </div>
 <p>In the first example, you can’t provide <code class="docutils literal notranslate"><span class="pre">itemA</span></code> without also providing <code class="docutils literal notranslate"><span class="pre">itemB</span></code>.</p>
@@ -777,29 +789,33 @@ parameters together to describe these two conditions.</p>
 </pre></div>
 </div>
 </div>
-<div class="highlight-cwl notranslate"><div class="highlight"><pre><span></span><span class="l l-Scalar l-Scalar-Plain">$ cwl-runner record.cwl record-job2.yml</span><span class="w"></span>
-<span class="l l-Scalar l-Scalar-Plain">record-job2.yml:6:3</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">invalid field `itemD`, expected one of</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="s">&#39;itemC&#39;</span><span class="w"></span>
-<span class="p p-Indicator">[</span><span class="nv">job record.cwl</span><span class="p p-Indicator">]</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">/home/example$ echo \</span><span class="w"></span>
-<span class="w">    </span><span class="l l-Scalar l-Scalar-Plain">-A \</span><span class="w"></span>
-<span class="w">    </span><span class="l l-Scalar l-Scalar-Plain">one \</span><span class="w"></span>
-<span class="w">    </span><span class="l l-Scalar l-Scalar-Plain">-B \</span><span class="w"></span>
-<span class="w">    </span><span class="l l-Scalar l-Scalar-Plain">two \</span><span class="w"></span>
-<span class="w">    </span><span class="l l-Scalar l-Scalar-Plain">-C \</span><span class="w"></span>
-<span class="w">    </span><span class="l l-Scalar l-Scalar-Plain">three &gt; /home/example/output.txt</span><span class="w"></span>
-<span class="p p-Indicator">[</span><span class="nv">job record.cwl</span><span class="p p-Indicator">]</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">completed success</span><span class="w"></span>
-<span class="p p-Indicator">{</span><span class="w"></span>
-<span class="w">    </span><span class="s">&quot;example_out&quot;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="p p-Indicator">{</span><span class="w"></span>
-<span class="w">        </span><span class="s">&quot;location&quot;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="s">&quot;file:///home/example/11-records/output.txt&quot;</span><span class="p p-Indicator">,</span><span class="w"></span>
-<span class="w">        </span><span class="s">&quot;basename&quot;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="s">&quot;output.txt&quot;</span><span class="p p-Indicator">,</span><span class="w"></span>
-<span class="w">        </span><span class="s">&quot;class&quot;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="s">&quot;File&quot;</span><span class="p p-Indicator">,</span><span class="w"></span>
-<span class="w">        </span><span class="s">&quot;checksum&quot;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="s">&quot;sha1$329fe3b598fed0dfd40f511522eaf386edb2d077&quot;</span><span class="p p-Indicator">,</span><span class="w"></span>
-<span class="w">        </span><span class="s">&quot;size&quot;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="nv">23</span><span class="p p-Indicator">,</span><span class="w"></span>
-<span class="w">        </span><span class="s">&quot;path&quot;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="s">&quot;/home/example/output.txt&quot;</span><span class="w"></span>
-<span class="w">    </span><span class="p p-Indicator">}</span><span class="w"></span>
-<span class="p p-Indicator">}</span><span class="w"></span>
-<span class="l l-Scalar l-Scalar-Plain">Final process status is success</span><span class="w"></span>
-<span class="l l-Scalar l-Scalar-Plain">$ cat output.txt</span><span class="w"></span>
-<span class="l l-Scalar l-Scalar-Plain">-A one -B two -C three</span><span class="w"></span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ cwltool record.cwl record-job2.yml
+INFO /opt/hostedtoolcache/Python/3.9.13/x64/bin/cwltool <span class="m">3</span>.1.20220913185150
+INFO Resolved <span class="s1">&#39;record.cwl&#39;</span> to <span class="s1">&#39;file:///home/runner/work/user_guide/user_guide/src/_includes/cwl/inputs/record.cwl&#39;</span>
+record-job2.yml:6:3: Warning: invalid field <span class="sb">`</span>itemD<span class="sb">`</span>, expected one of: <span class="s1">&#39;itemC&#39;</span>
+INFO <span class="o">[</span>job record.cwl<span class="o">]</span> /tmp/9n3aatpm$ <span class="nb">echo</span> <span class="se">\</span>
+    -A <span class="se">\</span>
+    one <span class="se">\</span>
+    -B <span class="se">\</span>
+    two <span class="se">\</span>
+    -C <span class="se">\</span>
+    three &gt; /tmp/9n3aatpm/output.txt
+INFO <span class="o">[</span>job record.cwl<span class="o">]</span> completed success
+<span class="o">{</span>
+    <span class="s2">&quot;example_out&quot;</span>: <span class="o">{</span>
+        <span class="s2">&quot;location&quot;</span>: <span class="s2">&quot;file:///home/runner/work/user_guide/user_guide/src/_includes/cwl/inputs/output.txt&quot;</span>,
+        <span class="s2">&quot;basename&quot;</span>: <span class="s2">&quot;output.txt&quot;</span>,
+        <span class="s2">&quot;class&quot;</span>: <span class="s2">&quot;File&quot;</span>,
+        <span class="s2">&quot;checksum&quot;</span>: <span class="s2">&quot;sha1</span><span class="nv">$329</span><span class="s2">fe3b598fed0dfd40f511522eaf386edb2d077&quot;</span>,
+        <span class="s2">&quot;size&quot;</span>: <span class="m">23</span>,
+        <span class="s2">&quot;path&quot;</span>: <span class="s2">&quot;/home/runner/work/user_guide/user_guide/src/_includes/cwl/inputs/output.txt&quot;</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+INFO Final process status is success
+</pre></div>
+</div>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>cat output.txt
+<span class="go">-A one -B two -C three</span>
 </pre></div>
 </div>
 <p>In the second example, <code class="docutils literal notranslate"><span class="pre">itemC</span></code> and <code class="docutils literal notranslate"><span class="pre">itemD</span></code> are exclusive, so only <code class="docutils literal notranslate"><span class="pre">itemC</span></code>
@@ -814,27 +830,31 @@ is added to the command line and <code class="docutils literal notranslate"><spa
 </pre></div>
 </div>
 </div>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>cwl-runner record.cwl record-job3.yml
-<span class="go">[job record.cwl] /home/example$ echo \</span>
-<span class="go">    -A \</span>
-<span class="go">    one \</span>
-<span class="go">    -B \</span>
-<span class="go">    two \</span>
-<span class="go">    -D \</span>
-<span class="go">    four &gt; /home/example/output.txt</span>
-<span class="go">[job record.cwl] completed success</span>
-<span class="go">{</span>
-<span class="go">    &quot;example_out&quot;: {</span>
-<span class="go">        &quot;location&quot;: &quot;file:///home/example/output.txt&quot;,</span>
-<span class="go">        &quot;basename&quot;: &quot;output.txt&quot;,</span>
-<span class="go">        &quot;class&quot;: &quot;File&quot;,</span>
-<span class="go">        &quot;checksum&quot;: &quot;sha1$77f572b28e441240a5e30eb14f1d300bcc13a3b4&quot;,</span>
-<span class="go">        &quot;size&quot;: 22,</span>
-<span class="go">        &quot;path&quot;: &quot;/home/example/output.txt&quot;</span>
-<span class="go">    }</span>
-<span class="go">}</span>
-<span class="go">Final process status is success</span>
-<span class="gp">$ </span>cat output.txt
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ cwltool record.cwl record-job3.yml
+INFO /opt/hostedtoolcache/Python/3.9.13/x64/bin/cwltool <span class="m">3</span>.1.20220913185150
+INFO Resolved <span class="s1">&#39;record.cwl&#39;</span> to <span class="s1">&#39;file:///home/runner/work/user_guide/user_guide/src/_includes/cwl/inputs/record.cwl&#39;</span>
+INFO <span class="o">[</span>job record.cwl<span class="o">]</span> /tmp/7qf1bn13$ <span class="nb">echo</span> <span class="se">\</span>
+    -A <span class="se">\</span>
+    one <span class="se">\</span>
+    -B <span class="se">\</span>
+    two <span class="se">\</span>
+    -D <span class="se">\</span>
+    four &gt; /tmp/7qf1bn13/output.txt
+INFO <span class="o">[</span>job record.cwl<span class="o">]</span> completed success
+<span class="o">{</span>
+    <span class="s2">&quot;example_out&quot;</span>: <span class="o">{</span>
+        <span class="s2">&quot;location&quot;</span>: <span class="s2">&quot;file:///home/runner/work/user_guide/user_guide/src/_includes/cwl/inputs/output.txt&quot;</span>,
+        <span class="s2">&quot;basename&quot;</span>: <span class="s2">&quot;output.txt&quot;</span>,
+        <span class="s2">&quot;class&quot;</span>: <span class="s2">&quot;File&quot;</span>,
+        <span class="s2">&quot;checksum&quot;</span>: <span class="s2">&quot;sha1</span><span class="nv">$77</span><span class="s2">f572b28e441240a5e30eb14f1d300bcc13a3b4&quot;</span>,
+        <span class="s2">&quot;size&quot;</span>: <span class="m">22</span>,
+        <span class="s2">&quot;path&quot;</span>: <span class="s2">&quot;/home/runner/work/user_guide/user_guide/src/_includes/cwl/inputs/output.txt&quot;</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+INFO Final process status is success
+</pre></div>
+</div>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>cat output.txt
 <span class="go">-A one -B two -D four</span>
 </pre></div>
 </div>

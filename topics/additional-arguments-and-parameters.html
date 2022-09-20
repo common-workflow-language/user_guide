@@ -504,34 +504,41 @@ instead.</p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span><span class="nb">echo</span> <span class="s2">&quot;public class Hello {}&quot;</span> &gt; Hello.java
 </pre></div>
 </div>
-<p>And now invoke <code class="docutils literal notranslate"><span class="pre">cwl-runner</span></code> providing the tool description and the input object on the command line:</p>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>cwl-runner arguments.cwl arguments-job.yml
-<span class="go">[job arguments.cwl] /tmp/tmpwYALo1$ docker \</span>
-<span class="go"> run \</span>
-<span class="go"> -i \</span>
-<span class="go"> --volume=/home/peter/work/common-workflow-language/v1.0/examples/Hello.java:/var/lib/cwl/stg8939ac04-7443-4990-a518-1855b2322141/Hello.java:ro \</span>
-<span class="go"> --volume=/tmp/tmpwYALo1:/var/spool/cwl:rw \</span>
-<span class="go"> --volume=/tmp/tmpptIAJ8:/tmp:rw \</span>
-<span class="go"> --workdir=/var/spool/cwl \</span>
-<span class="go"> --read-only=true \</span>
-<span class="go"> --user=1001 \</span>
-<span class="go"> --rm \</span>
-<span class="go"> --env=TMPDIR=/tmp \</span>
-<span class="go"> --env=HOME=/var/spool/cwl \</span>
-<span class="go"> openjdk:9.0.1-11-slim \</span>
-<span class="go"> javac \</span>
-<span class="go"> -d \</span>
-<span class="go"> /var/spool/cwl \</span>
-<span class="go"> /var/lib/cwl/stg8939ac04-7443-4990-a518-1855b2322141/Hello.java</span>
-<span class="go">Final process status is success</span>
-<span class="go">{</span>
-<span class="go">  &quot;classfile&quot;: {</span>
-<span class="go">    &quot;size&quot;: 416,</span>
-<span class="go">    &quot;location&quot;: &quot;/home/example/Hello.class&quot;,</span>
-<span class="go">    &quot;checksum&quot;: &quot;sha1$2f7ac33c1f3aac3f1fec7b936b6562422c85b38a&quot;,</span>
-<span class="go">    &quot;class&quot;: &quot;File&quot;</span>
-<span class="go">  }</span>
-<span class="go">}</span>
+<p>And now invoke <code class="docutils literal notranslate"><span class="pre">cwltool</span></code> providing the tool description and the input object on the command line:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ cwltool arguments.cwl arguments-job.yml
+INFO /opt/hostedtoolcache/Python/3.9.13/x64/bin/cwltool <span class="m">3</span>.1.20220913185150
+INFO Resolved <span class="s1">&#39;arguments.cwl&#39;</span> to <span class="s1">&#39;file:///home/runner/work/user_guide/user_guide/src/_includes/cwl/additional-arguments-and-parameters/arguments.cwl&#39;</span>
+INFO <span class="o">[</span>job arguments.cwl<span class="o">]</span> /tmp/uf37fwx0$ docker <span class="se">\</span>
+    run <span class="se">\</span>
+    -i <span class="se">\</span>
+    --mount<span class="o">=</span><span class="nv">type</span><span class="o">=</span>bind,source<span class="o">=</span>/tmp/uf37fwx0,target<span class="o">=</span>/pQyLEO <span class="se">\</span>
+    --mount<span class="o">=</span><span class="nv">type</span><span class="o">=</span>bind,source<span class="o">=</span>/tmp/how4lk0_,target<span class="o">=</span>/tmp <span class="se">\</span>
+    --mount<span class="o">=</span><span class="nv">type</span><span class="o">=</span>bind,source<span class="o">=</span>/home/runner/work/user_guide/user_guide/src/_includes/cwl/additional-arguments-and-parameters/Hello.java,target<span class="o">=</span>/var/lib/cwl/stg70791672-5d1c-4e26-99ae-e6314add4b81/Hello.java,readonly <span class="se">\</span>
+    --workdir<span class="o">=</span>/pQyLEO <span class="se">\</span>
+    --read-only<span class="o">=</span><span class="nb">true</span> <span class="se">\</span>
+    --user<span class="o">=</span><span class="m">1001</span>:121 <span class="se">\</span>
+    --rm <span class="se">\</span>
+    --cidfile<span class="o">=</span>/tmp/hb_chdkb/20220920141336-742918.cid <span class="se">\</span>
+    --env<span class="o">=</span><span class="nv">TMPDIR</span><span class="o">=</span>/tmp <span class="se">\</span>
+    --env<span class="o">=</span><span class="nv">HOME</span><span class="o">=</span>/pQyLEO <span class="se">\</span>
+    openjdk:9.0.1-11-slim <span class="se">\</span>
+    javac <span class="se">\</span>
+    -d <span class="se">\</span>
+    /pQyLEO <span class="se">\</span>
+    /var/lib/cwl/stg70791672-5d1c-4e26-99ae-e6314add4b81/Hello.java
+INFO <span class="o">[</span>job arguments.cwl<span class="o">]</span> Max memory used: 0MiB
+INFO <span class="o">[</span>job arguments.cwl<span class="o">]</span> completed success
+<span class="o">{</span>
+    <span class="s2">&quot;classfile&quot;</span>: <span class="o">{</span>
+        <span class="s2">&quot;location&quot;</span>: <span class="s2">&quot;file:///home/runner/work/user_guide/user_guide/src/_includes/cwl/additional-arguments-and-parameters/Hello.class&quot;</span>,
+        <span class="s2">&quot;basename&quot;</span>: <span class="s2">&quot;Hello.class&quot;</span>,
+        <span class="s2">&quot;class&quot;</span>: <span class="s2">&quot;File&quot;</span>,
+        <span class="s2">&quot;checksum&quot;</span>: <span class="s2">&quot;sha1</span><span class="nv">$fdb876b40ad9ebc7fee873212e02d5940588642e</span><span class="s2">&quot;</span>,
+        <span class="s2">&quot;size&quot;</span>: <span class="m">184</span>,
+        <span class="s2">&quot;path&quot;</span>: <span class="s2">&quot;/home/runner/work/user_guide/user_guide/src/_includes/cwl/additional-arguments-and-parameters/Hello.class&quot;</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+INFO Final process status is success
 </pre></div>
 </div>
 <p>Here we use the <code class="docutils literal notranslate"><span class="pre">arguments</span></code> field to add an additional argument to the

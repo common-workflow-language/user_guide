@@ -448,15 +448,15 @@ It also contains other ways to install <code class="docutils literal notranslate
 <code class="docutils literal notranslate"><span class="pre">hello_world.cwl</span></code> workflow without specifying any option:</p>
 <div class="literal-block-wrapper docutils container" id="running-hello-world-cwl-with-cwltool">
 <div class="code-block-caption"><span class="caption-text">Running <code class="docutils literal notranslate"><span class="pre">hello_world.cwl</span></code> with <code class="docutils literal notranslate"><span class="pre">cwltool</span></code>.</span><a class="headerlink" href="#running-hello-world-cwl-with-cwltool" title="Permalink to this code">#</a></div>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>cwltool hello_world.cwl
-<span class="go">INFO /tmp/venv/bin/cwltool 3.1.20220628170238</span>
-<span class="go">INFO Resolved &#39;hello_world.cwl&#39; to &#39;file:///tmp/hello_world.cwl&#39;</span>
-<span class="go">INFO [job hello_world.cwl] /tmp/yn0e8xu6$ echo \</span>
-<span class="go">    &#39;Hello World&#39;</span>
-<span class="go">Hello World</span>
-<span class="go">INFO [job hello_world.cwl] completed success</span>
-<span class="go">{}</span>
-<span class="go">INFO Final process status is success</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ cwltool hello_world.cwl
+INFO /opt/hostedtoolcache/Python/3.9.13/x64/bin/cwltool <span class="m">3</span>.1.20220913185150
+INFO Resolved <span class="s1">&#39;hello_world.cwl&#39;</span> to <span class="s1">&#39;file:///home/runner/work/user_guide/user_guide/src/_includes/cwl/hello_world.cwl&#39;</span>
+INFO <span class="o">[</span>job hello_world.cwl<span class="o">]</span> /tmp/j6ui3xt6$ <span class="nb">echo</span> <span class="se">\</span>
+    <span class="s1">&#39;Hello World&#39;</span>
+Hello World
+INFO <span class="o">[</span>job hello_world.cwl<span class="o">]</span> completed success
+<span class="o">{}</span>
+INFO Final process status is success
 </pre></div>
 </div>
 </div>
@@ -464,15 +464,15 @@ It also contains other ways to install <code class="docutils literal notranslate
 to how you would change the argument of the <code class="docutils literal notranslate"><span class="pre">echo</span></code> base command:</p>
 <div class="literal-block-wrapper docutils container" id="running-hello-world-cwl-with-cwltool-passing-an-input-parameter">
 <div class="code-block-caption"><span class="caption-text">Running <code class="docutils literal notranslate"><span class="pre">hello_world.cwl</span></code> with <code class="docutils literal notranslate"><span class="pre">cwltool</span></code> passing an input parameter.</span><a class="headerlink" href="#running-hello-world-cwl-with-cwltool-passing-an-input-parameter" title="Permalink to this code">#</a></div>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>cwltool hello_world.cwl --message<span class="o">=</span><span class="s2">&quot;Hola mundo&quot;</span>
-<span class="go">INFO /home/kinow/Development/python/workspace/user_guide/venv/bin/cwltool 3.1.20220406080846</span>
-<span class="go">INFO Resolved &#39;/tmp/hello_world.cwl&#39; to &#39;file:///tmp/hello_world.cwl&#39;</span>
-<span class="go">INFO [job hello_world.cwl] /tmp/ua5vt9hl$ echo \</span>
-<span class="go">    &#39;Hola mundo&#39;</span>
-<span class="go">Hola mundo</span>
-<span class="go">INFO [job hello_world.cwl] completed success</span>
-<span class="go">{}</span>
-<span class="go">INFO Final process status is success</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ cwltool hello_world.cwl --message<span class="o">=</span><span class="s2">&quot;Hola mundo&quot;</span>
+INFO /opt/hostedtoolcache/Python/3.9.13/x64/bin/cwltool <span class="m">3</span>.1.20220913185150
+INFO Resolved <span class="s1">&#39;hello_world.cwl&#39;</span> to <span class="s1">&#39;file:///home/runner/work/user_guide/user_guide/src/_includes/cwl/hello_world.cwl&#39;</span>
+INFO <span class="o">[</span>job hello_world.cwl<span class="o">]</span> /tmp/lt6z13b4$ <span class="nb">echo</span> <span class="se">\</span>
+    <span class="s1">&#39;Hola mundo&#39;</span>
+Hola mundo
+INFO <span class="o">[</span>job hello_world.cwl<span class="o">]</span> completed success
+<span class="o">{}</span>
+INFO Final process status is success
 </pre></div>
 </div>
 </div>
@@ -487,19 +487,18 @@ corresponding values. This file can be written in JSON or YAML. For example:</p>
 </pre></div>
 </div>
 </div>
-<p class="text-center text-muted mt-n2">hello_world-job.json</p>
 <p>You can use this Inputs Object file now to execute the “Hello World” workflow:</p>
 <div class="literal-block-wrapper docutils container" id="passing-an-inputs-object-file-to-cwltool">
 <div class="code-block-caption"><span class="caption-text">Passing an Inputs Object file to <code class="docutils literal notranslate"><span class="pre">cwltool</span></code>.</span><a class="headerlink" href="#passing-an-inputs-object-file-to-cwltool" title="Permalink to this code">#</a></div>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>cwltool hello_world.cwl hello_world-job.json
-<span class="go">INFO /home/kinow/Development/python/workspace/user_guide/venv/bin/cwltool 3.1.20220406080846</span>
-<span class="go">INFO Resolved &#39;/tmp/hello_world.cwl&#39; to &#39;file:///tmp/hello_world.cwl&#39;</span>
-<span class="go">INFO [job hello_world.cwl] /tmp/c5uchknw$ echo \</span>
-<span class="go">    こんにちは世界</span>
-<span class="go">こんにちは世界</span>
-<span class="go">INFO [job hello_world.cwl] completed success</span>
-<span class="go">{}</span>
-<span class="go">INFO Final process status is success</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ cwltool hello_world.cwl hello_world-job.json
+INFO /opt/hostedtoolcache/Python/3.9.13/x64/bin/cwltool <span class="m">3</span>.1.20220913185150
+INFO Resolved <span class="s1">&#39;hello_world.cwl&#39;</span> to <span class="s1">&#39;file:///home/runner/work/user_guide/user_guide/src/_includes/cwl/hello_world.cwl&#39;</span>
+INFO <span class="o">[</span>job hello_world.cwl<span class="o">]</span> /tmp/sgmolhbj$ <span class="nb">echo</span> <span class="se">\</span>
+    こんにちは世界
+こんにちは世界
+INFO <span class="o">[</span>job hello_world.cwl<span class="o">]</span> completed success
+<span class="o">{}</span>
+INFO Final process status is success
 </pre></div>
 </div>
 </div>

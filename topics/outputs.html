@@ -511,23 +511,26 @@ any subsequent elements are mandatory command line arguments</p>
 <span class="go">hello.txt</span>
 </pre></div>
 </div>
-<p>And now invoke <code class="docutils literal notranslate"><span class="pre">cwl-runner</span></code> with the tool description and the input object on the command line:</p>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>cwl-runner tar.cwl tar-job.yml
-<span class="go">[job tar.cwl] /tmp/tmpqOeawQ$ tar \</span>
-<span class="go">    --extract --file \</span>
-<span class="go">    /tmp/tmpGDk8Y1/stg80bbad20-494d-47af-8075-dffc32df03a3/hello.tar</span>
-<span class="go">[job tar.cwl] completed success</span>
-<span class="go">{</span>
-<span class="go">    &quot;example_out&quot;: {</span>
-<span class="go">        &quot;location&quot;: &quot;file:///home/me/cwl/user_guide/hello.txt&quot;,</span>
-<span class="go">        &quot;basename&quot;: &quot;hello.txt&quot;,</span>
-<span class="go">        &quot;class&quot;: &quot;File&quot;,</span>
-<span class="go">        &quot;checksum&quot;: &quot;sha1$da39a3ee5e6b4b0d3255bfef95601890afd80709&quot;,</span>
-<span class="go">        &quot;size&quot;: 0,</span>
-<span class="go">        &quot;path&quot;: &quot;/home/me/cwl/user_guide/hello.txt&quot;</span>
-<span class="go">    }</span>
-<span class="go">}</span>
-<span class="go">Final process status is success</span>
+<p>And now invoke <code class="docutils literal notranslate"><span class="pre">cwltool</span></code> with the tool description and the input object on the command line:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ cwltool tar.cwl tar-job.yml
+INFO /opt/hostedtoolcache/Python/3.9.13/x64/bin/cwltool <span class="m">3</span>.1.20220913185150
+INFO Resolved <span class="s1">&#39;tar.cwl&#39;</span> to <span class="s1">&#39;file:///home/runner/work/user_guide/user_guide/src/_includes/cwl/outputs/tar.cwl&#39;</span>
+INFO <span class="o">[</span>job tar.cwl<span class="o">]</span> /tmp/8j47lqrt$ tar <span class="se">\</span>
+    --extract <span class="se">\</span>
+    --file <span class="se">\</span>
+    /tmp/cutg50vo/stg307e4488-53af-47d0-b518-71845d226960/hello.tar
+INFO <span class="o">[</span>job tar.cwl<span class="o">]</span> completed success
+<span class="o">{</span>
+    <span class="s2">&quot;example_out&quot;</span>: <span class="o">{</span>
+        <span class="s2">&quot;location&quot;</span>: <span class="s2">&quot;file:///home/runner/work/user_guide/user_guide/src/_includes/cwl/outputs/hello.txt&quot;</span>,
+        <span class="s2">&quot;basename&quot;</span>: <span class="s2">&quot;hello.txt&quot;</span>,
+        <span class="s2">&quot;class&quot;</span>: <span class="s2">&quot;File&quot;</span>,
+        <span class="s2">&quot;checksum&quot;</span>: <span class="s2">&quot;sha1</span><span class="nv">$da39a3ee5e6b4b0d3255bfef95601890afd80709</span><span class="s2">&quot;</span>,
+        <span class="s2">&quot;size&quot;</span>: <span class="m">0</span>,
+        <span class="s2">&quot;path&quot;</span>: <span class="s2">&quot;/home/runner/work/user_guide/user_guide/src/_includes/cwl/outputs/hello.txt&quot;</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+INFO Final process status is success
 </pre></div>
 </div>
 <p>The field <code class="docutils literal notranslate"><span class="pre">outputBinding</span></code> describes how to set the value of each
@@ -571,23 +574,25 @@ the name of the file where the output stream should go.  Then add <code class="d
 </pre></div>
 </div>
 </div>
-<p>Now invoke <code class="docutils literal notranslate"><span class="pre">cwl-runner</span></code> providing the tool description and the input object
+<p>Now invoke <code class="docutils literal notranslate"><span class="pre">cwltool</span></code> providing the tool description and the input object
 on the command line:</p>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>cwl-runner stdout.cwl echo-job.yml
-<span class="go">[job stdout.cwl] /tmp/tmpE0gTz7$ echo \</span>
-<span class="go">    &#39;Hello world!&#39; &gt; /tmp/tmpE0gTz7/output.txt</span>
-<span class="go">[job stdout.cwl] completed success</span>
-<span class="go">{</span>
-<span class="go">    &quot;example_out&quot;: {</span>
-<span class="go">        &quot;location&quot;: &quot;file:///home/me/cwl/user_guide/output.txt&quot;,</span>
-<span class="go">        &quot;basename&quot;: &quot;output.txt&quot;,</span>
-<span class="go">        &quot;class&quot;: &quot;File&quot;,</span>
-<span class="go">        &quot;checksum&quot;: &quot;sha1$47a013e660d408619d894b20806b1d5086aab03b&quot;,</span>
-<span class="go">        &quot;size&quot;: 13,</span>
-<span class="go">        &quot;path&quot;: &quot;/home/me/cwl/user_guide/output.txt&quot;</span>
-<span class="go">    }</span>
-<span class="go">}</span>
-<span class="go">Final process status is success</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ cwltool stdout.cwl echo-job.yml
+INFO /opt/hostedtoolcache/Python/3.9.13/x64/bin/cwltool <span class="m">3</span>.1.20220913185150
+INFO Resolved <span class="s1">&#39;stdout.cwl&#39;</span> to <span class="s1">&#39;file:///home/runner/work/user_guide/user_guide/src/_includes/cwl/outputs/stdout.cwl&#39;</span>
+INFO <span class="o">[</span>job stdout.cwl<span class="o">]</span> /tmp/ucnfxsfj$ <span class="nb">echo</span> <span class="se">\</span>
+    <span class="s1">&#39;Hello world!&#39;</span> &gt; /tmp/ucnfxsfj/output.txt
+INFO <span class="o">[</span>job stdout.cwl<span class="o">]</span> completed success
+<span class="o">{</span>
+    <span class="s2">&quot;example_out&quot;</span>: <span class="o">{</span>
+        <span class="s2">&quot;location&quot;</span>: <span class="s2">&quot;file:///home/runner/work/user_guide/user_guide/src/_includes/cwl/outputs/output.txt&quot;</span>,
+        <span class="s2">&quot;basename&quot;</span>: <span class="s2">&quot;output.txt&quot;</span>,
+        <span class="s2">&quot;class&quot;</span>: <span class="s2">&quot;File&quot;</span>,
+        <span class="s2">&quot;checksum&quot;</span>: <span class="s2">&quot;sha1</span><span class="nv">$47</span><span class="s2">a013e660d408619d894b20806b1d5086aab03b&quot;</span>,
+        <span class="s2">&quot;size&quot;</span>: <span class="m">13</span>,
+        <span class="s2">&quot;path&quot;</span>: <span class="s2">&quot;/home/runner/work/user_guide/user_guide/src/_includes/cwl/outputs/output.txt&quot;</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+INFO Final process status is success
 </pre></div>
 </div>
 </section>
@@ -627,27 +632,37 @@ on the command line:</p>
 </pre></div>
 </div>
 </div>
-<p>Now invoke <code class="docutils literal notranslate"><span class="pre">cwl-runner</span></code> providing the tool description and the input object
+<p>Now invoke <code class="docutils literal notranslate"><span class="pre">cwltool</span></code> providing the tool description and the input object
 on the command line:</p>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>cwl-runner array-outputs.cwl array-outputs-job.yml
-<span class="go">[job 140190876078160] /home/example$ touch foo.txt bar.dat baz.txt</span>
-<span class="go">Final process status is success</span>
-<span class="go">{</span>
-<span class="go">  &quot;output&quot;: [</span>
-<span class="go">    {</span>
-<span class="go">      &quot;size&quot;: 0,</span>
-<span class="go">      &quot;location&quot;: &quot;foo.txt&quot;,</span>
-<span class="go">      &quot;checksum&quot;: &quot;sha1$da39a3ee5e6b4b0d3255bfef95601890afd80709&quot;,</span>
-<span class="go">      &quot;class&quot;: &quot;File&quot;</span>
-<span class="go">    },</span>
-<span class="go">    {</span>
-<span class="go">      &quot;size&quot;: 0,</span>
-<span class="go">      &quot;location&quot;: &quot;baz.txt&quot;,</span>
-<span class="go">      &quot;checksum&quot;: &quot;sha1$da39a3ee5e6b4b0d3255bfef95601890afd80709&quot;,</span>
-<span class="go">      &quot;class&quot;: &quot;File&quot;</span>
-<span class="go">    }</span>
-<span class="go">  ]</span>
-<span class="go">}</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ cwltool array-outputs.cwl array-outputs-job.yml
+INFO /opt/hostedtoolcache/Python/3.9.13/x64/bin/cwltool <span class="m">3</span>.1.20220913185150
+INFO Resolved <span class="s1">&#39;array-outputs.cwl&#39;</span> to <span class="s1">&#39;file:///home/runner/work/user_guide/user_guide/src/_includes/cwl/outputs/array-outputs.cwl&#39;</span>
+INFO <span class="o">[</span>job array-outputs.cwl<span class="o">]</span> /tmp/1uv0ql5e$ touch <span class="se">\</span>
+    foo.txt <span class="se">\</span>
+    bar.dat <span class="se">\</span>
+    baz.txt
+INFO <span class="o">[</span>job array-outputs.cwl<span class="o">]</span> completed success
+<span class="o">{</span>
+    <span class="s2">&quot;output&quot;</span>: <span class="o">[</span>
+        <span class="o">{</span>
+            <span class="s2">&quot;location&quot;</span>: <span class="s2">&quot;file:///home/runner/work/user_guide/user_guide/src/_includes/cwl/outputs/baz.txt&quot;</span>,
+            <span class="s2">&quot;basename&quot;</span>: <span class="s2">&quot;baz.txt&quot;</span>,
+            <span class="s2">&quot;class&quot;</span>: <span class="s2">&quot;File&quot;</span>,
+            <span class="s2">&quot;checksum&quot;</span>: <span class="s2">&quot;sha1</span><span class="nv">$da39a3ee5e6b4b0d3255bfef95601890afd80709</span><span class="s2">&quot;</span>,
+            <span class="s2">&quot;size&quot;</span>: <span class="m">0</span>,
+            <span class="s2">&quot;path&quot;</span>: <span class="s2">&quot;/home/runner/work/user_guide/user_guide/src/_includes/cwl/outputs/baz.txt&quot;</span>
+        <span class="o">}</span>,
+        <span class="o">{</span>
+            <span class="s2">&quot;location&quot;</span>: <span class="s2">&quot;file:///home/runner/work/user_guide/user_guide/src/_includes/cwl/outputs/foo.txt&quot;</span>,
+            <span class="s2">&quot;basename&quot;</span>: <span class="s2">&quot;foo.txt&quot;</span>,
+            <span class="s2">&quot;class&quot;</span>: <span class="s2">&quot;File&quot;</span>,
+            <span class="s2">&quot;checksum&quot;</span>: <span class="s2">&quot;sha1</span><span class="nv">$da39a3ee5e6b4b0d3255bfef95601890afd80709</span><span class="s2">&quot;</span>,
+            <span class="s2">&quot;size&quot;</span>: <span class="m">0</span>,
+            <span class="s2">&quot;path&quot;</span>: <span class="s2">&quot;/home/runner/work/user_guide/user_guide/src/_includes/cwl/outputs/foo.txt&quot;</span>
+        <span class="o">}</span>
+    <span class="o">]</span>
+<span class="o">}</span>
+INFO Final process status is success
 </pre></div>
 </div>
 <p>As described in the <a class="reference internal" href="yaml-guide.html#arrays"><span class="std std-doc">YAML Guide</span></a>,

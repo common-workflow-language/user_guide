@@ -506,7 +506,7 @@ formats and warn you if there seem to be some obvious mismatches.</p>
 </div>
 </div>
 <p>The equivalent of this CWL description in command line format is:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>wc -l /path/to/aligned_sequences.ext &gt; output.txt
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>wc -l /path/to/aligned_sequences.ext &gt; output.txt
 </pre></div>
 </div>
 <section id="sample-parameter-files">
@@ -524,31 +524,32 @@ parameterization.</p>
 </pre></div>
 </div>
 </div>
-<p><em><strong>Note:</strong></em> To follow the example below, you need to download the example input file, <em>file-formats.bam</em>. The file is available from <a class="reference external" href="https://github.com/common-workflow-language/user_guide/raw/main/_includes/cwl/16-file-formats/file-formats.bam">https://github.com/common-workflow-language/user_guide/raw/main/_includes/cwl/16-file-formats/file-formats.bam
+<p><em><strong>Note:</strong></em> To follow the example below, you need to download the example input file, <em>file-formats.bam</em>. The file is available from <a class="reference external" href="https://github.com/common-workflow-language/user_guide/raw/main/_includes/cwl/file-formats/file-formats.bam">https://github.com/common-workflow-language/user_guide/raw/main/_includes/cwl/file-formats/file-formats.bam
 </a> and can be downloaded e.g. via <code class="docutils literal notranslate"><span class="pre">wget</span></code>:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>wget https://github.com/common-workflow-language/user_guide/raw/main/_includes/cwl/16-file-formats/file-formats.bam
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ wget https://github.com/common-workflow-language/user_guide/raw/main/_includes/cwl/file-formats/file-formats.bam
 </pre></div>
 </div>
-<p>Now invoke <code class="docutils literal notranslate"><span class="pre">cwl-runner</span></code> with the tool description and the input object on the
+<p>Now invoke <code class="docutils literal notranslate"><span class="pre">cwltool</span></code> with the tool description and the input object on the
 command line:</p>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>cwltool metadata_example.cwl sample.yml
-<span class="go">/usr/local/bin/cwltool 1.0.20161114152756</span>
-<span class="go">Resolved &#39;metadata_example.cwl&#39; to &#39;file:///media/large_volume/testing/cwl_tutorial2/metadata_example.cwl&#39;</span>
-<span class="go">[job metadata_example.cwl] /tmp/tmpNWyAd6$ /bin/sh \</span>
-<span class="go">    -c \</span>
-<span class="go">    &#39;wc&#39; &#39;-l&#39; &#39;/tmp/tmpBf6m9u/stge293ac74-3d42-45c9-b506-dd35ea3e6eea/file-formats.bam&#39; &gt; /tmp/tmpNWyAd6/output.txt</span>
-<span class="go">Final process status is success</span>
-<span class="go">{</span>
-<span class="go">  &quot;report&quot;: {</span>
-<span class="go">    &quot;format&quot;: &quot;http://edamontology.org/format_1964&quot;,</span>
-<span class="go">    &quot;checksum&quot;: &quot;sha1$49dc5004959ba9f1d07b8c00da9c46dd802cbe79&quot;,</span>
-<span class="go">    &quot;basename&quot;: &quot;output.txt&quot;,</span>
-<span class="go">    &quot;location&quot;: &quot;file:///media/large_volume/testing/cwl_tutorial2/output.txt&quot;,</span>
-<span class="go">    &quot;path&quot;: &quot;/media/large_volume/testing/cwl_tutorial2/output.txt&quot;,</span>
-<span class="go">    &quot;class&quot;: &quot;File&quot;,</span>
-<span class="go">    &quot;size&quot;: 80</span>
-<span class="go">  }</span>
-<span class="go">}</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ cwltool metadata_example.cwl sample.yml
+INFO /opt/hostedtoolcache/Python/3.9.13/x64/bin/cwltool <span class="m">3</span>.1.20220913185150
+INFO Resolved <span class="s1">&#39;metadata_example.cwl&#39;</span> to <span class="s1">&#39;file:///home/runner/work/user_guide/user_guide/src/_includes/cwl/file-formats/metadata_example.cwl&#39;</span>
+INFO <span class="o">[</span>job metadata_example.cwl<span class="o">]</span> /tmp/3dnsmdz3$ wc <span class="se">\</span>
+    -l <span class="se">\</span>
+    /tmp/wa9eobc9/stg52a2fc4d-0065-49e9-b27a-129a43516a79/file-formats.bam &gt; /tmp/3dnsmdz3/output.txt
+INFO <span class="o">[</span>job metadata_example.cwl<span class="o">]</span> completed success
+<span class="o">{</span>
+    <span class="s2">&quot;report&quot;</span>: <span class="o">{</span>
+        <span class="s2">&quot;location&quot;</span>: <span class="s2">&quot;file:///home/runner/work/user_guide/user_guide/src/_includes/cwl/file-formats/output.txt&quot;</span>,
+        <span class="s2">&quot;basename&quot;</span>: <span class="s2">&quot;output.txt&quot;</span>,
+        <span class="s2">&quot;class&quot;</span>: <span class="s2">&quot;File&quot;</span>,
+        <span class="s2">&quot;checksum&quot;</span>: <span class="s2">&quot;sha1</span><span class="nv">$5</span><span class="s2">bc3a4021e8f3d079db93c5a252c83c98d527cc1&quot;</span>,
+        <span class="s2">&quot;size&quot;</span>: <span class="m">77</span>,
+        <span class="s2">&quot;format&quot;</span>: <span class="s2">&quot;http://edamontology.org/format_1964&quot;</span>,
+        <span class="s2">&quot;path&quot;</span>: <span class="s2">&quot;/home/runner/work/user_guide/user_guide/src/_includes/cwl/file-formats/output.txt&quot;</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+INFO Final process status is success
 </pre></div>
 </div>
 </section>

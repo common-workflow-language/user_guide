@@ -55,66 +55,34 @@ The usage of the `cwltool` command-line executable is basically
 `cwltool [OPTIONS] <CWL_DOCUMENT> [INPUTS_OBJECT]`. You can run the
 `hello_world.cwl` workflow without specifying any option:
 
-```{code-block} console
+```{runcmd} cwltool hello_world.cwl
 :name: running-hello_world.cwl-with-cwltool
 :caption: Running `hello_world.cwl` with `cwltool`.
-
-$ cwltool hello_world.cwl
-INFO /tmp/venv/bin/cwltool 3.1.20220628170238
-INFO Resolved 'hello_world.cwl' to 'file:///tmp/hello_world.cwl'
-INFO [job hello_world.cwl] /tmp/yn0e8xu6$ echo \
-    'Hello World'
-Hello World
-INFO [job hello_world.cwl] completed success
-{}
-INFO Final process status is success
 ```
 
 Or you can override the default value of the input parameter `message`, similar
 to how you would change the argument of the `echo` base command:
 
-```{code-block} console
+```{runcmd} cwltool hello_world.cwl --message="Hola mundo"
 :name: running-hello_world.cwl-with-cwltool-passing-an-input-parameter
 :caption: Running `hello_world.cwl` with `cwltool` passing an input parameter.
-
-$ cwltool hello_world.cwl --message="Hola mundo"
-INFO /home/kinow/Development/python/workspace/user_guide/venv/bin/cwltool 3.1.20220406080846
-INFO Resolved '/tmp/hello_world.cwl' to 'file:///tmp/hello_world.cwl'
-INFO [job hello_world.cwl] /tmp/ua5vt9hl$ echo \
-    'Hola mundo'
-Hola mundo
-INFO [job hello_world.cwl] completed success
-{}
-INFO Final process status is success
 ```
 
 Another way of passing values to your workflow input parameters is via an
 *Inputs Object*. This is a file containing the input fields with the
 corresponding values. This file can be written in JSON or YAML. For example:
 
-```{code-block} json
+```{literalinclude} /_includes/cwl/hello_world-job.json
+:language: json
 :name: hello_world-job.json
 :caption: "`hello_world-job.json`"
-{
-  "message": "こんにちは世界"
-}
 ```
-<p class="text-center text-muted mt-n2">hello_world-job.json</p>
 
 You can use this Inputs Object file now to execute the “Hello World” workflow:
 
-```{code-block} console
+```{runcmd} cwltool hello_world.cwl hello_world-job.json
 :name: passing-an-inputs-object-file-to-cwltool
 :caption: Passing an Inputs Object file to `cwltool`.
-$ cwltool hello_world.cwl hello_world-job.json
-INFO /home/kinow/Development/python/workspace/user_guide/venv/bin/cwltool 3.1.20220406080846
-INFO Resolved '/tmp/hello_world.cwl' to 'file:///tmp/hello_world.cwl'
-INFO [job hello_world.cwl] /tmp/c5uchknw$ echo \
-    こんにちは世界
-こんにちは世界
-INFO [job hello_world.cwl] completed success
-{}
-INFO Final process status is success
 ```
 
 ```{note}

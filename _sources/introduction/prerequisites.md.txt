@@ -61,7 +61,7 @@ for other ways to install `cwltool` with `apt` and `conda`.
 
 Let's use a simple workflow `true.cwl` with `cwltool`.
 
-```{literalinclude} /_includes/cwl/simplest_cwl.cwl
+```{literalinclude} /_includes/cwl/true.cwl
 :language: cwl
 :caption: "`true.cwl`"
 :name: true.cwl
@@ -75,29 +75,16 @@ to pass `--validate` to the `cwltool` command:
 % TODO: maybe figure out a way to avoid /home/kinow/ etc. in the documentation
 %       to avoid multiple user-names/directory-locations varying in the docs.
 
-```{code-block} console
+```{runcmd} cwltool --validate true.cwl
 :name: validating-truecwl-with-cwltool
 :caption: Validating `true.cwl` with `cwltool`.
-
-$ cwltool --validate true.cwl
-INFO /home/kinow/Development/python/workspace/user_guide/venv/bin/cwltool 3.1.20220406080846
-INFO Resolved 'true.cwl' to 'file:///tmp/true.cwl'
-true.cwl is valid CWL.
 ```
 
 You can run the CWL workflow now that you know it is valid:
 
-```{code-block} console
+```{runcmd} cwltool true.cwl
 :name: running-true.cwl-with-cwltool
 :caption: Running `true.cwl` with `cwltool`.
-
-$ cwltool true.cwl
-INFO /home/kinow/Development/python/workspace/user_guide/venv/bin/cwltool 3.1.20220406080846
-INFO Resolved 'true.cwl' to 'file:///tmp/true.cwl'
-INFO [job true.cwl] /tmp/f8xlh1pl$ true
-INFO [job true.cwl] completed success
-{}
-INFO Final process status is success
 ```
 
 ### cwl-runner Python module
@@ -126,56 +113,42 @@ Now you can validate and run your workflow with `cwl-runner` executable,
 which will invoke `cwltool`. You should have the same results and output
 as in the previous section.
 
-```{code-block} console
+```{runcmd} cwl-runner --validate true.cwl
 :name: validating-true.cwl-with-cwl-runner
 :caption: Validating `true.cwl` with `cwl-runner`.
-
-$ cwl-runner --validate true.cwl
-INFO /home/kinow/Development/python/workspace/user_guide/venv/bin/cwl-runner 3.1.20220406080846
-INFO Resolved 'true.cwl' to 'file:///tmp/true.cwl'
-true.cwl is valid CWL.
 ```
 
-```{code-block} console
+```{runcmd} cwl-runner true.cwl
 :name: running-true.cwl-with-cwl-runner
 :caption: Running `true.cwl` with `cwl-runner`.
-
-$ cwl-runner true.cwl
-INFO /home/kinow/Development/python/workspace/user_guide/venv/bin/cwl-runner 3.1.20220406080846
-INFO Resolved 'true.cwl' to 'file:///tmp/true.cwl'
-INFO [job true.cwl] /tmp/7a2gf1nh$ true
-INFO [job true.cwl] completed success
-{}
-INFO Final process status is success
 ```
 
 Another way to execute `cwl-runner` is invoking the file directly. For that,
-the first thing you need is to modify the `true.cwl` workflow and include
-a special first line, a *shebang*:
+the first thing you need to copy `true.cwl` workflow into a new file
+`true_shebang.cwl` and include a special first line, a *shebang*:
 
-```{literalinclude} /_includes/cwl/simplest_cwl_shebang.cwl
+```{literalinclude} /_includes/cwl/true_shebang.cwl
 :language: cwl
-:name: cwltool-with-a-shebang
-:caption: "`cwltool` with a shebang"
+:name: "true_shebang.cwl"
+:caption: "`true_shebang.cwl`"
 ```
 
-Now, after you make the file `true.cwl` executable with `chmod u+x`,
-you can execute it directly in the command-line and the program
+Now you can make the file `true_shebang.cwl` executable with `chmod u+x`.
+
+```{code-block} console
+:name: making-true.cwl-executable
+:caption: Making `true.cwl` executable.
+
+$ chmod u+x true.cwl
+```
+
+And finally you can execute it directly in the command-line and the program
 specified in the shebang (`cwl-runner`) will be used to execute the
 rest of the file.
 
-```{code-block} console
-:name: making-true.cwl-executable-and-running-it
-:caption: Making `true.cwl` executable and running it.
-
-$ chmod u+x true.cwl
-$ ./true.cwl
-INFO /home/kinow/Development/python/workspace/user_guide/venv/bin/cwl-runner 3.1.20220406080846
-INFO Resolved './true.cwl' to 'file:///tmp/true.cwl'
-INFO [job true.cwl] /tmp/jz7ups99$ true
-INFO [job true.cwl] completed success
-{}
-INFO Final process status is success
+```{runcmd} ./true_shebang.cwl
+:name: running-true_shebang.cwl-with-a-shebang
+:caption: Running `true_shebang.cwl` with a shebang.
 ```
 
 ```{note}

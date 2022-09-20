@@ -476,7 +476,7 @@ you are ready to submit the workflow to a CWL runner:</p>
 
 <span class="nt">steps</span><span class="p">:</span><span class="w"></span>
 <span class="w">  </span><span class="nt">echo</span><span class="p">:</span><span class="w"></span>
-<span class="w">    </span><span class="nt">run</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">echo.cwl</span><span class="w"></span>
+<span class="w">    </span><span class="nt">run</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">../echo.cwl</span><span class="w"></span>
 <span class="w">    </span><span class="nt">in</span><span class="p">:</span><span class="w"></span>
 <span class="w">      </span><span class="nt">message</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">message</span><span class="w"></span>
 <span class="w">    </span><span class="nt">out</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="nv">out</span><span class="p p-Indicator">]</span><span class="w"></span>
@@ -488,7 +488,7 @@ you are ready to submit the workflow to a CWL runner:</p>
 <span class="w">      </span><span class="nt">inputs</span><span class="p">:</span><span class="w"></span>
 <span class="w">        </span><span class="nt">message</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">string</span><span class="w"></span>
 <span class="w">      </span><span class="nt">outputs</span><span class="p">:</span><span class="w"></span>
-<span class="w">        </span><span class="nt">out</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">string</span><span class="w"></span>
+<span class="w">        </span><span class="nt">uppercase_message</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">string</span><span class="w"></span>
 <span class="w">    </span><span class="nt">in</span><span class="p">:</span><span class="w"></span>
 <span class="w">      </span><span class="nt">message</span><span class="p">:</span><span class="w"></span>
 <span class="w">        </span><span class="nt">source</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">echo/out</span><span class="w"></span>
@@ -499,33 +499,33 @@ you are ready to submit the workflow to a CWL runner:</p>
 <p>The <code class="docutils literal notranslate"><span class="pre">uppercase</span></code> step of the workflow is an operation. It can be used like
 use a command line tool or an expression. You can also plot it with the
 CWL Viewer or <code class="docutils literal notranslate"><span class="pre">cwltool</span></code>:</p>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>cwltool --print-dot operations.cwl
-<span class="go">INFO /home/kinow/Development/python/workspace/user_guide/venv/bin/cwltool 3.1.20220628170238</span>
-<span class="go">INFO Resolved &#39;operations.cwl&#39; to &#39;file:///tmp/operations.cwl&#39;</span>
-<span class="go">digraph G {</span>
-<span class="go">bgcolor=&quot;#eeeeee&quot;;</span>
-<span class="go">clusterrank=local;</span>
-<span class="go">labeljust=right;</span>
-<span class="go">labelloc=bottom;</span>
-<span class="go">&quot;echo&quot; [fillcolor=lightgoldenrodyellow, label=echo, shape=record, style=filled];</span>
-<span class="go">&quot;uppercase&quot; [fillcolor=lightgoldenrodyellow, label=uppercase, shape=record, style=dashed];</span>
-<span class="go">&quot;echo&quot; -&gt; &quot;uppercase&quot;;</span>
-<span class="go">subgraph cluster_inputs {</span>
-<span class="go">label=&quot;Workflow Inputs&quot;;</span>
-<span class="go">rank=same;</span>
-<span class="go">style=dashed;</span>
-<span class="go">&quot;message&quot; [fillcolor=&quot;#94DDF4&quot;, label=message, shape=record, style=filled];</span>
-<span class="go">}</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ cwltool --print-dot operations.cwl
+INFO /opt/hostedtoolcache/Python/3.9.13/x64/bin/cwltool <span class="m">3</span>.1.20220913185150
+INFO Resolved <span class="s1">&#39;operations.cwl&#39;</span> to <span class="s1">&#39;file:///home/runner/work/user_guide/user_guide/src/_includes/cwl/operations/operations.cwl&#39;</span>
+digraph G <span class="o">{</span>
+<span class="nv">bgcolor</span><span class="o">=</span><span class="s2">&quot;#eeeeee&quot;</span><span class="p">;</span>
+<span class="nv">clusterrank</span><span class="o">=</span>local<span class="p">;</span>
+<span class="nv">labeljust</span><span class="o">=</span>right<span class="p">;</span>
+<span class="nv">labelloc</span><span class="o">=</span>bottom<span class="p">;</span>
+<span class="s2">&quot;echo&quot;</span> <span class="o">[</span><span class="nv">fillcolor</span><span class="o">=</span>lightgoldenrodyellow, <span class="nv">label</span><span class="o">=</span>echo, <span class="nv">shape</span><span class="o">=</span>record, <span class="nv">style</span><span class="o">=</span>filled<span class="o">]</span><span class="p">;</span>
+<span class="s2">&quot;uppercase&quot;</span> <span class="o">[</span><span class="nv">fillcolor</span><span class="o">=</span>lightgoldenrodyellow, <span class="nv">label</span><span class="o">=</span>uppercase, <span class="nv">shape</span><span class="o">=</span>record, <span class="nv">style</span><span class="o">=</span>dashed<span class="o">]</span><span class="p">;</span>
+<span class="s2">&quot;echo&quot;</span> -&gt; <span class="s2">&quot;uppercase&quot;</span><span class="p">;</span>
+subgraph cluster_inputs <span class="o">{</span>
+<span class="nv">label</span><span class="o">=</span><span class="s2">&quot;Workflow Inputs&quot;</span><span class="p">;</span>
+<span class="nv">rank</span><span class="o">=</span>same<span class="p">;</span>
+<span class="nv">style</span><span class="o">=</span>dashed<span class="p">;</span>
+<span class="s2">&quot;message&quot;</span> <span class="o">[</span><span class="nv">fillcolor</span><span class="o">=</span><span class="s2">&quot;#94DDF4&quot;</span>, <span class="nv">label</span><span class="o">=</span>message, <span class="nv">shape</span><span class="o">=</span>record, <span class="nv">style</span><span class="o">=</span>filled<span class="o">]</span><span class="p">;</span>
+<span class="o">}</span>
 
-<span class="go">&quot;message&quot; -&gt; &quot;echo&quot;;</span>
-<span class="go">subgraph cluster_outputs {</span>
-<span class="go">label=&quot;Workflow Outputs&quot;;</span>
-<span class="go">labelloc=b;</span>
-<span class="go">rank=same;</span>
-<span class="go">style=dashed;</span>
-<span class="go">}</span>
+<span class="s2">&quot;message&quot;</span> -&gt; <span class="s2">&quot;echo&quot;</span><span class="p">;</span>
+subgraph cluster_outputs <span class="o">{</span>
+<span class="nv">label</span><span class="o">=</span><span class="s2">&quot;Workflow Outputs&quot;</span><span class="p">;</span>
+<span class="nv">labelloc</span><span class="o">=</span>b<span class="p">;</span>
+<span class="nv">rank</span><span class="o">=</span>same<span class="p">;</span>
+<span class="nv">style</span><span class="o">=</span>dashed<span class="p">;</span>
+<span class="o">}</span>
 
-<span class="go">}</span>
+<span class="o">}</span>
 </pre></div>
 </div>
 <p>The output of the command above can be rendered with a Graphviz renderer. The following
@@ -559,11 +559,11 @@ style=dashed;
 does not have enough information to know how to execute it:</p>
 <div class="literal-block-wrapper docutils container" id="operations-output-error-cwltool">
 <div class="code-block-caption"><span class="caption-text"><code class="docutils literal notranslate"><span class="pre">cwltool</span></code> does not know how to run operations</span><a class="headerlink" href="#operations-output-error-cwltool" title="Permalink to this code">#</a></div>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>cwltool operations.cwl --message Hello
-<span class="go">INFO /home/kinow/Development/python/workspace/user_guide/venv/bin/cwltool 3.1.20220628170238</span>
-<span class="go">INFO Resolved &#39;operations.cwl&#39; to &#39;file:///tmp/operations.cwl&#39;</span>
-<span class="go">ERROR Workflow error, try again with --debug for more information:</span>
-<span class="go">operations.cwl:19:7: Workflow has unrunnable abstract Operation</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ cwltool operations.cwl --message Hello
+INFO /opt/hostedtoolcache/Python/3.9.13/x64/bin/cwltool <span class="m">3</span>.1.20220913185150
+INFO Resolved <span class="s1">&#39;operations.cwl&#39;</span> to <span class="s1">&#39;file:///home/runner/work/user_guide/user_guide/src/_includes/cwl/operations/operations.cwl&#39;</span>
+ERROR Workflow error, try again with --debug <span class="k">for</span> more information:
+operations.cwl:19:7: Workflow has unrunnable abstract Operation
 </pre></div>
 </div>
 </div>
