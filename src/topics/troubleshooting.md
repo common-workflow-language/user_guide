@@ -17,39 +17,11 @@ These two steps are executed in order (we enforce it, see note below). The first
 where instead of also executing the `touch` command it tries to execute `ouch`, which
 fails.
 
-```{code-block} cwl
+```{literalinclude} /_includes/cwl/troubleshooting/troubleshooting-wf1.cwl
+:language: cwl
 :name: "`troubleshooting-wf1.cwl`"
 :caption: "`troubleshooting-wf1.cwl`"
-cwlVersion: v1.2
-class: Workflow
-
-inputs: []
-outputs: []
-
-steps:
-  step_a:
-    run:
-      class: CommandLineTool
-      inputs: []
-      outputs:
-        step_a_file:
-          type: File
-          outputBinding:
-            glob: 'step_a.txt'
-      arguments: ['touch', 'step_a.txt']
-    in: []
-    out: [step_a_file]
-  step_b:
-    run:
-      class: CommandLineTool
-      inputs: []
-      outputs: []
-      arguments: ['ouch', 'step_b.txt']
-    # To force step_b to wait for step_a
-    in:
-      step_a_file:
-        source: step_a/step_a_file
-    out: []
+:emphasize-lines: 25
 ```
 
 ```{note}
@@ -62,35 +34,9 @@ of `step_b`.
 Let's execute this workflow with `/tmp/cachedir/` as the `--cachedir` value (`cwltool` will
 create the directory for you if it does not exist already):
 
-```{code-block} console
+```{runcmd} cwltool --cachedir /tmp/cachedir/ troubleshooting-wf1.cwl
+:working-directory: src/_includes/cwl/troubleshooting
 :emphasize-lines: 12-14, 19-21
-$ cwltool --cachedir /tmp/cachedir/ troubleshoot_wf1.cwl
-INFO /home/kinow/Development/python/workspace/user_guide/venv/bin/cwltool 3.1.20220830195442
-INFO Resolved 'troubleshoot_wf1.cwl' to 'file:///tmp/troubleshoot_wf1.cwl'
-WARNING Workflow checker warning:
-troubleshoot_wf1.cwl:28:7: 'step_a_file' is not an input parameter of ordereddict([('class',
-                           'CommandLineTool'), ('inputs', []), ('outputs', []), ('arguments',
-                           ['ouch', 'step_b.txt']), ('id',
-                           '_:af6cdc76-ead7-4438-94a2-f9f96b3d70c5')]), expected
-INFO [workflow ] start
-INFO [workflow ] starting step step_a
-INFO [step step_a] start
-INFO [job step_a] Output of job will be cached in /tmp/cachedir/5504f8afaebc04b48f07e6e5f2b5237b
-INFO [job step_a] /tmp/cachedir/5504f8afaebc04b48f07e6e5f2b5237b$ touch \
-    step_a.txt
-INFO [job step_a] completed success
-INFO [step step_a] completed success
-INFO [workflow ] starting step step_b
-INFO [step step_b] start
-INFO [job step_b] Output of job will be cached in /tmp/cachedir/feec39505ecca29dce1a210f75b12283
-INFO [job step_b] /tmp/cachedir/feec39505ecca29dce1a210f75b12283$ ouch \
-    step_b.txt
-ERROR 'ouch' not found: [Errno 2] No such file or directory: 'ouch'
-WARNING [job step_b] completed permanentFail
-WARNING [step step_b] completed permanentFail
-INFO [workflow ] completed permanentFail
-{}
-WARNING Final process status is permanentFail
 ```
 
 The workflow is in the `permanentFail` status due to `step_b` failing to execute the
@@ -98,18 +44,8 @@ non-existent `ouch` command. The `step_a` was executed successfully and its outp
 has been cached in your `cachedir` location. You can inspect the intermediate files
 created:
 
-```{code-block} console
+```{runcmd} tree /tmp/cachedir
 :emphasize-lines: 4
-$ tree /tmp/cachedir
-/tmp/cachedir
-├── 5504f8afaebc04b48f07e6e5f2b5237b
-│   └── step_a.txt
-├── 5504f8afaebc04b48f07e6e5f2b5237b.status
-├── abz3v9aq
-├── feec39505ecca29dce1a210f75b12283
-└── feec39505ecca29dce1a210f75b12283.status
-
-3 directories, 3 files
 ```
 
 Each workflow step has received a unique ID (the long value that looks like a hash).
@@ -122,31 +58,9 @@ as the previous time, note that now `cwltool` output contains information about
 pre-cached outputs for `step_a`, and about a new cache entry for the output of `step_b`.
 Also note that the status of `step_b` is now of success.
 
-```{code-block} console
+```{runcmd} cwltool --cachedir /tmp/cachedir/ troubleshooting-wf1-stepb-fixed.cwl
+:working-directory: src/_includes/cwl/troubleshooting
 :emphasize-lines: 12, 16-18
-$ cwltool --cachedir /tmp/cachedir/ troubleshoot_wf1.cwl
-INFO /home/kinow/Development/python/workspace/user_guide/venv/bin/cwltool 3.1.20220830195442
-INFO Resolved 'troubleshoot_wf1.cwl' to 'file:///tmp/troubleshoot_wf1.cwl'
-WARNING Workflow checker warning:
-troubleshoot_wf1.cwl:28:7: 'step_a_file' is not an input parameter of ordereddict([('class',
-                           'CommandLineTool'), ('inputs', []), ('outputs', []), ('arguments',
-                           ['touch', 'step_b.txt']), ('id',
-                           '_:50e379f8-dce8-4794-9142-c53dc4e0e30d')]), expected
-INFO [workflow ] start
-INFO [workflow ] starting step step_a
-INFO [step step_a] start
-INFO [job step_a] Using cached output in /tmp/cachedir/5504f8afaebc04b48f07e6e5f2b5237b
-INFO [step step_a] completed success
-INFO [workflow ] starting step step_b
-INFO [step step_b] start
-INFO [job step_b] Output of job will be cached in /tmp/cachedir/822d8caf8894683f434ed8eb8be1b10d
-INFO [job step_b] /tmp/cachedir/822d8caf8894683f434ed8eb8be1b10d$ touch \
-    step_b.txt
-INFO [job step_b] completed success
-INFO [step step_b] completed success
-INFO [workflow ] completed success
-{}
-INFO Final process status is success
 ```
 
 In this example the workflow step `step_a` was not re-evaluated as it had been cached, and
