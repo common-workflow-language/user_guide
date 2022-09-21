@@ -379,37 +379,37 @@
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="using-containers.html">
-     2.13. Using containers
+     2.13. Using Containers
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="creating-files-at-runtime.html">
-     2.14. Creating files at runtime
+     2.14. Creating Files at Runtime
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="staging-input-files.html">
-     2.15. Staging input files
+     2.15. Staging Input Files
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="best-practices.html">
-     2.16. Best practices
+     2.16. Best Practices
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="file-formats.html">
-     2.17. File formats
+     2.17. File Formats
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="metadata-and-authorship.html">
-     2.18. Metadata and authorship
+     2.18. Metadata and Authorship
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="specifying-software-requirements.html">
-     2.19. Specifying software requirements
+     2.19. Specifying Software Requirements
     </a>
    </li>
   </ul>
@@ -508,24 +508,24 @@ instead.</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ cwltool arguments.cwl arguments-job.yml
 INFO /opt/hostedtoolcache/Python/3.9.13/x64/bin/cwltool <span class="m">3</span>.1.20220913185150
 INFO Resolved <span class="s1">&#39;arguments.cwl&#39;</span> to <span class="s1">&#39;file:///home/runner/work/user_guide/user_guide/src/_includes/cwl/additional-arguments-and-parameters/arguments.cwl&#39;</span>
-INFO <span class="o">[</span>job arguments.cwl<span class="o">]</span> /tmp/uf37fwx0$ docker <span class="se">\</span>
+INFO <span class="o">[</span>job arguments.cwl<span class="o">]</span> /tmp/2m7ecmns$ docker <span class="se">\</span>
     run <span class="se">\</span>
     -i <span class="se">\</span>
-    --mount<span class="o">=</span><span class="nv">type</span><span class="o">=</span>bind,source<span class="o">=</span>/tmp/uf37fwx0,target<span class="o">=</span>/pQyLEO <span class="se">\</span>
-    --mount<span class="o">=</span><span class="nv">type</span><span class="o">=</span>bind,source<span class="o">=</span>/tmp/how4lk0_,target<span class="o">=</span>/tmp <span class="se">\</span>
-    --mount<span class="o">=</span><span class="nv">type</span><span class="o">=</span>bind,source<span class="o">=</span>/home/runner/work/user_guide/user_guide/src/_includes/cwl/additional-arguments-and-parameters/Hello.java,target<span class="o">=</span>/var/lib/cwl/stg70791672-5d1c-4e26-99ae-e6314add4b81/Hello.java,readonly <span class="se">\</span>
-    --workdir<span class="o">=</span>/pQyLEO <span class="se">\</span>
+    --mount<span class="o">=</span><span class="nv">type</span><span class="o">=</span>bind,source<span class="o">=</span>/tmp/2m7ecmns,target<span class="o">=</span>/mEOZgk <span class="se">\</span>
+    --mount<span class="o">=</span><span class="nv">type</span><span class="o">=</span>bind,source<span class="o">=</span>/tmp/uq0besaf,target<span class="o">=</span>/tmp <span class="se">\</span>
+    --mount<span class="o">=</span><span class="nv">type</span><span class="o">=</span>bind,source<span class="o">=</span>/home/runner/work/user_guide/user_guide/src/_includes/cwl/additional-arguments-and-parameters/Hello.java,target<span class="o">=</span>/var/lib/cwl/stg665c2419-2802-43f3-8114-4b3a2bfc5edf/Hello.java,readonly <span class="se">\</span>
+    --workdir<span class="o">=</span>/mEOZgk <span class="se">\</span>
     --read-only<span class="o">=</span><span class="nb">true</span> <span class="se">\</span>
     --user<span class="o">=</span><span class="m">1001</span>:121 <span class="se">\</span>
     --rm <span class="se">\</span>
-    --cidfile<span class="o">=</span>/tmp/hb_chdkb/20220920141336-742918.cid <span class="se">\</span>
+    --cidfile<span class="o">=</span>/tmp/jnim7srz/20220921072949-978656.cid <span class="se">\</span>
     --env<span class="o">=</span><span class="nv">TMPDIR</span><span class="o">=</span>/tmp <span class="se">\</span>
-    --env<span class="o">=</span><span class="nv">HOME</span><span class="o">=</span>/pQyLEO <span class="se">\</span>
+    --env<span class="o">=</span><span class="nv">HOME</span><span class="o">=</span>/mEOZgk <span class="se">\</span>
     openjdk:9.0.1-11-slim <span class="se">\</span>
     javac <span class="se">\</span>
     -d <span class="se">\</span>
-    /pQyLEO <span class="se">\</span>
-    /var/lib/cwl/stg70791672-5d1c-4e26-99ae-e6314add4b81/Hello.java
+    /mEOZgk <span class="se">\</span>
+    /var/lib/cwl/stg665c2419-2802-43f3-8114-4b3a2bfc5edf/Hello.java
 INFO <span class="o">[</span>job arguments.cwl<span class="o">]</span> Max memory used: 0MiB
 INFO <span class="o">[</span>job arguments.cwl<span class="o">]</span> completed success
 <span class="o">{</span>

@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    <title>2.15. Staging input files &#8212; Common Workflow Language User Guide 0.1 documentation</title>
+    <title>2.15. Staging Input Files &#8212; Common Workflow Language User Guide 0.1 documentation</title>
   <script>
     document.documentElement.dataset.mode = localStorage.getItem("mode") || "light";
     document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
@@ -44,8 +44,8 @@
     <link rel="shortcut icon" href="../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="2.16. Best practices" href="best-practices.html" />
-    <link rel="prev" title="2.14. Creating files at runtime" href="creating-files-at-runtime.html" />
+    <link rel="next" title="2.16. Best Practices" href="best-practices.html" />
+    <link rel="prev" title="2.14. Creating Files at Runtime" href="creating-files-at-runtime.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="docsearch:language" content="en">
   </head>
@@ -379,37 +379,37 @@
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="using-containers.html">
-     2.13. Using containers
+     2.13. Using Containers
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="creating-files-at-runtime.html">
-     2.14. Creating files at runtime
+     2.14. Creating Files at Runtime
     </a>
    </li>
    <li class="toctree-l2 current active">
     <a class="current reference internal" href="#">
-     2.15. Staging input files
+     2.15. Staging Input Files
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="best-practices.html">
-     2.16. Best practices
+     2.16. Best Practices
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="file-formats.html">
-     2.17. File formats
+     2.17. File Formats
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="metadata-and-authorship.html">
-     2.18. Metadata and authorship
+     2.18. Metadata and Authorship
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="specifying-software-requirements.html">
-     2.19. Specifying software requirements
+     2.19. Specifying Software Requirements
     </a>
    </li>
   </ul>
@@ -458,7 +458,7 @@
             <article class="bd-article" role="main">
               
   <section id="staging-input-files">
-<h1><span class="section-number">2.15. </span>Staging input files<a class="headerlink" href="#staging-input-files" title="Permalink to this heading">#</a></h1>
+<h1><span class="section-number">2.15. </span>Staging Input Files<a class="headerlink" href="#staging-input-files" title="Permalink to this heading">#</a></h1>
 <p>Normally, input files are located in a read-only directory separate from
 the output directory.  This causes problems if the underlying tool expects to
 write its output files alongside the input file in the same directory.  You use <code class="docutils literal notranslate"><span class="pre">InitialWorkDirRequirement</span></code> to stage input files into the output directory.
@@ -508,19 +508,19 @@ command line:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ cwltool linkfile.cwl arguments-job.yml
 INFO /opt/hostedtoolcache/Python/3.9.13/x64/bin/cwltool <span class="m">3</span>.1.20220913185150
 INFO Resolved <span class="s1">&#39;linkfile.cwl&#39;</span> to <span class="s1">&#39;file:///home/runner/work/user_guide/user_guide/src/_includes/cwl/staging-input-files/linkfile.cwl&#39;</span>
-INFO <span class="o">[</span>job linkfile.cwl<span class="o">]</span> /tmp/b20p92bg$ docker <span class="se">\</span>
+INFO <span class="o">[</span>job linkfile.cwl<span class="o">]</span> /tmp/txc853e_$ docker <span class="se">\</span>
     run <span class="se">\</span>
     -i <span class="se">\</span>
-    --mount<span class="o">=</span><span class="nv">type</span><span class="o">=</span>bind,source<span class="o">=</span>/tmp/b20p92bg,target<span class="o">=</span>/GPPZpZ <span class="se">\</span>
-    --mount<span class="o">=</span><span class="nv">type</span><span class="o">=</span>bind,source<span class="o">=</span>/tmp/gxxhnwbp,target<span class="o">=</span>/tmp <span class="se">\</span>
-    --mount<span class="o">=</span><span class="nv">type</span><span class="o">=</span>bind,source<span class="o">=</span>/home/runner/work/user_guide/user_guide/src/_includes/cwl/staging-input-files/Hello.java,target<span class="o">=</span>/GPPZpZ/Hello.java,readonly <span class="se">\</span>
-    --workdir<span class="o">=</span>/GPPZpZ <span class="se">\</span>
+    --mount<span class="o">=</span><span class="nv">type</span><span class="o">=</span>bind,source<span class="o">=</span>/tmp/txc853e_,target<span class="o">=</span>/AmpZGB <span class="se">\</span>
+    --mount<span class="o">=</span><span class="nv">type</span><span class="o">=</span>bind,source<span class="o">=</span>/tmp/77t_87dq,target<span class="o">=</span>/tmp <span class="se">\</span>
+    --mount<span class="o">=</span><span class="nv">type</span><span class="o">=</span>bind,source<span class="o">=</span>/home/runner/work/user_guide/user_guide/src/_includes/cwl/staging-input-files/Hello.java,target<span class="o">=</span>/AmpZGB/Hello.java,readonly <span class="se">\</span>
+    --workdir<span class="o">=</span>/AmpZGB <span class="se">\</span>
     --read-only<span class="o">=</span><span class="nb">true</span> <span class="se">\</span>
     --user<span class="o">=</span><span class="m">1001</span>:121 <span class="se">\</span>
     --rm <span class="se">\</span>
-    --cidfile<span class="o">=</span>/tmp/5ht_tvta/20220920141408-479569.cid <span class="se">\</span>
+    --cidfile<span class="o">=</span>/tmp/28m14jvb/20220921073029-144779.cid <span class="se">\</span>
     --env<span class="o">=</span><span class="nv">TMPDIR</span><span class="o">=</span>/tmp <span class="se">\</span>
-    --env<span class="o">=</span><span class="nv">HOME</span><span class="o">=</span>/GPPZpZ <span class="se">\</span>
+    --env<span class="o">=</span><span class="nv">HOME</span><span class="o">=</span>/AmpZGB <span class="se">\</span>
     openjdk:9.0.1-11-slim <span class="se">\</span>
     javac <span class="se">\</span>
     Hello.java
@@ -553,13 +553,13 @@ INFO Final process status is success
       <i class="fas fa-angle-left"></i>
       <div class="prev-next-info">
           <p class="prev-next-subtitle">previous</p>
-          <p class="prev-next-title"><span class="section-number">2.14. </span>Creating files at runtime</p>
+          <p class="prev-next-title"><span class="section-number">2.14. </span>Creating Files at Runtime</p>
       </div>
   </a>
   <a class='right-next' id="next-link" href="best-practices.html" title="next page">
   <div class="prev-next-info">
       <p class="prev-next-subtitle">next</p>
-      <p class="prev-next-title"><span class="section-number">2.16. </span>Best practices</p>
+      <p class="prev-next-title"><span class="section-number">2.16. </span>Best Practices</p>
   </div>
   <i class="fas fa-angle-right"></i>
   </a>

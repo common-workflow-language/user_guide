@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    <title>2.13. Using containers &#8212; Common Workflow Language User Guide 0.1 documentation</title>
+    <title>2.13. Using Containers &#8212; Common Workflow Language User Guide 0.1 documentation</title>
   <script>
     document.documentElement.dataset.mode = localStorage.getItem("mode") || "light";
     document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
@@ -44,7 +44,7 @@
     <link rel="shortcut icon" href="../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="2.14. Creating files at runtime" href="creating-files-at-runtime.html" />
+    <link rel="next" title="2.14. Creating Files at Runtime" href="creating-files-at-runtime.html" />
     <link rel="prev" title="2.12. Environment Variables" href="environment-variables.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="docsearch:language" content="en">
@@ -379,37 +379,37 @@
    </li>
    <li class="toctree-l2 current active">
     <a class="current reference internal" href="#">
-     2.13. Using containers
+     2.13. Using Containers
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="creating-files-at-runtime.html">
-     2.14. Creating files at runtime
+     2.14. Creating Files at Runtime
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="staging-input-files.html">
-     2.15. Staging input files
+     2.15. Staging Input Files
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="best-practices.html">
-     2.16. Best practices
+     2.16. Best Practices
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="file-formats.html">
-     2.17. File formats
+     2.17. File Formats
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="metadata-and-authorship.html">
-     2.18. Metadata and authorship
+     2.18. Metadata and Authorship
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="specifying-software-requirements.html">
-     2.19. Specifying software requirements
+     2.19. Specifying Software Requirements
     </a>
    </li>
   </ul>
@@ -458,9 +458,9 @@
             <article class="bd-article" role="main">
               
   <section id="using-containers">
-<h1><span class="section-number">2.13. </span>Using containers<a class="headerlink" href="#using-containers" title="Permalink to this heading">#</a></h1>
+<h1><span class="section-number">2.13. </span>Using Containers<a class="headerlink" href="#using-containers" title="Permalink to this heading">#</a></h1>
 <section id="running-tools-inside-docker">
-<h2><span class="section-number">2.13.1. </span>Running tools inside Docker<a class="headerlink" href="#running-tools-inside-docker" title="Permalink to this heading">#</a></h2>
+<h2><span class="section-number">2.13.1. </span>Running Tools Inside Docker<a class="headerlink" href="#running-tools-inside-docker" title="Permalink to this heading">#</a></h2>
 <p><a class="reference external" href="https://docker.io">Docker</a> containers simplify software installation by providing a
 complete known-good runtime for software and its dependencies.  However,
 containers are also purposefully isolated from the host system, so in
@@ -528,23 +528,23 @@ input object on the command line:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ cwltool docker.cwl docker-job.yml
 INFO /opt/hostedtoolcache/Python/3.9.13/x64/bin/cwltool <span class="m">3</span>.1.20220913185150
 INFO Resolved <span class="s1">&#39;docker.cwl&#39;</span> to <span class="s1">&#39;file:///home/runner/work/user_guide/user_guide/src/_includes/cwl/using-containers/docker.cwl&#39;</span>
-INFO <span class="o">[</span>job docker.cwl<span class="o">]</span> /tmp/vm1xijaw$ docker <span class="se">\</span>
+INFO <span class="o">[</span>job docker.cwl<span class="o">]</span> /tmp/hac577g3$ docker <span class="se">\</span>
     run <span class="se">\</span>
     -i <span class="se">\</span>
-    --mount<span class="o">=</span><span class="nv">type</span><span class="o">=</span>bind,source<span class="o">=</span>/tmp/vm1xijaw,target<span class="o">=</span>/pNWgog <span class="se">\</span>
-    --mount<span class="o">=</span><span class="nv">type</span><span class="o">=</span>bind,source<span class="o">=</span>/tmp/u334aezt,target<span class="o">=</span>/tmp <span class="se">\</span>
-    --mount<span class="o">=</span><span class="nv">type</span><span class="o">=</span>bind,source<span class="o">=</span>/home/runner/work/user_guide/user_guide/src/_includes/cwl/using-containers/hello.js,target<span class="o">=</span>/var/lib/cwl/stgda97544d-0bbc-4262-883c-c2d900041572/hello.js,readonly <span class="se">\</span>
-    --workdir<span class="o">=</span>/pNWgog <span class="se">\</span>
+    --mount<span class="o">=</span><span class="nv">type</span><span class="o">=</span>bind,source<span class="o">=</span>/tmp/hac577g3,target<span class="o">=</span>/eVSTWR <span class="se">\</span>
+    --mount<span class="o">=</span><span class="nv">type</span><span class="o">=</span>bind,source<span class="o">=</span>/tmp/p0tqn4h9,target<span class="o">=</span>/tmp <span class="se">\</span>
+    --mount<span class="o">=</span><span class="nv">type</span><span class="o">=</span>bind,source<span class="o">=</span>/home/runner/work/user_guide/user_guide/src/_includes/cwl/using-containers/hello.js,target<span class="o">=</span>/var/lib/cwl/stg06a63c35-c16b-41ba-b7d1-b218f5673207/hello.js,readonly <span class="se">\</span>
+    --workdir<span class="o">=</span>/eVSTWR <span class="se">\</span>
     --read-only<span class="o">=</span><span class="nb">true</span> <span class="se">\</span>
     --log-driver<span class="o">=</span>none <span class="se">\</span>
     --user<span class="o">=</span><span class="m">1001</span>:121 <span class="se">\</span>
     --rm <span class="se">\</span>
-    --cidfile<span class="o">=</span>/tmp/tq5dfcl9/20220920141410-836323.cid <span class="se">\</span>
+    --cidfile<span class="o">=</span>/tmp/xk18anv3/20220921073032-219462.cid <span class="se">\</span>
     --env<span class="o">=</span><span class="nv">TMPDIR</span><span class="o">=</span>/tmp <span class="se">\</span>
-    --env<span class="o">=</span><span class="nv">HOME</span><span class="o">=</span>/pNWgog <span class="se">\</span>
+    --env<span class="o">=</span><span class="nv">HOME</span><span class="o">=</span>/eVSTWR <span class="se">\</span>
     node:slim <span class="se">\</span>
     node <span class="se">\</span>
-    /var/lib/cwl/stgda97544d-0bbc-4262-883c-c2d900041572/hello.js &gt; /tmp/vm1xijaw/output.txt
+    /var/lib/cwl/stg06a63c35-c16b-41ba-b7d1-b218f5673207/hello.js &gt; /tmp/hac577g3/output.txt
 INFO <span class="o">[</span>job docker.cwl<span class="o">]</span> Max memory used: 0MiB
 INFO <span class="o">[</span>job docker.cwl<span class="o">]</span> completed success
 <span class="o">{</span>
@@ -590,7 +590,7 @@ the container, as reflected in the invocation of the <code class="docutils liter
   <a class='right-next' id="next-link" href="creating-files-at-runtime.html" title="next page">
   <div class="prev-next-info">
       <p class="prev-next-subtitle">next</p>
-      <p class="prev-next-title"><span class="section-number">2.14. </span>Creating files at runtime</p>
+      <p class="prev-next-title"><span class="section-number">2.14. </span>Creating Files at Runtime</p>
   </div>
   <i class="fas fa-angle-right"></i>
   </a>
@@ -612,7 +612,7 @@ the container, as reflected in the invocation of the <code class="docutils liter
     <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#running-tools-inside-docker">
-   2.13.1. Running tools inside Docker
+   2.13.1. Running Tools Inside Docker
   </a>
  </li>
 </ul>

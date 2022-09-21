@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    <title>2.17. File formats &#8212; Common Workflow Language User Guide 0.1 documentation</title>
+    <title>2.17. File Formats &#8212; Common Workflow Language User Guide 0.1 documentation</title>
   <script>
     document.documentElement.dataset.mode = localStorage.getItem("mode") || "light";
     document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
@@ -44,8 +44,8 @@
     <link rel="shortcut icon" href="../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="2.18. Metadata and authorship" href="metadata-and-authorship.html" />
-    <link rel="prev" title="2.16. Best practices" href="best-practices.html" />
+    <link rel="next" title="2.18. Metadata and Authorship" href="metadata-and-authorship.html" />
+    <link rel="prev" title="2.16. Best Practices" href="best-practices.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="docsearch:language" content="en">
   </head>
@@ -379,37 +379,37 @@
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="using-containers.html">
-     2.13. Using containers
+     2.13. Using Containers
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="creating-files-at-runtime.html">
-     2.14. Creating files at runtime
+     2.14. Creating Files at Runtime
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="staging-input-files.html">
-     2.15. Staging input files
+     2.15. Staging Input Files
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="best-practices.html">
-     2.16. Best practices
+     2.16. Best Practices
     </a>
    </li>
    <li class="toctree-l2 current active">
     <a class="current reference internal" href="#">
-     2.17. File formats
+     2.17. File Formats
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="metadata-and-authorship.html">
-     2.18. Metadata and authorship
+     2.18. Metadata and Authorship
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="specifying-software-requirements.html">
-     2.19. Specifying software requirements
+     2.19. Specifying Software Requirements
     </a>
    </li>
   </ul>
@@ -458,7 +458,7 @@
             <article class="bd-article" role="main">
               
   <section id="file-formats">
-<h1><span class="section-number">2.17. </span>File formats<a class="headerlink" href="#file-formats" title="Permalink to this heading">#</a></h1>
+<h1><span class="section-number">2.17. </span>File Formats<a class="headerlink" href="#file-formats" title="Permalink to this heading">#</a></h1>
 <p>Tools and workflows can take <code class="docutils literal notranslate"><span class="pre">File</span></code> types as input and produce them as output.
 We also recommend indicating the format for <code class="docutils literal notranslate"><span class="pre">File</span></code> types. This helps document
 for others how to use your tool while allowing you to do some simple
@@ -534,16 +534,16 @@ command line:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ cwltool metadata_example.cwl sample.yml
 INFO /opt/hostedtoolcache/Python/3.9.13/x64/bin/cwltool <span class="m">3</span>.1.20220913185150
 INFO Resolved <span class="s1">&#39;metadata_example.cwl&#39;</span> to <span class="s1">&#39;file:///home/runner/work/user_guide/user_guide/src/_includes/cwl/file-formats/metadata_example.cwl&#39;</span>
-INFO <span class="o">[</span>job metadata_example.cwl<span class="o">]</span> /tmp/3dnsmdz3$ wc <span class="se">\</span>
+INFO <span class="o">[</span>job metadata_example.cwl<span class="o">]</span> /tmp/9w7vil8v$ wc <span class="se">\</span>
     -l <span class="se">\</span>
-    /tmp/wa9eobc9/stg52a2fc4d-0065-49e9-b27a-129a43516a79/file-formats.bam &gt; /tmp/3dnsmdz3/output.txt
+    /tmp/089sxr4p/stge6787dea-d296-4bc9-8f79-e9ca5a91acdf/file-formats.bam &gt; /tmp/9w7vil8v/output.txt
 INFO <span class="o">[</span>job metadata_example.cwl<span class="o">]</span> completed success
 <span class="o">{</span>
     <span class="s2">&quot;report&quot;</span>: <span class="o">{</span>
         <span class="s2">&quot;location&quot;</span>: <span class="s2">&quot;file:///home/runner/work/user_guide/user_guide/src/_includes/cwl/file-formats/output.txt&quot;</span>,
         <span class="s2">&quot;basename&quot;</span>: <span class="s2">&quot;output.txt&quot;</span>,
         <span class="s2">&quot;class&quot;</span>: <span class="s2">&quot;File&quot;</span>,
-        <span class="s2">&quot;checksum&quot;</span>: <span class="s2">&quot;sha1</span><span class="nv">$5</span><span class="s2">bc3a4021e8f3d079db93c5a252c83c98d527cc1&quot;</span>,
+        <span class="s2">&quot;checksum&quot;</span>: <span class="s2">&quot;sha1</span><span class="nv">$d68a9fa08f5041b71793d524ccd06fb69afaa85e</span><span class="s2">&quot;</span>,
         <span class="s2">&quot;size&quot;</span>: <span class="m">77</span>,
         <span class="s2">&quot;format&quot;</span>: <span class="s2">&quot;http://edamontology.org/format_1964&quot;</span>,
         <span class="s2">&quot;path&quot;</span>: <span class="s2">&quot;/home/runner/work/user_guide/user_guide/src/_includes/cwl/file-formats/output.txt&quot;</span>
@@ -567,13 +567,13 @@ INFO Final process status is success
       <i class="fas fa-angle-left"></i>
       <div class="prev-next-info">
           <p class="prev-next-subtitle">previous</p>
-          <p class="prev-next-title"><span class="section-number">2.16. </span>Best practices</p>
+          <p class="prev-next-title"><span class="section-number">2.16. </span>Best Practices</p>
       </div>
   </a>
   <a class='right-next' id="next-link" href="metadata-and-authorship.html" title="next page">
   <div class="prev-next-info">
       <p class="prev-next-subtitle">next</p>
-      <p class="prev-next-title"><span class="section-number">2.18. </span>Metadata and authorship</p>
+      <p class="prev-next-title"><span class="section-number">2.18. </span>Metadata and Authorship</p>
   </div>
   <i class="fas fa-angle-right"></i>
   </a>

@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    <title>2.14. Creating files at runtime &#8212; Common Workflow Language User Guide 0.1 documentation</title>
+    <title>2.14. Creating Files at Runtime &#8212; Common Workflow Language User Guide 0.1 documentation</title>
   <script>
     document.documentElement.dataset.mode = localStorage.getItem("mode") || "light";
     document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
@@ -44,8 +44,8 @@
     <link rel="shortcut icon" href="../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="2.15. Staging input files" href="staging-input-files.html" />
-    <link rel="prev" title="2.13. Using containers" href="using-containers.html" />
+    <link rel="next" title="2.15. Staging Input Files" href="staging-input-files.html" />
+    <link rel="prev" title="2.13. Using Containers" href="using-containers.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="docsearch:language" content="en">
   </head>
@@ -379,37 +379,37 @@
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="using-containers.html">
-     2.13. Using containers
+     2.13. Using Containers
     </a>
    </li>
    <li class="toctree-l2 current active">
     <a class="current reference internal" href="#">
-     2.14. Creating files at runtime
+     2.14. Creating Files at Runtime
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="staging-input-files.html">
-     2.15. Staging input files
+     2.15. Staging Input Files
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="best-practices.html">
-     2.16. Best practices
+     2.16. Best Practices
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="file-formats.html">
-     2.17. File formats
+     2.17. File Formats
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="metadata-and-authorship.html">
-     2.18. Metadata and authorship
+     2.18. Metadata and Authorship
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="specifying-software-requirements.html">
-     2.19. Specifying software requirements
+     2.19. Specifying Software Requirements
     </a>
    </li>
   </ul>
@@ -458,7 +458,7 @@
             <article class="bd-article" role="main">
               
   <section id="creating-files-at-runtime">
-<h1><span class="section-number">2.14. </span>Creating files at runtime<a class="headerlink" href="#creating-files-at-runtime" title="Permalink to this heading">#</a></h1>
+<h1><span class="section-number">2.14. </span>Creating Files at Runtime<a class="headerlink" href="#creating-files-at-runtime" title="Permalink to this heading">#</a></h1>
 <p>Sometimes you need to create a file on the fly from input parameters,
 such as tools which expect to read their input configuration from a file
 rather than the command line parameters, or need a small wrapper shell script.</p>
@@ -526,8 +526,8 @@ command line:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ cwltool createfile.cwl echo-job.yml
 INFO /opt/hostedtoolcache/Python/3.9.13/x64/bin/cwltool <span class="m">3</span>.1.20220913185150
 INFO Resolved <span class="s1">&#39;createfile.cwl&#39;</span> to <span class="s1">&#39;file:///home/runner/work/user_guide/user_guide/src/_includes/cwl/creating-files-at-runtime/createfile.cwl&#39;</span>
-INFO <span class="o">[</span>job createfile.cwl<span class="o">]</span> /tmp/fx51tw_p$ sh <span class="se">\</span>
-    example.sh &gt; /tmp/fx51tw_p/output.txt
+INFO <span class="o">[</span>job createfile.cwl<span class="o">]</span> /tmp/rdxglksh$ sh <span class="se">\</span>
+    example.sh &gt; /tmp/rdxglksh/output.txt
 INFO <span class="o">[</span>job createfile.cwl<span class="o">]</span> completed success
 <span class="o">{</span>
     <span class="s2">&quot;example_out&quot;</span>: <span class="o">{</span>
@@ -560,13 +560,13 @@ Message is: Hello world!
       <i class="fas fa-angle-left"></i>
       <div class="prev-next-info">
           <p class="prev-next-subtitle">previous</p>
-          <p class="prev-next-title"><span class="section-number">2.13. </span>Using containers</p>
+          <p class="prev-next-title"><span class="section-number">2.13. </span>Using Containers</p>
       </div>
   </a>
   <a class='right-next' id="next-link" href="staging-input-files.html" title="next page">
   <div class="prev-next-info">
       <p class="prev-next-subtitle">next</p>
-      <p class="prev-next-title"><span class="section-number">2.15. </span>Staging input files</p>
+      <p class="prev-next-title"><span class="section-number">2.15. </span>Staging Input Files</p>
   </div>
   <i class="fas fa-angle-right"></i>
   </a>

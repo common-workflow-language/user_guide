@@ -519,7 +519,7 @@ two-step workflow to a single step subworkflow:
 Now the scatter acts on a single step, but that step consists of two steps so each step is performed
 in parallel.
 
-## Conditional workflows
+## Conditional Workflows
 
 This workflow contains a conditional step and is executed based on the input.
 This allows workflows to skip additional steps based on input parameters given at the start of the program or by previous steps.

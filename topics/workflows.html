@@ -379,37 +379,37 @@
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="using-containers.html">
-     2.13. Using containers
+     2.13. Using Containers
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="creating-files-at-runtime.html">
-     2.14. Creating files at runtime
+     2.14. Creating Files at Runtime
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="staging-input-files.html">
-     2.15. Staging input files
+     2.15. Staging Input Files
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="best-practices.html">
-     2.16. Best practices
+     2.16. Best Practices
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="file-formats.html">
-     2.17. File formats
+     2.17. File Formats
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="metadata-and-authorship.html">
-     2.18. Metadata and authorship
+     2.18. Metadata and Authorship
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="specifying-software-requirements.html">
-     2.19. Specifying software requirements
+     2.19. Specifying Software Requirements
     </a>
    </li>
   </ul>
@@ -660,33 +660,33 @@ INFO Resolved <span class="s1">&#39;1st-workflow.cwl&#39;</span> to <span class=
 INFO <span class="o">[</span>workflow <span class="o">]</span> start
 INFO <span class="o">[</span>workflow <span class="o">]</span> starting step untar
 INFO <span class="o">[</span>step untar<span class="o">]</span> start
-INFO <span class="o">[</span>job untar<span class="o">]</span> /tmp/o74imuom$ tar <span class="se">\</span>
+INFO <span class="o">[</span>job untar<span class="o">]</span> /tmp/rnz0owkl$ tar <span class="se">\</span>
     --extract <span class="se">\</span>
     --file <span class="se">\</span>
-    /tmp/h1922r7i/stg40ba52e5-20d6-40b1-8594-6de79bc3cc28/hello.tar <span class="se">\</span>
+    /tmp/gvpea90m/stg3a629cbb-55db-4398-acb4-1fd9222b713e/hello.tar <span class="se">\</span>
     Hello.java
 INFO <span class="o">[</span>job untar<span class="o">]</span> completed success
 INFO <span class="o">[</span>step untar<span class="o">]</span> completed success
 INFO <span class="o">[</span>workflow <span class="o">]</span> starting step compile
 INFO <span class="o">[</span>step compile<span class="o">]</span> start
-INFO <span class="o">[</span>job compile<span class="o">]</span> /tmp/i2xong1g$ docker <span class="se">\</span>
+INFO <span class="o">[</span>job compile<span class="o">]</span> /tmp/01rjcge5$ docker <span class="se">\</span>
     run <span class="se">\</span>
     -i <span class="se">\</span>
-    --mount<span class="o">=</span><span class="nv">type</span><span class="o">=</span>bind,source<span class="o">=</span>/tmp/i2xong1g,target<span class="o">=</span>/LcFIWN <span class="se">\</span>
-    --mount<span class="o">=</span><span class="nv">type</span><span class="o">=</span>bind,source<span class="o">=</span>/tmp/fl37k8jr,target<span class="o">=</span>/tmp <span class="se">\</span>
-    --mount<span class="o">=</span><span class="nv">type</span><span class="o">=</span>bind,source<span class="o">=</span>/tmp/o74imuom/Hello.java,target<span class="o">=</span>/var/lib/cwl/stg4bea6a0f-4ac3-44de-93e7-601984e8ce3b/Hello.java,readonly <span class="se">\</span>
-    --workdir<span class="o">=</span>/LcFIWN <span class="se">\</span>
+    --mount<span class="o">=</span><span class="nv">type</span><span class="o">=</span>bind,source<span class="o">=</span>/tmp/01rjcge5,target<span class="o">=</span>/hMpgMJ <span class="se">\</span>
+    --mount<span class="o">=</span><span class="nv">type</span><span class="o">=</span>bind,source<span class="o">=</span>/tmp/m3ppt1to,target<span class="o">=</span>/tmp <span class="se">\</span>
+    --mount<span class="o">=</span><span class="nv">type</span><span class="o">=</span>bind,source<span class="o">=</span>/tmp/rnz0owkl/Hello.java,target<span class="o">=</span>/var/lib/cwl/stgdcf34c28-dc20-4b4a-b95d-3aaabb2c1d04/Hello.java,readonly <span class="se">\</span>
+    --workdir<span class="o">=</span>/hMpgMJ <span class="se">\</span>
     --read-only<span class="o">=</span><span class="nb">true</span> <span class="se">\</span>
     --user<span class="o">=</span><span class="m">1001</span>:121 <span class="se">\</span>
     --rm <span class="se">\</span>
-    --cidfile<span class="o">=</span>/tmp/ydcnmako/20220920141413-281047.cid <span class="se">\</span>
+    --cidfile<span class="o">=</span>/tmp/mv_vikka/20220921073035-115040.cid <span class="se">\</span>
     --env<span class="o">=</span><span class="nv">TMPDIR</span><span class="o">=</span>/tmp <span class="se">\</span>
-    --env<span class="o">=</span><span class="nv">HOME</span><span class="o">=</span>/LcFIWN <span class="se">\</span>
+    --env<span class="o">=</span><span class="nv">HOME</span><span class="o">=</span>/hMpgMJ <span class="se">\</span>
     openjdk:9.0.1-11-slim <span class="se">\</span>
     javac <span class="se">\</span>
     -d <span class="se">\</span>
-    /LcFIWN <span class="se">\</span>
-    /var/lib/cwl/stg4bea6a0f-4ac3-44de-93e7-601984e8ce3b/Hello.java
+    /hMpgMJ <span class="se">\</span>
+    /var/lib/cwl/stgdcf34c28-dc20-4b4a-b95d-3aaabb2c1d04/Hello.java
 INFO <span class="o">[</span>job compile<span class="o">]</span> Max memory used: 0MiB
 INFO <span class="o">[</span>job compile<span class="o">]</span> completed success
 INFO <span class="o">[</span>step compile<span class="o">]</span> completed success
@@ -997,20 +997,20 @@ INFO Resolved <span class="s1">&#39;scatter-workflow.cwl&#39;</span> to <span cl
 INFO <span class="o">[</span>workflow <span class="o">]</span> start
 INFO <span class="o">[</span>workflow <span class="o">]</span> starting step <span class="nb">echo</span>
 INFO <span class="o">[</span>step echo<span class="o">]</span> start
-INFO <span class="o">[</span>job echo<span class="o">]</span> /tmp/fcx7tv3l$ <span class="nb">echo</span> <span class="se">\</span>
-    <span class="s1">&#39;Hello world!&#39;</span> &gt; /tmp/fcx7tv3l/3f8f180805bc1795e077d75bc6dbec026a376483
+INFO <span class="o">[</span>job echo<span class="o">]</span> /tmp/10lv7d52$ <span class="nb">echo</span> <span class="se">\</span>
+    <span class="s1">&#39;Hello world!&#39;</span> &gt; /tmp/10lv7d52/3f8f180805bc1795e077d75bc6dbec026a376483
 INFO <span class="o">[</span>job echo<span class="o">]</span> completed success
 INFO <span class="o">[</span>step echo<span class="o">]</span> start
-INFO <span class="o">[</span>job echo_2<span class="o">]</span> /tmp/xoqmisjk$ <span class="nb">echo</span> <span class="se">\</span>
-    <span class="s1">&#39;Hola mundo!&#39;</span> &gt; /tmp/xoqmisjk/3f8f180805bc1795e077d75bc6dbec026a376483
+INFO <span class="o">[</span>job echo_2<span class="o">]</span> /tmp/e960xe0m$ <span class="nb">echo</span> <span class="se">\</span>
+    <span class="s1">&#39;Hola mundo!&#39;</span> &gt; /tmp/e960xe0m/3f8f180805bc1795e077d75bc6dbec026a376483
 INFO <span class="o">[</span>job echo_2<span class="o">]</span> completed success
 INFO <span class="o">[</span>step echo<span class="o">]</span> start
-INFO <span class="o">[</span>job echo_3<span class="o">]</span> /tmp/bpd4uyz_$ <span class="nb">echo</span> <span class="se">\</span>
-    <span class="s1">&#39;Bonjour le monde!&#39;</span> &gt; /tmp/bpd4uyz_/3f8f180805bc1795e077d75bc6dbec026a376483
+INFO <span class="o">[</span>job echo_3<span class="o">]</span> /tmp/tftjhkq9$ <span class="nb">echo</span> <span class="se">\</span>
+    <span class="s1">&#39;Bonjour le monde!&#39;</span> &gt; /tmp/tftjhkq9/3f8f180805bc1795e077d75bc6dbec026a376483
 INFO <span class="o">[</span>job echo_3<span class="o">]</span> completed success
 INFO <span class="o">[</span>step echo<span class="o">]</span> start
-INFO <span class="o">[</span>job echo_4<span class="o">]</span> /tmp/y0l0ypf1$ <span class="nb">echo</span> <span class="se">\</span>
-    <span class="s1">&#39;Hallo welt!&#39;</span> &gt; /tmp/y0l0ypf1/3f8f180805bc1795e077d75bc6dbec026a376483
+INFO <span class="o">[</span>job echo_4<span class="o">]</span> /tmp/lukj6v18$ <span class="nb">echo</span> <span class="se">\</span>
+    <span class="s1">&#39;Hallo welt!&#39;</span> &gt; /tmp/lukj6v18/3f8f180805bc1795e077d75bc6dbec026a376483
 INFO <span class="o">[</span>job echo_4<span class="o">]</span> completed success
 INFO <span class="o">[</span>step echo<span class="o">]</span> completed success
 INFO <span class="o">[</span>workflow <span class="o">]</span> completed success
@@ -1139,7 +1139,7 @@ two-step workflow to a single step subworkflow:</p>
 in parallel.</p>
 </section>
 <section id="conditional-workflows">
-<h2><span class="section-number">2.10.4. </span>Conditional workflows<a class="headerlink" href="#conditional-workflows" title="Permalink to this heading">#</a></h2>
+<h2><span class="section-number">2.10.4. </span>Conditional Workflows<a class="headerlink" href="#conditional-workflows" title="Permalink to this heading">#</a></h2>
 <p>This workflow contains a conditional step and is executed based on the input.
 This allows workflows to skip additional steps based on input parameters given at the start of the program or by previous steps.</p>
 <div class="literal-block-wrapper docutils container" id="conditional-workflow-cwl">
@@ -1307,7 +1307,7 @@ This allows workflows to skip additional steps based on input parameters given a
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#conditional-workflows">
-   2.10.4. Conditional workflows
+   2.10.4. Conditional Workflows
   </a>
  </li>
 </ul>

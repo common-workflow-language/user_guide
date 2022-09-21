@@ -379,37 +379,37 @@
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="using-containers.html">
-     2.13. Using containers
+     2.13. Using Containers
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="creating-files-at-runtime.html">
-     2.14. Creating files at runtime
+     2.14. Creating Files at Runtime
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="staging-input-files.html">
-     2.15. Staging input files
+     2.15. Staging Input Files
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="best-practices.html">
-     2.16. Best practices
+     2.16. Best Practices
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="file-formats.html">
-     2.17. File formats
+     2.17. File Formats
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="metadata-and-authorship.html">
-     2.18. Metadata and authorship
+     2.18. Metadata and Authorship
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="specifying-software-requirements.html">
-     2.19. Specifying software requirements
+     2.19. Specifying Software Requirements
     </a>
    </li>
   </ul>
@@ -529,13 +529,13 @@ two commands and the expected output from the command line:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ cwltool inp.cwl inp-job.yml
 INFO /opt/hostedtoolcache/Python/3.9.13/x64/bin/cwltool <span class="m">3</span>.1.20220913185150
 INFO Resolved <span class="s1">&#39;inp.cwl&#39;</span> to <span class="s1">&#39;file:///home/runner/work/user_guide/user_guide/src/_includes/cwl/inputs/inp.cwl&#39;</span>
-INFO <span class="o">[</span>job inp.cwl<span class="o">]</span> /tmp/uspscu3z$ <span class="nb">echo</span> <span class="se">\</span>
+INFO <span class="o">[</span>job inp.cwl<span class="o">]</span> /tmp/yk71svrv$ <span class="nb">echo</span> <span class="se">\</span>
     -f <span class="se">\</span>
     -i42 <span class="se">\</span>
     --example-string <span class="se">\</span>
     hello <span class="se">\</span>
-    --file<span class="o">=</span>/tmp/x2kg5v0k/stgb621eca2-cfb0-4f10-bac0-cc14278b0861/whale.txt
--f -i42 --example-string hello --file<span class="o">=</span>/tmp/x2kg5v0k/stgb621eca2-cfb0-4f10-bac0-cc14278b0861/whale.txt
+    --file<span class="o">=</span>/tmp/opi168jb/stge66e25ae-1e1e-4f08-bb57-af0459ce7784/whale.txt
+-f -i42 --example-string hello --file<span class="o">=</span>/tmp/opi168jb/stge66e25ae-1e1e-4f08-bb57-af0459ce7784/whale.txt
 INFO <span class="o">[</span>job inp.cwl<span class="o">]</span> completed success
 <span class="o">{}</span>
 INFO Final process status is success
@@ -670,7 +670,7 @@ on the command line:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ cwltool array-inputs.cwl array-inputs-job.yml
 INFO /opt/hostedtoolcache/Python/3.9.13/x64/bin/cwltool <span class="m">3</span>.1.20220913185150
 INFO Resolved <span class="s1">&#39;array-inputs.cwl&#39;</span> to <span class="s1">&#39;file:///home/runner/work/user_guide/user_guide/src/_includes/cwl/inputs/array-inputs.cwl&#39;</span>
-INFO <span class="o">[</span>job array-inputs.cwl<span class="o">]</span> /tmp/fjmdigid$ <span class="nb">echo</span> <span class="se">\</span>
+INFO <span class="o">[</span>job array-inputs.cwl<span class="o">]</span> /tmp/dj5qlmw0$ <span class="nb">echo</span> <span class="se">\</span>
     -A <span class="se">\</span>
     one <span class="se">\</span>
     two <span class="se">\</span>
@@ -678,7 +678,7 @@ INFO <span class="o">[</span>job array-inputs.cwl<span class="o">]</span> /tmp/f
     -B<span class="o">=</span>four <span class="se">\</span>
     -B<span class="o">=</span>five <span class="se">\</span>
     -B<span class="o">=</span>six <span class="se">\</span>
-    -C<span class="o">=</span>seven,eight,nine &gt; /tmp/fjmdigid/output.txt
+    -C<span class="o">=</span>seven,eight,nine &gt; /tmp/dj5qlmw0/output.txt
 INFO <span class="o">[</span>job array-inputs.cwl<span class="o">]</span> completed success
 <span class="o">{</span>
     <span class="s2">&quot;example_out&quot;</span>: <span class="o">{</span>
@@ -793,13 +793,13 @@ record-job1.yml:1:1: the <span class="sb">`</span>dependent_parameters<span clas
 INFO /opt/hostedtoolcache/Python/3.9.13/x64/bin/cwltool <span class="m">3</span>.1.20220913185150
 INFO Resolved <span class="s1">&#39;record.cwl&#39;</span> to <span class="s1">&#39;file:///home/runner/work/user_guide/user_guide/src/_includes/cwl/inputs/record.cwl&#39;</span>
 record-job2.yml:6:3: Warning: invalid field <span class="sb">`</span>itemD<span class="sb">`</span>, expected one of: <span class="s1">&#39;itemC&#39;</span>
-INFO <span class="o">[</span>job record.cwl<span class="o">]</span> /tmp/9n3aatpm$ <span class="nb">echo</span> <span class="se">\</span>
+INFO <span class="o">[</span>job record.cwl<span class="o">]</span> /tmp/hqlzvkdg$ <span class="nb">echo</span> <span class="se">\</span>
     -A <span class="se">\</span>
     one <span class="se">\</span>
     -B <span class="se">\</span>
     two <span class="se">\</span>
     -C <span class="se">\</span>
-    three &gt; /tmp/9n3aatpm/output.txt
+    three &gt; /tmp/hqlzvkdg/output.txt
 INFO <span class="o">[</span>job record.cwl<span class="o">]</span> completed success
 <span class="o">{</span>
     <span class="s2">&quot;example_out&quot;</span>: <span class="o">{</span>
@@ -833,13 +833,13 @@ is added to the command line and <code class="docutils literal notranslate"><spa
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ cwltool record.cwl record-job3.yml
 INFO /opt/hostedtoolcache/Python/3.9.13/x64/bin/cwltool <span class="m">3</span>.1.20220913185150
 INFO Resolved <span class="s1">&#39;record.cwl&#39;</span> to <span class="s1">&#39;file:///home/runner/work/user_guide/user_guide/src/_includes/cwl/inputs/record.cwl&#39;</span>
-INFO <span class="o">[</span>job record.cwl<span class="o">]</span> /tmp/7qf1bn13$ <span class="nb">echo</span> <span class="se">\</span>
+INFO <span class="o">[</span>job record.cwl<span class="o">]</span> /tmp/37rouzlg$ <span class="nb">echo</span> <span class="se">\</span>
     -A <span class="se">\</span>
     one <span class="se">\</span>
     -B <span class="se">\</span>
     two <span class="se">\</span>
     -D <span class="se">\</span>
-    four &gt; /tmp/7qf1bn13/output.txt
+    four &gt; /tmp/37rouzlg/output.txt
 INFO <span class="o">[</span>job record.cwl<span class="o">]</span> completed success
 <span class="o">{</span>
     <span class="s2">&quot;example_out&quot;</span>: <span class="o">{</span>

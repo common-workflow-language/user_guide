@@ -1,4 +1,4 @@
-# File formats
+# File Formats
 
 Tools and workflows can take `File` types as input and produce them as output.
 We also recommend indicating the format for `File` types. This helps document
