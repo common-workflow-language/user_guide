@@ -1,30 +1,46 @@
 cwlVersion: v1.2
 class: Workflow
 
-inputs: []
-outputs: []
+inputs:
+  text:
+    type: string
+    default: 'Hello World'
+outputs:
+  reversed_message:
+    type: string
+    outputSource: step_b/reversed_message
 
 steps:
   step_a:
     run:
       class: CommandLineTool
-      inputs: []
+      stdout: stdout.txt
+      inputs:
+        text: string
       outputs:
-        step_a_file:
+        step_a_stdout:
           type: File
           outputBinding:
-            glob: 'step_a.txt'
-      arguments: ['touch', 'step_a.txt']
-    in: []
-    out: [step_a_file]
+            glob: 'stdout.txt'
+      arguments: ['echo', '-n', '$(inputs.text)']
+    in:
+      text: text
+    out: [step_a_stdout]
   step_b:
     run:
       class: CommandLineTool
-      inputs: []
-      outputs: []
-      arguments: ['touch', 'step_b.txt']
-    # To force step_b to wait for step_a
+      stdout: stdout.txt
+      inputs:
+        step_a_stdout: File
+      outputs:
+        reversed_message:
+          type: string
+          outputBinding:
+            glob: stdout.txt
+            loadContents: true
+            outputEval: $(self[0].contents)
+      arguments: ['rev', '$(inputs.step_a_stdout)']
     in:
-      step_a_file:
-        source: step_a/step_a_file
-    out: []
+      step_a_stdout:
+        source: step_a/step_a_stdout
+    out: [reversed_message]
