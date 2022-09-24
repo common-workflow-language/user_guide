@@ -131,51 +131,72 @@ code that you include or write in your CWL Document must be compliant with
 ECMAScript 5.1.
 ```
 
-For example, we can write a JavaScript function to an external file `custom-functions.js`:
+For example, we can use `InlineJavascriptRequirement` and write a JavaScript function
+inline in `expressionLib`. That function can then be used in other parts of the
+CWL document:
 
-```{literalinclude} /_includes/cwl/custom-functions.js
+```{literalinclude} /_includes/cwl/expressions/hello-world-expressionlib-inline.cwl
+:language: cwl
+:caption: "`hello-world-expressionlib-inline.cwl`"
+:name: "`hello-world-expressionlib-inline.cwl`"
+:emphasize-lines: 5, 14, 32
+```
+
+Running this CWL workflow will invoke the JavaScript function and result in
+the `echo` command printing the input message with capital initial letters:
+
+```{runcmd} cwltool hello-world-expressionlib-inline.cwl --message "hello world"
+:caption: "Running `hello-world-expressionlib-inline.cwl`."
+:name: running-hell-world-expressionlib-inline-cwl
+:working-directory: src/_includes/cwl/expressions/
+```
+
+Let's move the `capitalizeWords` function to an external file, `custom-functions.js`, and
+import it in our CWL document:
+
+```{literalinclude} /_includes/cwl/expressions/custom-functions.js
 :language: javascript
 :caption: "`custom-functions.js`"
 :name: "`custom-functions.js`"
 ```
 
-The following CWL document includes the `custom-functions.js` file and uses its function
-`capitalizeWords`:
-
-```{literalinclude} /_includes/cwl/hello-world-expressionlib.cwl
+```{literalinclude} /_includes/cwl/expressions/hello-world-expressionlib-external.cwl
 :language: cwl
-:caption: "`hello-world-expressionlib.cwl`"
-:name: "`hello-world-expressionlib.cwl`"
-```
-
-```{note}
-The `$include` statement can be used to include a file from the local disk or from a remote location.
-It works with both relative and absolute paths. Read the [text about `$include`](https://www.commonwl.org/v1.0/SchemaSalad.html#Include)
-from the CWL specification to learn more about it.
+:caption: "`hello-world-expressionlib-external.cwl`"
+:name: "`hello-world-expressionlib-external.cwl`"
+:emphasize-lines: 5-6, 14
 ```
 
 The `custom-functions.js` file is included in the CWL document with the `$include: custom-functions.js`
 statement. That makes the functions and variables available to be used in other parts of
 the CWL document.
 
-In another entry to the `expressionLib` attribute we then create another function,
-`createHelloWorldMessage`, that calls the `capitalizeWords` function from `custom-functions.js`.
-This is just to show that you can include external JavaScript files as well as define
-functions directly in your CWL document.
+```{runcmd} cwltool hello-world-expressionlib-external.cwl --message "hello world"
+:caption: "Running `hello-world-expressionlib-external.cwl`."
+:name: running-hell-world-expressionlib-external-cwl
+:working-directory: src/_includes/cwl/expressions/
+```
 
-Running this CWL workflow will invoke the JavaScript functions and result in
-the `echo` command printing the input message with capital initial letters:
+Finally, note that you can have both inline and external JavaScript code in your
+CWL document. In this final example we have added another entry to the `expressionLib`
+attribute with the new function `createHelloWorldMessage`, that calls the `capitalizeWords`
+function from the external file `custom-functions.js`.
 
-```{code-block} console
+```{literalinclude} /_includes/cwl/expressions/hello-world-expressionlib.cwl
+:language: cwl
+:caption: "`hello-world-expressionlib.cwl`"
+:name: "`hello-world-expressionlib.cwl`"
+:emphasize-lines: 5-17, 25
+```
+
+```{runcmd} cwltool hello-world-expressionlib.cwl --message "hello world"
 :caption: "Running `hello-world-expressionlib.cwl`."
 :name: running-hell-world-expressionlib-cwl
-$ cwltool hello-world-expressionlib.cwl --message "hello world"
-INFO /home/kinow/Development/python/workspace/cwltool/venv/bin/cwltool 3.1.20220821233356
-INFO Resolved 'hello-world-expressionlib.cwl' to 'file:///tmp/hello-world-expressionlib.cwl'
-INFO [job hello-world-expressionlib.cwl] /tmp/39sql4b4$ echo \
-    'Hello World'
-Hello World
-INFO [job hello-world-expressionlib.cwl] completed success
-{}
-INFO Final process status is success
+:working-directory: src/_includes/cwl/expressions/
+```
+
+```{note}
+The `$include` statement can be used to include a file from the local disk or from a remote location.
+It works with both relative and absolute paths. Read the [text about `$include`](https://www.commonwl.org/v1.0/SchemaSalad.html#Include)
+from the CWL specification to learn more about it.
 ```

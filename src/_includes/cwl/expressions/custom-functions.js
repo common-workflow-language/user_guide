@@ -1,5 +1,7 @@
 /**
  * Capitalize each word passed. Will split the text by spaces.
+ * For instance, given "hello world", it returns "Hello World".
+ *
  * @param {String} message - The input message.
  * @return {String} the message with each word with its initial letter capitalized.
  */
