@@ -230,8 +230,8 @@ $ cat output.txt
 -A one -B two -C three
 ```
 
-In the second example, `itemC` and `itemD` are exclusive, so only `itemC`
-is added to the command line and `itemD` is ignored.
+In the second example, `itemC` and `itemD` are exclusive, so only the first
+matching item (`itemC`) is added to the command line and remaining item (`itemD`) is ignored.
 
 ```{literalinclude} /_includes/cwl/inputs/record-job3.yml
 :language: yaml
