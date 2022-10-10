@@ -22,7 +22,8 @@ steps:
           type: File
           outputBinding:
             glob: 'stdout.txt'
-      arguments: ['echo', '-n', '$(inputs.text)']
+      baseCommand: echo
+      arguments: [ '-n', '$(inputs.text)' ]
     in:
       text: text
     out: [step_a_stdout]
