@@ -40,7 +40,8 @@ steps:
             glob: stdout.txt
             loadContents: true
             outputEval: $(self[0].contents)
-      arguments: ['rev', '$(inputs.step_a_stdout)']
+      baseCommand: rev
+      arguments: [ $(inputs.step_a_stdout) ]
     in:
       step_a_stdout:
         source: step_a/step_a_stdout
