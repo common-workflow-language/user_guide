@@ -10,6 +10,7 @@ _site
 .Rhistory
 .RData
 _build/
+build/
 *.egg-info/
 
 src/_includes/cwl/**/output.txt

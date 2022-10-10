@@ -21,4 +21,5 @@ best-practices.md
 file-formats.md
 metadata-and-authorship.md
 specifying-software-requirements.md
+troubleshooting.md
 ```
