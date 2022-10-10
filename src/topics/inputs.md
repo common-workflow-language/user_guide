@@ -29,6 +29,18 @@ Create a file called `inp-job.yml`:
 :name: inp-job.yml
 ```
 
+````{note}
+You can use `cwltool` to create a template input object. That saves you from having
+to type all the input parameters in a input object file:
+
+```{runcmd} cwltool --make-template inp.cwl
+:working-directory: src/_includes/cwl/inputs
+```
+
+You can redirect the output to a file, i.e. `cwltool --make-template inp.cwl > inp-job.yml`,
+and then modify the default values with your desired input values.
+````
+
 Notice that "example_file", as a `File` type, must be provided as an
 object with the fields `class: File` and `path`.
 
