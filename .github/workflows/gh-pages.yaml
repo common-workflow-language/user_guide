@@ -3,7 +3,7 @@ name: GitHub Pages sphinx deployment
 on:
   push:
     branches:
-      - main
+      - release
   workflow_dispatch:
 
 # NOTE: If you modify this file to install a package with pip or apt, please
