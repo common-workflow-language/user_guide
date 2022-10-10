@@ -39,7 +39,8 @@ steps:
             glob: stdout.txt
             loadContents: true
             outputEval: $(self[0].contents)
-      arguments: ['revv', '$(inputs.step_a_stdout)']
+      baseCommand: revv
+      arguments: [ $(inputs.step_a_stdout) ]
     in:
       step_a_stdout:
         source: step_a/step_a_stdout
