@@ -13,43 +13,49 @@ special types *File*, *Directory* and *Any*.
 The following example demonstrates some input parameters with different
 types and appearing on the command line in different ways.
 
-First, create a file called inp.cwl, containing the following:
+First, create a file called `inp.cwl`, containing the following:
 
-
-```{literalinclude} /_includes/cwl/03-input/inp.cwl
+```{literalinclude} /_includes/cwl/inputs/inp.cwl
 :language: cwl
 :caption: "`inp.cwl`"
 :name: inp.cwl
 ```
 
-Create a file called inp-job.yml:
+Create a file called `inp-job.yml`:
 
-*inp-job.yml*
-
-```{literalinclude} /_includes/cwl/03-input/inp-job.yml
+```{literalinclude} /_includes/cwl/inputs/inp-job.yml
 :language: yaml
 :caption: "`inp-job.yml`"
 :name: inp-job.yml
 ```
 
+````{note}
+You can use `cwltool` to create a template input object. That saves you from having
+to type all the input parameters in a input object file:
+
+```{runcmd} cwltool --make-template inp.cwl
+:working-directory: src/_includes/cwl/inputs
+```
+
+You can redirect the output to a file, i.e. `cwltool --make-template inp.cwl > inp-job.yml`,
+and then modify the default values with your desired input values.
+````
+
 Notice that "example_file", as a `File` type, must be provided as an
 object with the fields `class: File` and `path`.
 
-Next, create a whale.txt using [touch] by typing `touch whale.txt` on the command line and then invoke `cwl-runner` with the tool description and the input object on the command line, using the command `cwl-runner inp.cwl inp-job.yml`. The following boxed text describes these two commands and the expected output from the command line:
+Next, create a whale.txt using [touch] by typing `touch whale.txt` on the command line.
 
 ```{code-block} console
 $ touch whale.txt
-$ cwl-runner inp.cwl inp-job.yml
-[job inp.cwl] /tmp/tmpzrSnfX$ echo \
-    -f \
-    -i42 \
-    --example-string \
-    hello \
-    --file=/tmp/tmpRBSHIG/stg979b6d24-d50a-47e3-9e9e-90097eed2cbc/whale.txt
--f -i42 --example-string hello --file=/tmp/tmpRBSHIG/stg979b6d24-d50a-47e3-9e9e-90097eed2cbc/whale.txt
-[job inp.cwl] completed success
-{}
-Final process status is success
+```
+
+Now invoke `cwltool` with the tool description and the input object on the command line,
+using the command `cwltool inp.cwl inp-job.yml`. The following boxed text describes these
+two commands and the expected output from the command line:
+
+```{runcmd} cwltool inp.cwl inp-job.yml
+:working-directory: src/_includes/cwl/inputs
 ````
 
 ```{tip}
@@ -145,44 +151,26 @@ line. There are two ways to specify an array parameter. First is to provide
 that may appear in the array. Alternatively, brackets `[]` may be added after
 the type name to indicate that input parameter is array of that type.
 
-```{literalinclude} /_includes/cwl/09-array-inputs/array-inputs.cwl
+```{literalinclude} /_includes/cwl/inputs/array-inputs.cwl
 :language: cwl
 :caption: "`array-inputs.cwl`"
 :name: array-inputs.cwl
 ```
 
-```{literalinclude} /_includes/cwl/09-array-inputs/array-inputs-job.yml
+```{literalinclude} /_includes/cwl/inputs/array-inputs-job.yml
 :language: yaml
 :caption: "`array-inputs-job.yml`"
 :name: array-inputs-job.yml
 ```
 
-Now invoke `cwl-runner` providing the tool description and the input object
+Now invoke `cwltool` providing the tool description and the input object
 on the command line:
 
+```{runcmd} cwltool array-inputs.cwl array-inputs-job.yml
+:working-directory: src/_includes/cwl/inputs/
+```
+
 ```{code-block} console
-$ cwl-runner array-inputs.cwl array-inputs-job.yml
-[job array-inputs.cwl] /home/examples$ echo \
-    -A \
-    one \
-    two \
-    three \
-    -B=four \
-    -B=five \
-    -B=six \
-    -C=seven,eight,nine > /home/examples/output.txt
-[job array-inputs.cwl] completed success
-{
-    "example_out": {
-        "location": "file:///home/examples/output.txt",
-        "basename": "output.txt",
-        "class": "File",
-        "checksum": "sha1$91038e29452bc77dcd21edef90a15075f3071540",
-        "size": 60,
-        "path": "/home/examples/output.txt"
-    }
-}
-Final process status is success
 $ cat output.txt
 -A one two three -B=four -B=five -B=six -C=seven,eight,nine
 ```
@@ -219,15 +207,9 @@ parameters together to describe these two conditions.
 :name: record-job1.yml
 ```
 
-```{code-block} console
+```{runcmd} cwltool record.cwl record-job1.yml
+:working-directory: src/_includes/cwl/inputs/
 :emphasize-lines: 6-7
-$ cwl-runner record.cwl record-job1.yml
-INFO /home/kinow/Development/python/workspace/user_guide/venv/bin/cwl-runner 3.1.20220830195442
-INFO Resolved 'record.cwl' to 'file:///tmp/record.cwl'
-ERROR Workflow error, try again with --debug for more information:
-Invalid job input record:
-record-job1.yml:1:1: the `dependent_parameters` field is not valid because
-                       missing required field `itemB`
 ```
 
 In the first example, you can't provide `itemA` without also providing `itemB`.
@@ -238,30 +220,12 @@ In the first example, you can't provide `itemA` without also providing `itemB`.
 :name: record-job2.yml
 ```
 
-```{code-block} cwl
+```{runcmd} cwltool record.cwl record-job2.yml
+:working-directory: src/_includes/cwl/inputs
 :emphasize-lines: 3, 9-10, 24
-INFO /home/kinow/Development/python/workspace/user_guide/venv/bin/cwl-runner 3.1.20220830195442
-INFO Resolved 'record.cwl' to 'file:///tmp/record.cwl'
-record-job2.yml:6:3: Warning: invalid field `itemD`, expected one of: 'itemC'
-INFO [job record.cwl] /tmp/r15et6qm$ echo \
-    -A \
-    one \
-    -B \
-    two \
-    -C \
-    three > /tmp/r15et6qm/output.txt
-INFO [job record.cwl] completed success
-{
-    "example_out": {
-        "location": "file:///tmp/output.txt",
-        "basename": "output.txt",
-        "class": "File",
-        "checksum": "sha1$329fe3b598fed0dfd40f511522eaf386edb2d077",
-        "size": 23,
-        "path": "/tmp/output.txt"
-    }
-}
-INFO Final process status is success
+````
+
+```{code-block} console
 $ cat output.txt
 -A one -B two -C three
 ```
@@ -275,30 +239,12 @@ is added to the command line and `itemD` is ignored.
 :name: record-job3.yml
 ```
 
-```{code-block} console
+```{runcmd} cwltool record.cwl record-job3.yml
+:working-directory: src/_includes/cwl/inputs
 :emphasize-lines: 9-10, 24
-$ cwl-runner record.cwl record-job3.yml
-INFO /home/kinow/Development/python/workspace/user_guide/venv/bin/cwl-runner 3.1.20220830195442
-INFO Resolved 'record.cwl' to 'file:///tmp/record.cwl'
-INFO [job record.cwl] /tmp/6qz6choj$ echo \
-    -A \
-    one \
-    -B \
-    two \
-    -D \
-    four > /tmp/6qz6choj/output.txt
-INFO [job record.cwl] completed success
-{
-    "example_out": {
-        "location": "file:///tmp/output.txt",
-        "basename": "output.txt",
-        "class": "File",
-        "checksum": "sha1$77f572b28e441240a5e30eb14f1d300bcc13a3b4",
-        "size": 22,
-        "path": "/tmp/output.txt"
-    }
-}
-INFO Final process status is success
+````
+
+```{code-block} console
 $ cat output.txt
 -A one -B two -D four
 ```
@@ -313,7 +259,7 @@ aware that the `inputs` JavaScript object will contain one of the exclusive
 input values. This means that you might need to use an **or** boolean operator
 to check which values are present.
 
-Let's use an example that contains an exclusive `output_format` input parameter
+Let's use an example that contains an exclusive `file_format` input parameter
 that accepts `null` (i.e. no value provided), or any value from an enum.
 
 ```{literalinclude} /_includes/cwl/inputs/exclusive-parameter-expressions.cwl
@@ -328,44 +274,22 @@ without taking into consideration a `null` value. If you provide a valid value,
 such as “fasta” (one of the values of the enum), your command should execute
 successfully:
 
-```{code-block} console
-$ cwltool exclusive-parameter-expressions.cwl --output_format fasta
-INFO /home/kinow/Development/python/workspace/user_guide/venv/bin/cwltool 3.1.20220830195442
-INFO Resolved 'exclusive-parameter-expressions.cwl' to 'file:///tmp/exclusive-parameter-expressions.cwl'
-INFO [job exclusive-parameter-expressions.cwl] /tmp/j02lo8ky$ true \
-    --format \
-    fasta
-INFO [job exclusive-parameter-expressions.cwl] completed success
-{
-    "text_output": "fasta"
-}
-INFO Final process status is success
-```
+```{runcmd} cwltool exclusive-parameter-expressions.cwl --file_format fasta
+:working-directory: src/_includes/cwl/inputs
+````
 
-However, if you do not provide any input value, then `output_format` will be
+However, if you do not provide any input value, then `file_format` will be
 evaluated to a `null` value, which does not match the expected type for the
 output field (a `string`), resulting in failure when running your workflow.
 
-```{code-block} console
+```{runcmd} cwltool exclusive-parameter-expressions.cwl
+:working-directory: src/_includes/cwl/inputs
 :emphasize-lines: 6-10
-$ cwltool exclusive-parameter-expressions.cwl
-INFO /home/kinow/Development/python/workspace/user_guide/venv/bin/cwltool 3.1.20220830195442
-INFO Resolved 'exclusive-parameter-expressions.cwl' to 'file:///tmp/exclusive-parameter-expressions.cwl'
-INFO [job exclusive-parameter-expressions.cwl] /tmp/jmq3nqap$ true
-ERROR [job exclusive-parameter-expressions.cwl] Job error:
-Error validating output record. the `text_output` field is not valid because
-  the value is not string
- in {
-    "text_output": null
-}
-WARNING [job exclusive-parameter-expressions.cwl] completed permanentFail
-{}
-WARNING Final process status is permanentFail
 ```
 
 To correct it, you must remember to use an or operator in your JavaScript expression
 when using exclusive parameters, or any parameter that allows `null`. For example,
-the expression could be changed to `$(inputs.output_format || 'auto')`, to have
+the expression could be changed to `$(inputs.file_format || 'auto')`, to have
 a default value if none was provided in the command line or job input file.
 
 % TODO

@@ -9,6 +9,9 @@ _site
 .Rproj.user
 .Rhistory
 .RData
-
 _build/
+build/
 *.egg-info/
+
+src/_includes/cwl/**/output.txt
+venv/

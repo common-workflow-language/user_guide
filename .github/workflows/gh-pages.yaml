@@ -3,7 +3,7 @@ name: GitHub Pages sphinx deployment
 on:
   push:
     branches:
-      - main
+      - release
   workflow_dispatch:
 
 # NOTE: If you modify this file to install a package with pip or apt, please
@@ -17,7 +17,7 @@ jobs:
 
       - name: Install apt packages
         run: |
-          sudo apt-get install -y graphviz
+          sudo apt-get install -y graphviz tree
 
       - name: Set up Python
         uses: actions/setup-python@v4
@@ -41,6 +41,9 @@ jobs:
             ${{ runner.os }}-pip-
       - name: Install dependencies
         run: python3 -m pip install -U -e .[all]
+
+      - name: pre-pull container images
+        run: make container-pull
 
       - name: Build documentation
         run: make html

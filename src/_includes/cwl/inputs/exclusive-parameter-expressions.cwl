@@ -2,10 +2,10 @@ cwlVersion: v1.2
 class: CommandLineTool
 
 inputs:
-  output_format:
+  file_format:
     type:
       - 'null'
-      - name: output_format
+      - name: format_choices
         type: enum
         symbols:
           - auto
@@ -20,6 +20,6 @@ outputs:
   text_output:
     type: string
     outputBinding:
-      outputEval: $(inputs.output_format)
+      outputEval: $(inputs.file_format)
 
 baseCommand: 'true'

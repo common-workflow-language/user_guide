@@ -10,13 +10,13 @@ directories in which they appear) may be read-only, so we need to
 instruct "javac" to write the class file to the designated output directory
 instead.
 
-```{literalinclude} /_includes/cwl/08-arguments/arguments.cwl
+```{literalinclude} /_includes/cwl/additional-arguments-and-parameters/arguments.cwl
 :language: cwl
 :caption: "`arguments.cwl`"
 :name: arguments.cwl
 ```
 
-```{literalinclude} /_includes/cwl/08-arguments/arguments-job.yml
+```{literalinclude} /_includes/cwl/additional-arguments-and-parameters/arguments-job.yml
 :language: yaml
 :caption: "`arguments-job.yml`"
 ```
@@ -27,36 +27,10 @@ Next, create a sample Java file to use with the command-line tool.
 $ echo "public class Hello {}" > Hello.java
 ```
 
-And now invoke `cwl-runner` providing the tool description and the input object on the command line:
+And now invoke `cwltool` providing the tool description and the input object on the command line:
 
-```{code-block} console
-$ cwl-runner arguments.cwl arguments-job.yml
-[job arguments.cwl] /tmp/tmpwYALo1$ docker \
- run \
- -i \
- --volume=/home/peter/work/common-workflow-language/v1.0/examples/Hello.java:/var/lib/cwl/stg8939ac04-7443-4990-a518-1855b2322141/Hello.java:ro \
- --volume=/tmp/tmpwYALo1:/var/spool/cwl:rw \
- --volume=/tmp/tmpptIAJ8:/tmp:rw \
- --workdir=/var/spool/cwl \
- --read-only=true \
- --user=1001 \
- --rm \
- --env=TMPDIR=/tmp \
- --env=HOME=/var/spool/cwl \
- openjdk:9.0.1-11-slim \
- javac \
- -d \
- /var/spool/cwl \
- /var/lib/cwl/stg8939ac04-7443-4990-a518-1855b2322141/Hello.java
-Final process status is success
-{
-  "classfile": {
-    "size": 416,
-    "location": "/home/example/Hello.class",
-    "checksum": "sha1$2f7ac33c1f3aac3f1fec7b936b6562422c85b38a",
-    "class": "File"
-  }
-}
+```{runcmd} cwltool arguments.cwl arguments-job.yml
+:working-directory: src/_includes/cwl/additional-arguments-and-parameters
 ```
 
 Here we use the `arguments` field to add an additional argument to the

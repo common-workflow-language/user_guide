@@ -11,8 +11,9 @@ When manipulating file names, extensions, paths etc, consider whether one of the
 [built in `File` properties][file-prop] like `basename`, `nameroot`, `nameext`,
 etc, could be used instead.
 See the [list of best practices](best-practices.md).
+```
 
-```{literalinclude} /_includes/cwl/13-expressions/expression.cwl
+```{literalinclude} /_includes/cwl/expressions/expression.cwl
 :language: cwl
 :caption: "`expression.cwl`"
 :name: expression.cwl
@@ -21,7 +22,7 @@ See the [list of best practices](best-practices.md).
 As this tool does not require any `inputs` we can run it with an (almost) empty
 job file:
 
-```{literalinclude} /_includes/cwl/13-expressions/empty.yml
+```{literalinclude} /_includes/cwl/expressions/empty.yml
 :language: yaml
 :caption: "`empty.yml`"
 :name: empty.cwl
@@ -33,41 +34,14 @@ represented simply by a set of empty brackets.
 
 We can then run `expression.cwl`:
 
-```{code-block} console
+```{runcmd} cwltool expression.cwl empty.yml
 :name: running-expression.cwl
 :caption: Running `expression.cwl`
+:working-directory: src/_includes/cwl/expressions/
+```
 
-$ cwl-runner expression.cwl empty.yml
-[job expression.cwl] /home/example$ echo \
-    -A \
-    2 \
-    -B \
-    baz \
-    -C \
-    10 \
-    9 \
-    8 \
-    7 \
-    6 \
-    5 \
-    4 \
-    3 \
-    2 \
-    1 > /home/example/output.txt
-[job expression.cwl] completed success
-{
-    "example_out": {
-        "location": "file:///home/example/output.txt",
-        "basename": "output.txt",
-        "class": "File",
-        "checksum": "sha1$a739a6ff72d660d32111265e508ed2fc91f01a7c",
-        "size": 36,
-        "path": "/home/example/output.txt"
-    }
-}
-Final process status is success
-$ cat output.txt
--A 2 -B baz -C 10 9 8 7 6 5 4 3 2 1
+```{runcmd} cat output.txt
+:working-directory: src/_includes/cwl/expressions/
 ```
 
 Note that requirements can be provided with the map syntax, as in the example above:
@@ -139,7 +113,91 @@ only in certain fields.  These are:
 
 [file-prop]: https://www.commonwl.org/v1.0/CommandLineTool.html#File
 
+## Using external libraries and inline JavaScript code with `expressionLib`
 
-% TODO
-% - (maybe not before other concepts? move this to after inputs/outputs/etc?)
-% - External libraries and expressionLib - https://github.com/common-workflow-language/user_guide/issues/126
+The requirement `InlineJavascriptRequirement` supports an `expressionLib` attribute
+that allows users to load external JavaScript files, or to provide inline JavaScript
+code.
+
+Entries added to the `expressionLib` attribute are parsed with the JavaScript engine
+of a CWL runner. This can be used to include external files or to create JavaScript
+functions that can be called in other parts of the CWL document.
+
+```{note}
+
+The CWL standards (versions 1.0 through 1.2) [states](https://www.commonwl.org/v1.0/CommandLineTool.html#Expressions)
+ that the only version of JavaScript valid in CWL expressions is
+[ECMAScript 5.1](https://262.ecma-international.org/5.1/). This means that any
+code that you include or write in your CWL Document must be compliant with
+ECMAScript 5.1.
+```
+
+For example, we can use `InlineJavascriptRequirement` and write a JavaScript function
+inline in `expressionLib`. That function can then be used in other parts of the
+CWL document:
+
+```{literalinclude} /_includes/cwl/expressions/hello-world-expressionlib-inline.cwl
+:language: cwl
+:caption: "`hello-world-expressionlib-inline.cwl`"
+:name: "`hello-world-expressionlib-inline.cwl`"
+:emphasize-lines: 5, 14, 32
+```
+
+Running this CWL workflow will invoke the JavaScript function and result in
+the `echo` command printing the input message with capital initial letters:
+
+```{runcmd} cwltool hello-world-expressionlib-inline.cwl --message "hello world"
+:caption: "Running `hello-world-expressionlib-inline.cwl`."
+:name: running-hell-world-expressionlib-inline-cwl
+:working-directory: src/_includes/cwl/expressions/
+```
+
+Let's move the `capitalizeWords` function to an external file, `custom-functions.js`, and
+import it in our CWL document:
+
+```{literalinclude} /_includes/cwl/expressions/custom-functions.js
+:language: javascript
+:caption: "`custom-functions.js`"
+:name: "`custom-functions.js`"
+```
+
+```{literalinclude} /_includes/cwl/expressions/hello-world-expressionlib-external.cwl
+:language: cwl
+:caption: "`hello-world-expressionlib-external.cwl`"
+:name: "`hello-world-expressionlib-external.cwl`"
+:emphasize-lines: 5-6, 14
+```
+
+The `custom-functions.js` file is included in the CWL document with the `$include: custom-functions.js`
+statement. That makes the functions and variables available to be used in other parts of
+the CWL document.
+
+```{runcmd} cwltool hello-world-expressionlib-external.cwl --message "hello world"
+:caption: "Running `hello-world-expressionlib-external.cwl`."
+:name: running-hell-world-expressionlib-external-cwl
+:working-directory: src/_includes/cwl/expressions/
+```
+
+Finally, note that you can have both inline and external JavaScript code in your
+CWL document. In this final example we have added another entry to the `expressionLib`
+attribute with the new function `createHelloWorldMessage`, that calls the `capitalizeWords`
+function from the external file `custom-functions.js`.
+
+```{literalinclude} /_includes/cwl/expressions/hello-world-expressionlib.cwl
+:language: cwl
+:caption: "`hello-world-expressionlib.cwl`"
+:name: "`hello-world-expressionlib.cwl`"
+:emphasize-lines: 5-17, 25
+```
+
+```{runcmd} cwltool hello-world-expressionlib.cwl --message "hello world"
+:caption: "Running `hello-world-expressionlib.cwl`."
+:name: running-hell-world-expressionlib-cwl
+:working-directory: src/_includes/cwl/expressions/
+```
+
+```{note}
+The `$include` statement can be used to include a file from the local disk or from a remote location.
+It works with both relative and absolute paths. Read the [text about `$include`](https://www.commonwl.org/v1.0/SchemaSalad.html#Include)
+from the CWL specification to learn more about it.
+```

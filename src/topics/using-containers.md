@@ -1,6 +1,6 @@
-# Using containers
+# Using Containers
 
-## Running tools inside Docker
+## Running Tools Inside Docker
 
 [Docker][docker] containers simplify software installation by providing a
 complete known-good runtime for software and its dependencies.  However,
@@ -18,13 +18,13 @@ input files to reflect the location where they appear inside the container.
 This example runs a simple Node.js script inside a Docker container which will
 then print "Hello World" to the standard output.
 
-```{literalinclude} /_includes/cwl/07-containers/docker.cwl
+```{literalinclude} /_includes/cwl/using-containers/docker.cwl
 :language: cwl
 :caption: "`docker.cwl`"
 :name: docker.cwl
 ```
 
-```{literalinclude} /_includes/cwl/07-containers/docker-job.yml
+```{literalinclude} /_includes/cwl/using-containers/docker-job.yml
 :language: yaml
 :caption: "`docker-job.yml`"
 :name: docker-job.yml
@@ -49,41 +49,19 @@ the name of the container image (you can even specify the tag, which is good ide
 best practises when using containers for reproducible research). In this case we have
 used a container called `node:slim`.
 
-Provide a "hello.js" and invoke `cwl-runner` providing the tool description and the
+Provide a "hello.js" and invoke `cwltool` providing the tool description and the
 input object on the command line:
 
 ```{code-block} console
 $ echo "console.log(\"Hello World\");" > hello.js
-$ cwl-runner docker.cwl docker-job.yml
-[job docker.cwl] /tmp/tmpgugLND$ docker \
-    run \
-    -i \
-    --volume=/tmp/tmpgugLND:/var/spool/cwl:rw \
-    --volume=/tmp/tmpSs5JoN:/tmp:rw \
-    --volume=/home/me/cwl/user_guide/hello.js:/var/lib/cwl/job369354770_examples/hello.js:ro \
-    --workdir=/var/spool/cwl \
-    --read-only=true \
-    --user=1000 \
-    --rm \
-    --env=TMPDIR=/tmp \
-    --env=HOME=/var/spool/cwl \
-    node:slim \
-    node \
-    /var/lib/cwl/job369354770_examples/hello.js > /tmp/tmpgugLND/output.txt
-[job docker.cwl] completed success
-{
-    "example_out": {
-        "location": "file:///home/me/cwl/user_guide/output.txt",
-        "basename": "output.txt",
-        "class": "File",
-        "checksum": "sha1$648a6a6ffffdaa0badb23b8baf90b6168dd16b3a",
-        "size": 12,
-        "path": "/home/me/cwl/user_guide/output.txt"
-    }
-}
-Final process status is success
-$ cat output.txt
-Hello World
+```
+
+```{runcmd} cwltool docker.cwl docker-job.yml
+:working-directory: src/_includes/cwl/using-containers/
+```
+
+```{runcmd} cat output.txt
+:working-directory: src/_includes/cwl/using-containers/
 ```
 
 Notice the CWL runner has constructed a Docker command line to run the

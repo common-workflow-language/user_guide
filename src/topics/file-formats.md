@@ -1,4 +1,4 @@
-# File formats
+# File Formats
 
 Tools and workflows can take `File` types as input and produce them as output.
 We also recommend indicating the format for `File` types. This helps document
@@ -17,7 +17,7 @@ document in greater detail, so don't worry about these for now.
 Note that for added value `cwltool` can do some basic reasoning based on file
 formats and warn you if there seem to be some obvious mismatches.
 
-```{literalinclude} /_includes/cwl/16-file-formats/metadata_example.cwl
+```{literalinclude} /_includes/cwl/file-formats/metadata_example.cwl
 :language: cwl
 :caption: "`metadata_example.cwl`"
 :name: metadata_example.cwl
@@ -25,8 +25,8 @@ formats and warn you if there seem to be some obvious mismatches.
 
 The equivalent of this CWL description in command line format is:
 
-```bash
-wc -l /path/to/aligned_sequences.ext > output.txt
+```{code-block} console
+$ wc -l /path/to/aligned_sequences.ext > output.txt
 ```
 
 ## Sample Parameter Files
@@ -36,41 +36,24 @@ checking in working examples of parameter files for your tool. This allows
 others to quickly work with your tool, starting from a "known good"
 parameterization.
 
-```{literalinclude} /_includes/cwl/16-file-formats/sample.yml
+```{literalinclude} /_includes/cwl/file-formats/sample.yml
 :language: yaml
 :caption: "`sample.yml`"
 :name: sample.yml
 ```
 
-___Note:___ To follow the example below, you need to download the example input file, *file-formats.bam*. The file is available from [https://github.com/common-workflow-language/user_guide/raw/main/_includes/cwl/16-file-formats/file-formats.bam
-](https://github.com/common-workflow-language/user_guide/raw/main/_includes/cwl/16-file-formats/file-formats.bam) and can be downloaded e.g. via `wget`:
+___Note:___ To follow the example below, you need to download the example input file, *file-formats.bam*. The file is available from [https://github.com/common-workflow-language/user_guide/raw/main/_includes/cwl/file-formats/file-formats.bam
+](https://github.com/common-workflow-language/user_guide/raw/main/_includes/cwl/file-formats/file-formats.bam) and can be downloaded e.g. via `wget`:
 
-```bash
-wget https://github.com/common-workflow-language/user_guide/raw/main/_includes/cwl/16-file-formats/file-formats.bam
+```{code-block}
+$ wget https://github.com/common-workflow-language/user_guide/raw/main/_includes/cwl/file-formats/file-formats.bam
 ```
 
-Now invoke `cwl-runner` with the tool description and the input object on the
+Now invoke `cwltool` with the tool description and the input object on the
 command line:
 
-```{code-block} console
-$ cwltool metadata_example.cwl sample.yml
-/usr/local/bin/cwltool 1.0.20161114152756
-Resolved 'metadata_example.cwl' to 'file:///media/large_volume/testing/cwl_tutorial2/metadata_example.cwl'
-[job metadata_example.cwl] /tmp/tmpNWyAd6$ /bin/sh \
-    -c \
-    'wc' '-l' '/tmp/tmpBf6m9u/stge293ac74-3d42-45c9-b506-dd35ea3e6eea/file-formats.bam' > /tmp/tmpNWyAd6/output.txt
-Final process status is success
-{
-  "report": {
-    "format": "http://edamontology.org/format_1964",
-    "checksum": "sha1$49dc5004959ba9f1d07b8c00da9c46dd802cbe79",
-    "basename": "output.txt",
-    "location": "file:///media/large_volume/testing/cwl_tutorial2/output.txt",
-    "path": "/media/large_volume/testing/cwl_tutorial2/output.txt",
-    "class": "File",
-    "size": 80
-  }
-}
+```{runcmd} cwltool metadata_example.cwl sample.yml
+:working-directory: src/_includes/cwl/file-formats/
 ```
 
 [IANA]: https://www.iana.org/assignments/media-types/media-types.xhtml

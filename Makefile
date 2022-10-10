@@ -28,6 +28,7 @@ watch: clean
 			--ignore='**venv' \
 			--ignore='**.github' \
 			--ignore='*.egg-info' \
+			--ignore='**_includes/**/*.txt' \
 			--watch='cwl'
 
 ## unittest-examples	:
@@ -37,6 +38,9 @@ unittest-examples:
 ## check-json			:
 check-json:
 	python -m json.tool < src/.zenodo.json >> /dev/null && exit 0 || echo "NOT valid JSON"; exit 1
+
+container-pull:
+	for container in $$(git grep dockerPull $$(git ls-files *.cwl) | awk '-F: ' '{print $$3}'); do docker pull $${container}; done
 
 .PHONY: help clean watch unittest-examples check-json Makefile
 

@@ -1,81 +1,25 @@
-# Section 2
-- doc: Test for section 2
-  job: 02-1st-example/echo-job.yml
-  tool: hello_world.cwl
+# Expressions
+- doc: Test for Expressions section
+  job: expressions/empty.yml
+  tool: expressions/expression.cwl
+  output:
+    example_out:
+      class: File
+      checksum: sha1$a739a6ff72d660d32111265e508ed2fc91f01a7c
+      basename: output.txt
+      location: Any
+      size: 36
+
+# Inputs
+- doc: Test for Essential Inputs section
+  job: inputs/inp-job.yml
+  tool: inputs/inp.cwl
   should_fail: false
   output: {}
 
-# Section 3
-- doc: Test for section 3
-  job: 03-input/inp-job.yml
-  tool: 03-input/inp.cwl
-  should_fail: false
-  output: {}
-
-# Section 4
-- doc: Test for section 4
-  job: 04-output/tar-job.yml
-  tool: 04-output/tar.cwl
-  output:
-    example_out:
-      class: File
-      checksum: sha1$da39a3ee5e6b4b0d3255bfef95601890afd80709
-      basename: hello.txt
-      location: Any
-      size: 0
-
-# Section 5
-- doc: Test for section 5
-  job: 05-stdout/echo-job.yml
-  tool: 05-stdout/stdout.cwl
-  output:
-    example_out:
-      class: File
-      checksum: sha1$47a013e660d408619d894b20806b1d5086aab03b
-      basename: output.txt
-      location: Any
-      size: 13
-
-# Section 6
-- doc: Test for section 6
-  job: 06-params/tar-param-job.yml
-  tool: 06-params/tar-param.cwl
-  output:
-    extracted_file:
-      class: File
-      checksum: sha1$da39a3ee5e6b4b0d3255bfef95601890afd80709
-      basename: goodbye.txt
-      location: Any
-      size: 0
-
-# Section 7
-- doc: Test for section 7
-  job: 07-containers/docker-job.yml
-  tool: 07-containers/docker.cwl
-  output:
-    example_out:
-      class: File
-      checksum: sha1$648a6a6ffffdaa0badb23b8baf90b6168dd16b3a
-      basename: output.txt
-      location: Any
-      size: 12
-
-# Section 8
-- doc: Test for section 8
-  job: 08-arguments/arguments-job.yml
-  tool: 08-arguments/arguments.cwl
-  output:
-    classfile:
-      class: File
-      checksum: sha1$fdb876b40ad9ebc7fee873212e02d5940588642e
-      basename: Hello.class
-      location: Any
-      size: 184
-
-# Section 9
-- doc: Test for section 9
-  job: 09-array-inputs/array-inputs-job.yml
-  tool: 09-array-inputs/array-inputs.cwl
+- doc: Test for Array Inputs section
+  job: inputs/array-inputs-job.yml
+  tool: inputs/array-inputs.cwl
   output:
     example_out:
       class: File
@@ -84,10 +28,83 @@
       location: Any
       size: 60
 
-# Section 10
-- doc: Test for section 10
-  job: 10-array-outputs/array-outputs-job.yml
-  tool: 10-array-outputs/array-outputs.cwl
+- doc: Test for Include and Exclusive Inputs section (1st example)
+  job: inputs/record-job1.yml
+  tool: inputs/record.cwl
+  should_fail: true
+
+- doc: Test for Include and Exclusive Inputs section (2nd example)
+  job: inputs/record-job2.yml
+  tool: inputs/record.cwl
+  output:
+    example_out:
+      class: File
+      checksum: sha1$329fe3b598fed0dfd40f511522eaf386edb2d077
+      basename: output.txt
+      location: Any
+      size: 23
+
+- doc: Test for Include and Exclusive Inputs section (3rd example)
+  job: inputs/record-job3.yml
+  tool: inputs/record.cwl
+  output:
+    example_out:
+      class: File
+      checksum: sha1$77f572b28e441240a5e30eb14f1d300bcc13a3b4
+      basename: output.txt
+      location: Any
+      size: 22
+
+# Additional Arguments and Parameters
+- doc: Test for Additional Arguments and Parameters section
+  job: additional-arguments-and-parameters/arguments-job.yml
+  tool: additional-arguments-and-parameters/arguments.cwl
+  output:
+    classfile:
+      class: File
+      checksum: sha1$fdb876b40ad9ebc7fee873212e02d5940588642e
+      basename: Hello.class
+      location: Any
+      size: 184
+
+# Parameter References
+- doc: Test for Parameter References section
+  job: parameter-references/tar-param-job.yml
+  tool: parameter-references/tar-param.cwl
+  output:
+    extracted_file:
+      class: File
+      checksum: sha1$da39a3ee5e6b4b0d3255bfef95601890afd80709
+      basename: goodbye.txt
+      location: Any
+      size: 0
+
+# Outputs
+- doc: Test for Outputs section
+  job: outputs/tar-job.yml
+  tool: outputs/tar.cwl
+  output:
+    example_out:
+      class: File
+      checksum: sha1$da39a3ee5e6b4b0d3255bfef95601890afd80709
+      basename: hello.txt
+      location: Any
+      size: 0
+
+- doc: Test for Outputs, Capturing Standard Output section
+  job: outputs/echo-job.yml
+  tool: outputs/stdout.cwl
+  output:
+    example_out:
+      class: File
+      checksum: sha1$47a013e660d408619d894b20806b1d5086aab03b
+      basename: output.txt
+      location: Any
+      size: 13
+
+- doc: Test for Outputs, Array Outputs section
+  job: outputs/array-outputs-job.yml
+  tool: outputs/array-outputs.cwl
   output:
     output:
       - class: File
@@ -101,116 +118,11 @@
         location: Any
         size: 0
 
-# Section 11 depends on side-effects
-- doc: Test for section 11 (1st example)
-  job: inputs/record-job1.yml
-  tool: inputs/record.cwl
-  should_fail: true
-
-- doc: Test for section 11 (2nd example)
-  job: inputs/record-job2.yml
-  tool: inputs/record.cwl
-  output:
-    example_out:
-      class: File
-      checksum: sha1$329fe3b598fed0dfd40f511522eaf386edb2d077
-      basename: output.txt
-      location: Any
-      size: 23
-
-- doc: Test for section 11 (3rd example)
-  job: inputs/record-job3.yml
-  tool: inputs/record.cwl
-  output:
-    example_out:
-      class: File
-      checksum: sha1$77f572b28e441240a5e30eb14f1d300bcc13a3b4
-      basename: output.txt
-      location: Any
-      size: 22
-
-# Section 12
-- doc: Test for section 12
-  job: 12-env/echo-job.yml
-  tool: 12-env/env.cwl
-  output:
-    example_out:
-      class: File
-      basename: output.txt
-      location: Any
-
-# Section 13
-- doc: Test for section 13
-  job: 13-expressions/empty.yml
-  tool: 13-expressions/expression.cwl
-  output:
-    example_out:
-      class: File
-      checksum: sha1$a739a6ff72d660d32111265e508ed2fc91f01a7c
-      basename: output.txt
-      location: Any
-      size: 36
-
-# Section 14
-- doc: Test for section 14
-  job: 14-runtime/echo-job.yml
-  tool: 14-runtime/createfile.cwl
-  output:
-    example_out:
-      class: File
-      checksum: sha1$9045abe4bd04dd8ccfe50c6ff61820b784b64aa7
-      basename: output.txt
-      location: Any
-      size: 25
-
-# Section 15
-- doc: Test for section 15
-  job: 15-staging/arguments-job.yml
-  tool: 15-staging/linkfile.cwl
-  output:
-    classfile:
-      class: File
-      checksum: sha1$fdb876b40ad9ebc7fee873212e02d5940588642e
-      basename: Hello.class
-      location: Any
-      size: 184
-
-# Section 16
-# Note: The checksum and size is always changed for every executions
-- doc: Test for section 16
-  job: 16-file-formats/sample.yml
-  tool: 16-file-formats/metadata_example.cwl
-  output:
-    report:
-      class: File
-      basename: output.txt
-      location: Any
-
-# Section 17
-# Note: The checksum and size is always changed for every executions
-- doc: Test for section 17 (1st example)
-  job: 17-metadata/sample.yml
-  tool: 17-metadata/metadata_example2.cwl
-  output:
-    report:
-      class: File
-      basename: output.txt
-      location: Any
-
-- doc: Test for section 17 (extended example)
-  job: 17-metadata/sample.yml
-  tool: 17-metadata/metadata_example3.cwl
-  output:
-    report:
-      class: File
-      basename: output.txt
-      location: Any
-
-# Section 19
-# Note: The checksum is always changed for every executions
-- doc: Test for section 19
-  job: 19-custom-types/custom-types.yml
-  tool: 19-custom-types/custom-types.cwl
+# Custom Types
+# NOTE: The checksum is always changed for every execution
+- doc: Test for Custom Types section
+  job: custom-types/custom-types.yml
+  tool: custom-types/custom-types.cwl
   output:
     result:
       class: File
@@ -218,22 +130,10 @@
       location: Any
       size: 46992
 
-# Section 20
-# See: Issue #48
-# - doc: Test for section 20
-#   job: 20-software-requirements/custom-types.yml
-#   tool: 20-software-requirements/costom-types.cwl
-#   output:
-#     i5Annotations:
-#       class: File
-#       basename: test_proteins.i5_annotations
-#       location: Any
-#       size: Any # To be fixed
-
-# Section 21
-- doc: Test for section 21
-  job: 21-1st-workflow/1st-workflow-job.yml
-  tool: 21-1st-workflow/1st-workflow.cwl
+# Workflows
+- doc: Test for Workflows section
+  job: workflows/1st-workflow-job.yml
+  tool: workflows/1st-workflow.cwl
   output:
     compiled_class:
       class: File
@@ -242,9 +142,8 @@
       location: Any
       size: 419
 
-# Section 22
-- doc: Test for section 22
-  tool: 22-nested-workflows/nestedworkflows.cwl
+- doc: Test for Workflows, Nested Workflows section
+  tool: workflows/nestedworkflows.cwl
   output:
     classout:
       class: File
@@ -252,3 +151,102 @@
       basename: Hello.class
       location: Any
       size: 419
+
+# TODO: The old section 23-scatter-workflow had workflows, but no conformance tests?
+#       Maybe add them here, they are now in workflows:
+#       - hello_world.cwl
+#       - hello_world_to_stdout.cwl
+#       - scatter-job.cwl
+#       - scatter-nested-workflow.cwl
+#       - scatter-two-steps.cwl
+#       - scatter-workflow.cwl
+#       - wc-tool.cwl
+
+# Environment Variables
+- doc: Test for Environment Variables section
+  job: environment-variables/echo-job.yml
+  tool: environment-variables/env.cwl
+  output:
+    example_out:
+      class: File
+      basename: output.txt
+      location: Any
+
+# Using Containers
+- doc: Test for Using Containers section
+  job: using-containers/docker-job.yml
+  tool: using-containers/docker.cwl
+  output:
+    example_out:
+      class: File
+      checksum: sha1$648a6a6ffffdaa0badb23b8baf90b6168dd16b3a
+      basename: output.txt
+      location: Any
+      size: 12
+
+# Creating files at runtime
+- doc: Test for Creating files at runtime section
+  job: creating-files-at-runtime/echo-job.yml
+  tool: creating-files-at-runtime/createfile.cwl
+  output:
+    example_out:
+      class: File
+      checksum: sha1$9045abe4bd04dd8ccfe50c6ff61820b784b64aa7
+      basename: output.txt
+      location: Any
+      size: 25
+
+# Staging input files
+- doc: Test for Staging input files section
+  job: staging-input-files/arguments-job.yml
+  tool: staging-input-files/linkfile.cwl
+  output:
+    classfile:
+      class: File
+      checksum: sha1$fdb876b40ad9ebc7fee873212e02d5940588642e
+      basename: Hello.class
+      location: Any
+      size: 184
+
+# File formats
+# NOTE: The checksum and size is always changed for every execution
+- doc: Test for File formats section
+  job: file-formats/sample.yml
+  tool: file-formats/metadata_example.cwl
+  output:
+    report:
+      class: File
+      basename: output.txt
+      location: Any
+
+# Metadata and authorship
+# NOTE: The checksum and size is always changed for every executions
+- doc: Test for Metadata and authorship section (1st example)
+  job: metadata-and-authorship/sample.yml
+  tool: metadata-and-authorship/metadata_example2.cwl
+  output:
+    report:
+      class: File
+      basename: output.txt
+      location: Any
+
+- doc: Test for Metadata and authorship section (extended example)
+  job: metadata-and-authorship/sample.yml
+  tool: metadata-and-authorship/metadata_example3.cwl
+  output:
+    report:
+      class: File
+      basename: output.txt
+      location: Any
+
+# Specifying software requirements
+# See: Issue #48
+# - doc: Test for section 20
+#   job: specifying-software-requirements/custom-types.yml
+#   tool: specifying-software-requirements/custom-types.cwl
+#   output:
+#     i5Annotations:
+#       class: File
+#       basename: test_proteins.i5_annotations
+#       location: Any
+#       size: Any # To be fixed

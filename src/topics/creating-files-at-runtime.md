@@ -1,4 +1,4 @@
-# Creating files at runtime
+# Creating Files at Runtime
 
 Sometimes you need to create a file on the fly from input parameters,
 such as tools which expect to read their input configuration from a file
@@ -6,7 +6,7 @@ rather than the command line parameters, or need a small wrapper shell script.
 
 To generate such files we can use the `InitialWorkDirRequirement`.
 
-```{literalinclude} /_includes/cwl/14-runtime/createfile.cwl
+```{literalinclude} /_includes/cwl/creating-files-at-runtime/createfile.cwl
 :language: cwl
 :caption: "`createfile.cwl`"
 :name: createfile.cwl
@@ -26,7 +26,7 @@ to be evaluated by the shell script instead of the CWL engine.
 
 To test the above CWL tool use this job to provide the input value `message`:
 
-```{literalinclude} /_includes/cwl/14-runtime/echo-job.yml
+```{literalinclude} /_includes/cwl/creating-files-at-runtime/echo-job.yml
 :language: yaml
 :caption: "`echo-job.yml`"
 :name: echo-job.yml
@@ -51,26 +51,13 @@ which is YAML quoting syntax, and means that you are using a multiline string
 See the [YAML Guide](../topics/yaml-guide.md#maps) for more about the formatting.
 ```
 
-Now invoke `cwl-runner` with the tool description and the input object on the
+Now invoke `cwltool` with the tool description and the input object on the
 command line:
 
-```{code-block} console
-$ cwl-runner createfile.cwl echo-job.yml
-[job createfile.cwl] /private/tmp/docker_tmphrqxxcdl$ sh \
-    example.sh > /private/tmp/docker_tmphrqxxcdl/output.txt
-Could not collect memory usage, job ended before monitoring began.
-[job createfile.cwl] completed success
-{
-    "example_out": {
-        "location": "file:///home/example/output.txt",
-        "basename": "output.txt",
-        "class": "File",
-        "checksum": "sha1$9045abe4bd04dd8ccfe50c6ff61820b784b64aa7",
-        "size": 25,
-        "path": "/home/example/output.txt"
-    }
-}
-Final process status is success
-$ cat output.txt
-Message is: Hello world!
+```{runcmd} cwltool createfile.cwl echo-job.yml
+:working-directory: src/_includes/cwl/creating-files-at-runtime/
+```
+
+```{runcmd} cat output.txt
+:working-directory: src/_includes/cwl/creating-files-at-runtime/
 ```
