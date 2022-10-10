@@ -4,7 +4,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
 
     <title>1.1. Quick Start &#8212; Common Workflow Language User Guide 0.1 documentation</title>
   <script>
@@ -13,8 +13,8 @@
   </script>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../_static/styles/theme.css?digest=9b1a4fa89bdd0e95b23b" rel="stylesheet">
-<link href="../_static/styles/pydata-sphinx-theme.css?digest=9b1a4fa89bdd0e95b23b" rel="stylesheet">
+  <link href="../_static/styles/theme.css?digest=1e1de1a1873e13ef5536" rel="stylesheet">
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=1e1de1a1873e13ef5536" rel="stylesheet">
 
   
   <link rel="stylesheet"
@@ -23,6 +23,8 @@
     href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2">
   <link rel="preload" as="font" type="font/woff2" crossorigin
     href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2">
 
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../_static/graphviz.css" />
@@ -33,13 +35,14 @@
     <link rel="icon" sizes="196x196" type="image/png" href="../_static/images/favicons/cwl/favicon-196x196.png" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=9b1a4fa89bdd0e95b23b">
+  <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=1e1de1a1873e13ef5536">
 
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
     <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../_static/doctools.js"></script>
+    <script src="../_static/sphinx_highlight.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'introduction/quick-start';</script>
     <link rel="shortcut icon" href="../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../genindex.html" />
@@ -67,7 +70,7 @@
     <div class="search-button__search-container">
       
 <form class="bd-search d-flex align-items-center" action="../search.html" method="get">
-  <i class="icon fas fa-search"></i>
+  <i class="fa-solid fa-magnifying-glass"></i>
   <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
   <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
 </form>
@@ -77,7 +80,7 @@
   
   <nav class="bd-header navbar navbar-expand-lg bd-navbar" id="navbar-main"><div class="bd-header__inner bd-page-width">
   <label class="sidebar-toggle primary-toggle" for="__primary">
-      <span class="fas fa-bars"></span>
+      <span class="fa-solid fa-bars"></span>
   </label>
   <div id="navbar-start">
     
@@ -158,16 +161,16 @@
     <div id="navbar-end">
       <div class="navbar-end-item navbar-end__search-button-container">
         
-<button class="btn btn-sm navbar-btn search-button search-button__button" title="Search">
-  <i class="fas fa-search"></i>
+<button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" data-toggle="tooltip">
+  <i class="fa-solid fa-magnifying-glass"></i>
 </button>
       </div>
       
       <div class="navbar-end-item">
-        <span class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle">
-    <a class="theme-switch" data-mode="light"><i class="fas fa-sun"></i></a>
-    <a class="theme-switch" data-mode="dark"><i class="far fa-moon"></i></a>
-    <a class="theme-switch" data-mode="auto"><i class="fas fa-adjust"></i></a>
+        <span class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" data-toggle="tooltip">
+    <a class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></a>
+    <a class="theme-switch" data-mode="dark"><i class="fa-regular fa-moon"></i></a>
+    <a class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></a>
 </span>
       </div>
       
@@ -180,7 +183,8 @@
           
           
           
-          <a href="https://github.com/common-workflow-language/user_guide/" title="GitHub" class="nav-link" rel="noopener" target="_blank"><span><i class="fab fa-github-square"></i></span>
+          
+          <a href="https://github.com/common-workflow-language/user_guide/" title="GitHub" class="nav-link" rel="noopener" target="_blank" data-toggle="tooltip"><span><i class="fab fa-github-square"></i></span>
             <label class="sr-only">GitHub</label></a>
         </li>
       </ul>
@@ -192,14 +196,14 @@
 
   
   <div class="search-button-container--mobile">
-<button class="btn btn-sm navbar-btn search-button search-button__button" title="Search">
-  <i class="fas fa-search"></i>
+<button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" data-toggle="tooltip">
+  <i class="fa-solid fa-magnifying-glass"></i>
 </button>
   </div>
 
   
   <label class="sidebar-toggle secondary-toggle" for="__secondary">
-      <span class="fas fa-outdent"></span>
+      <span class="fa-solid fa-outdent"></span>
   </label>
   
 
@@ -271,10 +275,10 @@
     <div class="sidebar-header-items__end">
       
       <div class="navbar-end-item">
-        <span class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle">
-    <a class="theme-switch" data-mode="light"><i class="fas fa-sun"></i></a>
-    <a class="theme-switch" data-mode="dark"><i class="far fa-moon"></i></a>
-    <a class="theme-switch" data-mode="auto"><i class="fas fa-adjust"></i></a>
+        <span class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" data-toggle="tooltip">
+    <a class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></a>
+    <a class="theme-switch" data-mode="dark"><i class="fa-regular fa-moon"></i></a>
+    <a class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></a>
 </span>
       </div>
       
@@ -287,7 +291,8 @@
           
           
           
-          <a href="https://github.com/common-workflow-language/user_guide/" title="GitHub" class="nav-link" rel="noopener" target="_blank"><span><i class="fab fa-github-square"></i></span>
+          
+          <a href="https://github.com/common-workflow-language/user_guide/" title="GitHub" class="nav-link" rel="noopener" target="_blank" data-toggle="tooltip"><span><i class="fab fa-github-square"></i></span>
             <label class="sr-only">GitHub</label></a>
         </li>
       </ul>
@@ -302,53 +307,16 @@
     <div class="sidebar-start-items__item"><nav class="bd-links d-none d-md-block" id="bd-docs-nav" aria-label="Main navigation">
   <div class="bd-toc-item active">
     <ul class="current nav bd-sidenav">
- <li class="toctree-l1 current active has-children">
-  <a class="reference internal" href="index.html">
-   1. Introduction
-  </a>
-  <input checked class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
-  <label class="toctree-toggle" for="toctree-checkbox-1">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul class="current">
-   <li class="toctree-l2 current active">
-    <a class="current reference internal" href="#">
-     1.1. Quick Start
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="prerequisites.html">
-     1.2. Prerequisites
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="basic-concepts.html">
-     1.3. Basic Concepts
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../topics/index.html">
-   2. Topics
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../tutorials.html">
-   3. Tutorials
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../faq.html">
-   4. FAQ
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../LICENSE.html">
-   5. Licenses
-  </a>
- </li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="index.html">1. Introduction</a><input checked class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">1.1. Quick Start</a></li>
+<li class="toctree-l2"><a class="reference internal" href="prerequisites.html">1.2. Prerequisites</a></li>
+<li class="toctree-l2"><a class="reference internal" href="basic-concepts.html">1.3. Basic Concepts</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../topics/index.html">2. Topics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials.html">3. Tutorials</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../faq.html">4. FAQ</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../LICENSE.html">5. Licenses</a></li>
 </ul>
 
   </div>
@@ -449,9 +417,9 @@ It also contains other ways to install <code class="docutils literal notranslate
 <div class="literal-block-wrapper docutils container" id="running-hello-world-cwl-with-cwltool">
 <div class="code-block-caption"><span class="caption-text">Running <code class="docutils literal notranslate"><span class="pre">hello_world.cwl</span></code> with <code class="docutils literal notranslate"><span class="pre">cwltool</span></code>.</span><a class="headerlink" href="#running-hello-world-cwl-with-cwltool" title="Permalink to this code">#</a></div>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ cwltool hello_world.cwl
-INFO /opt/hostedtoolcache/Python/3.9.13/x64/bin/cwltool <span class="m">3</span>.1.20220913185150
+INFO /opt/hostedtoolcache/Python/3.9.14/x64/bin/cwltool <span class="m">3</span>.1.20221008225030
 INFO Resolved <span class="s1">&#39;hello_world.cwl&#39;</span> to <span class="s1">&#39;file:///home/runner/work/user_guide/user_guide/src/_includes/cwl/hello_world.cwl&#39;</span>
-INFO <span class="o">[</span>job hello_world.cwl<span class="o">]</span> /tmp/61c_eb44$ <span class="nb">echo</span> <span class="se">\</span>
+INFO <span class="o">[</span>job hello_world.cwl<span class="o">]</span> /tmp/nx1hsxe7$ <span class="nb">echo</span> <span class="se">\</span>
     <span class="s1">&#39;Hello World&#39;</span>
 Hello World
 INFO <span class="o">[</span>job hello_world.cwl<span class="o">]</span> completed success
@@ -465,9 +433,9 @@ to how you would change the argument of the <code class="docutils literal notran
 <div class="literal-block-wrapper docutils container" id="running-hello-world-cwl-with-cwltool-passing-an-input-parameter">
 <div class="code-block-caption"><span class="caption-text">Running <code class="docutils literal notranslate"><span class="pre">hello_world.cwl</span></code> with <code class="docutils literal notranslate"><span class="pre">cwltool</span></code> passing an input parameter.</span><a class="headerlink" href="#running-hello-world-cwl-with-cwltool-passing-an-input-parameter" title="Permalink to this code">#</a></div>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ cwltool hello_world.cwl --message<span class="o">=</span><span class="s2">&quot;Hola mundo&quot;</span>
-INFO /opt/hostedtoolcache/Python/3.9.13/x64/bin/cwltool <span class="m">3</span>.1.20220913185150
+INFO /opt/hostedtoolcache/Python/3.9.14/x64/bin/cwltool <span class="m">3</span>.1.20221008225030
 INFO Resolved <span class="s1">&#39;hello_world.cwl&#39;</span> to <span class="s1">&#39;file:///home/runner/work/user_guide/user_guide/src/_includes/cwl/hello_world.cwl&#39;</span>
-INFO <span class="o">[</span>job hello_world.cwl<span class="o">]</span> /tmp/guswxoxk$ <span class="nb">echo</span> <span class="se">\</span>
+INFO <span class="o">[</span>job hello_world.cwl<span class="o">]</span> /tmp/m241aseu$ <span class="nb">echo</span> <span class="se">\</span>
     <span class="s1">&#39;Hola mundo&#39;</span>
 Hola mundo
 INFO <span class="o">[</span>job hello_world.cwl<span class="o">]</span> completed success
@@ -491,9 +459,9 @@ corresponding values. This file can be written in JSON or YAML. For example:</p>
 <div class="literal-block-wrapper docutils container" id="passing-an-inputs-object-file-to-cwltool">
 <div class="code-block-caption"><span class="caption-text">Passing an Inputs Object file to <code class="docutils literal notranslate"><span class="pre">cwltool</span></code>.</span><a class="headerlink" href="#passing-an-inputs-object-file-to-cwltool" title="Permalink to this code">#</a></div>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ cwltool hello_world.cwl hello_world-job.json
-INFO /opt/hostedtoolcache/Python/3.9.13/x64/bin/cwltool <span class="m">3</span>.1.20220913185150
+INFO /opt/hostedtoolcache/Python/3.9.14/x64/bin/cwltool <span class="m">3</span>.1.20221008225030
 INFO Resolved <span class="s1">&#39;hello_world.cwl&#39;</span> to <span class="s1">&#39;file:///home/runner/work/user_guide/user_guide/src/_includes/cwl/hello_world.cwl&#39;</span>
-INFO <span class="o">[</span>job hello_world.cwl<span class="o">]</span> /tmp/8xuqrk9z$ <span class="nb">echo</span> <span class="se">\</span>
+INFO <span class="o">[</span>job hello_world.cwl<span class="o">]</span> /tmp/i5sv28j5$ <span class="nb">echo</span> <span class="se">\</span>
     こんにちは世界
 こんにちは世界
 INFO <span class="o">[</span>job hello_world.cwl<span class="o">]</span> completed success
@@ -515,7 +483,7 @@ files.</p>
 <ul class="simple">
 <li><p>Continue reading the next sections of this User Guide!</p></li>
 <li><p>List of CWL Implementations: <a class="reference external" href="https://www.commonwl.org/implementations/">https://www.commonwl.org/implementations/</a></p></li>
-<li><p>The <code class="docutils literal notranslate"><span class="pre">common-workflow-language</span></code> organization at GitHub: <a class="reference external" href="https://github.com/common-workflow-language">https://github.com/common-workflow-language</a></p></li>
+<li><p>The <code class="docutils literal notranslate"><span class="pre">common-workflow-language</span></code> organization at GitHub: <a class="github reference external" href="https://github.com/common-workflow-language">common-workflow-language</a></p></li>
 <li><p>Common Workflow Language at Wikipedia: <a class="reference external" href="https://en.wikipedia.org/wiki/Common_Workflow_Language">https://en.wikipedia.org/wiki/Common_Workflow_Language</a></p></li>
 <li><p>YAML.org: <a class="reference external" href="http://yaml.org/">http://yaml.org/</a> and YAML at Wikipedia: <a class="reference external" href="https://en.wikipedia.org/wiki/YAML">https://en.wikipedia.org/wiki/YAML</a></p></li>
 <li><p>The CWL <code class="docutils literal notranslate"><span class="pre">v1.2</span></code> Specification: <a class="reference external" href="https://www.commonwl.org/v1.2/">https://www.commonwl.org/v1.2/</a></p></li>
@@ -533,7 +501,7 @@ files.</p>
                 <!-- Previous / next buttons -->
 <div class='prev-next-area'>
   <a class='left-prev' id="prev-link" href="index.html" title="previous page">
-      <i class="fas fa-angle-left"></i>
+      <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
           <p class="prev-next-subtitle">previous</p>
           <p class="prev-next-title"><span class="section-number">1. </span>Introduction</p>
@@ -544,7 +512,7 @@ files.</p>
       <p class="prev-next-subtitle">next</p>
       <p class="prev-next-title"><span class="section-number">1.2. </span>Prerequisites</p>
   </div>
-  <i class="fas fa-angle-right"></i>
+  <i class="fa-solid fa-angle-right"></i>
   </a>
 </div>
             </footer>
@@ -558,7 +526,7 @@ files.</p>
 <div class="toc-item">
   
 <div class="tocsection onthispage">
-    <i class="fas fa-list"></i> On this page
+    <i class="fa-solid fa-list"></i> On this page
 </div>
 <nav id="bd-toc-nav" class="page-toc">
     <ul class="visible nav section-nav flex-column">
@@ -589,10 +557,15 @@ files.</p>
 
 <div class="toc-item">
   
+<div id="searchbox"></div>
+</div>
+
+<div class="toc-item">
+  
 
 <div class="tocsection editthispage">
-    <a href="https://github.com/common-workflow-language/user_guide/edit/main/introduction/quick-start.md">
-        <i class="fas fa-pencil-alt"></i> Edit this page
+    <a href="https://github.com/common-workflow-language/user_guide/edit/main/src/introduction/quick-start.md">
+        <i class="fa-solid fa-pencil"></i> Edit this page
     </a>
 </div>
 
@@ -602,7 +575,7 @@ files.</p>
   
 <div class="tocsection sourcelink">
     <a href="../_sources/introduction/quick-start.md.txt">
-        <i class="fas fa-file-alt"></i> Show Source
+        <i class="fa-solid fa-file-lines"></i> Show Source
     </a>
 </div>
 
@@ -625,7 +598,7 @@ files.</p>
   
     
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../_static/scripts/pydata-sphinx-theme.js?digest=9b1a4fa89bdd0e95b23b"></script>
+  <script src="../_static/scripts/pydata-sphinx-theme.js?digest=1e1de1a1873e13ef5536"></script>
 
 <div class="container">
   <div class="row">

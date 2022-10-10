@@ -4,7 +4,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
 
     <title>2.10. Workflows &#8212; Common Workflow Language User Guide 0.1 documentation</title>
   <script>
@@ -13,8 +13,8 @@
   </script>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../_static/styles/theme.css?digest=9b1a4fa89bdd0e95b23b" rel="stylesheet">
-<link href="../_static/styles/pydata-sphinx-theme.css?digest=9b1a4fa89bdd0e95b23b" rel="stylesheet">
+  <link href="../_static/styles/theme.css?digest=1e1de1a1873e13ef5536" rel="stylesheet">
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=1e1de1a1873e13ef5536" rel="stylesheet">
 
   
   <link rel="stylesheet"
@@ -23,6 +23,8 @@
     href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2">
   <link rel="preload" as="font" type="font/woff2" crossorigin
     href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2">
 
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../_static/graphviz.css" />
@@ -33,13 +35,14 @@
     <link rel="icon" sizes="196x196" type="image/png" href="../_static/images/favicons/cwl/favicon-196x196.png" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=9b1a4fa89bdd0e95b23b">
+  <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=1e1de1a1873e13ef5536">
 
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
     <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../_static/doctools.js"></script>
+    <script src="../_static/sphinx_highlight.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'topics/workflows';</script>
     <link rel="shortcut icon" href="../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../genindex.html" />
@@ -67,7 +70,7 @@
     <div class="search-button__search-container">
       
 <form class="bd-search d-flex align-items-center" action="../search.html" method="get">
-  <i class="icon fas fa-search"></i>
+  <i class="fa-solid fa-magnifying-glass"></i>
   <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
   <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
 </form>
@@ -77,7 +80,7 @@
   
   <nav class="bd-header navbar navbar-expand-lg bd-navbar" id="navbar-main"><div class="bd-header__inner bd-page-width">
   <label class="sidebar-toggle primary-toggle" for="__primary">
-      <span class="fas fa-bars"></span>
+      <span class="fa-solid fa-bars"></span>
   </label>
   <div id="navbar-start">
     
@@ -158,16 +161,16 @@
     <div id="navbar-end">
       <div class="navbar-end-item navbar-end__search-button-container">
         
-<button class="btn btn-sm navbar-btn search-button search-button__button" title="Search">
-  <i class="fas fa-search"></i>
+<button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" data-toggle="tooltip">
+  <i class="fa-solid fa-magnifying-glass"></i>
 </button>
       </div>
       
       <div class="navbar-end-item">
-        <span class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle">
-    <a class="theme-switch" data-mode="light"><i class="fas fa-sun"></i></a>
-    <a class="theme-switch" data-mode="dark"><i class="far fa-moon"></i></a>
-    <a class="theme-switch" data-mode="auto"><i class="fas fa-adjust"></i></a>
+        <span class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" data-toggle="tooltip">
+    <a class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></a>
+    <a class="theme-switch" data-mode="dark"><i class="fa-regular fa-moon"></i></a>
+    <a class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></a>
 </span>
       </div>
       
@@ -180,7 +183,8 @@
           
           
           
-          <a href="https://github.com/common-workflow-language/user_guide/" title="GitHub" class="nav-link" rel="noopener" target="_blank"><span><i class="fab fa-github-square"></i></span>
+          
+          <a href="https://github.com/common-workflow-language/user_guide/" title="GitHub" class="nav-link" rel="noopener" target="_blank" data-toggle="tooltip"><span><i class="fab fa-github-square"></i></span>
             <label class="sr-only">GitHub</label></a>
         </li>
       </ul>
@@ -192,14 +196,14 @@
 
   
   <div class="search-button-container--mobile">
-<button class="btn btn-sm navbar-btn search-button search-button__button" title="Search">
-  <i class="fas fa-search"></i>
+<button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" data-toggle="tooltip">
+  <i class="fa-solid fa-magnifying-glass"></i>
 </button>
   </div>
 
   
   <label class="sidebar-toggle secondary-toggle" for="__secondary">
-      <span class="fas fa-outdent"></span>
+      <span class="fa-solid fa-outdent"></span>
   </label>
   
 
@@ -271,10 +275,10 @@
     <div class="sidebar-header-items__end">
       
       <div class="navbar-end-item">
-        <span class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle">
-    <a class="theme-switch" data-mode="light"><i class="fas fa-sun"></i></a>
-    <a class="theme-switch" data-mode="dark"><i class="far fa-moon"></i></a>
-    <a class="theme-switch" data-mode="auto"><i class="fas fa-adjust"></i></a>
+        <span class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" data-toggle="tooltip">
+    <a class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></a>
+    <a class="theme-switch" data-mode="dark"><i class="fa-regular fa-moon"></i></a>
+    <a class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></a>
 </span>
       </div>
       
@@ -287,7 +291,8 @@
           
           
           
-          <a href="https://github.com/common-workflow-language/user_guide/" title="GitHub" class="nav-link" rel="noopener" target="_blank"><span><i class="fab fa-github-square"></i></span>
+          
+          <a href="https://github.com/common-workflow-language/user_guide/" title="GitHub" class="nav-link" rel="noopener" target="_blank" data-toggle="tooltip"><span><i class="fab fa-github-square"></i></span>
             <label class="sr-only">GitHub</label></a>
         </li>
       </ul>
@@ -302,133 +307,32 @@
     <div class="sidebar-start-items__item"><nav class="bd-links d-none d-md-block" id="bd-docs-nav" aria-label="Main navigation">
   <div class="bd-toc-item active">
     <ul class="current nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../introduction/index.html">
-   1. Introduction
-  </a>
- </li>
- <li class="toctree-l1 current active has-children">
-  <a class="reference internal" href="index.html">
-   2. Topics
-  </a>
-  <input checked class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
-  <label class="toctree-toggle" for="toctree-checkbox-1">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul class="current">
-   <li class="toctree-l2">
-    <a class="reference internal" href="yaml-guide.html">
-     2.1. YAML Guide
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="command-line-tool.html">
-     2.2. Command Line Tool
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="expressions.html">
-     2.3. Expressions
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="inputs.html">
-     2.4. Inputs
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="additional-arguments-and-parameters.html">
-     2.5. Additional Arguments and Parameters
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="parameter-references.html">
-     2.6. Parameter References
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="outputs.html">
-     2.7. Outputs
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="custom-types.html">
-     2.8. Custom Types
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="expression-tool.html">
-     2.9. Expression Tool
-    </a>
-   </li>
-   <li class="toctree-l2 current active">
-    <a class="current reference internal" href="#">
-     2.10. Workflows
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="operations.html">
-     2.11. Operations
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="environment-variables.html">
-     2.12. Environment Variables
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="using-containers.html">
-     2.13. Using Containers
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="creating-files-at-runtime.html">
-     2.14. Creating Files at Runtime
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="staging-input-files.html">
-     2.15. Staging Input Files
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="best-practices.html">
-     2.16. Best Practices
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="file-formats.html">
-     2.17. File Formats
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="metadata-and-authorship.html">
-     2.18. Metadata and Authorship
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="specifying-software-requirements.html">
-     2.19. Specifying Software Requirements
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../tutorials.html">
-   3. Tutorials
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../faq.html">
-   4. FAQ
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../LICENSE.html">
-   5. Licenses
-  </a>
- </li>
+<li class="toctree-l1"><a class="reference internal" href="../introduction/index.html">1. Introduction</a></li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="index.html">2. Topics</a><input checked class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="yaml-guide.html">2.1. YAML Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="command-line-tool.html">2.2. Command Line Tool</a></li>
+<li class="toctree-l2"><a class="reference internal" href="expressions.html">2.3. Expressions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="inputs.html">2.4. Inputs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="additional-arguments-and-parameters.html">2.5. Additional Arguments and Parameters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="parameter-references.html">2.6. Parameter References</a></li>
+<li class="toctree-l2"><a class="reference internal" href="outputs.html">2.7. Outputs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="custom-types.html">2.8. Custom Types</a></li>
+<li class="toctree-l2"><a class="reference internal" href="expression-tool.html">2.9. Expression Tool</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">2.10. Workflows</a></li>
+<li class="toctree-l2"><a class="reference internal" href="operations.html">2.11. Operations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="environment-variables.html">2.12. Environment Variables</a></li>
+<li class="toctree-l2"><a class="reference internal" href="using-containers.html">2.13. Using Containers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="creating-files-at-runtime.html">2.14. Creating Files at Runtime</a></li>
+<li class="toctree-l2"><a class="reference internal" href="staging-input-files.html">2.15. Staging Input Files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="best-practices.html">2.16. Best Practices</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file-formats.html">2.17. File Formats</a></li>
+<li class="toctree-l2"><a class="reference internal" href="metadata-and-authorship.html">2.18. Metadata and Authorship</a></li>
+<li class="toctree-l2"><a class="reference internal" href="specifying-software-requirements.html">2.19. Specifying Software Requirements</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials.html">3. Tutorials</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../faq.html">4. FAQ</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../LICENSE.html">5. Licenses</a></li>
 </ul>
 
   </div>
@@ -655,38 +559,38 @@ compiles it.</p>
 <p>Now invoke <code class="docutils literal notranslate"><span class="pre">cwltool</span></code> with the tool description and the input object on the
 command line:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ cwltool 1st-workflow.cwl 1st-workflow-job.yml
-INFO /opt/hostedtoolcache/Python/3.9.13/x64/bin/cwltool <span class="m">3</span>.1.20220913185150
+INFO /opt/hostedtoolcache/Python/3.9.14/x64/bin/cwltool <span class="m">3</span>.1.20221008225030
 INFO Resolved <span class="s1">&#39;1st-workflow.cwl&#39;</span> to <span class="s1">&#39;file:///home/runner/work/user_guide/user_guide/src/_includes/cwl/workflows/1st-workflow.cwl&#39;</span>
 INFO <span class="o">[</span>workflow <span class="o">]</span> start
 INFO <span class="o">[</span>workflow <span class="o">]</span> starting step untar
 INFO <span class="o">[</span>step untar<span class="o">]</span> start
-INFO <span class="o">[</span>job untar<span class="o">]</span> /tmp/rnz0owkl$ tar <span class="se">\</span>
+INFO <span class="o">[</span>job untar<span class="o">]</span> /tmp/lcjqzoma$ tar <span class="se">\</span>
     --extract <span class="se">\</span>
     --file <span class="se">\</span>
-    /tmp/gvpea90m/stg3a629cbb-55db-4398-acb4-1fd9222b713e/hello.tar <span class="se">\</span>
+    /tmp/trtn_1kk/stge0896255-01ee-4eb9-a440-6309fad4b28b/hello.tar <span class="se">\</span>
     Hello.java
 INFO <span class="o">[</span>job untar<span class="o">]</span> completed success
 INFO <span class="o">[</span>step untar<span class="o">]</span> completed success
 INFO <span class="o">[</span>workflow <span class="o">]</span> starting step compile
 INFO <span class="o">[</span>step compile<span class="o">]</span> start
-INFO <span class="o">[</span>job compile<span class="o">]</span> /tmp/01rjcge5$ docker <span class="se">\</span>
+INFO <span class="o">[</span>job compile<span class="o">]</span> /tmp/zk89nn2c$ docker <span class="se">\</span>
     run <span class="se">\</span>
     -i <span class="se">\</span>
-    --mount<span class="o">=</span><span class="nv">type</span><span class="o">=</span>bind,source<span class="o">=</span>/tmp/01rjcge5,target<span class="o">=</span>/hMpgMJ <span class="se">\</span>
-    --mount<span class="o">=</span><span class="nv">type</span><span class="o">=</span>bind,source<span class="o">=</span>/tmp/m3ppt1to,target<span class="o">=</span>/tmp <span class="se">\</span>
-    --mount<span class="o">=</span><span class="nv">type</span><span class="o">=</span>bind,source<span class="o">=</span>/tmp/rnz0owkl/Hello.java,target<span class="o">=</span>/var/lib/cwl/stgdcf34c28-dc20-4b4a-b95d-3aaabb2c1d04/Hello.java,readonly <span class="se">\</span>
-    --workdir<span class="o">=</span>/hMpgMJ <span class="se">\</span>
+    --mount<span class="o">=</span><span class="nv">type</span><span class="o">=</span>bind,source<span class="o">=</span>/tmp/zk89nn2c,target<span class="o">=</span>/dLWtNa <span class="se">\</span>
+    --mount<span class="o">=</span><span class="nv">type</span><span class="o">=</span>bind,source<span class="o">=</span>/tmp/15_9j1vd,target<span class="o">=</span>/tmp <span class="se">\</span>
+    --mount<span class="o">=</span><span class="nv">type</span><span class="o">=</span>bind,source<span class="o">=</span>/tmp/lcjqzoma/Hello.java,target<span class="o">=</span>/var/lib/cwl/stgb5bbdb20-ec76-4f9b-a302-4327f7b02377/Hello.java,readonly <span class="se">\</span>
+    --workdir<span class="o">=</span>/dLWtNa <span class="se">\</span>
     --read-only<span class="o">=</span><span class="nb">true</span> <span class="se">\</span>
     --user<span class="o">=</span><span class="m">1001</span>:121 <span class="se">\</span>
     --rm <span class="se">\</span>
-    --cidfile<span class="o">=</span>/tmp/mv_vikka/20220921073035-115040.cid <span class="se">\</span>
+    --cidfile<span class="o">=</span>/tmp/r7ja25t2/20221010081201-757457.cid <span class="se">\</span>
     --env<span class="o">=</span><span class="nv">TMPDIR</span><span class="o">=</span>/tmp <span class="se">\</span>
-    --env<span class="o">=</span><span class="nv">HOME</span><span class="o">=</span>/hMpgMJ <span class="se">\</span>
+    --env<span class="o">=</span><span class="nv">HOME</span><span class="o">=</span>/dLWtNa <span class="se">\</span>
     openjdk:9.0.1-11-slim <span class="se">\</span>
     javac <span class="se">\</span>
     -d <span class="se">\</span>
-    /hMpgMJ <span class="se">\</span>
-    /var/lib/cwl/stgdcf34c28-dc20-4b4a-b95d-3aaabb2c1d04/Hello.java
+    /dLWtNa <span class="se">\</span>
+    /var/lib/cwl/stgb5bbdb20-ec76-4f9b-a302-4327f7b02377/Hello.java
 INFO <span class="o">[</span>job compile<span class="o">]</span> Max memory used: 0MiB
 INFO <span class="o">[</span>job compile<span class="o">]</span> completed success
 INFO <span class="o">[</span>step compile<span class="o">]</span> completed success
@@ -992,25 +896,25 @@ as well!</p>
 <code class="docutils literal notranslate"><span class="pre">echo</span></code> on a message. If we invoke <code class="docutils literal notranslate"><span class="pre">cwltool</span> <span class="pre">scatter-workflow.cwl</span> <span class="pre">scatter-job.yml</span></code> on the
 command line:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ cwltool scatter-workflow.cwl scatter-job.yml
-INFO /opt/hostedtoolcache/Python/3.9.13/x64/bin/cwltool <span class="m">3</span>.1.20220913185150
+INFO /opt/hostedtoolcache/Python/3.9.14/x64/bin/cwltool <span class="m">3</span>.1.20221008225030
 INFO Resolved <span class="s1">&#39;scatter-workflow.cwl&#39;</span> to <span class="s1">&#39;file:///home/runner/work/user_guide/user_guide/src/_includes/cwl/workflows/scatter-workflow.cwl&#39;</span>
 INFO <span class="o">[</span>workflow <span class="o">]</span> start
 INFO <span class="o">[</span>workflow <span class="o">]</span> starting step <span class="nb">echo</span>
 INFO <span class="o">[</span>step echo<span class="o">]</span> start
-INFO <span class="o">[</span>job echo<span class="o">]</span> /tmp/10lv7d52$ <span class="nb">echo</span> <span class="se">\</span>
-    <span class="s1">&#39;Hello world!&#39;</span> &gt; /tmp/10lv7d52/3f8f180805bc1795e077d75bc6dbec026a376483
+INFO <span class="o">[</span>job echo<span class="o">]</span> /tmp/0_bxnx3y$ <span class="nb">echo</span> <span class="se">\</span>
+    <span class="s1">&#39;Hello world!&#39;</span> &gt; /tmp/0_bxnx3y/3f8f180805bc1795e077d75bc6dbec026a376483
 INFO <span class="o">[</span>job echo<span class="o">]</span> completed success
 INFO <span class="o">[</span>step echo<span class="o">]</span> start
-INFO <span class="o">[</span>job echo_2<span class="o">]</span> /tmp/e960xe0m$ <span class="nb">echo</span> <span class="se">\</span>
-    <span class="s1">&#39;Hola mundo!&#39;</span> &gt; /tmp/e960xe0m/3f8f180805bc1795e077d75bc6dbec026a376483
+INFO <span class="o">[</span>job echo_2<span class="o">]</span> /tmp/ytq0ipeb$ <span class="nb">echo</span> <span class="se">\</span>
+    <span class="s1">&#39;Hola mundo!&#39;</span> &gt; /tmp/ytq0ipeb/3f8f180805bc1795e077d75bc6dbec026a376483
 INFO <span class="o">[</span>job echo_2<span class="o">]</span> completed success
 INFO <span class="o">[</span>step echo<span class="o">]</span> start
-INFO <span class="o">[</span>job echo_3<span class="o">]</span> /tmp/tftjhkq9$ <span class="nb">echo</span> <span class="se">\</span>
-    <span class="s1">&#39;Bonjour le monde!&#39;</span> &gt; /tmp/tftjhkq9/3f8f180805bc1795e077d75bc6dbec026a376483
+INFO <span class="o">[</span>job echo_3<span class="o">]</span> /tmp/2t2d3i8m$ <span class="nb">echo</span> <span class="se">\</span>
+    <span class="s1">&#39;Bonjour le monde!&#39;</span> &gt; /tmp/2t2d3i8m/3f8f180805bc1795e077d75bc6dbec026a376483
 INFO <span class="o">[</span>job echo_3<span class="o">]</span> completed success
 INFO <span class="o">[</span>step echo<span class="o">]</span> start
-INFO <span class="o">[</span>job echo_4<span class="o">]</span> /tmp/lukj6v18$ <span class="nb">echo</span> <span class="se">\</span>
-    <span class="s1">&#39;Hallo welt!&#39;</span> &gt; /tmp/lukj6v18/3f8f180805bc1795e077d75bc6dbec026a376483
+INFO <span class="o">[</span>job echo_4<span class="o">]</span> /tmp/29u1g8ni$ <span class="nb">echo</span> <span class="se">\</span>
+    <span class="s1">&#39;Hallo welt!&#39;</span> &gt; /tmp/29u1g8ni/3f8f180805bc1795e077d75bc6dbec026a376483
 INFO <span class="o">[</span>job echo_4<span class="o">]</span> completed success
 INFO <span class="o">[</span>step echo<span class="o">]</span> completed success
 INFO <span class="o">[</span>workflow <span class="o">]</span> completed success
@@ -1261,7 +1165,7 @@ This allows workflows to skip additional steps based on input parameters given a
                 <!-- Previous / next buttons -->
 <div class='prev-next-area'>
   <a class='left-prev' id="prev-link" href="expression-tool.html" title="previous page">
-      <i class="fas fa-angle-left"></i>
+      <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
           <p class="prev-next-subtitle">previous</p>
           <p class="prev-next-title"><span class="section-number">2.9. </span>Expression Tool</p>
@@ -1272,7 +1176,7 @@ This allows workflows to skip additional steps based on input parameters given a
       <p class="prev-next-subtitle">next</p>
       <p class="prev-next-title"><span class="section-number">2.11. </span>Operations</p>
   </div>
-  <i class="fas fa-angle-right"></i>
+  <i class="fa-solid fa-angle-right"></i>
   </a>
 </div>
             </footer>
@@ -1286,7 +1190,7 @@ This allows workflows to skip additional steps based on input parameters given a
 <div class="toc-item">
   
 <div class="tocsection onthispage">
-    <i class="fas fa-list"></i> On this page
+    <i class="fa-solid fa-list"></i> On this page
 </div>
 <nav id="bd-toc-nav" class="page-toc">
     <ul class="visible nav section-nav flex-column">
@@ -1317,10 +1221,15 @@ This allows workflows to skip additional steps based on input parameters given a
 
 <div class="toc-item">
   
+<div id="searchbox"></div>
+</div>
+
+<div class="toc-item">
+  
 
 <div class="tocsection editthispage">
-    <a href="https://github.com/common-workflow-language/user_guide/edit/main/topics/workflows.md">
-        <i class="fas fa-pencil-alt"></i> Edit this page
+    <a href="https://github.com/common-workflow-language/user_guide/edit/main/src/topics/workflows.md">
+        <i class="fa-solid fa-pencil"></i> Edit this page
     </a>
 </div>
 
@@ -1330,7 +1239,7 @@ This allows workflows to skip additional steps based on input parameters given a
   
 <div class="tocsection sourcelink">
     <a href="../_sources/topics/workflows.md.txt">
-        <i class="fas fa-file-alt"></i> Show Source
+        <i class="fa-solid fa-file-lines"></i> Show Source
     </a>
 </div>
 
@@ -1353,7 +1262,7 @@ This allows workflows to skip additional steps based on input parameters given a
   
     
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../_static/scripts/pydata-sphinx-theme.js?digest=9b1a4fa89bdd0e95b23b"></script>
+  <script src="../_static/scripts/pydata-sphinx-theme.js?digest=1e1de1a1873e13ef5536"></script>
 
 <div class="container">
   <div class="row">
