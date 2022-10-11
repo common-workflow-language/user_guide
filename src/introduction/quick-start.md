@@ -44,9 +44,8 @@ $ pip install cwltool
 ```
 
 ```{note}
-The [prerequisites](prerequisites.md) section contains a more detailed list
+If installing the cwltool using the pip command doesn't work for you, the [prerequisites](prerequisites.md) section contains other ways to install `cwltool` and a more detailed list
 of software and libraries used for following the rest of this user guide.
-It also contains other ways to install `cwltool`.
 ```
 
 ## Running "Hello World"
