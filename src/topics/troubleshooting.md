@@ -53,7 +53,7 @@ Also note that the status of `step_b` is now of success.
 
 ```{runcmd} cwltool --cachedir /tmp/cachedir/ troubleshooting-wf1-stepb-fixed.cwl
 :working-directory: src/_includes/cwl/troubleshooting
-:emphasize-lines: 12, 16-18
+:emphasize-lines: 12, 13-16
 ```
 
 In this example the workflow step `step_a` was not re-evaluated as it had been cached, and
