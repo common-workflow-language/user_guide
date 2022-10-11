@@ -74,6 +74,7 @@ to the `cwltool` command:
 ```{runcmd} cwltool --validate true.cwl
 :name: validating-truecwl-with-cwltool
 :caption: Validating `true.cwl` with `cwltool`.
+```
 
 You can run the CWL tool description by omitting the `--validate` option:
 
