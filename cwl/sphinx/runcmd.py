@@ -169,9 +169,20 @@ class RunCmdDirective(code.CodeBlock):
                     r = match.group("replacement").replace("\\", "")
                     output = re.sub(p, r, output)
 
+        # Note: Sphinx's CodeBlock directive expects an array of command-line
+        #       output lines: https://github.com/sphinx-doc/sphinx/blob/c51a88da8b7b40e8d8cbdb1fce85ca2346b2b59a/sphinx/directives/code.py#L114
+        #       But the runcmd original code was simply wrapping a string
+        #       containing \n in the text as a one-element array, e.g.
+        #       ["cwltool --debug ...\ncwltool Version..."].
+        #       That caused the output to be correctly rendered, but the
+        #       emphasize-lines directive parameter to fail if the lines were
+        #       anything greater than 0 (as the self.content array had 1 elem).
+        #       See: https://github.com/common-workflow-language/user_guide/issues/269
+        output = output.split("\n")
+
         # Set up our arguments to run the CodeBlock parent run function
         self.arguments[0] = syntax
-        self.content = [output]
+        self.content = output
         node = super(RunCmdDirective, self).run()
 
         return node
