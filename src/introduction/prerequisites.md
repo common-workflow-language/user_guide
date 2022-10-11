@@ -22,12 +22,15 @@ of the following options for your operating system:
 
 - Linux
 - macOS
+- Windows
 
-You can try to use Window Subsystem for Linux 2 (WSL) to follow the
-User Guide documentation, but some examples may not work as expected.
-
+```{note}  
+If you are using Windows, you will have to install the Windows Subsystem for Linux.
+Visit the `cwltool` [documentation](https://github.com/common-workflow-language/cwltool/blob/main/README.rst)
+to setup the cwltool for your operating system.  
 Your operating system also needs Internet access and a recent version
 of Python 3.
+```
 
 ## CWL runner
 
