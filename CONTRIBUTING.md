@@ -68,7 +68,7 @@ so fresh eyes are always welcome.
 ## Using GitHub
 
 If you choose to contribute via GitHub, you may want to look at
-[How to Contribute to an Open Source Project on GitHub](https://app.egghead.io/playlists/how-to-contribute-to-an-open-source-project-on-github).
+[How to Contribute to an Open Source Project on GitHub][how-contribute].
 To manage changes, we follow [GitHub flow][github-flow].
 To use the web interface for contributing:
 
@@ -130,7 +130,7 @@ which everyone is welcome to join.
 [github]: https://github.com
 [github-flow]: https://guides.github.com/introduction/flow/
 [github-join]: https://github.com/join
-[how-contribute]: https://egghead.io/series/how-to-contribute-to-an-open-source-project-on-github
+[how-contribute]: https://docs.github.com/en/get-started/quickstart/contributing-to-projects
 [issues]: https://github.com/common-workflow-language/user_guide/issues
 [cwl-issues]: https://github.com/common-workflow-language/common-workflow-language/issues
 [repo]: https://github.com/common-workflow-language/user_guide
