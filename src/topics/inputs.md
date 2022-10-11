@@ -222,7 +222,7 @@ In the first example, you can't provide `itemA` without also providing `itemB`.
 
 ```{runcmd} cwltool record.cwl record-job2.yml
 :working-directory: src/_includes/cwl/inputs
-:emphasize-lines: 3, 9-10, 24
+:emphasize-lines: 4, 10-11, 23
 ````
 
 ```{code-block} console
@@ -241,7 +241,7 @@ matching item (`itemC`) is added to the command line and remaining item (`itemD`
 
 ```{runcmd} cwltool record.cwl record-job3.yml
 :working-directory: src/_includes/cwl/inputs
-:emphasize-lines: 9-10, 24
+:emphasize-lines: 9-10, 22
 ````
 
 ```{code-block} console
@@ -266,7 +266,6 @@ that accepts `null` (i.e. no value provided), or any value from an enum.
 :language: cwl
 :caption: "`exclusive-parameter-expressions.cwl`"
 :name: exclusive-parameter-expressions.cwl
-:emphasize-lines: 7, 21-23
 ```
 
 Note how the JavaScript expression uses the value of the exclusive input parameter
@@ -284,7 +283,7 @@ output field (a `string`), resulting in failure when running your workflow.
 
 ```{runcmd} cwltool exclusive-parameter-expressions.cwl
 :working-directory: src/_includes/cwl/inputs
-:emphasize-lines: 6-10
+:emphasize-lines: 5-10
 ```
 
 To correct it, you must remember to use an or operator in your JavaScript expression
