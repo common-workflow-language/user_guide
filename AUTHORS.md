@@ -9,7 +9,7 @@ Thank you to the following contributors (in alphabetical order by user name):
     Michael Crusoe (@mr-c) http://orcid.org/0000-0002-2961-9670
     @rmccole
     Adrian Sharma (@sharmatime)
-    @Smyja
+    Oghenemaro Akpo (@Smyja)
     Stian Soiland-Reyes (@stain) [https://orcid.org/0000-0001-9842-9718
    
 Thanks to:
