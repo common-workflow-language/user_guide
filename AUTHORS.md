@@ -3,7 +3,7 @@ Thank you to the following contributors (in alphabetical order by user name):
     Bruno P. Kinoshita (@kinow) https://orcid.org/0000-0001-8250-4074
     Peter Amstutz (@tetron) https://orcid.org/0000-0003-3566-7705
     Toby Hodges (@tobyhodges) https://orcid.org/0000-0003-1766-456X
-    Michele Mastropietro (@lehcim) 
+    Michele Mastropietro (@elehcim) https://orcid.org/0000-0002-6324-5713
     Robin Long (@longr) 
     Manabu Ishii (@manabuishii)
     Michael Crusoe (@mr-c) http://orcid.org/0000-0002-2961-9670
