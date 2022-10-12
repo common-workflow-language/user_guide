@@ -101,11 +101,13 @@ in `Makefile`).
 # Create and activate a virtual environment
 python -m venv venv
 source venv/bin/activate
+# update the version of pip, setuptools, and wheel
+(venv) pip -U pip setuptools wheel
 # Install the dependencies in your virtual environment
-(venv) python -mpip install .[all]
+(venv) pip install .[all]
 # Create the HTML to visualize locally
 (venv) make html
-(venv) firefox _build/index.html
+(venv) open _build/index.html
 # Or you can start a serve that watches for local file changes
 (venv) make watch
 # Open <http://localhost:8000/> in your browser
