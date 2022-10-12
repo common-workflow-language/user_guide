@@ -29,7 +29,7 @@ create the directory for you if it does not exist already):
 
 ```{runcmd} cwltool --cachedir /tmp/cachedir/ troubleshooting-wf1.cwl
 :working-directory: src/_includes/cwl/troubleshooting
-:emphasize-lines: 12-14, 19-21
+:emphasize-lines: 13-15, 18-20
 ```
 
 The workflow is in the `permanentFail` status due to `step_b` failing to execute the
@@ -53,7 +53,7 @@ Also note that the status of `step_b` is now of success.
 
 ```{runcmd} cwltool --cachedir /tmp/cachedir/ troubleshooting-wf1-stepb-fixed.cwl
 :working-directory: src/_includes/cwl/troubleshooting
-:emphasize-lines: 12, 16-18
+:emphasize-lines: 12-16
 ```
 
 In this example the workflow step `step_a` was not re-evaluated as it had been cached, and
