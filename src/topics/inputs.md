@@ -29,6 +29,18 @@ Create a file called `inp-job.yml`:
 :name: inp-job.yml
 ```
 
+````{note}
+You can use `cwltool` to create a template input object. That saves you from having
+to type all the input parameters in a input object file:
+
+```{runcmd} cwltool --make-template inp.cwl
+:working-directory: src/_includes/cwl/inputs
+```
+
+You can redirect the output to a file, i.e. `cwltool --make-template inp.cwl > inp-job.yml`,
+and then modify the default values with your desired input values.
+````
+
 Notice that "example_file", as a `File` type, must be provided as an
 object with the fields `class: File` and `path`.
 
@@ -176,7 +188,7 @@ This will be demonstrated in the next lesson
 and is discussed in more detail in the [YAML Guide](yaml-guide.md#arrays).
 You can specify arrays of arrays, arrays of records, and other complex types.
 
-## Advanced Inputs
+## Inclusive and Exclusive Inputs
 
 Sometimes an underlying tool has several arguments that must be provided
 together (they are dependent) or several arguments that cannot be provided
@@ -197,6 +209,7 @@ parameters together to describe these two conditions.
 
 ```{runcmd} cwltool record.cwl record-job1.yml
 :working-directory: src/_includes/cwl/inputs/
+:emphasize-lines: 6-7
 ```
 
 In the first example, you can't provide `itemA` without also providing `itemB`.
@@ -209,6 +222,7 @@ In the first example, you can't provide `itemA` without also providing `itemB`.
 
 ```{runcmd} cwltool record.cwl record-job2.yml
 :working-directory: src/_includes/cwl/inputs
+:emphasize-lines: 4, 10-11, 23
 ````
 
 ```{code-block} console
@@ -216,8 +230,8 @@ $ cat output.txt
 -A one -B two -C three
 ```
 
-In the second example, `itemC` and `itemD` are exclusive, so only `itemC`
-is added to the command line and `itemD` is ignored.
+In the second example, `itemC` and `itemD` are exclusive, so only the first
+matching item (`itemC`) is added to the command line and remaining item (`itemD`) is ignored.
 
 ```{literalinclude} /_includes/cwl/inputs/record-job3.yml
 :language: yaml
@@ -227,6 +241,7 @@ is added to the command line and `itemD` is ignored.
 
 ```{runcmd} cwltool record.cwl record-job3.yml
 :working-directory: src/_includes/cwl/inputs
+:emphasize-lines: 9-10, 22
 ````
 
 ```{code-block} console
@@ -237,10 +252,48 @@ $ cat output.txt
 In the third example, only `itemD` is provided, so it appears on the
 command line.
 
+### Exclusive Input Parameters with Expressions
+
+If you use exclusive input parameters combined with expressions, you need to be
+aware that the `inputs` JavaScript object will contain one of the exclusive
+input values. This means that you might need to use an **or** boolean operator
+to check which values are present.
+
+Let's use an example that contains an exclusive `file_format` input parameter
+that accepts `null` (i.e. no value provided), or any value from an enum.
+
+```{literalinclude} /_includes/cwl/inputs/exclusive-parameter-expressions.cwl
+:language: cwl
+:caption: "`exclusive-parameter-expressions.cwl`"
+:name: exclusive-parameter-expressions.cwl
+```
+
+Note how the JavaScript expression uses the value of the exclusive input parameter
+without taking into consideration a `null` value. If you provide a valid value,
+such as “fasta” (one of the values of the enum), your command should execute
+successfully:
+
+```{runcmd} cwltool exclusive-parameter-expressions.cwl --file_format fasta
+:working-directory: src/_includes/cwl/inputs
+````
+
+However, if you do not provide any input value, then `file_format` will be
+evaluated to a `null` value, which does not match the expected type for the
+output field (a `string`), resulting in failure when running your workflow.
+
+```{runcmd} cwltool exclusive-parameter-expressions.cwl
+:working-directory: src/_includes/cwl/inputs
+:emphasize-lines: 5-10
+```
+
+To correct it, you must remember to use an or operator in your JavaScript expression
+when using exclusive parameters, or any parameter that allows `null`. For example,
+the expression could be changed to `$(inputs.file_format || 'auto')`, to have
+a default value if none was provided in the command line or job input file.
+
 % TODO
 %
 % - Explain its fields, such as default, valueFrom, etc. - https://github.com/common-workflow-language/common-workflow-language/issues/359
-% - Exclusive parameters https://github.com/common-workflow-language/user_guide/issues/162
 % - Optional Inputs https://github.com/common-workflow-language/user_guide/issues/44
 % - Several ways of defining inputs/arguments to tools and workflows - https://github.com/common-workflow-language/user_guide/issues/33
 % - Using an input output in another input - https://github.com/common-workflow-language/user_guide/issues/90

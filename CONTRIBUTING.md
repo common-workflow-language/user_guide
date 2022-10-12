@@ -41,9 +41,9 @@ and to meet some of our community members.
 3. If you are comfortable with Git,
     and would like to add or change material,
     you can submit a pull request (PR).
-    Instructions for doing this are [included below][#using-github].
+    Instructions for doing this are [included below][using-github].
 
-4. To build and run the user guide locally, see [building][#building].
+4. To build and run the user guide locally, see **Building** below
 
 Pull requests include an automatic preview provided by
 [ReadTheDocs](https://readthedocs.org/projects/common-workflow-languageuser-guide/).
@@ -101,11 +101,13 @@ in `Makefile`).
 # Create and activate a virtual environment
 python -m venv venv
 source venv/bin/activate
+# update the version of pip, setuptools, and wheel
+(venv) pip -U pip setuptools wheel
 # Install the dependencies in your virtual environment
-(venv) pip install -e .[all]
+(venv) pip install .[all]
 # Create the HTML to visualize locally
 (venv) make html
-(venv) firefox _build/index.html
+(venv) open _build/index.html
 # Or you can start a serve that watches for local file changes
 (venv) make watch
 # Open <http://localhost:8000/> in your browser
@@ -130,5 +132,7 @@ which everyone is welcome to join.
 [github-join]: https://github.com/join
 [how-contribute]: https://egghead.io/series/how-to-contribute-to-an-open-source-project-on-github
 [issues]: https://github.com/common-workflow-language/user_guide/issues
+[cwl-issues]: https://github.com/common-workflow-language/common-workflow-language/issues
 [repo]: https://github.com/common-workflow-language/user_guide
 [cwl-site]: https://www.commonwl.org/
+[using-github]: https://docs.github.com/en/get-started/

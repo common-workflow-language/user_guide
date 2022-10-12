@@ -223,6 +223,6 @@ html_context = {
     "github_user": "common-workflow-language",
     "github_repo": "user_guide",
     "github_version": "main",
-    "doc_path": "",
+    "doc_path": "src",
     "default_mode": "light"
 }
