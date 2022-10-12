@@ -290,7 +290,7 @@ These can be set by using the default field
 input:
   default:true
 ```
-## Concating Strings in Inputs
+## Concatenating Strings in Inputs
 
 The valueFrom field must be used instead of default.
 
