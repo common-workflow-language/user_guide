@@ -58,7 +58,7 @@ requirements:
 
 ## Rename an output file
 
-This example shows how you can change the name an output file
+This example shows how you can change the name of an output file
 from the default name given to it by a tool:
 
 ```yaml
@@ -191,7 +191,7 @@ inputs:
 <a name="enuminputs"></a>
 ## Enum Inputs ⚜️
 
-For commandline flags that require a specific input as the argument an enum type can be declared in CWL. **Specifying null here is known as long form style. It does the same thing as the question mark on the other inputs.**
+For commandline flags that require a specific input as the argument, an enum type can be declared in CWL. **Specifying null here is known as long form style. It does the same thing as the question mark on the other inputs.**
 
 ```yaml
 Format:
@@ -211,7 +211,7 @@ Format:
 <a name="recordinputs"></a>
 ## Record Inputs 📀
 
-For commandline flags that are either **mutually exclusive** or **dependent** a special record type can be defined. You can also specify null here to create optional inputs.
+For commandline flags that are either **mutually exclusive** or **dependent**, a special record type can be defined. You can also specify null here to create optional inputs.
 
 ```yaml
 #Using record inputs to create mutually exclusive inputs
@@ -304,7 +304,7 @@ input:
 
 `cwltool` does not allow some characters in filenames by default.
 
-For example, the filename is `a space is here.txt` includes 3 space characters.
+For example, the filename `a space is here.txt` includes 3 space characters.
 
 ```console
 ERROR Workflow error, try again with --debug for more information:
@@ -364,7 +364,7 @@ inputs:
 ```
 
 
-Fix this error is change `-` (hyphen) to `_` (underscore)
+To fix this error, change `-` (hyphen) to `_` (underscore)
 
 ```cwl
 valueFrom: $(inputs.sample_input)
@@ -377,7 +377,7 @@ inputs:
       # ^ changed here
 ```
 
-If is not possible to change the input identifier, then you can use an alternative CWL Parameter Reference syntax:
+If it is not possible to change the input identifier, then you can use an alternative CWL Parameter Reference syntax:
 
 ```cwl
 valueFrom: $(inputs["sample-input"])
