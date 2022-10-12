@@ -42,8 +42,8 @@ parameterization.
 :name: sample.yml
 ```
 
-___Note:___ To follow the example below, you need to download the example input file, *file-formats.bam*. The file is available from [https://github.com/common-workflow-language/user_guide/raw/main/_includes/cwl/file-formats/file-formats.bam
-](https://github.com/common-workflow-language/user_guide/raw/main/_includes/cwl/file-formats/file-formats.bam) and can be downloaded e.g. via `wget`:
+___Note:___ To follow the example below, you need to download the example input file, *file-formats.bam*. The file is available from <https://github.com/common-workflow-language/user_guide/raw/main/_includes/cwl/file-formats/file-formats.bam>
+ and can be downloaded e.g. via `wget`:
 
 ```{code-block}
 $ wget https://github.com/common-workflow-language/user_guide/raw/main/_includes/cwl/file-formats/file-formats.bam

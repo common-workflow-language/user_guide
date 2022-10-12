@@ -1,6 +1,6 @@
 # Specifying Software Requirements
 
-Often tool descriptions will be written for a specific version of a software. To
+Often, tool descriptions will be written for a specific version of a software. To
 make it easier for others to use your descriptions, you can include a
 `SoftwareRequirement` field in the `hints` section.
 This may also help to avoid confusion about which version of a tool the
@@ -23,7 +23,7 @@ hints:
 ```
 
 Depending on your CWL runner, these hints may be used to check
-that required software is installed and available before the job is run. To enable
+that the required software is installed and available before the job is run. To enable
 these checks with the reference implementation, use the [dependency resolvers configuration][dependencies].
 
 As well as a version number, a unique resource identifier (URI) for the tool is
