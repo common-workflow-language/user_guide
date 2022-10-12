@@ -4,14 +4,15 @@
 % writing this documentation.
 
 The software and configurations listed in this section are prerequisites for
-following this user guide. The CWL Specification is implemented by multiple
-CWL Runners. This list of requirements focuses on the `cwltool` runner. You
-can use another CWL Runner but the examples may produce a different output.
+following this user guide. The CWL standards are implemented by many different
+workflow runners and platforms. This list of requirements focuses on the CWL reference runner,
+`cwltool`. You can use another CWL compatible runner or workflow systems but the results and
+interface may look different (though the exact workflow outputs should be identical).
 
 ```{admonition} CWL Implementations
 
-There are many CWL Implementations. Some are complete CWL Runners,
-others are plug-ins or extensions to Workflow Engines. We have a better
+There are many implementations of the CWL standards. Some are complete CWL runners,
+others are plug-ins or extensions to workflow engines. We have a better
 explanation in the [Implementations](basic-concepts.md#implementations) section.
 ```
 
@@ -22,12 +23,14 @@ of the following options for your operating system:
 
 - Linux
 - macOS
+- Windows
 
-You can try to use Window Subsystem for Linux 2 (WSL) to follow the
-User Guide documentation, but some examples may not work as expected.
-
-Your operating system also needs Internet access and a recent version
-of Python 3.
+```{note}
+If you are using Windows, you will have to install the Windows Subsystem for Linux 2.
+Visit the `cwltool` [documentation](https://github.com/common-workflow-language/cwltool/blob/main/README.rst#ms-windows-users)
+for details on installing WSL2.
+Your operating system also needs internet access and a recent version of Python (3.6+).
+```
 
 ## CWL runner
 
@@ -55,32 +58,30 @@ $ (venv) pip install cwltool
 ```
 
 ```{note}
+You can find the `cwl-runner` source code [here](https://github.com/common-workflow-language/cwltool/tree/main/cwlref-runner).  
 Visit the `cwltool` [documentation](https://github.com/common-workflow-language/cwltool#install)
 for other ways to install `cwltool` with `apt` and `conda`.
 ```
-
-Let's use a simple workflow `true.cwl` with `cwltool`.
+Let's use a simple CWl tool description `true.cwl` with `cwltool`.
 
 ```{literalinclude} /_includes/cwl/true.cwl
-:language: cwl
+:language: yaml
 :caption: "`true.cwl`"
 :name: true.cwl
 ```
 
-The `cwltool` command has an option to validate CWL workflows. It will parse the
-CWL workflow, look for syntax errors, and verify that the workflow is compliant
-with the CWL specification, without running the workflow. To use it you just need
-to pass `--validate` to the `cwltool` command:
-
-% TODO: maybe figure out a way to avoid /home/kinow/ etc. in the documentation
-%       to avoid multiple user-names/directory-locations varying in the docs.
+The `cwltool` command has an option to validate CWL tool and workflow descriptionss. It will parse the
+CWL document, look for syntax errors, and verify that the descriptions are compliant
+with the CWL standards, without running it. To validate CWL workflows (or even a
+standalone command line tool description like above) pass the `--validate` option
+to the `cwltool` command:
 
 ```{runcmd} cwltool --validate true.cwl
 :name: validating-truecwl-with-cwltool
 :caption: Validating `true.cwl` with `cwltool`.
 ```
 
-You can run the CWL workflow now that you know it is valid:
+You can run the CWL tool description by omitting the `--validate` option:
 
 ```{runcmd} cwltool true.cwl
 :name: running-true.cwl-with-cwltool
@@ -89,25 +90,20 @@ You can run the CWL workflow now that you know it is valid:
 
 ### cwl-runner Python module
 
-`cwl-runner` is an implementation agnostic alias for CWL Runners.
+`cwl-runner` is an implementation-agnostic alias for CWL Runners.
 Users can invoke `cwl-runner` instead of invoking a CWL runner like `cwltool`
 directly. The `cwl-runner` alias command then chooses the correct CWL runner.
 This is convenient for environments with multiple CWL runners.
 
-The CWL community publishes a Python module with the same name,
-`cwl-runner`, that defaults to `cwltool`. `cwl-runner` will be used in
-the rest of this user guide. You can use `pip` to install the `cwl-runner`
-Python module:
+The CWL community publishes a Python package with the name `cwlref-runner` that installs
+an alias for `cwltool` under the name `cwl-runner`
 
 ```{code-block} console
 :name: installing-cwlrunner-with-pip
-:caption: Installing `cwl-runner` with `pip`.
+:caption: Installing `cwl-runner` alias for cwltool with `pip`.
 
-$ pip install cwl-runner
+$ pip install cwlref-runner
 ```
-
-% TODO: Maybe tell users where the cwl-runner source is? I couldn't find in PYPI as
-%       it points to the CWL project: https://github.com/common-workflow-language/cwltool/tree/main/cwlref-runner
 
 Now you can validate and run your workflow with `cwl-runner` executable,
 which will invoke `cwltool`. You should have the same results and output
@@ -174,13 +170,13 @@ auto-complete:
 - cwl-plugin for IntelliJ - <https://plugins.jetbrains.com/plugin/10040-cwl-plugin>
 
 The CWL community also maintains a list of editors and viewers:
-<https://www.commonwl.org/#Editors_and_viewers>
+<https://www.commonwl.org/tools/#editors>
 
 ## Docker
 
 % https://github.com/common-workflow-language/user_guide/issues/119
 
-`cwltool` uses Docker to run workflows or workflow steps with containers.
+`cwltool` uses Docker to run tools, workflows, and workflow steps that specify a software container.
 Follow the instructions in the Docker documentation to install it for your
 operating system: <https://docs.docker.com/>.
 
