@@ -102,7 +102,7 @@ in `Makefile`).
 python -m venv venv
 source venv/bin/activate
 # Install the dependencies in your virtual environment
-(venv) pip install -e .[all]
+(venv) python -mpip install .[all]
 # Create the HTML to visualize locally
 (venv) make html
 (venv) firefox _build/index.html
