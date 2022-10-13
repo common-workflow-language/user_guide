@@ -32,12 +32,6 @@ Thank you to the following contributors (in alphabetical order by user name):
 * Wolfgang Gerlach (@wgerlach) <https://orcid.org/0000-0002-1480-1242>
 * Zipho Mashologu (@zipho)
 
-These materials use the [Carpentries Style template](https://github.com/carpentries/styles/),
-and we thank [those authors](https://github.com/carpentries/lesson-example/blob/main/AUTHORS)
-
-Greg Wilson (ed.): "Software Carpentry: Lesson Example."  Version 2016.06, June 2016,
-https://github.com/carpentries/lesson-example, https://doi.org/10.5281/zenodo.58153 .
-
 Thanks to:
 * Common Workflow Language community and the CWL Gitter room
 * CZI Essential Open Source Software for Science (EOSS) 
