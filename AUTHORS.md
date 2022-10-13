@@ -1,4 +1,6 @@
 Thank you to the following contributors (in alphabetical order by user name):
+* Alain Domissy (@alaindomissy)
+* Andrew Jesaitis (@andrewjesaitis) 
 * Benjamin Carr (@BenjaminHCCarr) <https://orcid.org/0000-0002-6206-4638>
 * Michele Mastropietro (@elehcim) <https://orcid.org/0000-0002-6324-5713>
 * Emannuel Fernandes de Oliveira Carvalho (@emannuelOC)
@@ -6,6 +8,7 @@ Thank you to the following contributors (in alphabetical order by user name):
 * Robin Long (@longr) <https://orcid.org/0000-0003-2249-645X>
 * Ngumih Fien (@Fienne)
 * Henry Liu (@HenryLiu0)
+* Marijke J. van Baren (@Jeltje)
 * @jessMaia
 * Bruno P. Kinoshita (@kinow) <https://orcid.org/0000-0001-8250-4074>
 * Konstantin Taletskiy (@ktaletsk) <https://orcid.org/0000-0001-6846-9815>
@@ -17,8 +20,10 @@ Thank you to the following contributors (in alphabetical order by user name):
 * Ruth B. McCole  (@rmccole) <https://orcid.org/0000-0002-1861-7055>
 * @sersorrel
 * Adrian Sharma (@sharmatime)
+* Steffen Möller (@smoe) https://orcid.org/0000-0002-7187-4683
 * Oghenemaro Akpobi (@Smyja)
 * Stian Soiland-Reyes (@stain) <https://orcid.org/0000-0001-9842-9718>
+* Luka Stojanovic (@StarvingMarvin)
 * Sarah Wait Zaranek (@swzCuroverse) https://orcid.org/0000-0003-4716-9121
 * Peter Amstutz (@tetron) <https://orcid.org/0000-0003-3566-7705>
 * Toby Hodges (@tobyhodges) <https://orcid.org/0000-0003-1766-456X>
