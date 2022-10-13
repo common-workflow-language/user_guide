@@ -1,13 +1,6 @@
----
-layout: page
-title: "Licenses"
-root: .
----
-## Instructional Material
+# Licenses
 
-This material is derived from a framework created by the Software Carpentry
-and Data Carpentry projects under the [Creative Commons Attribution
-license][cc-by-human].
+## Instructional Material
 
 All Common Workflow Language project instructional material and changes
 to the structure are also made available under the [Creative Commons Attribution
@@ -29,8 +22,8 @@ Under the following terms:
 
 * **Attribution**---You must give appropriate credit (mentioning that
   your work is derived from work that is Copyright © the Common Workflow
-  Language project, and Copyright © Software Carpentry, and, where practical, linking to
-  https://www.commonwl.org/ and https://software-carpentry.org/), provide a [link to the
+  Language project, and, where practical, linking to
+  https://www.commonwl.org/ ), provide a [link to the
   license][cc-by-human], and indicate if changes were made. You may do
   so in any reasonable manner, but not in any way that suggests the
   licensor endorses you or your use.
@@ -64,11 +57,9 @@ limitations under the License.
 
 ## Trademark
 
-"Software Carpentry" and "Data Carpentry" and their respective logos
-are registered trademarks of [Community Initiatives][CI].
 
 [cc-by-human]: https://creativecommons.org/licenses/by/4.0/
 [cc-by-legal]: https://creativecommons.org/licenses/by/4.0/legalcode
 [apache-2.0-license]: https://opensource.org/licenses/Apache-2.0
-[ci]: http://communityin.org/
+[mit-license]: https://opensource.org/licenses/mit-license.html
 [osi]: https://opensource.org

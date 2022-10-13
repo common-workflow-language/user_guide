@@ -1,19 +1,21 @@
-sudo: required
 services:
   - docker
 
 language: python
 python:
-  - 2.7
-  - 3.6
+  - 3.8
+
+cache:
+  pip: true
 
 branches:
   only:
-    - gh-pages
+    - main
     - /.*/
 
-before_script:
-  - pip install cwltool cwltest html5lib
+install:
+  - pip install -U pip setuptools wheel typing
+  - pip install -e .[all]
 
 script:
   - make RUNNER=cwltool unittest-examples

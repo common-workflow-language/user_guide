@@ -1,121 +1,51 @@
-## ========================================
-## Commands for both workshop and lesson websites.
+# Minimal makefile for Sphinx documentation
+#
 
-# Settings
-MAKEFILES=Makefile $(wildcard *.mk)
-JEKYLL=jekyll
-JEKYLL_VERSION=3.7.3
-PARSER=bin/markdown_ast.rb
-DST=_site
+# You can set these variables from the command line, and also
+# from the environment for the first two.
+SPHINXOPTS		= "-W"
+SPHINXBUILD		= sphinx-build
+SOURCEDIR		= src
+BUILDDIR		= _build
+RUNNER			= cwl-runner
 
-# Controls
-.PHONY : commands clean files
-.NOTPARALLEL:
-all : commands
+# User-friendly check for sphinx-build
+ifeq ($(shell which $(SPHINXBUILD) >/dev/null 2>&1; echo $$?), 1)
+$(error The '$(SPHINXBUILD)' command was not found. Make sure you have Sphinx installed, then set the SPHINXBUILD environment variable to point to the full path of the '$(SPHINXBUILD)' executable. Alternatively you can add the directory with the executable to your PATH. If you don't have Sphinx installed, grab it from https://sphinx-doc.org/)
+endif
 
-## commands         : show all commands.
-commands :
-	@grep -h -E '^##' ${MAKEFILES} | sed -e 's/## //g'
+# Put it first so that "make" without argument is like "make help".
+help:
+	@$(SPHINXBUILD) -M help "$(SOURCEDIR)" "$(BUILDDIR)" $(SPHINXOPTS) $(O)
 
-## docker-serve     : use docker to build the site
-docker-serve :
-	docker run --rm -it -v ${PWD}:/srv/jekyll -p 127.0.0.1:4000:4000 jekyll/jekyll:${JEKYLL_VERSION} make serve
+clean:
+	@$(SPHINXBUILD) -M clean "$(SOURCEDIR)" "$(BUILDDIR)" $(SPHINXOPTS) $(O)
 
-## serve            : run a local server.
-serve : lesson-md
-	${JEKYLL} serve
+watch: clean
+	@echo
+	@echo "Building and watching for changes in the documentation."
+	sphinx-autobuild "$(SOURCEDIR)" "$(BUILDDIR)" \
+			--ignore='**venv' \
+			--ignore='**.github' \
+			--ignore='*.egg-info' \
+			--ignore='**_includes/**/*.txt' \
+			--watch='cwl'
 
-## site             : build files but do not run a server.
-site : lesson-md
-	${JEKYLL} build
+## unittest-examples	:
+unittest-examples:
+	cd src/_includes/cwl; cwltest --test=conformance-test.yml --tool=${RUNNER}
 
-# repo-check        : check repository settings.
-repo-check :
-	@bin/repo_check.py -s .
+## check-json			:
+check-json:
+	python -m json.tool < src/.zenodo.json >> /dev/null && exit 0 || echo "NOT valid JSON"; exit 1
 
-## clean            : clean up junk files.
-clean :
-	@rm -rf ${DST}
-	@rm -rf .sass-cache
-	@rm -rf bin/__pycache__
-	@find . -name .DS_Store -exec rm {} \;
-	@find . -name '*~' -exec rm {} \;
-	@find . -name '*.pyc' -exec rm {} \;
+container-pull:
+	for container in $$(git grep dockerPull $$(git ls-files *.cwl) | awk '-F: ' '{print $$3}'); do docker pull $${container}; done
 
-## clean-rmd        : clean intermediate R files (that need to be committed to the repo).
-clean-rmd :
-	@rm -rf ${RMD_DST}
-	@rm -rf fig/rmd-*
+.PHONY: help clean watch unittest-examples check-json Makefile
 
-## ----------------------------------------
-## Commands specific to workshop websites.
+# Catch-all target		: route all unknown targets to Sphinx using the new
+# "make mode" option.  $(O) is meant as a shortcut for $(SPHINXOPTS).
+%: Makefile
+	@$(SPHINXBUILD) -M $@ "$(SOURCEDIR)" "$(BUILDDIR)" $(SPHINXOPTS) $(O)
 
-.PHONY : workshop-check
-
-## workshop-check   : check workshop homepage.
-workshop-check :
-	@bin/workshop_check.py .
-
-## ----------------------------------------
-## Commands specific to lesson websites.
-
-.PHONY : lesson-check lesson-md lesson-files lesson-fixme
-
-# RMarkdown files
-RMD_SRC = $(wildcard _episodes_rmd/??-*.Rmd)
-RMD_DST = $(patsubst _episodes_rmd/%.Rmd,_episodes/%.md,$(RMD_SRC))
-
-# Lesson source files in the order they appear in the navigation menu.
-MARKDOWN_SRC = \
-  index.md \
-  CODE_OF_CONDUCT.md \
-  setup.md \
-  $(sort $(wildcard _episodes/*.md)) \
-  reference.md \
-  $(sort $(wildcard _extras/*.md)) \
-  LICENSE.md
-
-# Generated lesson files in the order they appear in the navigation menu.
-HTML_DST = \
-  ${DST}/index.html \
-  ${DST}/conduct/index.html \
-  ${DST}/setup/index.html \
-  $(patsubst _episodes/%.md,${DST}/%/index.html,$(sort $(wildcard _episodes/*.md))) \
-  ${DST}/reference/index.html \
-  $(patsubst _extras/%.md,${DST}/%/index.html,$(sort $(wildcard _extras/*.md))) \
-  ${DST}/license/index.html
-
-## lesson-md        : convert Rmarkdown files to markdown
-lesson-md : ${RMD_DST}
-
-_episodes/%.md: _episodes_rmd/%.Rmd
-	@bin/knit_lessons.sh $< $@
-
-## lesson-check     : validate lesson Markdown.
-lesson-check : lesson-fixme
-	@bin/lesson_check.py -s . -p ${PARSER} -r _includes/links.md
-
-## lesson-check-all : validate lesson Markdown, checking line lengths and trailing whitespace.
-lesson-check-all :
-	@bin/lesson_check.py -s . -p ${PARSER} -r _includes/links.md -l -w --permissive
-
-## unittest         : run unit tests on checking tools.
-unittest :
-	@bin/test_lesson_check.py
-
-## lesson-files     : show expected names of generated files for debugging.
-lesson-files :
-	@echo 'RMD_SRC:' ${RMD_SRC}
-	@echo 'RMD_DST:' ${RMD_DST}
-	@echo 'MARKDOWN_SRC:' ${MARKDOWN_SRC}
-	@echo 'HTML_DST:' ${HTML_DST}
-
-## lesson-fixme     : show FIXME markers embedded in source files.
-lesson-fixme :
-	@fgrep -i -n FIXME ${MARKDOWN_SRC} || true
-
-#-------------------------------------------------------------------------------
-# Include extra commands if available.
-#-------------------------------------------------------------------------------
-
--include commands.mk
