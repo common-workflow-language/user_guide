@@ -33,5 +33,7 @@ Thank you to the following contributors (in alphabetical order by user name):
 * Zipho Mashologu (@zipho)
 
 Thanks to:
-* Common Workflow Language community and the CWL Gitter room
-* CZI Essential Open Source Software for Science (EOSS) 
+* [Common Workflow Language community](https://www.commonwl.org/community/)
+  and the members of the CWL forums and chat rooms.
+* [ELIXIR](https://elixir-europe.org/), and ELIXIR Netherlands
+* CZI Essential Open Source Software for Science (EOSS)
