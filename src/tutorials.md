@@ -14,7 +14,7 @@ if you would like to add another tutorial to the list.
 
 - [Typescript in CWL](https://github.com/umccr/cwl-ica/wiki/TypeScript)
 
-## Bio-informatics Tutorials
+## Bioinformatics Tutorials
 
 - [rnaseq with CWL](https://arvados.github.io/rnaseq-cwl-training/)
 
