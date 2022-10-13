@@ -42,7 +42,7 @@ parameterization.
 :name: sample.yml
 ```
 
-___Note:___ To follow the example below, you need to download the example input file, *file-formats.bam*. The file is available from <https://github.com/common-workflow-language/user_guide/blob/main/src/_includes/cwl/file-formats/file-formats.bam>
+___Note:___ To follow the example below, you need to download the example input file, *file-formats.bam*. The file is available from <https://github.com/common-workflow-language/user_guide/raw/main/src/_includes/cwl/file-formats/file-formats.bam>
  and can be downloaded e.g. via `wget`:
 
 ```{code-block}
