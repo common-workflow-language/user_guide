@@ -17,9 +17,9 @@ all are required.
   to write your own (see the link below to learn more about choosing a license), and our recommended
   practice is to choose a license that allows for re-use by anyone, e.g. [Apache 2.0][apache-license].
 
-  If possible, the license should be specified wit its corresponding [SPDX identifier][spdx].
+  If possible, the license should be specified with its corresponding [SPDX identifier][spdx].
   Construct the metadata field for the licence by providing a URL of the form
-  `https://spdx.org/licenses/[SPDX-ID]` where `SPDX-ID` is the taken from the list of identifiers
+  `https://spdx.org/licenses/[SPDX-ID]` where `SPDX-ID` is taken from the list of identifiers
   linked above. See the example snippet below for guidance. For non-standard licenses without an SPDX
   identifier, provide a URL to the license.
 
@@ -34,8 +34,8 @@ all are required.
   # other s: declarations
   ```
 
-  For more examples of providing metadata within CWL descriptions, see the
-  Metadata and Authorship section of this User Guide.
+  For more examples of providing metadata within CWL descriptions, see 
+  [the Metadata and Authorship section of this User Guide](../topics/metadata-and-authorship.md).
 
 - Include [attribution information][license-example] for the author(s) of
   the CWL tool or workflow description. Use  unambiguous identifiers like
