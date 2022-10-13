@@ -102,7 +102,7 @@ in `Makefile`).
 python -m venv venv
 source venv/bin/activate
 # update the version of pip, setuptools, and wheel
-(venv) pip -U pip setuptools wheel
+(venv) pip install -U pip setuptools wheel
 # Install the dependencies in your virtual environment
 (venv) pip install .[all]
 # Create the HTML to visualize locally
