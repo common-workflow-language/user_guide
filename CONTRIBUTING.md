@@ -130,7 +130,7 @@ which everyone is welcome to join.
 [github]: https://github.com
 [github-flow]: https://guides.github.com/introduction/flow/
 [github-join]: https://github.com/join
-[how-contribute]: https://egghead.io/series/how-to-contribute-to-an-open-source-project-on-github
+[how-contribute]: https://docs.github.com/en/get-started/quickstart/contributing-to-projects
 [issues]: https://github.com/common-workflow-language/user_guide/issues
 [cwl-issues]: https://github.com/common-workflow-language/common-workflow-language/issues
 [repo]: https://github.com/common-workflow-language/user_guide
