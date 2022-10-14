@@ -2,7 +2,8 @@
 
 [![Syntax Check](https://travis-ci.org/common-workflow-language/user_guide.svg?branch=main)](https://travis-ci.org/common-workflow-language/user_guide)
 
-[User guide for CWL v1.2.0](https://www.commonwl.org/user_guide/)
+[Released User guide for CWL v1.2.0](https://www.commonwl.org/user_guide/) : This is the released version which corresponds to the release branch.  
+[Read The Docs User guide for CWL v1.2.0](https://common-workflow-languageuser-guide.readthedocs.io/en/latest/) : This is the Read The Docs(RTD) version which corresponds to the main branch.
 
 Original source:
 https://github.com/common-workflow-language/common-workflow-language/blob/a2a8a08b8c8d56f8f2ca6284ca4e9cbf23d19346/v1.0/UserGuide.yml

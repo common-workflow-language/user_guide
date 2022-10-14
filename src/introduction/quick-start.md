@@ -93,13 +93,13 @@ files.
 
 ## Learn more
 
-- Continue reading the next sections of this User Guide!
-- List of CWL Implementations: <https://www.commonwl.org/implementations/>
-- The `common-workflow-language` organization at GitHub: <https://github.com/common-workflow-language>
-- Common Workflow Language at Wikipedia: <https://en.wikipedia.org/wiki/Common_Workflow_Language>
-- YAML.org: <http://yaml.org/> and YAML at Wikipedia: <https://en.wikipedia.org/wiki/YAML>
-- The CWL {{ cwl_version  }} Specification: {{ '<https://www.commonwl.org/{}/>'.format(cwl_version_text) }}
-- Workflow management system at Wikipedia: <https://en.wikipedia.org/wiki/Workflow_management_system>
+Continue reading the next sections of this User Guide!
+- [List of CWL Implementations](https://www.commonwl.org/implementations).
+- The [`common-workflow-language` organization](https://github.com/common-workflow-language) at GitHub.
+- [Common Workflow Language at Wikipedia](https://en.wikipedia.org/wiki/Common_Workflow_Language).
+- [YAML.org](http://yaml.org/) and [YAML at Wikipedia](https://en.wikipedia.org/wiki/YAML).
+- The {{'[CWL Specification VERSION](https://www.commonwl.org/VERSION)'.replace('VERSION', cwl_version_text) }}.
+- [Workflow management system at Wikipedia](https://en.wikipedia.org/wiki/Workflow_management_system).
 
 % N.B.: Wondering what's up with this syntax in the CWL Specification link above?
 % It's necessary as MyST Parser does not allow substitutions in links, for more:
