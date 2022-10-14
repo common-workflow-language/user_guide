@@ -1,6 +1,6 @@
 # Quick Start
 
-This section will show you a brief overview of what is CWL and where you
+This section will show you a brief overview of what CWL is, and where you
 can learn more about it. No previous knowledge of CWL is required, but you
 must be comfortable following instructions for the command-line.
 
@@ -20,20 +20,20 @@ with comments:
 ```
 
 The example above is just a wrapper for the `echo` command-line tool.
-Running the workflow above with the default input values, produces the
+Running the workflow above with the default input values will produce the same result as the
 command-line `echo "Hello World"`.
 
 ```{note}
-There is a distinction in CWL between a command-line tool and a workflow. But
-for the sake of simplicity we are using the term “workflow” here. You will learn
+In CWL, there is a distinction between a command-line tool and a workflow. But
+for the sake of simplicity, we are using the term “workflow” here. You will learn
 more about this in the [basic concepts](basic-concepts.md) section.
 ```
 
 ## Installing a CWL runner
 
 `cwltool` is an implementation of the CWL specification. It is also the
-CWL *Reference Runner* for the specification, and compliant with the
-latest version of the specification, {{ cwl_version }}. You can install
+CWL *Reference Runner* for the specification, and it is compliant with the
+latest version of the specification: {{ cwl_version }}. You can install
 `cwltool` using `pip`:
 
 ```{code-block} console
@@ -68,8 +68,8 @@ to how you would change the argument of the `echo` base command:
 ```
 
 Another way of passing values to your workflow input parameters is via an
-*Inputs Object*. This is a file containing the input fields with the
-corresponding values. This file can be written in JSON or YAML. For example:
+*Inputs Object*. This is a file containing the input fields with their
+corresponding values. The Inputs Objects file can be written in JSON or YAML. For example:
 
 ```{literalinclude} /_includes/cwl/hello_world-job.json
 :language: json
@@ -85,9 +85,9 @@ You can use this Inputs Object file now to execute the “Hello World” workflo
 ```
 
 ```{note}
-We used a similar file name for the workflow and for the inputs object files.
+We used a similar file name for the workflow and for the Inputs Object files.
 The *-job.json* suffix is very common in Inputs Object files, but it is not
-a requirement. You can choose any name for your workflows and inputs object
+a requirement. You can choose any name for your workflows and Inputs Object
 files.
 ```
 
