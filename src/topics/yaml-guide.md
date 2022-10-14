@@ -44,7 +44,7 @@ The YAML above defines four keys -
 with their four respective values.
 Values can be
 character strings,
-numeric (integer, floating point, or scientfic representation),
+numeric (integer, floating point, or scientific representation),
 Boolean (`true` or `false`),
 or more complex nested types (see below).
 
