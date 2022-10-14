@@ -8,8 +8,8 @@ type-checking when creating parameter files.
 For file formats, we recommend referencing existing ontologies (like EDAM in
 our example), reference a local ontology for your institution, or do not add
 a file format initially for quick development before sharing your tool with
-others. You can browse existing file format listings for IANA [here][IANA] and
-for EDAM [here][EDAM].
+others. You can browse existing [IANA file format listings][IANA] and
+[EDAM file format listings][EDAM] on their websites.
 
 In the next tutorial, we explain  the `$namespaces` and `$schemas` section of the
 document in greater detail, so don't worry about these for now.
