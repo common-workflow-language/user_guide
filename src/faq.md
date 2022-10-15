@@ -83,23 +83,22 @@ outputs:
 
 We are going to describe two methods of doing this:
 
-The first method involves [adding the folder containing your scripts to the `PATH` environment variable](https://stackoverflow.com/q/8779951/20123733). This allows you to run the shell script without using `sh` or `bash` commands
-
+The first method involves [adding the folder containing your scripts to the `PATH` environment variable](https://stackoverflow.com/q/8779951/20123733). This allows you to run the shell script without using `sh` or `bash` commands.
 
 Start with adding a _shebang_ at the top of your file:
-```
+
+```bash
 #!/bin/bash
 ```
-After that, make the script executable with command `chmod +x script.sh`
+
+After that, make the script executable with the command `chmod +x script.sh`
 
 Finally, modify your path to add the directory where your script is located (It is good practice to use `$HOME/bin` for storing your own scripts).
-```
+```bash
 export PATH=$PATH:/appropriate/directory
 ```
 
-
 Now you can use `baseCommand: scriptname.sh.` to run the script directly. When you wish to share your work later, you can place your script in a software container in the Docker format.
-
 
 The second method involves including an input of `type: File` in the script itself:
 
@@ -120,13 +119,9 @@ baseCommand: sh
 outputs: []
 ```
 ```{note}
-In CWL, everything must be directly stated. 
-Therefore, the script needs to be one of the following:
-- available on the system `PATH` (for cwltool performing local execution, no —preserve-environment is needed)
-- part of the Docker format software container (either a fixed path or once more, on the system `PATH` defined in the container)
-- an input to the CommandLineTool description itself (as shown above).
+In CWL, everything must be directly stated.
 ```
-For further clarification, check out this [issue](https://github.com/common-workflow-language/user_guide/issues/158) in the project repository.
+For further clarification, check out this [issue](https://github.com/common-workflow-language/user_guide/issues/158) in the cwltool repository.
 
 ## Setting `self`-based input bindings for optional inputs
 
