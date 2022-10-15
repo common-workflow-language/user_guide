@@ -40,10 +40,10 @@ outputs:
 
 ## Rename an input file
 
-This example shows how you can change the name of an input file
+This example demonstrates how to change the name of an input file
 as part of a tool description.
 This could be useful when you are taking files produced from another
-step in a workflow and don't want to work with the default names that these
+step in a workflow, and don't want to work with the default names that these
 files were given when they were created.
 
 ```yaml
@@ -58,7 +58,7 @@ requirements:
 
 ## Rename an output file
 
-This example shows how you can change the name of an output file
+This example demonstrates how to change the name of an output file
 from the default name given to it by a tool:
 
 ```yaml
@@ -102,7 +102,8 @@ Now you can use `baseCommand: scriptname.sh.` to run the script directly. When y
 
 
 The second method involves including an input of `type: File` in the script itself:
-```
+
+```cwl
 class: CommandLineTool
 
 inputs:
@@ -125,6 +126,7 @@ Therefore, the script needs to be one of the following:
 - part of the Docker format software container (either a fixed path or once more, on the system `PATH` defined in the container)
 - an input to the CommandLineTool description itself (as shown above).
 ```
+For further clarification, check out this [issue](https://github.com/common-workflow-language/user_guide/issues/158) in the project repository.
 
 ## Setting `self`-based input bindings for optional inputs
 
@@ -155,8 +157,8 @@ outputs: []
 
 ## Model a "one-or-the-other" parameter
 
-Below is an example of how
-you can specify different strings to be added to a command line
+Below is an example showing how
+to specify different strings to be added to a command line,
 based on the value given to a Boolean parameter.
 
 ```yaml
@@ -312,7 +314,7 @@ For command-line flags that are either **mutually exclusive** or **dependent**, 
 ```
 ## Setting Mutually Exclusive Parameters
 
-In order to properly set fields in a record input type, you need to pass a dictionary to the input to properly set the parameters. This is done by using inline javascript and returning the dictionary with the key of the field you want to set. The source field is set to indicate the input from the workflow to be used as the value.
+To properly set fields in a record input type, you need to pass a dictionary to the input to properly set the parameters. This is done by using inline JavaScript and returning the dictionary with the key of the field you want to set. The source field is set to indicate the input from the workflow to be used as the value.
 
 ```yaml
 steps:
