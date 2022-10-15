@@ -30,7 +30,7 @@ then print "Hello World" to the standard output.
 :name: docker-job.yml
 ```
 
-Before we run this, lets just break it down and see what some bits do.  Most of this
+Before we run this, let's just break it down and see what some bits do.  Most of this
 has been explained in previous sections, the only part that is really new is the `dockerRequirement`
 section.
 
@@ -46,7 +46,7 @@ then need to specify some `hints` for how to find the container we want.  In thi
 just our requirements for the docker container in `DockerRequirements`.  The `dockerPull:`
 parameter takes the same value that you would pass to a `docker pull` command. That is,
 the name of the container image (you can even specify the tag, which is good idea for
-best practises when using containers for reproducible research). In this case we have
+best practices when using containers for reproducible research). In this case we have
 used a container called `node:slim`.
 
 Provide a "hello.js" and invoke `cwltool` providing the tool description and the
