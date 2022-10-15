@@ -8,8 +8,8 @@ type-checking when creating parameter files.
 For file formats, we recommend referencing existing ontologies (like EDAM in
 our example), reference a local ontology for your institution, or do not add
 a file format initially for quick development before sharing your tool with
-others. You can browse existing file format listings for IANA [here][IANA] and
-for EDAM [here][EDAM].
+others. You can browse existing [IANA file format listings][IANA] and
+[EDAM file format listings][EDAM] on their websites.
 
 In the next tutorial, we explain  the `$namespaces` and `$schemas` section of the
 document in greater detail, so don't worry about these for now.
@@ -42,11 +42,11 @@ parameterization.
 :name: sample.yml
 ```
 
-___Note:___ To follow the example below, you need to download the example input file, *file-formats.bam*. The file is available from <https://github.com/common-workflow-language/user_guide/raw/main/_includes/cwl/file-formats/file-formats.bam>
+___Note:___ To follow the example below, you need to download the example input file, *file-formats.bam*. The file is available from <https://github.com/common-workflow-language/user_guide/raw/main/src/_includes/cwl/file-formats/file-formats.bam>
  and can be downloaded e.g. via `wget`:
 
 ```{code-block}
-$ wget https://github.com/common-workflow-language/user_guide/raw/main/_includes/cwl/file-formats/file-formats.bam
+$ wget https://github.com/common-workflow-language/user_guide/raw/main/src/_includes/cwl/file-formats/file-formats.bam
 ```
 
 Now invoke `cwltool` with the tool description and the input object on the

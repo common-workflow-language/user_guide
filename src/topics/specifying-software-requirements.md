@@ -31,8 +31,7 @@ given in the form of an [RRID][rrid]. Resources with RRIDs can be looked up in t
 [SciCrunch][scicrunch] registry, which provides a portal for finding, tracking,
 and referring to scientific resources consistently. If you want to specify a
 tool as a `SoftwareRequirement`, search for the tool on SciCrunch and use the
-RRID that it has been assigned in the registry. (Follow [this tutorial][scicrunch-add-tool]
-if you want to add a tool to SciCrunch.) You can use this RRID to refer
+RRID that it has been assigned in the registry. (Follow this [Adding a Resource Tutorial][scicrunch-add-tool] to add a tool to SciCrunch). You can use this RRID to refer
 to the tool (via [identifiers.org][identifiers]) in the `specs` field of your
 requirement description. Other good choices, in order of preference, are to
 include the DOI for the main tool citation and the URL to the tool.
