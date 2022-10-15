@@ -96,7 +96,7 @@ Users can invoke `cwl-runner` instead of invoking a CWL runner like `cwltool`
 directly. The `cwl-runner` alias command then chooses the correct CWL runner.
 This is convenient for environments with multiple CWL runners.
 
-The CWL community published a Python package with the name `cwlref-runner` that installs
+The CWL community publishes a Python package with the name `cwlref-runner` that installs
 an alias for `cwltool` under the name `cwl-runner`
 
 ```{code-block} console
