@@ -17,7 +17,6 @@
         }
     ],
     "access_right": "open",
-    "notes": "Based off of the excellent Software/Data Carpentry templates: https://doi.org/10.5281/zenodo.838778",
     "related_identifiers": [
         {
             "scheme": "url",
