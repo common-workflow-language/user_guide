@@ -16,7 +16,6 @@ To edit the user guide:
 
 We'd like to ask you to familiarize yourself with our [Contribution Guide](CONTRIBUTING.md).  
 
-When contributing, please make changes to the main branch, not the release branch. Once we collect many changes from the main branch, we merge them into the release branch. The current user guide is published from the release branch.
 
 ## Style Guide
 
