@@ -43,7 +43,10 @@ and to meet some of our community members.
     you can submit a pull request (PR).
     Instructions for doing this are [included below][using-github].
 
-4. To build and run the user guide locally, see **Building** below
+4. To build and run the user guide locally, see **Building** below  
+
+**Note:** When contributing, please make changes to the ```main``` branch of this repository, not the release branch. Once we collect many changes from the main branch, we merge them into the release branch. The currently rendered [user guide](https://www.commonwl.org/user_guide/) is published from the release branch.
+
 
 Pull requests include an automatic preview provided by
 [ReadTheDocs](https://readthedocs.org/projects/common-workflow-languageuser-guide/).
