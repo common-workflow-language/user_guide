@@ -103,10 +103,12 @@ python -m venv venv
 source venv/bin/activate
 # update the version of pip, setuptools, and wheel
 (venv) pip install -U pip setuptools wheel
-# Install the dependencies in your virtual environment
-(venv) pip install .[all]
+# Install all the dependencies in your virtual environment.
+# The dot or period at the end means that the dependencies are referenced is in the same directory as the current location).
+(venv) pip install .
 # Create the HTML to visualize locally
 (venv) make html
+(venv) pip install graphviz
 (venv) open _build/index.html
 # Or you can start a serve that watches for local file changes
 (venv) make watch
