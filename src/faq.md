@@ -93,7 +93,7 @@ Start with adding a _shebang_ at the top of your file:
 
 After that, make the script executable with the command `chmod +x script.sh`
 
-Finally, modify your path to add the directory where your script is located (It is good practice to use `$HOME/bin` for storing your own scripts).
+Finally, modify your path to add the directory where your script is located.
 ```bash
 export PATH=$PATH:/appropriate/directory
 ```
