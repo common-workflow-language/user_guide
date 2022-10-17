@@ -45,7 +45,9 @@ and to meet some of our community members.
 
 4. To build and run the user guide locally, see **Building** below  
 
-**Note:** The published version of the user guide <https://www.commonwl.org/user_guide/> is built from the `release` branch. New changes are gathered on the default (`main`) branch which is built at <https://common-workflow-languageuser-guide.readthedocs.io/en/latest/> as a preview. Once we collect many changes from the `main` branch, we merge them into the `release` branch.
+**Note:** The published version of the user guide <https://www.commonwl.org/user_guide/> is built from the `release` branch.
+New changes are gathered on the default (`main`) branch which is built at <https://common-workflow-languageuser-guide.readthedocs.io/en/latest/>
+as a preview. Once we collect many changes from the `main` branch, we merge them into the `release` branch.
 
 
 Pull requests include an automatic preview provided by
