@@ -104,11 +104,12 @@ source venv/bin/activate
 # update the version of pip, setuptools, and wheel
 (venv) pip install -U pip setuptools wheel
 # Install all the dependencies in your virtual environment.
-# The dot or period at the end means that the dependencies are referenced is in the same directory as the current location).
-(venv) pip install .
+#For the zsh shell, you need to specify quotes around the ".[all]" argument but the code below should work fine for bash shell
+(venv) pip install .[all]
+#Install Graphviz (Also installs the dot program which is needed for graphviz output)
+(venv) sudo apt-get install graphviz
 # Create the HTML to visualize locally
 (venv) make html
-(venv) pip install graphviz
 (venv) open _build/index.html
 # Or you can start a serve that watches for local file changes
 (venv) make watch
