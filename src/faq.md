@@ -81,9 +81,9 @@ outputs:
 
 ## Referencing a local script
 
-We are going to describe two methods of doing this:
+There are two ways to reference a local script:
 
-The first method involves [adding the folder containing your scripts to the `PATH` environment variable](https://stackoverflow.com/q/8779951/20123733). This allows you to run the shell script without using `sh` or `bash` commands.
+The first method involves adding the folder containing your scripts to the `PATH` environment variable. This allows you to run the shell script without using `sh` or `bash` commands.
 
 Start with adding a _shebang_ at the top of your file:
 
@@ -91,14 +91,21 @@ Start with adding a _shebang_ at the top of your file:
 #!/bin/bash
 ```
 
-After that, make the script executable with the command `chmod +x script.sh`
+After that, make the script executable with the command `chmod +x scriptname.sh`
 
 Finally, modify your path to add the directory where your script is located.
 ```bash
 export PATH=$PATH:/appropriate/directory
 ```
 
-Now you can use `baseCommand: scriptname.sh.` to run the script directly. When you wish to share your work later, you can place your script in a software container in the Docker format.
+Now you can use `baseCommand: scriptname.sh` to run the script directly.
+```cwl
+#!/bin/bash
+cwlVersion: v1.0
+class: CommandLineTool
+baseCommand: scriptname.sh
+```
+When you wish to share your work later, you can place your script in a software container in the Docker format.
 
 The second method involves including an input of `type: File` in the script itself:
 
@@ -121,7 +128,7 @@ outputs: []
 ```{note}
 In CWL, everything must be directly stated.
 ```
-For further clarification, check out this [issue](https://github.com/common-workflow-language/user_guide/issues/158) in the cwltool repository.
+
 
 ## Setting `self`-based input bindings for optional inputs
 
