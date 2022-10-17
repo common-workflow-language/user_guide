@@ -9,6 +9,7 @@ build:
     nodejs: "16"
   apt_packages:
     - graphviz
+    - tree
 
 sphinx:
   configuration: src/conf.py

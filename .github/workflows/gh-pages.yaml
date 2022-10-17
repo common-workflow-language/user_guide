@@ -17,7 +17,7 @@ jobs:
 
       - name: Install apt packages
         run: |
-          sudo apt-get install -y graphviz
+          sudo apt-get install -y graphviz tree
 
       - name: Set up Python
         uses: actions/setup-python@v4
