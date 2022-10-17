@@ -14,7 +14,7 @@ We welcome all contributions to improve the materials! Maintainers will do their
 questions, concerns, or experience any difficulties along the way.
 To edit the user guide:
 
-We'd like to ask you to familiarize yourself with our [Contribution Guide](CONTRIBUTING.md).  
+We'd like to ask you to familiarize yourself with our [Contribution Guide](CONTRIBUTING.md).
 
 ## Style Guide
 
