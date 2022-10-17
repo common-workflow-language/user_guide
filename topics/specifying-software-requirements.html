@@ -47,7 +47,7 @@
     <link rel="shortcut icon" href="../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="3. Tutorials" href="../tutorials.html" />
+    <link rel="next" title="2.20. Troubleshooting" href="troubleshooting.html" />
     <link rel="prev" title="2.18. Metadata and Authorship" href="metadata-and-authorship.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="docsearch:language" content="en">
@@ -328,6 +328,7 @@
 <li class="toctree-l2"><a class="reference internal" href="file-formats.html">2.17. File Formats</a></li>
 <li class="toctree-l2"><a class="reference internal" href="metadata-and-authorship.html">2.18. Metadata and Authorship</a></li>
 <li class="toctree-l2 current active"><a class="current reference internal" href="#">2.19. Specifying Software Requirements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="troubleshooting.html">2.20. Troubleshooting</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../tutorials.html">3. Tutorials</a></li>
@@ -363,7 +364,7 @@
               
   <section id="specifying-software-requirements">
 <h1><span class="section-number">2.19. </span>Specifying Software Requirements<a class="headerlink" href="#specifying-software-requirements" title="Permalink to this heading">#</a></h1>
-<p>Often tool descriptions will be written for a specific version of a software. To
+<p>Often, tool descriptions will be written for a specific version of a software. To
 make it easier for others to use your descriptions, you can include a
 <code class="docutils literal notranslate"><span class="pre">SoftwareRequirement</span></code> field in the <code class="docutils literal notranslate"><span class="pre">hints</span></code> section.
 This may also help to avoid confusion about which version of a tool the
@@ -448,15 +449,14 @@ version 5.21-60.</p>
 </pre></div>
 </div>
 <p>Depending on your CWL runner, these hints may be used to check
-that required software is installed and available before the job is run. To enable
+that the required software is installed and available before the job is run. To enable
 these checks with the reference implementation, use the <a class="reference external" href="https://github.com/common-workflow-language/cwltool#leveraging-softwarerequirements-beta">dependency resolvers configuration</a>.</p>
 <p>As well as a version number, a unique resource identifier (URI) for the tool is
 given in the form of an <a class="reference external" href="https://scicrunch.org/resources/about/resource">RRID</a>. Resources with RRIDs can be looked up in the
 <a class="reference external" href="https://scicrunch.org/">SciCrunch</a> registry, which provides a portal for finding, tracking,
 and referring to scientific resources consistently. If you want to specify a
 tool as a <code class="docutils literal notranslate"><span class="pre">SoftwareRequirement</span></code>, search for the tool on SciCrunch and use the
-RRID that it has been assigned in the registry. (Follow <a class="reference external" href="https://scicrunch.org/page/tutorials/336">this tutorial</a>
-if you want to add a tool to SciCrunch.) You can use this RRID to refer
+RRID that it has been assigned in the registry. (Follow this <a class="reference external" href="https://scicrunch.org/page/tutorials/336">Adding a Resource Tutorial</a> to add a tool to SciCrunch). You can use this RRID to refer
 to the tool (via <a class="reference external" href="https://identifiers.org/">identifiers.org</a>) in the <code class="docutils literal notranslate"><span class="pre">specs</span></code> field of your
 requirement description. Other good choices, in order of preference, are to
 include the DOI for the main tool citation and the URL to the tool.</p>
@@ -477,10 +477,10 @@ include the DOI for the main tool citation and the URL to the tool.</p>
           <p class="prev-next-title"><span class="section-number">2.18. </span>Metadata and Authorship</p>
       </div>
   </a>
-  <a class='right-next' id="next-link" href="../tutorials.html" title="next page">
+  <a class='right-next' id="next-link" href="troubleshooting.html" title="next page">
   <div class="prev-next-info">
       <p class="prev-next-subtitle">next</p>
-      <p class="prev-next-title"><span class="section-number">3. </span>Tutorials</p>
+      <p class="prev-next-title"><span class="section-number">2.20. </span>Troubleshooting</p>
   </div>
   <i class="fa-solid fa-angle-right"></i>
   </a>
@@ -552,7 +552,7 @@ include the DOI for the main tool citation and the URL to the tool.</p>
           <a class="nav-link" href="https://github.com/common-workflow-language/user_guide/">Source</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="https://github.com/common-workflow-language/user_guide/blob/main/CITATION">Cite</a>
+          <a class="nav-link" href="https://github.com/common-workflow-language/user_guide/blob/main/CITATION.md">Cite</a>
         </li>
       </ul>
     </div>

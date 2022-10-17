@@ -17,7 +17,7 @@ each page.
 
 If you are a beginner user get started with the [Introduction](/introduction/index.md)
 section. For advanced users the subsections of the
-[Core Concepts](/topics/index.md) have detailed information about the
+[Topics](/topics/index.md) have detailed information about the
 most common topics for CWL.
 
 The Table of Contents is displayed at the top menu and also on the left sidebar.
@@ -28,7 +28,7 @@ the left sidebar.
 ## Table of Contents
 
 ```{toctree}
-:maxdepth: 2
+:maxdepth: 3
 :numbered:
 
 introduction/index.md

@@ -328,6 +328,7 @@
 <li class="toctree-l2"><a class="reference internal" href="file-formats.html">2.17. File Formats</a></li>
 <li class="toctree-l2"><a class="reference internal" href="metadata-and-authorship.html">2.18. Metadata and Authorship</a></li>
 <li class="toctree-l2"><a class="reference internal" href="specifying-software-requirements.html">2.19. Specifying Software Requirements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="troubleshooting.html">2.20. Troubleshooting</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../tutorials.html">3. Tutorials</a></li>
@@ -412,19 +413,19 @@ command line:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ cwltool linkfile.cwl arguments-job.yml
 INFO /opt/hostedtoolcache/Python/3.9.14/x64/bin/cwltool <span class="m">3</span>.1.20221008225030
 INFO Resolved <span class="s1">&#39;linkfile.cwl&#39;</span> to <span class="s1">&#39;file:///home/runner/work/user_guide/user_guide/src/_includes/cwl/staging-input-files/linkfile.cwl&#39;</span>
-INFO <span class="o">[</span>job linkfile.cwl<span class="o">]</span> /tmp/azslte7t$ docker <span class="se">\</span>
+INFO <span class="o">[</span>job linkfile.cwl<span class="o">]</span> /tmp/0jafa1ma$ docker <span class="se">\</span>
     run <span class="se">\</span>
     -i <span class="se">\</span>
-    --mount<span class="o">=</span><span class="nv">type</span><span class="o">=</span>bind,source<span class="o">=</span>/tmp/azslte7t,target<span class="o">=</span>/DcHpyZ <span class="se">\</span>
-    --mount<span class="o">=</span><span class="nv">type</span><span class="o">=</span>bind,source<span class="o">=</span>/tmp/3cvu9wtd,target<span class="o">=</span>/tmp <span class="se">\</span>
-    --mount<span class="o">=</span><span class="nv">type</span><span class="o">=</span>bind,source<span class="o">=</span>/home/runner/work/user_guide/user_guide/src/_includes/cwl/staging-input-files/Hello.java,target<span class="o">=</span>/DcHpyZ/Hello.java,readonly <span class="se">\</span>
-    --workdir<span class="o">=</span>/DcHpyZ <span class="se">\</span>
+    --mount<span class="o">=</span><span class="nv">type</span><span class="o">=</span>bind,source<span class="o">=</span>/tmp/0jafa1ma,target<span class="o">=</span>/mifbTQ <span class="se">\</span>
+    --mount<span class="o">=</span><span class="nv">type</span><span class="o">=</span>bind,source<span class="o">=</span>/tmp/_v3en03j,target<span class="o">=</span>/tmp <span class="se">\</span>
+    --mount<span class="o">=</span><span class="nv">type</span><span class="o">=</span>bind,source<span class="o">=</span>/home/runner/work/user_guide/user_guide/src/_includes/cwl/staging-input-files/Hello.java,target<span class="o">=</span>/mifbTQ/Hello.java,readonly <span class="se">\</span>
+    --workdir<span class="o">=</span>/mifbTQ <span class="se">\</span>
     --read-only<span class="o">=</span><span class="nb">true</span> <span class="se">\</span>
     --user<span class="o">=</span><span class="m">1001</span>:121 <span class="se">\</span>
     --rm <span class="se">\</span>
-    --cidfile<span class="o">=</span>/tmp/s5e5f96j/20221010084822-572541.cid <span class="se">\</span>
+    --cidfile<span class="o">=</span>/tmp/a3qiejll/20221017164343-593132.cid <span class="se">\</span>
     --env<span class="o">=</span><span class="nv">TMPDIR</span><span class="o">=</span>/tmp <span class="se">\</span>
-    --env<span class="o">=</span><span class="nv">HOME</span><span class="o">=</span>/DcHpyZ <span class="se">\</span>
+    --env<span class="o">=</span><span class="nv">HOME</span><span class="o">=</span>/mifbTQ <span class="se">\</span>
     openjdk:9.0.1-11-slim <span class="se">\</span>
     javac <span class="se">\</span>
     Hello.java
@@ -535,7 +536,7 @@ INFO Final process status is success
           <a class="nav-link" href="https://github.com/common-workflow-language/user_guide/">Source</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="https://github.com/common-workflow-language/user_guide/blob/main/CITATION">Cite</a>
+          <a class="nav-link" href="https://github.com/common-workflow-language/user_guide/blob/main/CITATION.md">Cite</a>
         </li>
       </ul>
     </div>

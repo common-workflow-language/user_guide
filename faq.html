@@ -339,7 +339,7 @@
 <li><p><a class="reference internal" href="#record-inputs" id="id9">Record Inputs 📀</a></p></li>
 <li><p><a class="reference internal" href="#setting-mutually-exclusive-parameters" id="id10">Setting Mutually Exclusive Parameters</a></p></li>
 <li><p><a class="reference internal" href="#setting-booleans" id="id11">Setting Booleans</a></p></li>
-<li><p><a class="reference internal" href="#concating-strings-in-inputs" id="id12">Concating Strings in Inputs</a></p></li>
+<li><p><a class="reference internal" href="#concatenating-strings-in-inputs" id="id12">Concatenating Strings in Inputs</a></p></li>
 <li><p><a class="reference internal" href="#cwltool-errors-due-to-filenames-with-space-characters-inside" id="id13"><code class="docutils literal notranslate"><span class="pre">cwltool</span></code> errors due to filenames with space characters inside</a></p></li>
 <li><p><a class="reference internal" href="#cwl-parameter-reference-error-due-to-hyphen-in-input-identifier" id="id14">CWL Parameter Reference error due to hyphen in input identifier</a></p></li>
 <li><p><a class="reference internal" href="#use-cwl-and-cwltool-with-singularity" id="id15">Use CWL and cwltool with Singularity</a></p></li>
@@ -395,7 +395,7 @@ files were given when they were created.</p>
 </section>
 <section id="rename-an-output-file">
 <h2><a class="toc-backref" href="#contents" role="doc-backlink"><span class="section-number">4.3. </span>Rename an output file</a><a class="headerlink" href="#rename-an-output-file" title="Permalink to this heading">#</a></h2>
-<p>This example shows how you can change the name an output file
+<p>This example shows how you can change the name of an output file
 from the default name given to it by a tool:</p>
 <div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">cwlVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">v1.0</span><span class="w"> </span><span class="c1"># or v1.1</span><span class="w"></span>
 <span class="nt">class</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">CommandLineTool</span><span class="w"></span>
@@ -523,7 +523,7 @@ and add <code class="docutils literal notranslate"><span class="pre">linkMerge:<
 </section>
 <section id="enum-inputs">
 <h2><a class="toc-backref" href="#contents" role="doc-backlink"><span class="section-number">4.8. </span>Enum Inputs ⚜️</a><a class="headerlink" href="#enum-inputs" title="Permalink to this heading">#</a></h2>
-<p>For commandline flags that require a specific input as the argument an enum type can be declared in CWL. <strong>Specifying null here is known as long form style. It does the same thing as the question mark on the other inputs.</strong></p>
+<p>For command-line flags that require a specific input as the argument, an enum type can be declared in CWL. <strong>Specifying null here is known as long form style. It does the same thing as the question mark on the other inputs.</strong></p>
 <div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">Format</span><span class="p">:</span><span class="w"></span>
 <span class="w">  </span><span class="nt">type</span><span class="p">:</span><span class="w"></span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&quot;null&quot;</span><span class="w"></span>
@@ -543,7 +543,7 @@ and add <code class="docutils literal notranslate"><span class="pre">linkMerge:<
 </section>
 <section id="record-inputs">
 <h2><a class="toc-backref" href="#contents" role="doc-backlink"><span class="section-number">4.9. </span>Record Inputs 📀</a><a class="headerlink" href="#record-inputs" title="Permalink to this heading">#</a></h2>
-<p>For commandline flags that are either <strong>mutually exclusive</strong> or <strong>dependent</strong> a special record type can be defined. You can also specify null here to create optional inputs.</p>
+<p>For command-line flags that are either <strong>mutually exclusive</strong> or <strong>dependent</strong>, a special record type can be defined. You can also specify null here to create optional inputs.</p>
 <div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="c1">#Using record inputs to create mutually exclusive inputs</span><span class="w"></span>
 
 <span class="w">  </span><span class="nt">Strand</span><span class="p">:</span><span class="w"></span>
@@ -622,8 +622,8 @@ and add <code class="docutils literal notranslate"><span class="pre">linkMerge:<
 </pre></div>
 </div>
 </section>
-<section id="concating-strings-in-inputs">
-<h2><a class="toc-backref" href="#contents" role="doc-backlink"><span class="section-number">4.12. </span>Concating Strings in Inputs</a><a class="headerlink" href="#concating-strings-in-inputs" title="Permalink to this heading">#</a></h2>
+<section id="concatenating-strings-in-inputs">
+<h2><a class="toc-backref" href="#contents" role="doc-backlink"><span class="section-number">4.12. </span>Concatenating Strings in Inputs</a><a class="headerlink" href="#concatenating-strings-in-inputs" title="Permalink to this heading">#</a></h2>
 <p>The valueFrom field must be used instead of default.</p>
 <div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">input</span><span class="p">:</span><span class="w"></span>
 <span class="w">  </span><span class="nt">valueFrom</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">|</span><span class="w"></span>
@@ -634,7 +634,7 @@ and add <code class="docutils literal notranslate"><span class="pre">linkMerge:<
 <section id="cwltool-errors-due-to-filenames-with-space-characters-inside">
 <h2><a class="toc-backref" href="#contents" role="doc-backlink"><span class="section-number">4.13. </span><code class="docutils literal notranslate"><span class="pre">cwltool</span></code> errors due to filenames with space characters inside</a><a class="headerlink" href="#cwltool-errors-due-to-filenames-with-space-characters-inside" title="Permalink to this heading">#</a></h2>
 <p><code class="docutils literal notranslate"><span class="pre">cwltool</span></code> does not allow some characters in filenames by default.</p>
-<p>For example, the filename is <code class="docutils literal notranslate"><span class="pre">a</span> <span class="pre">space</span> <span class="pre">is</span> <span class="pre">here.txt</span></code> includes 3 space characters.</p>
+<p>For example, the filename <code class="docutils literal notranslate"><span class="pre">a</span> <span class="pre">space</span> <span class="pre">is</span> <span class="pre">here.txt</span></code> includes 3 space characters.</p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">ERROR Workflow error, try again with --debug for more information:</span>
 
 <span class="go">Invalid filename: &#39;a space is here.txt&#39; contains illegal characters</span>
@@ -683,7 +683,7 @@ and add <code class="docutils literal notranslate"><span class="pre">linkMerge:<
 <span class="w">      </span><span class="l l-Scalar l-Scalar-Plain"># ^ this is problem</span><span class="w"></span>
 </pre></div>
 </div>
-<p>Fix this error is change <code class="docutils literal notranslate"><span class="pre">-</span></code> (hyphen) to <code class="docutils literal notranslate"><span class="pre">_</span></code> (underscore)</p>
+<p>To fix this error, change <code class="docutils literal notranslate"><span class="pre">-</span></code> (hyphen) to <code class="docutils literal notranslate"><span class="pre">_</span></code> (underscore)</p>
 <div class="highlight-cwl notranslate"><div class="highlight"><pre><span></span><span class="nt">valueFrom</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">$(inputs.sample_input)</span><span class="w"></span>
 <span class="w">                        </span><span class="l l-Scalar l-Scalar-Plain"># ^ changed here</span><span class="w"></span>
 
@@ -694,7 +694,7 @@ and add <code class="docutils literal notranslate"><span class="pre">linkMerge:<
 <span class="w">      </span><span class="l l-Scalar l-Scalar-Plain"># ^ changed here</span><span class="w"></span>
 </pre></div>
 </div>
-<p>If is not possible to change the input identifier, then you can use an alternative CWL Parameter Reference syntax:</p>
+<p>If it is not possible to change the input identifier, then you can use an alternative CWL Parameter Reference syntax:</p>
 <div class="highlight-cwl notranslate"><div class="highlight"><pre><span></span><span class="nt">valueFrom</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">$(inputs[&quot;sample-input&quot;])</span><span class="w"></span>
 </pre></div>
 </div>
@@ -827,8 +827,8 @@ https://github.com/common-workflow-language/common-workflow-language/blob/master
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#concating-strings-in-inputs">
-   4.12. Concating Strings in Inputs
+  <a class="reference internal nav-link" href="#concatenating-strings-in-inputs">
+   4.12. Concatenating Strings in Inputs
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
@@ -921,7 +921,7 @@ https://github.com/common-workflow-language/common-workflow-language/blob/master
           <a class="nav-link" href="https://github.com/common-workflow-language/user_guide/">Source</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="https://github.com/common-workflow-language/user_guide/blob/main/CITATION">Cite</a>
+          <a class="nav-link" href="https://github.com/common-workflow-language/user_guide/blob/main/CITATION.md">Cite</a>
         </li>
       </ul>
     </div>

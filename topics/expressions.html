@@ -328,6 +328,7 @@
 <li class="toctree-l2"><a class="reference internal" href="file-formats.html">2.17. File Formats</a></li>
 <li class="toctree-l2"><a class="reference internal" href="metadata-and-authorship.html">2.18. Metadata and Authorship</a></li>
 <li class="toctree-l2"><a class="reference internal" href="specifying-software-requirements.html">2.19. Specifying Software Requirements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="troubleshooting.html">2.20. Troubleshooting</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../tutorials.html">3. Tutorials</a></li>
@@ -374,6 +375,7 @@ When manipulating file names, extensions, paths etc, consider whether one of the
 <a class="reference external" href="https://www.commonwl.org/v1.0/CommandLineTool.html#File">built in <code class="docutils literal notranslate"><span class="pre">File</span></code> properties</a> like <code class="docutils literal notranslate"><span class="pre">basename</span></code>, <code class="docutils literal notranslate"><span class="pre">nameroot</span></code>, <code class="docutils literal notranslate"><span class="pre">nameext</span></code>,
 etc, could be used instead.
 See the <a class="reference internal" href="best-practices.html"><span class="doc std std-doc">list of best practices</span></a>.</p>
+</div>
 <div class="literal-block-wrapper docutils container" id="expression-cwl">
 <div class="code-block-caption"><span class="caption-text"><code class="docutils literal notranslate"><span class="pre">expression.cwl</span></code></span><a class="headerlink" href="#expression-cwl" title="Permalink to this code">#</a></div>
 <div class="highlight-cwl notranslate"><div class="highlight"><pre><span></span><span class="c1">#!/usr/bin/env cwl-runner</span><span class="w"></span>
@@ -407,7 +409,6 @@ See the <a class="reference internal" href="best-practices.html"><span class="do
 </pre></div>
 </div>
 </div>
-</div>
 <p>As this tool does not require any <code class="docutils literal notranslate"><span class="pre">inputs</span></code> we can run it with an (almost) empty
 job file:</p>
 <div class="literal-block-wrapper docutils container" id="empty-cwl">
@@ -425,7 +426,7 @@ represented simply by a set of empty brackets.</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ cwltool expression.cwl empty.yml
 INFO /opt/hostedtoolcache/Python/3.9.14/x64/bin/cwltool <span class="m">3</span>.1.20221008225030
 INFO Resolved <span class="s1">&#39;expression.cwl&#39;</span> to <span class="s1">&#39;file:///home/runner/work/user_guide/user_guide/src/_includes/cwl/expressions/expression.cwl&#39;</span>
-INFO <span class="o">[</span>job expression.cwl<span class="o">]</span> /tmp/w__p_p4r$ <span class="nb">echo</span> <span class="se">\</span>
+INFO <span class="o">[</span>job expression.cwl<span class="o">]</span> /tmp/na5i3iwx$ <span class="nb">echo</span> <span class="se">\</span>
     -A <span class="se">\</span>
     <span class="m">2</span> <span class="se">\</span>
     -B <span class="se">\</span>
@@ -440,7 +441,7 @@ INFO <span class="o">[</span>job expression.cwl<span class="o">]</span> /tmp/w__
     <span class="m">4</span> <span class="se">\</span>
     <span class="m">3</span> <span class="se">\</span>
     <span class="m">2</span> <span class="se">\</span>
-    <span class="m">1</span> &gt; /tmp/w__p_p4r/output.txt
+    <span class="m">1</span> &gt; /tmp/na5i3iwx/output.txt
 INFO <span class="o">[</span>job expression.cwl<span class="o">]</span> completed success
 <span class="o">{</span>
     <span class="s2">&quot;example_out&quot;</span>: <span class="o">{</span>
@@ -575,6 +576,200 @@ only in certain fields.  These are:</p>
 </li>
 </ul>
 </div>
+<section id="using-external-libraries-and-inline-javascript-code-with-expressionlib">
+<h2><span class="section-number">2.3.1. </span>Using external libraries and inline JavaScript code with <code class="docutils literal notranslate"><span class="pre">expressionLib</span></code><a class="headerlink" href="#using-external-libraries-and-inline-javascript-code-with-expressionlib" title="Permalink to this heading">#</a></h2>
+<p>The requirement <code class="docutils literal notranslate"><span class="pre">InlineJavascriptRequirement</span></code> supports an <code class="docutils literal notranslate"><span class="pre">expressionLib</span></code> attribute
+that allows users to load external JavaScript files, or to provide inline JavaScript
+code.</p>
+<p>Entries added to the <code class="docutils literal notranslate"><span class="pre">expressionLib</span></code> attribute are parsed with the JavaScript engine
+of a CWL runner. This can be used to include external files or to create JavaScript
+functions that can be called in other parts of the CWL document.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The CWL standards (versions 1.0 through 1.2) <a class="reference external" href="https://www.commonwl.org/v1.0/CommandLineTool.html#Expressions">states</a>
+that the only version of JavaScript valid in CWL expressions is
+<a class="reference external" href="https://262.ecma-international.org/5.1/">ECMAScript 5.1</a>. This means that any
+code that you include or write in your CWL Document must be compliant with
+ECMAScript 5.1.</p>
+</div>
+<p>For example, we can use <code class="docutils literal notranslate"><span class="pre">InlineJavascriptRequirement</span></code> and write a JavaScript function
+inline in <code class="docutils literal notranslate"><span class="pre">expressionLib</span></code>. That function can then be used in other parts of the
+CWL document:</p>
+<div class="literal-block-wrapper docutils container" id="hello-world-expressionlib-inline-cwl">
+<div class="code-block-caption"><span class="caption-text"><code class="docutils literal notranslate"><span class="pre">hello-world-expressionlib-inline.cwl</span></code></span><a class="headerlink" href="#hello-world-expressionlib-inline-cwl" title="Permalink to this code">#</a></div>
+<div class="highlight-cwl notranslate"><div class="highlight"><pre><span></span><span class="nt">cwlVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">v1.2</span><span class="w"></span>
+<span class="nt">class</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">CommandLineTool</span><span class="w"></span>
+<span class="nt">requirements</span><span class="p">:</span><span class="w"></span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">class</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">InlineJavascriptRequirement</span><span class="w"></span>
+<span class="hll"><span class="w">    </span><span class="nt">expressionLib</span><span class="p">:</span><span class="w"></span>
+</span><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="p p-Indicator">|</span><span class="w"></span>
+<span class="w">        </span><span class="no">/**</span><span class="w"></span>
+<span class="w">         </span><span class="no">* Capitalize each word passed. Will split the text by spaces.</span><span class="w"></span>
+<span class="w">         </span><span class="no">* For instance, given &quot;hello world&quot;, it returns &quot;Hello World&quot;.</span><span class="w"></span>
+<span class="w">         </span><span class="no">*</span><span class="w"></span>
+<span class="w">         </span><span class="no">* @param {String} message - The input message.</span><span class="w"></span>
+<span class="w">         </span><span class="no">* @return {String} the message with each word with its initial letter capitalized.</span><span class="w"></span>
+<span class="w">         </span><span class="no">*/</span><span class="w"></span>
+<span class="hll"><span class="w">        </span><span class="no">function capitalizeWords (message) {</span><span class="w"></span>
+</span><span class="w">          </span><span class="no">if (message === undefined || message === null || typeof message !== &#39;string&#39; || message.trim().length === 0) {</span><span class="w"></span>
+<span class="w">            </span><span class="no">return &#39;&#39;;</span><span class="w"></span>
+<span class="w">          </span><span class="no">}</span><span class="w"></span>
+<span class="w">          </span><span class="no">return message</span><span class="w"></span>
+<span class="w">            </span><span class="no">.split(&#39; &#39;)</span><span class="w"></span>
+<span class="w">            </span><span class="no">.map(function (token) {</span><span class="w"></span>
+<span class="w">              </span><span class="no">return token.charAt(0).toUpperCase() + token.slice(1);</span><span class="w"></span>
+<span class="w">            </span><span class="no">})</span><span class="w"></span>
+<span class="w">            </span><span class="no">.join(&#39; &#39;);</span><span class="w"></span>
+<span class="w">        </span><span class="no">}</span><span class="w"></span>
+
+<span class="nt">baseCommand</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">echo</span><span class="w"></span>
+
+<span class="nt">inputs</span><span class="p">:</span><span class="w"></span>
+<span class="w">  </span><span class="nt">message</span><span class="p">:</span><span class="w"></span>
+<span class="w">    </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">string</span><span class="w"></span>
+
+<span class="hll"><span class="nt">arguments</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="nv">$( capitalizeWords(inputs.message) )</span><span class="p p-Indicator">]</span><span class="w"></span>
+</span>
+<span class="nt">outputs</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[]</span><span class="w"></span>
+</pre></div>
+</div>
+</div>
+<p>Running this CWL workflow will invoke the JavaScript function and result in
+the <code class="docutils literal notranslate"><span class="pre">echo</span></code> command printing the input message with capital initial letters:</p>
+<div class="literal-block-wrapper docutils container" id="running-hell-world-expressionlib-inline-cwl">
+<div class="code-block-caption"><span class="caption-text">Running <code class="docutils literal notranslate"><span class="pre">hello-world-expressionlib-inline.cwl</span></code>.</span><a class="headerlink" href="#running-hell-world-expressionlib-inline-cwl" title="Permalink to this code">#</a></div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ cwltool hello-world-expressionlib-inline.cwl --message <span class="s2">&quot;hello world&quot;</span>
+INFO /opt/hostedtoolcache/Python/3.9.14/x64/bin/cwltool <span class="m">3</span>.1.20221008225030
+INFO Resolved <span class="s1">&#39;hello-world-expressionlib-inline.cwl&#39;</span> to <span class="s1">&#39;file:///home/runner/work/user_guide/user_guide/src/_includes/cwl/expressions/hello-world-expressionlib-inline.cwl&#39;</span>
+INFO <span class="o">[</span>job hello-world-expressionlib-inline.cwl<span class="o">]</span> /tmp/ujamw9l7$ <span class="nb">echo</span> <span class="se">\</span>
+    <span class="s1">&#39;Hello World&#39;</span>
+Hello World
+INFO <span class="o">[</span>job hello-world-expressionlib-inline.cwl<span class="o">]</span> completed success
+<span class="o">{}</span>
+INFO Final process status is success
+</pre></div>
+</div>
+</div>
+<p>Let’s move the <code class="docutils literal notranslate"><span class="pre">capitalizeWords</span></code> function to an external file, <code class="docutils literal notranslate"><span class="pre">custom-functions.js</span></code>, and
+import it in our CWL document:</p>
+<div class="literal-block-wrapper docutils container" id="custom-functions-js">
+<div class="code-block-caption"><span class="caption-text"><code class="docutils literal notranslate"><span class="pre">custom-functions.js</span></code></span><a class="headerlink" href="#custom-functions-js" title="Permalink to this code">#</a></div>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="cm">/**</span>
+<span class="cm"> * Capitalize each word passed. Will split the text by spaces.</span>
+<span class="cm"> * For instance, given &quot;hello world&quot;, it returns &quot;Hello World&quot;.</span>
+<span class="cm"> *</span>
+<span class="cm"> * @param {String} message - The input message.</span>
+<span class="cm"> * @return {String} the message with each word with its initial letter capitalized.</span>
+<span class="cm"> */</span><span class="w"></span>
+<span class="kd">function</span><span class="w"> </span><span class="nx">capitalizeWords</span><span class="w"> </span><span class="p">(</span><span class="nx">message</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">message</span><span class="w"> </span><span class="o">===</span><span class="w"> </span><span class="kc">undefined</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="nx">message</span><span class="w"> </span><span class="o">===</span><span class="w"> </span><span class="kc">null</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="ow">typeof</span><span class="w"> </span><span class="nx">message</span><span class="w"> </span><span class="o">!==</span><span class="w"> </span><span class="s1">&#39;string&#39;</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="nx">message</span><span class="p">.</span><span class="nx">trim</span><span class="p">().</span><span class="nx">length</span><span class="w"> </span><span class="o">===</span><span class="w"> </span><span class="mf">0</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="s1">&#39;&#39;</span><span class="p">;</span><span class="w"></span>
+<span class="w">  </span><span class="p">}</span><span class="w"></span>
+<span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="nx">message</span><span class="w"></span>
+<span class="w">    </span><span class="p">.</span><span class="nx">split</span><span class="p">(</span><span class="s1">&#39; &#39;</span><span class="p">)</span><span class="w"></span>
+<span class="w">    </span><span class="p">.</span><span class="nx">map</span><span class="p">(</span><span class="kd">function</span><span class="w"> </span><span class="p">(</span><span class="nx">token</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">      </span><span class="k">return</span><span class="w"> </span><span class="nx">token</span><span class="p">.</span><span class="nx">charAt</span><span class="p">(</span><span class="mf">0</span><span class="p">).</span><span class="nx">toUpperCase</span><span class="p">()</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">token</span><span class="p">.</span><span class="nx">slice</span><span class="p">(</span><span class="mf">1</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="p">})</span><span class="w"></span>
+<span class="w">    </span><span class="p">.</span><span class="nx">join</span><span class="p">(</span><span class="s1">&#39; &#39;</span><span class="p">);</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</pre></div>
+</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="hello-world-expressionlib-external-cwl">
+<div class="code-block-caption"><span class="caption-text"><code class="docutils literal notranslate"><span class="pre">hello-world-expressionlib-external.cwl</span></code></span><a class="headerlink" href="#hello-world-expressionlib-external-cwl" title="Permalink to this code">#</a></div>
+<div class="highlight-cwl notranslate"><div class="highlight"><pre><span></span><span class="nt">cwlVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">v1.2</span><span class="w"></span>
+<span class="nt">class</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">CommandLineTool</span><span class="w"></span>
+<span class="nt">requirements</span><span class="p">:</span><span class="w"></span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">class</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">InlineJavascriptRequirement</span><span class="w"></span>
+<span class="hll"><span class="w">    </span><span class="nt">expressionLib</span><span class="p">:</span><span class="w"></span>
+</span><span class="hll"><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="p p-Indicator">{</span><span class="nt"> $include</span><span class="p">:</span><span class="w"> </span><span class="nv">custom-functions.js</span><span class="w"> </span><span class="p p-Indicator">}</span><span class="w"></span>
+</span>
+<span class="nt">baseCommand</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">echo</span><span class="w"></span>
+
+<span class="nt">inputs</span><span class="p">:</span><span class="w"></span>
+<span class="w">  </span><span class="nt">message</span><span class="p">:</span><span class="w"></span>
+<span class="w">    </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">string</span><span class="w"></span>
+
+<span class="hll"><span class="nt">arguments</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="nv">$( capitalizeWords(inputs.message) )</span><span class="p p-Indicator">]</span><span class="w"></span>
+</span>
+<span class="nt">outputs</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[]</span><span class="w"></span>
+</pre></div>
+</div>
+</div>
+<p>The <code class="docutils literal notranslate"><span class="pre">custom-functions.js</span></code> file is included in the CWL document with the <code class="docutils literal notranslate"><span class="pre">$include:</span> <span class="pre">custom-functions.js</span></code>
+statement. That makes the functions and variables available to be used in other parts of
+the CWL document.</p>
+<div class="literal-block-wrapper docutils container" id="running-hell-world-expressionlib-external-cwl">
+<div class="code-block-caption"><span class="caption-text">Running <code class="docutils literal notranslate"><span class="pre">hello-world-expressionlib-external.cwl</span></code>.</span><a class="headerlink" href="#running-hell-world-expressionlib-external-cwl" title="Permalink to this code">#</a></div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ cwltool hello-world-expressionlib-external.cwl --message <span class="s2">&quot;hello world&quot;</span>
+INFO /opt/hostedtoolcache/Python/3.9.14/x64/bin/cwltool <span class="m">3</span>.1.20221008225030
+INFO Resolved <span class="s1">&#39;hello-world-expressionlib-external.cwl&#39;</span> to <span class="s1">&#39;file:///home/runner/work/user_guide/user_guide/src/_includes/cwl/expressions/hello-world-expressionlib-external.cwl&#39;</span>
+INFO <span class="o">[</span>job hello-world-expressionlib-external.cwl<span class="o">]</span> /tmp/othl84l3$ <span class="nb">echo</span> <span class="se">\</span>
+    <span class="s1">&#39;Hello World&#39;</span>
+Hello World
+INFO <span class="o">[</span>job hello-world-expressionlib-external.cwl<span class="o">]</span> completed success
+<span class="o">{}</span>
+INFO Final process status is success
+</pre></div>
+</div>
+</div>
+<p>Finally, note that you can have both inline and external JavaScript code in your
+CWL document. In this final example we have added another entry to the <code class="docutils literal notranslate"><span class="pre">expressionLib</span></code>
+attribute with the new function <code class="docutils literal notranslate"><span class="pre">createHelloWorldMessage</span></code>, that calls the <code class="docutils literal notranslate"><span class="pre">capitalizeWords</span></code>
+function from the external file <code class="docutils literal notranslate"><span class="pre">custom-functions.js</span></code>.</p>
+<div class="literal-block-wrapper docutils container" id="hello-world-expressionlib-cwl">
+<div class="code-block-caption"><span class="caption-text"><code class="docutils literal notranslate"><span class="pre">hello-world-expressionlib.cwl</span></code></span><a class="headerlink" href="#hello-world-expressionlib-cwl" title="Permalink to this code">#</a></div>
+<div class="highlight-cwl notranslate"><div class="highlight"><pre><span></span><span class="nt">cwlVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">v1.2</span><span class="w"></span>
+<span class="nt">class</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">CommandLineTool</span><span class="w"></span>
+<span class="nt">requirements</span><span class="p">:</span><span class="w"></span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">class</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">InlineJavascriptRequirement</span><span class="w"></span>
+<span class="hll"><span class="w">    </span><span class="nt">expressionLib</span><span class="p">:</span><span class="w"></span>
+</span><span class="hll"><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="p p-Indicator">{</span><span class="nt"> $include</span><span class="p">:</span><span class="w"> </span><span class="nv">custom-functions.js</span><span class="w"> </span><span class="p p-Indicator">}</span><span class="w"></span>
+</span><span class="hll"><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="p p-Indicator">|</span><span class="w"></span>
+</span><span class="hll"><span class="w">        </span><span class="no">/**</span><span class="w"></span>
+</span><span class="hll"><span class="w">         </span><span class="no">* A merely illustrative example function that uses a function</span><span class="w"></span>
+</span><span class="hll"><span class="w">         </span><span class="no">* from the included custom-functions.js file to create a</span><span class="w"></span>
+</span><span class="hll"><span class="w">         </span><span class="no">* Hello World message.</span><span class="w"></span>
+</span><span class="hll"><span class="w">         </span><span class="no">*</span><span class="w"></span>
+</span><span class="hll"><span class="w">         </span><span class="no">* @param {Object} message - CWL document input message</span><span class="w"></span>
+</span><span class="hll"><span class="w">         </span><span class="no">*/</span><span class="w"></span>
+</span><span class="hll"><span class="w">        </span><span class="no">var createHelloWorldMessage = function (message) {</span><span class="w"></span>
+</span><span class="hll"><span class="w">          </span><span class="no">return capitalizeWords(message);</span><span class="w"></span>
+</span><span class="hll"><span class="w">        </span><span class="no">};</span><span class="w"></span>
+</span>
+<span class="nt">baseCommand</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">echo</span><span class="w"></span>
+
+<span class="nt">inputs</span><span class="p">:</span><span class="w"></span>
+<span class="w">  </span><span class="nt">message</span><span class="p">:</span><span class="w"></span>
+<span class="w">    </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">string</span><span class="w"></span>
+
+<span class="hll"><span class="nt">arguments</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="nv">$( createHelloWorldMessage(inputs.message) )</span><span class="p p-Indicator">]</span><span class="w"></span>
+</span>
+<span class="nt">outputs</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[]</span><span class="w"></span>
+</pre></div>
+</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="running-hell-world-expressionlib-cwl">
+<div class="code-block-caption"><span class="caption-text">Running <code class="docutils literal notranslate"><span class="pre">hello-world-expressionlib.cwl</span></code>.</span><a class="headerlink" href="#running-hell-world-expressionlib-cwl" title="Permalink to this code">#</a></div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ cwltool hello-world-expressionlib.cwl --message <span class="s2">&quot;hello world&quot;</span>
+INFO /opt/hostedtoolcache/Python/3.9.14/x64/bin/cwltool <span class="m">3</span>.1.20221008225030
+INFO Resolved <span class="s1">&#39;hello-world-expressionlib.cwl&#39;</span> to <span class="s1">&#39;file:///home/runner/work/user_guide/user_guide/src/_includes/cwl/expressions/hello-world-expressionlib.cwl&#39;</span>
+INFO <span class="o">[</span>job hello-world-expressionlib.cwl<span class="o">]</span> /tmp/waunxyff$ <span class="nb">echo</span> <span class="se">\</span>
+    <span class="s1">&#39;Hello World&#39;</span>
+Hello World
+INFO <span class="o">[</span>job hello-world-expressionlib.cwl<span class="o">]</span> completed success
+<span class="o">{}</span>
+INFO Final process status is success
+</pre></div>
+</div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">$include</span></code> statement can be used to include a file from the local disk or from a remote location.
+It works with both relative and absolute paths. Read the <a class="reference external" href="https://www.commonwl.org/v1.0/SchemaSalad.html#Include">text about <code class="docutils literal notranslate"><span class="pre">$include</span></code></a>
+from the CWL specification to learn more about it.</p>
+</div>
+</section>
 </section>
 
 
@@ -608,6 +803,28 @@ only in certain fields.  These are:</p>
           
             <div class="bd-sidebar-secondary bd-toc">
               
+<div class="toc-item">
+  
+<div class="tocsection onthispage">
+    <i class="fa-solid fa-list"></i> On this page
+</div>
+<nav id="bd-toc-nav" class="page-toc">
+    <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#using-external-libraries-and-inline-javascript-code-with-expressionlib">
+   2.3.1. Using external libraries and inline JavaScript code with
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     expressionLib
+    </span>
+   </code>
+  </a>
+ </li>
+</ul>
+
+</nav>
+</div>
+
 <div class="toc-item">
   
 <div id="searchbox"></div>
@@ -667,7 +884,7 @@ only in certain fields.  These are:</p>
           <a class="nav-link" href="https://github.com/common-workflow-language/user_guide/">Source</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="https://github.com/common-workflow-language/user_guide/blob/main/CITATION">Cite</a>
+          <a class="nav-link" href="https://github.com/common-workflow-language/user_guide/blob/main/CITATION.md">Cite</a>
         </li>
       </ul>
     </div>

@@ -328,6 +328,7 @@
 <li class="toctree-l2 current active"><a class="current reference internal" href="#">2.17. File Formats</a></li>
 <li class="toctree-l2"><a class="reference internal" href="metadata-and-authorship.html">2.18. Metadata and Authorship</a></li>
 <li class="toctree-l2"><a class="reference internal" href="specifying-software-requirements.html">2.19. Specifying Software Requirements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="troubleshooting.html">2.20. Troubleshooting</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../tutorials.html">3. Tutorials</a></li>
@@ -370,8 +371,8 @@ type-checking when creating parameter files.</p>
 <p>For file formats, we recommend referencing existing ontologies (like EDAM in
 our example), reference a local ontology for your institution, or do not add
 a file format initially for quick development before sharing your tool with
-others. You can browse existing file format listings for IANA <a class="reference external" href="https://www.iana.org/assignments/media-types/media-types.xhtml">here</a> and
-for EDAM <a class="reference external" href="https://www.ebi.ac.uk/ols/ontologies/edam/terms?iri=http%3A%2F%2Fedamontology.org%2Fformat_1915">here</a>.</p>
+others. You can browse existing <a class="reference external" href="https://www.iana.org/assignments/media-types/media-types.xhtml">IANA file format listings</a> and
+<a class="reference external" href="https://www.ebi.ac.uk/ols/ontologies/edam/terms?iri=http%3A%2F%2Fedamontology.org%2Fformat_1915">EDAM file format listings</a> on their websites.</p>
 <p>In the next tutorial, we explain  the <code class="docutils literal notranslate"><span class="pre">$namespaces</span></code> and <code class="docutils literal notranslate"><span class="pre">$schemas</span></code> section of the
 document in greater detail, so don’t worry about these for now.</p>
 <p>Note that for added value <code class="docutils literal notranslate"><span class="pre">cwltool</span></code> can do some basic reasoning based on file
@@ -428,9 +429,9 @@ parameterization.</p>
 </pre></div>
 </div>
 </div>
-<p><em><strong>Note:</strong></em> To follow the example below, you need to download the example input file, <em>file-formats.bam</em>. The file is available from <a class="github reference external" href="https://github.com/common-workflow-language/user_guide/raw/main/_includes/cwl/file-formats/file-formats.bam">common-workflow-language/user_guide
-</a> and can be downloaded e.g. via <code class="docutils literal notranslate"><span class="pre">wget</span></code>:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ wget https://github.com/common-workflow-language/user_guide/raw/main/_includes/cwl/file-formats/file-formats.bam
+<p><em><strong>Note:</strong></em> To follow the example below, you need to download the example input file, <em>file-formats.bam</em>. The file is available from <a class="github reference external" href="https://github.com/common-workflow-language/user_guide/raw/main/src/_includes/cwl/file-formats/file-formats.bam">common-workflow-language/user_guide</a>
+and can be downloaded e.g. via <code class="docutils literal notranslate"><span class="pre">wget</span></code>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ wget https://github.com/common-workflow-language/user_guide/raw/main/src/_includes/cwl/file-formats/file-formats.bam
 </pre></div>
 </div>
 <p>Now invoke <code class="docutils literal notranslate"><span class="pre">cwltool</span></code> with the tool description and the input object on the
@@ -438,17 +439,16 @@ command line:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ cwltool metadata_example.cwl sample.yml
 INFO /opt/hostedtoolcache/Python/3.9.14/x64/bin/cwltool <span class="m">3</span>.1.20221008225030
 INFO Resolved <span class="s1">&#39;metadata_example.cwl&#39;</span> to <span class="s1">&#39;file:///home/runner/work/user_guide/user_guide/src/_includes/cwl/file-formats/metadata_example.cwl&#39;</span>
-Could not load extension schema http://edamontology.org/EDAM_1.18.owl: Error fetching http://edamontology.org/EDAM_1.18.owl: HTTPConnectionPool<span class="o">(</span><span class="nv">host</span><span class="o">=</span><span class="s1">&#39;edamontology.org&#39;</span>, <span class="nv">port</span><span class="o">=</span><span class="m">80</span><span class="o">)</span>: Max retries exceeded with url: /EDAM_1.18.owl <span class="o">(</span>Caused by NewConnectionError<span class="o">(</span><span class="s1">&#39;&lt;urllib3.connection.HTTPConnection object at 0x7f30cc311400&gt;: Failed to establish a new connection: [Errno -3] Temporary failure in name resolution&#39;</span><span class="o">))</span>
-INFO <span class="o">[</span>job metadata_example.cwl<span class="o">]</span> /tmp/a7hpw8cv$ wc <span class="se">\</span>
+INFO <span class="o">[</span>job metadata_example.cwl<span class="o">]</span> /tmp/ltefuglf$ wc <span class="se">\</span>
     -l <span class="se">\</span>
-    /tmp/65i6fvd_/stg69059851-2bab-4c0c-bcef-45b122ddfef2/file-formats.bam &gt; /tmp/a7hpw8cv/output.txt
+    /tmp/vkw32zew/stga56e4efc-cdc4-4050-b2b4-bcc13be9268a/file-formats.bam &gt; /tmp/ltefuglf/output.txt
 INFO <span class="o">[</span>job metadata_example.cwl<span class="o">]</span> completed success
 <span class="o">{</span>
     <span class="s2">&quot;report&quot;</span>: <span class="o">{</span>
         <span class="s2">&quot;location&quot;</span>: <span class="s2">&quot;file:///home/runner/work/user_guide/user_guide/src/_includes/cwl/file-formats/output.txt&quot;</span>,
         <span class="s2">&quot;basename&quot;</span>: <span class="s2">&quot;output.txt&quot;</span>,
         <span class="s2">&quot;class&quot;</span>: <span class="s2">&quot;File&quot;</span>,
-        <span class="s2">&quot;checksum&quot;</span>: <span class="s2">&quot;sha1</span><span class="nv">$34</span><span class="s2">df38e74aedebb96044752bcb15d7cc8640254e&quot;</span>,
+        <span class="s2">&quot;checksum&quot;</span>: <span class="s2">&quot;sha1</span><span class="nv">$c37c0373222b69b4a0f8376417c0995c8a5b3f83</span><span class="s2">&quot;</span>,
         <span class="s2">&quot;size&quot;</span>: <span class="m">77</span>,
         <span class="s2">&quot;format&quot;</span>: <span class="s2">&quot;http://edamontology.org/format_1964&quot;</span>,
         <span class="s2">&quot;path&quot;</span>: <span class="s2">&quot;/home/runner/work/user_guide/user_guide/src/_includes/cwl/file-formats/output.txt&quot;</span>
@@ -567,7 +567,7 @@ INFO Final process status is success
           <a class="nav-link" href="https://github.com/common-workflow-language/user_guide/">Source</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="https://github.com/common-workflow-language/user_guide/blob/main/CITATION">Cite</a>
+          <a class="nav-link" href="https://github.com/common-workflow-language/user_guide/blob/main/CITATION.md">Cite</a>
         </li>
       </ul>
     </div>

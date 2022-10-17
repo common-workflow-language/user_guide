@@ -328,6 +328,7 @@
 <li class="toctree-l2"><a class="reference internal" href="file-formats.html">2.17. File Formats</a></li>
 <li class="toctree-l2"><a class="reference internal" href="metadata-and-authorship.html">2.18. Metadata and Authorship</a></li>
 <li class="toctree-l2"><a class="reference internal" href="specifying-software-requirements.html">2.19. Specifying Software Requirements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="troubleshooting.html">2.20. Troubleshooting</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../tutorials.html">3. Tutorials</a></li>
@@ -364,9 +365,9 @@
   <section id="creating-files-at-runtime">
 <h1><span class="section-number">2.14. </span>Creating Files at Runtime<a class="headerlink" href="#creating-files-at-runtime" title="Permalink to this heading">#</a></h1>
 <p>Sometimes you need to create a file on the fly from input parameters,
-such as tools which expect to read their input configuration from a file
+such as tools that expect to read their input configuration from a file
 rather than the command line parameters, or need a small wrapper shell script.</p>
-<p>To generate such files we can use the <code class="docutils literal notranslate"><span class="pre">InitialWorkDirRequirement</span></code>.</p>
+<p>To generate such files, we can use the <code class="docutils literal notranslate"><span class="pre">InitialWorkDirRequirement</span></code>.</p>
 <div class="literal-block-wrapper docutils container" id="createfile-cwl">
 <div class="code-block-caption"><span class="caption-text"><code class="docutils literal notranslate"><span class="pre">createfile.cwl</span></code></span><a class="headerlink" href="#createfile-cwl" title="Permalink to this code">#</a></div>
 <div class="highlight-cwl notranslate"><div class="highlight"><pre><span></span><span class="nt">class</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">CommandLineTool</span><span class="w"></span>
@@ -392,29 +393,29 @@ rather than the command line parameters, or need a small wrapper shell script.</
 </div>
 </div>
 <p>Any <a class="reference internal" href="expressions.html"><span class="doc std std-doc">expressions</span></a> like <code class="docutils literal notranslate"><span class="pre">$(inputs.message)</span></code> are
-expanded by the CWL engine before creating the file;
-here inserting the value at the input <code class="docutils literal notranslate"><span class="pre">message</span></code>.</p>
+expanded by the CWL engine before creating the file.
+Here, insert the value at the input <code class="docutils literal notranslate"><span class="pre">message</span></code>.</p>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
 <p>The <em>CWL expressions</em> are independent of any <em>shell variables</em>
 used later during command line tool invocation. That means that any genuine
-need for the character <code class="docutils literal notranslate"><span class="pre">$</span></code> must be <strong>escaped</strong> with <code class="docutils literal notranslate"><span class="pre">\</span></code>,
-for instance <code class="docutils literal notranslate"><span class="pre">\${PREFIX}</span></code> above is expanded to <code class="docutils literal notranslate"><span class="pre">${PREFIX}</span></code> in the generated file
+need for the character <code class="docutils literal notranslate"><span class="pre">$</span></code> must be <strong>escaped</strong> with <code class="docutils literal notranslate"><span class="pre">\</span></code>.
+For instance, <code class="docutils literal notranslate"><span class="pre">\${PREFIX}</span></code> above is expanded to <code class="docutils literal notranslate"><span class="pre">${PREFIX}</span></code> in the generated file
 to be evaluated by the shell script instead of the CWL engine.</p>
 </div>
-<p>To test the above CWL tool use this job to provide the input value <code class="docutils literal notranslate"><span class="pre">message</span></code>:</p>
+<p>To test the above CWL tool, use this job to provide the input value <code class="docutils literal notranslate"><span class="pre">message</span></code>:</p>
 <div class="literal-block-wrapper docutils container" id="echo-job-yml">
 <div class="code-block-caption"><span class="caption-text"><code class="docutils literal notranslate"><span class="pre">echo-job.yml</span></code></span><a class="headerlink" href="#echo-job-yml" title="Permalink to this code">#</a></div>
 <div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">message</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Hello world!</span><span class="w"></span>
 </pre></div>
 </div>
 </div>
-<p>Before we run this, lets look at each step in a little more detail.
+<p>Before we run this, let us look at each step in a little more detail.
 The base command <code class="docutils literal notranslate"><span class="pre">baseCommand:</span> <span class="pre">[&quot;sh&quot;,</span> <span class="pre">&quot;example.sh&quot;]</span></code>
 will execute the command <code class="docutils literal notranslate"><span class="pre">sh</span> <span class="pre">example.sh</span></code>.
 This will run the file we create in the shell.</p>
 <p><code class="docutils literal notranslate"><span class="pre">InitialWorkDirRequirement</span></code> requires a <code class="docutils literal notranslate"><span class="pre">listing</span></code>.
-As the <code class="docutils literal notranslate"><span class="pre">listing</span></code> is a YAML array we need a <code class="docutils literal notranslate"><span class="pre">-</span></code> on the first line of
+As the <code class="docutils literal notranslate"><span class="pre">listing</span></code> is a YAML array, we need a <code class="docutils literal notranslate"><span class="pre">-</span></code> on the first line of
 each element of the array, in this case we have just one element.
 <code class="docutils literal notranslate"><span class="pre">entryname:</span></code> can have any value,
 but it must match what was specified in the <code class="docutils literal notranslate"><span class="pre">baseCommand</span></code>.
@@ -430,8 +431,8 @@ command line:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ cwltool createfile.cwl echo-job.yml
 INFO /opt/hostedtoolcache/Python/3.9.14/x64/bin/cwltool <span class="m">3</span>.1.20221008225030
 INFO Resolved <span class="s1">&#39;createfile.cwl&#39;</span> to <span class="s1">&#39;file:///home/runner/work/user_guide/user_guide/src/_includes/cwl/creating-files-at-runtime/createfile.cwl&#39;</span>
-INFO <span class="o">[</span>job createfile.cwl<span class="o">]</span> /tmp/itqggh1r$ sh <span class="se">\</span>
-    example.sh &gt; /tmp/itqggh1r/output.txt
+INFO <span class="o">[</span>job createfile.cwl<span class="o">]</span> /tmp/8iqsk96c$ sh <span class="se">\</span>
+    example.sh &gt; /tmp/8iqsk96c/output.txt
 INFO <span class="o">[</span>job createfile.cwl<span class="o">]</span> completed success
 <span class="o">{</span>
     <span class="s2">&quot;example_out&quot;</span>: <span class="o">{</span>
@@ -542,7 +543,7 @@ Message is: Hello world!
           <a class="nav-link" href="https://github.com/common-workflow-language/user_guide/">Source</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="https://github.com/common-workflow-language/user_guide/blob/main/CITATION">Cite</a>
+          <a class="nav-link" href="https://github.com/common-workflow-language/user_guide/blob/main/CITATION.md">Cite</a>
         </li>
       </ul>
     </div>

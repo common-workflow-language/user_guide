@@ -328,6 +328,7 @@
 <li class="toctree-l2"><a class="reference internal" href="file-formats.html">2.17. File Formats</a></li>
 <li class="toctree-l2"><a class="reference internal" href="metadata-and-authorship.html">2.18. Metadata and Authorship</a></li>
 <li class="toctree-l2"><a class="reference internal" href="specifying-software-requirements.html">2.19. Specifying Software Requirements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="troubleshooting.html">2.20. Troubleshooting</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../tutorials.html">3. Tutorials</a></li>
@@ -421,6 +422,24 @@ types and appearing on the command line in different ways.</p>
 </pre></div>
 </div>
 </div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>You can use <code class="docutils literal notranslate"><span class="pre">cwltool</span></code> to create a template input object. That saves you from having
+to type all the input parameters in a input object file:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ cwltool --make-template inp.cwl
+INFO /opt/hostedtoolcache/Python/3.9.14/x64/bin/cwltool <span class="m">3</span>.1.20221008225030
+INFO Resolved <span class="s1">&#39;inp.cwl&#39;</span> to <span class="s1">&#39;file:///home/runner/work/user_guide/user_guide/src/_includes/cwl/inputs/inp.cwl&#39;</span>
+example_string: a_string  <span class="c1"># type &quot;string&quot;</span>
+example_int: <span class="m">0</span>  <span class="c1"># type &quot;int&quot;</span>
+example_flag: <span class="nb">false</span>  <span class="c1"># type &quot;boolean&quot;</span>
+example_file:  <span class="c1"># type &quot;File&quot; (optional)</span>
+    class: File
+    path: a/file/path
+</pre></div>
+</div>
+<p>You can redirect the output to a file, i.e. <code class="docutils literal notranslate"><span class="pre">cwltool</span> <span class="pre">--make-template</span> <span class="pre">inp.cwl</span> <span class="pre">&gt;</span> <span class="pre">inp-job.yml</span></code>,
+and then modify the default values with your desired input values.</p>
+</div>
 <p>Notice that “example_file”, as a <code class="docutils literal notranslate"><span class="pre">File</span></code> type, must be provided as an
 object with the fields <code class="docutils literal notranslate"><span class="pre">class:</span> <span class="pre">File</span></code> and <code class="docutils literal notranslate"><span class="pre">path</span></code>.</p>
 <p>Next, create a whale.txt using <a class="reference external" href="http://www.linfo.org/touch.html">touch</a> by typing <code class="docutils literal notranslate"><span class="pre">touch</span> <span class="pre">whale.txt</span></code> on the command line.</p>
@@ -433,13 +452,13 @@ two commands and the expected output from the command line:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ cwltool inp.cwl inp-job.yml
 INFO /opt/hostedtoolcache/Python/3.9.14/x64/bin/cwltool <span class="m">3</span>.1.20221008225030
 INFO Resolved <span class="s1">&#39;inp.cwl&#39;</span> to <span class="s1">&#39;file:///home/runner/work/user_guide/user_guide/src/_includes/cwl/inputs/inp.cwl&#39;</span>
-INFO <span class="o">[</span>job inp.cwl<span class="o">]</span> /tmp/4lby2bgo$ <span class="nb">echo</span> <span class="se">\</span>
+INFO <span class="o">[</span>job inp.cwl<span class="o">]</span> /tmp/9zckpth1$ <span class="nb">echo</span> <span class="se">\</span>
     -f <span class="se">\</span>
     -i42 <span class="se">\</span>
     --example-string <span class="se">\</span>
     hello <span class="se">\</span>
-    --file<span class="o">=</span>/tmp/h1b_eivf/stg54c409db-b754-4789-9324-692d9cd4f467/whale.txt
--f -i42 --example-string hello --file<span class="o">=</span>/tmp/h1b_eivf/stg54c409db-b754-4789-9324-692d9cd4f467/whale.txt
+    --file<span class="o">=</span>/tmp/qtnsu8g2/stge961402f-ab39-4ddb-868a-efa729c0c178/whale.txt
+-f -i42 --example-string hello --file<span class="o">=</span>/tmp/qtnsu8g2/stge961402f-ab39-4ddb-868a-efa729c0c178/whale.txt
 INFO <span class="o">[</span>job inp.cwl<span class="o">]</span> completed success
 <span class="o">{}</span>
 INFO Final process status is success
@@ -574,7 +593,7 @@ on the command line:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ cwltool array-inputs.cwl array-inputs-job.yml
 INFO /opt/hostedtoolcache/Python/3.9.14/x64/bin/cwltool <span class="m">3</span>.1.20221008225030
 INFO Resolved <span class="s1">&#39;array-inputs.cwl&#39;</span> to <span class="s1">&#39;file:///home/runner/work/user_guide/user_guide/src/_includes/cwl/inputs/array-inputs.cwl&#39;</span>
-INFO <span class="o">[</span>job array-inputs.cwl<span class="o">]</span> /tmp/g2q1t4j5$ <span class="nb">echo</span> <span class="se">\</span>
+INFO <span class="o">[</span>job array-inputs.cwl<span class="o">]</span> /tmp/tzjtn59a$ <span class="nb">echo</span> <span class="se">\</span>
     -A <span class="se">\</span>
     one <span class="se">\</span>
     two <span class="se">\</span>
@@ -582,7 +601,7 @@ INFO <span class="o">[</span>job array-inputs.cwl<span class="o">]</span> /tmp/g
     -B<span class="o">=</span>four <span class="se">\</span>
     -B<span class="o">=</span>five <span class="se">\</span>
     -B<span class="o">=</span>six <span class="se">\</span>
-    -C<span class="o">=</span>seven,eight,nine &gt; /tmp/g2q1t4j5/output.txt
+    -C<span class="o">=</span>seven,eight,nine &gt; /tmp/tzjtn59a/output.txt
 INFO <span class="o">[</span>job array-inputs.cwl<span class="o">]</span> completed success
 <span class="o">{</span>
     <span class="s2">&quot;example_out&quot;</span>: <span class="o">{</span>
@@ -613,8 +632,8 @@ This will be demonstrated in the next lesson
 and is discussed in more detail in the <a class="reference internal" href="yaml-guide.html#arrays"><span class="std std-doc">YAML Guide</span></a>.
 You can specify arrays of arrays, arrays of records, and other complex types.</p>
 </section>
-<section id="advanced-inputs">
-<h2><span class="section-number">2.4.3. </span>Advanced Inputs<a class="headerlink" href="#advanced-inputs" title="Permalink to this heading">#</a></h2>
+<section id="inclusive-and-exclusive-inputs">
+<h2><span class="section-number">2.4.3. </span>Inclusive and Exclusive Inputs<a class="headerlink" href="#inclusive-and-exclusive-inputs" title="Permalink to this heading">#</a></h2>
 <p>Sometimes an underlying tool has several arguments that must be provided
 together (they are dependent) or several arguments that cannot be provided
 together (they are exclusive).  You can use records and type unions to group
@@ -677,9 +696,9 @@ INFO /opt/hostedtoolcache/Python/3.9.14/x64/bin/cwltool <span class="m">3</span>
 INFO Resolved <span class="s1">&#39;record.cwl&#39;</span> to <span class="s1">&#39;file:///home/runner/work/user_guide/user_guide/src/_includes/cwl/inputs/record.cwl&#39;</span>
 ERROR Workflow error, try again with --debug <span class="k">for</span> more information:
 Invalid job input record:
-record-job1.yml:1:1: the <span class="sb">`</span>dependent_parameters<span class="sb">`</span> field is not valid because
-                       missing required field <span class="sb">`</span>itemB<span class="sb">`</span>
-</pre></div>
+<span class="hll">record-job1.yml:1:1: the <span class="sb">`</span>dependent_parameters<span class="sb">`</span> field is not valid because
+</span><span class="hll">                       missing required field <span class="sb">`</span>itemB<span class="sb">`</span>
+</span></pre></div>
 </div>
 <p>In the first example, you can’t provide <code class="docutils literal notranslate"><span class="pre">itemA</span></code> without also providing <code class="docutils literal notranslate"><span class="pre">itemB</span></code>.</p>
 <div class="literal-block-wrapper docutils container" id="record-job2-yml">
@@ -696,15 +715,15 @@ record-job1.yml:1:1: the <span class="sb">`</span>dependent_parameters<span clas
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ cwltool record.cwl record-job2.yml
 INFO /opt/hostedtoolcache/Python/3.9.14/x64/bin/cwltool <span class="m">3</span>.1.20221008225030
 INFO Resolved <span class="s1">&#39;record.cwl&#39;</span> to <span class="s1">&#39;file:///home/runner/work/user_guide/user_guide/src/_includes/cwl/inputs/record.cwl&#39;</span>
-record-job2.yml:6:3: Warning: invalid field <span class="sb">`</span>itemD<span class="sb">`</span>, expected one of: <span class="s1">&#39;itemC&#39;</span>
-INFO <span class="o">[</span>job record.cwl<span class="o">]</span> /tmp/lqw7xwed$ <span class="nb">echo</span> <span class="se">\</span>
+<span class="hll">record-job2.yml:6:3: Warning: invalid field <span class="sb">`</span>itemD<span class="sb">`</span>, expected one of: <span class="s1">&#39;itemC&#39;</span>
+</span>INFO <span class="o">[</span>job record.cwl<span class="o">]</span> /tmp/tte4gz90$ <span class="nb">echo</span> <span class="se">\</span>
     -A <span class="se">\</span>
     one <span class="se">\</span>
     -B <span class="se">\</span>
     two <span class="se">\</span>
-    -C <span class="se">\</span>
-    three &gt; /tmp/lqw7xwed/output.txt
-INFO <span class="o">[</span>job record.cwl<span class="o">]</span> completed success
+<span class="hll">    -C <span class="se">\</span>
+</span><span class="hll">    three &gt; /tmp/tte4gz90/output.txt
+</span>INFO <span class="o">[</span>job record.cwl<span class="o">]</span> completed success
 <span class="o">{</span>
     <span class="s2">&quot;example_out&quot;</span>: <span class="o">{</span>
         <span class="s2">&quot;location&quot;</span>: <span class="s2">&quot;file:///home/runner/work/user_guide/user_guide/src/_includes/cwl/inputs/output.txt&quot;</span>,
@@ -715,15 +734,15 @@ INFO <span class="o">[</span>job record.cwl<span class="o">]</span> completed su
         <span class="s2">&quot;path&quot;</span>: <span class="s2">&quot;/home/runner/work/user_guide/user_guide/src/_includes/cwl/inputs/output.txt&quot;</span>
     <span class="o">}</span>
 <span class="o">}</span>
-INFO Final process status is success
-</pre></div>
+<span class="hll">INFO Final process status is success
+</span></pre></div>
 </div>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>cat output.txt
 <span class="go">-A one -B two -C three</span>
 </pre></div>
 </div>
-<p>In the second example, <code class="docutils literal notranslate"><span class="pre">itemC</span></code> and <code class="docutils literal notranslate"><span class="pre">itemD</span></code> are exclusive, so only <code class="docutils literal notranslate"><span class="pre">itemC</span></code>
-is added to the command line and <code class="docutils literal notranslate"><span class="pre">itemD</span></code> is ignored.</p>
+<p>In the second example, <code class="docutils literal notranslate"><span class="pre">itemC</span></code> and <code class="docutils literal notranslate"><span class="pre">itemD</span></code> are exclusive, so only the first
+matching item (<code class="docutils literal notranslate"><span class="pre">itemC</span></code>) is added to the command line and remaining item (<code class="docutils literal notranslate"><span class="pre">itemD</span></code>) is ignored.</p>
 <div class="literal-block-wrapper docutils container" id="record-job3-yml">
 <div class="code-block-caption"><span class="caption-text"><code class="docutils literal notranslate"><span class="pre">record-job3.yml</span></code></span><a class="headerlink" href="#record-job3-yml" title="Permalink to this code">#</a></div>
 <div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">dependent_parameters</span><span class="p">:</span><span class="w"></span>
@@ -737,14 +756,14 @@ is added to the command line and <code class="docutils literal notranslate"><spa
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ cwltool record.cwl record-job3.yml
 INFO /opt/hostedtoolcache/Python/3.9.14/x64/bin/cwltool <span class="m">3</span>.1.20221008225030
 INFO Resolved <span class="s1">&#39;record.cwl&#39;</span> to <span class="s1">&#39;file:///home/runner/work/user_guide/user_guide/src/_includes/cwl/inputs/record.cwl&#39;</span>
-INFO <span class="o">[</span>job record.cwl<span class="o">]</span> /tmp/2i8zs6sn$ <span class="nb">echo</span> <span class="se">\</span>
+INFO <span class="o">[</span>job record.cwl<span class="o">]</span> /tmp/cc65s6l9$ <span class="nb">echo</span> <span class="se">\</span>
     -A <span class="se">\</span>
     one <span class="se">\</span>
     -B <span class="se">\</span>
     two <span class="se">\</span>
-    -D <span class="se">\</span>
-    four &gt; /tmp/2i8zs6sn/output.txt
-INFO <span class="o">[</span>job record.cwl<span class="o">]</span> completed success
+<span class="hll">    -D <span class="se">\</span>
+</span><span class="hll">    four &gt; /tmp/cc65s6l9/output.txt
+</span>INFO <span class="o">[</span>job record.cwl<span class="o">]</span> completed success
 <span class="o">{</span>
     <span class="s2">&quot;example_out&quot;</span>: <span class="o">{</span>
         <span class="s2">&quot;location&quot;</span>: <span class="s2">&quot;file:///home/runner/work/user_guide/user_guide/src/_includes/cwl/inputs/output.txt&quot;</span>,
@@ -755,8 +774,8 @@ INFO <span class="o">[</span>job record.cwl<span class="o">]</span> completed su
         <span class="s2">&quot;path&quot;</span>: <span class="s2">&quot;/home/runner/work/user_guide/user_guide/src/_includes/cwl/inputs/output.txt&quot;</span>
     <span class="o">}</span>
 <span class="o">}</span>
-INFO Final process status is success
-</pre></div>
+<span class="hll">INFO Final process status is success
+</span></pre></div>
 </div>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>cat output.txt
 <span class="go">-A one -B two -D four</span>
@@ -764,6 +783,84 @@ INFO Final process status is success
 </div>
 <p>In the third example, only <code class="docutils literal notranslate"><span class="pre">itemD</span></code> is provided, so it appears on the
 command line.</p>
+<section id="exclusive-input-parameters-with-expressions">
+<h3><span class="section-number">2.4.3.1. </span>Exclusive Input Parameters with Expressions<a class="headerlink" href="#exclusive-input-parameters-with-expressions" title="Permalink to this heading">#</a></h3>
+<p>If you use exclusive input parameters combined with expressions, you need to be
+aware that the <code class="docutils literal notranslate"><span class="pre">inputs</span></code> JavaScript object will contain one of the exclusive
+input values. This means that you might need to use an <strong>or</strong> boolean operator
+to check which values are present.</p>
+<p>Let’s use an example that contains an exclusive <code class="docutils literal notranslate"><span class="pre">file_format</span></code> input parameter
+that accepts <code class="docutils literal notranslate"><span class="pre">null</span></code> (i.e. no value provided), or any value from an enum.</p>
+<div class="literal-block-wrapper docutils container" id="exclusive-parameter-expressions-cwl">
+<div class="code-block-caption"><span class="caption-text"><code class="docutils literal notranslate"><span class="pre">exclusive-parameter-expressions.cwl</span></code></span><a class="headerlink" href="#exclusive-parameter-expressions-cwl" title="Permalink to this code">#</a></div>
+<div class="highlight-cwl notranslate"><div class="highlight"><pre><span></span><span class="nt">cwlVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">v1.2</span><span class="w"></span>
+<span class="nt">class</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">CommandLineTool</span><span class="w"></span>
+
+<span class="nt">inputs</span><span class="p">:</span><span class="w"></span>
+<span class="w">  </span><span class="nt">file_format</span><span class="p">:</span><span class="w"></span>
+<span class="w">    </span><span class="nt">type</span><span class="p">:</span><span class="w"></span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&#39;null&#39;</span><span class="w"></span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">format_choices</span><span class="w"></span>
+<span class="w">        </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">enum</span><span class="w"></span>
+<span class="w">        </span><span class="nt">symbols</span><span class="p">:</span><span class="w"></span>
+<span class="w">          </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">auto</span><span class="w"></span>
+<span class="w">          </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">fasta</span><span class="w"></span>
+<span class="w">          </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">fastq</span><span class="w"></span>
+<span class="w">          </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">fasta.gz</span><span class="w"></span>
+<span class="w">          </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">fastq.gz</span><span class="w"></span>
+<span class="w">        </span><span class="nt">inputBinding</span><span class="p">:</span><span class="w"></span>
+<span class="w">          </span><span class="nt">position</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0</span><span class="w"></span>
+<span class="w">          </span><span class="nt">prefix</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;--format&#39;</span><span class="w"></span>
+<span class="nt">outputs</span><span class="p">:</span><span class="w"></span>
+<span class="w">  </span><span class="nt">text_output</span><span class="p">:</span><span class="w"></span>
+<span class="w">    </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">string</span><span class="w"></span>
+<span class="w">    </span><span class="nt">outputBinding</span><span class="p">:</span><span class="w"></span>
+<span class="w">      </span><span class="nt">outputEval</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">$(inputs.file_format)</span><span class="w"></span>
+
+<span class="nt">baseCommand</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;true&#39;</span><span class="w"></span>
+</pre></div>
+</div>
+</div>
+<p>Note how the JavaScript expression uses the value of the exclusive input parameter
+without taking into consideration a <code class="docutils literal notranslate"><span class="pre">null</span></code> value. If you provide a valid value,
+such as “fasta” (one of the values of the enum), your command should execute
+successfully:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ cwltool exclusive-parameter-expressions.cwl --file_format fasta
+INFO /opt/hostedtoolcache/Python/3.9.14/x64/bin/cwltool <span class="m">3</span>.1.20221008225030
+INFO Resolved <span class="s1">&#39;exclusive-parameter-expressions.cwl&#39;</span> to <span class="s1">&#39;file:///home/runner/work/user_guide/user_guide/src/_includes/cwl/inputs/exclusive-parameter-expressions.cwl&#39;</span>
+INFO <span class="o">[</span>job exclusive-parameter-expressions.cwl<span class="o">]</span> /tmp/fa96oe7k$ <span class="nb">true</span> <span class="se">\</span>
+    --format <span class="se">\</span>
+    fasta
+INFO <span class="o">[</span>job exclusive-parameter-expressions.cwl<span class="o">]</span> completed success
+<span class="o">{</span>
+    <span class="s2">&quot;text_output&quot;</span>: <span class="s2">&quot;fasta&quot;</span>
+<span class="o">}</span>
+INFO Final process status is success
+</pre></div>
+</div>
+<p>However, if you do not provide any input value, then <code class="docutils literal notranslate"><span class="pre">file_format</span></code> will be
+evaluated to a <code class="docutils literal notranslate"><span class="pre">null</span></code> value, which does not match the expected type for the
+output field (a <code class="docutils literal notranslate"><span class="pre">string</span></code>), resulting in failure when running your workflow.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ cwltool exclusive-parameter-expressions.cwl
+INFO /opt/hostedtoolcache/Python/3.9.14/x64/bin/cwltool <span class="m">3</span>.1.20221008225030
+INFO Resolved <span class="s1">&#39;exclusive-parameter-expressions.cwl&#39;</span> to <span class="s1">&#39;file:///home/runner/work/user_guide/user_guide/src/_includes/cwl/inputs/exclusive-parameter-expressions.cwl&#39;</span>
+INFO <span class="o">[</span>job exclusive-parameter-expressions.cwl<span class="o">]</span> /tmp/i8wmrdbp$ <span class="nb">true</span>
+<span class="hll">ERROR <span class="o">[</span>job exclusive-parameter-expressions.cwl<span class="o">]</span> Job error:
+</span><span class="hll">Error validating output record. the <span class="sb">`</span>text_output<span class="sb">`</span> field is not valid because
+</span><span class="hll">  the value is not string
+</span><span class="hll"> <span class="k">in</span> <span class="o">{</span>
+</span><span class="hll">    <span class="s2">&quot;text_output&quot;</span>: null
+</span><span class="hll"><span class="o">}</span>
+</span>WARNING <span class="o">[</span>job exclusive-parameter-expressions.cwl<span class="o">]</span> completed permanentFail
+<span class="o">{}</span>
+WARNING Final process status is permanentFail
+</pre></div>
+</div>
+<p>To correct it, you must remember to use an or operator in your JavaScript expression
+when using exclusive parameters, or any parameter that allows <code class="docutils literal notranslate"><span class="pre">null</span></code>. For example,
+the expression could be changed to <code class="docutils literal notranslate"><span class="pre">$(inputs.file_format</span> <span class="pre">||</span> <span class="pre">'auto')</span></code>, to have
+a default value if none was provided in the command line or job input file.</p>
+</section>
 </section>
 </section>
 
@@ -816,9 +913,16 @@ command line.</p>
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#advanced-inputs">
-   2.4.3. Advanced Inputs
+  <a class="reference internal nav-link" href="#inclusive-and-exclusive-inputs">
+   2.4.3. Inclusive and Exclusive Inputs
   </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#exclusive-input-parameters-with-expressions">
+     2.4.3.1. Exclusive Input Parameters with Expressions
+    </a>
+   </li>
+  </ul>
  </li>
 </ul>
 
@@ -884,7 +988,7 @@ command line.</p>
           <a class="nav-link" href="https://github.com/common-workflow-language/user_guide/">Source</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="https://github.com/common-workflow-language/user_guide/blob/main/CITATION">Cite</a>
+          <a class="nav-link" href="https://github.com/common-workflow-language/user_guide/blob/main/CITATION.md">Cite</a>
         </li>
       </ul>
     </div>

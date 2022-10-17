@@ -328,6 +328,7 @@
 <li class="toctree-l2"><a class="reference internal" href="file-formats.html">2.17. File Formats</a></li>
 <li class="toctree-l2"><a class="reference internal" href="metadata-and-authorship.html">2.18. Metadata and Authorship</a></li>
 <li class="toctree-l2"><a class="reference internal" href="specifying-software-requirements.html">2.19. Specifying Software Requirements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="troubleshooting.html">2.20. Troubleshooting</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../tutorials.html">3. Tutorials</a></li>
@@ -419,10 +420,10 @@ any subsequent elements are mandatory command line arguments</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ cwltool tar.cwl tar-job.yml
 INFO /opt/hostedtoolcache/Python/3.9.14/x64/bin/cwltool <span class="m">3</span>.1.20221008225030
 INFO Resolved <span class="s1">&#39;tar.cwl&#39;</span> to <span class="s1">&#39;file:///home/runner/work/user_guide/user_guide/src/_includes/cwl/outputs/tar.cwl&#39;</span>
-INFO <span class="o">[</span>job tar.cwl<span class="o">]</span> /tmp/j6fpvdiv$ tar <span class="se">\</span>
+INFO <span class="o">[</span>job tar.cwl<span class="o">]</span> /tmp/1f_d0g_i$ tar <span class="se">\</span>
     --extract <span class="se">\</span>
     --file <span class="se">\</span>
-    /tmp/whn54v2a/stgd890f1c1-aa03-4023-aa73-2db8727fb80d/hello.tar
+    /tmp/h21cp9x1/stgc5f383fe-9205-4923-8830-bd889ea03949/hello.tar
 INFO <span class="o">[</span>job tar.cwl<span class="o">]</span> completed success
 <span class="o">{</span>
     <span class="s2">&quot;example_out&quot;</span>: <span class="o">{</span>
@@ -483,8 +484,8 @@ on the command line:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ cwltool stdout.cwl echo-job.yml
 INFO /opt/hostedtoolcache/Python/3.9.14/x64/bin/cwltool <span class="m">3</span>.1.20221008225030
 INFO Resolved <span class="s1">&#39;stdout.cwl&#39;</span> to <span class="s1">&#39;file:///home/runner/work/user_guide/user_guide/src/_includes/cwl/outputs/stdout.cwl&#39;</span>
-INFO <span class="o">[</span>job stdout.cwl<span class="o">]</span> /tmp/p9_629s3$ <span class="nb">echo</span> <span class="se">\</span>
-    <span class="s1">&#39;Hello world!&#39;</span> &gt; /tmp/p9_629s3/output.txt
+INFO <span class="o">[</span>job stdout.cwl<span class="o">]</span> /tmp/kx8258h2$ <span class="nb">echo</span> <span class="se">\</span>
+    <span class="s1">&#39;Hello world!&#39;</span> &gt; /tmp/kx8258h2/output.txt
 INFO <span class="o">[</span>job stdout.cwl<span class="o">]</span> completed success
 <span class="o">{</span>
     <span class="s2">&quot;example_out&quot;</span>: <span class="o">{</span>
@@ -541,7 +542,7 @@ on the command line:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ cwltool array-outputs.cwl array-outputs-job.yml
 INFO /opt/hostedtoolcache/Python/3.9.14/x64/bin/cwltool <span class="m">3</span>.1.20221008225030
 INFO Resolved <span class="s1">&#39;array-outputs.cwl&#39;</span> to <span class="s1">&#39;file:///home/runner/work/user_guide/user_guide/src/_includes/cwl/outputs/array-outputs.cwl&#39;</span>
-INFO <span class="o">[</span>job array-outputs.cwl<span class="o">]</span> /tmp/xrlc342g$ touch <span class="se">\</span>
+INFO <span class="o">[</span>job array-outputs.cwl<span class="o">]</span> /tmp/u9c2hxmr$ touch <span class="se">\</span>
     foo.txt <span class="se">\</span>
     bar.dat <span class="se">\</span>
     baz.txt
@@ -693,7 +694,7 @@ to mark entries in arrays, as demonstrated in several of the upcoming sections.<
           <a class="nav-link" href="https://github.com/common-workflow-language/user_guide/">Source</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="https://github.com/common-workflow-language/user_guide/blob/main/CITATION">Cite</a>
+          <a class="nav-link" href="https://github.com/common-workflow-language/user_guide/blob/main/CITATION.md">Cite</a>
         </li>
       </ul>
     </div>

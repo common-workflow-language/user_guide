@@ -347,7 +347,7 @@
               
   <section id="quick-start">
 <h1><span class="section-number">1.1. </span>Quick Start<a class="headerlink" href="#quick-start" title="Permalink to this heading">#</a></h1>
-<p>This section will show you a brief overview of what is CWL and where you
+<p>This section will show you a brief overview of what CWL is, and where you
 can learn more about it. No previous knowledge of CWL is required, but you
 must be comfortable following instructions for the command-line.</p>
 <section id="hello-world">
@@ -381,20 +381,20 @@ with comments:</p>
 </div>
 </div>
 <p>The example above is just a wrapper for the <code class="docutils literal notranslate"><span class="pre">echo</span></code> command-line tool.
-Running the workflow above with the default input values, produces the
+Running the workflow above with the default input values will produce the same result as the
 command-line <code class="docutils literal notranslate"><span class="pre">echo</span> <span class="pre">&quot;Hello</span> <span class="pre">World&quot;</span></code>.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>There is a distinction in CWL between a command-line tool and a workflow. But
-for the sake of simplicity we are using the term “workflow” here. You will learn
+<p>In CWL, there is a distinction between a command-line tool and a workflow. But
+for the sake of simplicity, we are using the term “workflow” here. You will learn
 more about this in the <a class="reference internal" href="basic-concepts.html"><span class="doc std std-doc">basic concepts</span></a> section.</p>
 </div>
 </section>
 <section id="installing-a-cwl-runner">
 <h2><span class="section-number">1.1.2. </span>Installing a CWL runner<a class="headerlink" href="#installing-a-cwl-runner" title="Permalink to this heading">#</a></h2>
 <p><code class="docutils literal notranslate"><span class="pre">cwltool</span></code> is an implementation of the CWL specification. It is also the
-CWL <em>Reference Runner</em> for the specification, and compliant with the
-latest version of the specification, <code class="docutils literal notranslate"><span class="pre">v1.2</span></code>. You can install
+CWL <em>Reference Runner</em> for the specification, and it is compliant with the
+latest version of the specification: <code class="docutils literal notranslate"><span class="pre">v1.2</span></code>. You can install
 <code class="docutils literal notranslate"><span class="pre">cwltool</span></code> using <code class="docutils literal notranslate"><span class="pre">pip</span></code>:</p>
 <div class="literal-block-wrapper docutils container" id="installing-cwltool-with-pip">
 <div class="code-block-caption"><span class="caption-text">Installing <code class="docutils literal notranslate"><span class="pre">cwltool</span></code> with <code class="docutils literal notranslate"><span class="pre">pip</span></code>.</span><a class="headerlink" href="#installing-cwltool-with-pip" title="Permalink to this code">#</a></div>
@@ -404,9 +404,8 @@ latest version of the specification, <code class="docutils literal notranslate">
 </div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>The <a class="reference internal" href="prerequisites.html"><span class="doc std std-doc">prerequisites</span></a> section contains a more detailed list
-of software and libraries used for following the rest of this user guide.
-It also contains other ways to install <code class="docutils literal notranslate"><span class="pre">cwltool</span></code>.</p>
+<p>If installing the cwltool using the pip command doesn’t work for you, the <a class="reference internal" href="prerequisites.html"><span class="doc std std-doc">prerequisites</span></a> section contains other ways to install <code class="docutils literal notranslate"><span class="pre">cwltool</span></code> and a more detailed list
+of software and libraries used for following the rest of this user guide.</p>
 </div>
 </section>
 <section id="running-hello-world">
@@ -419,7 +418,7 @@ It also contains other ways to install <code class="docutils literal notranslate
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ cwltool hello_world.cwl
 INFO /opt/hostedtoolcache/Python/3.9.14/x64/bin/cwltool <span class="m">3</span>.1.20221008225030
 INFO Resolved <span class="s1">&#39;hello_world.cwl&#39;</span> to <span class="s1">&#39;file:///home/runner/work/user_guide/user_guide/src/_includes/cwl/hello_world.cwl&#39;</span>
-INFO <span class="o">[</span>job hello_world.cwl<span class="o">]</span> /tmp/yblttylv$ <span class="nb">echo</span> <span class="se">\</span>
+INFO <span class="o">[</span>job hello_world.cwl<span class="o">]</span> /tmp/6vdqgqfx$ <span class="nb">echo</span> <span class="se">\</span>
     <span class="s1">&#39;Hello World&#39;</span>
 Hello World
 INFO <span class="o">[</span>job hello_world.cwl<span class="o">]</span> completed success
@@ -435,7 +434,7 @@ to how you would change the argument of the <code class="docutils literal notran
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ cwltool hello_world.cwl --message<span class="o">=</span><span class="s2">&quot;Hola mundo&quot;</span>
 INFO /opt/hostedtoolcache/Python/3.9.14/x64/bin/cwltool <span class="m">3</span>.1.20221008225030
 INFO Resolved <span class="s1">&#39;hello_world.cwl&#39;</span> to <span class="s1">&#39;file:///home/runner/work/user_guide/user_guide/src/_includes/cwl/hello_world.cwl&#39;</span>
-INFO <span class="o">[</span>job hello_world.cwl<span class="o">]</span> /tmp/dqeyzm2t$ <span class="nb">echo</span> <span class="se">\</span>
+INFO <span class="o">[</span>job hello_world.cwl<span class="o">]</span> /tmp/edc3wd82$ <span class="nb">echo</span> <span class="se">\</span>
     <span class="s1">&#39;Hola mundo&#39;</span>
 Hola mundo
 INFO <span class="o">[</span>job hello_world.cwl<span class="o">]</span> completed success
@@ -445,8 +444,8 @@ INFO Final process status is success
 </div>
 </div>
 <p>Another way of passing values to your workflow input parameters is via an
-<em>Inputs Object</em>. This is a file containing the input fields with the
-corresponding values. This file can be written in JSON or YAML. For example:</p>
+<em>Inputs Object</em>. This is a file containing the input fields with their
+corresponding values. The Inputs Objects file can be written in JSON or YAML. For example:</p>
 <div class="literal-block-wrapper docutils container" id="hello-world-job-json">
 <div class="code-block-caption"><span class="caption-text"><code class="docutils literal notranslate"><span class="pre">hello_world-job.json</span></code></span><a class="headerlink" href="#hello-world-job-json" title="Permalink to this code">#</a></div>
 <div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="w"></span>
@@ -461,7 +460,7 @@ corresponding values. This file can be written in JSON or YAML. For example:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ cwltool hello_world.cwl hello_world-job.json
 INFO /opt/hostedtoolcache/Python/3.9.14/x64/bin/cwltool <span class="m">3</span>.1.20221008225030
 INFO Resolved <span class="s1">&#39;hello_world.cwl&#39;</span> to <span class="s1">&#39;file:///home/runner/work/user_guide/user_guide/src/_includes/cwl/hello_world.cwl&#39;</span>
-INFO <span class="o">[</span>job hello_world.cwl<span class="o">]</span> /tmp/v_z9ts0e$ <span class="nb">echo</span> <span class="se">\</span>
+INFO <span class="o">[</span>job hello_world.cwl<span class="o">]</span> /tmp/5imb91j8$ <span class="nb">echo</span> <span class="se">\</span>
     こんにちは世界
 こんにちは世界
 INFO <span class="o">[</span>job hello_world.cwl<span class="o">]</span> completed success
@@ -472,22 +471,22 @@ INFO Final process status is success
 </div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>We used a similar file name for the workflow and for the inputs object files.
+<p>We used a similar file name for the workflow and for the Inputs Object files.
 The <em>-job.json</em> suffix is very common in Inputs Object files, but it is not
-a requirement. You can choose any name for your workflows and inputs object
+a requirement. You can choose any name for your workflows and Inputs Object
 files.</p>
 </div>
 </section>
 <section id="learn-more">
 <h2><span class="section-number">1.1.4. </span>Learn more<a class="headerlink" href="#learn-more" title="Permalink to this heading">#</a></h2>
+<p>Continue reading the next sections of this User Guide!</p>
 <ul class="simple">
-<li><p>Continue reading the next sections of this User Guide!</p></li>
-<li><p>List of CWL Implementations: <a class="reference external" href="https://www.commonwl.org/implementations/">https://www.commonwl.org/implementations/</a></p></li>
-<li><p>The <code class="docutils literal notranslate"><span class="pre">common-workflow-language</span></code> organization at GitHub: <a class="github reference external" href="https://github.com/common-workflow-language">common-workflow-language</a></p></li>
-<li><p>Common Workflow Language at Wikipedia: <a class="reference external" href="https://en.wikipedia.org/wiki/Common_Workflow_Language">https://en.wikipedia.org/wiki/Common_Workflow_Language</a></p></li>
-<li><p>YAML.org: <a class="reference external" href="http://yaml.org/">http://yaml.org/</a> and YAML at Wikipedia: <a class="reference external" href="https://en.wikipedia.org/wiki/YAML">https://en.wikipedia.org/wiki/YAML</a></p></li>
-<li><p>The CWL <code class="docutils literal notranslate"><span class="pre">v1.2</span></code> Specification: <a class="reference external" href="https://www.commonwl.org/v1.2/">https://www.commonwl.org/v1.2/</a></p></li>
-<li><p>Workflow management system at Wikipedia: <a class="reference external" href="https://en.wikipedia.org/wiki/Workflow_management_system">https://en.wikipedia.org/wiki/Workflow_management_system</a></p></li>
+<li><p><a class="reference external" href="https://www.commonwl.org/implementations">List of CWL Implementations</a>.</p></li>
+<li><p>The <a class="reference external" href="https://github.com/common-workflow-language"><code class="docutils literal notranslate"><span class="pre">common-workflow-language</span></code> organization</a> at GitHub.</p></li>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Common_Workflow_Language">Common Workflow Language at Wikipedia</a>.</p></li>
+<li><p><a class="reference external" href="http://yaml.org/">YAML.org</a> and <a class="reference external" href="https://en.wikipedia.org/wiki/YAML">YAML at Wikipedia</a>.</p></li>
+<li><p>The <a class="reference external" href="https://www.commonwl.org/v1.2">CWL Specification v1.2</a>.</p></li>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Workflow_management_system">Workflow management system at Wikipedia</a>.</p></li>
 </ul>
 </section>
 </section>
@@ -614,7 +613,7 @@ files.</p>
           <a class="nav-link" href="https://github.com/common-workflow-language/user_guide/">Source</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="https://github.com/common-workflow-language/user_guide/blob/main/CITATION">Cite</a>
+          <a class="nav-link" href="https://github.com/common-workflow-language/user_guide/blob/main/CITATION.md">Cite</a>
         </li>
       </ul>
     </div>

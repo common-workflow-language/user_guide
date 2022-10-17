@@ -328,6 +328,7 @@
 <li class="toctree-l2"><a class="reference internal" href="file-formats.html">2.17. File Formats</a></li>
 <li class="toctree-l2"><a class="reference internal" href="metadata-and-authorship.html">2.18. Metadata and Authorship</a></li>
 <li class="toctree-l2"><a class="reference internal" href="specifying-software-requirements.html">2.19. Specifying Software Requirements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="troubleshooting.html">2.20. Troubleshooting</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../tutorials.html">3. Tutorials</a></li>
@@ -564,33 +565,33 @@ INFO Resolved <span class="s1">&#39;1st-workflow.cwl&#39;</span> to <span class=
 INFO <span class="o">[</span>workflow <span class="o">]</span> start
 INFO <span class="o">[</span>workflow <span class="o">]</span> starting step untar
 INFO <span class="o">[</span>step untar<span class="o">]</span> start
-INFO <span class="o">[</span>job untar<span class="o">]</span> /tmp/tf0opehh$ tar <span class="se">\</span>
+INFO <span class="o">[</span>job untar<span class="o">]</span> /tmp/aap05mye$ tar <span class="se">\</span>
     --extract <span class="se">\</span>
     --file <span class="se">\</span>
-    /tmp/ccwbvf2g/stg5c3015cf-fad7-4012-a51c-ff3eaf8fdfd1/hello.tar <span class="se">\</span>
+    /tmp/64g_tnlm/stgf96a9316-a0cc-44e1-86ee-ddb33f7b0a95/hello.tar <span class="se">\</span>
     Hello.java
 INFO <span class="o">[</span>job untar<span class="o">]</span> completed success
 INFO <span class="o">[</span>step untar<span class="o">]</span> completed success
 INFO <span class="o">[</span>workflow <span class="o">]</span> starting step compile
 INFO <span class="o">[</span>step compile<span class="o">]</span> start
-INFO <span class="o">[</span>job compile<span class="o">]</span> /tmp/lzero_64$ docker <span class="se">\</span>
+INFO <span class="o">[</span>job compile<span class="o">]</span> /tmp/668wkau6$ docker <span class="se">\</span>
     run <span class="se">\</span>
     -i <span class="se">\</span>
-    --mount<span class="o">=</span><span class="nv">type</span><span class="o">=</span>bind,source<span class="o">=</span>/tmp/lzero_64,target<span class="o">=</span>/cNeQet <span class="se">\</span>
-    --mount<span class="o">=</span><span class="nv">type</span><span class="o">=</span>bind,source<span class="o">=</span>/tmp/_zzap50e,target<span class="o">=</span>/tmp <span class="se">\</span>
-    --mount<span class="o">=</span><span class="nv">type</span><span class="o">=</span>bind,source<span class="o">=</span>/tmp/tf0opehh/Hello.java,target<span class="o">=</span>/var/lib/cwl/stgf4382eeb-71df-4b90-87c9-650c5d73eef5/Hello.java,readonly <span class="se">\</span>
-    --workdir<span class="o">=</span>/cNeQet <span class="se">\</span>
+    --mount<span class="o">=</span><span class="nv">type</span><span class="o">=</span>bind,source<span class="o">=</span>/tmp/668wkau6,target<span class="o">=</span>/gbAhMY <span class="se">\</span>
+    --mount<span class="o">=</span><span class="nv">type</span><span class="o">=</span>bind,source<span class="o">=</span>/tmp/2hv6idr8,target<span class="o">=</span>/tmp <span class="se">\</span>
+    --mount<span class="o">=</span><span class="nv">type</span><span class="o">=</span>bind,source<span class="o">=</span>/tmp/aap05mye/Hello.java,target<span class="o">=</span>/var/lib/cwl/stgeb797eb9-156a-46c5-878c-b9b13e88890e/Hello.java,readonly <span class="se">\</span>
+    --workdir<span class="o">=</span>/gbAhMY <span class="se">\</span>
     --read-only<span class="o">=</span><span class="nb">true</span> <span class="se">\</span>
     --user<span class="o">=</span><span class="m">1001</span>:121 <span class="se">\</span>
     --rm <span class="se">\</span>
-    --cidfile<span class="o">=</span>/tmp/vb1u_sqa/20221010084828-131358.cid <span class="se">\</span>
+    --cidfile<span class="o">=</span>/tmp/je_nhd4l/20221017164354-665932.cid <span class="se">\</span>
     --env<span class="o">=</span><span class="nv">TMPDIR</span><span class="o">=</span>/tmp <span class="se">\</span>
-    --env<span class="o">=</span><span class="nv">HOME</span><span class="o">=</span>/cNeQet <span class="se">\</span>
+    --env<span class="o">=</span><span class="nv">HOME</span><span class="o">=</span>/gbAhMY <span class="se">\</span>
     openjdk:9.0.1-11-slim <span class="se">\</span>
     javac <span class="se">\</span>
     -d <span class="se">\</span>
-    /cNeQet <span class="se">\</span>
-    /var/lib/cwl/stgf4382eeb-71df-4b90-87c9-650c5d73eef5/Hello.java
+    /gbAhMY <span class="se">\</span>
+    /var/lib/cwl/stgeb797eb9-156a-46c5-878c-b9b13e88890e/Hello.java
 INFO <span class="o">[</span>job compile<span class="o">]</span> Max memory used: 0MiB
 INFO <span class="o">[</span>job compile<span class="o">]</span> completed success
 INFO <span class="o">[</span>step compile<span class="o">]</span> completed success
@@ -901,20 +902,20 @@ INFO Resolved <span class="s1">&#39;scatter-workflow.cwl&#39;</span> to <span cl
 INFO <span class="o">[</span>workflow <span class="o">]</span> start
 INFO <span class="o">[</span>workflow <span class="o">]</span> starting step <span class="nb">echo</span>
 INFO <span class="o">[</span>step echo<span class="o">]</span> start
-INFO <span class="o">[</span>job echo<span class="o">]</span> /tmp/abij0697$ <span class="nb">echo</span> <span class="se">\</span>
-    <span class="s1">&#39;Hello world!&#39;</span> &gt; /tmp/abij0697/3f8f180805bc1795e077d75bc6dbec026a376483
+INFO <span class="o">[</span>job echo<span class="o">]</span> /tmp/jmadxboa$ <span class="nb">echo</span> <span class="se">\</span>
+    <span class="s1">&#39;Hello world!&#39;</span> &gt; /tmp/jmadxboa/3f8f180805bc1795e077d75bc6dbec026a376483
 INFO <span class="o">[</span>job echo<span class="o">]</span> completed success
 INFO <span class="o">[</span>step echo<span class="o">]</span> start
-INFO <span class="o">[</span>job echo_2<span class="o">]</span> /tmp/e1s3c6s9$ <span class="nb">echo</span> <span class="se">\</span>
-    <span class="s1">&#39;Hola mundo!&#39;</span> &gt; /tmp/e1s3c6s9/3f8f180805bc1795e077d75bc6dbec026a376483
+INFO <span class="o">[</span>job echo_2<span class="o">]</span> /tmp/k77w5x6o$ <span class="nb">echo</span> <span class="se">\</span>
+    <span class="s1">&#39;Hola mundo!&#39;</span> &gt; /tmp/k77w5x6o/3f8f180805bc1795e077d75bc6dbec026a376483
 INFO <span class="o">[</span>job echo_2<span class="o">]</span> completed success
 INFO <span class="o">[</span>step echo<span class="o">]</span> start
-INFO <span class="o">[</span>job echo_3<span class="o">]</span> /tmp/3pswkzla$ <span class="nb">echo</span> <span class="se">\</span>
-    <span class="s1">&#39;Bonjour le monde!&#39;</span> &gt; /tmp/3pswkzla/3f8f180805bc1795e077d75bc6dbec026a376483
+INFO <span class="o">[</span>job echo_3<span class="o">]</span> /tmp/lgtpkhr8$ <span class="nb">echo</span> <span class="se">\</span>
+    <span class="s1">&#39;Bonjour le monde!&#39;</span> &gt; /tmp/lgtpkhr8/3f8f180805bc1795e077d75bc6dbec026a376483
 INFO <span class="o">[</span>job echo_3<span class="o">]</span> completed success
 INFO <span class="o">[</span>step echo<span class="o">]</span> start
-INFO <span class="o">[</span>job echo_4<span class="o">]</span> /tmp/d208dvdf$ <span class="nb">echo</span> <span class="se">\</span>
-    <span class="s1">&#39;Hallo welt!&#39;</span> &gt; /tmp/d208dvdf/3f8f180805bc1795e077d75bc6dbec026a376483
+INFO <span class="o">[</span>job echo_4<span class="o">]</span> /tmp/23qv898l$ <span class="nb">echo</span> <span class="se">\</span>
+    <span class="s1">&#39;Hallo welt!&#39;</span> &gt; /tmp/23qv898l/3f8f180805bc1795e077d75bc6dbec026a376483
 INFO <span class="o">[</span>job echo_4<span class="o">]</span> completed success
 INFO <span class="o">[</span>step echo<span class="o">]</span> completed success
 INFO <span class="o">[</span>workflow <span class="o">]</span> completed success
@@ -1278,7 +1279,7 @@ This allows workflows to skip additional steps based on input parameters given a
           <a class="nav-link" href="https://github.com/common-workflow-language/user_guide/">Source</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="https://github.com/common-workflow-language/user_guide/blob/main/CITATION">Cite</a>
+          <a class="nav-link" href="https://github.com/common-workflow-language/user_guide/blob/main/CITATION.md">Cite</a>
         </li>
       </ul>
     </div>

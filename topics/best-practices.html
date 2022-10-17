@@ -328,6 +328,7 @@
 <li class="toctree-l2"><a class="reference internal" href="file-formats.html">2.17. File Formats</a></li>
 <li class="toctree-l2"><a class="reference internal" href="metadata-and-authorship.html">2.18. Metadata and Authorship</a></li>
 <li class="toctree-l2"><a class="reference internal" href="specifying-software-requirements.html">2.19. Specifying Software Requirements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="troubleshooting.html">2.20. Troubleshooting</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../tutorials.html">3. Tutorials</a></li>
@@ -370,13 +371,20 @@ all are required.</p>
 <ul>
 <li><p>No <code class="docutils literal notranslate"><span class="pre">type:</span> <span class="pre">string</span></code> parameters for names of input or reference
 files/directories; use <code class="docutils literal notranslate"><span class="pre">type:</span> <span class="pre">File</span></code> or <code class="docutils literal notranslate"><span class="pre">type:</span> <span class="pre">Directory</span></code> as appropriate.</p></li>
-<li><p>Include a license that allows for re-use by anyone, e.g.
-<a class="reference external" href="https://spdx.org/licenses/Apache-2.0.html">Apache 2.0</a>. If possible, the license should be specified with
-its corresponding <a class="reference external" href="https://spdx.org/licenses/">SPDX identifier</a>. Construct the metadata field for the
-licence by providing a URL of the form <code class="docutils literal notranslate"><span class="pre">https://spdx.org/licenses/[SPDX-ID]</span></code>
-where <code class="docutils literal notranslate"><span class="pre">SPDX-ID</span></code> is the taken from the list of identifiers linked above. See the
-example snippet below for guidance. For non-standard licenses without an SPDX
+<li><p>A CWL document (in conjunction with any external components like <code class="docutils literal notranslate"><span class="pre">Dockerfile</span></code>s) is software code.
+Workflow developers should be aware that the usual rules of software licensing apply to this
+document. For example if the workflow is shared publicly, licensing terms have to be clear so that
+a future user can understand under what conditions they can run the workflow, modify it and/or
+combine it with other workflows. For this reason please consider including a license field in the
+document. The authors of this guide urge you to choose a pre-existing license rather than trying
+to write your own (see the link below to learn more about choosing a license), and our recommended
+practice is to choose a license that allows for re-use by anyone, e.g. <a class="reference external" href="https://spdx.org/licenses/Apache-2.0.html">Apache 2.0</a>.</p>
+<p>If possible, the license should be specified with its corresponding <a class="reference external" href="https://spdx.org/licenses/">SPDX identifier</a>.
+Construct the metadata field for the licence by providing a URL of the form
+<code class="docutils literal notranslate"><span class="pre">https://spdx.org/licenses/[SPDX-ID]</span></code> where <code class="docutils literal notranslate"><span class="pre">SPDX-ID</span></code> is taken from the list of identifiers
+linked above. See the example snippet below for guidance. For non-standard licenses without an SPDX
 identifier, provide a URL to the license.</p>
+<p>Useful reading: “<a class="reference external" href="https://doi.org/10.1371/journal.pcbi.1002598">A Quick Guide to Software Licensing for the Scientist-Programmer</a>”</p>
 <p><em>Example of metadata field for license with SPDX identifier:</em></p>
 <div class="highlight-cwl notranslate"><div class="highlight"><pre><span></span><span class="nt">$namespaces</span><span class="p">:</span><span class="w"></span>
 <span class="w">  </span><span class="nt">s</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://schema.org/</span><span class="w"></span>
@@ -384,8 +392,8 @@ identifier, provide a URL to the license.</p>
 <span class="c1"># other s: declarations</span><span class="w"></span>
 </pre></div>
 </div>
-<p>For more examples of providing metadata within CWL descriptions, see the
-Metadata and Authorship section of this User Guide.</p>
+<p>For more examples of providing metadata within CWL descriptions, see
+<a class="reference internal" href="metadata-and-authorship.html"><span class="doc std std-doc">the Metadata and Authorship section of this User Guide</span></a>.</p>
 </li>
 <li><p>Include <a class="reference external" href="https://github.com/ProteinsWebTeam/ebi-metagenomics-cwl/blob/master/workflows/emg-assembly.cwl#L200">attribution information</a> for the author(s) of
 the CWL tool or workflow description. Use  unambiguous identifiers like
@@ -523,7 +531,7 @@ workflow modular and allow sections of them to be easily reused.</p></li>
           <a class="nav-link" href="https://github.com/common-workflow-language/user_guide/">Source</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="https://github.com/common-workflow-language/user_guide/blob/main/CITATION">Cite</a>
+          <a class="nav-link" href="https://github.com/common-workflow-language/user_guide/blob/main/CITATION.md">Cite</a>
         </li>
       </ul>
     </div>

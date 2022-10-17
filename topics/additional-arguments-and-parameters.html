@@ -328,6 +328,7 @@
 <li class="toctree-l2"><a class="reference internal" href="file-formats.html">2.17. File Formats</a></li>
 <li class="toctree-l2"><a class="reference internal" href="metadata-and-authorship.html">2.18. Metadata and Authorship</a></li>
 <li class="toctree-l2"><a class="reference internal" href="specifying-software-requirements.html">2.19. Specifying Software Requirements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="troubleshooting.html">2.20. Troubleshooting</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../tutorials.html">3. Tutorials</a></li>
@@ -412,24 +413,24 @@ instead.</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ cwltool arguments.cwl arguments-job.yml
 INFO /opt/hostedtoolcache/Python/3.9.14/x64/bin/cwltool <span class="m">3</span>.1.20221008225030
 INFO Resolved <span class="s1">&#39;arguments.cwl&#39;</span> to <span class="s1">&#39;file:///home/runner/work/user_guide/user_guide/src/_includes/cwl/additional-arguments-and-parameters/arguments.cwl&#39;</span>
-INFO <span class="o">[</span>job arguments.cwl<span class="o">]</span> /tmp/hrb__hr5$ docker <span class="se">\</span>
+INFO <span class="o">[</span>job arguments.cwl<span class="o">]</span> /tmp/2dh3f_16$ docker <span class="se">\</span>
     run <span class="se">\</span>
     -i <span class="se">\</span>
-    --mount<span class="o">=</span><span class="nv">type</span><span class="o">=</span>bind,source<span class="o">=</span>/tmp/hrb__hr5,target<span class="o">=</span>/ceStmI <span class="se">\</span>
-    --mount<span class="o">=</span><span class="nv">type</span><span class="o">=</span>bind,source<span class="o">=</span>/tmp/ag3p5knt,target<span class="o">=</span>/tmp <span class="se">\</span>
-    --mount<span class="o">=</span><span class="nv">type</span><span class="o">=</span>bind,source<span class="o">=</span>/home/runner/work/user_guide/user_guide/src/_includes/cwl/additional-arguments-and-parameters/Hello.java,target<span class="o">=</span>/var/lib/cwl/stgd38c5df8-5fa5-48b2-bea7-ff250d1adce4/Hello.java,readonly <span class="se">\</span>
-    --workdir<span class="o">=</span>/ceStmI <span class="se">\</span>
+    --mount<span class="o">=</span><span class="nv">type</span><span class="o">=</span>bind,source<span class="o">=</span>/tmp/2dh3f_16,target<span class="o">=</span>/HomShM <span class="se">\</span>
+    --mount<span class="o">=</span><span class="nv">type</span><span class="o">=</span>bind,source<span class="o">=</span>/tmp/csxhss95,target<span class="o">=</span>/tmp <span class="se">\</span>
+    --mount<span class="o">=</span><span class="nv">type</span><span class="o">=</span>bind,source<span class="o">=</span>/home/runner/work/user_guide/user_guide/src/_includes/cwl/additional-arguments-and-parameters/Hello.java,target<span class="o">=</span>/var/lib/cwl/stg6ad3dc64-e5c9-49d4-bec4-132f9b7cc5c1/Hello.java,readonly <span class="se">\</span>
+    --workdir<span class="o">=</span>/HomShM <span class="se">\</span>
     --read-only<span class="o">=</span><span class="nb">true</span> <span class="se">\</span>
     --user<span class="o">=</span><span class="m">1001</span>:121 <span class="se">\</span>
     --rm <span class="se">\</span>
-    --cidfile<span class="o">=</span>/tmp/w7n1060t/20221010084731-964426.cid <span class="se">\</span>
+    --cidfile<span class="o">=</span>/tmp/k0idpijo/20221017164243-400153.cid <span class="se">\</span>
     --env<span class="o">=</span><span class="nv">TMPDIR</span><span class="o">=</span>/tmp <span class="se">\</span>
-    --env<span class="o">=</span><span class="nv">HOME</span><span class="o">=</span>/ceStmI <span class="se">\</span>
+    --env<span class="o">=</span><span class="nv">HOME</span><span class="o">=</span>/HomShM <span class="se">\</span>
     openjdk:9.0.1-11-slim <span class="se">\</span>
     javac <span class="se">\</span>
     -d <span class="se">\</span>
-    /ceStmI <span class="se">\</span>
-    /var/lib/cwl/stgd38c5df8-5fa5-48b2-bea7-ff250d1adce4/Hello.java
+    /HomShM <span class="se">\</span>
+    /var/lib/cwl/stg6ad3dc64-e5c9-49d4-bec4-132f9b7cc5c1/Hello.java
 INFO <span class="o">[</span>job arguments.cwl<span class="o">]</span> Max memory used: 0MiB
 INFO <span class="o">[</span>job arguments.cwl<span class="o">]</span> completed success
 <span class="o">{</span>
@@ -549,7 +550,7 @@ CWL specification for details.</p>
           <a class="nav-link" href="https://github.com/common-workflow-language/user_guide/">Source</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="https://github.com/common-workflow-language/user_guide/blob/main/CITATION">Cite</a>
+          <a class="nav-link" href="https://github.com/common-workflow-language/user_guide/blob/main/CITATION.md">Cite</a>
         </li>
       </ul>
     </div>
