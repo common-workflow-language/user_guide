@@ -16,7 +16,6 @@ To edit the user guide:
 
 We'd like to ask you to familiarize yourself with our [Contribution Guide](CONTRIBUTING.md).  
 
-
 ## Style Guide
 
 We must use CWL standards or CWL open standards when talking about CWL.
