@@ -1,8 +1,8 @@
 # Introduction
 
-This section will guide you over a short introduction to CWL,
+This section will guide you through a short introduction to CWL,
 the prerequisites for following this user guide, and some
-basic concepts that are useful before reading the rest of the
+basic concepts that are useful to know before reading the rest of the
 user guide.
 
 ```{toctree}

@@ -8,13 +8,22 @@ all are required.
 - No `type: string` parameters for names of input or reference
   files/directories; use `type: File` or `type: Directory` as appropriate.
 
-- Include a license that allows for re-use by anyone, e.g.
-  [Apache 2.0][apache-license]. If possible, the license should be specified with
-  its corresponding [SPDX identifier][spdx]. Construct the metadata field for the
-  licence by providing a URL of the form `https://spdx.org/licenses/[SPDX-ID]`
-  where `SPDX-ID` is the taken from the list of identifiers linked above. See the
-  example snippet below for guidance. For non-standard licenses without an SPDX
+- A CWL document (in conjunction with any external components like `Dockerfile`s) is software code.
+  Workflow developers should be aware that the usual rules of software licensing apply to this
+  document. For example if the workflow is shared publicly, licensing terms have to be clear so that
+  a future user can understand under what conditions they can run the workflow, modify it and/or
+  combine it with other workflows. For this reason please consider including a license field in the
+  document. The authors of this guide urge you to choose a pre-existing license rather than trying
+  to write your own (see the link below to learn more about choosing a license), and our recommended
+  practice is to choose a license that allows for re-use by anyone, e.g. [Apache 2.0][apache-license].
+
+  If possible, the license should be specified with its corresponding [SPDX identifier][spdx].
+  Construct the metadata field for the licence by providing a URL of the form
+  `https://spdx.org/licenses/[SPDX-ID]` where `SPDX-ID` is taken from the list of identifiers
+  linked above. See the example snippet below for guidance. For non-standard licenses without an SPDX
   identifier, provide a URL to the license.
+
+  Useful reading: "[A Quick Guide to Software Licensing for the Scientist-Programmer][sci-license]"
 
   _Example of metadata field for license with SPDX identifier:_
 
@@ -25,8 +34,8 @@ all are required.
   # other s: declarations
   ```
 
-  For more examples of providing metadata within CWL descriptions, see the
-  Metadata and Authorship section of this User Guide.
+  For more examples of providing metadata within CWL descriptions, see 
+  [the Metadata and Authorship section of this User Guide](../topics/metadata-and-authorship.md).
 
 - Include [attribution information][license-example] for the author(s) of
   the CWL tool or workflow description. Use  unambiguous identifiers like
@@ -97,6 +106,7 @@ all are required.
 [orcid]: https://orcid.org
 [subworkflow]: https://www.commonwl.org/v1.0/Workflow.html#SubworkflowFeatureRequirement
 [spdx]: https://spdx.org/licenses/
+[sci-license]: https://doi.org/10.1371/journal.pcbi.1002598
 
 % TODO
 %
