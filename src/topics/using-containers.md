@@ -52,7 +52,7 @@ used a container called `node:slim`.
 Provide a "hello.js" and invoke `cwltool` providing the tool description and the
 input object on the command line:
 
-```{literalinclude} /_include/cwl/using-containers/hello.js
+```{literalinclude} /_includes/cwl/using-containers/hello.js
 :language: javascript
 :caption: "`hello.js`"
 :name: hello.js
