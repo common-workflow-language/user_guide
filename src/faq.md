@@ -191,7 +191,7 @@ inputs:
 <a name="enuminputs"></a>
 ## Enum Inputs ⚜️
 
-For commandline flags that require a specific input as the argument an enum type can be declared in CWL. **Specifying null here is known as long form style. It does the same thing as the question mark on the other inputs.**
+For command line flags that require a specific input as the argument an enum type can be declared in CWL. **Specifying null here is known as long form style. It does the same thing as the question mark on the other inputs.**
 
 ```yaml
 Format:
