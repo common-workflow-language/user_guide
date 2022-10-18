@@ -52,8 +52,10 @@ used a container called `node:slim`.
 Provide a "hello.js" and invoke `cwltool` providing the tool description and the
 input object on the command line:
 
-```{code-block} console
-$ echo "console.log(\"Hello World\");" > hello.js
+```{literalinclude} /_includes/cwl/using-containers/hello.js
+:language: javascript
+:caption: "`hello.js`"
+:name: hello.js
 ```
 
 ```{runcmd} cwltool docker.cwl docker-job.yml
