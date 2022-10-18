@@ -102,14 +102,21 @@ tool. You must have a recent version of Python 3.6+ installed to build the proje
 locally. It is also recommended having `make` (otherwise look at the commands used
 in `Makefile`).
 
+The `dot` program from Graphviz is needed to render some of the diagrams.
+
+* For Debian/Ubuntu users:
+```bash
+sudo apt get install graphviz
+```
+* For non-Debian/Ubuntu users, follow the directions at [the GraphViz download site](https://graphviz.org/download).
 ```bash
 # Create and activate a virtual environment
 python -m venv venv
 source venv/bin/activate
 # update the version of pip, setuptools, and wheel
 (venv) pip install -U pip setuptools wheel
-# Install the dependencies in your virtual environment
-(venv) pip install .[all]
+# Install all the dependencies in your virtual environment.
+(venv) pip install ".[all]"
 # Create the HTML to visualize locally
 (venv) make html
 (venv) open _build/index.html
