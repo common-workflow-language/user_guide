@@ -106,7 +106,7 @@ The `dot` program from Graphviz is needed to render some of the diagrams.
 
 * For Debian/Ubuntu users:
 ```bash
-sudo apt get install graphviz
+sudo apt-get install graphviz
 ```
 * For non-Debian/Ubuntu users, follow the directions at [the GraphViz download site](https://graphviz.org/download).
 ```bash
