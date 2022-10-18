@@ -45,6 +45,11 @@ and to meet some of our community members.
 
 4. To build and run the user guide locally, see **Building** below
 
+**Note:** The published version of the user guide <https://www.commonwl.org/user_guide/> is built from the `release` branch.
+New changes are gathered on the default (`main`) branch which is built at <https://common-workflow-languageuser-guide.readthedocs.io/en/latest/>
+as a preview. Once we collect many changes from the `main` branch, we merge them into the `release` branch.
+
+
 Pull requests include an automatic preview provided by
 [ReadTheDocs](https://readthedocs.org/projects/common-workflow-languageuser-guide/).
 
@@ -97,14 +102,21 @@ tool. You must have a recent version of Python 3.6+ installed to build the proje
 locally. It is also recommended having `make` (otherwise look at the commands used
 in `Makefile`).
 
+The `dot` program from Graphviz is needed to render some of the diagrams.
+
+* For Debian/Ubuntu users:
+```bash
+sudo apt get install graphviz
+```
+* For non-Debian/Ubuntu users, follow the directions at [the GraphViz download site](https://graphviz.org/download).
 ```bash
 # Create and activate a virtual environment
 python -m venv venv
 source venv/bin/activate
 # update the version of pip, setuptools, and wheel
 (venv) pip install -U pip setuptools wheel
-# Install the dependencies in your virtual environment
-(venv) pip install .[all]
+# Install all the dependencies in your virtual environment.
+(venv) pip install ".[all]"
 # Create the HTML to visualize locally
 (venv) make html
 (venv) open _build/index.html
@@ -119,6 +131,56 @@ source venv/bin/activate
 > (GitHub Actions). Failing to update both may result in previews generated
 > correctly, but failure to deploy the production version after the pull request
 > gets merged.
+
+## Style Guide
+
+We must use the phrase "CWL standards" or "CWL open standards" when talking about CWL.
+We must use the word "specification" only when talking specifically about the CWL
+specification document.
+
+Whenever a page is updated we must verify that it does not break existing
+links, both internal and external. The `make html` command will fail if Sphinx detects broken links.
+It only works for links managed by Sphinx (i.e. table of contents links,
+or links to Markdown pages). For simple HTML links (e.g. `< href=>` or
+markdown external links) pull request reviewers must verify that links
+are still working after the change.
+
+Use “tool description” not “tool wrapper” for describing the first argument
+given to the `cwl-runner` or `cwltool` commands.
+
+### Code examples
+
+To include code into a Markdown file you have two options. For external files use
+the following command:
+
+````
+```{literalinclude} /_includes/cwl/hello_world.cwl
+:language: cwl
+```
+````
+
+For code examples in the same page, you can use fence blocks.
+
+````
+```bash
+echo "Hello world"
+```
+````
+
+If you would like to customize the syntax highlighting styles
+you will have to customize the Sphinx and Pygments settings.
+To preview Pygments output with different styles, use their
+[Pygments demo tool](https://pygments.org/demo/).
+
+### Creating Links
+
+Sphinx and the theme are configured to auto-generate anchor slug
+links for sections. So sections like ``## cwl standard`` are translated
+into an anchor link `#cwl-standard`.
+
+If you are having trouble with links to sections or code blocks, it might
+be due to duplicated sections, or to spaces or other characters. To
+preview the generated links, use the `myst-anchors` tool.
 
 ## Other Resources
 
