@@ -56,7 +56,7 @@ all are required.
   known to work with this description under `SoftwareRequirement`.
 
 - `format` should be specified for all input and output `File`s.
-  Bio-informatics tools should use format identifiers from [EDAM][edam-example].
+  Bioinformatics tools should use format identifiers from [EDAM][edam-example].
   See also `iana:text/plain`, `iana:text/tab-separated-values` with
   `$namespaces: { iana: "https://www.iana.org/assignments/media-types/" }`.
   [Full IANA media type list][iana-types] (also known as MIME types). For
@@ -94,7 +94,7 @@ all are required.
   should utilise the [`SubworkflowFeatureRequirement`][subworkflow] to make their
   workflow modular and allow sections of them to be easily reused.
 
-- Software containers should be made to be conformant to the ["Recommendations for the packaging and containerizing of bio-informatics software"][containers] (also useful to other disciplines).
+- Software containers should be made to be conformant to the ["Recommendations for the packaging and containerizing of bioinformatics software"][containers] (also useful to other disciplines).
 
 [containers]: https://doi.org/10.12688/f1000research.15140.1
 [apache-license]: https://spdx.org/licenses/Apache-2.0.html
