@@ -119,7 +119,6 @@ source venv/bin/activate
 # update the version of pip, setuptools, and wheel
 (venv) pip install -U pip setuptools wheel
 # Install all the dependencies in your virtual environment.
-#For the zsh shell, you need to specify quotes around the ".[all]" argument but the code below should work fine for bash shell
 (venv) pip install ".[all]"
 # Create the HTML to visualize locally
 (venv) make html
