@@ -1,7 +1,6 @@
 [![DOI for the latest version](https://zenodo.org/badge/89621457.svg)](https://zenodo.org/badge/latestdoi/89621457)
 
-[![Syntax Check](https://travis-ci.org/common-workflow-language/user_guide.svg?branch=main)](https://travis-ci.org/common-workflow-language/user_guide)
-
+[![Syntax Check](https://app.travis-ci.com/common-workflow-language/user_guide.svg?branch=main)](https://app.travis-ci.com/common-workflow-language/user_guide)
 
 This is the source of the official user guide for the Common Workflow Language standards.
 
