@@ -59,6 +59,8 @@ $ (venv) pip install cwltool
 ```
 
 ```{note}
+If you use Ubuntu OS(WSL2 included), you will have to run `python3 -m venv venv` to set up a virtual environment.
+
 You can find the `cwl-runner` source code [here](https://github.com/common-workflow-language/cwltool/tree/main/cwlref-runner).
 Visit the `cwltool` [documentation](https://github.com/common-workflow-language/cwltool#install)
 for other ways to install `cwltool` with `apt` and `conda`.
