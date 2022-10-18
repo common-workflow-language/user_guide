@@ -97,6 +97,16 @@ tool. You must have a recent version of Python 3.6+ installed to build the proje
 locally. It is also recommended having `make` (otherwise look at the commands used
 in `Makefile`).
 
+## The Need for Dot
+Dot is a special built-in shell command which is used in defining Graphviz attributes and is needed
+for graphviz output.
+
+* For Debian/Ubuntu users:
+run `sudo apt get` ; outside the virtual environment(venv)
+
+* For non-Debian/Ubuntu users:
+Download [Graphviz](https://graphviz.org/download/)
+
 ```bash
 # Create and activate a virtual environment
 python -m venv venv
@@ -105,9 +115,7 @@ source venv/bin/activate
 (venv) pip install -U pip setuptools wheel
 # Install all the dependencies in your virtual environment.
 #For the zsh shell, you need to specify quotes around the ".[all]" argument but the code below should work fine for bash shell
-(venv) pip install .[all]
-#Install Graphviz (Also installs the dot program which is needed for graphviz output)
-(venv) sudo apt-get install graphviz
+(venv) pip install ".[all]"
 # Create the HTML to visualize locally
 (venv) make html
 (venv) open _build/index.html
