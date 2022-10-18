@@ -452,13 +452,13 @@ two commands and the expected output from the command line:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ cwltool inp.cwl inp-job.yml
 INFO /opt/hostedtoolcache/Python/3.9.14/x64/bin/cwltool <span class="m">3</span>.1.20221008225030
 INFO Resolved <span class="s1">&#39;inp.cwl&#39;</span> to <span class="s1">&#39;file:///home/runner/work/user_guide/user_guide/src/_includes/cwl/inputs/inp.cwl&#39;</span>
-INFO <span class="o">[</span>job inp.cwl<span class="o">]</span> /tmp/9zckpth1$ <span class="nb">echo</span> <span class="se">\</span>
+INFO <span class="o">[</span>job inp.cwl<span class="o">]</span> /tmp/af0sscd1$ <span class="nb">echo</span> <span class="se">\</span>
     -f <span class="se">\</span>
     -i42 <span class="se">\</span>
     --example-string <span class="se">\</span>
     hello <span class="se">\</span>
-    --file<span class="o">=</span>/tmp/qtnsu8g2/stge961402f-ab39-4ddb-868a-efa729c0c178/whale.txt
--f -i42 --example-string hello --file<span class="o">=</span>/tmp/qtnsu8g2/stge961402f-ab39-4ddb-868a-efa729c0c178/whale.txt
+    --file<span class="o">=</span>/tmp/0sk_gpqo/stg246c8d07-7cf9-4608-bca3-29137518d40b/whale.txt
+-f -i42 --example-string hello --file<span class="o">=</span>/tmp/0sk_gpqo/stg246c8d07-7cf9-4608-bca3-29137518d40b/whale.txt
 INFO <span class="o">[</span>job inp.cwl<span class="o">]</span> completed success
 <span class="o">{}</span>
 INFO Final process status is success
@@ -593,7 +593,7 @@ on the command line:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ cwltool array-inputs.cwl array-inputs-job.yml
 INFO /opt/hostedtoolcache/Python/3.9.14/x64/bin/cwltool <span class="m">3</span>.1.20221008225030
 INFO Resolved <span class="s1">&#39;array-inputs.cwl&#39;</span> to <span class="s1">&#39;file:///home/runner/work/user_guide/user_guide/src/_includes/cwl/inputs/array-inputs.cwl&#39;</span>
-INFO <span class="o">[</span>job array-inputs.cwl<span class="o">]</span> /tmp/tzjtn59a$ <span class="nb">echo</span> <span class="se">\</span>
+INFO <span class="o">[</span>job array-inputs.cwl<span class="o">]</span> /tmp/1yqbkz2j$ <span class="nb">echo</span> <span class="se">\</span>
     -A <span class="se">\</span>
     one <span class="se">\</span>
     two <span class="se">\</span>
@@ -601,7 +601,7 @@ INFO <span class="o">[</span>job array-inputs.cwl<span class="o">]</span> /tmp/t
     -B<span class="o">=</span>four <span class="se">\</span>
     -B<span class="o">=</span>five <span class="se">\</span>
     -B<span class="o">=</span>six <span class="se">\</span>
-    -C<span class="o">=</span>seven,eight,nine &gt; /tmp/tzjtn59a/output.txt
+    -C<span class="o">=</span>seven,eight,nine &gt; /tmp/1yqbkz2j/output.txt
 INFO <span class="o">[</span>job array-inputs.cwl<span class="o">]</span> completed success
 <span class="o">{</span>
     <span class="s2">&quot;example_out&quot;</span>: <span class="o">{</span>
@@ -716,13 +716,13 @@ Invalid job input record:
 INFO /opt/hostedtoolcache/Python/3.9.14/x64/bin/cwltool <span class="m">3</span>.1.20221008225030
 INFO Resolved <span class="s1">&#39;record.cwl&#39;</span> to <span class="s1">&#39;file:///home/runner/work/user_guide/user_guide/src/_includes/cwl/inputs/record.cwl&#39;</span>
 <span class="hll">record-job2.yml:6:3: Warning: invalid field <span class="sb">`</span>itemD<span class="sb">`</span>, expected one of: <span class="s1">&#39;itemC&#39;</span>
-</span>INFO <span class="o">[</span>job record.cwl<span class="o">]</span> /tmp/tte4gz90$ <span class="nb">echo</span> <span class="se">\</span>
+</span>INFO <span class="o">[</span>job record.cwl<span class="o">]</span> /tmp/5evc_f0t$ <span class="nb">echo</span> <span class="se">\</span>
     -A <span class="se">\</span>
     one <span class="se">\</span>
     -B <span class="se">\</span>
     two <span class="se">\</span>
 <span class="hll">    -C <span class="se">\</span>
-</span><span class="hll">    three &gt; /tmp/tte4gz90/output.txt
+</span><span class="hll">    three &gt; /tmp/5evc_f0t/output.txt
 </span>INFO <span class="o">[</span>job record.cwl<span class="o">]</span> completed success
 <span class="o">{</span>
     <span class="s2">&quot;example_out&quot;</span>: <span class="o">{</span>
@@ -756,13 +756,13 @@ matching item (<code class="docutils literal notranslate"><span class="pre">item
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ cwltool record.cwl record-job3.yml
 INFO /opt/hostedtoolcache/Python/3.9.14/x64/bin/cwltool <span class="m">3</span>.1.20221008225030
 INFO Resolved <span class="s1">&#39;record.cwl&#39;</span> to <span class="s1">&#39;file:///home/runner/work/user_guide/user_guide/src/_includes/cwl/inputs/record.cwl&#39;</span>
-INFO <span class="o">[</span>job record.cwl<span class="o">]</span> /tmp/cc65s6l9$ <span class="nb">echo</span> <span class="se">\</span>
+INFO <span class="o">[</span>job record.cwl<span class="o">]</span> /tmp/ffg_o7rf$ <span class="nb">echo</span> <span class="se">\</span>
     -A <span class="se">\</span>
     one <span class="se">\</span>
     -B <span class="se">\</span>
     two <span class="se">\</span>
 <span class="hll">    -D <span class="se">\</span>
-</span><span class="hll">    four &gt; /tmp/cc65s6l9/output.txt
+</span><span class="hll">    four &gt; /tmp/ffg_o7rf/output.txt
 </span>INFO <span class="o">[</span>job record.cwl<span class="o">]</span> completed success
 <span class="o">{</span>
     <span class="s2">&quot;example_out&quot;</span>: <span class="o">{</span>
@@ -828,7 +828,7 @@ successfully:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ cwltool exclusive-parameter-expressions.cwl --file_format fasta
 INFO /opt/hostedtoolcache/Python/3.9.14/x64/bin/cwltool <span class="m">3</span>.1.20221008225030
 INFO Resolved <span class="s1">&#39;exclusive-parameter-expressions.cwl&#39;</span> to <span class="s1">&#39;file:///home/runner/work/user_guide/user_guide/src/_includes/cwl/inputs/exclusive-parameter-expressions.cwl&#39;</span>
-INFO <span class="o">[</span>job exclusive-parameter-expressions.cwl<span class="o">]</span> /tmp/fa96oe7k$ <span class="nb">true</span> <span class="se">\</span>
+INFO <span class="o">[</span>job exclusive-parameter-expressions.cwl<span class="o">]</span> /tmp/y2vvge6o$ <span class="nb">true</span> <span class="se">\</span>
     --format <span class="se">\</span>
     fasta
 INFO <span class="o">[</span>job exclusive-parameter-expressions.cwl<span class="o">]</span> completed success
@@ -844,7 +844,7 @@ output field (a <code class="docutils literal notranslate"><span class="pre">str
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ cwltool exclusive-parameter-expressions.cwl
 INFO /opt/hostedtoolcache/Python/3.9.14/x64/bin/cwltool <span class="m">3</span>.1.20221008225030
 INFO Resolved <span class="s1">&#39;exclusive-parameter-expressions.cwl&#39;</span> to <span class="s1">&#39;file:///home/runner/work/user_guide/user_guide/src/_includes/cwl/inputs/exclusive-parameter-expressions.cwl&#39;</span>
-INFO <span class="o">[</span>job exclusive-parameter-expressions.cwl<span class="o">]</span> /tmp/i8wmrdbp$ <span class="nb">true</span>
+INFO <span class="o">[</span>job exclusive-parameter-expressions.cwl<span class="o">]</span> /tmp/sg7j_jp5$ <span class="nb">true</span>
 <span class="hll">ERROR <span class="o">[</span>job exclusive-parameter-expressions.cwl<span class="o">]</span> Job error:
 </span><span class="hll">Error validating output record. the <span class="sb">`</span>text_output<span class="sb">`</span> field is not valid because
 </span><span class="hll">  the value is not string

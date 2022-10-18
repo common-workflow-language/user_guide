@@ -427,29 +427,32 @@ best practices when using containers for reproducible research). In this case we
 used a container called <code class="docutils literal notranslate"><span class="pre">node:slim</span></code>.</p>
 <p>Provide a “hello.js” and invoke <code class="docutils literal notranslate"><span class="pre">cwltool</span></code> providing the tool description and the
 input object on the command line:</p>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span><span class="nb">echo</span> <span class="s2">&quot;console.log(\&quot;Hello World\&quot;);&quot;</span> &gt; hello.js
+<div class="literal-block-wrapper docutils container" id="hello-js">
+<div class="code-block-caption"><span class="caption-text"><code class="docutils literal notranslate"><span class="pre">hello.js</span></code></span><a class="headerlink" href="#hello-js" title="Permalink to this code">#</a></div>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Hello World&quot;</span><span class="p">);</span><span class="w"></span>
 </pre></div>
+</div>
 </div>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ cwltool docker.cwl docker-job.yml
 INFO /opt/hostedtoolcache/Python/3.9.14/x64/bin/cwltool <span class="m">3</span>.1.20221008225030
 INFO Resolved <span class="s1">&#39;docker.cwl&#39;</span> to <span class="s1">&#39;file:///home/runner/work/user_guide/user_guide/src/_includes/cwl/using-containers/docker.cwl&#39;</span>
-INFO <span class="o">[</span>job docker.cwl<span class="o">]</span> /tmp/v7o8opt0$ docker <span class="se">\</span>
+INFO <span class="o">[</span>job docker.cwl<span class="o">]</span> /tmp/go2i7j2x$ docker <span class="se">\</span>
     run <span class="se">\</span>
     -i <span class="se">\</span>
-    --mount<span class="o">=</span><span class="nv">type</span><span class="o">=</span>bind,source<span class="o">=</span>/tmp/v7o8opt0,target<span class="o">=</span>/tQGBoV <span class="se">\</span>
-    --mount<span class="o">=</span><span class="nv">type</span><span class="o">=</span>bind,source<span class="o">=</span>/tmp/lvr0ee0e,target<span class="o">=</span>/tmp <span class="se">\</span>
-    --mount<span class="o">=</span><span class="nv">type</span><span class="o">=</span>bind,source<span class="o">=</span>/home/runner/work/user_guide/user_guide/src/_includes/cwl/using-containers/hello.js,target<span class="o">=</span>/var/lib/cwl/stg142fc6ba-59f7-4c5e-8c8e-0a8670e432d1/hello.js,readonly <span class="se">\</span>
-    --workdir<span class="o">=</span>/tQGBoV <span class="se">\</span>
+    --mount<span class="o">=</span><span class="nv">type</span><span class="o">=</span>bind,source<span class="o">=</span>/tmp/go2i7j2x,target<span class="o">=</span>/TrYKhX <span class="se">\</span>
+    --mount<span class="o">=</span><span class="nv">type</span><span class="o">=</span>bind,source<span class="o">=</span>/tmp/6iyw6npw,target<span class="o">=</span>/tmp <span class="se">\</span>
+    --mount<span class="o">=</span><span class="nv">type</span><span class="o">=</span>bind,source<span class="o">=</span>/home/runner/work/user_guide/user_guide/src/_includes/cwl/using-containers/hello.js,target<span class="o">=</span>/var/lib/cwl/stg110e27ff-01eb-4df5-b579-34242e7b0000/hello.js,readonly <span class="se">\</span>
+    --workdir<span class="o">=</span>/TrYKhX <span class="se">\</span>
     --read-only<span class="o">=</span><span class="nb">true</span> <span class="se">\</span>
     --log-driver<span class="o">=</span>none <span class="se">\</span>
     --user<span class="o">=</span><span class="m">1001</span>:121 <span class="se">\</span>
     --rm <span class="se">\</span>
-    --cidfile<span class="o">=</span>/tmp/9u3g60x0/20221017164351-878015.cid <span class="se">\</span>
+    --cidfile<span class="o">=</span>/tmp/0q73qojh/20221018123433-839892.cid <span class="se">\</span>
     --env<span class="o">=</span><span class="nv">TMPDIR</span><span class="o">=</span>/tmp <span class="se">\</span>
-    --env<span class="o">=</span><span class="nv">HOME</span><span class="o">=</span>/tQGBoV <span class="se">\</span>
+    --env<span class="o">=</span><span class="nv">HOME</span><span class="o">=</span>/TrYKhX <span class="se">\</span>
     node:slim <span class="se">\</span>
     node <span class="se">\</span>
-    /var/lib/cwl/stg142fc6ba-59f7-4c5e-8c8e-0a8670e432d1/hello.js &gt; /tmp/v7o8opt0/output.txt
+    /var/lib/cwl/stg110e27ff-01eb-4df5-b579-34242e7b0000/hello.js &gt; /tmp/go2i7j2x/output.txt
 INFO <span class="o">[</span>job docker.cwl<span class="o">]</span> Max memory used: 0MiB
 INFO <span class="o">[</span>job docker.cwl<span class="o">]</span> completed success
 <span class="o">{</span>

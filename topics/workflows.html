@@ -565,33 +565,33 @@ INFO Resolved <span class="s1">&#39;1st-workflow.cwl&#39;</span> to <span class=
 INFO <span class="o">[</span>workflow <span class="o">]</span> start
 INFO <span class="o">[</span>workflow <span class="o">]</span> starting step untar
 INFO <span class="o">[</span>step untar<span class="o">]</span> start
-INFO <span class="o">[</span>job untar<span class="o">]</span> /tmp/aap05mye$ tar <span class="se">\</span>
+INFO <span class="o">[</span>job untar<span class="o">]</span> /tmp/n60ibj8b$ tar <span class="se">\</span>
     --extract <span class="se">\</span>
     --file <span class="se">\</span>
-    /tmp/64g_tnlm/stgf96a9316-a0cc-44e1-86ee-ddb33f7b0a95/hello.tar <span class="se">\</span>
+    /tmp/l9xjjts5/stge16afc56-e414-473f-9df6-892fde551a24/hello.tar <span class="se">\</span>
     Hello.java
 INFO <span class="o">[</span>job untar<span class="o">]</span> completed success
 INFO <span class="o">[</span>step untar<span class="o">]</span> completed success
 INFO <span class="o">[</span>workflow <span class="o">]</span> starting step compile
 INFO <span class="o">[</span>step compile<span class="o">]</span> start
-INFO <span class="o">[</span>job compile<span class="o">]</span> /tmp/668wkau6$ docker <span class="se">\</span>
+INFO <span class="o">[</span>job compile<span class="o">]</span> /tmp/2ra5s50i$ docker <span class="se">\</span>
     run <span class="se">\</span>
     -i <span class="se">\</span>
-    --mount<span class="o">=</span><span class="nv">type</span><span class="o">=</span>bind,source<span class="o">=</span>/tmp/668wkau6,target<span class="o">=</span>/gbAhMY <span class="se">\</span>
-    --mount<span class="o">=</span><span class="nv">type</span><span class="o">=</span>bind,source<span class="o">=</span>/tmp/2hv6idr8,target<span class="o">=</span>/tmp <span class="se">\</span>
-    --mount<span class="o">=</span><span class="nv">type</span><span class="o">=</span>bind,source<span class="o">=</span>/tmp/aap05mye/Hello.java,target<span class="o">=</span>/var/lib/cwl/stgeb797eb9-156a-46c5-878c-b9b13e88890e/Hello.java,readonly <span class="se">\</span>
-    --workdir<span class="o">=</span>/gbAhMY <span class="se">\</span>
+    --mount<span class="o">=</span><span class="nv">type</span><span class="o">=</span>bind,source<span class="o">=</span>/tmp/2ra5s50i,target<span class="o">=</span>/rZmzll <span class="se">\</span>
+    --mount<span class="o">=</span><span class="nv">type</span><span class="o">=</span>bind,source<span class="o">=</span>/tmp/__5svis4,target<span class="o">=</span>/tmp <span class="se">\</span>
+    --mount<span class="o">=</span><span class="nv">type</span><span class="o">=</span>bind,source<span class="o">=</span>/tmp/n60ibj8b/Hello.java,target<span class="o">=</span>/var/lib/cwl/stg251b5fff-2431-4c73-ac0d-4e2e3c5b1ce8/Hello.java,readonly <span class="se">\</span>
+    --workdir<span class="o">=</span>/rZmzll <span class="se">\</span>
     --read-only<span class="o">=</span><span class="nb">true</span> <span class="se">\</span>
     --user<span class="o">=</span><span class="m">1001</span>:121 <span class="se">\</span>
     --rm <span class="se">\</span>
-    --cidfile<span class="o">=</span>/tmp/je_nhd4l/20221017164354-665932.cid <span class="se">\</span>
+    --cidfile<span class="o">=</span>/tmp/1zzu4qoe/20221018123436-342566.cid <span class="se">\</span>
     --env<span class="o">=</span><span class="nv">TMPDIR</span><span class="o">=</span>/tmp <span class="se">\</span>
-    --env<span class="o">=</span><span class="nv">HOME</span><span class="o">=</span>/gbAhMY <span class="se">\</span>
+    --env<span class="o">=</span><span class="nv">HOME</span><span class="o">=</span>/rZmzll <span class="se">\</span>
     openjdk:9.0.1-11-slim <span class="se">\</span>
     javac <span class="se">\</span>
     -d <span class="se">\</span>
-    /gbAhMY <span class="se">\</span>
-    /var/lib/cwl/stgeb797eb9-156a-46c5-878c-b9b13e88890e/Hello.java
+    /rZmzll <span class="se">\</span>
+    /var/lib/cwl/stg251b5fff-2431-4c73-ac0d-4e2e3c5b1ce8/Hello.java
 INFO <span class="o">[</span>job compile<span class="o">]</span> Max memory used: 0MiB
 INFO <span class="o">[</span>job compile<span class="o">]</span> completed success
 INFO <span class="o">[</span>step compile<span class="o">]</span> completed success
@@ -902,20 +902,20 @@ INFO Resolved <span class="s1">&#39;scatter-workflow.cwl&#39;</span> to <span cl
 INFO <span class="o">[</span>workflow <span class="o">]</span> start
 INFO <span class="o">[</span>workflow <span class="o">]</span> starting step <span class="nb">echo</span>
 INFO <span class="o">[</span>step echo<span class="o">]</span> start
-INFO <span class="o">[</span>job echo<span class="o">]</span> /tmp/jmadxboa$ <span class="nb">echo</span> <span class="se">\</span>
-    <span class="s1">&#39;Hello world!&#39;</span> &gt; /tmp/jmadxboa/3f8f180805bc1795e077d75bc6dbec026a376483
+INFO <span class="o">[</span>job echo<span class="o">]</span> /tmp/a__r0vvm$ <span class="nb">echo</span> <span class="se">\</span>
+    <span class="s1">&#39;Hello world!&#39;</span> &gt; /tmp/a__r0vvm/3f8f180805bc1795e077d75bc6dbec026a376483
 INFO <span class="o">[</span>job echo<span class="o">]</span> completed success
 INFO <span class="o">[</span>step echo<span class="o">]</span> start
-INFO <span class="o">[</span>job echo_2<span class="o">]</span> /tmp/k77w5x6o$ <span class="nb">echo</span> <span class="se">\</span>
-    <span class="s1">&#39;Hola mundo!&#39;</span> &gt; /tmp/k77w5x6o/3f8f180805bc1795e077d75bc6dbec026a376483
+INFO <span class="o">[</span>job echo_2<span class="o">]</span> /tmp/kpx6ncrz$ <span class="nb">echo</span> <span class="se">\</span>
+    <span class="s1">&#39;Hola mundo!&#39;</span> &gt; /tmp/kpx6ncrz/3f8f180805bc1795e077d75bc6dbec026a376483
 INFO <span class="o">[</span>job echo_2<span class="o">]</span> completed success
 INFO <span class="o">[</span>step echo<span class="o">]</span> start
-INFO <span class="o">[</span>job echo_3<span class="o">]</span> /tmp/lgtpkhr8$ <span class="nb">echo</span> <span class="se">\</span>
-    <span class="s1">&#39;Bonjour le monde!&#39;</span> &gt; /tmp/lgtpkhr8/3f8f180805bc1795e077d75bc6dbec026a376483
+INFO <span class="o">[</span>job echo_3<span class="o">]</span> /tmp/a4jfbxjk$ <span class="nb">echo</span> <span class="se">\</span>
+    <span class="s1">&#39;Bonjour le monde!&#39;</span> &gt; /tmp/a4jfbxjk/3f8f180805bc1795e077d75bc6dbec026a376483
 INFO <span class="o">[</span>job echo_3<span class="o">]</span> completed success
 INFO <span class="o">[</span>step echo<span class="o">]</span> start
-INFO <span class="o">[</span>job echo_4<span class="o">]</span> /tmp/23qv898l$ <span class="nb">echo</span> <span class="se">\</span>
-    <span class="s1">&#39;Hallo welt!&#39;</span> &gt; /tmp/23qv898l/3f8f180805bc1795e077d75bc6dbec026a376483
+INFO <span class="o">[</span>job echo_4<span class="o">]</span> /tmp/aicz1v67$ <span class="nb">echo</span> <span class="se">\</span>
+    <span class="s1">&#39;Hallo welt!&#39;</span> &gt; /tmp/aicz1v67/3f8f180805bc1795e077d75bc6dbec026a376483
 INFO <span class="o">[</span>job echo_4<span class="o">]</span> completed success
 INFO <span class="o">[</span>step echo<span class="o">]</span> completed success
 INFO <span class="o">[</span>workflow <span class="o">]</span> completed success
