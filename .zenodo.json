@@ -6,18 +6,135 @@
     "publication_type": "softwaredocumentation",
     "creators": [
         {
-            "affiliation": "European Molecular Biology Laboratory",
-            "orcid": "https://orcid.org/0000-0003-1766-456X",
-            "name": "Toby Hodges"
+            "name": "Alain Domissy"
+	},
+	{
+            "name": "Andrew Jesaitis"
+	},
+	{
+            "name": "bamiwoaluko"
+	},
+	{
+            "orcid": "https://orcid.org/0000-0002-6206-4638>",
+            "name": "Benjamin Carr"
+	},
+        {
+            "name": "Michele Mastropietro",
+	    "orcid": "https://orcid.org/0000-0002-6324-5713"
+	},
+	{
+            "name": "Emannuel Fernandes de Oliveira Carvalho"
+	},
+	{
+            "name": "Eugene Miloslavsky"
+	},
+	{
+            "name": "Robin Long",
+	    "orcid": "https://orcid.org/0000-0003-2249-645X"
+	},
+	{
+            "name": "Ngumih Fien"
+	},
+	{
+            "name": "gathoni-k"
+	},
+	{
+            "name": "Henry Liu"
+	},
+	{
+            "name": "Marijke J. van Baren"
         },
         {
-            "affiliation": "Common Workflow Language project",
+            "name": "jessMaia"
+	},
+	{
+            "name": "Bruno P. Kinoshita",
+	    "orcid": "https://orcid.org/0000-0001-8250-4074"
+	},
+	{
+            "name": "Kaushik Ghose",
+	    "orcid": "https://orcid.org/0000-0003-2933-1260"
+	},
+	{
+            "name": "Konstantin Taletskiy",
+	    "orcid": "https://orcid.org/0000-0001-6846-9815"
+	},
+	{
+            "name": "Kushal Beniwal"
+	},
+	{
+            "name": "Mark A. Jensen",
+	    "orcid": "https://orcid.org/0000-0001-5215-101X"
+	},
+	{
+            "name": "Levai Mackenzie Ágbàrà"
+	},
+	{
+            "name": "Manabu Ishii",
+            "orcid": "https://orcid.org/0000-0002-5843-4712"
+	},
+	{
+	    "name": "medcelerate"
+	},
+        {
+            "name": "Michael R. Crusoe",
             "orcid": "https://orcid.org/0000-0002-2961-9670",
-            "name": "Michael R. Crusoe"
+            "affiliation": "Common Workflow Language project"
+        },
+	{
+            "name": "Ruth B. McCole",
+	    "orcid": "https://orcid.org/0000-0002-1861-7055"
+	},
+	{
+            "name": "sersorrel"
+	},
+	{
+            "name": "Adrian Sharma"
+	},
+	{
+            "name": "Steffen Möller",
+	    "orcid": "https://orcid.org/0000-0002-7187-4683"
+	},
+	{
+            "name": "Oghenemaro Akpobi"
+	},
+	{
+            "name": "Stian Soiland-Reyes",
+	    "orcid": "https://orcid.org/0000-0001-9842-9718"
+	},
+	{
+            "name": "Luka Stojanovic"
+	},
+	{
+            "name": "Sarah Wait Zaranek",
+	    "orcid": "https://orcid.org/0000-0003-4716-9121"
+	},
+	{
+            "name": "Peter Amstutz",
+	    "orcid": "https://orcid.org/0000-0003-3566-7705"
+	},
+        {
+            "name": "Toby Hodges",
+            "affiliation": "European Molecular Biology Laboratory",
+            "orcid": "https://orcid.org/0000-0003-1766-456X"
+        },
+	{
+            "name": "Tomoya Tanjo",
+	    "orcid": "https://orcid.org/0000-0002-4421-9659"
+	},
+	{
+            "name": "Daiki Tsuchiya",
+	    "orcid": "https://orcid.org/0000-0003-2112-9316"
+	},
+	{
+            "name": "Wolfgang Gerlach",
+	    "orcid": "https://orcid.org/0000-0002-1480-1242"
+	},
+	{
+            "name": "Zipho Mashologu"
         }
     ],
     "access_right": "open",
-    "notes": "Based off of the excellent Software/Data Carpentry templates: https://doi.org/10.5281/zenodo.838778",
     "related_identifiers": [
         {
             "scheme": "url",
