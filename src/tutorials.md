@@ -2,7 +2,7 @@
 
 % https://github.com/common-workflow-language/user_guide/issues/160
 
-This is a list to tutorials provided by the CWL community. Open a
+This is a list to tutorials provided by the CWL community. Send a
 [pull request](https://github.com/common-workflow-language/user_guide/)
 if you would like to add another tutorial to the list.
 
