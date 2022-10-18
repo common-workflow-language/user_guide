@@ -68,7 +68,7 @@ all are required.
 
 - Each `CommandLineTool` description should focus on a single operation
   only, even if the (sub)command is capable of more. Don't overcomplicate your
-  tool descriptions with options that you don't need/use.
+  tool descriptions with options that you don't need or use.
 
 - Custom types should be defined with one external YAML per type
   definition for re-use.
