@@ -25,7 +25,7 @@ You can skip this section if you are already comfortable with YAML.
 
 Fundamentally, a file written in YAML consists of a set of _key-value pairs_.
 Each pair is written as `key: value`,
-where whitespace after the `:` is optional.
+where whitespace after the `:` is required.
 Key names in CWL files should not contain whitespace -
 [_camelCase_][camelCase] is used for multi-word key names
 that have special meaning in the CWL specification

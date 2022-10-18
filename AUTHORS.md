@@ -8,7 +8,7 @@ Thank you to the following contributors (in alphabetical order by user name):
 * Eugene Miloslavsky (@emiloslavsky)
 * Robin Long (@longr) <https://orcid.org/0000-0003-2249-645X>
 * Ngumih Fien (@Fienne)
-* @gathoni-k
+* Mary Gathoni (@gathoni-k)
 * Henry Liu (@HenryLiu0)
 * Marijke J. van Baren (@Jeltje)
 * @jessMaia
