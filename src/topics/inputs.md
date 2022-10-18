@@ -11,7 +11,7 @@ and *null*; complex types are *array* and *record*; in addition there are
 special types *File*, *Directory* and *Any*.
 
 The following example demonstrates some input parameters with different
-types and appearing on the command line in different ways.
+types and how they can appear on the command line.
 
 First, create a file called `inp.cwl`, containing the following:
 
@@ -31,7 +31,7 @@ Create a file called `inp-job.yml`:
 
 ````{note}
 You can use `cwltool` to create a template input object. That saves you from having
-to type all the input parameters in a input object file:
+to type all the input parameters in an input object file:
 
 ```{runcmd} cwltool --make-template inp.cwl
 :working-directory: src/_includes/cwl/inputs
@@ -50,7 +50,7 @@ Next, create a whale.txt using [touch] by typing `touch whale.txt` on the comman
 $ touch whale.txt
 ```
 
-Now invoke `cwltool` with the tool description and the input object on the command line,
+Now, invoke `cwltool` with the tool description and the input object on the command line,
 using the command `cwltool inp.cwl inp-job.yml`. The following boxed text describes these
 two commands and the expected output from the command line:
 
@@ -67,9 +67,9 @@ the tools aren't accidentally accessing files that were not explicitly
 specified
 ```
 
-The field `inputBinding` is optional and indicates whether and how the
-input parameter should appear on the tool's command line.  If
-`inputBinding` is missing, the parameter does not appear on the command
+The field `inputBinding` is optional and indicates if and how the
+input parameter should appear on the tool's command line. If
+`inputBinding` is missing, the parameter  does not appear on the command
 line.  Let's look at each example in detail.
 
 ```cwl
@@ -80,9 +80,9 @@ example_flag:
     prefix: -f
 ```
 
-Boolean types are treated as a flag.  If the input parameter
+Boolean types are treated as a flag. If the input parameter
 "example_flag" is "true", then `prefix` will be added to the
-command line.  If false, no flag is added.
+command line. If false, no flag is added.
 
 ```cwl
 example_string:
@@ -92,9 +92,9 @@ example_string:
     prefix: --example-string
 ```
 
-String types appear on the command line as literal values.  The `prefix`
+String types appear on the command line as literal values. The `prefix`
 is optional, if provided, it appears as a separate argument on the
-command line before the parameter .  In the example above, this is
+command line before the parameter. In the example above, this is
 rendered as `--example-string hello`.
 
 ```cwl
@@ -107,9 +107,9 @@ example_int:
 ```
 
 Integer (and floating point) types appear on the command line with
-decimal text representation.  When the option `separate` is false (the
+decimal text representation. When the option `separate` is false (the
 default value is true), the prefix and value are combined into a single
-argument.  In the example above, this is rendered as `-i42`.
+argument. In the example above, this is rendered as `-i42`.
 
 
 ```cwl
@@ -121,17 +121,17 @@ example_file:
     position: 4
 ```
 
-File types appear on the command line as the path to the file.  When the
+File types appear on the command line as the path to the file. When the
 parameter type ends with a question mark `?` it indicates that the
-parameter is optional.  In the example above, this is rendered as
-`--file=/tmp/random/path/whale.txt`.  However, if the "example_file"
+parameter is optional. In the example above, this is rendered as
+`--file=/tmp/random/path/whale.txt`. However, if the "example_file"
 parameter were not provided in the input, nothing would appear on the
 command line.
 
-Input files are read-only.  If you wish to update an input file, you must
+Input files are read-only. If you wish to update an input file, you must
 [first copy it to the output directory](staging-input-files.md).
 
-The value of `position` is used to determine where parameter should
+The value of `position` is used to determine where the parameter should
 appear on the command line.  Positions are relative to one another, not
 absolute.  As a result, positions do not have to be sequential, three
 parameters with positions 1, 3, 5 will result in the same command
@@ -143,13 +143,85 @@ The `baseCommand` field will always appear in the final command line before the 
 
 [touch]: http://www.linfo.org/touch.html
 
+### Optional Input Parameters
+
+Optional `inputs` include `label` and `secondaryFiles`.
+`label` is a short, human-readable description for the parameter.
+
+```cwl
+inputs:
+  example_file:
+    type: File
+    label: Use case for label parameter
+    inputBinding:
+      position: 1
+```
+
+`secondaryFiles` is an optional input parameter that provides a pattern of specifying files
+or directories that must be included alongside the primary file. 
+The following example demonstrates the `secondaryFiles` input parameter'
+
+```cwl
+inputs:
+  example_file:
+    type: file
+    inputBinding:
+      position: 1
+      prefix: --file=
+      seperate: false
+    "secondaryFiles": [
+            {
+                "class": "File",
+                "location": "example.txt",
+                "basename": "example.txt",
+                "nameroot": "example",
+                "nameext": ".txt",
+            }
+        ]
+```
+If the value is an expression, the value of self in the expression must be the primary
+input or output File object to which this binding applies.
+The `basename`, `nameroot` and `nameext` fields must be present in self.
+
+Also, a file object listed in secondaryFiles may contain nested secondaryFiles as shown below:
+
+```cwl
+inputs:
+  example_file:
+    type: file
+    inputBinding:
+      position: 1
+      prefix: --file=
+      seperate: false
+      "secondaryFiles": [
+            {
+                "class": "File",
+                "location": "example.fasta",
+                "basename": "example.fasta",
+                "secondaryFiles": [
+                    {
+                        "class": "File",
+                        "location": "example.fasta.fai",
+                        "basename": "example.fasta.fai",
+                        "nameroot": "example.fasta",
+                        "nameext": ".fai",
+                    }
+                ],
+            }
+        ]
+```
+
+Note that Secondary files are only valid when `type` has a value `File`, or is an array of `items: File`.
+All listed secondary files must be present in the same directory as the primary file,
+since an implementation may fail workflow execution if a listed secondary file is not present. 
+
 ## Array Inputs
 
 It is easy to add arrays of input parameters represented to the command
 line. There are two ways to specify an array parameter. First is to provide
 `type` field with `type: array` and `items` defining the valid data types
 that may appear in the array. Alternatively, brackets `[]` may be added after
-the type name to indicate that input parameter is array of that type.
+the `type: name` to indicate that the input parameter is an array of that type.
 
 ```{literalinclude} /_includes/cwl/inputs/array-inputs.cwl
 :language: cwl
@@ -163,7 +235,7 @@ the type name to indicate that input parameter is array of that type.
 :name: array-inputs-job.yml
 ```
 
-Now invoke `cwltool` providing the tool description and the input object
+Now invoke `cwltool` by providing the tool description and the input object
 on the command line:
 
 ```{runcmd} cwltool array-inputs.cwl array-inputs-job.yml
@@ -191,7 +263,7 @@ You can specify arrays of arrays, arrays of records, and other complex types.
 ## Inclusive and Exclusive Inputs
 
 Sometimes an underlying tool has several arguments that must be provided
-together (they are dependent) or several arguments that cannot be provided
+together, (they are dependent) or several arguments that cannot be provided
 together (they are exclusive).  You can use records and type unions to group
 parameters together to describe these two conditions.
 
@@ -270,7 +342,7 @@ that accepts `null` (i.e. no value provided), or any value from an enum.
 
 Note how the JavaScript expression uses the value of the exclusive input parameter
 without taking into consideration a `null` value. If you provide a valid value,
-such as “fasta” (one of the values of the enum), your command should execute
+such as “fasta” (one of the values of the enum), your command should be executed
 successfully:
 
 ```{runcmd} cwltool exclusive-parameter-expressions.cwl --file_format fasta
@@ -286,7 +358,7 @@ output field (a `string`), resulting in failure when running your workflow.
 :emphasize-lines: 5-10
 ```
 
-To correct it, you must remember to use an or operator in your JavaScript expression
+To correct it, you must remember to use an **or** operator in your JavaScript expression
 when using exclusive parameters, or any parameter that allows `null`. For example,
 the expression could be changed to `$(inputs.file_format || 'auto')`, to have
 a default value if none was provided in the command line or job input file.
@@ -298,4 +370,3 @@ a default value if none was provided in the command line or job input file.
 % - Several ways of defining inputs/arguments to tools and workflows - https://github.com/common-workflow-language/user_guide/issues/33
 % - Using an input output in another input - https://github.com/common-workflow-language/user_guide/issues/90
 % - How to use linkMerge - https://github.com/common-workflow-language/user_guide/issues/117 (or maybe move to Advanced?)
-% - Secondary files - https://github.com/common-workflow-language/common-workflow-language/issues/270
