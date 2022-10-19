@@ -1,7 +1,7 @@
 Thank you to the following contributors (in alphabetical order by user name):
 * Alain Domissy (@alaindomissy)
 * Andrew Jesaitis (@andrewjesaitis)
-* Bamiwo Alukoi (@bamiwoaluko)
+* Bamiwo Aluko (@bamiwoaluko)
 * Benjamin Carr (@BenjaminHCCarr) <https://orcid.org/0000-0002-6206-4638>
 * Michele Mastropietro (@elehcim) <https://orcid.org/0000-0002-6324-5713>
 * Emannuel Fernandes de Oliveira Carvalho (@emannuelOC)
