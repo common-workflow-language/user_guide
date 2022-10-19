@@ -111,7 +111,7 @@ sudo apt-get install graphviz
 * For non-Debian/Ubuntu users, follow the directions at [the GraphViz download site](https://graphviz.org/download).
 ```bash
 # Create and activate a virtual environment
-python -m venv venv
+python3 -m venv venv
 source venv/bin/activate
 # update the version of pip, setuptools, and wheel
 (venv) pip install -U pip setuptools wheel
