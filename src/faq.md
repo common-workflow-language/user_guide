@@ -87,24 +87,28 @@ The first method involves adding the folder containing your scripts to the `PATH
 
 Start with adding a _shebang_ at the top of your file:
 
-```bash
+```{code-block}
 #!/bin/bash
 ```
 
 After that, make the script executable with the command `chmod +x scriptname.sh`
 
-Finally, modify your path to add the directory where your script is located.
+Finally, modify your `PATH` to add the directory where your script is located.
+(It is good practice to use `$HOME/bin` for storing your own scripts).
+
 ```bash
 export PATH=$PATH:/appropriate/directory
 ```
 
 Now you can use `baseCommand: scriptname.sh` to run the script directly.
+
 ```cwl
 #!/bin/bash
 cwlVersion: v1.0
 class: CommandLineTool
 baseCommand: scriptname.sh
 ```
+
 When you wish to share your work later, you can place your script in a software container in the Docker format.
 
 The second method involves including an input of `type: File` in the script itself:
@@ -125,10 +129,10 @@ baseCommand: sh
 
 outputs: []
 ```
+
 ```{note}
 In CWL, everything must be directly stated.
 ```
-
 
 ## Setting `self`-based input bindings for optional inputs
 
