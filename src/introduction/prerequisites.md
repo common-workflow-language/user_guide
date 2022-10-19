@@ -52,7 +52,7 @@ environment:
 :name: installing-cwltool-with-pip-and-venv
 :caption: Installing `cwltool` with `pip` and `venv`.
 
-$ python -m venv venv
+$ python3 -m venv venv
 $ source venv/bin/activate
 $ (venv) pip install -U pip setuptools wheel
 $ (venv) pip install cwltool
