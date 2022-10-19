@@ -19,7 +19,7 @@ explanation in the [Implementations](basic-concepts.md#implementations) section.
 ## Operating System
 
 We recommend using an up-to-date operating system. You can choose any
-of the following options for your operating system:
+of the following options as your operating system:
 
 - Linux
 - macOS
@@ -63,7 +63,7 @@ You can find the `cwl-runner` source code [here](https://github.com/common-workf
 Visit the `cwltool` [documentation](https://github.com/common-workflow-language/cwltool#install)
 for other ways to install `cwltool` with `apt` and `conda`.
 ```
-Let's use a simple CWl tool description `true.cwl` with `cwltool`.
+Let's use a simple CWL tool description `true.cwl` with `cwltool`.
 
 ```{literalinclude} /_includes/cwl/true.cwl
 :language: yaml
@@ -71,9 +71,9 @@ Let's use a simple CWl tool description `true.cwl` with `cwltool`.
 :name: true.cwl
 ```
 
-The `cwltool` command has an option to validate CWL tool and workflow descriptionss. It will parse the
+The `cwltool` command has an option to validate CWL tool and workflow descriptions. It will parse the
 CWL document, look for syntax errors, and verify that the descriptions are compliant
-with the CWL standards, without running it. To validate CWL workflows (or even a
+with the CWL standards without running it. To validate CWL workflows (or even a
 standalone command line tool description like above) pass the `--validate` option
 to the `cwltool` command:
 
