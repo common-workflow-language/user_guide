@@ -41,7 +41,7 @@ hints:
     dockerPull: node:slim
 ```
 
-`baseCommand: node` tells CWL that we will be running this command in a container. We
+`baseCommand: node` tells CWL that we will be running this command using the Node Js runtime that is meant for Javascript files. We
 then need to specify some `hints` for how to find the container we want.  In this case we list
 just our requirements for the docker container in `DockerRequirements`.  The `dockerPull:`
 parameter takes the same value that you would pass to a `docker pull` command. That is,
@@ -49,7 +49,7 @@ the name of the container image (you can even specify the tag, which is good ide
 best practices when using containers for reproducible research). In this case we have
 used a container called `node:slim`.
 
-Provide a "hello.js" and invoke `cwltool` providing the tool description and the
+Create a Javascript file named "hello.js" and invoke `cwltool` providing the tool description and the
 input object on the command line:
 
 ```{literalinclude} /_includes/cwl/using-containers/hello.js

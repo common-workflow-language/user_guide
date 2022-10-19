@@ -1,8 +1,8 @@
 # Best Practices
 
-Below are a set of recommended good practices to keep in mind when writing a
+The following are a set of recommended good practices to keep in mind when writing a
 Common Workflow Language description for a tool or workflow. These guidelines
-are presented for consideration on a scale of usefulness: more is better, not
+are presented for consideration on a scale of usefulness: although more is better, not
 all are required.
 
 - No `type: string` parameters for names of input or reference
@@ -10,15 +10,15 @@ all are required.
 
 - A CWL document (in conjunction with any external components like `Dockerfile`s) is software code.
   Workflow developers should be aware that the usual rules of software licensing apply to this
-  document. For example if the workflow is shared publicly, licensing terms have to be clear so that
-  a future user can understand under what conditions they can run the workflow, modify it and/or
-  combine it with other workflows. For this reason please consider including a license field in the
+  document. For example, if the workflow is shared publicly, licensing terms must be clear so that
+  a future user understands under what conditions they can run the workflow, modify it and/or
+  combine it with other workflows. For this reason, please consider including a license field in the
   document. The authors of this guide urge you to choose a pre-existing license rather than trying
   to write your own (see the link below to learn more about choosing a license), and our recommended
   practice is to choose a license that allows for re-use by anyone, e.g. [Apache 2.0][apache-license].
 
   If possible, the license should be specified with its corresponding [SPDX identifier][spdx].
-  Construct the metadata field for the licence by providing a URL of the form
+  Construct the metadata field for the license by providing a URL of the form
   `https://spdx.org/licenses/[SPDX-ID]` where `SPDX-ID` is taken from the list of identifiers
   linked above. See the example snippet below for guidance. For non-standard licenses without an SPDX
   identifier, provide a URL to the license.
@@ -38,7 +38,7 @@ all are required.
   [the Metadata and Authorship section of this User Guide](../topics/metadata-and-authorship.md).
 
 - Include [attribution information][license-example] for the author(s) of
-  the CWL tool or workflow description. Use  unambiguous identifiers like
+  the CWL tool or workflow description. Use unambiguous identifiers like
   [ORCID][orcid].
 
 - In tool descriptions, list dependencies using short name(s) under
@@ -60,7 +60,7 @@ all are required.
   See also `iana:text/plain`, `iana:text/tab-separated-values` with
   `$namespaces: { iana: "https://www.iana.org/assignments/media-types/" }`.
   [Full IANA media type list][iana-types] (also known as MIME types). For
-  non-bioinformatics tools use or build an appropriate ontology/controlled
+  non-bioinformatics tools, use or build an appropriate ontology/controlled
   vocabulary in the same way. Please edit this page to let us know about it.
 
 - Mark all input and output `File`s that are read from or written to in a
@@ -68,15 +68,15 @@ all are required.
 
 - Each `CommandLineTool` description should focus on a single operation
   only, even if the (sub)command is capable of more. Don't overcomplicate your
-  tool descriptions with options that you don't need/use.
+  tool descriptions with options that you don't need or use.
 
 - Custom types should be defined with one external YAML per type
   definition for re-use.
 
-- Include a top level short `label` summarising the tool/workflow.
+- Include a top-level short `label` summarising the tool/workflow.
 
-- If useful, include a top level `doc` as well. This should provide a
-  longer, more detailed description than was provided in the top level `label`
+- If useful, include a top-level `doc` as well. This should provide a
+  longer, more detailed description than was provided in the top-level `label`
   (see above).
 
 - Use `type: enum` instead of `type: string` for elements with a fixed

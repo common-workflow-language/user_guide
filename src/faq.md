@@ -246,7 +246,7 @@ inputs:
 <a name="enuminputs"></a>
 ## Enum Inputs ⚜️
 
-For command-line flags that require a specific input as the argument, an enum type can be declared in CWL. **Specifying null here is known as long form style. It does the same thing as the question mark on the other inputs.**
+For command line flags that require a specific input as the argument an enum type can be declared in CWL. **Specifying null here is known as long form style. It does the same thing as the question mark on the other inputs.**
 
 ```yaml
 Format:
@@ -266,7 +266,7 @@ Format:
 <a name="recordinputs"></a>
 ## Record Inputs 📀
 
-For command-line flags that are either **mutually exclusive** or **dependent**, a special record type can be defined. You can also specify null here to create optional inputs.
+For commandline flags that are either **mutually exclusive** or **dependent** a special record type can be defined. You can also specify null here to create optional inputs.
 
 ```yaml
 #Using record inputs to create mutually exclusive inputs
