@@ -69,7 +69,7 @@ specified
 
 The field `inputBinding` is optional and indicates if and how the
 input parameter should appear on the tool's command line. If
-`inputBinding` is missing, the parameter  does not appear on the command
+`inputBinding` is missing, the parameter does not appear on the command
 line.  Let's look at each example in detail.
 
 ```cwl
@@ -145,7 +145,7 @@ The `baseCommand` field will always appear in the final command line before the 
 
 ### Optional Input Parameters
 
-Optional `inputs` include `label` and `secondaryFiles`.
+Optional input parameters must include `label` and `secondaryFiles`.
 `label` is a short, human-readable description for the parameter.
 
 ```cwl
@@ -159,17 +159,17 @@ inputs:
 
 `secondaryFiles` is an optional input parameter that provides a pattern of specifying files
 or directories that must be included alongside the primary file. 
-The following example demonstrates the `secondaryFiles` input parameter'
+The following example demonstrates the `secondaryFiles` input parameter.
 
 ```cwl
 inputs:
   example_file:
-    type: file
+    type: File
     inputBinding:
       position: 1
       prefix: --file=
       seperate: false
-    "secondaryFiles": [
+    secondaryFiles: [
             {
                 "class": "File",
                 "location": "example.txt",
@@ -179,21 +179,21 @@ inputs:
             }
         ]
 ```
-If the value is an expression, the value of self in the expression must be the primary
+If the value is an expression, the value of `self` in the expression is the primary
 input or output File object to which this binding applies.
-The `basename`, `nameroot` and `nameext` fields must be present in self.
+The `basename`, `nameroot` and `nameext` fields are present in `self`.
 
-Also, a file object listed in secondaryFiles may contain nested secondaryFiles as shown below:
+Also, a file object listed in `secondaryFiles` may contain nested `secondaryFiles` as shown below:
 
-```cwl
+```{code-block} cwl
 inputs:
   example_file:
-    type: file
+    type: File
     inputBinding:
       position: 1
       prefix: --file=
       seperate: false
-      "secondaryFiles": [
+    secondaryFiles: [
             {
                 "class": "File",
                 "location": "example.fasta",
@@ -211,7 +211,7 @@ inputs:
         ]
 ```
 
-Note that Secondary files are only valid when `type` has a value `File`, or is an array of `items: File`.
+Note that secondary files are only valid when `type` has a value `File`, or is an array of `items: File`.
 All listed secondary files must be present in the same directory as the primary file,
 since an implementation may fail workflow execution if a listed secondary file is not present. 
 
