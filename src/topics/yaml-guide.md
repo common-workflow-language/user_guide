@@ -5,7 +5,7 @@
 
 [YAML][yaml] is a file format
 designed to be readable by both computers and humans.
-This guide introduces the features of YAML
+This guide introduces the features of YAML that are
 relevant when writing CWL descriptions and input parameter files.
 
 ```{note}
@@ -27,7 +27,7 @@ Fundamentally, a file written in YAML consists of a set of _key-value pairs_.
 Each pair is written as `key: value`,
 where whitespace after the `:` is required.
 Key names in CWL files should not contain whitespace -
-We use [_camelCase_][camelCase] for multi-word key names
+[_camelCase_][camelCase] is used for multi-word key names
 that have special meaning in the CWL specification
 and underscored key names otherwise.
 For example:
@@ -48,7 +48,7 @@ numeric (integer, floating point, or scientific representation),
 Boolean (`true` or `false`),
 or more complex nested types (see below).
 
-Values may be wrapped in quotation marks
+Values may be wrapped in quotation marks,
 but be aware that this may change the way that they are interpreted
 i.e. `"1234"` will be treated as a character string
 , while `1234` will be treated as an integer.
@@ -80,7 +80,7 @@ be sure to add at least one space before the `#`!
 
 When describing a tool or workflow with CWL,
 it is usually necessary to construct more complex, nested representations.
-Called _maps_,
+Referred to as _maps_,
 these hierarchical structures are described in YAML by providing
 additional key-value pairs as the value of any key.
 These pairs (sometimes referred to as "children") are written
@@ -101,7 +101,7 @@ inputs: # this key has an object value
       prefix: -f
 ```
 
-The YAML above illustrates how you can build up complex nested object
+The YAML above illustrates how to build up complex nested object
 descriptions relatively quickly.
 The `inputs` map contains a single key, `example_flag`,
 which itself contains two keys, `type` and `inputBinding`,
@@ -126,7 +126,7 @@ graph TD
 
 ## Arrays
 
-In certain circumstances it is necessary to provide
+In certain circumstances, it is necessary to provide
 multiple values or objects for a single key.
 As we've already seen in the [Maps](#maps) section above,
 more than one key-value pair can be mapped to a single key.
@@ -166,8 +166,8 @@ exclusive_parameters:
 
 ## JSON Style
 
-YAML is based on [JavaScript Object Notation (JSON)][json]
-and maps and arrays can also be defined in YAML using the native JSON syntax.
+YAML is based on [JavaScript Object Notation (JSON)][json].
+Maps and arrays can also be defined in YAML using the native JSON syntax.
 For example:
 
 ```yaml
@@ -182,13 +182,13 @@ inputs: {example_flag: {type: boolean, inputBinding: {position: 1, prefix: -f}}}
 ```
 
 Native JSON can be useful
-to indicate where a field is being left intentionally empty
+in indicating where a field is intentionally left empty
 (such as `[]` for an empty array),
-and where it makes more sense
+as well as where it makes more sense
 for the values to be located on the same line
-(such as when providing option flags and their values in a shell command).
+(For example, when providing option flags and their values in a shell command).
 However, as the second example above shows,
-it can severely affect the readability of a YAML file
+it can severely affect the readability of a YAML file,
 and should be used sparingly.
 
 ## Reference
