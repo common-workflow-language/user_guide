@@ -1,18 +1,18 @@
 # Prerequisites
 
-% This page supersedes the old setup.md. We used that page as reference while
+% This page supersedes the old setup page: setup.md. We used that page as a reference while
 % writing this documentation.
 
 The software and configurations listed in this section are prerequisites for
 following this user guide. The CWL standards are implemented by many different
 workflow runners and platforms. This list of requirements focuses on the CWL reference runner,
-`cwltool`. You can use another CWL compatible runner or workflow systems but the results and
+`cwltool`. You can use another CWL-compatible runner or workflow system, but the results and
 interface may look different (though the exact workflow outputs should be identical).
 
 ```{admonition} CWL Implementations
 
-There are many implementations of the CWL standards. Some are complete CWL runners,
-others are plug-ins or extensions to workflow engines. We have a better
+There are many implementations of the CWL standards. Some are complete CWL runners, while
+others could be plug-ins or extensions to workflow engines. We have a better
 explanation in the [Implementations](basic-concepts.md#implementations) section.
 ```
 
@@ -26,7 +26,7 @@ of the following options for your operating system:
 - Windows
 
 ```{note}
-If you are using Windows, you will have to install the Windows Subsystem for Linux 2.
+If you are using Windows, you will have to install the [Windows Subsystem for Linux 2](https://learn.microsoft.com/en-us/windows/wsl/install) (WSL2).
 Visit the `cwltool` [documentation](https://github.com/common-workflow-language/cwltool/blob/main/README.rst#ms-windows-users)
 for details on installing WSL2.
 Your operating system also needs internet access and a recent version of Python (3.6+).
@@ -52,14 +52,14 @@ environment:
 :name: installing-cwltool-with-pip-and-venv
 :caption: Installing `cwltool` with `pip` and `venv`.
 
-$ python -m venv venv
+$ python3 -m venv venv
 $ source venv/bin/activate
 $ (venv) pip install -U pip setuptools wheel
 $ (venv) pip install cwltool
 ```
 
 ```{note}
-You can find the `cwl-runner` source code [here](https://github.com/common-workflow-language/cwltool/tree/main/cwlref-runner).
+You can find the `cwl-runner` [source code](https://github.com/common-workflow-language/cwltool/tree/main/cwlref-runner) in the `cwltool` repository.
 Visit the `cwltool` [documentation](https://github.com/common-workflow-language/cwltool#install)
 for other ways to install `cwltool` with `apt` and `conda`.
 ```
@@ -71,10 +71,10 @@ Let's use a simple CWl tool description `true.cwl` with `cwltool`.
 :name: true.cwl
 ```
 
-The `cwltool` command has an option to validate CWL tool and workflow descriptionss. It will parse the
-CWL document, look for syntax errors, and verify that the descriptions are compliant
-with the CWL standards, without running it. To validate CWL workflows (or even a
-standalone command line tool description like above) pass the `--validate` option
+The `cwltool` command has an option to validate CWL tool and workflow descriptions. This option will parse the
+CWL document, look for syntax errors, and verify that the workflow descriptions are compliant
+with the CWL standards. However, these actions will be performed without running the document. To validate CWL workflows (or even a
+standalone command line tool description like the above) pass the `--validate` option
 to the `cwltool` command:
 
 ```{runcmd} cwltool --validate true.cwl
@@ -91,7 +91,7 @@ You can run the CWL tool description by omitting the `--validate` option:
 
 ### cwl-runner Python module
 
-`cwl-runner` is an implementation-agnostic alias for CWL Runners.
+`cwl-runner` is an implementation-agnostic alias for CWL Runners. This simply means that the `cwl-runner` alias command can be invoked independently, and is not reliant on a particular CWL runner.
 Users can invoke `cwl-runner` instead of invoking a CWL runner like `cwltool`
 directly. The `cwl-runner` alias command then chooses the correct CWL runner.
 This is convenient for environments with multiple CWL runners.
@@ -106,7 +106,7 @@ an alias for `cwltool` under the name `cwl-runner`
 $ pip install cwlref-runner
 ```
 
-Now you can validate and run your workflow with `cwl-runner` executable,
+Now you can validate and run your workflow with the `cwl-runner` executable,
 which will invoke `cwltool`. You should have the same results and output
 as in the previous section.
 
@@ -120,9 +120,9 @@ as in the previous section.
 :caption: Running `true.cwl` with `cwl-runner`.
 ```
 
-Another way to execute `cwl-runner` is invoking the file directly. For that,
-the first thing you need to copy `true.cwl` workflow into a new file
-`true_shebang.cwl` and include a special first line, a *shebang*:
+Another way to execute `cwl-runner` is by invoking the file directly. For that,
+the first thing you need to do is copy `true.cwl` workflow into a new file:
+`true_shebang.cwl`, and include a special first line, a *shebang*:
 
 ```{literalinclude} /_includes/cwl/true_shebang.cwl
 :language: cwl
@@ -139,7 +139,7 @@ Now you can make the file `true_shebang.cwl` executable with `chmod u+x`.
 $ chmod u+x true.cwl
 ```
 
-And finally you can execute it directly in the command-line and the program
+And finally, you can execute it directly in the command-line. On execution, the program
 specified in the shebang (`cwl-runner`) will be used to execute the
 rest of the file.
 
@@ -152,9 +152,8 @@ rest of the file.
 The *shebang* is the two-character sequence `#!` at the beginning of a
 script. When the script is executable, the operating system will execute
 the script using the executable specified after the shebang. It is
-considered a good practice to use `/usr/bin/env <executable>` since it
-looks for the `<executable>` program in the system `PATH`, instead of
-using a hard-coded location.
+considered a good practice to use `/usr/bin/env <executable>` rather than using a hard-coded location, since `/usr/bin/env <executable>`
+looks for the `<executable>` program in the system `PATH`, 
 ```
 
 ## Text Editor
@@ -164,7 +163,7 @@ an editor with YAML support. Popular editors are Visual Studio Code, Sublime,
 WebStorm, vim/neovim, and Emacs.
 
 There are extensions for Visual Studio Code and WebStorm that provide
-integration with CWL, with customized syntax highlighting and better
+integration with CWL, and features such as customized syntax highlighting and better
 auto-complete:
 
 - Visual Studio Code with the Benten (CWL) plugin - <https://github.com/rabix/benten#install-vs-code-extension>
@@ -182,7 +181,7 @@ Follow the instructions in the Docker documentation to install it for your
 operating system: <https://docs.docker.com/>.
 
 You do not need to know how to write and build Docker containers. In the
-rest of the user guide we will use existing Docker images for running
+rest of the user guide, we will use existing Docker images for running
 examples, and to clarify the differences between the execution models
 with and without containers.
 
