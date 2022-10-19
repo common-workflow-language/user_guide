@@ -40,10 +40,10 @@ outputs:
 
 ## Rename an input file
 
-This example shows how you can change the name of an input file
+This example demonstrates how to change the name of an input file
 as part of a tool description.
 This could be useful when you are taking files produced from another
-step in a workflow and don't want to work with the default names that these
+step in a workflow, and don't want to work with the default names that these
 files were given when they were created.
 
 ```yaml
@@ -58,7 +58,7 @@ requirements:
 
 ## Rename an output file
 
-This example shows how you can change the name of an output file
+This example demonstrates how to change the name of an output file
 from the default name given to it by a tool:
 
 ```yaml
@@ -77,6 +77,61 @@ outputs:
     outputBinding:
       glob: otu_table.txt
       outputEval: ${self[0].basename=inputs.otu_table_name; return self;}
+```
+
+## Referencing a local script
+
+There are two ways to reference a local script:
+
+The first method involves adding the folder containing your scripts to the `PATH` environment variable. This allows you to run the shell script without using `sh` or `bash` commands.
+
+Start with adding a _shebang_ at the top of your file:
+
+```{code-block}
+#!/bin/bash
+```
+
+After that, make the script executable with the command `chmod +x scriptname.sh`
+
+Finally, modify your `PATH` to add the directory where your script is located.
+(It is good practice to use `$HOME/bin` for storing your own scripts).
+
+```bash
+export PATH=$PATH:/appropriate/directory
+```
+
+Now you can use `baseCommand: scriptname.sh` to run the script directly.
+
+```cwl
+#!/bin/bash
+cwlVersion: v1.0
+class: CommandLineTool
+baseCommand: scriptname.sh
+```
+
+When you wish to share your work later, you can place your script in a software container in the Docker format.
+
+The second method involves including an input of `type: File` in the script itself:
+
+```cwl
+class: CommandLineTool
+
+inputs:
+  my_script:
+     type: File
+     inputBinding:
+        position: 0
+
+
+  # other inputs go here
+
+baseCommand: sh
+
+outputs: []
+```
+
+```{note}
+In CWL, everything must be directly stated.
 ```
 
 ## Setting `self`-based input bindings for optional inputs
@@ -108,8 +163,8 @@ outputs: []
 
 ## Model a "one-or-the-other" parameter
 
-Below is an example of how
-you can specify different strings to be added to a command line
+Below is an example showing how
+to specify different strings to be added to a command line,
 based on the value given to a Boolean parameter.
 
 ```yaml
@@ -265,7 +320,7 @@ For commandline flags that are either **mutually exclusive** or **dependent** a 
 ```
 ## Setting Mutually Exclusive Parameters
 
-In order to properly set fields in a record input type, you need to pass a dictionary to the input to properly set the parameters. This is done by using inline javascript and returning the dictionary with the key of the field you want to set. The source field is set to indicate the input from the workflow to be used as the value.
+To properly set fields in a record input type, you need to pass a dictionary to the input to properly set the parameters. This is done by using inline JavaScript and returning the dictionary with the key of the field you want to set. The source field is set to indicate the input from the workflow to be used as the value.
 
 ```yaml
 steps:
