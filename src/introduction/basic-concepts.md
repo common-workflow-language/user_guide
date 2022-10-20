@@ -124,15 +124,15 @@ be used to simplify workflows and command-line tools, moving common
 parts of a workflow execution into reusable JavaScript code, that
 takes inputs and produces outputs like a command-line tool.
 
+Operation is an abstract process that also takes inputs, produces
+outputs, and can be used in a workflow. But it is a special operation
+not so commonly used. It is discussed in the [Operations section](../topics/operations.md) of this user guide.
+
 The workflow is a process that contains steps. Steps can be other
 workflows (nested workflows), command-line tools, or expression tools.
 The inputs of a workflow can be passed to any of its steps, while
 the outputs produced by its steps can be used in the final output
 of the workflow.
-
-Operation is an abstract process that also takes inputs, produces
-outputs, and can be used in a workflow. But it is a special operation
-not so commonly used. It is discussed in the [Operations section](../topics/operations.md) of this user guide.
 
 The CWL specification allows for implementations to provide extra
 functionality and specify prerequisites to workflows through *requirements*.
