@@ -165,23 +165,8 @@ The following example demonstrates the `secondaryFiles` input parameter.
 inputs:
   example_file:
     type: File
-    inputBinding:
-      position: 1
-      prefix: --file=
-      seperate: false
-    secondaryFiles: [
-            {
-                "class": "File",
-                "location": "example.txt",
-                "basename": "example.txt",
-                "nameroot": "example",
-                "nameext": ".txt",
-            }
-        ]
+    secondaryFiles: [example_file.txt]
 ```
-If the value is an expression, the value of `self` in the expression is the primary
-input or output File object to which this binding applies.
-The `basename`, `nameroot` and `nameext` fields are present in `self`.
 
 Also, a file object listed in `secondaryFiles` may contain nested `secondaryFiles` as shown below:
 
@@ -189,24 +174,10 @@ Also, a file object listed in `secondaryFiles` may contain nested `secondaryFile
 inputs:
   example_file:
     type: File
-    inputBinding:
-      position: 1
-      prefix: --file=
-      seperate: false
     secondaryFiles: [
             {
-                "class": "File",
-                "location": "example.fasta",
-                "basename": "example.fasta",
-                "secondaryFiles": [
-                    {
-                        "class": "File",
-                        "location": "example.fasta.fai",
-                        "basename": "example.fasta.fai",
-                        "nameroot": "example.fasta",
-                        "nameext": ".fai",
-                    }
-                ],
+                example_file.txt
+                secondaryFiles: [example_file_2.txt]
             }
         ]
 ```
