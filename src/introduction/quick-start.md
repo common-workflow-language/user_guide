@@ -11,7 +11,7 @@ must be comfortable following instructions for the command-line.
 
 CWL documents are written in [YAML](../topics/index.md) (and/or JSON).
 The example below shows a simple CWL “Hello World” workflow annotated
-with comments:
+with comments. Note that comments start with `#`:
 
 ```{literalinclude} /_includes/cwl/hello_world.cwl
 :language: cwl
