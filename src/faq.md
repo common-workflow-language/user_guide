@@ -446,6 +446,23 @@ The reference runner and several other CWL implementations support running
 those Docker format containers using the Singularity engine. Directly
 specifying a Singularity format container is not part of the CWL standards.
 
+## Shell Command Requirement
+`ShellCommandRequirement` in CWL allows us to use `/bin/sh -c` in order to pass our command as a string to a shell intrepreter. `ShellQuote:false` leaves shell metacharacters unquoted, and thus they can still be interpreted and used by a shell.  
+From CommandLineTool.job():
+
+```
+shellcmd, _ = self.get_requirement("ShellCommandRequirement")
+    if shellcmd is not None:
+        cmd = []  # type: List[Text]
+        for b in builder.bindings:
+            arg = builder.generate_arg(b)
+            if b.get("shellQuote", True):
+                arg = [shellescape.quote(a) for a in aslist(arg)]
+            cmd.extend(aslist(arg))
+        j.command_line = ["/bin/sh", "-c", " ".join(cmd)]
+```  
+Without the `ShellCommandRequirement` the job will run with subprocess.Popen(shell=False) and thus no shell metacharacters can be used.
+
 ## Debug JavaScript expressions
 
 You can use the <code>--js-console</code> option of <code>cwltool</code>, or you can try
