@@ -8,7 +8,7 @@
 :backlinks: "top"
 ```
 
-## Non "`File`" types using `evalFrom`
+## Non "`File`" Types Using `evalFrom`
 
 ```yaml
 cwlVersion: v1.0  # or v1.1
@@ -38,7 +38,7 @@ outputs:
        outputEval: $(self[0].contents)
 ```
 
-## Rename an input file
+## Rename an Input File
 
 This example demonstrates how to change the name of an input file
 as part of a tool description.
@@ -56,7 +56,7 @@ requirements:
         entryName: $(inputs.src1.basename)_custom_extension
 ```
 
-## Rename an output file
+## Rename an Output File
 
 This example demonstrates how to change the name of an output file
 from the default name given to it by a tool:
@@ -79,7 +79,7 @@ outputs:
       outputEval: ${self[0].basename=inputs.otu_table_name; return self;}
 ```
 
-## Referencing a local script
+## Referencing a Local Script
 
 There are two ways to reference a local script:
 
@@ -134,7 +134,7 @@ outputs: []
 In CWL, everything must be directly stated.
 ```
 
-## Setting `self`-based input bindings for optional inputs
+## Setting `self`-based Input Bindings for Optional Inputs
 
 Currently, `cwltool` can't cope with missing optional inputs if their
 input binding makes use of `self`.
@@ -161,7 +161,7 @@ baseCommand: echo
 outputs: []
 ```
 
-## Model a "one-or-the-other" parameter
+## Model a "one-or-the-other" Parameter
 
 Below is an example showing how
 to specify different strings to be added to a command line,
@@ -184,7 +184,7 @@ baseCommand: echo
 outputs: []
 ```
 
-## Connect a solo value to an input that expects an array of that type
+## Connect a Solo Value to an Input that Expects an Array of that Type
 
 Using [`MultipleInputFeatureRequirement`](https://www.commonwl.org/v1.0/Workflow.html#MultipleInputFeatureRequirement)
 along with
@@ -355,7 +355,7 @@ input:
      My String: $(input.stringvalue)
 ```
 
-## `cwltool` errors due to filenames with space characters inside
+## `cwltool` Errors due to Filenames with Space Characters Inside
 
 `cwltool` does not allow some characters in filenames by default.
 
@@ -369,7 +369,7 @@ Invalid filename: 'a space is here.txt' contains illegal characters
 
 If you can not avoid these dangerous characters, then pass `--relax-path-checks` to `cwltool`.
 
-## CWL Parameter Reference error due to hyphen in input identifier
+## CWL Parameter Reference Error due to Hyphen in Input Identifier
 
 If `cwltool --validate` returns valid
 
@@ -446,7 +446,7 @@ The reference runner and several other CWL implementations support running
 those Docker format containers using the Singularity engine. Directly
 specifying a Singularity format container is not part of the CWL standards.
 
-## Debug JavaScript expressions
+## Debug JavaScript Expressions
 
 You can use the <code>--js-console</code> option of <code>cwltool</code>, or you can try
 creating a JavaScript or TypeScript project for your code, and load it

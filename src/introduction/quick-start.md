@@ -29,7 +29,7 @@ for the sake of simplicity, we are using the term “workflow” here. You will 
 more about this in the [basic concepts](basic-concepts.md) section.
 ```
 
-## Installing a CWL runner
+## Installing a CWL Runner
 
 `cwltool` is an implementation of the CWL specification. It is also the
 CWL *Reference Runner* for the specification, and it is compliant with the
@@ -91,7 +91,7 @@ a requirement. You can choose any name for your workflows and Inputs Object
 files.
 ```
 
-## Learn more
+## Learn More
 
 Continue reading the next sections of this User Guide!
 - [List of CWL Implementations](https://www.commonwl.org/implementations).

@@ -7,7 +7,7 @@ command-line. The other sections of the user guide cover the same concepts, but
 in more detail. If you are already familiar with CWL or you are looking for more advanced
 content, you may want to skip this section.
 
-## The CWL specification
+## The CWL Specification
 
 ```{include} /_includes/what-is-cwl.md
 ```
@@ -152,7 +152,7 @@ Hints are similar to requirements, but while requirements list features
 that are required, hints list optional features. Requirements are explained
 in detail in the [Requirements](../topics/requirements-and-hints.md) section.
 
-## FAIR workflows
+## FAIR Workflows
 
 > The FAIR principles have laid a foundation for sharing and publishing
 > digital assets, and in particular, data. The FAIR principles emphasize
@@ -175,7 +175,7 @@ vendors.
 
 `cwltool` also uses the PROV-O standard ontology for data provenance.
 
-## Learn more
+## Learn More
 
 - Semantic Versioning - <https://semver.org/>
 - The CWL Specification page in the CWL website: <https://www.commonwl.org/specification/>
