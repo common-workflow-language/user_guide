@@ -6,23 +6,23 @@ baseCommand: echo
 inputs:
   example_flag:
     type: boolean
-    inputBinding:
+    arguments:
       position: 1
       prefix: -f
   example_string:
     type: string
-    inputBinding:
+    arguments:
       position: 3
       prefix: --example-string
   example_int:
     type: int
-    inputBinding:
+    arguments:
       position: 2
       prefix: -i
       separate: false
   example_file:
     type: File?
-    inputBinding:
+    arguments:
       prefix: --file=
       separate: false
       position: 4
