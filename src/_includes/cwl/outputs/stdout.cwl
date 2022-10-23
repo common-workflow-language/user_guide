@@ -7,7 +7,7 @@ stdout: output.txt
 inputs:
   message:
     type: string
-    inputBinding:
+    arguments:
       position: 1
 outputs:
   example_out:
