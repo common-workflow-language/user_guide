@@ -6,11 +6,11 @@ baseCommand: [tar, --extract]
 inputs:
   tarfile:
     type: File
-    inputBinding:
+    arguments:
       prefix: --file
   extractfile:
     type: string
-    inputBinding:
+    arguments:
       position: 1
 outputs:
   extracted_file:
