@@ -6,6 +6,6 @@ baseCommand: echo
 inputs:
   message:
     type: string
-    inputBinding:
+    arguments:
       position: 1
 outputs: []
