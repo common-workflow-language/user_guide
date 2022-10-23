@@ -7,6 +7,6 @@ arguments: ["-c"]
 inputs:
   input_file:
     type: File
-    inputBinding:
+    arguments:
       position: 1
 outputs: []
