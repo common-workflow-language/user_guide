@@ -10,11 +10,11 @@ inputs:
       fields:
         itemA:
           type: string
-          inputBinding:
+          arguments:
             prefix: -A
         itemB:
           type: string
-          inputBinding:
+          arguments:
             prefix: -B
   exclusive_parameters:
     type:
@@ -23,14 +23,14 @@ inputs:
         fields:
           itemC:
             type: string
-            inputBinding:
+            arguments:
               prefix: -C
       - type: record
         name: itemD
         fields:
           itemD:
             type: string
-            inputBinding:
+            arguments:
               prefix: -D
 outputs:
   example_out:
