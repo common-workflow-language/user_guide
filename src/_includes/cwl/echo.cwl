@@ -8,7 +8,7 @@ stdout: output.txt
 inputs:
   message:
     type: string
-    inputBinding: {}
+    arguments: {}
 outputs:
   out:
     type: string
