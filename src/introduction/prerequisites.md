@@ -32,7 +32,7 @@ for details on installing WSL2.
 Your operating system also needs internet access and a recent version of Python (3.6+).
 ```
 
-## CWL runner
+## CWL Runner
 
 % https://github.com/common-workflow-language/user_guide/issues/166
 % https://github.com/common-workflow-language/user_guide/issues/64
@@ -89,7 +89,7 @@ You can run the CWL tool description by omitting the `--validate` option:
 :caption: Running `true.cwl` with `cwltool`.
 ```
 
-### cwl-runner Python module
+### Cwl-runner Python Module
 
 `cwl-runner` is an implementation-agnostic alias for CWL Runners. This simply means that the `cwl-runner` alias command can be invoked independently, and is not reliant on a particular CWL runner.
 Users can invoke `cwl-runner` instead of invoking a CWL runner like `cwltool`
@@ -191,7 +191,7 @@ Singularity. You can also use alternative container registries for pulling
 images.
 ```
 
-## Learn more
+## Learn More
 
 - The [Implementations](basic-concepts.md#implementations) topic in the next section, Basic Concepts.
 - The Python `venv` module: <https://docs.python.org/3/library/venv.html>
