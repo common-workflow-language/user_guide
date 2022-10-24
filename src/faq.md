@@ -452,20 +452,9 @@ Each item in the argument list must be joined into a string separated by single 
 
 If `shellQuote: false` is specified, the argument is joined into the command string without quoting, which allows the use of shell metacharacters such as `|` for pipes.
 `ShellCommandRequirement` in CWL allows us to use `/bin/sh -c` in order to pass our command as a string to a shell intrepreter. `ShellQuote:false` leaves shell metacharacters unquoted, and thus they can still be interpreted and used by a shell.  
-From CommandLineTool.job():
 
-```
-shellcmd, _ = self.get_requirement("ShellCommandRequirement")
-    if shellcmd is not None:
-        cmd = []  # type: List[Text]
-        for b in builder.bindings:
-            arg = builder.generate_arg(b)
-            if b.get("shellQuote", True):
-                arg = [shellescape.quote(a) for a in aslist(arg)]
-            cmd.extend(aslist(arg))
-        j.command_line = ["/bin/sh", "-c", " ".join(cmd)]
-```  
-Without the `ShellCommandRequirement` the job will run with subprocess.Popen(shell=False) and thus no shell metacharacters can be used.
+To use the `ShellCommandRequirement`, you need to pass in the class name `ShellCommandRequirement` as a string.
+
 
 ## Debug JavaScript expressions
 
