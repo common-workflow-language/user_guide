@@ -446,6 +446,16 @@ The reference runner and several other CWL implementations support running
 those Docker format containers using the Singularity engine. Directly
 specifying a Singularity format container is not part of the CWL standards.
 
+## Shell Command Requirement
+`ShellCommandRequirement` in CWL is used to convert a list of arguments into a string containing a shell command line.  
+Each item in the argument list must be joined into a string separated by single spaces and quoted to prevent intepretation by the shell, unless `CommandLineBinding` for that argument contains `shellQuote: false`.  
+
+If `shellQuote: false` is specified, the argument is joined into the command string without quoting, which allows the use of shell metacharacters such as `|` for pipes.
+`ShellCommandRequirement` in CWL allows us to use `/bin/sh -c` in order to pass our command as a string to a shell intrepreter. `ShellQuote:false` leaves shell metacharacters unquoted, and thus they can still be interpreted and used by a shell.  
+
+To use the `ShellCommandRequirement`, you need to pass in the class name `ShellCommandRequirement` as a string.
+
+
 ## Debug JavaScript expressions
 
 You can use the <code>--js-console</code> option of <code>cwltool</code>, or you can try
