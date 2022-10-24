@@ -7,7 +7,7 @@ customisation/configuration of a tool/analysis without the need to fiddle with
 the CWL description directly.
 
 The example below is a CWL description of the [biom convert format][biom] tool for
-converting a standard biom table file to hd5 format.
+converting a standard biom table file to hdf5 format.
 
 ```{literalinclude} /_includes/cwl/custom-types/custom-types.cwl
 :language: cwl
@@ -21,7 +21,7 @@ converting a standard biom table file to hd5 format.
 :name: custom-types.yml
 ```
 
-___Note:___ To follow the example below, you need to [download the example input file](https://raw.githubusercontent.com/common-workflow-language/user_guide/main/_includes/cwl/custom-types/rich_sparse_otu_table.biom), *rich_sparse_otu_table.biom* e.g. via `wget`:
+___Note:___ To follow the example below, you need to [download the example input file](https://github.com/common-workflow-language/user_guide/blob/main/src/_includes/cwl/custom-types/rich_sparse_otu_table.biom), *rich_sparse_otu_table.biom* e.g. via `wget`:
 
 ```{code-block} console
 $ wget https://github.com/common-workflow-language/user_guide/raw/main/src/_includes/cwl/custom-types/rich_sparse_otu_table.biom
@@ -48,7 +48,7 @@ the object is defined (`biom-convert-table.yaml`) and the name of the object
 within that file (`table_type`) that defines the custom type. In this case the `symbols`
 array from the imported `biom-convert-table.yaml` file define the allowable table options.
 For example, in `custom-types.yml`, we pass `OTU table` as an `input` that
-tells the tool to create an OTU table in hd5 format.
+tells the tool to create an OTU table in hdf5 format.
 
 The contents of the YAML file describing the custom type are given below:
 

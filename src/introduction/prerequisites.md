@@ -63,7 +63,7 @@ You can find the `cwl-runner` [source code](https://github.com/common-workflow-l
 Visit the `cwltool` [documentation](https://github.com/common-workflow-language/cwltool#install)
 for other ways to install `cwltool` with `apt` and `conda`.
 ```
-Let's use a simple CWl tool description `true.cwl` with `cwltool`.
+Let's use a simple CWL tool description `true.cwl` with `cwltool`.
 
 ```{literalinclude} /_includes/cwl/true.cwl
 :language: yaml
