@@ -22,7 +22,7 @@ The CWL specification is a document written and maintained by the CWL community.
 The specification has different versions. The version covered in this user guide
 is the {{ cwl_version }}.
 
-The specification version can have up to three numbers separated by `.`'s (dots).
+The specification version can have up to three numbers separated by `.`s (dots).
 The first number is the major release, used for backward-incompatible changes like
 the removal of deprecated features. The second number is the minor release,
 used for new features or smaller changes that are backward-compatible. The last number
@@ -109,10 +109,10 @@ behavior of a process can be affected by the inputs, requirements, and hints.
 There are four types of processes defined in the CWL specification
 {{ cwl_version }}:
 
-- A command-line tool;
-- An expression tool;
-- An operation;
-- And a workflow.
+- A command-line tool.
+- An expression tool.
+- An operation.
+- A workflow.
 
 {{ CWL_PROCESSING_UNITS_GRAPH }}
 
@@ -121,8 +121,12 @@ A command-line tool is a wrapper for a command-line utility like `echo`,
 
 An expression tool is a wrapper for a JavaScript expression. It can
 be used to simplify workflows and command-line tools, moving common
-parts of a workflow execution into reusable JavaScript code, that
+parts of a workflow execution into reusable JavaScript code that
 takes inputs and produces outputs like a command-line tool.
+
+Operation is an abstract process that also takes inputs, produces
+outputs, and can be used in a workflow. But it is a special operation
+not so commonly used. It is discussed in the [Operations section](../topics/operations.md) of this user guide.
 
 The workflow is a process that contains steps. Steps can be other
 workflows (nested workflows), command-line tools, or expression tools.
@@ -130,17 +134,13 @@ The inputs of a workflow can be passed to any of its steps, while
 the outputs produced by its steps can be used in the final output
 of the workflow.
 
-Operation is an abstract process that also takes inputs, produces
-outputs, and can be used in a workflow. But it is a special operation
-not so commonly used. It is discussed in the [Operations section](../topics/operations.md) of this user guide.
-
 The CWL specification allows for implementations to provide extra
 functionality and specify prerequisites to workflows through *requirements*.
 There are many requirements defined in the CWL specification, for instance:
 
-- `InlineJavascriptWorkflow`, enables JavaScript in expressions.
-- `SubworkflowFeatureRequirement`, enables nested workflows.
-- `InitialWorkDirRequirement`, controls staging files in the input directory.
+- `InlineJavascriptWorkflow` - enables JavaScript in expressions.
+- `SubworkflowFeatureRequirement` - enables nested workflows.
+- `InitialWorkDirRequirement` - controls staging files in the input directory.
 
 Some CWL runners may provide requirements that are not in the specification.
 For example, GPU requirements are supported in `cwltool` through the
@@ -159,8 +159,8 @@ in detail in the [Requirements](../topics/requirements-and-hints.md) section.
 > machine accessibility and that all digital assets should be Findable,
 > Accessible, Interoperable, and Reusable. Workflows encode the methods
 > by which the scientific process is conducted and via which data are
-> created. It is thus important that workflows both support the creation
-> of FAIR data and themselves adhere to the FAIR principles.
+> created. It is thus important that workflows support the creation
+> of FAIR data and adhere to the FAIR principles.
 > — [FAIR Computational Workflows](https://workflows.community/groups/fair/),
 > Workflows Community Initiative.
 
