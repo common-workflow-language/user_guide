@@ -119,7 +119,7 @@ source venv/bin/activate
 (venv) pip install ".[all]"
 # Create the HTML to visualize locally
 (venv) make html
-(venv) open _build/index.html
+(venv) open _build/html/index.html
 # Or you can start a serve that watches for local file changes
 (venv) make watch
 # Open <http://localhost:8000/> in your browser
@@ -148,7 +148,7 @@ are still working after the change.
 Use “tool description” not “tool wrapper” for describing the first argument
 given to the `cwl-runner` or `cwltool` commands.
 
-### Code examples
+### Code Examples
 
 To include code into a Markdown file you have two options. For external files use
 the following command:
