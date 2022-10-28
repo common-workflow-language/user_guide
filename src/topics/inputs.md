@@ -143,9 +143,9 @@ The `baseCommand` field will always appear in the final command line before the 
 
 [touch]: http://www.linfo.org/touch.html
 
-### Optional Input Parameters
+### Optional fields on the Input Parameter
 
-Optional input parameters must include `label` and `secondaryFiles`.
+Optional fields on the input parameters include `label`, `doc` and `secondaryFiles`.
 `label` is a short, human-readable description for the parameter.
 
 ```cwl
@@ -157,30 +157,141 @@ inputs:
       position: 1
 ```
 
-`secondaryFiles` is an optional input parameter that provides a pattern of specifying files
-or directories that must be included alongside the primary file. 
+`doc` is a documentation string for the object, or an array of strings which should be concatenated.
+
+```cwl
+inputs:
+  example_file:
+    type: File
+    doc: This section demonstrates Optional fields on the Input Parameter 
+    inputBinding:
+      position: 1
+ ```
+
+`secondaryFiles` is an optional field on the input parameter that provides a pattern of specifying files
+or directories that must be included alongside the primary file.
+Take for example, an HTML document containing an image;
+the HTML document is the primary file, while the image is a secondary file. 
+The `src` attribute is used to reference the image path from your local directory,
+which then stages the img file within the HTML document.
+
+Secondary files may be required or optional. When not explicitly specified,
+secondary files specified for inputs are required while secondary files specified for outputs are optional. 
+To use `secondaryFiles`, make your primary file 
+(the script you will actually run) a default input and list the other dependencies as `secondaryFiles`.
+An implementation must include matching Files and Directories in the `secondaryFiles` property of the primary file.
 The following example demonstrates the `secondaryFiles` input parameter.
 
 ```cwl
 inputs:
   example_file:
     type: File
-    secondaryFiles: [example_file.txt]
+    secondaryFiles: [.idx]
 ```
 
-Also, a file object listed in `secondaryFiles` may contain nested `secondaryFiles` as shown below:
+The fields within secondary files are `pattern` and `required`.
+Secondary files are specified using the following micro-DSL for secondary files:
+- If the value is a string, it is transformed to an object with two fields `pattern` and `required`.
+- By default, the value of `required` is null (this indicates default behavior, which may be based on the context).
+- If the value ends with a question mark "?", the question mark is stripped off and the value of the field `required` is set to False.
+- The remaining value is assigned to the field `pattern`.
+
+`pattern` in this context refers how we can reference secondary files,
+with respect to the value, ie if it is an expression, or a string.
+If the value is an expression, the value of self in the expression must be
+the primary input or output File object to which this binding applies.
+The basename, nameroot and nameext fields must be present in self. 
+For CommandLineTool outputs, the path field must also be present. 
+The expression must return a filename string relative to the path to the primary File, 
+a File or Directory object with either path or location and basename fields set, 
+or an array consisting of strings or File or Directory objects. 
+It is legal to reference an unchanged File or Directory object taken from input as a `secondaryFile`. 
+The expression may return "null" in which case there is no `secondaryFile` from that expression.
+
+To work on non-filename-preserving storage systems, 
+portable tool descriptions should avoid constructing new values from location, 
+but should construct relative references using basename or nameroot instead.
+
+If a value in `secondaryFiles` is a string that is not an expression, 
+it specifies that the following pattern should be applied to the path of the primary file 
+to yield a filename relative to the primary File:
+
+- If string begins with one or more caret "^" characters, for each caret, remove the last file extension from the path
+(the last period . and all following characters).
 
 ```{code-block} cwl
 inputs:
   example_file:
     type: File
-    secondaryFiles: [
-            {
-                example_file.txt
-                secondaryFiles: [example_file_2.txt]
-            }
-        ]
+    secondaryFiles: [^.idx]
 ```
+
+this will give "example_file.idx".
+
+- If string ends with "?" character, remove the last "?" and mark the resulting secondary file as optional.
+- If there are no file extensions, the path is unchanged.
+Append the remainder of the string to the end of the file path.
+
+For example, given the following schema:
+
+```{code-block} cwl
+{
+  "$graph": [
+  {
+    "name": "SecondaryFilesDSLExample",
+    "type": "record",
+    "documentRoot": true,
+    "fields": [{
+      "name": "secondaryFiles",
+      "type": "string",
+      "jsonldPredicate": {
+        _type: "@vocab",
+        "secondaryFilesDSL": true
+      }
+    }]
+  }]
+}
+Process the following example:
+
+[{
+  "secondaryFiles": ".bai"
+}, {
+  "secondaryFiles": ".bai?"
+}, {
+  "secondaryFiles": {
+    "pattern": ".bai?"
+}, {
+  "secondaryFiles": {
+    "pattern": ".bai?",
+    "required": true
+}]
+This becomes:
+
+[
+    {
+        "secondaryFiles": {
+          "pattern": ".bai",
+          "required": null
+    },
+    {
+        "secondaryFiles": {
+          "pattern": ".bai",
+          "required": false
+    },
+    {
+        "secondaryFiles": {
+          "pattern": ".bai?"
+    },
+    {
+        "secondaryFiles": {
+          "pattern": ".bai?",
+          "required": true
+    },
+]
+```
+
+An implementation must not fail workflow execution if `required` is set to false and the expected secondary file does not exist.
+Default value for required field is true for secondary files on input, and false for secondary files on output.
 
 Note that secondary files are only valid when `type` has a value `File`, or is an array of `items: File`.
 All listed secondary files must be present in the same directory as the primary file,
@@ -192,7 +303,7 @@ It is easy to add arrays of input parameters represented to the command
 line. There are two ways to specify an array parameter. First is to provide
 `type` field with `type: array` and `items` defining the valid data types
 that may appear in the array. Alternatively, brackets `[]` may be added after
-the `type: name` to indicate that the input parameter is an array of that type.
+the type name to indicate that the input parameter is an array of that type.
 
 ```{literalinclude} /_includes/cwl/inputs/array-inputs.cwl
 :language: cwl
