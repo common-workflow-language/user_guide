@@ -78,8 +78,8 @@
 	},
         {
             "name": "Michael R. Crusoe",
-            "orcid": "https://orcid.org/0000-0002-2961-9670",
-            "affiliation": "Common Workflow Language project"
+	    "affiliation": "Common Workflow Language project",
+            "orcid": "https://orcid.org/0000-0002-2961-9670"
         },
 	{
             "name": "Ruth B. McCole",
