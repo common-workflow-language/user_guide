@@ -10,6 +10,9 @@ The following example contains a minimal example of a CWL
 command-line tool for the `echo` Linux command, using inputs and
 outputs.
 
+How Command-lines work
+A Command Line Tool is a non-interactive executable program that reads some input, performs a computation, and terminates after producing some output. Command line programs are a flexible unit of code sharing and reuse, unfortunately the syntax and input/output semantics among command line programs is extremely heterogeneous. A common layer for describing the syntax and semantics of programs can reduce this incidental complexity by providing a consistent way to connect programs together. This specification defines the Common Workflow Language (CWL) Command Line Tool Description, a vendor-neutral standard for describing the syntax and input/output semantics of command line programs.
+
 % TODO: Fix the missing link the graph below. We cannot have
 %       it here as this file is included in two other files.
 %       Sphinx prohibits it for the case where this could lead
@@ -63,7 +66,70 @@ and in the [Outputs](../topics/outputs.md) sections.
 %
 % - Spaces in commands https://github.com/common-workflow-language/user_guide/issues/39
 % - Arguments (tell the reader the different use cases for arguments and inputs, tell them there is a section about inputs)
+Different use cases for arguments and inputs
+Available primitive types are string, int, long, float, double, and null; complex types are array and record; in addition there are special types File, Directory and Any.
 
+The following example demonstrates some input parameters with different types and appearing on the command line in different ways.
+
+First, create a file called inp.cwl, containing the following:
+
+inp.cwl
+#!/usr/bin/env cwl-runner
+
+cwlVersion: v1.0
+class: CommandLineTool
+baseCommand: echo
+inputs:
+  example_flag:
+    type: boolean
+    inputBinding:
+      position: 1
+      prefix: -f
+  example_string:
+    type: string
+    inputBinding:
+      position: 3
+      prefix: --example-string
+  example_int:
+    type: int
+    inputBinding:
+      position: 2
+      prefix: -i
+      separate: false
+  example_file:
+    type: File?
+    inputBinding:
+      prefix: --file=
+      separate: false
+      position: 4
+
+outputs: []
+
+Sometimes tools require additional command line options that don’t correspond exactly to input parameters.
+
+In this example, we will wrap the Java compiler to compile a java source file to a class file. By default, “javac” will create the class files in the same directory as the source file. However, CWL input files (and the directories in which they appear) may be read-only, so we need to instruct “javac” to write the class file to the designated output directory instead.
+
+arguments.cwl
+#!/usr/bin/env cwl-runner
+
+cwlVersion: v1.0
+class: CommandLineTool
+label: Example trivial wrapper for Java 9 compiler
+hints:
+  DockerRequirement:
+    dockerPull: openjdk:9.0.1-11-slim
+baseCommand: javac
+arguments: ["-d", $(runtime.outdir)]
+inputs:
+  src:
+    type: File
+    inputBinding:
+      position: 1
+outputs:
+  classfile:
+    type: File
+    outputBinding:
+      glob: "*.class"
 
 ## Network Access
 This indicates whether a process requires outgoing IPv4/IPv6 network access.
