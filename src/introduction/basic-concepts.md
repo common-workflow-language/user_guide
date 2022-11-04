@@ -9,8 +9,8 @@ content, you may want to skip this section.
 
 ## The CWL Specification
 
-```{include} /_includes/what-is-cwl.md
-```
+[comment]:< ```{include} /_includes/what-is-cwl.md>
+[comment]:<```>
 
 ```{image} /_static/images/logos/cwl/CWL-Logo-HD-cropped2.png
 :name: cwl-logo
