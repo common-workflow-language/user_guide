@@ -10,8 +10,12 @@ The following example contains a minimal example of a CWL
 command-line tool for the `echo` Linux command, using inputs and
 outputs.
 
-How Command-lines work
-A Command Line Tool is a non-interactive executable program that reads some input, performs a computation, and terminates after producing some output. Command line programs are a flexible unit of code sharing and reuse, unfortunately the syntax and input/output semantics among command line programs is extremely heterogeneous. A common layer for describing the syntax and semantics of programs can reduce this incidental complexity by providing a consistent way to connect programs together. This specification defines the Common Workflow Language (CWL) Command Line Tool Description, a vendor-neutral standard for describing the syntax and input/output semantics of command line programs.
+HOW COMMAND LINES WORK
+The command line is a text interface for your computer. It’s a program that takes in commands, which it passes on to the computer’s operating system to run. From the command line, you can navigate through files and folders on your computer, just as you would with Windows Explorer on Windows or Finder on Mac OS. The difference is that the command line is fully text-based. Abbreviated as CLI, a Command Line Interface connects a user to a computer program or operating system. Through the CLI, users interact with a system or application by typing in text (commands). The command is typed on a specific line following a visual prompt from the computer. Abbreviated as CLI, a Command Line Interface connects a user to a computer program or operating system. Through the CLI, users interact with a system or application by typing in text (commands). The command is typed on a specific line following a visual prompt from the computer.
+
+
+
+
 
 % TODO: Fix the missing link the graph below. We cannot have
 %       it here as this file is included in two other files.
