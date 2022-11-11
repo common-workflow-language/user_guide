@@ -58,19 +58,23 @@ digraph G {
 :language: cwl
 :caption: "`echo.cwl`"
 ```
-
 ```{note}
-
-The example above uses a simplified form to define inputs and outputs.
-You will learn more about in the [Inputs](../topics/inputs.md)
+The example above uses a simplified form to define inputs and outputs.You will learn more about in the [Inputs](../topics/inputs.md)
 and in the [Outputs](../topics/outputs.md) sections.
 ```
-
 % TODO
 %
 % - Spaces in commands https://github.com/common-workflow-language/user_guide/issues/39
 % - Arguments (tell the reader the different use cases for arguments and inputs, tell them there is a section about inputs)
-Different use cases for arguments and inputs
+DIFFERENCES BEWTWEEN ARGUMENTS AND INPUTS 
+Command line arguments are given to an application before it is run. For example First we give the app JavaProgram the command line arguments 30, 91, only then do we hit Enter and run it as a Java program. On the other hand, input can be given to an application during its run, because it can only ask for input after it started running. For that reason, we can print some text to the user before asking for input, indicating what input we are expecting for, etc.
+The second difference is that Input can be taken any number of times. For that reason, input can be interactive - the system can take input, then respond according to it, then take more input, etc. Command line arguments are taken once, therefore can not be used to manage any interactiveness. 
+You will learn more about inputs in section 2.4
+USE CASES FOR THE COMMAND LINE ARGUMENTS
+Command line arguments are extra commands you can use when launching a  program so that the program's functionality will change.  Depending on the program, these arguments can be used to add more features that includes specifying a file that output should be logged to, specifying a default document to launch, or to enable features that may be a bit buggy for normal use.
+A command line argument is simply anything we enter after the executable name.  for example, if we launched Notepad using the command C:\Windows\System32\notepad.exe /s, then /s would be the command line argument we used.
+It is important to note that you must add a space betten the program you want to run and the command line argument. For example notepad.exe/s is not a valid argument because it does not contain aspace. Instead  you must add a space so it looks like notpad.exe /s.
+
 Available primitive types are string, int, long, float, double, and null; complex types are array and record; in addition there are special types File, Directory and Any.
 
 The following example demonstrates some input parameters with different types and appearing on the command line in different ways.
