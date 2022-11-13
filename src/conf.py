@@ -157,6 +157,10 @@ html_theme = 'pydata_sphinx_theme'
 # so a file named "default.css" will overwrite the builtin "default.css".
 html_static_path = ['_static']
 
+html_css_files = [
+    'css/custom.css',
+]
+
 html_logo = '_static/images/logos/cwl/CWL-Logo-HD-cropped2.png'
 html_favicon = '_static/images/favicons/cwl/favicon.ico'
 
