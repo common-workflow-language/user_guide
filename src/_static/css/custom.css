@@ -1,0 +1,10 @@
+body {
+    /*
+     * These settings are copied from the https://commonwl.org website style
+     * for consistency.
+     */
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    font-size: 16px;
+    line-height: 24px;
+    color: rgb(33, 37, 41);
+}
