@@ -59,7 +59,6 @@ $ (venv) pip install cwltool
 ```
 
 ```{note}
-You can find the `cwl-runner` [source code](https://github.com/common-workflow-language/cwltool/tree/main/cwlref-runner) in the `cwltool` repository.
 Visit the `cwltool` [documentation](https://github.com/common-workflow-language/cwltool#install)
 for other ways to install `cwltool` with `apt` and `conda`.
 ```
@@ -91,9 +90,12 @@ You can run the CWL tool description by omitting the `--validate` option:
 
 ### Cwl-runner Python Module
 
-`cwl-runner` is an implementation-agnostic alias for CWL Runners. This simply means that the `cwl-runner` alias command can be invoked independently, and is not reliant on a particular CWL runner.
+`cwl-runner` is an implementation-agnostic alias for any CWL compliant runner. This simply means
+that the `cwl-runner` alias command can be invoked independently, and is not reliant on a particular
+CWL runner program name.
 Users can invoke `cwl-runner` instead of invoking a CWL runner like `cwltool`
-directly. The `cwl-runner` alias command then chooses the correct CWL runner.
+directly. The `cwl-runner` is installed by a system administrator or user to point to the preferred
+CWL implementation.
 This is convenient for environments with multiple CWL runners.
 
 The CWL community publishes a Python package with the name `cwlref-runner` that installs
@@ -153,7 +155,7 @@ The *shebang* is the two-character sequence `#!` at the beginning of a
 script. When the script is executable, the operating system will execute
 the script using the executable specified after the shebang. It is
 considered a good practice to use `/usr/bin/env <executable>` rather than using a hard-coded location, since `/usr/bin/env <executable>`
-looks for the `<executable>` program in the system `PATH`, 
+looks for the `<executable>` program in the system `PATH`,
 ```
 
 ## Text Editor

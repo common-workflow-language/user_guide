@@ -33,7 +33,7 @@ watch: clean
 
 ## unittest-examples	:
 unittest-examples:
-	cd src/_includes/cwl; cwltest --test=conformance-test.yml --tool=${RUNNER}
+	cd src/_includes/cwl; cwltest --test=cwl_tests.yml --tool=${RUNNER}
 
 ## check-json			:
 check-json:

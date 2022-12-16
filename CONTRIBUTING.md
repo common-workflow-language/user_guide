@@ -148,7 +148,10 @@ are still working after the change.
 Use “tool description” not “tool wrapper” for describing the first argument
 given to the `cwl-runner` or `cwltool` commands.
 
+
 ### Code Examples
+
+All CWL documents should be version 1.2 unless there is a very good reason otherwise.
 
 To include code into a Markdown file you have two options. For external files use
 the following command:

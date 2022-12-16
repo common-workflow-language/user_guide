@@ -83,7 +83,8 @@ outputs:
 
 There are two ways to reference a local script:
 
-The first method involves adding the folder containing your scripts to the `PATH` environment variable. This allows you to run the shell script without using `sh` or `bash` commands.
+The first method involves adding the folder containing your scripts to the `PATH` environment variable.
+This allows you to run the shell script directly without using `sh` or `bash` commands.
 
 Start with adding a _shebang_ at the top of your file:
 
@@ -97,7 +98,7 @@ Finally, modify your `PATH` to add the directory where your script is located.
 (It is good practice to use `$HOME/bin` for storing your own scripts).
 
 ```bash
-export PATH=$PATH:/appropriate/directory
+export PATH=$PATH:$HOME/bin
 ```
 
 Now you can use `baseCommand: scriptname.sh` to run the script directly.
