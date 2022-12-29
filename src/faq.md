@@ -447,6 +447,9 @@ The reference runner and several other CWL implementations support running
 those Docker format containers using the Singularity engine. Directly
 specifying a Singularity format container is not part of the CWL standards.
 
+## How outputBinding.glob works
+The `outputBinding` section describes how to set the value of each output parameter.  The `glob` field is used to return all file paths that match a specific pattern. The value of the glob field is the `output directory ` Wildcard characters can be used in the filenames when searching for files.
+
 ## Debug JavaScript Expressions
 
 You can use the <code>--js-console</code> option of <code>cwltool</code>, or you can try
