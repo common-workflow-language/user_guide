@@ -171,6 +171,10 @@ html_extra_path = [
 ]
 
 html_theme_options = {
+    "external_links": [
+      {"name": "Community", "url": "https://www.commonwl.org/community/"},
+    ],
+    "header_links_before_dropdown": 6,
     "icon_links": [
         {
             "name": "GitHub",
