@@ -40,10 +40,13 @@ class Singleton(_Singleton("SingletonMeta", (object,), {})):
 
 class CMDCache(Singleton):
     cache = {}
+    exclude_cache_cmd = {hash("cat output.txt")}
 
     def get(self, cmd, working_directory):
         h = hash(cmd)
-        if h in self.cache:
+        if h in self.exclude_cache_cmd:
+            return run_command(cmd, working_directory)
+        elif h in self.cache:
             return self.cache[h]
         else:
             result = run_command(cmd, working_directory)
