@@ -121,7 +121,8 @@ redirects = {
     'setup.md': 'introduction/prerequisites.html',
     'extras.md': '/index.html',
     'yaml/index.md': '../topics/yaml-guide.html',
-    'CODE_OF_CONDUCT.html': 'https://github.com/common-workflow-language/user_guide/blob/main/CODE_OF_CONDUCT.md'
+    'CODE_OF_CONDUCT.html': 'https://github.com/common-workflow-language/user_guide/blob/main/CODE_OF_CONDUCT.md',
+    'Community.html': 'https://www.commonwl.org/community/'
 }
 
 # -- Options for Pygments ----------------------------------------------------

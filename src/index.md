@@ -36,6 +36,7 @@ topics/index.md
 tutorials.md
 faq.md
 LICENSE.md
+Community.md
 ```
 
 [repo]: https://github.com/common-workflow-language/user_guide/issues
