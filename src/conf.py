@@ -122,7 +122,7 @@ redirects = {
     'extras.md': '/index.html',
     'yaml/index.md': '../topics/yaml-guide.html',
     'CODE_OF_CONDUCT.html': 'https://github.com/common-workflow-language/user_guide/blob/main/CODE_OF_CONDUCT.md',
-    'Community.html': 'https://www.commonwl.org/community/'
+    'community.html': 'https://www.commonwl.org/community/'
 }
 
 # -- Options for Pygments ----------------------------------------------------
@@ -179,6 +179,7 @@ html_theme_options = {
             "icon": "fab fa-github-square",
         },
     ],
+    "header_links_before_dropdown": 6,
     # "switcher": {
     #     "json_url": json_url,
     #     "version_match": version_match,
