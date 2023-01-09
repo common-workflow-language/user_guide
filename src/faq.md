@@ -135,7 +135,7 @@ outputs: []
 In CWL, everything must be directly stated.
 ```
 
-## Setting `self`-based Input Bindings for Optional Inputs
+## How can I set `self`-based input bindings for optional inputs?
 
 Currently, `cwltool` can't cope with missing optional inputs if their
 input binding makes use of `self`.
