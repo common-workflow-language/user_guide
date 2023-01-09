@@ -38,7 +38,7 @@ outputs:
        outputEval: $(self[0].contents)
 ```
 
-## Rename an Input File
+## How do I rename an input file?
 
 This example demonstrates how to change the name of an input file
 as part of a tool description.
@@ -56,7 +56,7 @@ requirements:
         entryName: $(inputs.src1.basename)_custom_extension
 ```
 
-## Rename an Output File
+## How do I rename an output file?
 
 This example demonstrates how to change the name of an output file
 from the default name given to it by a tool:
