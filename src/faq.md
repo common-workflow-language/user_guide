@@ -79,7 +79,7 @@ outputs:
       outputEval: ${self[0].basename=inputs.otu_table_name; return self;}
 ```
 
-## Referencing a Local Script
+## How do I reference a local script?
 
 There are two ways to reference a local script:
 
