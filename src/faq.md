@@ -8,7 +8,7 @@
 :backlinks: "top"
 ```
 
-## Non "`File`" Types Using `evalFrom`
+## How do I create non "`File`" types using `evalFrom`?
 
 ```yaml
 cwlVersion: v1.0  # or v1.1
