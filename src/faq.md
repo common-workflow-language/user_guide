@@ -356,7 +356,7 @@ input:
      My String: $(input.stringvalue)
 ```
 
-## `cwltool` Errors due to Filenames with Space Characters Inside
+## I get `cwltool` errors due to filenames with space characters inside. What should I do?
 
 `cwltool` does not allow some characters in filenames by default.
 
@@ -370,7 +370,7 @@ Invalid filename: 'a space is here.txt' contains illegal characters
 
 If you can not avoid these dangerous characters, then pass `--relax-path-checks` to `cwltool`.
 
-## CWL Parameter Reference Error due to Hyphen in Input Identifier
+## What should I do when I get CWL Parameter Reference error due to hyphen in input identifier
 
 If `cwltool --validate` returns valid
 
