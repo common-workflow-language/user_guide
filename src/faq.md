@@ -245,7 +245,7 @@ inputs:
       prefix: "--casava"
 ```
 <a name="enuminputs"></a>
-## How do enum Inputs work?⚜️
+## How do enum inputs work?⚜️
 
 For command line flags that require a specific input as the argument an enum type can be declared in CWL. **Specifying null here is known as long form style. It does the same thing as the question mark on the other inputs.**
 
