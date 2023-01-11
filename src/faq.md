@@ -346,7 +346,7 @@ These can be set by using the default field
 input:
   default:true
 ```
-## Concatenating Strings in Inputs
+## What Should I Do When Concatenating Strings in Inputs?
 
 The valueFrom field must be used instead of default.
 
