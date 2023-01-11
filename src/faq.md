@@ -226,7 +226,7 @@ outputs:
     type: File
     outputSource: first/txt
 ```
-## Optional Inputs 💯
+## How do make an input optional? 💯
 
 To make an input parameter optional, add a question mark to the type declaration.
 
