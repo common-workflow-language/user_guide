@@ -185,7 +185,7 @@ baseCommand: echo
 outputs: []
 ```
 
-## Connect a Solo Value to an Input that Expects an Array of that Type
+## How do I connect a solo value to an input that expects an array of that type
 
 Using [`MultipleInputFeatureRequirement`](https://www.commonwl.org/v1.0/Workflow.html#MultipleInputFeatureRequirement)
 along with
