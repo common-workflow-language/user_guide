@@ -265,7 +265,7 @@ Format:
     prefix: "--format"
 ```
 <a name="recordinputs"></a>
-## Record Inputs 📀
+## How do record inputs work? 📀
 
 For commandline flags that are either **mutually exclusive** or **dependent** a special record type can be defined. You can also specify null here to create optional inputs.
 
