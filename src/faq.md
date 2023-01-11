@@ -162,7 +162,7 @@ baseCommand: echo
 outputs: []
 ```
 
-## How can I model a "one-or-the-other" parameter
+## How can I model a "one-or-the-other" parameter?
 
 Below is an example showing how
 to specify different strings to be added to a command line,
@@ -185,7 +185,7 @@ baseCommand: echo
 outputs: []
 ```
 
-## How do I connect a solo value to an input that expects an array of that type
+## How do I connect a solo value to an input that expects an array of that type?
 
 Using [`MultipleInputFeatureRequirement`](https://www.commonwl.org/v1.0/Workflow.html#MultipleInputFeatureRequirement)
 along with
@@ -319,7 +319,7 @@ For commandline flags that are either **mutually exclusive** or **dependent** a 
             inputBinding:
               prefix: "--chromosomes"
 ```
-## How Do I Set Mutually Exclusive Parameters?
+## How do I set mutually exclusive parameters?
 
 To properly set fields in a record input type, you need to pass a dictionary to the input to properly set the parameters. This is done by using inline JavaScript and returning the dictionary with the key of the field you want to set. The source field is set to indicate the input from the workflow to be used as the value.
 
@@ -339,7 +339,7 @@ steps:
     out: [indexes]
 ```
 
-## How can I Set Booleans?
+## How can I set Booleans?
 
 These can be set by using the default field
 ```yaml
