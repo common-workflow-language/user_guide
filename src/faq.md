@@ -319,7 +319,7 @@ For commandline flags that are either **mutually exclusive** or **dependent** a 
             inputBinding:
               prefix: "--chromosomes"
 ```
-## Setting Mutually Exclusive Parameters
+## How Do I Set Mutually Exclusive Parameters?
 
 To properly set fields in a record input type, you need to pass a dictionary to the input to properly set the parameters. This is done by using inline JavaScript and returning the dictionary with the key of the field you want to set. The source field is set to indicate the input from the workflow to be used as the value.
 
