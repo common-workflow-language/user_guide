@@ -370,7 +370,7 @@ Invalid filename: 'a space is here.txt' contains illegal characters
 
 If you can not avoid these dangerous characters, then pass `--relax-path-checks` to `cwltool`.
 
-## What should I do when I get CWL Parameter Reference error due to hyphen in input identifier
+## What should I do when I get CWL Parameter Reference error due to hyphen in input identifier?
 
 If `cwltool --validate` returns valid
 
@@ -439,7 +439,7 @@ If it is not possible to change the input identifier, then you can use an altern
 valueFrom: $(inputs["sample-input"])
 ```
 
-## Use CWL and cwltool with Singularity
+## How do I use CWL and cwltool with Singularity?
 
 <!-- https://matrix.to/#/!RQMxrGNGkeDmWHOaEs:gitter.im/$f1B-ytoep4PX3_tTgxaADRQFHGgisGiUL1nUHVQPBnY?via=gitter.im&via=matrix.org&via=gottliebtfreitag.de -->
 The CWL standards are built around (optional) Docker format containers.
