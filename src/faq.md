@@ -162,7 +162,7 @@ baseCommand: echo
 outputs: []
 ```
 
-## Model a "one-or-the-other" Parameter
+## How can I model a "one-or-the-other" parameter
 
 Below is an example showing how
 to specify different strings to be added to a command line,
