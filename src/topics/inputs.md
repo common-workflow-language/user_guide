@@ -143,9 +143,8 @@ The `baseCommand` field will always appear in the final command line before the 
 
 [touch]: http://www.linfo.org/touch.html
 
-### Optional fields on the Input Parameter
+### Documenting input parameters using `label` or `doc`
 
-Optional fields on the input parameters include `label`, `doc` and `secondaryFiles`.
 `label` is a short, human-readable description for the parameter.
 
 ```cwl
@@ -168,25 +167,38 @@ inputs:
       position: 1
  ```
 
-`secondaryFiles` is an optional field on the input parameter that provides a pattern of specifying files
-or directories that must be included alongside the primary file.
-Take for example, an HTML document containing an image;
-the HTML document is the primary file, while the image is a secondary file. 
-The `src` attribute is used to reference the image path from your local directory,
-which then stages the img file within the HTML document.
+ ````{note}
+ `label` and `doc` fields can also be used to document output parameters.
+ ````
 
-Secondary files may be required or optional. When not explicitly specified,
-secondary files specified for inputs are required while secondary files specified for outputs are optional. 
-To use `secondaryFiles`, make your primary file 
-(the script you will actually run) a default input and list the other dependencies as `secondaryFiles`.
+### Attaching Secondary files to the inputs file
+
+Secondary files are input files that should be staged in the same directory as the input files.
+The `secondaryFiles` field can define files or directories that can be automatically uploaded with the primary input file.
+For example, if the primary input is an HTML file (.html), an image file (.png or .jpg) could be included as a secondary file.
+ 
+The use of secondary files are optional for inputs. However, if secondary files are defined for an input file,
+they should exist. An implementation may fail workflow execution if an expected secondary file does not exist.
+
+Secondary files can also be used for output files.
+When defining primary and secondary files in your CWL workflow, 
+use the input parameter to specify your primary files, and use the `secondaryFiles` property to define your secondary files.
 An implementation must include matching Files and Directories in the `secondaryFiles` property of the primary file.
 The following example demonstrates the `secondaryFiles` input parameter.
 
 ```cwl
-inputs:
-  example_file:
-    type: File
-    secondaryFiles: [.idx]
+{
+  basename: example_file.bam
+  class: File
+  location: ../documents/example_file.bam
+  secondaryFiles: [
+    {
+      basename: example_file.bai,
+      class: File,
+      location: ../documents/example_file.bam.bai
+    }   
+  ]
+}
 ```
 
 The fields within secondary files are `pattern` and `required`.
@@ -232,70 +244,15 @@ this will give "example_file.idx".
 - If there are no file extensions, the path is unchanged.
 Append the remainder of the string to the end of the file path.
 
-For example, given the following schema:
-
-```{code-block} cwl
-{
-  "$graph": [
-  {
-    "name": "SecondaryFilesDSLExample",
-    "type": "record",
-    "documentRoot": true,
-    "fields": [{
-      "name": "secondaryFiles",
-      "type": "string",
-      "jsonldPredicate": {
-        _type: "@vocab",
-        "secondaryFilesDSL": true
-      }
-    }]
-  }]
-}
-Process the following example:
-
-[{
-  "secondaryFiles": ".bai"
-}, {
-  "secondaryFiles": ".bai?"
-}, {
-  "secondaryFiles": {
-    "pattern": ".bai?"
-}, {
-  "secondaryFiles": {
-    "pattern": ".bai?",
-    "required": true
-}]
-This becomes:
-
-[
-    {
-        "secondaryFiles": {
-          "pattern": ".bai",
-          "required": null
-    },
-    {
-        "secondaryFiles": {
-          "pattern": ".bai",
-          "required": false
-    },
-    {
-        "secondaryFiles": {
-          "pattern": ".bai?"
-    },
-    {
-        "secondaryFiles": {
-          "pattern": ".bai?",
-          "required": true
-    },
-]
-```
-
 An implementation must not fail workflow execution if `required` is set to false and the expected secondary file does not exist.
-Default value for required field is true for secondary files on input, and false for secondary files on output.
+Default value for `required` field is true for secondary files on input, and false for secondary files on output.
 
-Note that secondary files are only valid when `type` has a value `File`, or is an array of `items: File`.
+````{note}
+Secondary files are only valid when `type` has a value `File`, or is an array of `items: File`.
 All listed secondary files must be present in the same directory as the primary file,
-since an implementation may fail workflow execution if a listed secondary file is not present. 
+since an implementation may fail workflow execution if a listed secondary file is not present.
+It is an error for file names to be duplicated in `secondaryFiles`.
+````
 
 ## Array Inputs
 
