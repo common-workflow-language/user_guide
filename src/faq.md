@@ -447,11 +447,12 @@ The reference runner and several other CWL implementations support running
 those Docker format containers using the Singularity engine. Directly
 specifying a Singularity format container is not part of the CWL standards.
 
-## How outputBinding.glob works
-The `outputBinding` section describes how to set the value of each output parameter.  The `glob` field is used to return all files/pathnames that match a specific pattern. The `glob` field specifies the file and the output directory in which the file should be stored. The value of the glob field is the `output directory`.
-If the value of glob is a relative path pattern (one that does not start with a slash '/'), it is resolved relative to the output directory. If the glob value is an absolute path pattern (it starts with a slash '/'), it must refer to a path within the output directory.
-Glob's pattern rules abide to standard Unix path expansion rules. According to benchmarks, it is also expected to be faster than other methods for matching pathnames in directories.
-Wildcard characters can be used in the filenames when searching for files. The wildcard characters can either be an asterisk `*`, a question mark matching pathnames in directories. `?` or a range `[]`
+## How does glob work when describing output values?
+The field outputBinding describes how to to set the value of each output parameter. The 'glob' field specifies a pattern to find files/directories relative to the output directory. The pattern used for glob' must be either relative to the output directory, an absolute path to the output directory, or an absolute path to an input file.
+
+CWL uses the POSIX glob(3) pathname matching. Wildcards are allowed in the glob field and are useful when If you don’t know the exact name of a file or directory in advance. The wildcard characters can either be an asterisk *, a question mark matching pathnames in directories. `?` or a range `[]`.
+
+If an array used in the glob field, any files that match any pattern in the array are returned.
 
 In the example below, the glob field is used to specify the file(`hello.txt`) in which the output should be stored.
 
@@ -473,7 +474,7 @@ outputs:
       glob: '*.txt'
 ```
 
-Glob can also be used to return all outputs from a CommandLine Tool. For example
+Glob can also be used to return all files in the output directory. For example
 
 ```
   outputs:
