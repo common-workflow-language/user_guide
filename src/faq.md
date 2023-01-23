@@ -448,7 +448,7 @@ those Docker format containers using the Singularity engine. Directly
 specifying a Singularity format container is not part of the CWL standards.
 
 ## How does glob work when describing output values?
-The field outputBinding describes how to to set the value of each output parameter. The 'glob' field specifies a pattern to find files/directories relative to the output directory. The pattern used for glob' must be either relative to the output directory, an absolute path to the output directory, or an absolute path to an input file.
+The field outputBinding describes how to set the value of each output parameter. The 'glob' field specifies a pattern to find files/directories relative to the output directory. The pattern used for glob' must be either relative to the output directory, an absolute path to the output directory, or an absolute path to an input file.
 
 CWL uses the POSIX glob(3) pathname matching. Wildcards are allowed in the glob field and are useful when If you don’t know the exact name of a file or directory in advance. The wildcard characters can either be an asterisk *, a question mark matching pathnames in directories. `?` or a range `[]`.
 
@@ -461,7 +461,7 @@ outputs:
   example_out:
     type: File
     outputBinding:
-      glob: hello.txt
+      glob: "hello.txt"
 ```
 
 The glob field in the above output section can also be written with the `*` wildcard character as
