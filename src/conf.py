@@ -234,3 +234,7 @@ html_context = {
     "doc_path": "src",
     "default_mode": "light"
 }
+
+gettext_uuid = True
+gettext_compact = False
+locale_dirs = ['locales/']

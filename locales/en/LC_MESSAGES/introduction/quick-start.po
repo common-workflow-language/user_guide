@@ -1,0 +1,191 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2013, CWL Project Team
+# This file is distributed under the same license as the Common Workflow
+# Language User Guide package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Common Workflow Language User Guide \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-01-24 17:15+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.10.3\n"
+
+#: ../../introduction/quick-start.md:1 47ace6396c93455bb9b8cb8a70be0679
+msgid "Quick Start"
+msgstr ""
+
+#: ../../introduction/quick-start.md:3 17131fb92d5a46d99b7665d0c2890a46
+msgid ""
+"This section will show you a brief overview of what CWL is, and where you"
+" can learn more about it. No previous knowledge of CWL is required, but "
+"you must be comfortable following instructions for the command-line."
+msgstr ""
+
+#: ../../introduction/quick-start.md:7 ad577f43c1ec4d79b9cbe4cd5125a31a
+msgid "“Hello World”"
+msgstr ""
+
+#: ../../_includes/what-is-cwl.md:2 4d26ec28a1fa419bb9a1f536e4168925
+msgid ""
+"CWL is a way to describe command-line tools and connect them together to "
+"create workflows. Because CWL is a specification and not a specific piece"
+" of software, tools and workflows described using CWL are portable across"
+" a variety of platforms that support the CWL standard."
+msgstr ""
+
+#: ../../introduction/quick-start.md:12 12247e5c020e4eabaddc0a62364c45e2
+msgid ""
+"CWL documents are written in [YAML](../topics/index.md) (and/or JSON). "
+"The example below shows a simple CWL “Hello World” workflow annotated "
+"with comments. Note that comments start with `#`:"
+msgstr ""
+
+#: ../../introduction/quick-start.md:16 60c57d9de0e449bbb1ec517663e9047f
+msgid "`hello_world.cwl`"
+msgstr ""
+
+#: ../../introduction/quick-start.md:22 0a89aaf525d349349bb23ecf11f00a1e
+msgid ""
+"The example above is just a wrapper for the `echo` command-line tool. "
+"Running the workflow above with the default input values will produce the"
+" same result as the command-line `echo \"Hello World\"`."
+msgstr ""
+
+#: ../../introduction/quick-start.md:27 f33aad86b3194d92b87e51b8551de335
+msgid ""
+"In CWL, there is a distinction between a command-line tool and a "
+"workflow. But for the sake of simplicity, we are using the term "
+"“workflow” here. You will learn more about this in the [basic concepts"
+"](basic-concepts.md) section."
+msgstr ""
+
+#: ../../introduction/quick-start.md:32 bba033bcce684da99d8561c644a288b9
+msgid "Installing a CWL Runner"
+msgstr ""
+
+#: ../../introduction/quick-start.md:34 74c2a60629734132baf21f950f51a2a8
+msgid ""
+"`cwltool` is an implementation of the CWL specification. It is also the "
+"CWL *Reference Runner* for the specification, and it is compliant with "
+"the latest version of the specification: {{ cwl_version }}. You can "
+"install `cwltool` using `pip`:"
+msgstr ""
+
+#: ../../introduction/quick-start.md:39 688e1f06579d44b8975c3db85d5969f6
+msgid "Installing `cwltool` with `pip`."
+msgstr ""
+
+#: ../../introduction/quick-start.md:47 77a52c31fce14347bbb47d80f59489e7
+msgid ""
+"If installing the cwltool using the pip command doesn't work for you, the"
+" [prerequisites](prerequisites.md) section contains other ways to install"
+" `cwltool` and a more detailed list of software and libraries used for "
+"following the rest of this user guide."
+msgstr ""
+
+#: ../../introduction/quick-start.md:51 235356675f8b492b86a59fe345d67184
+msgid "Running \"Hello World\""
+msgstr ""
+
+#: ../../introduction/quick-start.md:53 4caaccb9352a46678835a5bfb413803b
+msgid ""
+"The usage of the `cwltool` command-line executable is basically `cwltool "
+"[OPTIONS] <CWL_DOCUMENT> [INPUTS_OBJECT]`. You can run the "
+"`hello_world.cwl` workflow without specifying any option:"
+msgstr ""
+
+#: ../../introduction/quick-start.md:57 ccbc60f4811e4a479530094958219224
+msgid "Running `hello_world.cwl` with `cwltool`."
+msgstr ""
+
+#: ../../introduction/quick-start.md:62 3b3cd61bd0fe4dddbab7ce4fabc16421
+msgid ""
+"Or you can override the default value of the input parameter `message`, "
+"similar to how you would change the argument of the `echo` base command:"
+msgstr ""
+
+#: ../../introduction/quick-start.md:65 71f096c461ef47f8a920339e164bf314
+msgid "Running `hello_world.cwl` with `cwltool` passing an input parameter."
+msgstr ""
+
+#: ../../introduction/quick-start.md:70 cbaa83776dc041dd963ce47a67b3b405
+msgid ""
+"Another way of passing values to your workflow input parameters is via an"
+" *Inputs Object*. This is a file containing the input fields with their "
+"corresponding values. The Inputs Objects file can be written in JSON or "
+"YAML. For example:"
+msgstr ""
+
+#: ../../introduction/quick-start.md:74 04e272f684be44be911dc6e50ac1660b
+msgid "`hello_world-job.json`"
+msgstr ""
+
+#: ../../introduction/quick-start.md:80 5d1ebc06dc2d44439135ee1e75cc714a
+msgid ""
+"You can use this Inputs Object file now to execute the “Hello World” "
+"workflow:"
+msgstr ""
+
+#: ../../introduction/quick-start.md:82 6ad6b44a644b482382cec3bfda23e4ac
+msgid "Passing an Inputs Object file to `cwltool`."
+msgstr ""
+
+#: ../../introduction/quick-start.md:88 bf7a0bd183f64f6883ecee1dae23607a
+msgid ""
+"We used a similar file name for the workflow and for the Inputs Object "
+"files. The *-job.json* suffix is very common in Inputs Object files, but "
+"it is not a requirement. You can choose any name for your workflows and "
+"Inputs Object files."
+msgstr ""
+
+#: ../../introduction/quick-start.md:94 002680b62d5d4d8fbf8d730e38ef154a
+msgid "Learn More"
+msgstr ""
+
+#: ../../introduction/quick-start.md:96 716e6ec03d974ee9ac59a055fcdabe41
+msgid "Continue reading the next sections of this User Guide!"
+msgstr ""
+
+#: ../../introduction/quick-start.md:97 a098326c57f34af5972578ebb580d6a2
+msgid "[List of CWL Implementations](https://www.commonwl.org/implementations)."
+msgstr ""
+
+#: ../../introduction/quick-start.md:98 cba27320bbe844fc8bfbad0ba2aa9c01
+msgid ""
+"The [`common-workflow-language` organization](https://github.com/common-"
+"workflow-language) at GitHub."
+msgstr ""
+
+#: ../../introduction/quick-start.md:99 e377948d6db94e1aa5c3b28c44a9707c
+msgid ""
+"[Common Workflow Language at "
+"Wikipedia](https://en.wikipedia.org/wiki/Common_Workflow_Language)."
+msgstr ""
+
+#: ../../introduction/quick-start.md:100 b554f9e0572e4b02a5cc1cb817c70539
+msgid ""
+"[YAML.org](http://yaml.org/) and [YAML at "
+"Wikipedia](https://en.wikipedia.org/wiki/YAML)."
+msgstr ""
+
+#: ../../introduction/quick-start.md:101 a2ce57a5a0a24bb0bb858e076df51e6c
+msgid ""
+"The {{'[CWL Specification "
+"VERSION](https://www.commonwl.org/VERSION)'.replace('VERSION', "
+"cwl_version_text) }}."
+msgstr ""
+
+#: ../../introduction/quick-start.md:102 edb34dacc1674731a7b5fa510c81d38b
+msgid ""
+"[Workflow management system at "
+"Wikipedia](https://en.wikipedia.org/wiki/Workflow_management_system)."
+msgstr ""
+

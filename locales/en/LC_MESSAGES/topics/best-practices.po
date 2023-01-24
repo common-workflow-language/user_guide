@@ -1,0 +1,191 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2013, CWL Project Team
+# This file is distributed under the same license as the Common Workflow
+# Language User Guide package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Common Workflow Language User Guide \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-01-24 17:15+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.10.3\n"
+
+#: ../../topics/best-practices.md:1 400480770c074343aae662a25b257a31
+msgid "Best Practices"
+msgstr ""
+
+#: ../../topics/best-practices.md:3 fe9e19076d74462cab67b4a3cb340724
+msgid ""
+"The following are a set of recommended good practices to keep in mind "
+"when writing a Common Workflow Language description for a tool or "
+"workflow. These guidelines are presented for consideration on a scale of "
+"usefulness: although more is better, not all are required."
+msgstr ""
+
+#: ../../topics/best-practices.md:8 caab132559d84593ac23530e36ec6c21
+msgid ""
+"No `type: string` parameters for names of input or reference "
+"files/directories; use `type: File` or `type: Directory` as appropriate."
+msgstr ""
+
+#: ../../topics/best-practices.md:11 e15eb191624846c4b1d3e3e96731a8ff
+msgid ""
+"A CWL document (in conjunction with any external components like "
+"`Dockerfile`s) is software code. Workflow developers should be aware that"
+" the usual rules of software licensing apply to this document. For "
+"example, if the workflow is shared publicly, licensing terms must be "
+"clear so that a future user understands under what conditions they can "
+"run the workflow, modify it and/or combine it with other workflows. For "
+"this reason, please consider including a license field in the document. "
+"The authors of this guide urge you to choose a pre-existing license "
+"rather than trying to write your own (see the link below to learn more "
+"about choosing a license), and our recommended practice is to choose a "
+"license that allows for re-use by anyone, e.g. [Apache 2.0][apache-"
+"license]."
+msgstr ""
+
+#: ../../topics/best-practices.md:20 d5c2b325d05f4afca4008f4733d92100
+msgid ""
+"If possible, the license should be specified with its corresponding [SPDX"
+" identifier][spdx]. Construct the metadata field for the license by "
+"providing a URL of the form `https://spdx.org/licenses/[SPDX-ID]` where "
+"`SPDX-ID` is taken from the list of identifiers linked above. See the "
+"example snippet below for guidance. For non-standard licenses without an "
+"SPDX identifier, provide a URL to the license."
+msgstr ""
+
+#: ../../topics/best-practices.md:26 99b89f6ce812463093ee0da9255178bb
+msgid ""
+"Useful reading: \"[A Quick Guide to Software Licensing for the Scientist-"
+"Programmer][sci-license]\""
+msgstr ""
+
+#: ../../topics/best-practices.md:28 56915c2feeb9402fb1210cdf27788c8a
+msgid "_Example of metadata field for license with SPDX identifier:_"
+msgstr ""
+
+#: ../../topics/best-practices.md:37 4315b219d21742ac88f39415da6807d8
+msgid ""
+"For more examples of providing metadata within CWL descriptions, see  "
+"[the Metadata and Authorship section of this User Guide](../topics"
+"/metadata-and-authorship.md)."
+msgstr ""
+
+#: ../../topics/best-practices.md:40 122f553a412d43bd9e55caaafb90b88f
+msgid ""
+"Include [attribution information][license-example] for the author(s) of "
+"the CWL tool or workflow description. Use unambiguous identifiers like "
+"[ORCID][orcid]."
+msgstr ""
+
+#: ../../topics/best-practices.md:44 b5fe5270c8534ad194dbf41bdec90e33
+msgid ""
+"In tool descriptions, list dependencies using short name(s) under "
+"`SoftwareRequirement`."
+msgstr ""
+
+#: ../../topics/best-practices.md:47 889a5c8d24464546a2a1156ef3791b28
+msgid ""
+"Include [SciCrunch][scicrunch] identifiers for dependencies in "
+"`https://identifiers.org/rrid/RRID:SCR_NNNNNN` format."
+msgstr ""
+
+#: ../../topics/best-practices.md:50 7203be6d92a040c2b39f07f0618b7c37
+msgid ""
+"All `input` and `output` identifiers should reflect their conceptual "
+"identity. Use informative names like `unaligned_sequences`, "
+"`reference_genome`, `phylogeny`, or `aligned_sequences` instead of  "
+"`foo_input`, `foo_file`, `result`, `input`, `output`, and so forth."
+msgstr ""
+
+#: ../../topics/best-practices.md:55 8ea3eee32d8044c5ad0a4caeab435b8b
+msgid ""
+"In tool descriptions, include a list of version(s) of the tool that are "
+"known to work with this description under `SoftwareRequirement`."
+msgstr ""
+
+#: ../../topics/best-practices.md:58 3c033a88a5cd4bf19683add86436a8de
+msgid ""
+"`format` should be specified for all input and output `File`s. "
+"Bioinformatics tools should use format identifiers from [EDAM][edam-"
+"example]. See also `iana:text/plain`, `iana:text/tab-separated-values` "
+"with `$namespaces: { iana: \"https://www.iana.org/assignments/media-"
+"types/\" }`. [Full IANA media type list][iana-types] (also known as MIME "
+"types). For non-bioinformatics tools, use or build an appropriate "
+"ontology/controlled vocabulary in the same way. Please edit this page to "
+"let us know about it."
+msgstr ""
+
+#: ../../topics/best-practices.md:66 7731a6bd39a7444e82b96d2a5e8eb44b
+msgid ""
+"Mark all input and output `File`s that are read from or written to in a "
+"streaming compatible way (only once, no random-access), as `streamable: "
+"true`."
+msgstr ""
+
+#: ../../topics/best-practices.md:69 fe8845e0d96f459bbcd69e176e7ff6b1
+msgid ""
+"Each `CommandLineTool` description should focus on a single operation "
+"only, even if the (sub)command is capable of more. Don't overcomplicate "
+"your tool descriptions with options that you don't need or use."
+msgstr ""
+
+#: ../../topics/best-practices.md:73 1ffe2266eef94941840c485ca77417b6
+msgid ""
+"Custom types should be defined with one external YAML per type definition"
+" for re-use."
+msgstr ""
+
+#: ../../topics/best-practices.md:76 e5af104f7c2848c8ac0f97d13a9153a2
+msgid "Include a top-level short `label` summarising the tool/workflow."
+msgstr ""
+
+#: ../../topics/best-practices.md:78 88c7bfbebad14cf9b39bd3e9488c7dfb
+msgid ""
+"If useful, include a top-level `doc` as well. This should provide a "
+"longer, more detailed description than was provided in the top-level "
+"`label` (see above)."
+msgstr ""
+
+#: ../../topics/best-practices.md:82 4f874eee6d884b6c8f2117f61788a4e5
+msgid ""
+"Use `type: enum` instead of `type: string` for elements with a fixed list"
+" of valid values."
+msgstr ""
+
+#: ../../topics/best-practices.md:85 6c481e56c4ff48fc9854a3c15375f5f7
+msgid ""
+"Evaluate all use of JavaScript for possible elimination or replacement. "
+"One common example: manipulating `File` names and paths? Consider whether"
+" one of the [built in `File` properties][file-prop] like `basename`, "
+"`nameroot`, `nameext`, etc., could be used instead."
+msgstr ""
+
+#: ../../topics/best-practices.md:90 2e66f35622964ad6bc54faedbfec0eeb
+msgid ""
+"Give the tool description to a colleague (preferably at a different "
+"institution) to test and provide feedback."
+msgstr ""
+
+#: ../../topics/best-practices.md:93 c5551f6025e445f296d3de936029fab4
+msgid ""
+"Complex workflows with individual components which can be abstracted "
+"should utilise the [`SubworkflowFeatureRequirement`][subworkflow] to make"
+" their workflow modular and allow sections of them to be easily reused."
+msgstr ""
+
+#: ../../topics/best-practices.md:97 eff85713fb344bfb968bda07094485af
+msgid ""
+"Software containers should be made to be conformant to the "
+"[\"Recommendations for the packaging and containerizing of bioinformatics"
+" software\"][containers] (also useful to other disciplines)."
+msgstr ""
+

@@ -1,0 +1,73 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2013, CWL Project Team
+# This file is distributed under the same license as the Common Workflow
+# Language User Guide package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Common Workflow Language User Guide \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-01-24 17:15+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.10.3\n"
+
+#: ../../topics/operations.md:1 968848522a1c419e94cdb03a48f7bab8
+msgid "Operations"
+msgstr ""
+
+#: ../../topics/operations.md:3 825f5584a57148e4ba1df435653351a1
+msgid ""
+"An Operation is a type of CWL process, just like a workflow, a command-"
+"line tool, or an expression tool. It is a step of a workflow that "
+"specifies inputs and outputs, but it does not provide enough information "
+"to be executed."
+msgstr ""
+
+#: ../../topics/operations.md:7 1c8a712c12b54c26ac8d2d24270390cf
+msgid ""
+"You can create operations to visualize a workflow during development, "
+"before you are ready to submit the workflow to a CWL runner:"
+msgstr ""
+
+#: ../../topics/operations.md:10 e0e24f86682447ad88bb59f73f4c272f
+msgid "`operations.cwl`"
+msgstr ""
+
+#: ../../topics/operations.md:16 a1448ed2695b4b849c0e2879c38640d8
+msgid ""
+"The `uppercase` step of the workflow is an operation. It can be used like"
+" a command line tool or an expression. You can also plot it with the CWL "
+"Viewer or `cwltool`:"
+msgstr ""
+
+#: ../../topics/operations.md:24 0ed9d93f0ead46fea1f3d5f28d22419b
+msgid ""
+"The output of the command above can be rendered with a Graphviz renderer."
+" The following image is rendered with the Sphinx Graphviz directive (this"
+" user guide is built with Sphinx):"
+msgstr ""
+
+#: ../../topics/operations.md:55 4a03e03b140a45b3bfc26d7b0f677cb4
+msgid ""
+"If you try running it with `cwltool`, the command will fail since "
+"`cwltool` does not have enough information to know how to execute it:"
+msgstr ""
+
+#: ../../topics/operations.md:58 7794ec6d263c425bb423135f4025d2f1
+msgid "`cwltool` does not know how to run operations"
+msgstr ""
+
+#: ../../topics/operations.md:66 8c8423c44aec4a619ea9bbce986b3b96
+msgid ""
+"CWL runners may come up with ways to bind operations to concrete steps. A"
+" CWL runner could, for instance, use abstract operations with ID's that "
+"correspond to steps executed by a different workflow engine."
+msgstr ""
+

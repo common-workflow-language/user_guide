@@ -1,0 +1,120 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2013, CWL Project Team
+# This file is distributed under the same license as the Common Workflow
+# Language User Guide package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Common Workflow Language User Guide \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-01-24 17:15+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.10.3\n"
+
+#: ../../../LICENSE.md:2 f0c9a54a904e42249441ee22e39d6f3a
+msgid "Licenses"
+msgstr ""
+
+#: ../../../LICENSE.md:4 6c99230ebe4d48689e09e2da1484abc9
+msgid "Instructional Material"
+msgstr ""
+
+#: ../../../LICENSE.md:6 327a6405608b4df488fc6aee756f94b7
+msgid ""
+"All Common Workflow Language project instructional material and changes "
+"to the structure are also made available under the [Creative Commons "
+"Attribution license][cc-by-human]. The following is a human-readable "
+"summary of (and not a substitute for) the [full legal text of the CC BY "
+"4.0 license][cc-by-legal]."
+msgstr ""
+
+#: ../../../LICENSE.md:12 91d85fe9673942658f5d17e286ac6b69
+msgid "You are free:"
+msgstr ""
+
+#: ../../../LICENSE.md:14 c010a0b9145e4532896b114d4e0c7768
+msgid "to **Share**---copy and redistribute the material in any medium or format"
+msgstr ""
+
+#: ../../../LICENSE.md:15 8e7d2d9301a8452994e4b33edb3c7ea0
+msgid "to **Adapt**---remix, transform, and build upon the material"
+msgstr ""
+
+#: ../../../LICENSE.md:17 0fdc0b2074bc4cfd8cd020d51a3d4f3b
+msgid "for any purpose, even commercially."
+msgstr ""
+
+#: ../../../LICENSE.md:19 220eba84dd874fb59ac0d4f7a95695fc
+msgid ""
+"The licensor cannot revoke these freedoms as long as you follow the "
+"license terms."
+msgstr ""
+
+#: ../../../LICENSE.md:22 c21178abaf374ca5ae83fb9b94761e7e
+msgid "Under the following terms:"
+msgstr ""
+
+#: ../../../LICENSE.md:24 90e30b28cfdb4c8fb6bf2e2687ac47c3
+msgid ""
+"**Attribution**---You must give appropriate credit (mentioning that your "
+"work is derived from work that is Copyright © the Common Workflow "
+"Language project, and, where practical, linking to "
+"https://www.commonwl.org/ ), provide a [link to the license][cc-by-"
+"human], and indicate if changes were made. You may do so in any "
+"reasonable manner, but not in any way that suggests the licensor endorses"
+" you or your use."
+msgstr ""
+
+#: ../../../LICENSE.md:32 c40a837670f84762bffc0cc8d697d45d
+msgid ""
+"**No additional restrictions**---You may not apply legal terms or "
+"technological measures that legally restrict others from doing anything "
+"the license permits.  With the understanding that:"
+msgstr ""
+
+#: ../../../LICENSE.md:36 233edb183ff44c7293756df599b2a130
+msgid ""
+"You do not have to comply with the license for elements of the material "
+"in the public domain or where your use is permitted by an applicable "
+"exception or limitation."
+msgstr ""
+
+#: ../../../LICENSE.md:39 027339c3a92747e8948b11671ace4145
+msgid ""
+"No warranties are given. The license may not give you all of the "
+"permissions necessary for your intended use. For example, other rights "
+"such as publicity, privacy, or moral rights may limit how you use the "
+"material."
+msgstr ""
+
+#: ../../../LICENSE.md:44 89dcc55f3d5d445b97912648ee5dba03
+msgid "Software"
+msgstr ""
+
+#: ../../../LICENSE.md:46 070952c76313480d92f0b78321a6a1e2
+msgid ""
+"Except where otherwise noted, the example programs and other software "
+"provided by Common Workflow Language project are made available under the"
+" [OSI][osi]-approved [Apache 2.0 license][apache-2.0-license]."
+msgstr ""
+
+#: ../../../LICENSE.md:51 3279f7573aa44853af83dbf9dd9748a9
+msgid ""
+"Unless required by applicable law or agreed to in writing, software "
+"distributed under the License is distributed on an \"AS IS\" BASIS, "
+"WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. "
+"See the License for the specific language governing permissions and "
+"limitations under the License."
+msgstr ""
+
+#: ../../../LICENSE.md:57 979969ab3c3f4080b6c7e879efe9f351
+msgid "Trademark"
+msgstr ""
+
