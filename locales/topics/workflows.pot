@@ -1,0 +1,374 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2013, CWL Project Team
+# This file is distributed under the same license as the Common Workflow Language User Guide package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Common Workflow Language User Guide \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-01-24 17:23+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../src/topics/workflows.md:1
+#: f87317cca4ba43af87f6a19b8fff6751
+msgid "Workflows"
+msgstr ""
+
+#: ../../src/topics/workflows.md:3
+#: 00756723cfea4c79ab17ae39e400fd4c
+msgid "A workflow is a CWL processing unit that executes command-line tools, expression tools, or workflows (sub-workflows) as steps. It must have `inputs`, `outputs`, and `steps` defined in the CWL document."
+msgstr ""
+
+#: ../../src/topics/workflows.md:13
+#: ee41e057c6be476e9c56ac3c1f4aefad
+msgid "CWL workflow."
+msgstr ""
+
+#: ../../src/topics/workflows.md:41
+#: 4e06945e9d794db58ebf5953a7bfc169
+msgid "The CWL document `echo-uppercase.cwl` defines a workflow that runs the command-line tool, and the expression tool showed in the earlier examples."
+msgstr ""
+
+#: ../../src/topics/workflows.md:51
+#: 3bb6bd3fa9a241b18f725f765f6d8f89
+msgid "`echo-uppercase.cwl`"
+msgstr ""
+
+#: ../../src/topics/workflows.md:81
+#: bd0042b64ca14e5fa4abe0b696ed8cc0
+msgid "A command-line tool or expression tool can also be written directly in the same CWL document as the workflow. For example, we can rewrite the `echo-uppercase.cwl` workflow as a single file:"
+msgstr ""
+
+#: ../../src/topics/workflows.md:91
+#: f640b8cc119544ddb698828751335eef
+msgid "`echo-uppercase-single-file.cwl`"
+msgstr ""
+
+#: ../../src/topics/workflows.md:150
+#: ef0a22597b7b43a09b9d930eb733b181
+msgid "Having separate files helps with modularity and code organization. But it can be helpful writing everything in a single file for development. There are other ways to combine multiple files into a single file (e.g. `cwltool --pack`) discussed further in other sections of this user guide."
+msgstr ""
+
+#: ../../src/topics/workflows.md:160
+#: 08e47d409fad4688b3fa893aac699505
+msgid "For a sub-workflows you need to enable the requirement `SubworkflowFeatureRequirement`. It is covered in another section of this user guide in more detail."
+msgstr ""
+
+#: ../../src/topics/workflows.md:165
+#: 979f0abe51a7435991c062b239ab77ce
+msgid "Writing Workflows"
+msgstr ""
+
+#: ../../src/topics/workflows.md:167
+#: 9e7ebb3fd64e4d9b89d10aab7ff6ef5a
+msgid "This workflow extracts a java source file from a tar file and then compiles it."
+msgstr ""
+
+#: ../../src/topics/workflows.md:170
+#: a8bb6a54010c4563af5dd0e287e19ea9
+msgid "`1st-workflow.cwl`"
+msgstr ""
+
+#: ../../src/topics/workflows.md:179
+#: ../../src/topics/workflows.md:180
+#: 3ca49084a67e48e196a29fce16266ebe
+#: 2e5e721e9dcf477aacc5fd7970c8965f
+msgid "Visualization of 1st-workflow.cwl"
+msgstr ""
+
+#: ../../src/topics/workflows.md:180
+#: cd69af46dab64758a7eeb25b8dd5ada4
+msgid "[![Visualization of 1st-workflow.cwl](https://view.commonwl.org/graph/png/github.com/common-workflow-language/user_guide/blob/a29e7eae0006660946fc705a310b37a21a7e1edc/_includes/cwl/21-1st-workflow/1st-workflow.cwl)](https://view.commonwl.org/graph/png/github.com/common-workflow-language/user_guide/blob/a29e7eae0006660946fc705a310b37a21a7e1edc/_includes/cwl/21-1st-workflow/1st-workflow.cwl)"
+msgstr ""
+
+#: ../../src/topics/workflows.md:183
+#: 1370172b5e4d41dfa0f00268853c4a0c
+msgid "Use a YAML or a JSON object in a separate file to describe the input of a run:"
+msgstr ""
+
+#: ../../src/topics/workflows.md:185
+#: df872d487e3d4e35b68bebcb27948577
+msgid "`1st-workflow-job.yml`"
+msgstr ""
+
+#: ../../src/topics/workflows.md:191
+#: 5039994944944010990efb63a1423bd2
+msgid "Next, create a sample Java file and add it to a tar file to use with the command-line tool."
+msgstr ""
+
+#: ../../src/topics/workflows.md:198
+#: ce1bf8dbbe3c448b8d413993b986bee1
+msgid "Now invoke `cwltool` with the tool description and the input object on the command line:"
+msgstr ""
+
+#: ../../src/topics/workflows.md:205
+#: a72841d1fc594789adca91a6cec6b4c8
+msgid "What's going on here?  Let's break it down:"
+msgstr ""
+
+#: ../../src/topics/workflows.md:212
+#: ab3448be251d454fbaf3e2e40e2a6179
+msgid "The `cwlVersion` field indicates the version of the CWL spec used by the document.  The `class` field indicates this document describes a workflow."
+msgstr ""
+
+#: ../../src/topics/workflows.md:221
+#: b24bc7e75b5e45a6b40f99122f7a46c6
+msgid "The `inputs` section describes the inputs of the workflow.  This is a list of input parameters where each parameter consists of an identifier and a data type.  These parameters can be used as sources for input to specific workflows steps."
+msgstr ""
+
+#: ../../src/topics/workflows.md:233
+#: 9eab201c6c314cf682f7623de820f007
+msgid "The `outputs` section describes the outputs of the workflow.  This is a list of output parameters where each parameter consists of an identifier and a data type.  The `outputSource` connects the output parameter `classfile` of the `compile` step to the workflow output parameter `compiled_class`."
+msgstr ""
+
+#: ../../src/topics/workflows.md:248
+#: 7aee0e6910f841eaad08091daaa43819
+msgid "The `steps` section describes the actual steps of the workflow.  In this example, the first step extracts a file from a tar file, and the second step compiles the file from the first step using the java compiler. Workflow steps are not necessarily run in the order they are listed, instead the order is determined by the dependencies between steps (using `source`).  In addition, workflow steps which do not depend on one another may run in parallel."
+msgstr ""
+
+#: ../../src/topics/workflows.md:256
+#: ad9e578cb5154c06b323ed8934f70359
+msgid "The first step, `untar` runs `tar-param.cwl` (described previously in [Parameter References](parameter-references.md)). This tool has two input parameters, `tarfile` and `extractfile` and one output parameter `extracted_file`."
+msgstr ""
+
+#: ../../src/topics/workflows.md:261
+#: 6edc6273c5e84842a74b8921875481e9
+msgid "The ``in`` section of the workflow step connects these two input parameters to the inputs of the workflow, `tarball` and `name_of_file_to_extract` using `source`.  This means that when the workflow step is executed, the values assigned to `tarball` and `name_of_file_to_extract` will be used for the parameters `tarfile` and `extractfile` in order to run the tool."
+msgstr ""
+
+#: ../../src/topics/workflows.md:267
+#: 1d4faf0025bc4fc7bf53b87e4b3477e9
+msgid "The `out` section of the workflow step lists the output parameters that are expected from the tool."
+msgstr ""
+
+#: ../../src/topics/workflows.md:278
+#: 2185db6e6c9c470abc4e9a4dc95a921d
+msgid "The second step `compile` depends on the results from the first step by connecting the input parameter `src` to the output parameter of `untar` using `untar/extracted_file`.  It runs `arguments.cwl` (described previously in [Additional Arguments and Parameters](additional-arguments-and-parameters.md)). The output of this step `classfile` is connected to the `outputs` section for the Workflow, described above."
+msgstr ""
+
+#: ../../src/topics/workflows.md:285
+#: 91c1093736ea45e59fafba7d071bfda4
+msgid "Nested Workflows"
+msgstr ""
+
+#: ../../src/topics/workflows.md:287
+#: 17955d02a70d484f8b2654feffc3f853
+msgid "Workflows are ways to combine multiple tools to perform a larger operations. We can also think of a workflow as being a tool itself; a CWL workflow can be used as a step in another CWL workflow, if the workflow engine supports the `SubworkflowFeatureRequirement`:"
+msgstr ""
+
+#: ../../src/topics/workflows.md:297
+#: 4e9524ce607243b9a6bd749bc436d796
+msgid "Here's an example workflow that uses our `1st-workflow.cwl` as a nested workflow:"
+msgstr ""
+
+#: ../../src/topics/workflows.md:300
+#: 6d24477bbd3245a9be26954768605af8
+msgid "`nestedworkflows.cwl`"
+msgstr ""
+
+#: ../../src/topics/workflows.md:309
+#: 5525e4fa9a1e4245b5cd3a5465952fa8
+msgid "This two-step workflow starts with the `create-tar` step which is connected to the `compile` step in orange; `compile` is another workflow, diagrammed on the right. In purple we see the fixed string `\"Hello.java\"` being supplied as the `name_of_file_to_extract`."
+msgstr ""
+
+#: ../../src/topics/workflows.md:314
+#: b9dc7d7eab974749953065c7b7a92077
+msgid "<a href=\"https://view.commonwl.org/workflows/github.com/common-workflow-language/user_guide/blob/main/_includes/cwl/workflows/nestedworkflows.cwl\"><img src=\"https://view.commonwl.org/graph/svg/github.com/common-workflow-language/user_guide/blob/main/_includes/cwl/workflows/nestedworkflows.cwl\" alt=\"Visualization of nestedworkflows.cwl\" /></a> <a href=\"https://view.commonwl.org/workflows/github.com/common-workflow-language/user_guide/blob/main/_includes/cwl/workflows/1st-workflow.cwl\"><img src=\"https://view.commonwl.org/graph/svg/github.com/common-workflow-language/user_guide/blob/main/_includes/cwl/workflows/1st-workflow.cwl\" alt=\"Visualization of 1st-workflow.cwl\" /></a>"
+msgstr ""
+
+#: ../../src/topics/workflows.md:322
+#: 268089a26de840e8a01026a3d4ad93c8
+msgid "A CWL `Workflow` can be used as a `step` just like a `CommandLineTool`, its CWL file is included with `run`. The workflow inputs (`tarball` and `name_of_file_to_extract`) and outputs (`compiled_class`) then can be mapped to become the step's input/outputs."
+msgstr ""
+
+#: ../../src/topics/workflows.md:336
+#: 1523ed6264e84a0ea3a2c00857a71bb2
+msgid "Our `1st-workflow.cwl` was parameterized with workflow inputs, so when running it we had to provide a job file to denote the tar file and `*.java` filename. This is generally best-practice, as it means it can be reused in multiple parent workflows, or even in multiple steps within the same workflow."
+msgstr ""
+
+#: ../../src/topics/workflows.md:341
+#: 125add3880f84620bc124f21096e1d1a
+msgid "Here we use `default:` to hard-code `\"Hello.java\"` as the `name_of_file_to_extract` input, however our workflow also requires a tar file at `tarball`, which we will prepare in the `create-tar` step. At this point it is probably a good idea to refactor `1st-workflow.cwl` to have more specific input/output names, as those also appear in its usage as a tool."
+msgstr ""
+
+#: ../../src/topics/workflows.md:347
+#: 423dd287ac0c4cc4a39b17dcc380fe45
+msgid "It is also possible to do a less generic approach and avoid external dependencies in the job file. So in this workflow we can generate a hard-coded `Hello.java` file using the previously mentioned `InitialWorkDirRequirement` requirement, before adding it to a tar file."
+msgstr ""
+
+#: ../../src/topics/workflows.md:366
+#: d0fb2fada3c74bc2bb81928891b284a3
+msgid "In this case our step can assume `Hello.java` rather than be parameterized, so we can use hardcoded values `hello.tar` and `Hello.java` in a `baseCommand` and the resulting `outputs`:"
+msgstr ""
+
+#: ../../src/topics/workflows.md:383
+#: 27e720818d69436d8c85931749918ad7
+msgid "Did you notice that we didn't split out the `tar --create` tool to a separate file, but rather embedded it within the CWL Workflow file? This is generally not best practice, as the tool then can't be reused. The reason for doing it in this case is because the command line is hard-coded with filenames that only make sense within this workflow."
+msgstr ""
+
+#: ../../src/topics/workflows.md:389
+#: efe03781d801470db0950ca5c33e10b7
+msgid "In this example we had to prepare a tar file outside, but only because our inner workflow was designed to take that as an input. A better refactoring of the inner workflow would be to take a list of Java files to compile, which would simplify its usage as a tool step in other workflows."
+msgstr ""
+
+#: ../../src/topics/workflows.md:394
+#: f21f8ee263e043a1b57dc8148a502b85
+msgid "Nested workflows can be a powerful feature to generate higher-level functional and reusable workflow units - but just like for creating a CWL Tool description, care must be taken to improve its usability in multiple workflows."
+msgstr ""
+
+#: ../../src/topics/workflows.md:398
+#: 5c91e32bd51045ec8442b28875e914a9
+msgid "Scattering Steps"
+msgstr ""
+
+#: ../../src/topics/workflows.md:400
+#: dbef641be8bb4a18ae974357ecb32f78
+msgid "Now that we know how to write workflows, we can start utilizing the `ScatterFeatureRequirement`. This feature tells the runner that you wish to run a tool or workflow multiple times over a list of inputs. The workflow then takes the input(s) as an array and will run the specified step(s) on each element of the array as if it were a single input. This allows you to run the same workflow on multiple inputs without having to generate many different commands or input yaml files."
+msgstr ""
+
+#: ../../src/topics/workflows.md:411
+#: e86d663e2c39446b8c20c5eaf94a8802
+msgid "The most common reason a new user might want to use scatter is to perform the same analysis on different samples. Let's start with a simple workflow that calls our first example (`hello_world.cwl`) and takes an array of strings as input to the workflow:"
+msgstr ""
+
+#: ../../src/topics/workflows.md:415
+#: 19ae2b52a9ab4b6ea4d8d8e57f40c170
+msgid "`scatter-workflow.cwl`"
+msgstr ""
+
+#: ../../src/topics/workflows.md:421
+#: b711df1f3b1b4456b015701700c3c818
+msgid "Aside from the `requirements` section including `ScatterFeatureRequirement`, what is going on here?"
+msgstr ""
+
+#: ../../src/topics/workflows.md:429
+#: 60fb4221648d40968e1a0965a3b6693c
+msgid "First of all, notice that the main workflow level input here requires an array of strings."
+msgstr ""
+
+#: ../../src/topics/workflows.md:441
+#: c249bd4f52b348faa46918dee778a75d
+msgid "Here we've added a new field to the step `echo` called `scatter`. This field tells the runner that we'd like to scatter over this input for this particular step. Note that the input name listed after scatter is the one of the step's input, not a workflow level input."
+msgstr ""
+
+#: ../../src/topics/workflows.md:445
+#: ba039b00b2ea4de693b3358a036fd993
+msgid "For our first scatter, it's as simple as that! Since our tool doesn't collect any outputs, we still use `outputs: []` in our workflow, but if you expect that the final output of your workflow will now have multiple outputs to collect, be sure to update that to an array type as well!"
+msgstr ""
+
+#: ../../src/topics/workflows.md:450
+#: a50560beb0f84c59b52a03b755e4e028
+msgid "Using the following input file:"
+msgstr ""
+
+#: ../../src/topics/workflows.md:452
+#: b1bde49eb1d6496a8d54094076e9c0f2
+msgid "`scatter-job.yml`"
+msgstr ""
+
+#: ../../src/topics/workflows.md:458
+#: 18d238a1bba943778f951b22e777af50
+msgid "As a reminder, [`hello_world.cwl`](../introduction/quick-start.md) simply calls the command `echo` on a message. If we invoke `cwltool scatter-workflow.cwl scatter-job.yml` on the command line:"
+msgstr ""
+
+#: ../../src/topics/workflows.md:466
+#: 1fef76f43e2048718f82b67f66f48197
+msgid "You can see that the workflow calls echo multiple times on each element of our `message_array`. Ok, so how about if we want to scatter over two steps in a workflow?"
+msgstr ""
+
+#: ../../src/topics/workflows.md:469
+#: 6c2c8927cadf49858e0e1b3033c22168
+msgid "Let's perform a simple echo like above, but capturing `stdout` by adding the following lines instead of `outputs: []`"
+msgstr ""
+
+#: ../../src/topics/workflows.md:472
+#: 7482860af6ec4b519585837fee90289a
+msgid "`hello_world_to_stdout.cwl`"
+msgstr ""
+
+#: ../../src/topics/workflows.md:480
+#: b9a64729a3c34bb2aaf4d9f780b29022
+msgid "And add a second step that uses `wc` to count the characters in each file. See the tool below:"
+msgstr ""
+
+#: ../../src/topics/workflows.md:483
+#: f3ad56146ff3429db2018fcdcef05724
+msgid "`wc-tool.cwl`"
+msgstr ""
+
+#: ../../src/topics/workflows.md:489
+#: 4050c846b1144a5985b37c76bb24670d
+msgid "Now, how do we incorporate scatter? Remember the scatter field is under each step:"
+msgstr ""
+
+#: ../../src/topics/workflows.md:491
+#: fc2512823ca24060992b321fcf0d56db
+msgid "`scatter-two-steps.cwl`"
+msgstr ""
+
+#: ../../src/topics/workflows.md:497
+#: 2eae7d61ffcd485aac22fc1fbbe7093a
+msgid "Here we have placed the scatter field under each step. This is fine for this example since it runs quickly, but if you're running many samples for a more complex workflow, you may wish to consider an alternative. Here we are running scatter on each step independently, but since the second step is not dependent on the first step completing all languages, we aren't using the scatter functionality efficiently. The second step expects an array as input from the first step, so it will wait until everything in step one is finished before doing anything. Pretend that `echo Hello World!` takes 1 minute to perform, `wc -c` on the output takes 3 minutes and that `echo Hallo welt!` takes 5 minutes to perform, and `wc` on that output takes 3 minutes. Even though `echo Hello World!` could finish in 4 minutes, it will actually finish in 8 minutes because the first step must wait on `echo Hallo welt!`. You can see how this might not scale well."
+msgstr ""
+
+#: ../../src/topics/workflows.md:509
+#: 39971661faa74b58bf2f64c18a27fa76
+msgid "Ok, so how do we scatter on steps that can proceed independent of other samples? Remember from [Nested Workflows](#nested-workflows), that we can make an entire workflow a single step in another workflow! Convert our two-step workflow to a single step subworkflow:"
+msgstr ""
+
+#: ../../src/topics/workflows.md:513
+#: b36f484b8f904da58838aac09e7c14ff
+msgid "`scatter-nested-workflow.cwl`"
+msgstr ""
+
+#: ../../src/topics/workflows.md:519
+#: 0db1e2093f8645df8f13fe394e8bf018
+msgid "Now the scatter acts on a single step, but that step consists of two steps so each step is performed in parallel."
+msgstr ""
+
+#: ../../src/topics/workflows.md:522
+#: 38a16292b8bb4ec48ae169292db7a2f2
+msgid "Conditional Workflows"
+msgstr ""
+
+#: ../../src/topics/workflows.md:524
+#: 2c07c2968b53407686a8dd3f869b4fc4
+msgid "This workflow contains a conditional step and is executed based on the input. This allows workflows to skip additional steps based on input parameters given at the start of the program or by previous steps."
+msgstr ""
+
+#: ../../src/topics/workflows.md:527
+#: 61f0704412654df781833ffb6d5f33e3
+msgid "`conditional-workflow.cwl`"
+msgstr ""
+
+#: ../../src/topics/workflows.md:566
+#: d6634b5ec49e4113a90faec6b8de482d
+msgid "The first thing you'll notice is that this workflow is only compatible for version 1.2 or greater of the CWL standards."
+msgstr ""
+
+#: ../../src/topics/workflows.md:573
+#: 9e6488eb6e60434eaf3148208a31a8aa
+msgid "The first step of the workflow (step1) contains two input properties and will execute foo.cwl when the conditions are met. The new property `when` is where the condition validation takes place. In this case only when `in1`  from the workflow contains a value `< 1` this step will be executed."
+msgstr ""
+
+#: ../../src/topics/workflows.md:587
+#: 3fe08f086e374050a89a39fcb3db0b78
+msgid "Using the following command `cwltool cond-wf-003.1.cwl --val 0` the value will pass the first conditional step and will therefore be executed and is shown in the log by `INFO [step step1] start` whereas the second step is skipped as indicated by `INFO [step step2] will be skipped`."
+msgstr ""
+
+#: ../../src/topics/workflows.md:607
+#: ec35b97546eb42c28cc9bbdbf2ac2067
+msgid "When a value of 3 is given the first conditional step will not be executed but the second step will `cwltool cond-wf-003.1.cwl --val 3`."
+msgstr ""
+
+#: ../../src/topics/workflows.md:627
+#: 22cf017e76d74584991ded94417c19d8
+msgid "If no conditions are met for example when using `--val 2` the workflow will raise a permanentFail."
+msgstr ""

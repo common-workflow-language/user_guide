@@ -1,0 +1,77 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2013, CWL Project Team
+# This file is distributed under the same license as the Common Workflow Language User Guide package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Common Workflow Language User Guide \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-01-24 17:23+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../src/topics/creating-files-at-runtime.md:1
+#: d4e5cee7a82447a696e1e9516ccc2e38
+msgid "Creating Files at Runtime"
+msgstr ""
+
+#: ../../src/topics/creating-files-at-runtime.md:3
+#: 6121650880d4447e9b5a6b66e0f3367c
+msgid "Sometimes you need to create a file on the fly from input parameters, such as tools that expect to read their input configuration from a file rather than the command line parameters, or need a small wrapper shell script."
+msgstr ""
+
+#: ../../src/topics/creating-files-at-runtime.md:7
+#: e81edd66cbb2461e905a7adf6bff23fa
+msgid "To generate such files, we can use the `InitialWorkDirRequirement`."
+msgstr ""
+
+#: ../../src/topics/creating-files-at-runtime.md:9
+#: cb4602ae814b4b47abe61ab3bd88b046
+msgid "`createfile.cwl`"
+msgstr ""
+
+#: ../../src/topics/creating-files-at-runtime.md:15
+#: f6f5c6dc8ff74db3b1c5aa2403ee12d4
+msgid "Any [expressions](../topics/expressions.md) like `$(inputs.message)` are expanded by the CWL engine before creating the file. Here, insert the value at the input `message`."
+msgstr ""
+
+#: ../../src/topics/creating-files-at-runtime.md:20
+#: 87abe95ca4054b48a8fb76d7916db1d4
+msgid "The _CWL expressions_ are independent of any _shell variables_ used later during command line tool invocation. That means that any genuine need for the character `$` must be **escaped** with `\\`. For instance, `\\${PREFIX}` above is expanded to `${PREFIX}` in the generated file to be evaluated by the shell script instead of the CWL engine."
+msgstr ""
+
+#: ../../src/topics/creating-files-at-runtime.md:27
+#: de2366c1d2d1459ba23fe1410f2b86f4
+msgid "To test the above CWL tool, use this job to provide the input value `message`:"
+msgstr ""
+
+#: ../../src/topics/creating-files-at-runtime.md:29
+#: 28906471c2fb41358706f624e3c8bd8f
+msgid "`echo-job.yml`"
+msgstr ""
+
+#: ../../src/topics/creating-files-at-runtime.md:35
+#: 449fdfe14172498fb80e2f57ca0c05f9
+msgid "Before we run this, let us look at each step in a little more detail. The base command `baseCommand: [\"sh\", \"example.sh\"]` will execute the command `sh example.sh`. This will run the file we create in the shell."
+msgstr ""
+
+#: ../../src/topics/creating-files-at-runtime.md:40
+#: 9a9ce102e4ed4dc68eeb161746ab4689
+msgid "`InitialWorkDirRequirement` requires a `listing`. As the `listing` is a YAML array, we need a `-` on the first line of each element of the array, in this case we have just one element. `entryname:` can have any value, but it must match what was specified in the `baseCommand`. The final part is `entry:`, this is followed by `|-` which is YAML quoting syntax, and means that you are using a multiline string (without it, we would need to write the whole script on one line)."
+msgstr ""
+
+#: ../../src/topics/creating-files-at-runtime.md:51
+#: 447b2199a76646be8afacb72203e9719
+msgid "See the [YAML Guide](../topics/yaml-guide.md#maps) for more about the formatting."
+msgstr ""
+
+#: ../../src/topics/creating-files-at-runtime.md:54
+#: aaae789101c742b292ebdcec727b1762
+msgid "Now invoke `cwltool` with the tool description and the input object on the command line:"
+msgstr ""

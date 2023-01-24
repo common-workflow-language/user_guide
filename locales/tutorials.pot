@@ -1,0 +1,57 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2013, CWL Project Team
+# This file is distributed under the same license as the Common Workflow Language User Guide package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Common Workflow Language User Guide \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-01-24 17:23+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../src/tutorials.md:1
+#: d32522e2993f4b48a789f46537fa5ebf
+msgid "Tutorials"
+msgstr ""
+
+#: ../../src/tutorials.md:5
+#: 63a51dccb29045fd8f78d5e396c6e050
+msgid "This is a list of tutorials provided by the CWL community. Use the `Edit this page` link in the menu if you would like to add another tutorial to the list."
+msgstr ""
+
+#: ../../src/tutorials.md:7
+#: cb5f8748a5544be2835467ab07eb7a1c
+msgid "Beginner Tutorials"
+msgstr ""
+
+#: ../../src/tutorials.md:9
+#: 685d0cb2faa04703bcef408ecc2b92f4
+msgid "[Introduction to Workflows with Common Workflow Language: For Contributors.](https://carpentries-incubator.github.io/cwl-novice-tutorial/)"
+msgstr ""
+
+#: ../../src/tutorials.md:11
+#: 20f45705145d45fc8420c4119b06a49f
+msgid "Advanced Tutorials"
+msgstr ""
+
+#: ../../src/tutorials.md:13
+#: 2bccd19d542d4458a1ba8616236f1840
+msgid "[Typescript in CWL](https://github.com/umccr/cwl-ica/wiki/TypeScript)"
+msgstr ""
+
+#: ../../src/tutorials.md:15
+#: c491c73e4c00476980438ffc79c6e4d3
+msgid "Bioinformatics Tutorials"
+msgstr ""
+
+#: ../../src/tutorials.md:17
+#: b8485449206542e097584eca7363c8ce
+msgid "[rnaseq with CWL](https://arvados.github.io/rnaseq-cwl-training/)"
+msgstr ""

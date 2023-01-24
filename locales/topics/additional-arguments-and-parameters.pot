@@ -1,0 +1,62 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2013, CWL Project Team
+# This file is distributed under the same license as the Common Workflow Language User Guide package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Common Workflow Language User Guide \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-01-24 17:23+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../src/topics/additional-arguments-and-parameters.md:1
+#: 4ad19837b80f40af88edf443c4d4e743
+msgid "Additional Arguments and Parameters"
+msgstr ""
+
+#: ../../src/topics/additional-arguments-and-parameters.md:3
+#: a51e98f4fab24b42b225e24b69471869
+msgid "Sometimes tools require additional command line options that don't correspond exactly to input parameters."
+msgstr ""
+
+#: ../../src/topics/additional-arguments-and-parameters.md:6
+#: 78e7111611734004b650bdde36fe8079
+msgid "In this example, we will wrap the Java compiler to compile a java source file to a class file.  By default, \"javac\" will create the class files in the same directory as the source file.  However, CWL input files (and the directories in which they appear) may be read-only, so we need to instruct \"javac\" to write the class file to the designated output directory instead."
+msgstr ""
+
+#: ../../src/topics/additional-arguments-and-parameters.md:13
+#: 0c5cc374383a4f058a6c8d7a3d83c7d4
+msgid "`arguments.cwl`"
+msgstr ""
+
+#: ../../src/topics/additional-arguments-and-parameters.md:19
+#: 67cfc6cc46764b07a6738691bc1cb1f6
+msgid "`arguments-job.yml`"
+msgstr ""
+
+#: ../../src/topics/additional-arguments-and-parameters.md:24
+#: 744b2343db934429b7a04b4ab4f84d15
+msgid "Next, create a sample Java file to use with the command-line tool."
+msgstr ""
+
+#: ../../src/topics/additional-arguments-and-parameters.md:30
+#: abea839860f447f1b767c3a028ce1ca9
+msgid "And now invoke `cwltool` providing the tool description and the input object on the command line:"
+msgstr ""
+
+#: ../../src/topics/additional-arguments-and-parameters.md:36
+#: 5a44c7cd8feb4593802cdf56254b79d7
+msgid "Here we use the `arguments` field to add an additional argument to the command line that isn't tied to a specific input parameter."
+msgstr ""
+
+#: ../../src/topics/additional-arguments-and-parameters.md:43
+#: d5f29eae1af646d5be22c816c5d1a4fd
+msgid "This example references a runtime parameter.  Runtime parameters provide information about the hardware or software environment when the tool is actually executed.  The `$(runtime.outdir)` parameter is the path to the designated output directory.  Other parameters include `$(runtime.tmpdir)`, `$(runtime.ram)`, `$(runtime.cores)`, `$(runtime.outdirSize)`, and `$(runtime.tmpdirSize)`.  See the [Runtime Environment][runtime] section of the CWL specification for details."
+msgstr ""

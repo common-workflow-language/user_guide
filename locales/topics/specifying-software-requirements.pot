@@ -1,0 +1,42 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2013, CWL Project Team
+# This file is distributed under the same license as the Common Workflow Language User Guide package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Common Workflow Language User Guide \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-01-24 17:23+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../src/topics/specifying-software-requirements.md:1
+#: b34314bdb71244f2a263427f22172b5a
+msgid "Specifying Software Requirements"
+msgstr ""
+
+#: ../../src/topics/specifying-software-requirements.md:3
+#: c8609548e7904e65a5c395bfc07ad808
+msgid "Often, tool descriptions will be written for a specific version of a software. To make it easier for others to use your descriptions, you can include a `SoftwareRequirement` field in the `hints` section. This may also help to avoid confusion about which version of a tool the description was written for."
+msgstr ""
+
+#: ../../src/topics/specifying-software-requirements.md:13
+#: e4c1c25793884b5aaead1fb15c2e6bbc
+msgid "In this example, the software requirement being described is InterProScan version 5.21-60."
+msgstr ""
+
+#: ../../src/topics/specifying-software-requirements.md:25
+#: 91586b8767734e0ab01903f2562a7cf2
+msgid "Depending on your CWL runner, these hints may be used to check that the required software is installed and available before the job is run. To enable these checks with the reference implementation, use the [dependency resolvers configuration][dependencies]."
+msgstr ""
+
+#: ../../src/topics/specifying-software-requirements.md:29
+#: dd7c487024b44a67a26765e59b5bf64b
+msgid "As well as a version number, a unique resource identifier (URI) for the tool is given in the form of an [RRID][rrid]. Resources with RRIDs can be looked up in the [SciCrunch][scicrunch] registry, which provides a portal for finding, tracking, and referring to scientific resources consistently. If you want to specify a tool as a `SoftwareRequirement`, search for the tool on SciCrunch and use the RRID that it has been assigned in the registry. (Follow this [Adding a Resource Tutorial][scicrunch-add-tool] to add a tool to SciCrunch). You can use this RRID to refer to the tool (via [identifiers.org][identifiers]) in the `specs` field of your requirement description. Other good choices, in order of preference, are to include the DOI for the main tool citation and the URL to the tool."
+msgstr ""

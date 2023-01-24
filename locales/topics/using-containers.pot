@@ -1,0 +1,82 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2013, CWL Project Team
+# This file is distributed under the same license as the Common Workflow Language User Guide package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Common Workflow Language User Guide \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-01-24 17:23+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../src/topics/using-containers.md:1
+#: 3a1cb28acbf64b36b328af24b8ad3896
+msgid "Using Containers"
+msgstr ""
+
+#: ../../src/topics/using-containers.md:3
+#: b0788dc4a9694fcface9c2d1122053ee
+msgid "Running Tools Inside Docker"
+msgstr ""
+
+#: ../../src/topics/using-containers.md:5
+#: fdb03600e95f43248a8841308892f95f
+msgid "[Docker][docker] containers simplify software installation by providing a complete known-good runtime for software and its dependencies.  However, containers are also purposefully isolated from the host system, so in order to run a tool inside a Docker container there is additional work to ensure that input files are available inside the container and output files can be recovered from the container.  A CWL runner can perform this work automatically, allowing you to use Docker to simplify your software management while avoiding the complexity of invoking and managing Docker containers."
+msgstr ""
+
+#: ../../src/topics/using-containers.md:15
+#: 7e27ca6ce9974ef8a68e4955c377a7cc
+msgid "One of the responsibilities of the CWL runner is to adjust the paths of input files to reflect the location where they appear inside the container."
+msgstr ""
+
+#: ../../src/topics/using-containers.md:18
+#: 7162dac152a344b78a196ab9b304ff96
+msgid "This example runs a simple Node.js script inside a Docker container which will then print \"Hello World\" to the standard output."
+msgstr ""
+
+#: ../../src/topics/using-containers.md:21
+#: 7ecf64fbdd774b298455e9cdf5be38df
+msgid "`docker.cwl`"
+msgstr ""
+
+#: ../../src/topics/using-containers.md:27
+#: 7ec954f8c1cd4ba3946ed2b3bd675083
+msgid "`docker-job.yml`"
+msgstr ""
+
+#: ../../src/topics/using-containers.md:33
+#: b80d058d42c2414299eca96c4edd908b
+msgid "Before we run this, let's just break it down and see what some bits do.  Most of this has been explained in previous sections, the only part that is really new is the `dockerRequirement` section."
+msgstr ""
+
+#: ../../src/topics/using-containers.md:44
+#: c6ddaf94bc9f49e2b507a3eedaf597ee
+msgid "`baseCommand: node` tells CWL that we will be running this command using the Node Js runtime that is meant for Javascript files. We then need to specify some `hints` for how to find the container we want.  In this case we list just our requirements for the docker container in `DockerRequirements`.  The `dockerPull:` parameter takes the same value that you would pass to a `docker pull` command. That is, the name of the container image (you can even specify the tag, which is good idea for best practices when using containers for reproducible research). In this case we have used a container called `node:slim`."
+msgstr ""
+
+#: ../../src/topics/using-containers.md:52
+#: d0770aeb8b0546ed943d60a3ae3b9f9a
+msgid "Create a Javascript file named \"hello.js\" and invoke `cwltool` providing the tool description and the input object on the command line:"
+msgstr ""
+
+#: ../../src/topics/using-containers.md:55
+#: d8c679b90ba14cf29280c1f1d271358d
+msgid "`hello.js`"
+msgstr ""
+
+#: ../../src/topics/using-containers.md:69
+#: c10409c624084be79a3378ae056d50c8
+msgid "Notice the CWL runner has constructed a Docker command line to run the script."
+msgstr ""
+
+#: ../../src/topics/using-containers.md:72
+#: 28514dd1b76648eb9bcec48290d7b66e
+msgid "In this example, the path to the script `hello.js` is `/home/me/cwl/user_guide/hello.js` outside the container but `/var/lib/cwl/job369354770_examples/hello.js` inside the container, as reflected in the invocation of the `node` command."
+msgstr ""

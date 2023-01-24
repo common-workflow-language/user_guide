@@ -1,0 +1,257 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2013, CWL Project Team
+# This file is distributed under the same license as the Common Workflow Language User Guide package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Common Workflow Language User Guide \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-01-24 17:23+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../src/introduction/prerequisites.md:1
+#: 789e7b95b23d4bdb8398d691587613ee
+msgid "Prerequisites"
+msgstr ""
+
+#: ../../src/introduction/prerequisites.md:6
+#: 53432372af8c447cbeb5f05892daee72
+msgid "The software and configurations listed in this section are prerequisites for following this user guide. The CWL standards are implemented by many different workflow runners and platforms. This list of requirements focuses on the CWL reference runner, `cwltool`. You can use another CWL-compatible runner or workflow system, but the results and interface may look different (though the exact workflow outputs should be identical)."
+msgstr ""
+
+#: ../../src/introduction/prerequisites.md:12
+#: 36f42adbc26f42a891d996f8b9730589
+msgid "CWL Implementations"
+msgstr ""
+
+#: ../../src/introduction/prerequisites.md:14
+#: 090df41a03204aac91aa7f663c6a5209
+msgid "There are many implementations of the CWL standards. Some are complete CWL runners, while others could be plug-ins or extensions to workflow engines. We have a better explanation in the [Implementations](basic-concepts.md#implementations) section."
+msgstr ""
+
+#: ../../src/introduction/prerequisites.md:19
+#: 57ad125f7c2e4f01982acbabb1ff3d80
+msgid "Operating System"
+msgstr ""
+
+#: ../../src/introduction/prerequisites.md:21
+#: edfd6bf214d042feb6662b1c2d2fa48e
+msgid "We recommend using an up-to-date operating system. You can choose any of the following options for your operating system:"
+msgstr ""
+
+#: ../../src/introduction/prerequisites.md:24
+#: a44cd70295f5442fb6651d85794528ba
+msgid "Linux"
+msgstr ""
+
+#: ../../src/introduction/prerequisites.md:25
+#: df31f7835d544160be90401bd20993a3
+msgid "macOS"
+msgstr ""
+
+#: ../../src/introduction/prerequisites.md:26
+#: f5e9ef0126f74353bc4c30a6e92bd92a
+msgid "Windows"
+msgstr ""
+
+#: ../../src/introduction/prerequisites.md:29
+#: d11b1c901d004a10a7b8cda2e727bae9
+msgid "If you are using Windows, you will have to install the [Windows Subsystem for Linux 2](https://learn.microsoft.com/en-us/windows/wsl/install) (WSL2). Visit the `cwltool` [documentation](https://github.com/common-workflow-language/cwltool/blob/main/README.rst#ms-windows-users) for details on installing WSL2. Your operating system also needs internet access and a recent version of Python (3.6+)."
+msgstr ""
+
+#: ../../src/introduction/prerequisites.md:35
+#: 37e363cb5987436d86e5725a63984e5c
+msgid "CWL Runner"
+msgstr ""
+
+#: ../../src/introduction/prerequisites.md:41
+#: 1a19bd057d3c48679e2ae844c6b8291a
+msgid "The first thing you will need for running CWL workflows is a CWL runner. `cwltool` is a Python Open Source project maintained by the CWL community. It is also the CWL reference runner, which means it must support everything in the current CWL specification, {{ cwl_version }}."
+msgstr ""
+
+#: ../../src/introduction/prerequisites.md:46
+#: 2a18beeff42d4cf8a4315e4a171cdede
+msgid "`cwltool` can be installed with `pip`. We recommend using a virtual environment like `venv` or `conda`. The following commands will create and activate a Python virtual environment using the `venv` module, and install `cwltool` in that environment:"
+msgstr ""
+
+#: ../../src/introduction/prerequisites.md:51
+#: 17f353c8e861492d91e51b78b5da3351
+msgid "Installing `cwltool` with `pip` and `venv`."
+msgstr ""
+
+#: ../../src/introduction/prerequisites.md:62
+#: 5f178532a9004163b795c1433248eb77
+msgid "Visit the `cwltool` [documentation](https://github.com/common-workflow-language/cwltool#install) for other ways to install `cwltool` with `apt` and `conda`."
+msgstr ""
+
+#: ../../src/introduction/prerequisites.md:65
+#: d2ff1f8e720f4bd49912ccd7040f2ccc
+msgid "Let's use a simple CWL tool description `true.cwl` with `cwltool`."
+msgstr ""
+
+#: ../../src/introduction/prerequisites.md:67
+#: 77e4e1e5b4764d59a990b43ed93a7459
+msgid "`true.cwl`"
+msgstr ""
+
+#: ../../src/introduction/prerequisites.md:73
+#: 22b4c40f082d4bacac051617b617cbae
+msgid "The `cwltool` command has an option to validate CWL tool and workflow descriptions. This option will parse the CWL document, look for syntax errors, and verify that the workflow descriptions are compliant with the CWL standards. However, these actions will be performed without running the document. To validate CWL workflows (or even a standalone command line tool description like the above) pass the `--validate` option to the `cwltool` command:"
+msgstr ""
+
+#: ../../src/introduction/prerequisites.md:79
+#: 7f97cf170a854ce685bae8f30a16572b
+msgid "Validating `true.cwl` with `cwltool`."
+msgstr ""
+
+#: ../../src/introduction/prerequisites.md:84
+#: 11fdbc38c5ed45a4976e16844729a3cd
+msgid "You can run the CWL tool description by omitting the `--validate` option:"
+msgstr ""
+
+#: ../../src/introduction/prerequisites.md:86
+#: c513823812a5423da694e85a20f86506
+msgid "Running `true.cwl` with `cwltool`."
+msgstr ""
+
+#: ../../src/introduction/prerequisites.md:91
+#: 7be568d02d7e4593a1c0ef719d0f83ac
+msgid "Cwl-runner Python Module"
+msgstr ""
+
+#: ../../src/introduction/prerequisites.md:93
+#: 36ee569c74ac4602a51818a92c95f031
+msgid "`cwl-runner` is an implementation-agnostic alias for any CWL compliant runner. This simply means that the `cwl-runner` alias command can be invoked independently, and is not reliant on a particular CWL runner program name. Users can invoke `cwl-runner` instead of invoking a CWL runner like `cwltool` directly. The `cwl-runner` is installed by a system administrator or user to point to the preferred CWL implementation. This is convenient for environments with multiple CWL runners."
+msgstr ""
+
+#: ../../src/introduction/prerequisites.md:101
+#: 06defabc17634ceea15e1f4523164a23
+msgid "The CWL community publishes a Python package with the name `cwlref-runner` that installs an alias for `cwltool` under the name `cwl-runner`"
+msgstr ""
+
+#: ../../src/introduction/prerequisites.md:104
+#: ac847d3d1587499ea6e1b3796e16282c
+msgid "Installing `cwl-runner` alias for cwltool with `pip`."
+msgstr ""
+
+#: ../../src/introduction/prerequisites.md:111
+#: a4d5291859bb415b981a7dd6dff3c313
+msgid "Now you can validate and run your workflow with the `cwl-runner` executable, which will invoke `cwltool`. You should have the same results and output as in the previous section."
+msgstr ""
+
+#: ../../src/introduction/prerequisites.md:115
+#: d80356bf607b4f7d9572b925c69163f1
+msgid "Validating `true.cwl` with `cwl-runner`."
+msgstr ""
+
+#: ../../src/introduction/prerequisites.md:120
+#: 54ddcf5f932c40c4bbec2f88114e6e20
+msgid "Running `true.cwl` with `cwl-runner`."
+msgstr ""
+
+#: ../../src/introduction/prerequisites.md:125
+#: f159836854c14187929cf24f716ccee0
+msgid "Another way to execute `cwl-runner` is by invoking the file directly. For that, the first thing you need to do is copy `true.cwl` workflow into a new file: `true_shebang.cwl`, and include a special first line, a *shebang*:"
+msgstr ""
+
+#: ../../src/introduction/prerequisites.md:129
+#: 728b24fff1f14726b27168dbf46e4e7b
+msgid "`true_shebang.cwl`"
+msgstr ""
+
+#: ../../src/introduction/prerequisites.md:135
+#: 5590cd84de1c4f9382ab37644a5adac7
+msgid "Now you can make the file `true_shebang.cwl` executable with `chmod u+x`."
+msgstr ""
+
+#: ../../src/introduction/prerequisites.md:137
+#: 5a066c4dcd034cfd8902ae01128134c5
+msgid "Making `true.cwl` executable."
+msgstr ""
+
+#: ../../src/introduction/prerequisites.md:144
+#: 846f1eaf4f81477c84b885f7c17ab030
+msgid "And finally, you can execute it directly in the command-line. On execution, the program specified in the shebang (`cwl-runner`) will be used to execute the rest of the file."
+msgstr ""
+
+#: ../../src/introduction/prerequisites.md:148
+#: a972f3ea3b5f41f6b78f682a42616197
+msgid "Running `true_shebang.cwl` with a shebang."
+msgstr ""
+
+#: ../../src/introduction/prerequisites.md:154
+#: 3165d673bd7341518d2b259932917b53
+msgid "The *shebang* is the two-character sequence `#!` at the beginning of a script. When the script is executable, the operating system will execute the script using the executable specified after the shebang. It is considered a good practice to use `/usr/bin/env <executable>` rather than using a hard-coded location, since `/usr/bin/env <executable>` looks for the `<executable>` program in the system `PATH`,"
+msgstr ""
+
+#: ../../src/introduction/prerequisites.md:161
+#: d23de68e21e1429886b3814af9cc3104
+msgid "Text Editor"
+msgstr ""
+
+#: ../../src/introduction/prerequisites.md:163
+#: 9538d8b0944f4e72bceec9ebf1fb5832
+msgid "You can use any text editor with CWL, but for syntax highlighting we recommend an editor with YAML support. Popular editors are Visual Studio Code, Sublime, WebStorm, vim/neovim, and Emacs."
+msgstr ""
+
+#: ../../src/introduction/prerequisites.md:167
+#: 2e710620d21f44a0a036431453ed5e20
+msgid "There are extensions for Visual Studio Code and WebStorm that provide integration with CWL, and features such as customized syntax highlighting and better auto-complete:"
+msgstr ""
+
+#: ../../src/introduction/prerequisites.md:171
+#: 25c6c7a87e1847f9aec1c32cbc83cf4c
+msgid "Visual Studio Code with the Benten (CWL) plugin - <https://github.com/rabix/benten#install-vs-code-extension>"
+msgstr ""
+
+#: ../../src/introduction/prerequisites.md:172
+#: a90b90e926324cd687a29436e82eef38
+msgid "cwl-plugin for IntelliJ - <https://plugins.jetbrains.com/plugin/10040-cwl-plugin>"
+msgstr ""
+
+#: ../../src/introduction/prerequisites.md:174
+#: 91a2b9d7d7b642c2904bd55d29690254
+msgid "The CWL community also maintains a list of editors and viewers: <https://www.commonwl.org/tools/#editors>"
+msgstr ""
+
+#: ../../src/introduction/prerequisites.md:177
+#: e0cdb48ef04846cd9a39008260b18777
+msgid "Docker"
+msgstr ""
+
+#: ../../src/introduction/prerequisites.md:181
+#: ac55bc8b751d440086043c4af6776d10
+msgid "`cwltool` uses Docker to run tools, workflows, and workflow steps that specify a software container. Follow the instructions in the Docker documentation to install it for your operating system: <https://docs.docker.com/>."
+msgstr ""
+
+#: ../../src/introduction/prerequisites.md:185
+#: be04aba59f3c40f1aa90316090792441
+msgid "You do not need to know how to write and build Docker containers. In the rest of the user guide, we will use existing Docker images for running examples, and to clarify the differences between the execution models with and without containers."
+msgstr ""
+
+#: ../../src/introduction/prerequisites.md:191
+#: 2d4790bd46124cd8be789927c25fbbbd
+msgid "`cwltool` supports running containers with Docker, Podman, udocker, and Singularity. You can also use alternative container registries for pulling images."
+msgstr ""
+
+#: ../../src/introduction/prerequisites.md:196
+#: af2e128598294dee9330002a2f7bfc63
+msgid "Learn More"
+msgstr ""
+
+#: ../../src/introduction/prerequisites.md:198
+#: f4ffd0d89ef1406f9e957a05a4172c57
+msgid "The [Implementations](basic-concepts.md#implementations) topic in the next section, Basic Concepts."
+msgstr ""
+
+#: ../../src/introduction/prerequisites.md:199
+#: 00fa0dd045054fcbbe3322e10e591430
+msgid "The Python `venv` module: <https://docs.python.org/3/library/venv.html>"
+msgstr ""

@@ -1,0 +1,373 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2013, CWL Project Team
+# This file is distributed under the same license as the Common Workflow Language User Guide package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Common Workflow Language User Guide \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-01-24 17:23+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../src/topics/expressions.md:1
+#: 6b0faa9c10ad4da783e2155070095a8d
+msgid "Expressions"
+msgstr ""
+
+#: ../../src/topics/expressions.md:3
+#: 9e44e4e737b545a2b10b97e923027bd9
+msgid "If you need to manipulate input parameters, include the requirement `InlineJavascriptRequirement` and then anywhere a parameter reference is legal you can provide a fragment of Javascript that will be evaluated by the CWL runner."
+msgstr ""
+
+#: ../../src/topics/expressions.md:9
+#: ad6d3dddfda445a5bfce2665cb195605
+msgid "JavaScript expressions should only be used when absolutely necessary. When manipulating file names, extensions, paths etc, consider whether one of the [built in `File` properties][file-prop] like `basename`, `nameroot`, `nameext`, etc, could be used instead. See the [list of best practices](best-practices.md)."
+msgstr ""
+
+#: ../../src/topics/expressions.md:16
+#: f487ea31d38142839ce5667701b894cd
+msgid "`expression.cwl`"
+msgstr ""
+
+#: ../../src/topics/expressions.md:22
+#: 47d7f42a657a4547af1be1e13662effc
+msgid "As this tool does not require any `inputs` we can run it with an (almost) empty job file:"
+msgstr ""
+
+#: ../../src/topics/expressions.md:25
+#: c331468453dd4e60a76bc753417b72ce
+msgid "`empty.yml`"
+msgstr ""
+
+#: ../../src/topics/expressions.md:31
+#: 6b9b7057eb154a95847ec56652de07d9
+msgid "`empty.yml` contains a description of an empty JSON object. JSON objects descriptions are contained inside curly brackets `{}`, so an empty object is represented simply by a set of empty brackets."
+msgstr ""
+
+#: ../../src/topics/expressions.md:35
+#: 6facbcd083f04a60941589da7e21621f
+msgid "We can then run `expression.cwl`:"
+msgstr ""
+
+#: ../../src/topics/expressions.md:37
+#: a08110192e264a109ee6a568351135e4
+msgid "Running `expression.cwl`"
+msgstr ""
+
+#: ../../src/topics/expressions.md:47
+#: 1a260934cee04059b4765d154f6388e1
+msgid "Note that requirements can be provided with the map syntax, as in the example above:"
+msgstr ""
+
+#: ../../src/topics/expressions.md:54
+#: ebee54b00af643aba0d53e774b0ac188
+msgid "Or as an array, with each entry (in this case, only `class: InlineJavascriptRequirement`) marked by a `-`. The same syntax is used to describe the additional command line arguments."
+msgstr ""
+
+#: ../../src/topics/expressions.md:62
+#: 02ad120e9a72482780f062ae3cadcce7
+msgid "Where are JavaScript expressions allowed?"
+msgstr ""
+
+#: ../../src/topics/expressions.md:64
+#: 8bb623ae7a9646ff992d7a79856aac8a
+msgid "Just like [parameter references](parameter-references.md), you can use JavaScript Expressions only in certain fields.  These are:"
+msgstr ""
+
+#: ../../src/topics/expressions.md:66
+#: 4437b8ae6fb04a1fa06f494ead97b1c7
+msgid "From [`CommandLineTool`](https://www.commonwl.org/v1.0/CommandLineTool.html#CommandLineTool)"
+msgstr ""
+
+#: ../../src/topics/expressions.md:67
+#: 145b4d4cbfaa4c5d914455b0b5b6ef1b
+msgid "`arguments`"
+msgstr ""
+
+#: ../../src/topics/expressions.md:68
+#: ../../src/topics/expressions.md:76
+#: ../../src/topics/expressions.md:89
+#: b187028dafc040e8ab04d2a69c547874
+#: ecb148c1da01445a8149b500b5ea50f5
+#: 87f7f23e14e54b87b6f1b4f8c148bf8b
+msgid "`valueFrom`"
+msgstr ""
+
+#: ../../src/topics/expressions.md:69
+#: 9132968dd34f4a9c99ebabcae48a4a3f
+msgid "`stdin`"
+msgstr ""
+
+#: ../../src/topics/expressions.md:70
+#: 34b31b4554b442ab9d9bac1e95cc3029
+msgid "`stdout`"
+msgstr ""
+
+#: ../../src/topics/expressions.md:71
+#: 33e3e471fafb4f609694af59556dedcb
+msgid "`stderr`"
+msgstr ""
+
+#: ../../src/topics/expressions.md:72
+#: 941720c894bd45a895e3a8e682b7e884
+msgid "From [CommandInputParameter](https://www.commonwl.org/v1.0/CommandLineTool.html#CommandInputParameter)"
+msgstr ""
+
+#: ../../src/topics/expressions.md:73
+#: ../../src/topics/expressions.md:78
+#: ../../src/topics/expressions.md:85
+#: ../../src/topics/expressions.md:93
+#: e2c648a9a5794879b74cf02e489f0c5a
+#: 15692bd5c6204aa9b72259e6dae69bec
+#: 1a506a3ea7614043a67dd4d93015b19c
+#: 166fd96ec8b64db88e1837feaf65df1c
+msgid "`format`"
+msgstr ""
+
+#: ../../src/topics/expressions.md:74
+#: ../../src/topics/expressions.md:79
+#: ../../src/topics/expressions.md:86
+#: ../../src/topics/expressions.md:94
+#: 8c65f558109142048b8831f800264bb4
+#: a4e5f9d5354d483392c157f736cd8c20
+#: 9ec2e908459a468b837b572a426bcd8d
+#: 2d82125ff94c441ea29b3da5ff5dbb08
+msgid "`secondaryFiles`"
+msgstr ""
+
+#: ../../src/topics/expressions.md:75
+#: 6eecf3fa29d9465882a2b6be02504ac0
+msgid "From [`inputBinding`](https://www.commonwl.org/v1.0/CommandLineTool.html#CommandLineBinding)"
+msgstr ""
+
+#: ../../src/topics/expressions.md:77
+#: 92267f3d8f4e4b3fa129e3bec3b16413
+msgid "From [CommandOutputParamater](https://www.commonwl.org/v1.0/CommandLineTool.html#CommandOutputParameter)"
+msgstr ""
+
+#: ../../src/topics/expressions.md:80
+#: b9b5551681d046e7a0071eee29987b04
+msgid "From [CommandOutputBinding](https://www.commonwl.org/v1.0/CommandLineTool.html#CommandOutputBinding)"
+msgstr ""
+
+#: ../../src/topics/expressions.md:81
+#: b148af79351e4ba49604e24861388496
+msgid "`glob`"
+msgstr ""
+
+#: ../../src/topics/expressions.md:82
+#: 4c48b367e5494d559484c5395af3a5a4
+msgid "`outputEval`"
+msgstr ""
+
+#: ../../src/topics/expressions.md:83
+#: 5541a07628174dd6a843afa2c37f4973
+msgid "From `Workflow`"
+msgstr ""
+
+#: ../../src/topics/expressions.md:84
+#: bf6e4a2101654e15bc27ac3db0c6bb6d
+msgid "From [InputParameter](https://www.commonwl.org/v1.0/Workflow.html#InputParameter) and [WorkflowOutputParameter](https://www.commonwl.org/v1.0/Workflow.html#WorkflowOutputParameter)"
+msgstr ""
+
+#: ../../src/topics/expressions.md:87
+#: a295cb00ea034ce7820897606999ae4c
+msgid "From `steps`"
+msgstr ""
+
+#: ../../src/topics/expressions.md:88
+#: 5fd2e9df08404efa9d24d8bfccf91a18
+msgid "From [WorkflowStepInput](https://www.commonwl.org/v1.0/Workflow.html#WorkflowStepInput)"
+msgstr ""
+
+#: ../../src/topics/expressions.md:90
+#: 51f8b42f4e7d4c8484133a18f83be491
+msgid "From [ExpressionTool](https://www.commonwl.org/v1.0/Workflow.html#ExpressionTool)"
+msgstr ""
+
+#: ../../src/topics/expressions.md:91
+#: 73fef9b1b2074077a2525f72b2efaf62
+msgid "`expression`"
+msgstr ""
+
+#: ../../src/topics/expressions.md:92
+#: cf19b246bc20476899a83e68113dd3d1
+msgid "From [InputParameter](https://www.commonwl.org/v1.0/Workflow.html#InputParameter) and [ExpressionToolOutputParameter](https://www.commonwl.org/v1.0/Workflow.html#ExpressionToolOutputParameter)"
+msgstr ""
+
+#: ../../src/topics/expressions.md:95
+#: dfe56b4ea35a440d91f579efcc2c039b
+msgid "From [`ResourceRequirement`](https://www.commonwl.org/v1.0/CommandLineTool.html#ResourceRequirement)"
+msgstr ""
+
+#: ../../src/topics/expressions.md:96
+#: 918bc6b265a549f28f027da29368cac4
+msgid "`coresMin`"
+msgstr ""
+
+#: ../../src/topics/expressions.md:97
+#: a9182179ebce4c99b4eafe59ba122799
+msgid "`coresMax`"
+msgstr ""
+
+#: ../../src/topics/expressions.md:98
+#: 984ceb05b6b24e4986a28436bdca88e7
+msgid "`ramMin`"
+msgstr ""
+
+#: ../../src/topics/expressions.md:99
+#: 9a3f6db0d7f64468bbf2f6f861eab96a
+msgid "`ramMax`"
+msgstr ""
+
+#: ../../src/topics/expressions.md:100
+#: b7557357360d454dba7ab3c3471b5a23
+msgid "`tmpdirMin`"
+msgstr ""
+
+#: ../../src/topics/expressions.md:101
+#: 839ac0ddca374746972ead6d22427edc
+msgid "`tmpdirMax`"
+msgstr ""
+
+#: ../../src/topics/expressions.md:102
+#: 89bfd53638504c7aa437c2140afb6035
+msgid "`outdirMin`"
+msgstr ""
+
+#: ../../src/topics/expressions.md:103
+#: f0af6b4cfc23480aae61f42422ad3afb
+msgid "`outdirMax`"
+msgstr ""
+
+#: ../../src/topics/expressions.md:104
+#: 67ccc10e77d644078b170a28a8ebed3d
+msgid "From [`InitialWorkDirRequirement`](https://www.commonwl.org/v1.0/CommandLineTool.html#InitialWorkDirRequirement)"
+msgstr ""
+
+#: ../../src/topics/expressions.md:105
+#: fcb8b8003fc84ab890ce241e63d43b5d
+msgid "`listing`"
+msgstr ""
+
+#: ../../src/topics/expressions.md:106
+#: 584682d4db424108b89ea8e315838de3
+msgid "in [Dirent](https://www.commonwl.org/v1.0/CommandLineTool.html#Dirent)"
+msgstr ""
+
+#: ../../src/topics/expressions.md:107
+#: 77439e7f4f214db781edc777a8a03b78
+msgid "`entry`"
+msgstr ""
+
+#: ../../src/topics/expressions.md:108
+#: 4ba274f6d9c44ad7a05891725299a759
+msgid "`entryname`"
+msgstr ""
+
+#: ../../src/topics/expressions.md:109
+#: 1b751542a9f34fe19ae5f91174e01cb7
+msgid "From `EnvVarRequirement`"
+msgstr ""
+
+#: ../../src/topics/expressions.md:110
+#: aca9ad053f5441caa5cd51170e35532d
+msgid "From [EnvironmentDef](https://www.commonwl.org/v1.0/CommandLineTool.html#EnvironmentDef)"
+msgstr ""
+
+#: ../../src/topics/expressions.md:111
+#: 37c96fdc52c443faa1d1e462ff034425
+msgid "`envValue`"
+msgstr ""
+
+#: ../../src/topics/expressions.md:116
+#: 4bcf5cd130b148f7b3f601902ad0b7b4
+msgid "Using External Libraries and Inline JavaScript Code with `expressionLib`"
+msgstr ""
+
+#: ../../src/topics/expressions.md:118
+#: d6f0074d025742a6b3fe7f91f1dff335
+msgid "The requirement `InlineJavascriptRequirement` supports an `expressionLib` attribute that allows users to load external JavaScript files, or to provide inline JavaScript code."
+msgstr ""
+
+#: ../../src/topics/expressions.md:122
+#: c664d4710c404ed0af90dc22c8f273b1
+msgid "Entries added to the `expressionLib` attribute are parsed with the JavaScript engine of a CWL runner. This can be used to include external files or to create JavaScript functions that can be called in other parts of the CWL document."
+msgstr ""
+
+#: ../../src/topics/expressions.md:128
+#: bd8dfef3aa934750bdd790e1de6bced6
+msgid "The CWL standards (versions 1.0 through 1.2) [states](https://www.commonwl.org/v1.0/CommandLineTool.html#Expressions)  that the only version of JavaScript valid in CWL expressions is [ECMAScript 5.1](https://262.ecma-international.org/5.1/). This means that any code that you include or write in your CWL Document must be compliant with ECMAScript 5.1."
+msgstr ""
+
+#: ../../src/topics/expressions.md:135
+#: 1ae20d38a1574d828ca7cb8e955906da
+msgid "For example, we can use `InlineJavascriptRequirement` and write a JavaScript function inline in `expressionLib`. That function can then be used in other parts of the CWL document:"
+msgstr ""
+
+#: ../../src/topics/expressions.md:139
+#: bcda020047784e4191d4de456afc7449
+msgid "`hello-world-expressionlib-inline.cwl`"
+msgstr ""
+
+#: ../../src/topics/expressions.md:146
+#: a9ccc2da748644dfb28b590eae974f63
+msgid "Running this CWL workflow will invoke the JavaScript function and result in the `echo` command printing the input message with capital initial letters:"
+msgstr ""
+
+#: ../../src/topics/expressions.md:149
+#: aede8f2c722c49f18cd2a86c051bb1d4
+msgid "Running `hello-world-expressionlib-inline.cwl`."
+msgstr ""
+
+#: ../../src/topics/expressions.md:155
+#: 7d1bd9bfba9c496a90fc45f575505e22
+msgid "Let's move the `capitalizeWords` function to an external file, `custom-functions.js`, and import it in our CWL document:"
+msgstr ""
+
+#: ../../src/topics/expressions.md:158
+#: 8b906fa3b98c48c68de46f80667d4d2f
+msgid "`custom-functions.js`"
+msgstr ""
+
+#: ../../src/topics/expressions.md:164
+#: daa9689f15c746a38dcd22a3f169a4c6
+msgid "`hello-world-expressionlib-external.cwl`"
+msgstr ""
+
+#: ../../src/topics/expressions.md:171
+#: d0d8193fbb304f0281db0c6c1147545b
+msgid "The `custom-functions.js` file is included in the CWL document with the `$include: custom-functions.js` statement. That makes the functions and variables available to be used in other parts of the CWL document."
+msgstr ""
+
+#: ../../src/topics/expressions.md:175
+#: e5e1179082c14621bafbd14d887db62a
+msgid "Running `hello-world-expressionlib-external.cwl`."
+msgstr ""
+
+#: ../../src/topics/expressions.md:181
+#: 193379258f254ac5a25fcfb61b1c3540
+msgid "Finally, note that you can have both inline and external JavaScript code in your CWL document. In this final example we have added another entry to the `expressionLib` attribute with the new function `createHelloWorldMessage`, that calls the `capitalizeWords` function from the external file `custom-functions.js`."
+msgstr ""
+
+#: ../../src/topics/expressions.md:186
+#: ec0d1c972b9942f8a55b7b68fc9cfe07
+msgid "`hello-world-expressionlib.cwl`"
+msgstr ""
+
+#: ../../src/topics/expressions.md:193
+#: 63ff0565300a493f8c84935139c23552
+msgid "Running `hello-world-expressionlib.cwl`."
+msgstr ""
+
+#: ../../src/topics/expressions.md:200
+#: f8bb29ee047e407ea226599bccd86196
+msgid "The `$include` statement can be used to include a file from the local disk or from a remote location. It works with both relative and absolute paths. Read the [text about `$include`](https://www.commonwl.org/v1.0/SchemaSalad.html#Include) from the CWL specification to learn more about it."
+msgstr ""

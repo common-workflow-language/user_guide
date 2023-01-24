@@ -1,0 +1,42 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2013, CWL Project Team
+# This file is distributed under the same license as the Common Workflow Language User Guide package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Common Workflow Language User Guide \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-01-24 17:23+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../src/topics/staging-input-files.md:1
+#: 3064f17a9bae442aaef41b9434cb71fd
+msgid "Staging Input Files"
+msgstr ""
+
+#: ../../src/topics/staging-input-files.md:3
+#: 09bb659a5cbe40948b59208f0fb77ddb
+msgid "Normally, input files are located in a read-only directory separate from the output directory.  This causes problems if the underlying tool expects to write its output files alongside the input file in the same directory.  You use `InitialWorkDirRequirement` to stage input files into the output directory. In this example, we use a JavaScript expression to extract the base name of the input file from its leading directory path."
+msgstr ""
+
+#: ../../src/topics/staging-input-files.md:9
+#: a1bcfead8f7f4270945e5512dfa9aea6
+msgid "`linkfile.cwl`"
+msgstr ""
+
+#: ../../src/topics/staging-input-files.md:15
+#: cc0cd8765dac4baab9072a90e82e4f8e
+msgid "`arguments-job.yml`"
+msgstr ""
+
+#: ../../src/topics/staging-input-files.md:20
+#: 77ac403083ff41e0a94b4376d57c4310
+msgid "Now invoke `cwltool` with the tool description and the input object on the command line:"
+msgstr ""

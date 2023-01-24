@@ -1,0 +1,57 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2013, CWL Project Team
+# This file is distributed under the same license as the Common Workflow Language User Guide package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Common Workflow Language User Guide \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-01-24 17:23+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../src/index.md:1
+#: a58ca61ccefc401588f91699bc98bd32
+msgid "Common Workflow Language User Guide"
+msgstr ""
+
+#: ../../src/index.md:3
+#: 6dcf12053f104cb3a8d23ce8d4f90363
+msgid "This guide will introduce you to writing workflows using the [Common Workflow Language](https://www.commonwl.org/) (CWL) open standards. This guide describes the latest specification {{ cwl_version }}."
+msgstr ""
+
+#: ../../src/index.md:7
+#: 1cc90206170d46119c5756f31a9e8799
+msgid "Contributions and Feedback are Welcome!"
+msgstr ""
+
+#: ../../src/index.md:9
+#: b54801d84a944dadb4e4637551e3f7b9
+msgid "If you find that something is missing from this guide, or if you would like to provide other feedback, file an Issue on the [project repository for this guide][repo]. You can also suggest changes directly in a Pull Request by clicking the \"Edit this page\" button at the right sidebar of each page."
+msgstr ""
+
+#: ../../src/index.md:16
+#: 860afd2eda4847e0a0d8834de3af4aa8
+msgid "Navigating the User Guide"
+msgstr ""
+
+#: ../../src/index.md:18
+#: d6046316c84b40ffb5478c90b2604911
+msgid "If you are a beginner user get started with the [Introduction](/introduction/index.md) section. For advanced users the subsections of the [Topics](/topics/index.md) have detailed information about the most common topics for CWL."
+msgstr ""
+
+#: ../../src/index.md:23
+#: c3c89ac756a74d9688e179b8718c9bf0
+msgid "The Table of Contents is displayed at the top menu and also on the left sidebar. It also appears further down this page but with links to subsections. The right sidebar contains links to the sections of each page, and the Search form is on the left sidebar."
+msgstr ""
+
+#: ../../src/index.md:28
+#: 0eb795062b484537b090c4d5c361f7f4
+msgid "Table of Contents"
+msgstr ""

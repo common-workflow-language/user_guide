@@ -1,0 +1,134 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2013, CWL Project Team
+# This file is distributed under the same license as the Common Workflow Language User Guide package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Common Workflow Language User Guide \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-01-24 17:23+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../src/topics/outputs.md:1
+#: 30d1617ac85d41a0956ef5f7eb30c112
+msgid "Outputs"
+msgstr ""
+
+#: ../../src/topics/outputs.md:3
+#: 13aaa50a038f460f829a5554ea950a8b
+msgid "Returning Output Files"
+msgstr ""
+
+#: ../../src/topics/outputs.md:5
+#: e26db82dbb934d4aac5a7918c39245f4
+msgid "The `outputs` of a tool is a list of output parameters that should be returned after running the tool.  Each parameter has an `id` for the name of parameter, and `type` describing what types of values are valid for that parameter."
+msgstr ""
+
+#: ../../src/topics/outputs.md:10
+#: 747f0575223f42cd90157c2ec684ab4e
+msgid "When a tool runs under CWL, the starting working directory is the designated output directory.  The underlying tool or script must record its results in the form of files created in the output directory.  The output parameters returned by the CWL tool are either the output files themselves, or come from examining the content of those files."
+msgstr ""
+
+#: ../../src/topics/outputs.md:16
+#: c251eb8f22c54cdbb8683e98d4e527a7
+msgid "The following example demonstrates how to return a file that has been extracted from a tar file."
+msgstr ""
+
+#: ../../src/topics/outputs.md:19
+#: e0fc3bde9de84b2ea5e2b9d7d1491ed1
+msgid "Passing mandatory arguments to the `baseCommand`"
+msgstr ""
+
+#: ../../src/topics/outputs.md:21
+#: cbc068a7d2bc4c1682577ef6b854309a
+msgid "In previous examples, the `baseCommand` was just a string, with any arguments passed as CWL inputs. Instead of a single string we can use an _array of strings_.  The first element is the command to run, and any subsequent elements are mandatory command line arguments"
+msgstr ""
+
+#: ../../src/topics/outputs.md:26
+#: f2923e674d574ea1a52dab96a12e38a7
+msgid "`tar.cwl`"
+msgstr ""
+
+#: ../../src/topics/outputs.md:32
+#: ebe4a9bec6cd42c089e790108b0ddbff
+msgid "`tar-job.yml`"
+msgstr ""
+
+#: ../../src/topics/outputs.md:38
+#: 89c371e54934472e9c09681be5f1ecc3
+msgid "Next, create a tar file for the example."
+msgstr ""
+
+#: ../../src/topics/outputs.md:45
+#: 508663424d2f4eb494ca8611cca4073a
+msgid "And now invoke `cwltool` with the tool description and the input object on the command line:"
+msgstr ""
+
+#: ../../src/topics/outputs.md:51
+#: 1ee12d2ed35a414d818127ebaaac2364
+msgid "The field `outputBinding` describes how to set the value of each output parameter."
+msgstr ""
+
+#: ../../src/topics/outputs.md:62
+#: 0e0fa84bee1042d88386826c22466619
+msgid "The `glob` field consists of the name of a file in the output directory. If you don't know name of the file in advance, you can use a wildcard pattern like `glob: '*.txt'`."
+msgstr ""
+
+#: ../../src/topics/outputs.md:65
+#: 9a37679c41eb4287b43d254a8fd823e2
+msgid "Capturing Standard Output"
+msgstr ""
+
+#: ../../src/topics/outputs.md:67
+#: 7041b9a7b7034bf881bccccc2b691a44
+msgid "To capture a tool's standard output stream, add the `stdout` field with the name of the file where the output stream should go.  Then add `type: stdout` on the corresponding output parameter."
+msgstr ""
+
+#: ../../src/topics/outputs.md:71
+#: 53075db7e4ca436594d4fd3f3e00917d
+msgid "`stdout.cwl`"
+msgstr ""
+
+#: ../../src/topics/outputs.md:77
+#: 0860836ece81420dba1b2a080e825f6c
+msgid "`echo-job.yml`"
+msgstr ""
+
+#: ../../src/topics/outputs.md:82
+#: ../../src/topics/outputs.md:105
+#: 40d221f9b5b642648b918aa0e6902f1c
+#: 7ad8f592f52b4aeeaa703a85e79f6356
+msgid "Now invoke `cwltool` providing the tool description and the input object on the command line:"
+msgstr ""
+
+#: ../../src/topics/outputs.md:89
+#: 6f6a26ee1ade4b4f9ed3a82ed44030f8
+msgid "Array Outputs"
+msgstr ""
+
+#: ../../src/topics/outputs.md:91
+#: 61a149a84abf40e7ace2248dc0119838
+msgid "You can also capture multiple output files into an array of files using `glob`."
+msgstr ""
+
+#: ../../src/topics/outputs.md:93
+#: 1322f83871ee49b3a87aa71a0ec5a79f
+msgid "`array-outputs.cwl`"
+msgstr ""
+
+#: ../../src/topics/outputs.md:99
+#: 6f92d0458a924c88aaba9e7336eef87c
+msgid "`array-outputs-job.yml`"
+msgstr ""
+
+#: ../../src/topics/outputs.md:112
+#: ce294dbd94ee4624915c398389eaf1f6
+msgid "As described in the [YAML Guide](yaml-guide.md#arrays), the array of expected outputs is specified in `array-outputs-job.yml` with each entry marked by a leading `-`. This format can also be used in CWL descriptions to mark entries in arrays, as demonstrated in several of the upcoming sections."
+msgstr ""

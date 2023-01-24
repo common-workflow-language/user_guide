@@ -1,0 +1,62 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2013, CWL Project Team
+# This file is distributed under the same license as the Common Workflow Language User Guide package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Common Workflow Language User Guide \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-01-24 17:23+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../src/topics/command-line-tool.md:1
+#: 595e9cc7e0a448f695e27b1cd0427d9e
+msgid "Command Line Tool"
+msgstr ""
+
+#: ../../src/topics/command-line-tool.md:3
+#: ac9188b4b9dc45589f2173a73dc9d3dc
+msgid "A command-line tool is a type of Process object that can be run by itself or as a Workflow step. It is a wrapper for a command like `ls`, `echo`, `tar`, etc. The command-line tool is defined in the `baseCommand` attribute of the command-line tool CWL document."
+msgstr ""
+
+#: ../../src/topics/command-line-tool.md:8
+#: a6dd1084b9b248e08ec2659999f82ac6
+msgid "A CWL command-line tool must also have `inputs` and `outputs`. The following example contains a minimal example of a CWL command-line tool for the `echo` Linux command, using inputs and outputs."
+msgstr ""
+
+#: ../../src/topics/command-line-tool.md:19
+#: 9119bb87ef4b48e7946f5412d197ce0a
+msgid "CWL command-line tool."
+msgstr ""
+
+#: ../../src/topics/command-line-tool.md:50
+#: 312c6373a25b498db63c67abed6c6289
+msgid "`echo.cwl`"
+msgstr ""
+
+#: ../../src/topics/command-line-tool.md:57
+#: 84b6964c9cbb4d67af2794624de86337
+msgid "The example above uses a simplified form to define inputs and outputs. You will learn more about in the [Inputs](../topics/inputs.md) and in the [Outputs](../topics/outputs.md) sections."
+msgstr ""
+
+#: ../../src/topics/command-line-tool.md:68
+#: c276e21332454452bc814d33f007a670
+msgid "Network Access"
+msgstr ""
+
+#: ../../src/topics/command-line-tool.md:69
+#: 1321360b42da4f65975569e2b7314bf0
+msgid "This indicates whether a process requires outgoing IPv4/IPv6 network access. If a command-line tool is written manually in CWL v1.1+, there is a need to  specify when network access is required."
+msgstr ""
+
+#: ../../src/topics/command-line-tool.md:83
+#: 70739268c7674a99834cf6c166231149
+msgid "CWL v1.0 command-line tools that are upgraded to v1.1  or v1.2 get Network Access automatically."
+msgstr ""
