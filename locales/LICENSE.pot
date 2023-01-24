@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Common Workflow Language User Guide \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-01-24 17:23+0100\n"
+"POT-Creation-Date: 2023-01-24 19:44+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,86 +17,86 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 
 #: ../../LICENSE.md:2
-#: 3d749a78eb3e47c991d603c2cabd1b91
+#: 087fa59ef53947e683e1b0d1097cfa14
 msgid "Licenses"
 msgstr ""
 
 #: ../../LICENSE.md:4
-#: 4689ade8475a4c8a9d5e325f072c1392
+#: e134424e12c14d46a8cfa417dbb39dbf
 msgid "Instructional Material"
 msgstr ""
 
 #: ../../LICENSE.md:6
-#: ef8ec0f072d947fbba997c4b2191abc2
+#: 44fc3047733e40408793ef3438e4a21c
 msgid "All Common Workflow Language project instructional material and changes to the structure are also made available under the [Creative Commons Attribution license][cc-by-human]. The following is a human-readable summary of (and not a substitute for) the [full legal text of the CC BY 4.0 license][cc-by-legal]."
 msgstr ""
 
 #: ../../LICENSE.md:12
-#: 696f3824ca814c9eb314abae51be8202
+#: b2a65a97826d48aa859843a1dbe646a0
 msgid "You are free:"
 msgstr ""
 
 #: ../../LICENSE.md:14
-#: 72ebe92edf58434e9d7a4fc6bddf8880
+#: 922b2a5bc70b49e299d0662622aca1b2
 msgid "to **Share**---copy and redistribute the material in any medium or format"
 msgstr ""
 
 #: ../../LICENSE.md:15
-#: 9b403f96d4194ffaab3f309d7d12f360
+#: 51700e62261a4a20a887c6c5ef4d3f46
 msgid "to **Adapt**---remix, transform, and build upon the material"
 msgstr ""
 
 #: ../../LICENSE.md:17
-#: 10b1befd0f834d79880c8aeb70b595d4
+#: f84b26c1e38e46d79fa6b5cdcc7c6434
 msgid "for any purpose, even commercially."
 msgstr ""
 
 #: ../../LICENSE.md:19
-#: 9017d0b760bb4370926d511b97a604c6
+#: 435cf52ad40643139c4eaec84b263132
 msgid "The licensor cannot revoke these freedoms as long as you follow the license terms."
 msgstr ""
 
 #: ../../LICENSE.md:22
-#: 1faadcaead6748dfb34886e5819af9b9
+#: 4eeaef6ed7304ea8ad815fb8b35f374c
 msgid "Under the following terms:"
 msgstr ""
 
 #: ../../LICENSE.md:24
-#: 7a49ed3a728349c9b486f3d0b1dbf577
+#: 9295c98517134bc0b8b08e088ad630fb
 msgid "**Attribution**---You must give appropriate credit (mentioning that your work is derived from work that is Copyright © the Common Workflow Language project, and, where practical, linking to https://www.commonwl.org/ ), provide a [link to the license][cc-by-human], and indicate if changes were made. You may do so in any reasonable manner, but not in any way that suggests the licensor endorses you or your use."
 msgstr ""
 
 #: ../../LICENSE.md:32
-#: 57da6294edce46eab00e7d15e6f6d4fa
+#: c07512980b6a4433944edf2e80a88c6c
 msgid "**No additional restrictions**---You may not apply legal terms or technological measures that legally restrict others from doing anything the license permits.  With the understanding that:"
 msgstr ""
 
 #: ../../LICENSE.md:36
-#: 8fc8a30cd63c4a0a9d8ba1b913687029
+#: 6a4d80c1331c470facd6ccc060a0cd94
 msgid "You do not have to comply with the license for elements of the material in the public domain or where your use is permitted by an applicable exception or limitation."
 msgstr ""
 
 #: ../../LICENSE.md:39
-#: fe59e74a4d024831a6d5cbcfd3e4ee38
+#: d00d862c37ef4371bc40ad101c433199
 msgid "No warranties are given. The license may not give you all of the permissions necessary for your intended use. For example, other rights such as publicity, privacy, or moral rights may limit how you use the material."
 msgstr ""
 
 #: ../../LICENSE.md:44
-#: 3ea41d5a14ad46729cabb387a33814b0
+#: 93ba22a55b954a86af163557e05c52a4
 msgid "Software"
 msgstr ""
 
 #: ../../LICENSE.md:46
-#: 23751e2552ff450c83e3dd255da56dac
+#: 367e01c9a6ad426a83bf5f5374e6a8ab
 msgid "Except where otherwise noted, the example programs and other software provided by Common Workflow Language project are made available under the [OSI][osi]-approved [Apache 2.0 license][apache-2.0-license]."
 msgstr ""
 
 #: ../../LICENSE.md:51
-#: 13fb5eb48a8a434e95dbbb717ccaef8a
+#: 565193677802418693fdbc123b34dd2b
 msgid "Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an \"AS IS\" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License."
 msgstr ""
 
 #: ../../LICENSE.md:57
-#: e262fbd0e7de4f148f31afe39d1cb9e9
+#: a4a99fc7709a49c29482f6e992d9e2bc
 msgid "Trademark"
 msgstr ""

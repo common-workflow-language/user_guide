@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Common Workflow Language User Guide \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-01-24 17:23+0100\n"
+"POT-Creation-Date: 2023-01-24 19:44+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,11 +17,11 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 
 #: ../../src/setup.md:5
-#: 29bb5c68be6042e5aa4a370e9c4024b3
+#: 8395100e210f4ac5a87cc2aeb3d7067c
 msgid "This page has moved"
 msgstr ""
 
 #: ../../src/setup.md:9
-#: 8bcf31398c34491da1a1590422a72cbe
+#: 1e47ac8e393541d19b9499e307fe69e7
 msgid "This page is out-of-date and was kept here to preserve the links of the old User Guide. The information on this page has been migrated to the [FAQ](/faq.md) section of the new user guide."
 msgstr ""

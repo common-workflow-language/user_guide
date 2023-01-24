@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Common Workflow Language User Guide \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-01-24 17:23+0100\n"
+"POT-Creation-Date: 2023-01-24 19:44+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,6 +17,6 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 
 #: ../../src/_includes/what-is-cwl.md:1
-#: 44a9467c5d3b4a128ceade82a521b6da
+#: 46f474e1b364495181698bd13ce28a1e
 msgid "CWL is a way to describe command-line tools and connect them together to create workflows. Because CWL is a specification and not a specific piece of software, tools and workflows described using CWL are portable across a variety of platforms that support the CWL standard."
 msgstr ""

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Common Workflow Language User Guide \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-01-24 17:27+0100\n"
+"POT-Creation-Date: 2023-01-24 19:44+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,11 +17,11 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 
 #: ../../src/_templates/sidebar-nav-bs.html:1
-#: b896fd5e11fe4674a7f46ad489476692
+#: 1c343f1abfaa4e14b7f1b645c77c595c
 msgid "Main navigation"
 msgstr ""
 
 #: ../../src/_templates/sidebar-nav-bs.html:3
-#: acede4e78f7e4aefa0ad9425928cbb42
+#: 3c55f014feb3477889c4df5a158a8804
 msgid "Section Navigation"
 msgstr ""
