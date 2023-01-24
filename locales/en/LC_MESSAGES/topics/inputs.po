@@ -1,0 +1,313 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2013, CWL Project Team
+# This file is distributed under the same license as the Common Workflow
+# Language User Guide package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Common Workflow Language User Guide \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-01-24 17:15+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.10.3\n"
+
+#: ../../topics/inputs.md:1 03f3a68492ca43bea79742a839864b86
+msgid "Inputs"
+msgstr ""
+
+#: ../../topics/inputs.md:3 9772b8bb0b694b9e9eef5e65b4ffe333
+msgid "Essential Input Parameters"
+msgstr ""
+
+#: ../../topics/inputs.md:5 68cd0cab423c4d10a69989e6a3833e7a
+msgid ""
+"The `inputs` of a tool is a list of input parameters that control how to "
+"run the tool.  Each parameter has an `id` for the name of parameter, and "
+"`type` describing what types of values are valid for that parameter."
+msgstr ""
+
+#: ../../topics/inputs.md:9 2a76b22fc015489b81d6c396f4f8ae30
+msgid ""
+"Available primitive types are *string*, *int*, *long*, *float*, *double*,"
+" and *null*; complex types are *array* and *record*; in addition there "
+"are special types *File*, *Directory* and *Any*."
+msgstr ""
+
+#: ../../topics/inputs.md:13 ba487511ecd84b37af0796d5159e50e3
+msgid ""
+"The following example demonstrates some input parameters with different "
+"types and appearing on the command line in different ways."
+msgstr ""
+
+#: ../../topics/inputs.md:16 59dd55e707cd49f385f5763aa54bc461
+msgid "First, create a file called `inp.cwl`, containing the following:"
+msgstr ""
+
+#: ../../topics/inputs.md:18 0d05676c671a420b87f3808010ccc207
+msgid "`inp.cwl`"
+msgstr ""
+
+#: ../../topics/inputs.md:24 06e169026a20469cb6b04a216045cc87
+msgid "Create a file called `inp-job.yml`:"
+msgstr ""
+
+#: ../../topics/inputs.md:26 05dd5f7e9edf4c379e66d8b6cfc1f86f
+msgid "`inp-job.yml`"
+msgstr ""
+
+#: ../../topics/inputs.md:33 f02466c6a7bf4795892d14963a8ad22e
+msgid ""
+"You can use `cwltool` to create a template input object. That saves you "
+"from having to type all the input parameters in a input object file:"
+msgstr ""
+
+#: ../../topics/inputs.md:40 5e5a2fe06ad04b2d8969d6cbfed213ec
+msgid ""
+"You can redirect the output to a file, i.e. `cwltool --make-template "
+"inp.cwl > inp-job.yml`, and then modify the default values with your "
+"desired input values."
+msgstr ""
+
+#: ../../topics/inputs.md:44 fafabc3b11f14bb68c16e3f497e26e40
+msgid ""
+"Notice that \"example_file\", as a `File` type, must be provided as an "
+"object with the fields `class: File` and `path`."
+msgstr ""
+
+#: ../../topics/inputs.md:47 7e3d42ea93dd417195ab6b5559638326
+msgid ""
+"Next, create a whale.txt using [touch] by typing `touch whale.txt` on the"
+" command line."
+msgstr ""
+
+#: ../../topics/inputs.md:53 0bbabcf2be26490dbe920f52f8cbe9b0
+msgid ""
+"Now invoke `cwltool` with the tool description and the input object on "
+"the command line, using the command `cwltool inp.cwl inp-job.yml`. The "
+"following boxed text describes these two commands and the expected output"
+" from the command line:"
+msgstr ""
+
+#: ../../topics/inputs.md:64 c340c8aa7b80488ba6d16329e1ca2149
+msgid ""
+"The CWL reference runner (cwltool) and other runners create temporary "
+"directories with symbolic (\"soft\") links to your input files to ensure "
+"that the tools aren't accidentally accessing files that were not "
+"explicitly specified"
+msgstr ""
+
+#: ../../topics/inputs.md:70 5c2e148fdb324017a685f5adefadd74d
+msgid ""
+"The field `inputBinding` is optional and indicates whether and how the "
+"input parameter should appear on the tool's command line.  If "
+"`inputBinding` is missing, the parameter does not appear on the command "
+"line.  Let's look at each example in detail."
+msgstr ""
+
+#: ../../topics/inputs.md:83 97d14a1cf8fc4b3687281aa93eb1ceb6
+msgid ""
+"Boolean types are treated as a flag.  If the input parameter "
+"\"example_flag\" is \"true\", then `prefix` will be added to the command "
+"line.  If false, no flag is added."
+msgstr ""
+
+#: ../../topics/inputs.md:95 6c2008aed010466c8e4465c72a4b6d79
+msgid ""
+"String types appear on the command line as literal values.  The `prefix` "
+"is optional, if provided, it appears as a separate argument on the "
+"command line before the parameter .  In the example above, this is "
+"rendered as `--example-string hello`."
+msgstr ""
+
+#: ../../topics/inputs.md:109 95f2a1493e50455ea6e546f70726fab1
+msgid ""
+"Integer (and floating point) types appear on the command line with "
+"decimal text representation.  When the option `separate` is false (the "
+"default value is true), the prefix and value are combined into a single "
+"argument.  In the example above, this is rendered as `-i42`."
+msgstr ""
+
+#: ../../topics/inputs.md:124 3a48173a38904861b9994edddbc2f082
+msgid ""
+"File types appear on the command line as the path to the file.  When the "
+"parameter type ends with a question mark `?` it indicates that the "
+"parameter is optional.  In the example above, this is rendered as "
+"`--file=/tmp/random/path/whale.txt`.  However, if the \"example_file\" "
+"parameter were not provided in the input, nothing would appear on the "
+"command line."
+msgstr ""
+
+#: ../../topics/inputs.md:131 54186920b4a14fbfa059779411b20192
+msgid ""
+"Input files are read-only.  If you wish to update an input file, you must"
+" [first copy it to the output directory](staging-input-files.md)."
+msgstr ""
+
+#: ../../topics/inputs.md:134 920e8b7d7eee4239b327b0386a872492
+msgid ""
+"The value of `position` is used to determine where parameter should "
+"appear on the command line.  Positions are relative to one another, not "
+"absolute.  As a result, positions do not have to be sequential, three "
+"parameters with positions 1, 3, 5 will result in the same command line as"
+" 1, 2, 3.  More than one parameter can have the same position (ties are "
+"broken using the parameter name), and the position field itself is "
+"optional.  The default position is 0."
+msgstr ""
+
+#: ../../topics/inputs.md:142 690f556fa0854517a4e3e43747178461
+msgid ""
+"The `baseCommand` field will always appear in the final command line "
+"before the parameters."
+msgstr ""
+
+#: ../../topics/inputs.md:146 65ae530b9da84e7e98bcf5a5cf516c30
+msgid "Array Inputs"
+msgstr ""
+
+#: ../../topics/inputs.md:148 21f30b0db29c4aa4989c39997b1a720c
+msgid ""
+"It is easy to add arrays of input parameters represented to the command "
+"line. There are two ways to specify an array parameter. First is to "
+"provide `type` field with `type: array` and `items` defining the valid "
+"data types that may appear in the array. Alternatively, brackets `[]` may"
+" be added after the type name to indicate that input parameter is array "
+"of that type."
+msgstr ""
+
+#: ../../topics/inputs.md:154 cefc841cd57c4b19b2be69aa80106c8b
+msgid "`array-inputs.cwl`"
+msgstr ""
+
+#: ../../topics/inputs.md:160 bae9c79fa8bb42f6922ee937a5c5ff7a
+msgid "`array-inputs-job.yml`"
+msgstr ""
+
+#: ../../topics/inputs.md:166 b756a25aad9e4fcfb68cbe2123cac3c5
+msgid ""
+"Now invoke `cwltool` providing the tool description and the input object "
+"on the command line:"
+msgstr ""
+
+#: ../../topics/inputs.md:178 0a930f2019b748858ddc5ca5acbde210
+msgid ""
+"The `inputBinding` can appear either on the outer array parameter "
+"definition or the inner array element definition, and these produce "
+"different behavior when constructing the command line, as shown above. In"
+" addition, the `itemSeparator` field, if provided, specifies that array "
+"values should be concatenated into a single argument separated by the "
+"item separator string."
+msgstr ""
+
+#: ../../topics/inputs.md:185 57551982494e4152b2c2c11f04bae126
+msgid ""
+"Note that the arrays of inputs are specified inside square brackets `[]` "
+"in `array-inputs-job.yml`. Arrays can also be expressed over multiple "
+"lines, where array values that are not defined with an associated key are"
+" marked by a leading `-`. This will be demonstrated in the next lesson "
+"and is discussed in more detail in the [YAML Guide](yaml-"
+"guide.md#arrays). You can specify arrays of arrays, arrays of records, "
+"and other complex types."
+msgstr ""
+
+#: ../../topics/inputs.md:191 30d6b347401d4304b4dcc1ef2268ded2
+msgid "Inclusive and Exclusive Inputs"
+msgstr ""
+
+#: ../../topics/inputs.md:193 cf8b6d0ed47a4e57a39add29f91f0ec0
+msgid ""
+"Sometimes an underlying tool has several arguments that must be provided "
+"together (they are dependent) or several arguments that cannot be "
+"provided together (they are exclusive).  You can use records and type "
+"unions to group parameters together to describe these two conditions."
+msgstr ""
+
+#: ../../topics/inputs.md:198 5aa374f61a2a41e383da4b960e3603d5
+msgid "`record.cwl`"
+msgstr ""
+
+#: ../../topics/inputs.md:204 6557427907d0465695aa88f2f27d5bf1
+msgid "`record-job1.yml`"
+msgstr ""
+
+#: ../../topics/inputs.md:215 3f39bfdadeb14b0d8dfb67fe5aad7790
+msgid ""
+"In the first example, you can't provide `itemA` without also providing "
+"`itemB`."
+msgstr ""
+
+#: ../../topics/inputs.md:217 30829196c2f54dbb9b1c35e462fe4e85
+msgid "`record-job2.yml`"
+msgstr ""
+
+#: ../../topics/inputs.md:233 049396bf53d241cd9d03b9ff81468e0c
+msgid ""
+"In the second example, `itemC` and `itemD` are exclusive, so only the "
+"first matching item (`itemC`) is added to the command line and remaining "
+"item (`itemD`) is ignored."
+msgstr ""
+
+#: ../../topics/inputs.md:236 a9036f0e32ff418482573d23ed074256
+msgid "`record-job3.yml`"
+msgstr ""
+
+#: ../../topics/inputs.md:252 bc0b43accbf9452ca4b7c2d7d69c2984
+msgid ""
+"In the third example, only `itemD` is provided, so it appears on the "
+"command line."
+msgstr ""
+
+#: ../../topics/inputs.md:255 6cfc57be54f8458ebc9d784bc9ac2555
+msgid "Exclusive Input Parameters with Expressions"
+msgstr ""
+
+#: ../../topics/inputs.md:257 0279c53e41c94ccc9f2de65d057dd903
+msgid ""
+"If you use exclusive input parameters combined with expressions, you need"
+" to be aware that the `inputs` JavaScript object will contain one of the "
+"exclusive input values. This means that you might need to use an **or** "
+"boolean operator to check which values are present."
+msgstr ""
+
+#: ../../topics/inputs.md:262 b94737f481d343bfbb6ecf0fd81c9d6f
+msgid ""
+"Let's use an example that contains an exclusive `file_format` input "
+"parameter that accepts `null` (i.e. no value provided), or any value from"
+" an enum."
+msgstr ""
+
+#: ../../topics/inputs.md:265 b5335802dcd148e9bb8f72d75f1ff6cd
+msgid "`exclusive-parameter-expressions.cwl`"
+msgstr ""
+
+#: ../../topics/inputs.md:271 08b50c80fd024f86ba9c6239895385d0
+msgid ""
+"Note how the JavaScript expression uses the value of the exclusive input "
+"parameter without taking into consideration a `null` value. If you "
+"provide a valid value, such as “fasta” (one of the values of the enum), "
+"your command should execute successfully:"
+msgstr ""
+
+#: ../../topics/inputs.md:280 77c08d3144b04e58a6733cbd01346102
+msgid ""
+"However, if you do not provide any input value, then `file_format` will "
+"be evaluated to a `null` value, which does not match the expected type "
+"for the output field (a `string`), resulting in failure when running your"
+" workflow."
+msgstr ""
+
+#: ../../topics/inputs.md:289 91280fddf3624696b90632ca8466ca59
+msgid ""
+"To correct it, you must remember to use an or operator in your JavaScript"
+" expression when using exclusive parameters, or any parameter that allows"
+" `null`. For example, the expression could be changed to "
+"`$(inputs.file_format || 'auto')`, to have a default value if none was "
+"provided in the command line or job input file."
+msgstr ""
+

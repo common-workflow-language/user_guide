@@ -1,0 +1,53 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2013, CWL Project Team
+# This file is distributed under the same license as the Common Workflow
+# Language User Guide package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Common Workflow Language User Guide \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-01-24 17:15+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.10.3\n"
+
+#: ../../topics/expression-tool.md:1 2ed0674b02ee4cd7ac4e169086d02513
+msgid "Expression Tool"
+msgstr ""
+
+#: ../../topics/expression-tool.md:3 95b1b27ad2a84cd9bd1207ff75536502
+msgid ""
+"An expression tool is a type of Process that can be run by itself or as a"
+" Workflow step. It executes a pure JavaScript expression. It is meant to "
+"be used as a way to isolate complex JavaScript expressions that need to "
+"operate on input data and produce some result as output."
+msgstr ""
+
+#: ../../topics/expression-tool.md:8 80caa25305a74efdaed8ada05faaa018
+msgid ""
+"Similar to the command-line tool it requires `inputs` and `outputs`. But "
+"instead of `baseCommand`, it requires an `expression` attribute."
+msgstr ""
+
+#: ../../topics/expression-tool.md:17 a664a455f4714071ba0158a4f83a127c
+msgid "CWL expression tool."
+msgstr ""
+
+#: ../../topics/expression-tool.md:48 bdfa455a230e4be79031e0777efc7233
+msgid "`uppercase.cwl`"
+msgstr ""
+
+#: ../../topics/expression-tool.md:67 0df562c4585e43d1ae4ac8113b50ed71
+msgid ""
+"We had to use an `InlineJavascriptRequirement` as our expression contains"
+" a JavaScript call in `.toUpperCase()`. This means to tools using the "
+"expression tool that JavaScript is a requirement."
+msgstr ""
+

@@ -1,0 +1,45 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2013, CWL Project Team
+# This file is distributed under the same license as the Common Workflow
+# Language User Guide package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Common Workflow Language User Guide \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-01-24 17:15+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.10.3\n"
+
+#: ../../topics/environment-variables.md:1 498dbc0db9224aabbc9fd1bef778f8ef
+msgid "Environment Variables"
+msgstr ""
+
+#: ../../topics/environment-variables.md:3 9ce0f06bed3649339f666147b45c69e4
+msgid ""
+"Tools run in a restricted environment and do not inherit most environment"
+" variables from the parent process.  You can set environment variables "
+"for the tool using `EnvVarRequirement`."
+msgstr ""
+
+#: ../../topics/environment-variables.md:7 ef471bebcfc94b008c94a2e8056d7af0
+msgid "`env.cwl`"
+msgstr ""
+
+#: ../../topics/environment-variables.md:13 df5ab6417f87475d8d94f2af498cee39
+msgid "`echo-job.yml`"
+msgstr ""
+
+#: ../../topics/environment-variables.md:18 642f1379ebdd4dd381e8f56343547b42
+msgid ""
+"Now invoke `cwltool` with the tool description and the input object on "
+"the command line:"
+msgstr ""
+

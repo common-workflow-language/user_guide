@@ -1,0 +1,270 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2013, CWL Project Team
+# This file is distributed under the same license as the Common Workflow
+# Language User Guide package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Common Workflow Language User Guide \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-01-24 17:15+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.10.3\n"
+
+#: ../../introduction/basic-concepts.md:1 5f43861a84a2494b8e1bc973ac85b3d0
+msgid "Basic Concepts"
+msgstr ""
+
+#: ../../introduction/basic-concepts.md:3 90cc7b0ef1404f72ae0f5b17f6f2a966
+msgid ""
+"This section describes the basic concepts for users to get started on "
+"working with Common Workflow Language (CWL) workflows. Readers are "
+"expected to be familiar with workflow managers, YAML, and comfortable "
+"with following instructions for the command-line. The other sections of "
+"the user guide cover the same concepts, but in more detail. If you are "
+"already familiar with CWL or you are looking for more advanced content, "
+"you may want to skip this section."
+msgstr ""
+
+#: ../../introduction/basic-concepts.md:10 1685ddf11a014fe28df75dedb7c39e07
+msgid "The CWL Specification"
+msgstr ""
+
+#: ../../_includes/what-is-cwl.md:2 9cb90a376bfe4058922b1c91ea4ce184
+msgid ""
+"CWL is a way to describe command-line tools and connect them together to "
+"create workflows. Because CWL is a specification and not a specific piece"
+" of software, tools and workflows described using CWL are portable across"
+" a variety of platforms that support the CWL standard."
+msgstr ""
+
+#: ../../introduction/basic-concepts.md:21 cc05f8193ee6403daca03d2d19ccfcd7
+msgid ""
+"The CWL specification is a document written and maintained by the CWL "
+"community. The specification has different versions. The version covered "
+"in this user guide is the {{ cwl_version }}."
+msgstr ""
+
+#: ../../introduction/basic-concepts.md:25 f5a0ba9dfc1f49ab937e8122fe4761e0
+msgid ""
+"The specification version can have up to three numbers separated by `.`s "
+"(dots). The first number is the major release, used for backward-"
+"incompatible changes like the removal of deprecated features. The second "
+"number is the minor release, used for new features or smaller changes "
+"that are backward-compatible. The last number is used for bug fixes, like"
+" typos and other corrections to the specification."
+msgstr ""
+
+#: ../../introduction/basic-concepts.md:33 8100683970154870993d19d7a5a6bd22
+msgid ""
+"The model used for the specification version is called Semantic "
+"Versioning. See the end of this section to [learn more](#learn-more) "
+"about it."
+msgstr ""
+
+#: ../../introduction/basic-concepts.md:37 cc5c29f65655465db44dd4eed8f11c7b
+msgid "Implementations"
+msgstr ""
+
+#: ../../introduction/basic-concepts.md:39 c07822e70e774ea2bb3da2cfd69aa360
+msgid ""
+"An implementation of the CWL specification is any software written "
+"following what is defined in a version of the specification document. "
+"However, implementations may not implement every aspect of the "
+"specification. CWL implementations are licensed under both Open Source "
+"and commercial licenses."
+msgstr ""
+
+#: ../../introduction/basic-concepts.md:44 6735911046aa466aa2a371ffff22a9fe
+msgid ""
+"CWL is well suited for describing large-scale workflows in cluster, cloud"
+" and high performance computing environments where tasks are scheduled in"
+" parallel across many nodes."
+msgstr ""
+
+#: ../../introduction/basic-concepts.md:51 795e23a746c749deacb68a18d9a3333b
+msgid "CWL specification, implementations, and other tools."
+msgstr ""
+
+#: ../../introduction/basic-concepts.md:105 e7c0b2155a024860b8d3fd7c9ef75f38
+msgid "Processes and Requirements"
+msgstr ""
+
+#: ../../introduction/basic-concepts.md:107 cf57f60e189e40c09e946f56a1fdf0b8
+msgid ""
+"A process is a computing unit that takes inputs and produces outputs. The"
+" behavior of a process can be affected by the inputs, requirements, and "
+"hints. There are four types of processes defined in the CWL specification"
+" {{ cwl_version }}:"
+msgstr ""
+
+#: ../../introduction/basic-concepts.md:112 6201ed50ccf944c2aaf7795d411e236d
+msgid "A command-line tool."
+msgstr ""
+
+#: ../../introduction/basic-concepts.md:113 a6f9f66dec354e09bd1778d2bf71a7ef
+msgid "An expression tool."
+msgstr ""
+
+#: ../../introduction/basic-concepts.md:114 43927a824e584c3c8914119bcdfdffbc
+msgid "An operation."
+msgstr ""
+
+#: ../../introduction/basic-concepts.md:115 98f30716f9154c51bcf95a9a26613c6e
+msgid "A workflow."
+msgstr ""
+
+#: ../../introduction/basic-concepts.md:118 07807b77a0a444568348e8c20e540296
+msgid "The processing units available in the CWL objects model."
+msgstr ""
+
+#: ../../introduction/basic-concepts.md:119 f7dd65df72be46e88ad933e85d2cfe32
+msgid ""
+"A command-line tool is a wrapper for a command-line utility like `echo`, "
+"`ls`, and `tar`. A command-line tool can be called from a workflow."
+msgstr ""
+
+#: ../../introduction/basic-concepts.md:122 7c12205b897c4d6ea918fc8b371ba329
+msgid ""
+"An expression tool is a wrapper for a JavaScript expression. It can be "
+"used to simplify workflows and command-line tools, moving common parts of"
+" a workflow execution into reusable JavaScript code that takes inputs and"
+" produces outputs like a command-line tool."
+msgstr ""
+
+#: ../../introduction/basic-concepts.md:127 965bd0c3dedc43d188c9c7b5db33b1f5
+msgid ""
+"Operation is an abstract process that also takes inputs, produces "
+"outputs, and can be used in a workflow. But it is a special operation not"
+" so commonly used. It is discussed in the [Operations "
+"section](../topics/operations.md) of this user guide."
+msgstr ""
+
+#: ../../introduction/basic-concepts.md:131 7299dcb09d2b4967a9d46d3b433d439e
+msgid ""
+"The workflow is a process that contains steps. Steps can be other "
+"workflows (nested workflows), command-line tools, or expression tools. "
+"The inputs of a workflow can be passed to any of its steps, while the "
+"outputs produced by its steps can be used in the final output of the "
+"workflow."
+msgstr ""
+
+#: ../../introduction/basic-concepts.md:137 ea9d197aab4c41788a4a0e3d48c1c168
+msgid ""
+"The CWL specification allows for implementations to provide extra "
+"functionality and specify prerequisites to workflows through "
+"*requirements*. There are many requirements defined in the CWL "
+"specification, for instance:"
+msgstr ""
+
+#: ../../introduction/basic-concepts.md:141 592f212970f84365a86a69cfb8c26369
+msgid "`InlineJavascriptWorkflow` - enables JavaScript in expressions."
+msgstr ""
+
+#: ../../introduction/basic-concepts.md:142 57e5ad64e68545a788b43e4e921bb23f
+msgid "`SubworkflowFeatureRequirement` - enables nested workflows."
+msgstr ""
+
+#: ../../introduction/basic-concepts.md:143 397171706bf349feb2c9bee5a993ea1e
+msgid ""
+"`InitialWorkDirRequirement` - controls staging files in the input "
+"directory."
+msgstr ""
+
+#: ../../introduction/basic-concepts.md:145 fa9d473ae58b4053981a45a888470655
+msgid ""
+"Some CWL runners may provide requirements that are not in the "
+"specification. For example, GPU requirements are supported in `cwltool` "
+"through the `cwltool:CUDARequirement` requirement, but it is not part of "
+"the {{ cwl_version }} specification and may not be supported by other CWL"
+" runners."
+msgstr ""
+
+#: ../../introduction/basic-concepts.md:151 b9cc1fd288764bd78eda4703a2700a02
+msgid ""
+"Hints are similar to requirements, but while requirements list features "
+"that are required, hints list optional features. Requirements are "
+"explained in detail in the [Requirements](../topics/requirements-and-"
+"hints.md) section."
+msgstr ""
+
+#: ../../introduction/basic-concepts.md:155 cf12d86b4e7c48c892d6be8233ea2bc9
+msgid "FAIR Workflows"
+msgstr ""
+
+#: ../../introduction/basic-concepts.md:157 a83ecf7c5eaa4af3a676060d12ec7e7e
+msgid ""
+"The FAIR principles have laid a foundation for sharing and publishing "
+"digital assets, and in particular, data. The FAIR principles emphasize "
+"machine accessibility and that all digital assets should be Findable, "
+"Accessible, Interoperable, and Reusable. Workflows encode the methods by "
+"which the scientific process is conducted and via which data are created."
+" It is thus important that workflows support the creation of FAIR data "
+"and adhere to the FAIR principles. — [FAIR Computational "
+"Workflows](https://workflows.community/groups/fair/), Workflows Community"
+" Initiative."
+msgstr ""
+
+#: ../../introduction/basic-concepts.md:167 7451c042271941d6b283bf6d54b76acb
+msgid ""
+"CWL has roots in \"make\" and many similar tools that determine order of "
+"execution, based on dependencies between tasks. However, unlike \"make\","
+" CWL tasks are isolated, and you must be explicit about your inputs and "
+"outputs."
+msgstr ""
+
+#: ../../introduction/basic-concepts.md:171 d356140962c244d78b4a2c888bf03963
+msgid ""
+"The benefit of explicitness and isolation are flexibility, portability, "
+"and scalability; tools and workflows described with CWL can transparently"
+" leverage technologies such as Docker and be used with CWL "
+"implementations from different vendors."
+msgstr ""
+
+#: ../../introduction/basic-concepts.md:176 8fee6b5cd95144e1bced764b112a9d3f
+msgid "`cwltool` also uses the PROV-O standard ontology for data provenance."
+msgstr ""
+
+#: ../../introduction/basic-concepts.md:178 38ce1ceb880b4421b9ea2ee52e1153da
+msgid "Learn More"
+msgstr ""
+
+#: ../../introduction/basic-concepts.md:180 9a631f69c9504527bcd02a8f40f21c3f
+msgid "Semantic Versioning - <https://semver.org/>"
+msgstr ""
+
+#: ../../introduction/basic-concepts.md:181 6141f823850e411691c2ef7047c9ecab
+msgid ""
+"The CWL Specification page in the CWL website: "
+"<https://www.commonwl.org/specification/>"
+msgstr ""
+
+#: ../../introduction/basic-concepts.md:182 6a07a8b45dc54851b5b78597891be763
+msgid ""
+"The current CWL specification on GitHub: {{ '<https://github.com/common-"
+"workflow-language/cwl-{}>'.format(cwl_version_text) }}"
+msgstr ""
+
+#: ../../introduction/basic-concepts.md:183 f246c41bb0f946c590736c40713af684
+msgid ""
+"The list of Implementations in the CWL website: "
+"<https://www.commonwl.org/implementations/>"
+msgstr ""
+
+#: ../../introduction/basic-concepts.md:184 d9d8d29e5c0e427299f696073dfbfc1b
+msgid "PROV-O: The PROV Ontology - <https://www.w3.org/TR/prov-o/>"
+msgstr ""
+
+#: ../../introduction/basic-concepts.md:185 581a427aed9e483489b6123ee1879d80
+msgid ""
+"CWL Operations are covered in the [Operations](../topics/operations.md) "
+"section of this user guide."
+msgstr ""
+
