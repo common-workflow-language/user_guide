@@ -19,13 +19,14 @@ msgstr ""
 "Generated-By: Babel 2.10.3\n"
 
 #: ../../src/episodes.md:5 49382fe02e4f4aae96ce4d1b666d649a
+#: 0cbb5e7334a647c3bcae7333ec3ced90
 msgid "This page has moved"
 msgstr ""
 
 #: ../../src/episodes.md:9 ebd3b75bc9a347029e9e164e94b43374
+#: fabb221482cb4ac0a98bbe10943ed025
 msgid ""
-"This page is out-of-date and was kept here to preserve the links of the "
-"old User Guide. Please use the new [Table of Contents](index.md#table-of-"
+"This page is out-of-date and was kept here to preserve the links of the old "
+"User Guide. Please use the new [Table of Contents](index.md#table-of-"
 "contents) to browse the User Guide."
 msgstr ""
-
