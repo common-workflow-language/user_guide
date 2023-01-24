@@ -1,0 +1,32 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2013, CWL Project Team
+# This file is distributed under the same license as the Common Workflow
+# Language User Guide package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Common Workflow Language User Guide \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-01-24 19:53+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.10.3\n"
+
+#: ../../src/setup.md:5 715f40c8e3f544e4805ae2b456b9d699
+#: 29bb5c68be6042e5aa4a370e9c4024b3
+msgid "This page has moved"
+msgstr ""
+
+#: ../../src/setup.md:9 c9641546c55a44eab9ae40ec272d5df8
+#: 8bcf31398c34491da1a1590422a72cbe
+msgid ""
+"This page is out-of-date and was kept here to preserve the links of the old "
+"User Guide. The information on this page has been migrated to the [FAQ](/faq."
+"md) section of the new user guide."
+msgstr ""
