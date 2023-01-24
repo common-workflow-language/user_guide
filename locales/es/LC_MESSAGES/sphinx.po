@@ -19,10 +19,11 @@ msgstr ""
 "Generated-By: Babel 2.10.3\n"
 
 #: ../../src/_templates/sidebar-nav-bs.html:1 ada5c93414a84374b3eaea93dc11ae74
+#: b896fd5e11fe4674a7f46ad489476692
 msgid "Main navigation"
 msgstr ""
 
 #: ../../src/_templates/sidebar-nav-bs.html:3 a3cc1c498bad434ebadd4a2e92dbf5f0
+#: acede4e78f7e4aefa0ad9425928cbb42
 msgid "Section Navigation"
 msgstr ""
-
