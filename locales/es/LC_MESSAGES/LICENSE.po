@@ -4,32 +4,38 @@
 # Language User Guide package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
 #
-#, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: Common Workflow Language User Guide \n"
+"Project-Id-Version: Common Workflow Language User Guide\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-01-24 19:53+0100\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"PO-Revision-Date: 2023-01-25 13:37+0000\n"
+"Last-Translator: Michael Crusoe <mrc@commonwl.org>\n"
+"Language-Team: Spanish <https://hosted.weblate.org/projects/commonwl/"
+"cwl-user-guide-license/es/>\n"
+"Language: es\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 4.16-dev\n"
 "Generated-By: Babel 2.10.3\n"
 
 #: ../../LICENSE.md:2 385524707375429989b7b4fc7e4c7aa5
 #: 3d749a78eb3e47c991d603c2cabd1b91
+#, fuzzy
 msgid "Licenses"
-msgstr ""
+msgstr "Licencias"
 
 #: ../../LICENSE.md:4 7682a147e3f74921948bde67ac684338
 #: 4689ade8475a4c8a9d5e325f072c1392
+#, fuzzy
 msgid "Instructional Material"
-msgstr ""
+msgstr "Material didáctico"
 
 #: ../../LICENSE.md:6 7273f384601c4f18a4cc33c833f05e56
 #: ef8ec0f072d947fbba997c4b2191abc2
+#, fuzzy
 msgid ""
 "All Common Workflow Language project instructional material and changes to "
 "the structure are also made available under the [Creative Commons "
@@ -37,27 +43,34 @@ msgid ""
 "of (and not a substitute for) the [full legal text of the CC BY 4.0 license]"
 "[cc-by-legal]."
 msgstr ""
+"Todo el material instructivo del proyecto Common Workflow Language y los "
+"cambios en la estructura también están disponibles bajo la [licencia "
+"Creative Commons Attribution][cc-by-human]. Lo que sigue es un resumen "
+"legible por humanos (y no un sustituto) del [texto legal completo de la "
+"licencia CC BY 4.0][cc-by-legal]."
 
 #: ../../LICENSE.md:12 2cd9327d0e2e43aaa963633db1320b96
 #: 696f3824ca814c9eb314abae51be8202
 msgid "You are free:"
-msgstr ""
+msgstr "Usted es libre de:"
 
 #: ../../LICENSE.md:14 793123b1e0ba4603a0c54c952ea4a590
 #: 72ebe92edf58434e9d7a4fc6bddf8880
 msgid ""
 "to **Share**---copy and redistribute the material in any medium or format"
 msgstr ""
+"**Compartir**---copiar y redistribuir el material en cualquier medio o "
+"formato"
 
 #: ../../LICENSE.md:15 151178e4c9a9444fb65dbf926edad28d
 #: 9b403f96d4194ffaab3f309d7d12f360
 msgid "to **Adapt**---remix, transform, and build upon the material"
-msgstr ""
+msgstr "**Adaptar**---remezclar, transformar y construir a partir del material"
 
 #: ../../LICENSE.md:17 e44aed84ff0d48b3aea3946b3a7c85fc
 #: 10b1befd0f834d79880c8aeb70b595d4
 msgid "for any purpose, even commercially."
-msgstr ""
+msgstr "para cualquier propósito, incluso comercialmente."
 
 #: ../../LICENSE.md:19 d8bb44ca55b642d6bb4a88eaa8292204
 #: 9017d0b760bb4370926d511b97a604c6
@@ -65,11 +78,13 @@ msgid ""
 "The licensor cannot revoke these freedoms as long as you follow the license "
 "terms."
 msgstr ""
+"La licenciante no puede revocar estas libertades en tanto usted siga los "
+"términos de la licencia."
 
 #: ../../LICENSE.md:22 6859f286e52c417096b072c923b9f235
 #: 1faadcaead6748dfb34886e5819af9b9
 msgid "Under the following terms:"
-msgstr ""
+msgstr "Bajo los siguientes términos:"
 
 #: ../../LICENSE.md:24 ee4ea8e1fd044924b34b2d96ca158257
 #: 7a49ed3a728349c9b486f3d0b1dbf577
@@ -81,6 +96,13 @@ msgid ""
 "made. You may do so in any reasonable manner, but not in any way that "
 "suggests the licensor endorses you or your use."
 msgstr ""
+"Atribución — Usted debe dar crédito de manera adecuada(mencionando que su "
+"trabajo se deriva de un trabajo que tiene «Copyright © The Common Workflow "
+"Language Project» y, cuando sea práctico, con un enlace a https://www."
+"commonwl.org/ ), brindar un [enlace a la licencia][cc-by-human], e indicar "
+"si se han realizado cambios. Puede hacerlo en cualquier forma razonable, "
+"pero no de forma tal que sugiera que usted o su uso tienen el apoyo de la "
+"licenciante."
 
 #: ../../LICENSE.md:32 7598558aee3244b6b7892b06df94a393
 #: 57da6294edce46eab00e7d15e6f6d4fa
@@ -89,6 +111,9 @@ msgid ""
 "technological measures that legally restrict others from doing anything the "
 "license permits.  With the understanding that:"
 msgstr ""
+"**No hay restricciones adicionales**---No puede aplicar términos legales ni "
+"medidas tecnológicas que restrinjan legalmente a otras a hacer cualquier uso "
+"permitido por la licencia.   Con el entendimiento de que:"
 
 #: ../../LICENSE.md:36 a83123e7ae79486c80107d176ea951c7
 #: 8fc8a30cd63c4a0a9d8ba1b913687029
@@ -97,6 +122,9 @@ msgid ""
 "the public domain or where your use is permitted by an applicable exception "
 "or limitation."
 msgstr ""
+"No tiene que cumplir con la licencia para elementos del materiale en el "
+"dominio público o cuando su uso esté permitido por una excepción o "
+"limitación aplicable."
 
 #: ../../LICENSE.md:39 0cc05e8ed5274019998b1dfd6ab76824
 #: fe59e74a4d024831a6d5cbcfd3e4ee38
@@ -105,22 +133,32 @@ msgid ""
 "necessary for your intended use. For example, other rights such as "
 "publicity, privacy, or moral rights may limit how you use the material."
 msgstr ""
+"No se dan garantías. La licencia podría no darle todos los permisos que "
+"necesita para el uso que tenga previsto. Por ejemplo, otros derechos como "
+"publicidad, privacidad, o derechos morales pueden limitar la forma en que "
+"utilice el material."
 
 #: ../../LICENSE.md:44 d70e680300524c8583f1e7fd361ad2ba
 #: 3ea41d5a14ad46729cabb387a33814b0
 msgid "Software"
-msgstr ""
+msgstr "Software"
 
 #: ../../LICENSE.md:46 d17e76d478354904b679b4f5ebde418d
 #: 23751e2552ff450c83e3dd255da56dac
+#, fuzzy
 msgid ""
 "Except where otherwise noted, the example programs and other software "
 "provided by Common Workflow Language project are made available under the "
 "[OSI][osi]-approved [Apache 2.0 license][apache-2.0-license]."
 msgstr ""
+"Excepto cuando se indique lo contrario, los programas de ejemplo y otro "
+"software proporcionado por el proyecto Common Workflow Language están "
+"disponibles bajo la [licencia Apache 2.0][apache-2.0-license] aprobada por "
+"la [OSI][Osi]."
 
 #: ../../LICENSE.md:51 015fba86005946eebc5959cc3b0493d0
 #: 13fb5eb48a8a434e95dbbb717ccaef8a
+#, fuzzy
 msgid ""
 "Unless required by applicable law or agreed to in writing, software "
 "distributed under the License is distributed on an \"AS IS\" BASIS, WITHOUT "
@@ -128,6 +166,11 @@ msgid ""
 "License for the specific language governing permissions and limitations "
 "under the License."
 msgstr ""
+"Unless required by applicable law or agreed to in writing, software "
+"distributed under the License is distributed on an \"AS IS\" BASIS, WITHOUT "
+"WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the "
+"License for the specific language governing permissions and limitations "
+"under the License."
 
 #: ../../LICENSE.md:57 524088befae04f5485dc731d505c769b
 #: e262fbd0e7de4f148f31afe39d1cb9e9
