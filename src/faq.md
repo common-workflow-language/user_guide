@@ -245,7 +245,7 @@ inputs:
       prefix: "--casava"
 ```
 <a name="enuminputs"></a>
-## How do enum inputs work?⚜️
+## How do I specify an input that must come from a list of predefined values (i.e. How do I use enum inputs) ?
 
 For command line flags that require a specific input as the argument an enum type can be declared in CWL. **Specifying null here is known as long form style. It does the same thing as the question mark on the other inputs.**
 
@@ -265,7 +265,7 @@ Format:
     prefix: "--format"
 ```
 <a name="recordinputs"></a>
-## How do record inputs work? 📀
+## How do I describe dependent or exclusive input parameters(e.g. How do I use record inputs)?
 
 For commandline flags that are either **mutually exclusive** or **dependent** a special record type can be defined. You can also specify null here to create optional inputs.
 
@@ -346,7 +346,7 @@ These can be set by using the default field
 input:
   default:true
 ```
-## What Should I Do When Concatenating Strings in Inputs?
+## What should I do when concatenating strings in inputs?
 
 The valueFrom field must be used instead of default.
 
@@ -370,7 +370,7 @@ Invalid filename: 'a space is here.txt' contains illegal characters
 
 If you can not avoid these dangerous characters, then pass `--relax-path-checks` to `cwltool`.
 
-## What should I do when I get CWL Parameter Reference error due to hyphen in input identifier?
+## What should I do when I get CWL Parameter Reference error due to hyphen in an input identifier?
 
 If `cwltool --validate` returns valid
 
@@ -447,7 +447,7 @@ The reference runner and several other CWL implementations support running
 those Docker format containers using the Singularity engine. Directly
 specifying a Singularity format container is not part of the CWL standards.
 
-## Debug JavaScript Expressions
+## How do I debug the JavaScript in my CWL tool?
 
 You can use the <code>--js-console</code> option of <code>cwltool</code>, or you can try
 creating a JavaScript or TypeScript project for your code, and load it
