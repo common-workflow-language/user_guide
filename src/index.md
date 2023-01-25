@@ -35,7 +35,7 @@ introduction/index.md
 topics/index.md
 tutorials.md
 faq.md
-LICENSE.md
+LICENSE.rst
 ```
 
 [repo]: https://github.com/common-workflow-language/user_guide/issues
