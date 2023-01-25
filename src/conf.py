@@ -236,5 +236,5 @@ html_context = {
 }
 
 gettext_uuid = True
-gettext_compact = True
+gettext_compact = "user_guide"
 locale_dirs = ['locales/']

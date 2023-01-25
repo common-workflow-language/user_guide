@@ -2,6 +2,8 @@
 
 [![Syntax Check](https://app.travis-ci.com/common-workflow-language/user_guide.svg?branch=main)](https://app.travis-ci.com/common-workflow-language/user_guide)
 
+[![Translation status](https://hosted.weblate.org/widgets/commonwl/-/user-guide/svg-badge.svg)](https://hosted.weblate.org/engage/commonwl/)
+
 This is the source of the official user guide for the Common Workflow Language standards.
 
 Releases are published at <https://www.commonwl.org/user_guide/> from the `release` branch.

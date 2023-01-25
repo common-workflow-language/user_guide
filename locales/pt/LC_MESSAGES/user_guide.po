@@ -1,0 +1,3820 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2013, CWL Project Team
+# This file is distributed under the same license as the Common Workflow
+# Language User Guide package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Common Workflow Language User Guide\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-01-24 17:23+0100\n"
+"PO-Revision-Date: 2023-01-25 13:37+0000\n"
+"Last-Translator: Michael Crusoe <mrc@commonwl.org>\n"
+"Language-Team: Portuguese <https://hosted.weblate.org/projects/commonwl/"
+"cwl-user-guide-license/pt/>\n"
+"Language: pt\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n > 1;\n"
+"X-Generator: Weblate 4.16-dev\n"
+
+#: ../../LICENSE.md:2 4e203044f0464fd5a3256430391dde12
+msgid "Licenses"
+msgstr "Licenças"
+
+#: ../../LICENSE.md:4 79a9837f877147fa8e3931968aae7fb5
+msgid "Instructional Material"
+msgstr ""
+
+#: ../../LICENSE.md:6 747f9dd48bc54f44adcd8b18c57f4d9d
+msgid ""
+"All Common Workflow Language project instructional material and changes "
+"to the structure are also made available under the [Creative Commons "
+"Attribution license][cc-by-human]. The following is a human-readable "
+"summary of (and not a substitute for) the [full legal text of the CC BY "
+"4.0 license][cc-by-legal]."
+msgstr ""
+"Todo o material instrucional do projeto Common Workflow Language e "
+"alterações na estrutura também são disponibilizados sob a [licença Creative "
+"Commons Attribution][cc-by-human]. O seguinte é um resumo legível por "
+"humanos de (e não um substituto para) o [texto legal completo da licença CC "
+"BY 4.0][cc-by-legal]."
+
+#: ../../LICENSE.md:12 98f18f72afa043f9a79aa9b5fc8bdf22
+msgid "You are free:"
+msgstr "Você tem o direito de:"
+
+#: ../../LICENSE.md:14 466be810dd8d4a838e0edb5869f2c4eb
+msgid "to **Share**---copy and redistribute the material in any medium or format"
+msgstr ""
+"**Compartilhar**---copiar e redistribuir o material em qualquer suporte ou "
+"formato"
+
+#: ../../LICENSE.md:15 18a3a0aec35743848c97bc178f9c94ff
+msgid "to **Adapt**---remix, transform, and build upon the material"
+msgstr "**Adaptar**---remixar, transformar, e criar a partir do material"
+
+#: ../../LICENSE.md:17 b746b1e4dca14de1a8e18036b7602a73
+msgid "for any purpose, even commercially."
+msgstr "para qualquer fim, mesmo que comercial."
+
+#: ../../LICENSE.md:19 6021e65292a149d5b15e14491f3eb05e
+msgid ""
+"The licensor cannot revoke these freedoms as long as you follow the "
+"license terms:"
+msgstr ""
+"O licenciante não pode revogar estes direitos desde que você respeite os "
+"termos da licença."
+
+#: ../../LICENSE.md:24 8fb7a2946c384364814c6ec3910997d3
+msgid ""
+"**Attribution**---You must give appropriate credit (mentioning that your "
+"work is derived from work that is Copyright © the Common Workflow "
+"Language project, and, where practical, linking to "
+"https://www.commonwl.org/ ), provide a [link to the license][cc-by-"
+"human], and indicate if changes were made. You may do so in any "
+"reasonable manner, but not in any way that suggests the licensor endorses"
+" you or your use."
+msgstr ""
+"Atribuição — Você deve atribuir o devido crédito (mencionando que o seu "
+"trabalho deriva de um trabalho que é «Copyright © The Common Workflow "
+"Language project», e, quando prático, criar uma ligação para https://www."
+"commonwl.org/ ), fornecer um [link para a licença][cc-by-human], e indicar "
+"se foram feitas alterações. Você pode fazê-lo de qualquer forma razoável, "
+"mas não de uma forma que sugira que o licenciante o apoia ou aprova o seu "
+"uso."
+
+#: ../../LICENSE.md:32 8161753b7526445db319210044566200
+msgid ""
+"**No additional restrictions**---You may not apply legal terms or "
+"technological measures that legally restrict others from doing anything "
+"the license permits.  With the understanding that:"
+msgstr ""
+"**Sem restrições adicionais**---Você não pode aplicar termos jurídicos ou "
+"medidas de caráter tecnológico que restrinjam legalmente outros de fazerem "
+"algo que a licença permita.    Com o entendimento de que:"
+
+#: ../../LICENSE.md:36 15314ba527864eaa834cf1185cfcc4e3
+msgid ""
+"You do not have to comply with the license for elements of the material "
+"in the public domain or where your use is permitted by an applicable "
+"exception or limitation."
+msgstr ""
+"Não tem de cumprir com os termos da licença relativamente a elementos do "
+"material que estejam no domínio público ou cuja utilização seja permitida "
+"por uma exceção ou limitação que seja aplicável."
+
+#: ../../LICENSE.md:39 b351ddf9847d48b1a2a87fc78eaba4d2
+msgid ""
+"No warranties are given. The license may not give you all of the "
+"permissions necessary for your intended use. For example, other rights "
+"such as publicity, privacy, or moral rights may limit how you use the "
+"material."
+msgstr ""
+"Não são dadas quaisquer garantias. A licença pode não lhe dar todas as "
+"autorizações necessárias para o uso pretendido. Por exemplo, outros "
+"direitos, tais como direitos de imagem, de privacidade ou direitos morais, "
+"podem limitar o uso do material."
+
+#: ../../LICENSE.md:44 a091addc2dea4830a06bb72ead56c5ea
+msgid "Software"
+msgstr "Software"
+
+#: ../../LICENSE.md:46 84b2c685bbab48449fdc72d2a1e42bf4
+msgid ""
+"Except where otherwise noted, the example programs and other software "
+"provided by Common Workflow Language project are made available under the"
+" [OSI][osi]-approved [Apache 2.0 license][apache-2.0-license]."
+msgstr ""
+"Salvo indicação em contrário, os programas de exemplo e outro software "
+"fornecido pelo projecto Common Workflow Language são disponibilizados sob a ["
+"licença Apache 2.0][apache-2.0-license] aprovada pela [OSI][osi]."
+
+#: ../../LICENSE.md:51 0f68eafafaef4b54accba7e13bfaa702
+msgid ""
+"Unless required by applicable law or agreed to in writing, software "
+"distributed under the License is distributed on an \"AS IS\" BASIS, "
+"WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. "
+"See the License for the specific language governing permissions and "
+"limitations under the License."
+msgstr ""
+
+#: ../../src/_includes/what-is-cwl.md:1 ../../src/_includes/what-is-cwl.md:2
+#: d4f35995b0f6494d9771a4be0a82538f d6ccd4b546254f56a597d67dd4fdc5d6
+#: eab02dc13915490bb3c9ba744d78b6a7
+msgid ""
+"CWL is a way to describe command-line tools and connect them together to "
+"create workflows. Because CWL is a specification and not a specific piece"
+" of software, tools and workflows described using CWL are portable across"
+" a variety of platforms that support the CWL standard."
+msgstr ""
+
+#: ../../src/episodes.md:5 ../../src/setup.md:5
+#: 0d3267f84f4e4aedb1e9fce00b4ea4bc 436cfca6f857469bbff7c652df32160f
+msgid "This page has moved"
+msgstr ""
+
+#: ../../src/episodes.md:9 cc11f5d29206492d9f2f0922882b6159
+msgid ""
+"This page is out-of-date and was kept here to preserve the links of the "
+"old User Guide. Please use the new [Table of Contents](index.md#table-of-"
+"contents) to browse the User Guide."
+msgstr ""
+
+#: ../../src/faq.md:1 e2ed894d325a4f50a5e2dc69da5531a1
+msgid "FAQ"
+msgstr ""
+
+#: ../../src/faq.md:11 61edb787dab04ca2ad3ed07616d878a0
+msgid "Non \"`File`\" Types Using `evalFrom`"
+msgstr ""
+
+#: ../../src/faq.md:41 d5321589e7ed4f0db3c630cc39800791
+msgid "Rename an Input File"
+msgstr ""
+
+#: ../../src/faq.md:43 fc62427c0a004810b055dee90ec5e2d9
+msgid ""
+"This example demonstrates how to change the name of an input file as part"
+" of a tool description. This could be useful when you are taking files "
+"produced from another step in a workflow, and don't want to work with the"
+" default names that these files were given when they were created."
+msgstr ""
+
+#: ../../src/faq.md:59 1c6b8a4194a14611b4061b1540c3807f
+msgid "Rename an Output File"
+msgstr ""
+
+#: ../../src/faq.md:61 bc7ad10c929848a3a9a240a3c501d299
+msgid ""
+"This example demonstrates how to change the name of an output file from "
+"the default name given to it by a tool:"
+msgstr ""
+
+#: ../../src/faq.md:82 7225a993d281421b95c8e3df2846a0e3
+msgid "Referencing a Local Script"
+msgstr ""
+
+#: ../../src/faq.md:84 7ef1dbb81993473f948d9c6f3c64b381
+msgid "There are two ways to reference a local script:"
+msgstr ""
+
+#: ../../src/faq.md:86 450edf800a18423195bea4fe8793a2cb
+msgid ""
+"The first method involves adding the folder containing your scripts to "
+"the `PATH` environment variable. This allows you to run the shell script "
+"directly without using `sh` or `bash` commands."
+msgstr ""
+
+#: ../../src/faq.md:89 1a8cc75ea6174b9297871b2e58971077
+msgid "Start with adding a _shebang_ at the top of your file:"
+msgstr ""
+
+#: ../../src/faq.md:95 a7d84f740a714ec588503ee084fbbc34
+msgid ""
+"After that, make the script executable with the command `chmod +x "
+"scriptname.sh`"
+msgstr ""
+
+#: ../../src/faq.md:97 569d553abe85450c9d1c37456bf412f4
+msgid ""
+"Finally, modify your `PATH` to add the directory where your script is "
+"located. (It is good practice to use `$HOME/bin` for storing your own "
+"scripts)."
+msgstr ""
+
+#: ../../src/faq.md:104 95f5dbbd21084a318413b9528fb867be
+msgid "Now you can use `baseCommand: scriptname.sh` to run the script directly."
+msgstr ""
+
+#: ../../src/faq.md:113 1b3cae80fa9a40ffb2259b8c1cd2b468
+msgid ""
+"When you wish to share your work later, you can place your script in a "
+"software container in the Docker format."
+msgstr ""
+
+#: ../../src/faq.md:115 8d86baa239364f799d4f9d5ea2b0e314
+msgid ""
+"The second method involves including an input of `type: File` in the "
+"script itself:"
+msgstr ""
+
+#: ../../src/faq.md:135 f2c109998c76434893ff16b17fdb2bd0
+msgid "In CWL, everything must be directly stated."
+msgstr ""
+
+#: ../../src/faq.md:138 c2c752b86bf94d6fb3751f4dd81bc7a7
+msgid "Setting `self`-based Input Bindings for Optional Inputs"
+msgstr ""
+
+#: ../../src/faq.md:140 2c38cc58cbb340bc935a5f00e96ba95c
+msgid ""
+"Currently, `cwltool` can't cope with missing optional inputs if their "
+"input binding makes use of `self`. Below is an example workaround for "
+"this, pending a more sophisticated fix."
+msgstr ""
+
+#: ../../src/faq.md:165 ce6db54bd0f54839a5beb948530a21f0
+msgid "Model a \"one-or-the-other\" Parameter"
+msgstr ""
+
+#: ../../src/faq.md:167 d06cbf89028b4638ad54c2529bcbfa25
+msgid ""
+"Below is an example showing how to specify different strings to be added "
+"to a command line, based on the value given to a Boolean parameter."
+msgstr ""
+
+#: ../../src/faq.md:188 d53fb28dcad04e7788cba9e280a2343c
+msgid "Connect a Solo Value to an Input that Expects an Array of that Type"
+msgstr ""
+
+#: ../../src/faq.md:190 d9e30e11533b4d53a144f5df7041268d
+msgid ""
+"Using "
+"[`MultipleInputFeatureRequirement`](https://www.commonwl.org/v1.0/Workflow.html#MultipleInputFeatureRequirement)"
+" along with [`linkMerge: "
+"merge_nested`](https://www.commonwl.org/v1.0/Workflow.html#WorkflowStepInput)"
+msgstr ""
+
+#: ../../src/faq.md:194 941077158ec54ae19bfa2e2ad6662da1
+msgid "merge_nested"
+msgstr ""
+
+#: ../../src/faq.md:196 937cb94a370640c788fbc3fe0b19f2e5
+msgid ""
+"The input must be an array consisting of exactly one entry for each input"
+" link. If \"merge_nested\" is specified with a single link, the value "
+"from the link must be wrapped in a single-item list."
+msgstr ""
+
+#: ../../src/faq.md:199 a1d57e15656548128a76a8b975c564c9
+msgid "Which means \"create a list with exactly these sources as elements\""
+msgstr ""
+
+#: ../../src/faq.md:201 c8c235a9bf6240628f0b5493ffebf7e0
+msgid ""
+"Or in other words: if the destination is of type `File[]` (an array of "
+"`File`s) and the source is a single `File` then add "
+"`MultipleInputFeatureRequirement` to the Workflow level `requirements` "
+"and add `linkMerge: merge_nested` under the appropriate `in` entry of the"
+" destination step."
+msgstr ""
+
+#: ../../src/faq.md:229 3da4dcb043eb4423a53a14182949d9cd
+msgid "Optional Inputs 💯"
+msgstr ""
+
+#: ../../src/faq.md:231 89b90d3bf1ea4ebd88482d435241fac5
+msgid ""
+"To make an input parameter optional, add a question mark to the type "
+"declaration."
+msgstr ""
+
+#: ../../src/faq.md:247 a854006054ce4ffe94bbfa73bdbecbf2
+msgid "<a name=\"enuminputs\"></a>"
+msgstr ""
+
+#: ../../src/faq.md:248 f80eb714e9df417fbba555b5dd5f4d8c
+msgid "Enum Inputs ⚜️"
+msgstr ""
+
+#: ../../src/faq.md:250 10af80fa13af4158aec7060550485350
+msgid ""
+"For command line flags that require a specific input as the argument an "
+"enum type can be declared in CWL. **Specifying null here is known as long"
+" form style. It does the same thing as the question mark on the other "
+"inputs.**"
+msgstr ""
+
+#: ../../src/faq.md:267 ad1c26711ccd4efd8fdb25f9293d33fd
+msgid "<a name=\"recordinputs\"></a>"
+msgstr ""
+
+#: ../../src/faq.md:268 49e2095b51f84f609f5d4bc088ad9745
+msgid "Record Inputs 📀"
+msgstr ""
+
+#: ../../src/faq.md:270 52b8538177c64090af51f5f6a696c28c
+msgid ""
+"For commandline flags that are either **mutually exclusive** or "
+"**dependent** a special record type can be defined. You can also specify "
+"null here to create optional inputs."
+msgstr ""
+
+#: ../../src/faq.md:322 f96c9257e3734b8aa0cc5e065f74f944
+msgid "Setting Mutually Exclusive Parameters"
+msgstr ""
+
+#: ../../src/faq.md:324 7dc0540508084a3495ff3b2ac90fd323
+msgid ""
+"To properly set fields in a record input type, you need to pass a "
+"dictionary to the input to properly set the parameters. This is done by "
+"using inline JavaScript and returning the dictionary with the key of the "
+"field you want to set. The source field is set to indicate the input from"
+" the workflow to be used as the value."
+msgstr ""
+
+#: ../../src/faq.md:342 b53dc77466b24a67b52b8aadf4fab724
+msgid "Setting Booleans"
+msgstr ""
+
+#: ../../src/faq.md:344 cf4e7f3977ae4f9b877072c2b1c4b533
+msgid "These can be set by using the default field"
+msgstr ""
+
+#: ../../src/faq.md:349 99b37739ef18443ca7c0e715a131e0c7
+msgid "Concatenating Strings in Inputs"
+msgstr ""
+
+#: ../../src/faq.md:351 9b00b5a55ee941e1adbfe89e133791e3
+msgid "The valueFrom field must be used instead of default."
+msgstr ""
+
+#: ../../src/faq.md:359 07922147f7ab487ba2a1e7c43c9f410c
+msgid "`cwltool` Errors due to Filenames with Space Characters Inside"
+msgstr ""
+
+#: ../../src/faq.md:361 7a11806f0c7045b48fe58a271f814797
+msgid "`cwltool` does not allow some characters in filenames by default."
+msgstr ""
+
+#: ../../src/faq.md:363 fdaec25650ab4b0fb1c527610e24ae5a
+msgid ""
+"For example, the filename `a space is here.txt` includes 3 space "
+"characters."
+msgstr ""
+
+#: ../../src/faq.md:371 182959fc9f4746d082994e07d05c8cde
+msgid ""
+"If you can not avoid these dangerous characters, then pass `--relax-path-"
+"checks` to `cwltool`."
+msgstr ""
+
+#: ../../src/faq.md:373 cc7752e9989e4a6d957682f479d6fc60
+msgid "CWL Parameter Reference Error due to Hyphen in Input Identifier"
+msgstr ""
+
+#: ../../src/faq.md:375 6db1ebd2d6c74ceca889662cd7df5cd5
+msgid "If `cwltool --validate` returns valid"
+msgstr ""
+
+#: ../../src/faq.md:384 3de2513c7d7b4569ba63f7e6d29137b7
+msgid "But executing it causes an error like:"
+msgstr ""
+
+#: ../../src/faq.md:396 ae3a9188706649e28f97bc4ec34c0821
+msgid "The file is here"
+msgstr ""
+
+#: ../../src/faq.md:410 e1ac97ab6ad3449b8c54933d25257f73
+msgid "Problem caused by `-` (hyphen character)."
+msgstr ""
+
+#: ../../src/faq.md:423 f6c402f7f6974edbbb5582c8e22f3869
+msgid "To fix this error, change `-` (hyphen) to `_` (underscore)"
+msgstr ""
+
+#: ../../src/faq.md:436 190099a242a645c9b9f8bc3ce89d920d
+msgid ""
+"If it is not possible to change the input identifier, then you can use an"
+" alternative CWL Parameter Reference syntax:"
+msgstr ""
+
+#: ../../src/faq.md:442 06a4f6ffc2da4d43b453d4784b42efd3
+msgid "Use CWL and cwltool with Singularity"
+msgstr ""
+
+#: ../../src/faq.md:445 1901c34201054a9cae199b0dbb8b945e
+msgid ""
+"The CWL standards are built around (optional) Docker format containers. "
+"The reference runner and several other CWL implementations support "
+"running those Docker format containers using the Singularity engine. "
+"Directly specifying a Singularity format container is not part of the CWL"
+" standards."
+msgstr ""
+
+#: ../../src/faq.md:450 2d498470524d47f18f9936ace6acebb0
+msgid "Debug JavaScript Expressions"
+msgstr ""
+
+#: ../../src/faq.md:452 d7b044f5224a48eda09bc949cf645193
+msgid ""
+"You can use the <code>--js-console</code> option of <code>cwltool</code>,"
+" or you can try creating a JavaScript or TypeScript project for your "
+"code, and load it using <code>expressionLib</code>, e.g.: <a "
+"href=\"https://github.com/common-workflow-language/common-workflow-"
+"language/blob/master/v1.0/v1.0/template-tool.cwl#L6-L8\"> "
+"https://github.com/common-workflow-language/common-workflow-"
+"language/blob/master/v1.0/v1.0/template-tool.cwl#L6-L8</a></dd>"
+msgstr ""
+
+#: ../../src/index.md:1 2754519265eb426b940bbbd2b8d64e1e
+msgid "Common Workflow Language User Guide"
+msgstr ""
+
+#: ../../src/index.md:3 f8d6e4cd54cb42c88182a43171d97bab
+msgid ""
+"This guide will introduce you to writing workflows using the [Common "
+"Workflow Language](https://www.commonwl.org/) (CWL) open standards. This "
+"guide describes the latest specification {{ cwl_version }}."
+msgstr ""
+
+#: ../../src/index.md:7 132d40fee3b84469afa80d5ff613bf77
+msgid "Contributions and Feedback are Welcome!"
+msgstr ""
+
+#: ../../src/index.md:9 0f47157605a34ea58770ea898deebae4
+msgid ""
+"If you find that something is missing from this guide, or if you would "
+"like to provide other feedback, file an Issue on the [project repository "
+"for this guide][repo]. You can also suggest changes directly in a Pull "
+"Request by clicking the \"Edit this page\" button at the right sidebar of"
+" each page."
+msgstr ""
+
+#: ../../src/index.md:16 6d269e8d70184034bcb56385a6ca198f
+msgid "Navigating the User Guide"
+msgstr ""
+
+#: ../../src/index.md:18 ed74c9a4b623464480e2c184668fcec0
+msgid ""
+"If you are a beginner user get started with the "
+"[Introduction](/introduction/index.md) section. For advanced users the "
+"subsections of the [Topics](/topics/index.md) have detailed information "
+"about the most common topics for CWL."
+msgstr ""
+
+#: ../../src/index.md:23 cfa67cf5521b414da6f7d34cbed283f7
+msgid ""
+"The Table of Contents is displayed at the top menu and also on the left "
+"sidebar. It also appears further down this page but with links to "
+"subsections. The right sidebar contains links to the sections of each "
+"page, and the Search form is on the left sidebar."
+msgstr ""
+
+#: ../../src/index.md:28 ee6b82bd86264e4bb1e8e4065b1e6b9c
+msgid "Table of Contents"
+msgstr ""
+
+#: ../../src/introduction/basic-concepts.md:1 e208c8a7506e41dcac9a403c5d2850c1
+msgid "Basic Concepts"
+msgstr ""
+
+#: ../../src/introduction/basic-concepts.md:3 ac62d326a68145b695e46b714d4e8156
+msgid ""
+"This section describes the basic concepts for users to get started on "
+"working with Common Workflow Language (CWL) workflows. Readers are "
+"expected to be familiar with workflow managers, YAML, and comfortable "
+"with following instructions for the command-line. The other sections of "
+"the user guide cover the same concepts, but in more detail. If you are "
+"already familiar with CWL or you are looking for more advanced content, "
+"you may want to skip this section."
+msgstr ""
+
+#: ../../src/introduction/basic-concepts.md:10 984e6676b9d04c7092bc492f195dfb91
+msgid "The CWL Specification"
+msgstr ""
+
+#: ../../src/introduction/basic-concepts.md:21 cbe1d761da5b403d9605fa1fb8e62fdf
+msgid ""
+"The CWL specification is a document written and maintained by the CWL "
+"community. The specification has different versions. The version covered "
+"in this user guide is the {{ cwl_version }}."
+msgstr ""
+
+#: ../../src/introduction/basic-concepts.md:25 3a71b269bd3c49eb913cf69b60373c24
+msgid ""
+"The specification version can have up to three numbers separated by `.`s "
+"(dots). The first number is the major release, used for backward-"
+"incompatible changes like the removal of deprecated features. The second "
+"number is the minor release, used for new features or smaller changes "
+"that are backward-compatible. The last number is used for bug fixes, like"
+" typos and other corrections to the specification."
+msgstr ""
+
+#: ../../src/introduction/basic-concepts.md:33 b171b72c48d44050a3416a7a42c4021d
+msgid ""
+"The model used for the specification version is called Semantic "
+"Versioning. See the end of this section to [learn more](#learn-more) "
+"about it."
+msgstr ""
+
+#: ../../src/introduction/basic-concepts.md:37 b3df1607e9d242d78b22dc44335fbe2d
+msgid "Implementations"
+msgstr ""
+
+#: ../../src/introduction/basic-concepts.md:39 078b58ffc1cc4d25a7c4eea3bb76e025
+msgid ""
+"An implementation of the CWL specification is any software written "
+"following what is defined in a version of the specification document. "
+"However, implementations may not implement every aspect of the "
+"specification. CWL implementations are licensed under both Open Source "
+"and commercial licenses."
+msgstr ""
+
+#: ../../src/introduction/basic-concepts.md:44 c3869b4ec5ff47d99e8da79770722e04
+msgid ""
+"CWL is well suited for describing large-scale workflows in cluster, cloud"
+" and high performance computing environments where tasks are scheduled in"
+" parallel across many nodes."
+msgstr ""
+
+#: ../../src/introduction/basic-concepts.md:51 2482c84831fc4dfab629e7bfcfb41cbf
+msgid "CWL specification, implementations, and other tools."
+msgstr ""
+
+#: ../../src/introduction/basic-concepts.md:105
+#: a5ebc727fb3443f78e81d6b7ed5ac750
+msgid "Processes and Requirements"
+msgstr ""
+
+#: ../../src/introduction/basic-concepts.md:107
+#: 86e6a06992dc4228bfda7add48e28ca3
+msgid ""
+"A process is a computing unit that takes inputs and produces outputs. The"
+" behavior of a process can be affected by the inputs, requirements, and "
+"hints. There are four types of processes defined in the CWL specification"
+" {{ cwl_version }}:"
+msgstr ""
+
+#: ../../src/introduction/basic-concepts.md:112
+#: 8c9772f96caf4169924d22eb929a4f0f
+msgid "A command-line tool."
+msgstr ""
+
+#: ../../src/introduction/basic-concepts.md:113
+#: 4fac209a62114798b79e4810f7a0148b
+msgid "An expression tool."
+msgstr ""
+
+#: ../../src/introduction/basic-concepts.md:114
+#: b97ba368fd664caab0494e2392795697
+msgid "An operation."
+msgstr ""
+
+#: ../../src/introduction/basic-concepts.md:115
+#: 903a6796e3304a19ad885b2428b0e80f
+msgid "A workflow."
+msgstr ""
+
+#: ../../src/introduction/basic-concepts.md:118
+#: 6e352ac1f8e144c392ac5adf18c28298
+msgid "The processing units available in the CWL objects model."
+msgstr ""
+
+#: ../../src/introduction/basic-concepts.md:119
+#: cf2922f645904ac7955428ecddc37b8a
+msgid ""
+"A command-line tool is a wrapper for a command-line utility like `echo`, "
+"`ls`, and `tar`. A command-line tool can be called from a workflow."
+msgstr ""
+
+#: ../../src/introduction/basic-concepts.md:122
+#: 5f47aae608c041aeb4134d59dad314d2
+msgid ""
+"An expression tool is a wrapper for a JavaScript expression. It can be "
+"used to simplify workflows and command-line tools, moving common parts of"
+" a workflow execution into reusable JavaScript code that takes inputs and"
+" produces outputs like a command-line tool."
+msgstr ""
+
+#: ../../src/introduction/basic-concepts.md:127
+#: f6f589481d0c4891beaccb63160619ef
+msgid ""
+"Operation is an abstract process that also takes inputs, produces "
+"outputs, and can be used in a workflow. But it is a special operation not"
+" so commonly used. It is discussed in the [Operations "
+"section](../topics/operations.md) of this user guide."
+msgstr ""
+
+#: ../../src/introduction/basic-concepts.md:131
+#: 73b0c1ccb18c4b74a2c0fdf9706eca85
+msgid ""
+"The workflow is a process that contains steps. Steps can be other "
+"workflows (nested workflows), command-line tools, or expression tools. "
+"The inputs of a workflow can be passed to any of its steps, while the "
+"outputs produced by its steps can be used in the final output of the "
+"workflow."
+msgstr ""
+
+#: ../../src/introduction/basic-concepts.md:137
+#: 4ace6b92f4e04a07aa202840ebe36417
+msgid ""
+"The CWL specification allows for implementations to provide extra "
+"functionality and specify prerequisites to workflows through "
+"*requirements*. There are many requirements defined in the CWL "
+"specification, for instance:"
+msgstr ""
+
+#: ../../src/introduction/basic-concepts.md:141
+#: cc6cd8cb81564cadb8e6a4c49423b7f7
+msgid "`InlineJavascriptWorkflow` - enables JavaScript in expressions."
+msgstr ""
+
+#: ../../src/introduction/basic-concepts.md:142
+#: 2d9f53b6ed5041dbb6c0b54835897856
+msgid "`SubworkflowFeatureRequirement` - enables nested workflows."
+msgstr ""
+
+#: ../../src/introduction/basic-concepts.md:143
+#: 907674a4ecff4826a2b880e28fc38f33
+msgid ""
+"`InitialWorkDirRequirement` - controls staging files in the input "
+"directory."
+msgstr ""
+
+#: ../../src/introduction/basic-concepts.md:145
+#: 037cd0e5ceda482eaeaca03d51745aee
+msgid ""
+"Some CWL runners may provide requirements that are not in the "
+"specification. For example, GPU requirements are supported in `cwltool` "
+"through the `cwltool:CUDARequirement` requirement, but it is not part of "
+"the {{ cwl_version }} specification and may not be supported by other CWL"
+" runners."
+msgstr ""
+
+#: ../../src/introduction/basic-concepts.md:151
+#: e4643938445b48cc80eb8973ceeb126e
+msgid ""
+"Hints are similar to requirements, but while requirements list features "
+"that are required, hints list optional features. Requirements are "
+"explained in detail in the [Requirements](../topics/requirements-and-"
+"hints.md) section."
+msgstr ""
+
+#: ../../src/introduction/basic-concepts.md:155
+#: c4c3315c96714e81b364f8cc003b87e6
+msgid "FAIR Workflows"
+msgstr ""
+
+#: ../../src/introduction/basic-concepts.md:157
+#: 3eb6a013a2a4478ca2ad134661f65c58
+msgid ""
+"The FAIR principles have laid a foundation for sharing and publishing "
+"digital assets, and in particular, data. The FAIR principles emphasize "
+"machine accessibility and that all digital assets should be Findable, "
+"Accessible, Interoperable, and Reusable. Workflows encode the methods by "
+"which the scientific process is conducted and via which data are created."
+" It is thus important that workflows support the creation of FAIR data "
+"and adhere to the FAIR principles. — [FAIR Computational "
+"Workflows](https://workflows.community/groups/fair/), Workflows Community"
+" Initiative."
+msgstr ""
+
+#: ../../src/introduction/basic-concepts.md:167
+#: 074af9633627470485e5225326d5f20a
+msgid ""
+"CWL has roots in \"make\" and many similar tools that determine order of "
+"execution, based on dependencies between tasks. However, unlike \"make\","
+" CWL tasks are isolated, and you must be explicit about your inputs and "
+"outputs."
+msgstr ""
+
+#: ../../src/introduction/basic-concepts.md:171
+#: 847951c055b94a83b1e081594cef22ee
+msgid ""
+"The benefit of explicitness and isolation are flexibility, portability, "
+"and scalability; tools and workflows described with CWL can transparently"
+" leverage technologies such as Docker and be used with CWL "
+"implementations from different vendors."
+msgstr ""
+
+#: ../../src/introduction/basic-concepts.md:176
+#: 44bde1fae06b4678bcac4f3224601296
+msgid "`cwltool` also uses the PROV-O standard ontology for data provenance."
+msgstr ""
+
+#: ../../src/introduction/basic-concepts.md:178
+#: ../../src/introduction/prerequisites.md:196
+#: ../../src/introduction/quick-start.md:94 3439764fab0e49d2bcb7c9fbae556e65
+#: 65c24244713741e196da08cb9ba237b2 f059896039524095b4deb65d693f8ddf
+msgid "Learn More"
+msgstr ""
+
+#: ../../src/introduction/basic-concepts.md:180
+#: 9d5100c7d0a040aea1020bf633ad17de
+msgid "Semantic Versioning - <https://semver.org/>"
+msgstr ""
+
+#: ../../src/introduction/basic-concepts.md:181
+#: 36eb4b3b966640af90faa55db3789cb6
+msgid ""
+"The CWL Specification page in the CWL website: "
+"<https://www.commonwl.org/specification/>"
+msgstr ""
+
+#: ../../src/introduction/basic-concepts.md:182
+#: 2ccb956baa6b4376a04ad9fcc4654631
+msgid ""
+"The current CWL specification on GitHub: {{ '<https://github.com/common-"
+"workflow-language/cwl-{}>'.format(cwl_version_text) }}"
+msgstr ""
+
+#: ../../src/introduction/basic-concepts.md:183
+#: 72889b830c514afe9a7cb1e64b5666a0
+msgid ""
+"The list of Implementations in the CWL website: "
+"<https://www.commonwl.org/implementations/>"
+msgstr ""
+
+#: ../../src/introduction/basic-concepts.md:184
+#: e29bd7f973544600be589c3b3f84cf63
+msgid "PROV-O: The PROV Ontology - <https://www.w3.org/TR/prov-o/>"
+msgstr ""
+
+#: ../../src/introduction/basic-concepts.md:185
+#: c377a7f5dbe645cebbb6c7eccf831a0b
+msgid ""
+"CWL Operations are covered in the [Operations](../topics/operations.md) "
+"section of this user guide."
+msgstr ""
+
+#: ../../src/introduction/index.md:1 1769a0cbf4de4d77879c1f202cd11af9
+msgid "Introduction"
+msgstr ""
+
+#: ../../src/introduction/index.md:3 950370f0a36048b38e1bde9b78f80816
+msgid ""
+"This section will guide you through a short introduction to CWL, the "
+"prerequisites for following this user guide, and some basic concepts that"
+" are useful to know before reading the rest of the user guide."
+msgstr ""
+
+#: ../../src/introduction/prerequisites.md:1 f01faaf1b253407cbbc2f353c24774f3
+msgid "Prerequisites"
+msgstr ""
+
+#: ../../src/introduction/prerequisites.md:6 353b14f06ee845d0a06a829643e31534
+msgid ""
+"The software and configurations listed in this section are prerequisites "
+"for following this user guide. The CWL standards are implemented by many "
+"different workflow runners and platforms. This list of requirements "
+"focuses on the CWL reference runner, `cwltool`. You can use another CWL-"
+"compatible runner or workflow system, but the results and interface may "
+"look different (though the exact workflow outputs should be identical)."
+msgstr ""
+
+#: ../../src/introduction/prerequisites.md:12 b5a0607096814c0aa577f977c3b57c54
+msgid "CWL Implementations"
+msgstr ""
+
+#: ../../src/introduction/prerequisites.md:14 ff2bb4c6504b456bac7ca9c514414dbf
+msgid ""
+"There are many implementations of the CWL standards. Some are complete "
+"CWL runners, while others could be plug-ins or extensions to workflow "
+"engines. We have a better explanation in the [Implementations](basic-"
+"concepts.md#implementations) section."
+msgstr ""
+
+#: ../../src/introduction/prerequisites.md:19 cbbcce4c2a96471b8b0ae3593ad59de4
+msgid "Operating System"
+msgstr ""
+
+#: ../../src/introduction/prerequisites.md:21 5089fdba8aed4113983fa86e698df98b
+msgid ""
+"We recommend using an up-to-date operating system. You can choose any of "
+"the following options for your operating system:"
+msgstr ""
+
+#: ../../src/introduction/prerequisites.md:24 dbaa4bae22fe4d05b18d7351967ddbc3
+msgid "Linux"
+msgstr ""
+
+#: ../../src/introduction/prerequisites.md:25 c05187af85be41b782678b79627f8fbf
+msgid "macOS"
+msgstr ""
+
+#: ../../src/introduction/prerequisites.md:26 beb6cf4d7c154eb9b6d7fe024a318ed7
+msgid "Windows"
+msgstr ""
+
+#: ../../src/introduction/prerequisites.md:29 3b5fdc4c2ebd45dcb3703e59d2b3ef25
+msgid ""
+"If you are using Windows, you will have to install the [Windows Subsystem"
+" for Linux 2](https://learn.microsoft.com/en-us/windows/wsl/install) "
+"(WSL2). Visit the `cwltool` [documentation](https://github.com/common-"
+"workflow-language/cwltool/blob/main/README.rst#ms-windows-users) for "
+"details on installing WSL2. Your operating system also needs internet "
+"access and a recent version of Python (3.6+)."
+msgstr ""
+
+#: ../../src/introduction/prerequisites.md:35 56d78c95daa54135b6aa9b2bfdc34d01
+msgid "CWL Runner"
+msgstr ""
+
+#: ../../src/introduction/prerequisites.md:41 0f2704bf1f7148be95e999e312899f11
+msgid ""
+"The first thing you will need for running CWL workflows is a CWL runner. "
+"`cwltool` is a Python Open Source project maintained by the CWL "
+"community. It is also the CWL reference runner, which means it must "
+"support everything in the current CWL specification, {{ cwl_version }}."
+msgstr ""
+
+#: ../../src/introduction/prerequisites.md:46 86264c9e56104ecea9146407c379aae2
+msgid ""
+"`cwltool` can be installed with `pip`. We recommend using a virtual "
+"environment like `venv` or `conda`. The following commands will create "
+"and activate a Python virtual environment using the `venv` module, and "
+"install `cwltool` in that environment:"
+msgstr ""
+
+#: ../../src/introduction/prerequisites.md:51 0a0f0e5151ab4c498b4f8a12c016f28d
+msgid "Installing `cwltool` with `pip` and `venv`."
+msgstr ""
+
+#: ../../src/introduction/prerequisites.md:62 f7aaafeee230400da056464c853582c2
+msgid ""
+"Visit the `cwltool` [documentation](https://github.com/common-workflow-"
+"language/cwltool#install) for other ways to install `cwltool` with `apt` "
+"and `conda`."
+msgstr ""
+
+#: ../../src/introduction/prerequisites.md:65 5eced7e4cd084e8a806b1d3b12d0c000
+msgid "Let's use a simple CWL tool description `true.cwl` with `cwltool`."
+msgstr ""
+
+#: ../../src/introduction/prerequisites.md:67 040c019b6e844eda8c8c2b210852516b
+msgid "`true.cwl`"
+msgstr ""
+
+#: ../../src/introduction/prerequisites.md:73 6391e08e0bde49f4b21286d8fdb97433
+msgid ""
+"The `cwltool` command has an option to validate CWL tool and workflow "
+"descriptions. This option will parse the CWL document, look for syntax "
+"errors, and verify that the workflow descriptions are compliant with the "
+"CWL standards. However, these actions will be performed without running "
+"the document. To validate CWL workflows (or even a standalone command "
+"line tool description like the above) pass the `--validate` option to the"
+" `cwltool` command:"
+msgstr ""
+
+#: ../../src/introduction/prerequisites.md:79 cdef47fca304479c9a9df75afc0afb35
+msgid "Validating `true.cwl` with `cwltool`."
+msgstr ""
+
+#: ../../src/introduction/prerequisites.md:84 d41c4bc740aa474ea09a7cbd267c8840
+msgid "You can run the CWL tool description by omitting the `--validate` option:"
+msgstr ""
+
+#: ../../src/introduction/prerequisites.md:86 24d7be55d3994f0b82c38da47918e0c9
+msgid "Running `true.cwl` with `cwltool`."
+msgstr ""
+
+#: ../../src/introduction/prerequisites.md:91 39d6ceecb54a4a7fb5dff4a7cae1bfe7
+msgid "Cwl-runner Python Module"
+msgstr ""
+
+#: ../../src/introduction/prerequisites.md:93 096d0a50f69e48bd9915238d1b4264c1
+msgid ""
+"`cwl-runner` is an implementation-agnostic alias for any CWL compliant "
+"runner. This simply means that the `cwl-runner` alias command can be "
+"invoked independently, and is not reliant on a particular CWL runner "
+"program name. Users can invoke `cwl-runner` instead of invoking a CWL "
+"runner like `cwltool` directly. The `cwl-runner` is installed by a system"
+" administrator or user to point to the preferred CWL implementation. This"
+" is convenient for environments with multiple CWL runners."
+msgstr ""
+
+#: ../../src/introduction/prerequisites.md:101 f9df974a8e2645a6918e67466bd1fdc2
+msgid ""
+"The CWL community publishes a Python package with the name `cwlref-"
+"runner` that installs an alias for `cwltool` under the name `cwl-runner`"
+msgstr ""
+
+#: ../../src/introduction/prerequisites.md:104 71ebe91d4bda473abe87578929433212
+msgid "Installing `cwl-runner` alias for cwltool with `pip`."
+msgstr ""
+
+#: ../../src/introduction/prerequisites.md:111 746c6fc9c29d466494458a08d4c96672
+msgid ""
+"Now you can validate and run your workflow with the `cwl-runner` "
+"executable, which will invoke `cwltool`. You should have the same results"
+" and output as in the previous section."
+msgstr ""
+
+#: ../../src/introduction/prerequisites.md:115 b9cc5a843a0f49daad56e9303657bdd5
+msgid "Validating `true.cwl` with `cwl-runner`."
+msgstr ""
+
+#: ../../src/introduction/prerequisites.md:120 34ab40437ab646488ba3ee86cd7fe071
+msgid "Running `true.cwl` with `cwl-runner`."
+msgstr ""
+
+#: ../../src/introduction/prerequisites.md:125 705807fae182425dbf4244dbf2be1226
+msgid ""
+"Another way to execute `cwl-runner` is by invoking the file directly. For"
+" that, the first thing you need to do is copy `true.cwl` workflow into a "
+"new file: `true_shebang.cwl`, and include a special first line, a "
+"*shebang*:"
+msgstr ""
+
+#: ../../src/introduction/prerequisites.md:129 f74dd9bd4ff84bf48f3f8e8c8d6fb51a
+msgid "`true_shebang.cwl`"
+msgstr ""
+
+#: ../../src/introduction/prerequisites.md:135 164c438baab54ec19bbb4584a10dd411
+msgid "Now you can make the file `true_shebang.cwl` executable with `chmod u+x`."
+msgstr ""
+
+#: ../../src/introduction/prerequisites.md:137 bf8be77af6154326b28442c5d2e2b852
+msgid "Making `true.cwl` executable."
+msgstr ""
+
+#: ../../src/introduction/prerequisites.md:144 695184d1b45a42f393e2da99c3721773
+msgid ""
+"And finally, you can execute it directly in the command-line. On "
+"execution, the program specified in the shebang (`cwl-runner`) will be "
+"used to execute the rest of the file."
+msgstr ""
+
+#: ../../src/introduction/prerequisites.md:148 7c4f45b3e7b549e186126693aa4a3d4f
+msgid "Running `true_shebang.cwl` with a shebang."
+msgstr ""
+
+#: ../../src/introduction/prerequisites.md:154 3ba23b4ea01c46848e4e43bbeff5f5a1
+msgid ""
+"The *shebang* is the two-character sequence `#!` at the beginning of a "
+"script. When the script is executable, the operating system will execute "
+"the script using the executable specified after the shebang. It is "
+"considered a good practice to use `/usr/bin/env <executable>` rather than"
+" using a hard-coded location, since `/usr/bin/env <executable>` looks for"
+" the `<executable>` program in the system `PATH`,"
+msgstr ""
+
+#: ../../src/introduction/prerequisites.md:161 eec6c07455384630809ff1c532bfe7d4
+msgid "Text Editor"
+msgstr ""
+
+#: ../../src/introduction/prerequisites.md:163 f6b39b12bd5c495cb53e2795bf9200ed
+msgid ""
+"You can use any text editor with CWL, but for syntax highlighting we "
+"recommend an editor with YAML support. Popular editors are Visual Studio "
+"Code, Sublime, WebStorm, vim/neovim, and Emacs."
+msgstr ""
+
+#: ../../src/introduction/prerequisites.md:167 2fdb62a13f9447bc89183426260ce781
+msgid ""
+"There are extensions for Visual Studio Code and WebStorm that provide "
+"integration with CWL, and features such as customized syntax highlighting"
+" and better auto-complete:"
+msgstr ""
+
+#: ../../src/introduction/prerequisites.md:171 1f07135156254f74a6b043bf33d00cc3
+msgid ""
+"Visual Studio Code with the Benten (CWL) plugin - "
+"<https://github.com/rabix/benten#install-vs-code-extension>"
+msgstr ""
+
+#: ../../src/introduction/prerequisites.md:172 de344f356b1c466d9131cdbd4d7353a3
+msgid ""
+"cwl-plugin for IntelliJ - <https://plugins.jetbrains.com/plugin/10040"
+"-cwl-plugin>"
+msgstr ""
+
+#: ../../src/introduction/prerequisites.md:174 3f9324ede11441f58d93875867034cf0
+msgid ""
+"The CWL community also maintains a list of editors and viewers: "
+"<https://www.commonwl.org/tools/#editors>"
+msgstr ""
+
+#: ../../src/introduction/prerequisites.md:177 6ce8b81560e341c580d316d69202b268
+msgid "Docker"
+msgstr ""
+
+#: ../../src/introduction/prerequisites.md:181 40cfd559d6a848d1aae354d3bdaa8e9c
+msgid ""
+"`cwltool` uses Docker to run tools, workflows, and workflow steps that "
+"specify a software container. Follow the instructions in the Docker "
+"documentation to install it for your operating system: "
+"<https://docs.docker.com/>."
+msgstr ""
+
+#: ../../src/introduction/prerequisites.md:185 8a9a50b0ebe847ce90593881ffe0d69c
+msgid ""
+"You do not need to know how to write and build Docker containers. In the "
+"rest of the user guide, we will use existing Docker images for running "
+"examples, and to clarify the differences between the execution models "
+"with and without containers."
+msgstr ""
+
+#: ../../src/introduction/prerequisites.md:191 923cf9dd6d6c417aabe42f9fa62ffa35
+msgid ""
+"`cwltool` supports running containers with Docker, Podman, udocker, and "
+"Singularity. You can also use alternative container registries for "
+"pulling images."
+msgstr ""
+
+#: ../../src/introduction/prerequisites.md:198 9390b03889de44638141d705e0ef8322
+msgid ""
+"The [Implementations](basic-concepts.md#implementations) topic in the "
+"next section, Basic Concepts."
+msgstr ""
+
+#: ../../src/introduction/prerequisites.md:199 12042e411482458f8c35a2491f9433e0
+msgid "The Python `venv` module: <https://docs.python.org/3/library/venv.html>"
+msgstr ""
+
+#: ../../src/introduction/quick-start.md:1 cdd4196f9aa34beba115901ec97913b6
+msgid "Quick Start"
+msgstr ""
+
+#: ../../src/introduction/quick-start.md:3 c43d9675ed134b78b02acb5a102a764a
+msgid ""
+"This section will show you a brief overview of what CWL is, and where you"
+" can learn more about it. No previous knowledge of CWL is required, but "
+"you must be comfortable following instructions for the command-line."
+msgstr ""
+
+#: ../../src/introduction/quick-start.md:7 280936bb2a22469799b2c9e9ba22adee
+msgid "“Hello World”"
+msgstr ""
+
+#: ../../src/introduction/quick-start.md:12 cb203354977d42a58112d09357f62565
+msgid ""
+"CWL documents are written in [YAML](../topics/index.md) (and/or JSON). "
+"The example below shows a simple CWL “Hello World” workflow annotated "
+"with comments. Note that comments start with `#`:"
+msgstr ""
+
+#: ../../src/introduction/quick-start.md:16 9e51962a7e5c47248f3e20703ae101eb
+msgid "`hello_world.cwl`"
+msgstr ""
+
+#: ../../src/introduction/quick-start.md:22 7e475e3f3c4a4404bb0236124c0f7ce7
+msgid ""
+"The example above is just a wrapper for the `echo` command-line tool. "
+"Running the workflow above with the default input values will produce the"
+" same result as the command-line `echo \"Hello World\"`."
+msgstr ""
+
+#: ../../src/introduction/quick-start.md:27 82613ca4e32b4ccab1b7735f5ba2d5a1
+msgid ""
+"In CWL, there is a distinction between a command-line tool and a "
+"workflow. But for the sake of simplicity, we are using the term "
+"“workflow” here. You will learn more about this in the [basic concepts"
+"](basic-concepts.md) section."
+msgstr ""
+
+#: ../../src/introduction/quick-start.md:32 498a43362a4749f3b8b433709d34a1d5
+msgid "Installing a CWL Runner"
+msgstr ""
+
+#: ../../src/introduction/quick-start.md:34 f3e56aedd56b4b93bdc3894273e8c144
+msgid ""
+"`cwltool` is an implementation of the CWL specification. It is also the "
+"CWL *Reference Runner* for the specification, and it is compliant with "
+"the latest version of the specification: {{ cwl_version }}. You can "
+"install `cwltool` using `pip`:"
+msgstr ""
+
+#: ../../src/introduction/quick-start.md:39 81481f5b82e4488398f87f0a169bd359
+msgid "Installing `cwltool` with `pip`."
+msgstr ""
+
+#: ../../src/introduction/quick-start.md:47 a81342e756d24c40acc15835d0a768f2
+msgid ""
+"If installing the cwltool using the pip command doesn't work for you, the"
+" [prerequisites](prerequisites.md) section contains other ways to install"
+" `cwltool` and a more detailed list of software and libraries used for "
+"following the rest of this user guide."
+msgstr ""
+
+#: ../../src/introduction/quick-start.md:51 c12cf89f8b9a421ebd05330326e219b3
+msgid "Running \"Hello World\""
+msgstr ""
+
+#: ../../src/introduction/quick-start.md:53 9b68bcb1a41849dc9601ab47c5bbb0fe
+msgid ""
+"The usage of the `cwltool` command-line executable is basically `cwltool "
+"[OPTIONS] <CWL_DOCUMENT> [INPUTS_OBJECT]`. You can run the "
+"`hello_world.cwl` workflow without specifying any option:"
+msgstr ""
+
+#: ../../src/introduction/quick-start.md:57 ce04027dfcfe4b7b91ea3c2136b18b23
+msgid "Running `hello_world.cwl` with `cwltool`."
+msgstr ""
+
+#: ../../src/introduction/quick-start.md:62 0d8a788402914ebd8f09a5ca80650011
+msgid ""
+"Or you can override the default value of the input parameter `message`, "
+"similar to how you would change the argument of the `echo` base command:"
+msgstr ""
+
+#: ../../src/introduction/quick-start.md:65 6d0b679efab24813a7a3b709ade940d1
+msgid "Running `hello_world.cwl` with `cwltool` passing an input parameter."
+msgstr ""
+
+#: ../../src/introduction/quick-start.md:70 2ea056ab04b6419a9faf350de22a17f2
+msgid ""
+"Another way of passing values to your workflow input parameters is via an"
+" *Inputs Object*. This is a file containing the input fields with their "
+"corresponding values. The Inputs Objects file can be written in JSON or "
+"YAML. For example:"
+msgstr ""
+
+#: ../../src/introduction/quick-start.md:74 1a44a545434b448aa956005deeed90a8
+msgid "`hello_world-job.json`"
+msgstr ""
+
+#: ../../src/introduction/quick-start.md:80 e76bfcc0c9f84bcdb3f6d5277869a88c
+msgid ""
+"You can use this Inputs Object file now to execute the “Hello World” "
+"workflow:"
+msgstr ""
+
+#: ../../src/introduction/quick-start.md:82 d4cdbe870a6f4a68b542ca719d989062
+msgid "Passing an Inputs Object file to `cwltool`."
+msgstr ""
+
+#: ../../src/introduction/quick-start.md:88 b6d59e4b9c854abab1b3f7a0fa26f504
+msgid ""
+"We used a similar file name for the workflow and for the Inputs Object "
+"files. The *-job.json* suffix is very common in Inputs Object files, but "
+"it is not a requirement. You can choose any name for your workflows and "
+"Inputs Object files."
+msgstr ""
+
+#: ../../src/introduction/quick-start.md:96 5535b98e8b1342f09f003ec6db2b44b1
+msgid "Continue reading the next sections of this User Guide!"
+msgstr ""
+
+#: ../../src/introduction/quick-start.md:97 77e43c7117fd4c52b140f0dd52cc3963
+msgid "[List of CWL Implementations](https://www.commonwl.org/implementations)."
+msgstr ""
+
+#: ../../src/introduction/quick-start.md:98 7282abfa7155497ca47c30f9abfb6474
+msgid ""
+"The [`common-workflow-language` organization](https://github.com/common-"
+"workflow-language) at GitHub."
+msgstr ""
+
+#: ../../src/introduction/quick-start.md:99 176d8d47830f4031bb95dc231ebf1303
+msgid ""
+"[Common Workflow Language at "
+"Wikipedia](https://en.wikipedia.org/wiki/Common_Workflow_Language)."
+msgstr ""
+
+#: ../../src/introduction/quick-start.md:100 82a7ca3703bc4f0daa18942a1ac8943b
+msgid ""
+"[YAML.org](http://yaml.org/) and [YAML at "
+"Wikipedia](https://en.wikipedia.org/wiki/YAML)."
+msgstr ""
+
+#: ../../src/introduction/quick-start.md:101 d039a9d6461c44628d4660c00d9ce6ff
+msgid ""
+"The {{'[CWL Specification "
+"VERSION](https://www.commonwl.org/VERSION)'.replace('VERSION', "
+"cwl_version_text) }}."
+msgstr ""
+
+#: ../../src/introduction/quick-start.md:102 fbc3383d9e1c4eaca7931c3cc4f1752b
+msgid ""
+"[Workflow management system at "
+"Wikipedia](https://en.wikipedia.org/wiki/Workflow_management_system)."
+msgstr ""
+
+#: ../../src/setup.md:9 1330bd38c4b5495f890b98c669f81a9d
+msgid ""
+"This page is out-of-date and was kept here to preserve the links of the "
+"old User Guide. The information on this page has been migrated to the "
+"[FAQ](/faq.md) section of the new user guide."
+msgstr ""
+
+#: ../../src/topics/additional-arguments-and-parameters.md:1
+#: 9c87c76c690948ac8e18088a0fffe679
+msgid "Additional Arguments and Parameters"
+msgstr ""
+
+#: ../../src/topics/additional-arguments-and-parameters.md:3
+#: ad00d94d4fb64bbdac356e64dd3803b9
+msgid ""
+"Sometimes tools require additional command line options that don't "
+"correspond exactly to input parameters."
+msgstr ""
+
+#: ../../src/topics/additional-arguments-and-parameters.md:6
+#: d8110ed19da94ad8a9f56e7006c4a2cf
+msgid ""
+"In this example, we will wrap the Java compiler to compile a java source "
+"file to a class file.  By default, \"javac\" will create the class files "
+"in the same directory as the source file.  However, CWL input files (and "
+"the directories in which they appear) may be read-only, so we need to "
+"instruct \"javac\" to write the class file to the designated output "
+"directory instead."
+msgstr ""
+
+#: ../../src/topics/additional-arguments-and-parameters.md:13
+#: a74935dc31664e979ca8f90a6a4ba53c
+msgid "`arguments.cwl`"
+msgstr ""
+
+#: ../../src/topics/additional-arguments-and-parameters.md:19
+#: ../../src/topics/staging-input-files.md:15 0a8065edd8af4eaea08989a1060ce48f
+#: f357755f6dcb4971bade8636064f8dd1
+msgid "`arguments-job.yml`"
+msgstr ""
+
+#: ../../src/topics/additional-arguments-and-parameters.md:24
+#: 6359191b4f684d5aa3602e4aaf394883
+msgid "Next, create a sample Java file to use with the command-line tool."
+msgstr ""
+
+#: ../../src/topics/additional-arguments-and-parameters.md:30
+#: 9643449da1da46d7861866dce490cbcb
+msgid ""
+"And now invoke `cwltool` providing the tool description and the input "
+"object on the command line:"
+msgstr ""
+
+#: ../../src/topics/additional-arguments-and-parameters.md:36
+#: 713666580a0a4466b4ba6e3eb2b54f0a
+msgid ""
+"Here we use the `arguments` field to add an additional argument to the "
+"command line that isn't tied to a specific input parameter."
+msgstr ""
+
+#: ../../src/topics/additional-arguments-and-parameters.md:43
+#: d50574c8b9694f83aa376d39b9a6fcd6
+msgid ""
+"This example references a runtime parameter.  Runtime parameters provide "
+"information about the hardware or software environment when the tool is "
+"actually executed.  The `$(runtime.outdir)` parameter is the path to the "
+"designated output directory.  Other parameters include "
+"`$(runtime.tmpdir)`, `$(runtime.ram)`, `$(runtime.cores)`, "
+"`$(runtime.outdirSize)`, and `$(runtime.tmpdirSize)`.  See the [Runtime "
+"Environment][runtime] section of the CWL specification for details."
+msgstr ""
+
+#: ../../src/topics/best-practices.md:1 612c4a66c36a43d4ac5d74c1757d6845
+msgid "Best Practices"
+msgstr ""
+
+#: ../../src/topics/best-practices.md:3 939cd9e9eaff4e3ab74fe707a5d4eb21
+msgid ""
+"The following are a set of recommended good practices to keep in mind "
+"when writing a Common Workflow Language description for a tool or "
+"workflow. These guidelines are presented for consideration on a scale of "
+"usefulness: although more is better, not all are required."
+msgstr ""
+
+#: ../../src/topics/best-practices.md:8 4bcb84707acb40a0bfe2ea0853cb10b7
+msgid ""
+"No `type: string` parameters for names of input or reference "
+"files/directories; use `type: File` or `type: Directory` as appropriate."
+msgstr ""
+
+#: ../../src/topics/best-practices.md:11 4dee8504a8e5496081dadc386ab45540
+msgid ""
+"A CWL document (in conjunction with any external components like "
+"`Dockerfile`s) is software code. Workflow developers should be aware that"
+" the usual rules of software licensing apply to this document. For "
+"example, if the workflow is shared publicly, licensing terms must be "
+"clear so that a future user understands under what conditions they can "
+"run the workflow, modify it and/or combine it with other workflows. For "
+"this reason, please consider including a license field in the document. "
+"The authors of this guide urge you to choose a pre-existing license "
+"rather than trying to write your own (see the link below to learn more "
+"about choosing a license), and our recommended practice is to choose a "
+"license that allows for re-use by anyone, e.g. [Apache 2.0][apache-"
+"license]."
+msgstr ""
+
+#: ../../src/topics/best-practices.md:20 674c238b25e240eda05e22e399f2f78f
+msgid ""
+"If possible, the license should be specified with its corresponding [SPDX"
+" identifier][spdx]. Construct the metadata field for the license by "
+"providing a URL of the form `https://spdx.org/licenses/[SPDX-ID]` where "
+"`SPDX-ID` is taken from the list of identifiers linked above. See the "
+"example snippet below for guidance. For non-standard licenses without an "
+"SPDX identifier, provide a URL to the license."
+msgstr ""
+
+#: ../../src/topics/best-practices.md:26 b651f80f47b4442fbf29454a233697fc
+msgid ""
+"Useful reading: \"[A Quick Guide to Software Licensing for the Scientist-"
+"Programmer][sci-license]\""
+msgstr ""
+
+#: ../../src/topics/best-practices.md:28 263a127a77cf4c41af76854f22f1f260
+msgid "_Example of metadata field for license with SPDX identifier:_"
+msgstr ""
+
+#: ../../src/topics/best-practices.md:37 3a87a0fb2a364e3da5aaa4017e430b19
+msgid ""
+"For more examples of providing metadata within CWL descriptions, see  "
+"[the Metadata and Authorship section of this User Guide](../topics"
+"/metadata-and-authorship.md)."
+msgstr ""
+
+#: ../../src/topics/best-practices.md:40 ecf2b9c0b1664afe9c4e180610610021
+msgid ""
+"Include [attribution information][license-example] for the author(s) of "
+"the CWL tool or workflow description. Use unambiguous identifiers like "
+"[ORCID][orcid]."
+msgstr ""
+
+#: ../../src/topics/best-practices.md:44 e24cb13d98014e558b6a6946758359e0
+msgid ""
+"In tool descriptions, list dependencies using short name(s) under "
+"`SoftwareRequirement`."
+msgstr ""
+
+#: ../../src/topics/best-practices.md:47 f2b14a92374e449d9fb1e8c86ae0dd61
+msgid ""
+"Include [SciCrunch][scicrunch] identifiers for dependencies in "
+"`https://identifiers.org/rrid/RRID:SCR_NNNNNN` format."
+msgstr ""
+
+#: ../../src/topics/best-practices.md:50 928e3df7ca3e479ca6474a8e72cf36eb
+msgid ""
+"All `input` and `output` identifiers should reflect their conceptual "
+"identity. Use informative names like `unaligned_sequences`, "
+"`reference_genome`, `phylogeny`, or `aligned_sequences` instead of  "
+"`foo_input`, `foo_file`, `result`, `input`, `output`, and so forth."
+msgstr ""
+
+#: ../../src/topics/best-practices.md:55 d355f035676446c88b028f327aeb4829
+msgid ""
+"In tool descriptions, include a list of version(s) of the tool that are "
+"known to work with this description under `SoftwareRequirement`."
+msgstr ""
+
+#: ../../src/topics/best-practices.md:58 339b852df24242189d6efcd2898a3396
+msgid ""
+"`format` should be specified for all input and output `File`s. "
+"Bioinformatics tools should use format identifiers from [EDAM][edam-"
+"example]. See also `iana:text/plain`, `iana:text/tab-separated-values` "
+"with `$namespaces: { iana: \"https://www.iana.org/assignments/media-"
+"types/\" }`. [Full IANA media type list][iana-types] (also known as MIME "
+"types). For non-bioinformatics tools, use or build an appropriate "
+"ontology/controlled vocabulary in the same way. Please edit this page to "
+"let us know about it."
+msgstr ""
+
+#: ../../src/topics/best-practices.md:66 3ef57e6862f240bebcf193a52397af0a
+msgid ""
+"Mark all input and output `File`s that are read from or written to in a "
+"streaming compatible way (only once, no random-access), as `streamable: "
+"true`."
+msgstr ""
+
+#: ../../src/topics/best-practices.md:69 f1a7c4f896a04a80b0c5f6a1db61ff8c
+msgid ""
+"Each `CommandLineTool` description should focus on a single operation "
+"only, even if the (sub)command is capable of more. Don't overcomplicate "
+"your tool descriptions with options that you don't need or use."
+msgstr ""
+
+#: ../../src/topics/best-practices.md:73 1ac4c3d8c3e44bd1af3fc5df70051926
+msgid ""
+"Custom types should be defined with one external YAML per type definition"
+" for re-use."
+msgstr ""
+
+#: ../../src/topics/best-practices.md:76 c858f64e66f048a5b0032ef3e4d83694
+msgid "Include a top-level short `label` summarising the tool/workflow."
+msgstr ""
+
+#: ../../src/topics/best-practices.md:78 fae385da16aa443da996fa23ac03d6ae
+msgid ""
+"If useful, include a top-level `doc` as well. This should provide a "
+"longer, more detailed description than was provided in the top-level "
+"`label` (see above)."
+msgstr ""
+
+#: ../../src/topics/best-practices.md:82 92430be71ecc40e18bbbb80d5576c613
+msgid ""
+"Use `type: enum` instead of `type: string` for elements with a fixed list"
+" of valid values."
+msgstr ""
+
+#: ../../src/topics/best-practices.md:85 387d83db81024f65aa9a890c2d07874a
+msgid ""
+"Evaluate all use of JavaScript for possible elimination or replacement. "
+"One common example: manipulating `File` names and paths? Consider whether"
+" one of the [built in `File` properties][file-prop] like `basename`, "
+"`nameroot`, `nameext`, etc., could be used instead."
+msgstr ""
+
+#: ../../src/topics/best-practices.md:90 d8e2280a75a74916a1630afaa2fe2ae3
+msgid ""
+"Give the tool description to a colleague (preferably at a different "
+"institution) to test and provide feedback."
+msgstr ""
+
+#: ../../src/topics/best-practices.md:93 f1c1340f9745458980e0fbd641738687
+msgid ""
+"Complex workflows with individual components which can be abstracted "
+"should utilise the [`SubworkflowFeatureRequirement`][subworkflow] to make"
+" their workflow modular and allow sections of them to be easily reused."
+msgstr ""
+
+#: ../../src/topics/best-practices.md:97 5424e5472c3d466fa2a3d2022c6cb475
+msgid ""
+"Software containers should be made to be conformant to the "
+"[\"Recommendations for the packaging and containerizing of bioinformatics"
+" software\"][containers] (also useful to other disciplines)."
+msgstr ""
+
+#: ../../src/topics/command-line-tool.md:1 3f4e98f6bfa141feba8c4b120e3d03e8
+msgid "Command Line Tool"
+msgstr ""
+
+#: ../../src/topics/command-line-tool.md:3 12f57b2ba76b492abe1816e06bfb1417
+msgid ""
+"A command-line tool is a type of Process object that can be run by itself"
+" or as a Workflow step. It is a wrapper for a command like `ls`, `echo`, "
+"`tar`, etc. The command-line tool is defined in the `baseCommand` "
+"attribute of the command-line tool CWL document."
+msgstr ""
+
+#: ../../src/topics/command-line-tool.md:8 e1f657a46ce94a0d83671540e2cc2dab
+msgid ""
+"A CWL command-line tool must also have `inputs` and `outputs`. The "
+"following example contains a minimal example of a CWL command-line tool "
+"for the `echo` Linux command, using inputs and outputs."
+msgstr ""
+
+#: ../../src/topics/command-line-tool.md:19 abb83f0097654a43bd78639d3dbb2bc8
+msgid "CWL command-line tool."
+msgstr ""
+
+#: ../../src/topics/command-line-tool.md:50 3b1a9ae3412f4d6e96a39b9a16934232
+msgid "`echo.cwl`"
+msgstr ""
+
+#: ../../src/topics/command-line-tool.md:57 a5eacdbc9aa142c890b177869da4143d
+msgid ""
+"The example above uses a simplified form to define inputs and outputs. "
+"You will learn more about in the [Inputs](../topics/inputs.md) and in the"
+" [Outputs](../topics/outputs.md) sections."
+msgstr ""
+
+#: ../../src/topics/command-line-tool.md:68 1849b8f3ae1c4a84ae59a78ffd6b371e
+msgid "Network Access"
+msgstr ""
+
+#: ../../src/topics/command-line-tool.md:69 e3bdaceae8784ab0807b2cf356a98580
+msgid ""
+"This indicates whether a process requires outgoing IPv4/IPv6 network "
+"access. If a command-line tool is written manually in CWL v1.1+, there is"
+" a need to  specify when network access is required."
+msgstr ""
+
+#: ../../src/topics/command-line-tool.md:83 ed521ac365db4a6ba5a1051fbaa2932e
+msgid ""
+"CWL v1.0 command-line tools that are upgraded to v1.1  or v1.2 get "
+"Network Access automatically."
+msgstr ""
+
+#: ../../src/topics/creating-files-at-runtime.md:1
+#: a2a0f0eb0f404eb3aaf19cfd3cdb559b
+msgid "Creating Files at Runtime"
+msgstr ""
+
+#: ../../src/topics/creating-files-at-runtime.md:3
+#: 0cf51b6da6884065ae42032abc20eb0d
+msgid ""
+"Sometimes you need to create a file on the fly from input parameters, "
+"such as tools that expect to read their input configuration from a file "
+"rather than the command line parameters, or need a small wrapper shell "
+"script."
+msgstr ""
+
+#: ../../src/topics/creating-files-at-runtime.md:7
+#: 2df3a3a9094d4b79b1d5dd99195f3bff
+msgid "To generate such files, we can use the `InitialWorkDirRequirement`."
+msgstr ""
+
+#: ../../src/topics/creating-files-at-runtime.md:9
+#: d3f74c3b094a427fbec831afab657d50
+msgid "`createfile.cwl`"
+msgstr ""
+
+#: ../../src/topics/creating-files-at-runtime.md:15
+#: cfffc518ba6e4ed1a80762ed6f7d25df
+msgid ""
+"Any [expressions](../topics/expressions.md) like `$(inputs.message)` are "
+"expanded by the CWL engine before creating the file. Here, insert the "
+"value at the input `message`."
+msgstr ""
+
+#: ../../src/topics/creating-files-at-runtime.md:20
+#: 9454a330b9324744b89448f2694b1b03
+msgid ""
+"The _CWL expressions_ are independent of any _shell variables_ used later"
+" during command line tool invocation. That means that any genuine need "
+"for the character `$` must be **escaped** with `\\`. For instance, "
+"`\\${PREFIX}` above is expanded to `${PREFIX}` in the generated file to "
+"be evaluated by the shell script instead of the CWL engine."
+msgstr ""
+
+#: ../../src/topics/creating-files-at-runtime.md:27
+#: 7f8d99a30b644457a62ac1523d0c72aa
+msgid ""
+"To test the above CWL tool, use this job to provide the input value "
+"`message`:"
+msgstr ""
+
+#: ../../src/topics/creating-files-at-runtime.md:29
+#: ../../src/topics/environment-variables.md:13 ../../src/topics/outputs.md:77
+#: 2699fbc4376148af91b7a5a6cdac467c 2d2ef4769b2347e79db827655f1bcdeb
+#: ca03defa3ad14cf698171cb09e3055c1
+msgid "`echo-job.yml`"
+msgstr ""
+
+#: ../../src/topics/creating-files-at-runtime.md:35
+#: 10d1373bb14a4a3cacd3b92a2f83382d
+msgid ""
+"Before we run this, let us look at each step in a little more detail. The"
+" base command `baseCommand: [\"sh\", \"example.sh\"]` will execute the "
+"command `sh example.sh`. This will run the file we create in the shell."
+msgstr ""
+
+#: ../../src/topics/creating-files-at-runtime.md:40
+#: 70e257091bdb456e8957f90a8fa90e8c
+msgid ""
+"`InitialWorkDirRequirement` requires a `listing`. As the `listing` is a "
+"YAML array, we need a `-` on the first line of each element of the array,"
+" in this case we have just one element. `entryname:` can have any value, "
+"but it must match what was specified in the `baseCommand`. The final part"
+" is `entry:`, this is followed by `|-` which is YAML quoting syntax, and "
+"means that you are using a multiline string (without it, we would need to"
+" write the whole script on one line)."
+msgstr ""
+
+#: ../../src/topics/creating-files-at-runtime.md:51
+#: 1741804e33aa43ce88b4320c11ae5973
+msgid ""
+"See the [YAML Guide](../topics/yaml-guide.md#maps) for more about the "
+"formatting."
+msgstr ""
+
+#: ../../src/topics/creating-files-at-runtime.md:54
+#: ../../src/topics/environment-variables.md:18
+#: ../../src/topics/file-formats.md:52
+#: ../../src/topics/staging-input-files.md:20 ../../src/topics/workflows.md:198
+#: 293fb1d428b849aebccad598a932992d 7bbd2d738fc54649aeb10f8d2bc38b6f
+#: b372f33c65bb4707b2a462a960bb1373 d6255506eebe44be94c5ce703c44a513
+#: f924d65fed0c4cb5b0a019b084a8b535
+msgid ""
+"Now invoke `cwltool` with the tool description and the input object on "
+"the command line:"
+msgstr ""
+
+#: ../../src/topics/custom-types.md:1 cb34fd4c8cb04053ada491a227651048
+msgid "Custom Types"
+msgstr ""
+
+#: ../../src/topics/custom-types.md:3 67573252cc064b27ab13eebc468ac58a
+msgid ""
+"Sometimes you may want to write your own custom types for use and reuse "
+"in CWL descriptions. Use of such custom types can reduce redundancy "
+"between multiple descriptions that all use the same type, and also allow "
+"for additional customisation/configuration of a tool/analysis without the"
+" need to fiddle with the CWL description directly."
+msgstr ""
+
+#: ../../src/topics/custom-types.md:9 73e68b3af9cf41338d843c0c40e50cdc
+msgid ""
+"The example below is a CWL description of the [biom convert format][biom]"
+" tool for converting a standard biom table file to hdf5 format."
+msgstr ""
+
+#: ../../src/topics/custom-types.md:12 ef5f35acb97f4ddfad7b688712f53484
+msgid "`custom-types.cwl`"
+msgstr ""
+
+#: ../../src/topics/custom-types.md:18 7015dfa99a6f4cfb87ebf0ed61e8043c
+msgid "`custom-types.yml`"
+msgstr ""
+
+#: ../../src/topics/custom-types.md:24 a999b1acda2641598086648c64aa3831
+msgid ""
+"___Note:___ To follow the example below, you need to [download the "
+"example input file](https://github.com/common-workflow-"
+"language/user_guide/blob/main/src/_includes/cwl/custom-"
+"types/rich_sparse_otu_table.biom), *rich_sparse_otu_table.biom* e.g. via "
+"`wget`:"
+msgstr ""
+
+#: ../../src/topics/custom-types.md:30 f8c12a58cb0b46a488823c6ae95f25ea
+msgid ""
+"On line 29, in `inputs:table_type`, a list of allowable table options to "
+"be used in the table conversion are imported as a custom object:"
+msgstr ""
+
+#: ../../src/topics/custom-types.md:46 f25a63e0926d4932bbe64b2e4bdabf9e
+msgid ""
+"The reference to a custom type is a combination of the name of the file "
+"in which the object is defined (`biom-convert-table.yaml`) and the name "
+"of the object within that file (`table_type`) that defines the custom "
+"type. In this case the `symbols` array from the imported `biom-convert-"
+"table.yaml` file define the allowable table options. For example, in "
+"`custom-types.yml`, we pass `OTU table` as an `input` that tells the tool"
+" to create an OTU table in hdf5 format."
+msgstr ""
+
+#: ../../src/topics/custom-types.md:53 b0a4df0fd3ca42338cff4689235dcf4e
+msgid "The contents of the YAML file describing the custom type are given below:"
+msgstr ""
+
+#: ../../src/topics/custom-types.md:55 fecfbb44456640d8ba05e519bf2ff564
+msgid "`biom-convert-table.yaml`"
+msgstr ""
+
+#: ../../src/topics/custom-types.md:61 d718630a296545f3a989c8c71e9ddc77
+msgid ""
+"In order for the custom type to be used in the CWL description, it must "
+"be imported. Imports are described in "
+"`requirements:SchemaDefRequirement`, as below in the example `custom-"
+"types.cwl` description:"
+msgstr ""
+
+#: ../../src/topics/custom-types.md:76 9a97acd430064710bcdf76edbd9f711c
+msgid ""
+"Note also that the author of this CWL description has also included "
+"`ResourceRequirement`s, specifying the minimum amount of RAM and number "
+"of cores required for the tool to run successfully, as well as details of"
+" the version of the software that the description was written for and "
+"other useful metadata. These features are discussed further in other "
+"chapters of this user guide."
+msgstr ""
+
+#: ../../src/topics/environment-variables.md:1 59014808cbef4c02aaef03129d8a29b0
+msgid "Environment Variables"
+msgstr ""
+
+#: ../../src/topics/environment-variables.md:3 3c821c9c46d841ec89b8a5b1018f3af8
+msgid ""
+"Tools run in a restricted environment and do not inherit most environment"
+" variables from the parent process.  You can set environment variables "
+"for the tool using `EnvVarRequirement`."
+msgstr ""
+
+#: ../../src/topics/environment-variables.md:7 bfdebb32440a4034beb42135e38884e8
+msgid "`env.cwl`"
+msgstr ""
+
+#: ../../src/topics/expression-tool.md:1 777d4a52f7554eff84db2df6d4d0f729
+msgid "Expression Tool"
+msgstr ""
+
+#: ../../src/topics/expression-tool.md:3 48deb71f361a43e48a56ed483075bca8
+msgid ""
+"An expression tool is a type of Process that can be run by itself or as a"
+" Workflow step. It executes a pure JavaScript expression. It is meant to "
+"be used as a way to isolate complex JavaScript expressions that need to "
+"operate on input data and produce some result as output."
+msgstr ""
+
+#: ../../src/topics/expression-tool.md:8 716b56506ca7470299899c5d820a9ea2
+msgid ""
+"Similar to the command-line tool it requires `inputs` and `outputs`. But "
+"instead of `baseCommand`, it requires an `expression` attribute."
+msgstr ""
+
+#: ../../src/topics/expression-tool.md:17 b63e6f5a2e89431c8fc7d04f47fd69fe
+msgid "CWL expression tool."
+msgstr ""
+
+#: ../../src/topics/expression-tool.md:48 39727e9058f24b62b8746a46d3f812c2
+msgid "`uppercase.cwl`"
+msgstr ""
+
+#: ../../src/topics/expression-tool.md:67 e3ecac0a8e604f2b98a2a12b0579990a
+msgid ""
+"We had to use an `InlineJavascriptRequirement` as our expression contains"
+" a JavaScript call in `.toUpperCase()`. This means to tools using the "
+"expression tool that JavaScript is a requirement."
+msgstr ""
+
+#: ../../src/topics/expressions.md:1 c8d648b765ec499a8e9c464590838492
+msgid "Expressions"
+msgstr ""
+
+#: ../../src/topics/expressions.md:3 007a345b4bad49cf996c4301b8386473
+msgid ""
+"If you need to manipulate input parameters, include the requirement "
+"`InlineJavascriptRequirement` and then anywhere a parameter reference is "
+"legal you can provide a fragment of Javascript that will be evaluated by "
+"the CWL runner."
+msgstr ""
+
+#: ../../src/topics/expressions.md:9 2edbd398eadb458b8eacd5fa5496f0a2
+msgid ""
+"JavaScript expressions should only be used when absolutely necessary. "
+"When manipulating file names, extensions, paths etc, consider whether one"
+" of the [built in `File` properties][file-prop] like `basename`, "
+"`nameroot`, `nameext`, etc, could be used instead. See the [list of best "
+"practices](best-practices.md)."
+msgstr ""
+
+#: ../../src/topics/expressions.md:16 7fdbfd1c937b4991bf4a2fa26ea310e4
+msgid "`expression.cwl`"
+msgstr ""
+
+#: ../../src/topics/expressions.md:22 efb5fd14988c4e2a8f834ee5369d4102
+msgid ""
+"As this tool does not require any `inputs` we can run it with an (almost)"
+" empty job file:"
+msgstr ""
+
+#: ../../src/topics/expressions.md:25 e833649b951841c49397796f996d29f3
+msgid "`empty.yml`"
+msgstr ""
+
+#: ../../src/topics/expressions.md:31 276f688ba7cc471a842f085ca852b1d9
+msgid ""
+"`empty.yml` contains a description of an empty JSON object. JSON objects "
+"descriptions are contained inside curly brackets `{}`, so an empty object"
+" is represented simply by a set of empty brackets."
+msgstr ""
+
+#: ../../src/topics/expressions.md:35 ebf399ea4d5f47b9be03e24f04c69f2d
+msgid "We can then run `expression.cwl`:"
+msgstr ""
+
+#: ../../src/topics/expressions.md:37 65e0cdd505b944caa40f65e612cdddfc
+msgid "Running `expression.cwl`"
+msgstr ""
+
+#: ../../src/topics/expressions.md:47 8b70a1ad70514039b97164fa630c12e4
+msgid ""
+"Note that requirements can be provided with the map syntax, as in the "
+"example above:"
+msgstr ""
+
+#: ../../src/topics/expressions.md:54 2f28ab412d2843ffa5f14acdc01fc732
+msgid ""
+"Or as an array, with each entry (in this case, only `class: "
+"InlineJavascriptRequirement`) marked by a `-`. The same syntax is used to"
+" describe the additional command line arguments."
+msgstr ""
+
+#: ../../src/topics/expressions.md:62 d957f55a6377422c9834f85d45e35009
+msgid "Where are JavaScript expressions allowed?"
+msgstr ""
+
+#: ../../src/topics/expressions.md:64 cbec9277b5004e50af2728cbda0df740
+msgid ""
+"Just like [parameter references](parameter-references.md), you can use "
+"JavaScript Expressions only in certain fields.  These are:"
+msgstr ""
+
+#: ../../src/topics/expressions.md:66 e259f55f8000479bbd8009e25cf0ca6c
+msgid ""
+"From "
+"[`CommandLineTool`](https://www.commonwl.org/v1.0/CommandLineTool.html#CommandLineTool)"
+msgstr ""
+
+#: ../../src/topics/expressions.md:67
+#: ../../src/topics/parameter-references.md:64 0222780b98ac48e89b1b4f57c9df8590
+#: 1acb064f7a4a482aa0174bdc847c6382
+msgid "`arguments`"
+msgstr ""
+
+#: ../../src/topics/expressions.md:68 ../../src/topics/expressions.md:76
+#: ../../src/topics/expressions.md:89
+#: ../../src/topics/parameter-references.md:65
+#: ../../src/topics/parameter-references.md:73
+#: ../../src/topics/parameter-references.md:86 17b10d1e91b24dc582df98fcd2ac850e
+#: 224732683a9c41f3ba1b778851e745a8 d44e3cfa661840eb851782e24caf1b68
+#: e4e68011dc5f42e4918c747afa7d764b ef2b8433778a40408f179c3e6f0cf99e
+#: ffd3ca1f97cf4d3a892ef4f4b04771e4
+msgid "`valueFrom`"
+msgstr ""
+
+#: ../../src/topics/expressions.md:69
+#: ../../src/topics/parameter-references.md:66 0bddedfe40e841f7878e09792531e6bf
+#: 17ac6d2c703b466f9720b7489209a2ff
+msgid "`stdin`"
+msgstr ""
+
+#: ../../src/topics/expressions.md:70
+#: ../../src/topics/parameter-references.md:67 58a6510ef69a4c51a4ea348cd98ef0d2
+#: a11d0de5ac6a4a6d9afe0e34823e3b45
+msgid "`stdout`"
+msgstr ""
+
+#: ../../src/topics/expressions.md:71
+#: ../../src/topics/parameter-references.md:68 2437656e20354d63bede1b98d5348e2c
+#: 37392218309d4baebe62fc38bf50efe9
+msgid "`stderr`"
+msgstr ""
+
+#: ../../src/topics/expressions.md:72 8210b36347a749889450529ecdf4ff0e
+msgid ""
+"From "
+"[CommandInputParameter](https://www.commonwl.org/v1.0/CommandLineTool.html#CommandInputParameter)"
+msgstr ""
+
+#: ../../src/topics/expressions.md:73 ../../src/topics/expressions.md:78
+#: ../../src/topics/expressions.md:85 ../../src/topics/expressions.md:93
+#: ../../src/topics/parameter-references.md:70
+#: ../../src/topics/parameter-references.md:75
+#: ../../src/topics/parameter-references.md:82
+#: ../../src/topics/parameter-references.md:90 1bc510d525f0414e88692e356e67fbbc
+#: 801729c7c71b4109824b035437e69bf9 b1446bab2732412e91f721a08067b0bd
+#: bd61499b71e64164878dea08d6d7141e d0a92a3792b549e9b5ddce4667d168d2
+#: d2e246ae56a24e4abdd6b7d9812a86e2 e89dbeb22f41430ca39c923d9fdf68cb
+#: ed875a006df64f9e8a55fa5e9fa87404
+msgid "`format`"
+msgstr ""
+
+#: ../../src/topics/expressions.md:74 ../../src/topics/expressions.md:79
+#: ../../src/topics/expressions.md:86 ../../src/topics/expressions.md:94
+#: ../../src/topics/parameter-references.md:71
+#: ../../src/topics/parameter-references.md:76
+#: ../../src/topics/parameter-references.md:83
+#: ../../src/topics/parameter-references.md:91 28b6b5ffa7524374aaa9525ebfafb762
+#: 47def3b078e2402182039be0227090ae 8a1748579de14f0888d5ee9023e37c2d
+#: bcb7cd10cb5947bb9d85c040f57f954f cd7a0190511d4613b09600a3b1e9d55f
+#: d11f6a19ddf34cf19ec856bacf998e29 da5188d3bedc4997a35bdf417f2f643c
+#: f760465a49d64d4c8468ad9c4fea62b1
+msgid "`secondaryFiles`"
+msgstr ""
+
+#: ../../src/topics/expressions.md:75 23088850ad02459696f6bbd385109aac
+msgid ""
+"From "
+"[`inputBinding`](https://www.commonwl.org/v1.0/CommandLineTool.html#CommandLineBinding)"
+msgstr ""
+
+#: ../../src/topics/expressions.md:77 f02257a822ad46ac93c5981531cc85d5
+msgid ""
+"From "
+"[CommandOutputParamater](https://www.commonwl.org/v1.0/CommandLineTool.html#CommandOutputParameter)"
+msgstr ""
+
+#: ../../src/topics/expressions.md:80 989a1c4aaa1143be9f53b90cd8b6d500
+msgid ""
+"From "
+"[CommandOutputBinding](https://www.commonwl.org/v1.0/CommandLineTool.html#CommandOutputBinding)"
+msgstr ""
+
+#: ../../src/topics/expressions.md:81
+#: ../../src/topics/parameter-references.md:78 582b03ac742745a89f4dfc86b7404db2
+#: d193ce0123db4535a4f0b11405ad0322
+msgid "`glob`"
+msgstr ""
+
+#: ../../src/topics/expressions.md:82
+#: ../../src/topics/parameter-references.md:79 44b3f123c9b04a308c1161b742a7b34b
+#: d555a3d991e344a5a8e1289168d7c6d1
+msgid "`outputEval`"
+msgstr ""
+
+#: ../../src/topics/expressions.md:83
+#: ../../src/topics/parameter-references.md:80 0e306cc923974d1db83fdfb45105a11c
+#: e9fa9430535c424fa3e8be5d460d2ba4
+msgid "From `Workflow`"
+msgstr ""
+
+#: ../../src/topics/expressions.md:84 d289541e460147aa933f7878996f8649
+msgid ""
+"From "
+"[InputParameter](https://www.commonwl.org/v1.0/Workflow.html#InputParameter)"
+" and "
+"[WorkflowOutputParameter](https://www.commonwl.org/v1.0/Workflow.html#WorkflowOutputParameter)"
+msgstr ""
+
+#: ../../src/topics/expressions.md:87
+#: ../../src/topics/parameter-references.md:84 446f1190af7a40a0913ff04ce7aa938c
+#: b0290d1a477b48119e17cf1fed9d6dff
+msgid "From `steps`"
+msgstr ""
+
+#: ../../src/topics/expressions.md:88 81b4d1f23a3642bfa9bb395b94260cd1
+msgid ""
+"From "
+"[WorkflowStepInput](https://www.commonwl.org/v1.0/Workflow.html#WorkflowStepInput)"
+msgstr ""
+
+#: ../../src/topics/expressions.md:90
+#: ../../src/topics/parameter-references.md:87 557694f82e314baa9ccafba14d6ff2c9
+#: e1cde4aa32c041238ed2596173c6d824
+msgid ""
+"From "
+"[ExpressionTool](https://www.commonwl.org/v1.0/Workflow.html#ExpressionTool)"
+msgstr ""
+
+#: ../../src/topics/expressions.md:91
+#: ../../src/topics/parameter-references.md:88 3c939769ede94602a67fc50c435741cf
+#: c2a92d3eca7f4ee39cec649170eeea53
+msgid "`expression`"
+msgstr ""
+
+#: ../../src/topics/expressions.md:92 f495da32f05a4a5ba9539be0a54c1a59
+msgid ""
+"From "
+"[InputParameter](https://www.commonwl.org/v1.0/Workflow.html#InputParameter)"
+" and "
+"[ExpressionToolOutputParameter](https://www.commonwl.org/v1.0/Workflow.html#ExpressionToolOutputParameter)"
+msgstr ""
+
+#: ../../src/topics/expressions.md:95 bdb4c68a175047ddbe141ca24960127f
+msgid ""
+"From "
+"[`ResourceRequirement`](https://www.commonwl.org/v1.0/CommandLineTool.html#ResourceRequirement)"
+msgstr ""
+
+#: ../../src/topics/expressions.md:96
+#: ../../src/topics/parameter-references.md:93 4b73495cf18a4d908525292b6f23c419
+#: d0eec6969d174b258e0f010800884cc6
+msgid "`coresMin`"
+msgstr ""
+
+#: ../../src/topics/expressions.md:97
+#: ../../src/topics/parameter-references.md:94 2b25152f6df5494a8632f3ce631c20d8
+#: 718ceee9973240ec9c100977bbcc8921
+msgid "`coresMax`"
+msgstr ""
+
+#: ../../src/topics/expressions.md:98
+#: ../../src/topics/parameter-references.md:95 846cd427ae25410eae7c920b237edcb0
+#: c07ab08eb75d4528949c56a3d7c12b28
+msgid "`ramMin`"
+msgstr ""
+
+#: ../../src/topics/expressions.md:99
+#: ../../src/topics/parameter-references.md:96 594bc5b7e5be4be9b5e1f6b2502e3bd3
+#: b885e108dced4981a445e5fa0a044394
+msgid "`ramMax`"
+msgstr ""
+
+#: ../../src/topics/expressions.md:100
+#: ../../src/topics/parameter-references.md:97 700c57ccd5e347be86702c83a8af24b3
+#: e9f5306ae6ea49bbb6801dcce9be2d67
+msgid "`tmpdirMin`"
+msgstr ""
+
+#: ../../src/topics/expressions.md:101
+#: ../../src/topics/parameter-references.md:98 509a5e2ec52d413eb57754d359f133e4
+#: 58bf8016f5f04c26b645025f405e2288
+msgid "`tmpdirMax`"
+msgstr ""
+
+#: ../../src/topics/expressions.md:102
+#: ../../src/topics/parameter-references.md:99 5a60ab5ee19446f8a6f49ab8583101a9
+#: 7c817029d55b4700ae8e84be4d0f0ca0
+msgid "`outdirMin`"
+msgstr ""
+
+#: ../../src/topics/expressions.md:103
+#: ../../src/topics/parameter-references.md:100
+#: 1f39f016524a459895ed03c72d74932b e3b76f42c924489f9a0bcf5a7b636d23
+msgid "`outdirMax`"
+msgstr ""
+
+#: ../../src/topics/expressions.md:104 97b61352363f47cb890e8937c5613fa3
+msgid ""
+"From "
+"[`InitialWorkDirRequirement`](https://www.commonwl.org/v1.0/CommandLineTool.html#InitialWorkDirRequirement)"
+msgstr ""
+
+#: ../../src/topics/expressions.md:105
+#: ../../src/topics/parameter-references.md:102
+#: 9359ef94c41249ea8e76fe629926054e a258554d462f4f5f83ece28d5b2fc584
+msgid "`listing`"
+msgstr ""
+
+#: ../../src/topics/expressions.md:106 8d0b142bb7ed4e61b8fb03de197240ce
+msgid "in [Dirent](https://www.commonwl.org/v1.0/CommandLineTool.html#Dirent)"
+msgstr ""
+
+#: ../../src/topics/expressions.md:107
+#: ../../src/topics/parameter-references.md:104
+#: 9d4889c8cec24351a7a9e3c547e331b6 effc0208cf4f4551958db6e526c0528b
+msgid "`entry`"
+msgstr ""
+
+#: ../../src/topics/expressions.md:108
+#: ../../src/topics/parameter-references.md:105
+#: af4f7f232a9d42388c0ba1cfc7c2cdf7 be6c1e85c7b6495d8086c262daad20e7
+msgid "`entryname`"
+msgstr ""
+
+#: ../../src/topics/expressions.md:109
+#: ../../src/topics/parameter-references.md:106
+#: 2183ac54ae10428388649daa57b6a7f4 6abeba392b0444b19f92a19f178a4682
+msgid "From `EnvVarRequirement`"
+msgstr ""
+
+#: ../../src/topics/expressions.md:110 0bc424ef2ca346099f29b937379908a0
+msgid ""
+"From "
+"[EnvironmentDef](https://www.commonwl.org/v1.0/CommandLineTool.html#EnvironmentDef)"
+msgstr ""
+
+#: ../../src/topics/expressions.md:111
+#: ../../src/topics/parameter-references.md:108
+#: 107b54b832df4d408d1315bdba05b4dd 949c376120d8441796ec9c89364f8851
+msgid "`envValue`"
+msgstr ""
+
+#: ../../src/topics/expressions.md:116 10d36a1adfd04144b401c993b12b4094
+msgid "Using External Libraries and Inline JavaScript Code with `expressionLib`"
+msgstr ""
+
+#: ../../src/topics/expressions.md:118 29b73e1dd72744f68377f0a38c10f062
+msgid ""
+"The requirement `InlineJavascriptRequirement` supports an `expressionLib`"
+" attribute that allows users to load external JavaScript files, or to "
+"provide inline JavaScript code."
+msgstr ""
+
+#: ../../src/topics/expressions.md:122 38a2afaf4a6c4d04909af22c93f2808d
+msgid ""
+"Entries added to the `expressionLib` attribute are parsed with the "
+"JavaScript engine of a CWL runner. This can be used to include external "
+"files or to create JavaScript functions that can be called in other parts"
+" of the CWL document."
+msgstr ""
+
+#: ../../src/topics/expressions.md:128 cd74f34b21af4de9be96fd897efc469b
+msgid ""
+"The CWL standards (versions 1.0 through 1.2) "
+"[states](https://www.commonwl.org/v1.0/CommandLineTool.html#Expressions)"
+"  that the only version of JavaScript valid in CWL expressions is "
+"[ECMAScript 5.1](https://262.ecma-international.org/5.1/). This means "
+"that any code that you include or write in your CWL Document must be "
+"compliant with ECMAScript 5.1."
+msgstr ""
+
+#: ../../src/topics/expressions.md:135 f12e371f3f1a4b0cb2cff9800352d48c
+msgid ""
+"For example, we can use `InlineJavascriptRequirement` and write a "
+"JavaScript function inline in `expressionLib`. That function can then be "
+"used in other parts of the CWL document:"
+msgstr ""
+
+#: ../../src/topics/expressions.md:139 49d0fda2fc144e0b8b7c92afc1d8945e
+msgid "`hello-world-expressionlib-inline.cwl`"
+msgstr ""
+
+#: ../../src/topics/expressions.md:146 8f0e8f050e334ac08334e9215e1dcf61
+msgid ""
+"Running this CWL workflow will invoke the JavaScript function and result "
+"in the `echo` command printing the input message with capital initial "
+"letters:"
+msgstr ""
+
+#: ../../src/topics/expressions.md:149 26c74b11bb1849cea0763bb74ec43e42
+msgid "Running `hello-world-expressionlib-inline.cwl`."
+msgstr ""
+
+#: ../../src/topics/expressions.md:155 7a6be0005a6441feb67f036d005d7885
+msgid ""
+"Let's move the `capitalizeWords` function to an external file, `custom-"
+"functions.js`, and import it in our CWL document:"
+msgstr ""
+
+#: ../../src/topics/expressions.md:158 ed590f9e6f4f425da886b110295c45db
+msgid "`custom-functions.js`"
+msgstr ""
+
+#: ../../src/topics/expressions.md:164 093235307d6f47d4858e559b780ef5e5
+msgid "`hello-world-expressionlib-external.cwl`"
+msgstr ""
+
+#: ../../src/topics/expressions.md:171 06635145b441418aaae84dc804f3d6ac
+msgid ""
+"The `custom-functions.js` file is included in the CWL document with the "
+"`$include: custom-functions.js` statement. That makes the functions and "
+"variables available to be used in other parts of the CWL document."
+msgstr ""
+
+#: ../../src/topics/expressions.md:175 973a9b257b1a4f0dbd4444d4f11dadd7
+msgid "Running `hello-world-expressionlib-external.cwl`."
+msgstr ""
+
+#: ../../src/topics/expressions.md:181 04eaf1f7c630450db318dcd8b7626e15
+msgid ""
+"Finally, note that you can have both inline and external JavaScript code "
+"in your CWL document. In this final example we have added another entry "
+"to the `expressionLib` attribute with the new function "
+"`createHelloWorldMessage`, that calls the `capitalizeWords` function from"
+" the external file `custom-functions.js`."
+msgstr ""
+
+#: ../../src/topics/expressions.md:186 c4098489fbb049789f022cd3e5c3d49b
+msgid "`hello-world-expressionlib.cwl`"
+msgstr ""
+
+#: ../../src/topics/expressions.md:193 5979e4ae5c424276bdbc47f69b379d0f
+msgid "Running `hello-world-expressionlib.cwl`."
+msgstr ""
+
+#: ../../src/topics/expressions.md:200 fd4579a3c9844492b314b5c3c1775fc7
+msgid ""
+"The `$include` statement can be used to include a file from the local "
+"disk or from a remote location. It works with both relative and absolute "
+"paths. Read the [text about "
+"`$include`](https://www.commonwl.org/v1.0/SchemaSalad.html#Include) from "
+"the CWL specification to learn more about it."
+msgstr ""
+
+#: ../../src/topics/file-formats.md:1 3f038e7371f84ed9b4547358dfb55a11
+msgid "File Formats"
+msgstr ""
+
+#: ../../src/topics/file-formats.md:3 e024bcb70e04412e90e1838426d1b69a
+msgid ""
+"Tools and workflows can take `File` types as input and produce them as "
+"output. We also recommend indicating the format for `File` types. This "
+"helps document for others how to use your tool while allowing you to do "
+"some simple type-checking when creating parameter files."
+msgstr ""
+
+#: ../../src/topics/file-formats.md:8 a3db21c0b3114802a8a5b610e252ef13
+msgid ""
+"For file formats, we recommend referencing existing ontologies (like EDAM"
+" in our example), reference a local ontology for your institution, or do "
+"not add a file format initially for quick development before sharing your"
+" tool with others. You can browse existing [IANA file format "
+"listings][IANA] and [EDAM file format listings][EDAM] on their websites."
+msgstr ""
+
+#: ../../src/topics/file-formats.md:14 0f5bc8520d6a4dafa37c65343da9702a
+msgid ""
+"In the next tutorial, we explain  the `$namespaces` and `$schemas` "
+"section of the document in greater detail, so don't worry about these for"
+" now."
+msgstr ""
+
+#: ../../src/topics/file-formats.md:17 5cb830da47464a8b9c3950983fa4d56f
+msgid ""
+"Note that for added value `cwltool` can do some basic reasoning based on "
+"file formats and warn you if there seem to be some obvious mismatches."
+msgstr ""
+
+#: ../../src/topics/file-formats.md:20 0535d5de416b4ea3b2f5996583deecc1
+msgid "`metadata_example.cwl`"
+msgstr ""
+
+#: ../../src/topics/file-formats.md:26
+#: ../../src/topics/metadata-and-authorship.md:22
+#: f558bcf2a993482195cd418b37761809 fb47f73c38cf4ec59bd3021866a631f8
+msgid "The equivalent of this CWL description in command line format is:"
+msgstr ""
+
+#: ../../src/topics/file-formats.md:32 74b28c1b09c6429b82e462e4ec61808e
+msgid "Sample Parameter Files"
+msgstr ""
+
+#: ../../src/topics/file-formats.md:34 a2ce43b391864e8bbde16328cc19b32b
+msgid ""
+"Below is an example of a parameter file for the example above. We "
+"encourage checking in working examples of parameter files for your tool. "
+"This allows others to quickly work with your tool, starting from a "
+"\"known good\" parameterization."
+msgstr ""
+
+#: ../../src/topics/file-formats.md:39 aebee48b742c4145a600fd2daf8c75dc
+msgid "`sample.yml`"
+msgstr ""
+
+#: ../../src/topics/file-formats.md:45 56ee4dcfff6141d5bef80eb96559876d
+msgid ""
+"___Note:___ To follow the example below, you need to download the example"
+" input file, *file-formats.bam*. The file is available from "
+"<https://github.com/common-workflow-"
+"language/user_guide/raw/main/src/_includes/cwl/file-formats/file-"
+"formats.bam>  and can be downloaded e.g. via `wget`:"
+msgstr ""
+
+#: ../../src/topics/index.md:1 8d3a6d83e2e54c56995893c41590b7ff
+msgid "Topics"
+msgstr ""
+
+#: ../../src/topics/inputs.md:1 5abcdebfa1cb401bb8892553be285fd3
+msgid "Inputs"
+msgstr ""
+
+#: ../../src/topics/inputs.md:3 d3a55f71dc244026a97902de9ed819ea
+msgid "Essential Input Parameters"
+msgstr ""
+
+#: ../../src/topics/inputs.md:5 96671c56523c4ea9992fb5dfcfa6490e
+msgid ""
+"The `inputs` of a tool is a list of input parameters that control how to "
+"run the tool.  Each parameter has an `id` for the name of parameter, and "
+"`type` describing what types of values are valid for that parameter."
+msgstr ""
+
+#: ../../src/topics/inputs.md:9 bcc6246742cb46bfb185e415c4a3431a
+msgid ""
+"Available primitive types are *string*, *int*, *long*, *float*, *double*,"
+" and *null*; complex types are *array* and *record*; in addition there "
+"are special types *File*, *Directory* and *Any*."
+msgstr ""
+
+#: ../../src/topics/inputs.md:13 86dce36de687449c88fb5eb9d64eb045
+msgid ""
+"The following example demonstrates some input parameters with different "
+"types and appearing on the command line in different ways."
+msgstr ""
+
+#: ../../src/topics/inputs.md:16 cd9cea15f57b492ba4098237cd7c5bed
+msgid "First, create a file called `inp.cwl`, containing the following:"
+msgstr ""
+
+#: ../../src/topics/inputs.md:18 8bdb875b63104f699efe28ea0abb1e3d
+msgid "`inp.cwl`"
+msgstr ""
+
+#: ../../src/topics/inputs.md:24 c6a0151a68494c0cb0176781e65e252e
+msgid "Create a file called `inp-job.yml`:"
+msgstr ""
+
+#: ../../src/topics/inputs.md:26 dc5e6b5e01d64226bd5dbbf3175fe010
+msgid "`inp-job.yml`"
+msgstr ""
+
+#: ../../src/topics/inputs.md:33 36ab1d9edafc4831bb1bca5f123b04b0
+msgid ""
+"You can use `cwltool` to create a template input object. That saves you "
+"from having to type all the input parameters in a input object file:"
+msgstr ""
+
+#: ../../src/topics/inputs.md:40 7dc630ea86464b1dba3a4e5079260b3b
+msgid ""
+"You can redirect the output to a file, i.e. `cwltool --make-template "
+"inp.cwl > inp-job.yml`, and then modify the default values with your "
+"desired input values."
+msgstr ""
+
+#: ../../src/topics/inputs.md:44 ae37901a8dbe48a59e27ab4e2e6e2d30
+msgid ""
+"Notice that \"example_file\", as a `File` type, must be provided as an "
+"object with the fields `class: File` and `path`."
+msgstr ""
+
+#: ../../src/topics/inputs.md:47 651e032007ea4a119d20c820bb61f86b
+msgid ""
+"Next, create a whale.txt using [touch] by typing `touch whale.txt` on the"
+" command line."
+msgstr ""
+
+#: ../../src/topics/inputs.md:53 0b056dde9e87428996e47870b12119da
+msgid ""
+"Now invoke `cwltool` with the tool description and the input object on "
+"the command line, using the command `cwltool inp.cwl inp-job.yml`. The "
+"following boxed text describes these two commands and the expected output"
+" from the command line:"
+msgstr ""
+
+#: ../../src/topics/inputs.md:64 628124a1670b4b058bb0fb6e495a099c
+msgid ""
+"The CWL reference runner (cwltool) and other runners create temporary "
+"directories with symbolic (\"soft\") links to your input files to ensure "
+"that the tools aren't accidentally accessing files that were not "
+"explicitly specified"
+msgstr ""
+
+#: ../../src/topics/inputs.md:70 10ca6321ce3e4b08ab6a5bb380b19c11
+msgid ""
+"The field `inputBinding` is optional and indicates whether and how the "
+"input parameter should appear on the tool's command line.  If "
+"`inputBinding` is missing, the parameter does not appear on the command "
+"line.  Let's look at each example in detail."
+msgstr ""
+
+#: ../../src/topics/inputs.md:83 ec2adb3912bc46e28891229e9e0d9a1c
+msgid ""
+"Boolean types are treated as a flag.  If the input parameter "
+"\"example_flag\" is \"true\", then `prefix` will be added to the command "
+"line.  If false, no flag is added."
+msgstr ""
+
+#: ../../src/topics/inputs.md:95 a519be60726a44af9941fdce04735353
+msgid ""
+"String types appear on the command line as literal values.  The `prefix` "
+"is optional, if provided, it appears as a separate argument on the "
+"command line before the parameter .  In the example above, this is "
+"rendered as `--example-string hello`."
+msgstr ""
+
+#: ../../src/topics/inputs.md:109 cb8fc8c4c79e467eac5fab4ca685201e
+msgid ""
+"Integer (and floating point) types appear on the command line with "
+"decimal text representation.  When the option `separate` is false (the "
+"default value is true), the prefix and value are combined into a single "
+"argument.  In the example above, this is rendered as `-i42`."
+msgstr ""
+
+#: ../../src/topics/inputs.md:124 a26cc105716f47cb807174c9003153b0
+msgid ""
+"File types appear on the command line as the path to the file.  When the "
+"parameter type ends with a question mark `?` it indicates that the "
+"parameter is optional.  In the example above, this is rendered as "
+"`--file=/tmp/random/path/whale.txt`.  However, if the \"example_file\" "
+"parameter were not provided in the input, nothing would appear on the "
+"command line."
+msgstr ""
+
+#: ../../src/topics/inputs.md:131 cc159dd5fe5748caac838862f5b8c4d1
+msgid ""
+"Input files are read-only.  If you wish to update an input file, you must"
+" [first copy it to the output directory](staging-input-files.md)."
+msgstr ""
+
+#: ../../src/topics/inputs.md:134 74f7a6b8f8f74dc2a970fdd6e63d8f80
+msgid ""
+"The value of `position` is used to determine where parameter should "
+"appear on the command line.  Positions are relative to one another, not "
+"absolute.  As a result, positions do not have to be sequential, three "
+"parameters with positions 1, 3, 5 will result in the same command line as"
+" 1, 2, 3.  More than one parameter can have the same position (ties are "
+"broken using the parameter name), and the position field itself is "
+"optional.  The default position is 0."
+msgstr ""
+
+#: ../../src/topics/inputs.md:142 6812698e9ad84d3385de5e88e9dde0b3
+msgid ""
+"The `baseCommand` field will always appear in the final command line "
+"before the parameters."
+msgstr ""
+
+#: ../../src/topics/inputs.md:146 9654e65b1c0642dbb5d4f34edb211989
+msgid "Array Inputs"
+msgstr ""
+
+#: ../../src/topics/inputs.md:148 d1f02be278754267893dfce5a940997d
+msgid ""
+"It is easy to add arrays of input parameters represented to the command "
+"line. There are two ways to specify an array parameter. First is to "
+"provide `type` field with `type: array` and `items` defining the valid "
+"data types that may appear in the array. Alternatively, brackets `[]` may"
+" be added after the type name to indicate that input parameter is array "
+"of that type."
+msgstr ""
+
+#: ../../src/topics/inputs.md:154 01f30e38dfdd452dba3a996073936e16
+msgid "`array-inputs.cwl`"
+msgstr ""
+
+#: ../../src/topics/inputs.md:160 787d4bfb093c4ad287b902084706b751
+msgid "`array-inputs-job.yml`"
+msgstr ""
+
+#: ../../src/topics/inputs.md:166 ../../src/topics/outputs.md:82
+#: ../../src/topics/outputs.md:105 02adef8ee8204842b5b4a0408f3bac33
+#: 588f0f7f967f4d69af27c9729d6d3119 9db68837918a4a349f32f15f12697a1d
+msgid ""
+"Now invoke `cwltool` providing the tool description and the input object "
+"on the command line:"
+msgstr ""
+
+#: ../../src/topics/inputs.md:178 75d59e395c66416cae9b352db5081516
+msgid ""
+"The `inputBinding` can appear either on the outer array parameter "
+"definition or the inner array element definition, and these produce "
+"different behavior when constructing the command line, as shown above. In"
+" addition, the `itemSeparator` field, if provided, specifies that array "
+"values should be concatenated into a single argument separated by the "
+"item separator string."
+msgstr ""
+
+#: ../../src/topics/inputs.md:185 874c6f19abbf45d7ab7d30a378c4048d
+msgid ""
+"Note that the arrays of inputs are specified inside square brackets `[]` "
+"in `array-inputs-job.yml`. Arrays can also be expressed over multiple "
+"lines, where array values that are not defined with an associated key are"
+" marked by a leading `-`. This will be demonstrated in the next lesson "
+"and is discussed in more detail in the [YAML Guide](yaml-"
+"guide.md#arrays). You can specify arrays of arrays, arrays of records, "
+"and other complex types."
+msgstr ""
+
+#: ../../src/topics/inputs.md:191 5d7d7a28cc5d4862803032aec78174d9
+msgid "Inclusive and Exclusive Inputs"
+msgstr ""
+
+#: ../../src/topics/inputs.md:193 dea0d4b681f94e73b13965dcfe75cf7d
+msgid ""
+"Sometimes an underlying tool has several arguments that must be provided "
+"together (they are dependent) or several arguments that cannot be "
+"provided together (they are exclusive).  You can use records and type "
+"unions to group parameters together to describe these two conditions."
+msgstr ""
+
+#: ../../src/topics/inputs.md:198 ddf598abf4f34aca9fffa045860fbf96
+msgid "`record.cwl`"
+msgstr ""
+
+#: ../../src/topics/inputs.md:204 d52a8089920e45bd89d582533b50e3a1
+msgid "`record-job1.yml`"
+msgstr ""
+
+#: ../../src/topics/inputs.md:215 750474486a84482292eeba45f118287f
+msgid ""
+"In the first example, you can't provide `itemA` without also providing "
+"`itemB`."
+msgstr ""
+
+#: ../../src/topics/inputs.md:217 9a5cf1d76fc84c1f9b0d123a3a2a480b
+msgid "`record-job2.yml`"
+msgstr ""
+
+#: ../../src/topics/inputs.md:233 1eb0e39bb6d04b8cab300f44a79f3add
+msgid ""
+"In the second example, `itemC` and `itemD` are exclusive, so only the "
+"first matching item (`itemC`) is added to the command line and remaining "
+"item (`itemD`) is ignored."
+msgstr ""
+
+#: ../../src/topics/inputs.md:236 bc21ee10bff843689cc98ac6630edcea
+msgid "`record-job3.yml`"
+msgstr ""
+
+#: ../../src/topics/inputs.md:252 4b2ab812f62c4f949dd25c8527f2411c
+msgid ""
+"In the third example, only `itemD` is provided, so it appears on the "
+"command line."
+msgstr ""
+
+#: ../../src/topics/inputs.md:255 b771302d1bec4050a9417b080eef76c9
+msgid "Exclusive Input Parameters with Expressions"
+msgstr ""
+
+#: ../../src/topics/inputs.md:257 2c3b884cb1c54521900cc90782e8a58d
+msgid ""
+"If you use exclusive input parameters combined with expressions, you need"
+" to be aware that the `inputs` JavaScript object will contain one of the "
+"exclusive input values. This means that you might need to use an **or** "
+"boolean operator to check which values are present."
+msgstr ""
+
+#: ../../src/topics/inputs.md:262 a1073b6306044dffb414319ae01f68bb
+msgid ""
+"Let's use an example that contains an exclusive `file_format` input "
+"parameter that accepts `null` (i.e. no value provided), or any value from"
+" an enum."
+msgstr ""
+
+#: ../../src/topics/inputs.md:265 4a31c733092142b1af834eab1747c224
+msgid "`exclusive-parameter-expressions.cwl`"
+msgstr ""
+
+#: ../../src/topics/inputs.md:271 9a1d92334685449386dfa3b3a899ed48
+msgid ""
+"Note how the JavaScript expression uses the value of the exclusive input "
+"parameter without taking into consideration a `null` value. If you "
+"provide a valid value, such as “fasta” (one of the values of the enum), "
+"your command should execute successfully:"
+msgstr ""
+
+#: ../../src/topics/inputs.md:280 fb623af4c480411b8fde28d01c981411
+msgid ""
+"However, if you do not provide any input value, then `file_format` will "
+"be evaluated to a `null` value, which does not match the expected type "
+"for the output field (a `string`), resulting in failure when running your"
+" workflow."
+msgstr ""
+
+#: ../../src/topics/inputs.md:289 e98e165f6bba40809c90473d72f9d592
+msgid ""
+"To correct it, you must remember to use an or operator in your JavaScript"
+" expression when using exclusive parameters, or any parameter that allows"
+" `null`. For example, the expression could be changed to "
+"`$(inputs.file_format || 'auto')`, to have a default value if none was "
+"provided in the command line or job input file."
+msgstr ""
+
+#: ../../src/topics/metadata-and-authorship.md:1
+#: d33aa2353ad44fb885d3a1ee48263dc4
+msgid "Metadata and Authorship"
+msgstr ""
+
+#: ../../src/topics/metadata-and-authorship.md:3
+#: cd64d2d828834cbbb24ea5358caf5405
+msgid ""
+"Implementation extensions not required for correct execution (for "
+"example, fields related to GUI presentation) and metadata about the tool "
+"or workflow itself (for example, authorship for use in citations) may be "
+"provided as additional fields on any object. Such extensions fields (e.g."
+" `format: edam:format_2572`) can use a namespace prefix listed in the "
+"`$namespaces` section of the document (e.g. edam: "
+"http://edamontology.org/) as described in the [Schema Salad specification"
+"][schema-salad]. Once you add the namespace prefix, you can access it "
+"anywhere in the document as shown below. Otherwise, one must use full "
+"URLs: `format: http://edamontology.org/format_2572`."
+msgstr ""
+
+#: ../../src/topics/metadata-and-authorship.md:13
+#: 80af387fe3ff4e2da999903385bd602b
+msgid ""
+"For all developers, we recommend the following minimal metadata for your "
+"tool and workflows. This example includes metadata allowing others to "
+"cite your tool."
+msgstr ""
+
+#: ../../src/topics/metadata-and-authorship.md:16
+#: 0d5200bbbfdc43e6a78b4e4c3096ebd7
+msgid "`metadata_example2.cwl`"
+msgstr ""
+
+#: ../../src/topics/metadata-and-authorship.md:28
+#: d402bf528c7f4eb69aaaa275be2bf1d4
+msgid "Extended Example"
+msgstr ""
+
+#: ../../src/topics/metadata-and-authorship.md:30
+#: cb9980db4e5f4c74b01c2dec6d5e92d0
+msgid ""
+"For those that are highly motivated, it is also possible to annotate your"
+" tool with a much larger amount of metadata. This example includes EDAM "
+"ontology tags as keywords (allowing the grouping of related tools), hints"
+" at hardware requirements in order to use the tool, and a few more "
+"metadata fields."
+msgstr ""
+
+#: ../../src/topics/metadata-and-authorship.md:35
+#: 2dfbd4d580044ed083992f3ceb1bc64e
+msgid "`metadata_example3.cwl`"
+msgstr ""
+
+#: ../../src/topics/operations.md:1 8acf361cf77c4d45ba3f2e344146259f
+msgid "Operations"
+msgstr ""
+
+#: ../../src/topics/operations.md:3 83d3b9a0ed3148fda9ce72cd108cb9e1
+msgid ""
+"An Operation is a type of CWL process, just like a workflow, a command-"
+"line tool, or an expression tool. It is a step of a workflow that "
+"specifies inputs and outputs, but it does not provide enough information "
+"to be executed."
+msgstr ""
+
+#: ../../src/topics/operations.md:7 5565c1b2d8a349169a305a9b26b4574d
+msgid ""
+"You can create operations to visualize a workflow during development, "
+"before you are ready to submit the workflow to a CWL runner:"
+msgstr ""
+
+#: ../../src/topics/operations.md:10 49cf614893d8438299b3bca384eb40cf
+msgid "`operations.cwl`"
+msgstr ""
+
+#: ../../src/topics/operations.md:16 88160cef4cfa4add9020aa89511a5749
+msgid ""
+"The `uppercase` step of the workflow is an operation. It can be used like"
+" a command line tool or an expression. You can also plot it with the CWL "
+"Viewer or `cwltool`:"
+msgstr ""
+
+#: ../../src/topics/operations.md:24 2f73a786b5d94dc0b23ed0cdd185afc8
+msgid ""
+"The output of the command above can be rendered with a Graphviz renderer."
+" The following image is rendered with the Sphinx Graphviz directive (this"
+" user guide is built with Sphinx):"
+msgstr ""
+
+#: ../../src/topics/operations.md:55 730ba1434a1445ae847ec6153b6a3b72
+msgid ""
+"If you try running it with `cwltool`, the command will fail since "
+"`cwltool` does not have enough information to know how to execute it:"
+msgstr ""
+
+#: ../../src/topics/operations.md:58 98d9b8d867594543890af99e77e24edb
+msgid "`cwltool` does not know how to run operations"
+msgstr ""
+
+#: ../../src/topics/operations.md:66 a25d0b1e13324b40a6b8fcd227948c4f
+msgid ""
+"CWL runners may come up with ways to bind operations to concrete steps. A"
+" CWL runner could, for instance, use abstract operations with ID's that "
+"correspond to steps executed by a different workflow engine."
+msgstr ""
+
+#: ../../src/topics/outputs.md:1 da077da5eb8a4ffebfde041fc16300de
+msgid "Outputs"
+msgstr ""
+
+#: ../../src/topics/outputs.md:3 1b3016f0462f42deb42ddaa33f28bf3d
+msgid "Returning Output Files"
+msgstr ""
+
+#: ../../src/topics/outputs.md:5 d661df070e3040869da412d07a71f716
+msgid ""
+"The `outputs` of a tool is a list of output parameters that should be "
+"returned after running the tool.  Each parameter has an `id` for the name"
+" of parameter, and `type` describing what types of values are valid for "
+"that parameter."
+msgstr ""
+
+#: ../../src/topics/outputs.md:10 a11585474d3849cca5467512ed964743
+msgid ""
+"When a tool runs under CWL, the starting working directory is the "
+"designated output directory.  The underlying tool or script must record "
+"its results in the form of files created in the output directory.  The "
+"output parameters returned by the CWL tool are either the output files "
+"themselves, or come from examining the content of those files."
+msgstr ""
+
+#: ../../src/topics/outputs.md:16 2682f9ca8e604a0c9986f7746fdec960
+msgid ""
+"The following example demonstrates how to return a file that has been "
+"extracted from a tar file."
+msgstr ""
+
+#: ../../src/topics/outputs.md:19 7e3fa7baf0f549ec89457e7004ac9545
+msgid "Passing mandatory arguments to the `baseCommand`"
+msgstr ""
+
+#: ../../src/topics/outputs.md:21 22447a560f6f4317bf67bd7c4336126c
+msgid ""
+"In previous examples, the `baseCommand` was just a string, with any "
+"arguments passed as CWL inputs. Instead of a single string we can use an "
+"_array of strings_.  The first element is the command to run, and any "
+"subsequent elements are mandatory command line arguments"
+msgstr ""
+
+#: ../../src/topics/outputs.md:26 f1ee2e00b0cc4112b51c9df3a919b73f
+msgid "`tar.cwl`"
+msgstr ""
+
+#: ../../src/topics/outputs.md:32 ad8e1acb251246d2a47c39b20d4e483a
+msgid "`tar-job.yml`"
+msgstr ""
+
+#: ../../src/topics/outputs.md:38 dc200c6960ae4476a772645d021f14b8
+msgid "Next, create a tar file for the example."
+msgstr ""
+
+#: ../../src/topics/outputs.md:45 52703d6b7f914097934bfad13663abeb
+msgid ""
+"And now invoke `cwltool` with the tool description and the input object "
+"on the command line:"
+msgstr ""
+
+#: ../../src/topics/outputs.md:51 5e1c79df657d4a6e84e055dd6b300a5d
+msgid ""
+"The field `outputBinding` describes how to set the value of each output "
+"parameter."
+msgstr ""
+
+#: ../../src/topics/outputs.md:62 329d2809dfae4f90bc638f5f03a47ee3
+msgid ""
+"The `glob` field consists of the name of a file in the output directory. "
+"If you don't know name of the file in advance, you can use a wildcard "
+"pattern like `glob: '*.txt'`."
+msgstr ""
+
+#: ../../src/topics/outputs.md:65 96df2d45e42441d49ce193ccbfab78a3
+msgid "Capturing Standard Output"
+msgstr ""
+
+#: ../../src/topics/outputs.md:67 c6bcf7c6a8774dd6be41cc775848c3b8
+msgid ""
+"To capture a tool's standard output stream, add the `stdout` field with "
+"the name of the file where the output stream should go.  Then add `type: "
+"stdout` on the corresponding output parameter."
+msgstr ""
+
+#: ../../src/topics/outputs.md:71 9d86c03ab44841c785b924cc44727e31
+msgid "`stdout.cwl`"
+msgstr ""
+
+#: ../../src/topics/outputs.md:89 2fb58c2feaa84970bb5274c49f4b5b64
+msgid "Array Outputs"
+msgstr ""
+
+#: ../../src/topics/outputs.md:91 9647019d8c37466886e7aab6f176634d
+msgid ""
+"You can also capture multiple output files into an array of files using "
+"`glob`."
+msgstr ""
+
+#: ../../src/topics/outputs.md:93 b9eaf21f5e014eefaae301c47dafd144
+msgid "`array-outputs.cwl`"
+msgstr ""
+
+#: ../../src/topics/outputs.md:99 cffff6c43b4945daa3b2a49763bc50ae
+msgid "`array-outputs-job.yml`"
+msgstr ""
+
+#: ../../src/topics/outputs.md:112 cc067051f22f433bbece08f60933e002
+msgid ""
+"As described in the [YAML Guide](yaml-guide.md#arrays), the array of "
+"expected outputs is specified in `array-outputs-job.yml` with each entry "
+"marked by a leading `-`. This format can also be used in CWL descriptions"
+" to mark entries in arrays, as demonstrated in several of the upcoming "
+"sections."
+msgstr ""
+
+#: ../../src/topics/parameter-references.md:1 a190a6440ec34898990cdac05d809f22
+msgid "Parameter References"
+msgstr ""
+
+#: ../../src/topics/parameter-references.md:3 dbfe2c1123144316aa026374b0f353d3
+msgid ""
+"In a previous example, we extracted a file using the \"tar\" program. "
+"However, that example was very limited because it assumed that the file "
+"we were interested in was called \"hello.txt\", and this was written into"
+" the `.cwl` file. This is not the best way to do this, as the "
+"\"hello.txt\" filename may vary or be dependent on the input file(s) "
+"used.  To avoid this we can specify the name of the file we want in the "
+"job parameters file (`.yml`). In this example, you will see how to "
+"reference the value of input parameters dynamically from other fields, "
+"which will allow us to then specify the name of the file to extract."
+msgstr ""
+
+#: ../../src/topics/parameter-references.md:13 280f1a07d0ae41d7a4674504f832fcf0
+msgid "`tar-param.cwl`"
+msgstr ""
+
+#: ../../src/topics/parameter-references.md:19 5c64d938862747cb9fb52515a656ce27
+msgid "`tar-param-job.yml`"
+msgstr ""
+
+#: ../../src/topics/parameter-references.md:25 074cf5d912854d8c864607cc24b15302
+msgid ""
+"Create your input files and invoke `cwltool` with the tool description "
+"and the input object on the command line:"
+msgstr ""
+
+#: ../../src/topics/parameter-references.md:36 0290af3e3cbb4b32b0450c8771f3bf95
+msgid ""
+"Certain fields permit parameter references which are enclosed in "
+"`$(...)`. These are evaluated and replaced with value being referenced."
+msgstr ""
+
+#: ../../src/topics/parameter-references.md:47 b54240bb94f746bba7511633aa969db0
+msgid ""
+"References are written using a subset of Javascript syntax.  In this "
+"example, `$(inputs.extractfile)`, `$(inputs[\"extractfile\"])`, and "
+"`$(inputs['extractfile'])` are equivalent."
+msgstr ""
+
+#: ../../src/topics/parameter-references.md:51 8b70a072aa87414c88e89a3e19af0a51
+msgid ""
+"The value of the \"inputs\" variable is the input object provided when "
+"the CWL tool was invoked."
+msgstr ""
+
+#: ../../src/topics/parameter-references.md:54 eea20f89c45f424a888178df53713b28
+msgid ""
+"Note that because `File` parameters are objects, to get the path to an "
+"input file you must reference the path field on a file object; to "
+"reference the path to the tar file in the above example you would write "
+"`$(inputs.tarfile.path)`."
+msgstr ""
+
+#: ../../src/topics/parameter-references.md:59 cb4ea13f5db84c0da43df3f7f2478d78
+msgid "Where are parameter references allowed?"
+msgstr ""
+
+#: ../../src/topics/parameter-references.md:61 6d3fb423e6c4434697cd113fb27e28ad
+msgid "You can only use parameter references in certain fields.  These are:"
+msgstr ""
+
+#: ../../src/topics/parameter-references.md:63 7647e0229a924f988cf02b7812a55c06
+msgid ""
+"From "
+"[`CommandLineTool`](http://www.commonwl.org/v1.0/CommandLineTool.html#CommandLineTool)"
+msgstr ""
+
+#: ../../src/topics/parameter-references.md:69 9d663249666045618a0d3acddb85a9a9
+msgid ""
+"From "
+"[CommandInputParameter](http://www.commonwl.org/v1.0/CommandLineTool.html#CommandInputParameter)"
+msgstr ""
+
+#: ../../src/topics/parameter-references.md:72 5fed4984f6784347b4cbe0630b1dd2c2
+msgid ""
+"From "
+"[`inputBinding`](http://www.commonwl.org/v1.0/CommandLineTool.html#CommandLineBinding)"
+msgstr ""
+
+#: ../../src/topics/parameter-references.md:74 dbf6153cd02542a6a01c172803122b7f
+msgid ""
+"From "
+"[CommandOutputParamater](http://www.commonwl.org/v1.0/CommandLineTool.html#CommandOutputParameter)"
+msgstr ""
+
+#: ../../src/topics/parameter-references.md:77 b6250cf6fa8a4a0c94b33302e0decca5
+msgid ""
+"From "
+"[CommandOutputBinding](http://www.commonwl.org/v1.0/CommandLineTool.html#CommandOutputBinding)"
+msgstr ""
+
+#: ../../src/topics/parameter-references.md:81 fa6ca3bbc6784380a03a950a6f49a180
+msgid ""
+"From "
+"[InputParameter](http://www.commonwl.org/v1.0/Workflow.html#InputParameter)"
+" and "
+"[WorkflowOutputParameter](http://www.commonwl.org/v1.0/Workflow.html#WorkflowOutputParameter)"
+msgstr ""
+
+#: ../../src/topics/parameter-references.md:85 b92b516e537a4773ad67b4af586e7a25
+msgid ""
+"From "
+"[WorkflowStepInput](http://www.commonwl.org/v1.0/Workflow.html#WorkflowStepInput)"
+msgstr ""
+
+#: ../../src/topics/parameter-references.md:89 467a701228504d06b971b79a59c69064
+msgid ""
+"From "
+"[InputParameter](http://www.commonwl.org/v1.0/Workflow.html#InputParameter)"
+" and "
+"[ExpressionToolOutputParameter](http://www.commonwl.org/v1.0/Workflow.html#ExpressionToolOutputParameter)"
+msgstr ""
+
+#: ../../src/topics/parameter-references.md:92 2634f989eb304009a8568d70ed42786c
+msgid ""
+"From "
+"[`ResourceRequirement`](http://www.commonwl.org/v1.0/CommandLineTool.html#ResourceRequirement)"
+msgstr ""
+
+#: ../../src/topics/parameter-references.md:101
+#: 5d8bed66282c408695292ea92a03b2c4
+msgid ""
+"From "
+"[`InitialWorkDirRequirement`](http://www.commonwl.org/v1.0/CommandLineTool.html#InitialWorkDirRequirement)"
+msgstr ""
+
+#: ../../src/topics/parameter-references.md:103
+#: 958178d1fa8843aaa0541e2bb115cfd4
+msgid "in [Dirent](http://www.commonwl.org/v1.0/CommandLineTool.html#Dirent)"
+msgstr ""
+
+#: ../../src/topics/parameter-references.md:107
+#: 9a6b311ded8d4e43ae635b1b927dbdf2
+msgid ""
+"From "
+"[EnvironmentDef](http://www.commonwl.org/v1.0/CommandLineTool.html#EnvironmentDef)"
+msgstr ""
+
+#: ../../src/topics/requirements-and-hints.md:5
+#: aac74f957774479a83aab4c6ff1390ae
+msgid "Requirements and Hints"
+msgstr ""
+
+#: ../../src/topics/specifying-software-requirements.md:1
+#: b75d29d1d55d44488338f9689f156855
+msgid "Specifying Software Requirements"
+msgstr ""
+
+#: ../../src/topics/specifying-software-requirements.md:3
+#: 574d93d1d592458a985f259519c036cb
+msgid ""
+"Often, tool descriptions will be written for a specific version of a "
+"software. To make it easier for others to use your descriptions, you can "
+"include a `SoftwareRequirement` field in the `hints` section. This may "
+"also help to avoid confusion about which version of a tool the "
+"description was written for."
+msgstr ""
+
+#: ../../src/topics/specifying-software-requirements.md:13
+#: 82e48b3e3c3f451480cc0b6a529271f6
+msgid ""
+"In this example, the software requirement being described is InterProScan"
+" version 5.21-60."
+msgstr ""
+
+#: ../../src/topics/specifying-software-requirements.md:25
+#: 02e40154eac74ecc98d0447d03475b44
+msgid ""
+"Depending on your CWL runner, these hints may be used to check that the "
+"required software is installed and available before the job is run. To "
+"enable these checks with the reference implementation, use the "
+"[dependency resolvers configuration][dependencies]."
+msgstr ""
+
+#: ../../src/topics/specifying-software-requirements.md:29
+#: 8cb1c5d9b1a54c40924099494eb766c6
+msgid ""
+"As well as a version number, a unique resource identifier (URI) for the "
+"tool is given in the form of an [RRID][rrid]. Resources with RRIDs can be"
+" looked up in the [SciCrunch][scicrunch] registry, which provides a "
+"portal for finding, tracking, and referring to scientific resources "
+"consistently. If you want to specify a tool as a `SoftwareRequirement`, "
+"search for the tool on SciCrunch and use the RRID that it has been "
+"assigned in the registry. (Follow this [Adding a Resource Tutorial"
+"][scicrunch-add-tool] to add a tool to SciCrunch). You can use this RRID "
+"to refer to the tool (via [identifiers.org][identifiers]) in the `specs` "
+"field of your requirement description. Other good choices, in order of "
+"preference, are to include the DOI for the main tool citation and the URL"
+" to the tool."
+msgstr ""
+
+#: ../../src/topics/staging-input-files.md:1 b85eb83e05e845d7a179f1b1d74db444
+msgid "Staging Input Files"
+msgstr ""
+
+#: ../../src/topics/staging-input-files.md:3 35f97d37492b4c7ca3ad6cfc1e6fa366
+msgid ""
+"Normally, input files are located in a read-only directory separate from "
+"the output directory.  This causes problems if the underlying tool "
+"expects to write its output files alongside the input file in the same "
+"directory.  You use `InitialWorkDirRequirement` to stage input files into"
+" the output directory. In this example, we use a JavaScript expression to"
+" extract the base name of the input file from its leading directory path."
+msgstr ""
+
+#: ../../src/topics/staging-input-files.md:9 c8159d0cb2ab452a9ce8e8d2adbaaa94
+msgid "`linkfile.cwl`"
+msgstr ""
+
+#: ../../src/topics/troubleshooting.md:1 0f7508ce59754a7eb230dea6042244c6
+msgid "Troubleshooting"
+msgstr ""
+
+#: ../../src/topics/troubleshooting.md:3 fbe0c65b444441f785d0054176d036a6
+msgid ""
+"In this section you will find ways to troubleshoot when you have problems"
+" executing CWL. We focus on `cwltool` here but some of these techniques "
+"may apply to other CWL Runners."
+msgstr ""
+
+#: ../../src/topics/troubleshooting.md:6 1b6b7a75cc754775bf9dd80c0941e8da
+msgid "Run `cwltool` with `cachedir`"
+msgstr ""
+
+#: ../../src/topics/troubleshooting.md:8 9a710602e00c4934ae3a3b471aa68458
+msgid ""
+"You can use the `--cachedir` option when running a workflow to tell "
+"`cwltool` to cache intermediate files (files that are not input nor "
+"output files, but created while your workflow is running). By default, "
+"these files are created in a temporary directory but writing them to a "
+"separate directory makes accessing them easier."
+msgstr ""
+
+#: ../../src/topics/troubleshooting.md:14 21b5be7270a14f0987240c81d1ec879b
+msgid ""
+"In the following example `troubleshooting-wf1.cwl` we have two steps, "
+"`step_a` and `step_b`. The workflow is equivalent to `echo \"Hello "
+"World\" | rev`, which would print the message \"Hello World\" reversed, "
+"i.e. \"dlroW olleH\". However, the second step, `step_b`, **has a typo**,"
+" where instead of executing the `rev` command it tries to execute `revv`,"
+" which fails."
+msgstr ""
+
+#: ../../src/topics/troubleshooting.md:20 0490b1fab86749e49b473949c52bbe8b
+msgid "`troubleshooting-wf1.cwl`"
+msgstr ""
+
+#: ../../src/topics/troubleshooting.md:27 cfe9d8241fe84bd5b74042a5625d933f
+msgid ""
+"Let's execute this workflow with `/tmp/cachedir/` as the `--cachedir` "
+"value (`cwltool` will create the directory for you if it does not exist "
+"already):"
+msgstr ""
+
+#: ../../src/topics/troubleshooting.md:35 764d933cc4da446abd8dd8f913f05dac
+msgid ""
+"The workflow is in the `permanentFail` status due to `step_b` failing to "
+"execute the non-existent `revv` command. The `step_a` was executed "
+"successfully and its output has been cached in your `cachedir` location. "
+"You can inspect the intermediate files created:"
+msgstr ""
+
+#: ../../src/topics/troubleshooting.md:44 c93efc6d4e004859981ee7f5fa28ed03
+msgid ""
+"Each workflow step has received a unique ID (the long value that looks "
+"like a hash). The `${HASH}.status` files display the status of each step "
+"executed by the workflow. And the `step_a` output file `stdout.txt` is "
+"visible in the output of the command above."
+msgstr ""
+
+#: ../../src/topics/troubleshooting.md:48 546601da44cb49bd9611b1c85807fd90
+msgid ""
+"Now fix the typo so `step_b` executes `rev` (i.e. replace `revv` by `rev`"
+" in the `step_b`). After fixing the typo, when you execute `cwltool` with"
+" the same arguments as the previous time, note that now `cwltool` output "
+"contains information about pre-cached outputs for `step_a`, and about a "
+"new cache entry for the output of `step_b`. Also note that the status of "
+"`step_b` is now of success."
+msgstr ""
+
+#: ../../src/topics/troubleshooting.md:59 7e0bf00f8ce542b9b009cdcf1945a9e5
+msgid ""
+"In this example the workflow step `step_a` was not re-evaluated as it had"
+" been cached, and there was no change in its execution or output. "
+"Furthermore, `cwltool` was able to recognize when it had to re-evaluate "
+"`step_b` after we fixed the executable name. This technique is useful for"
+" troubleshooting your CWL documents and also as a way to prevent "
+"`cwltool` to re-evaluate steps unnecessarily."
+msgstr ""
+
+#: ../../src/topics/using-containers.md:1 eff5f28ca83c458a9b07faf7a81f7e91
+msgid "Using Containers"
+msgstr ""
+
+#: ../../src/topics/using-containers.md:3 2e634f3737d04d279ae78ceee4b0a664
+msgid "Running Tools Inside Docker"
+msgstr ""
+
+#: ../../src/topics/using-containers.md:5 e07f33d01b804663a25ffb08aad74821
+msgid ""
+"[Docker][docker] containers simplify software installation by providing a"
+" complete known-good runtime for software and its dependencies.  However,"
+" containers are also purposefully isolated from the host system, so in "
+"order to run a tool inside a Docker container there is additional work to"
+" ensure that input files are available inside the container and output "
+"files can be recovered from the container.  A CWL runner can perform this"
+" work automatically, allowing you to use Docker to simplify your software"
+" management while avoiding the complexity of invoking and managing Docker"
+" containers."
+msgstr ""
+
+#: ../../src/topics/using-containers.md:15 7a644506619a4f08958ec7d4540cd557
+msgid ""
+"One of the responsibilities of the CWL runner is to adjust the paths of "
+"input files to reflect the location where they appear inside the "
+"container."
+msgstr ""
+
+#: ../../src/topics/using-containers.md:18 b5195b7d8eaa419fb2b90cb33a57783a
+msgid ""
+"This example runs a simple Node.js script inside a Docker container which"
+" will then print \"Hello World\" to the standard output."
+msgstr ""
+
+#: ../../src/topics/using-containers.md:21 7921a837ee744c5aa9a5bda04b0c8db1
+msgid "`docker.cwl`"
+msgstr ""
+
+#: ../../src/topics/using-containers.md:27 387e9bc9381a4450af54aff77e4df6a2
+msgid "`docker-job.yml`"
+msgstr ""
+
+#: ../../src/topics/using-containers.md:33 2713594c937d4c528fc8d04d9e9819ed
+msgid ""
+"Before we run this, let's just break it down and see what some bits do.  "
+"Most of this has been explained in previous sections, the only part that "
+"is really new is the `dockerRequirement` section."
+msgstr ""
+
+#: ../../src/topics/using-containers.md:44 cf94c1424fc2413c85647fd1ee73d951
+msgid ""
+"`baseCommand: node` tells CWL that we will be running this command using "
+"the Node Js runtime that is meant for Javascript files. We then need to "
+"specify some `hints` for how to find the container we want.  In this case"
+" we list just our requirements for the docker container in "
+"`DockerRequirements`.  The `dockerPull:` parameter takes the same value "
+"that you would pass to a `docker pull` command. That is, the name of the "
+"container image (you can even specify the tag, which is good idea for "
+"best practices when using containers for reproducible research). In this "
+"case we have used a container called `node:slim`."
+msgstr ""
+
+#: ../../src/topics/using-containers.md:52 dc0452107c604e29bdf32bb289fe5db8
+msgid ""
+"Create a Javascript file named \"hello.js\" and invoke `cwltool` "
+"providing the tool description and the input object on the command line:"
+msgstr ""
+
+#: ../../src/topics/using-containers.md:55 1a5596243cec4c948d9b6bf0bb12fad0
+msgid "`hello.js`"
+msgstr ""
+
+#: ../../src/topics/using-containers.md:69 483181f498fc4d968b5fe6ef427709f7
+msgid ""
+"Notice the CWL runner has constructed a Docker command line to run the "
+"script."
+msgstr ""
+
+#: ../../src/topics/using-containers.md:72 7487485d6aa4458089a4b4bdf107ea64
+msgid ""
+"In this example, the path to the script `hello.js` is "
+"`/home/me/cwl/user_guide/hello.js` outside the container but "
+"`/var/lib/cwl/job369354770_examples/hello.js` inside the container, as "
+"reflected in the invocation of the `node` command."
+msgstr ""
+
+#: ../../src/topics/workflows.md:1 7394e7690f934043af617436b40845f0
+msgid "Workflows"
+msgstr ""
+
+#: ../../src/topics/workflows.md:3 b9ae9e9a896048caad7e6c38a5bc1bd1
+msgid ""
+"A workflow is a CWL processing unit that executes command-line tools, "
+"expression tools, or workflows (sub-workflows) as steps. It must have "
+"`inputs`, `outputs`, and `steps` defined in the CWL document."
+msgstr ""
+
+#: ../../src/topics/workflows.md:13 f228fb7953ea48ed99d89880205f4620
+msgid "CWL workflow."
+msgstr ""
+
+#: ../../src/topics/workflows.md:41 5870ac44e4c24b8daf5f06c49f95ce04
+msgid ""
+"The CWL document `echo-uppercase.cwl` defines a workflow that runs the "
+"command-line tool, and the expression tool showed in the earlier "
+"examples."
+msgstr ""
+
+#: ../../src/topics/workflows.md:51 a913c76d06164fa18718a8a6a7dcf0d6
+msgid "`echo-uppercase.cwl`"
+msgstr ""
+
+#: ../../src/topics/workflows.md:81 93188ed43ee949cc98b3ea679ce14feb
+msgid ""
+"A command-line tool or expression tool can also be written directly in "
+"the same CWL document as the workflow. For example, we can rewrite the "
+"`echo-uppercase.cwl` workflow as a single file:"
+msgstr ""
+
+#: ../../src/topics/workflows.md:91 36618126a4df4326b236ebe2ea42cffa
+msgid "`echo-uppercase-single-file.cwl`"
+msgstr ""
+
+#: ../../src/topics/workflows.md:150 1cc17ad26e9c474b895ba5cd20c8b66a
+msgid ""
+"Having separate files helps with modularity and code organization. But it"
+" can be helpful writing everything in a single file for development. "
+"There are other ways to combine multiple files into a single file (e.g. "
+"`cwltool --pack`) discussed further in other sections of this user guide."
+msgstr ""
+
+#: ../../src/topics/workflows.md:160 24aca0bea4d94e3593b844cf0586cffe
+msgid ""
+"For a sub-workflows you need to enable the requirement "
+"`SubworkflowFeatureRequirement`. It is covered in another section of this"
+" user guide in more detail."
+msgstr ""
+
+#: ../../src/topics/workflows.md:165 46cc4859856e4367a9e5e68eecd48b73
+msgid "Writing Workflows"
+msgstr ""
+
+#: ../../src/topics/workflows.md:167 9c56528acd5f49deb139e034dfbfac7c
+msgid ""
+"This workflow extracts a java source file from a tar file and then "
+"compiles it."
+msgstr ""
+
+#: ../../src/topics/workflows.md:170 55ab007d472f43388e4c77aae8f165e7
+msgid "`1st-workflow.cwl`"
+msgstr ""
+
+#: ../../src/topics/workflows.md:179 ../../src/topics/workflows.md:180
+#: 23af7bd2facf4043b2b1c4373fce15fa 307b6618a92948fca4203ccb497c77e6
+msgid "Visualization of 1st-workflow.cwl"
+msgstr ""
+
+#: ../../src/topics/workflows.md:180 a2dd833fdca4443181648e41051a5232
+msgid ""
+"[![Visualization of 1st-"
+"workflow.cwl](https://view.commonwl.org/graph/png/github.com/common-"
+"workflow-"
+"language/user_guide/blob/a29e7eae0006660946fc705a310b37a21a7e1edc/_includes/cwl/21"
+"-1st-workflow/1st-"
+"workflow.cwl)](https://view.commonwl.org/graph/png/github.com/common-"
+"workflow-"
+"language/user_guide/blob/a29e7eae0006660946fc705a310b37a21a7e1edc/_includes/cwl/21"
+"-1st-workflow/1st-workflow.cwl)"
+msgstr ""
+
+#: ../../src/topics/workflows.md:183 7e40cc9f9e1341c195e843c009575b94
+msgid ""
+"Use a YAML or a JSON object in a separate file to describe the input of a"
+" run:"
+msgstr ""
+
+#: ../../src/topics/workflows.md:185 26c51dcb76364ed780376aecb7cbacda
+msgid "`1st-workflow-job.yml`"
+msgstr ""
+
+#: ../../src/topics/workflows.md:191 6fcf8ad3d1bd49afa4a105622437bd59
+msgid ""
+"Next, create a sample Java file and add it to a tar file to use with the "
+"command-line tool."
+msgstr ""
+
+#: ../../src/topics/workflows.md:205 71cb81fa4511495b80422244849979e4
+msgid "What's going on here?  Let's break it down:"
+msgstr ""
+
+#: ../../src/topics/workflows.md:212 def35d6021394def80a53ae49a2cdbde
+msgid ""
+"The `cwlVersion` field indicates the version of the CWL spec used by the "
+"document.  The `class` field indicates this document describes a "
+"workflow."
+msgstr ""
+
+#: ../../src/topics/workflows.md:221 ea94a9a02cd44b9d8e06bfe16e6b8cc8
+msgid ""
+"The `inputs` section describes the inputs of the workflow.  This is a "
+"list of input parameters where each parameter consists of an identifier "
+"and a data type.  These parameters can be used as sources for input to "
+"specific workflows steps."
+msgstr ""
+
+#: ../../src/topics/workflows.md:233 c84d4450bc6a475dbf34e0b22cea9130
+msgid ""
+"The `outputs` section describes the outputs of the workflow.  This is a "
+"list of output parameters where each parameter consists of an identifier "
+"and a data type.  The `outputSource` connects the output parameter "
+"`classfile` of the `compile` step to the workflow output parameter "
+"`compiled_class`."
+msgstr ""
+
+#: ../../src/topics/workflows.md:248 cca9665f6daa44b49233baf34ab9fcc7
+msgid ""
+"The `steps` section describes the actual steps of the workflow.  In this "
+"example, the first step extracts a file from a tar file, and the second "
+"step compiles the file from the first step using the java compiler. "
+"Workflow steps are not necessarily run in the order they are listed, "
+"instead the order is determined by the dependencies between steps (using "
+"`source`).  In addition, workflow steps which do not depend on one "
+"another may run in parallel."
+msgstr ""
+
+#: ../../src/topics/workflows.md:256 547edbf5fa424b8286cc21674ff159b0
+msgid ""
+"The first step, `untar` runs `tar-param.cwl` (described previously in "
+"[Parameter References](parameter-references.md)). This tool has two input"
+" parameters, `tarfile` and `extractfile` and one output parameter "
+"`extracted_file`."
+msgstr ""
+
+#: ../../src/topics/workflows.md:261 7ca248888b9d484cb544cd76ba538662
+msgid ""
+"The ``in`` section of the workflow step connects these two input "
+"parameters to the inputs of the workflow, `tarball` and "
+"`name_of_file_to_extract` using `source`.  This means that when the "
+"workflow step is executed, the values assigned to `tarball` and "
+"`name_of_file_to_extract` will be used for the parameters `tarfile` and "
+"`extractfile` in order to run the tool."
+msgstr ""
+
+#: ../../src/topics/workflows.md:267 ae6b240718104380b08db5552d7355ea
+msgid ""
+"The `out` section of the workflow step lists the output parameters that "
+"are expected from the tool."
+msgstr ""
+
+#: ../../src/topics/workflows.md:278 e5a8b7f84be64020b191099f3fad30ed
+msgid ""
+"The second step `compile` depends on the results from the first step by "
+"connecting the input parameter `src` to the output parameter of `untar` "
+"using `untar/extracted_file`.  It runs `arguments.cwl` (described "
+"previously in [Additional Arguments and Parameters](additional-arguments-"
+"and-parameters.md)). The output of this step `classfile` is connected to "
+"the `outputs` section for the Workflow, described above."
+msgstr ""
+
+#: ../../src/topics/workflows.md:285 f0b04849253c4693904512ddd7f9ce84
+msgid "Nested Workflows"
+msgstr ""
+
+#: ../../src/topics/workflows.md:287 12a06d8358534102b202965d4258c18e
+msgid ""
+"Workflows are ways to combine multiple tools to perform a larger "
+"operations. We can also think of a workflow as being a tool itself; a CWL"
+" workflow can be used as a step in another CWL workflow, if the workflow "
+"engine supports the `SubworkflowFeatureRequirement`:"
+msgstr ""
+
+#: ../../src/topics/workflows.md:297 1658cac0de1b47e9b60f6d4a4ad9bb19
+msgid ""
+"Here's an example workflow that uses our `1st-workflow.cwl` as a nested "
+"workflow:"
+msgstr ""
+
+#: ../../src/topics/workflows.md:300 49ed137fe996452a8534c68d100db941
+msgid "`nestedworkflows.cwl`"
+msgstr ""
+
+#: ../../src/topics/workflows.md:309 b7f93705e5b8416696be01850072e8c0
+msgid ""
+"This two-step workflow starts with the `create-tar` step which is "
+"connected to the `compile` step in orange; `compile` is another workflow,"
+" diagrammed on the right. In purple we see the fixed string "
+"`\"Hello.java\"` being supplied as the `name_of_file_to_extract`."
+msgstr ""
+
+#: ../../src/topics/workflows.md:314 e87045829b344089ab59dc27063ddd7a
+msgid ""
+"<a href=\"https://view.commonwl.org/workflows/github.com/common-workflow-"
+"language/user_guide/blob/main/_includes/cwl/workflows/nestedworkflows.cwl\"><img"
+" src=\"https://view.commonwl.org/graph/svg/github.com/common-workflow-"
+"language/user_guide/blob/main/_includes/cwl/workflows/nestedworkflows.cwl\""
+" alt=\"Visualization of nestedworkflows.cwl\" /></a> <a "
+"href=\"https://view.commonwl.org/workflows/github.com/common-workflow-"
+"language/user_guide/blob/main/_includes/cwl/workflows/1st-"
+"workflow.cwl\"><img src=\"https://view.commonwl.org/graph/svg/github.com"
+"/common-workflow-language/user_guide/blob/main/_includes/cwl/workflows"
+"/1st-workflow.cwl\" alt=\"Visualization of 1st-workflow.cwl\" /></a>"
+msgstr ""
+
+#: ../../src/topics/workflows.md:322 42ef2f145b824d69b63abc1da175c216
+msgid ""
+"A CWL `Workflow` can be used as a `step` just like a `CommandLineTool`, "
+"its CWL file is included with `run`. The workflow inputs (`tarball` and "
+"`name_of_file_to_extract`) and outputs (`compiled_class`) then can be "
+"mapped to become the step's input/outputs."
+msgstr ""
+
+#: ../../src/topics/workflows.md:336 c61cedf543664d388183e04b3939cc39
+msgid ""
+"Our `1st-workflow.cwl` was parameterized with workflow inputs, so when "
+"running it we had to provide a job file to denote the tar file and "
+"`*.java` filename. This is generally best-practice, as it means it can be"
+" reused in multiple parent workflows, or even in multiple steps within "
+"the same workflow."
+msgstr ""
+
+#: ../../src/topics/workflows.md:341 9e39e3f1501c4fcaab3e8962e090f6be
+msgid ""
+"Here we use `default:` to hard-code `\"Hello.java\"` as the "
+"`name_of_file_to_extract` input, however our workflow also requires a tar"
+" file at `tarball`, which we will prepare in the `create-tar` step. At "
+"this point it is probably a good idea to refactor `1st-workflow.cwl` to "
+"have more specific input/output names, as those also appear in its usage "
+"as a tool."
+msgstr ""
+
+#: ../../src/topics/workflows.md:347 03e2f767c4da461982fc3c0f3ba94762
+msgid ""
+"It is also possible to do a less generic approach and avoid external "
+"dependencies in the job file. So in this workflow we can generate a hard-"
+"coded `Hello.java` file using the previously mentioned "
+"`InitialWorkDirRequirement` requirement, before adding it to a tar file."
+msgstr ""
+
+#: ../../src/topics/workflows.md:366 3bea5822b8694e2aa32c446e1c54a045
+msgid ""
+"In this case our step can assume `Hello.java` rather than be "
+"parameterized, so we can use hardcoded values `hello.tar` and "
+"`Hello.java` in a `baseCommand` and the resulting `outputs`:"
+msgstr ""
+
+#: ../../src/topics/workflows.md:383 426023bd6e3a471cbb30dbda3d6f9e57
+msgid ""
+"Did you notice that we didn't split out the `tar --create` tool to a "
+"separate file, but rather embedded it within the CWL Workflow file? This "
+"is generally not best practice, as the tool then can't be reused. The "
+"reason for doing it in this case is because the command line is hard-"
+"coded with filenames that only make sense within this workflow."
+msgstr ""
+
+#: ../../src/topics/workflows.md:389 0d498cd4caf54c15891ca1afe58e2727
+msgid ""
+"In this example we had to prepare a tar file outside, but only because "
+"our inner workflow was designed to take that as an input. A better "
+"refactoring of the inner workflow would be to take a list of Java files "
+"to compile, which would simplify its usage as a tool step in other "
+"workflows."
+msgstr ""
+
+#: ../../src/topics/workflows.md:394 b2d75045e02741b4850f5ff1243f7858
+msgid ""
+"Nested workflows can be a powerful feature to generate higher-level "
+"functional and reusable workflow units - but just like for creating a CWL"
+" Tool description, care must be taken to improve its usability in "
+"multiple workflows."
+msgstr ""
+
+#: ../../src/topics/workflows.md:398 cfa765264a27411ab914de569aa3dac4
+msgid "Scattering Steps"
+msgstr ""
+
+#: ../../src/topics/workflows.md:400 35f8ee0a00274a5bbb8a80c0f1fcbad6
+msgid ""
+"Now that we know how to write workflows, we can start utilizing the "
+"`ScatterFeatureRequirement`. This feature tells the runner that you wish "
+"to run a tool or workflow multiple times over a list of inputs. The "
+"workflow then takes the input(s) as an array and will run the specified "
+"step(s) on each element of the array as if it were a single input. This "
+"allows you to run the same workflow on multiple inputs without having to "
+"generate many different commands or input yaml files."
+msgstr ""
+
+#: ../../src/topics/workflows.md:411 5fa79c62049a447c8328ebf9db54ebf4
+msgid ""
+"The most common reason a new user might want to use scatter is to perform"
+" the same analysis on different samples. Let's start with a simple "
+"workflow that calls our first example (`hello_world.cwl`) and takes an "
+"array of strings as input to the workflow:"
+msgstr ""
+
+#: ../../src/topics/workflows.md:415 1e1f4d85fc5f49b5aac5c5b00f77d6fd
+msgid "`scatter-workflow.cwl`"
+msgstr ""
+
+#: ../../src/topics/workflows.md:421 3a67d77a2e7b4c0bb61cc3585ceae942
+msgid ""
+"Aside from the `requirements` section including "
+"`ScatterFeatureRequirement`, what is going on here?"
+msgstr ""
+
+#: ../../src/topics/workflows.md:429 f1cb55fc59824cc18a95fd6dcb32cf4c
+msgid ""
+"First of all, notice that the main workflow level input here requires an "
+"array of strings."
+msgstr ""
+
+#: ../../src/topics/workflows.md:441 d947c54933d64aad90df392a1cedd63f
+msgid ""
+"Here we've added a new field to the step `echo` called `scatter`. This "
+"field tells the runner that we'd like to scatter over this input for this"
+" particular step. Note that the input name listed after scatter is the "
+"one of the step's input, not a workflow level input."
+msgstr ""
+
+#: ../../src/topics/workflows.md:445 651d35997332404186aa6d5711da4a3d
+msgid ""
+"For our first scatter, it's as simple as that! Since our tool doesn't "
+"collect any outputs, we still use `outputs: []` in our workflow, but if "
+"you expect that the final output of your workflow will now have multiple "
+"outputs to collect, be sure to update that to an array type as well!"
+msgstr ""
+
+#: ../../src/topics/workflows.md:450 61642a1a4eaa49eaa1fc2ffa7fc99bf2
+msgid "Using the following input file:"
+msgstr ""
+
+#: ../../src/topics/workflows.md:452 842b926ae34542cb9023021f137b08be
+msgid "`scatter-job.yml`"
+msgstr ""
+
+#: ../../src/topics/workflows.md:458 b662c1a5a4424c8d8350a806356acc61
+msgid ""
+"As a reminder, [`hello_world.cwl`](../introduction/quick-start.md) simply"
+" calls the command `echo` on a message. If we invoke `cwltool scatter-"
+"workflow.cwl scatter-job.yml` on the command line:"
+msgstr ""
+
+#: ../../src/topics/workflows.md:466 04d6babfd87343d7a5f13867ea02b65f
+msgid ""
+"You can see that the workflow calls echo multiple times on each element "
+"of our `message_array`. Ok, so how about if we want to scatter over two "
+"steps in a workflow?"
+msgstr ""
+
+#: ../../src/topics/workflows.md:469 2eaacf1a90204a2b9bd621344560f2a1
+msgid ""
+"Let's perform a simple echo like above, but capturing `stdout` by adding "
+"the following lines instead of `outputs: []`"
+msgstr ""
+
+#: ../../src/topics/workflows.md:472 242993d42b164ee5abe7ca10d45856de
+msgid "`hello_world_to_stdout.cwl`"
+msgstr ""
+
+#: ../../src/topics/workflows.md:480 4a94e5f7e1bc4d628702140e4e51d6d3
+msgid ""
+"And add a second step that uses `wc` to count the characters in each "
+"file. See the tool below:"
+msgstr ""
+
+#: ../../src/topics/workflows.md:483 e61d93b848184c8e8e573928427b4d0a
+msgid "`wc-tool.cwl`"
+msgstr ""
+
+#: ../../src/topics/workflows.md:489 e3a7182f00f440b8b5461da91194a64b
+msgid ""
+"Now, how do we incorporate scatter? Remember the scatter field is under "
+"each step:"
+msgstr ""
+
+#: ../../src/topics/workflows.md:491 99fa96caacaa45cb97aded9a24fcac6d
+msgid "`scatter-two-steps.cwl`"
+msgstr ""
+
+#: ../../src/topics/workflows.md:497 b5338f39e8c74ff28e139da68089a742
+msgid ""
+"Here we have placed the scatter field under each step. This is fine for "
+"this example since it runs quickly, but if you're running many samples "
+"for a more complex workflow, you may wish to consider an alternative. "
+"Here we are running scatter on each step independently, but since the "
+"second step is not dependent on the first step completing all languages, "
+"we aren't using the scatter functionality efficiently. The second step "
+"expects an array as input from the first step, so it will wait until "
+"everything in step one is finished before doing anything. Pretend that "
+"`echo Hello World!` takes 1 minute to perform, `wc -c` on the output "
+"takes 3 minutes and that `echo Hallo welt!` takes 5 minutes to perform, "
+"and `wc` on that output takes 3 minutes. Even though `echo Hello World!` "
+"could finish in 4 minutes, it will actually finish in 8 minutes because "
+"the first step must wait on `echo Hallo welt!`. You can see how this "
+"might not scale well."
+msgstr ""
+
+#: ../../src/topics/workflows.md:509 f6d92156d67c4a339bcfd194cff897df
+msgid ""
+"Ok, so how do we scatter on steps that can proceed independent of other "
+"samples? Remember from [Nested Workflows](#nested-workflows), that we can"
+" make an entire workflow a single step in another workflow! Convert our "
+"two-step workflow to a single step subworkflow:"
+msgstr ""
+
+#: ../../src/topics/workflows.md:513 1c9e386922324ec8a59306572c19fb8b
+msgid "`scatter-nested-workflow.cwl`"
+msgstr ""
+
+#: ../../src/topics/workflows.md:519 d80ab383eec9402faba997b548fe42eb
+msgid ""
+"Now the scatter acts on a single step, but that step consists of two "
+"steps so each step is performed in parallel."
+msgstr ""
+
+#: ../../src/topics/workflows.md:522 f7d2827d97db4bf4ab84b5d6621c3b48
+msgid "Conditional Workflows"
+msgstr ""
+
+#: ../../src/topics/workflows.md:524 49217c02f58c43ff9ec00f10da8d4e84
+msgid ""
+"This workflow contains a conditional step and is executed based on the "
+"input. This allows workflows to skip additional steps based on input "
+"parameters given at the start of the program or by previous steps."
+msgstr ""
+
+#: ../../src/topics/workflows.md:527 20b9f181420c401d8615c17a10027517
+msgid "`conditional-workflow.cwl`"
+msgstr ""
+
+#: ../../src/topics/workflows.md:566 8dbd56473f8c40c0bb12a48be06117e3
+msgid ""
+"The first thing you'll notice is that this workflow is only compatible "
+"for version 1.2 or greater of the CWL standards."
+msgstr ""
+
+#: ../../src/topics/workflows.md:573 78d7f3ede2c746d482042adef050b2c4
+msgid ""
+"The first step of the workflow (step1) contains two input properties and "
+"will execute foo.cwl when the conditions are met. The new property `when`"
+" is where the condition validation takes place. In this case only when "
+"`in1`  from the workflow contains a value `< 1` this step will be "
+"executed."
+msgstr ""
+
+#: ../../src/topics/workflows.md:587 cbbf93c70fe04ba7932ba25758ddc611
+msgid ""
+"Using the following command `cwltool cond-wf-003.1.cwl --val 0` the value"
+" will pass the first conditional step and will therefore be executed and "
+"is shown in the log by `INFO [step step1] start` whereas the second step "
+"is skipped as indicated by `INFO [step step2] will be skipped`."
+msgstr ""
+
+#: ../../src/topics/workflows.md:607 cfa1c1fde4454df283f87cc54a9c59ec
+msgid ""
+"When a value of 3 is given the first conditional step will not be "
+"executed but the second step will `cwltool cond-wf-003.1.cwl --val 3`."
+msgstr ""
+
+#: ../../src/topics/workflows.md:627 1a8be2950cbb475bbb2617e005f0fac9
+msgid ""
+"If no conditions are met for example when using `--val 2` the workflow "
+"will raise a permanentFail."
+msgstr ""
+
+#: ../../src/topics/yaml-guide.md:1 5f09d4d897cf457d80b9a11b8c01747e
+msgid "YAML Guide"
+msgstr ""
+
+#: ../../src/topics/yaml-guide.md:6 5d83c56102e141cc978500f678dd0c1c
+msgid ""
+"[YAML][yaml] is a file format designed to be readable by both computers "
+"and humans. This guide introduces the features of YAML that are relevant "
+"when writing CWL descriptions and input parameter files."
+msgstr ""
+
+#: ../../src/topics/yaml-guide.md:13 c38438fbf9a04e729ec2e3c962435289
+msgid "You can skip this section if you are already comfortable with YAML."
+msgstr ""
+
+#: ../../src/topics/yaml-guide.md:16 fdb9cc750cec43ee962517e637dc5fea
+msgid "Contents"
+msgstr ""
+
+#: ../../src/topics/yaml-guide.md:18 08da9cd8056b4ddd8f5150cc85ba72ee
+msgid "[Key-Value Pairs](#key-value-pairs)"
+msgstr ""
+
+#: ../../src/topics/yaml-guide.md:19 b027fc234ed943bbb00d4c6bc03c040a
+msgid "[Comments](#comments)"
+msgstr ""
+
+#: ../../src/topics/yaml-guide.md:20 b8befec0d8684638aaa616a659e0100c
+msgid "[Maps](#maps)"
+msgstr ""
+
+#: ../../src/topics/yaml-guide.md:21 4ea28c6f8faf4cc1a5b29fdcf34c5fdc
+msgid "[Arrays](#arrays)"
+msgstr ""
+
+#: ../../src/topics/yaml-guide.md:22 36db4f26b5194e9da5c6a1ed8cb0ad04
+msgid "[JSON Style](#json-style)"
+msgstr ""
+
+#: ../../src/topics/yaml-guide.md:24 98056c5cfd5640ad9de0679360797cc7
+msgid "Key-Value Pairs"
+msgstr ""
+
+#: ../../src/topics/yaml-guide.md:26 cda73485875d4c8e9464679a20558616
+msgid ""
+"Fundamentally, a file written in YAML consists of a set of _key-value "
+"pairs_. Each pair is written as `key: value`, where whitespace after the "
+"`:` is required. Key names in CWL files should not contain whitespace - "
+"[_camelCase_][camelCase] is used for multi-word key names that have "
+"special meaning in the CWL specification and underscored key names "
+"otherwise. For example:"
+msgstr ""
+
+#: ../../src/topics/yaml-guide.md:42 98cae24919b74c088a5d89706aec581b
+msgid ""
+"The YAML above defines four keys - `first_name`, `last_name`, "
+"`age_years`, and `home` - with their four respective values. Values can "
+"be character strings, numeric (integer, floating point, or scientific "
+"representation), Boolean (`true` or `false`), or more complex nested "
+"types (see below)."
+msgstr ""
+
+#: ../../src/topics/yaml-guide.md:51 b4b0940b4b5743c09637b36b964202d0
+msgid ""
+"Values may be wrapped in quotation marks, but be aware that this may "
+"change the way that they are interpreted i.e. `\"1234\"` will be treated "
+"as a character string , while `1234` will be treated as an integer. This "
+"distinction can be important, for example when describing parameters to a"
+" command: in CWL all parts of `baseCommand` must be strings so, if you "
+"want to specify a fixed numeric value to a command, make sure that you "
+"wrap that numeric value in quotes: `baseCommand: [echo, \"42\"]`."
+msgstr ""
+
+#: ../../src/topics/yaml-guide.md:61 dcdaadc7dfff4ebc9fef0d5d05b34cc1
+msgid "Comments"
+msgstr ""
+
+#: ../../src/topics/yaml-guide.md:63 9ca3554d771d45998e88aaede525b227
+msgid ""
+"You may use `#` to add comments to your CWL and parameter files. Any "
+"characters to the right of ` #` will be ignored by the program "
+"interpreting the YAML. For example:"
+msgstr ""
+
+#: ../../src/topics/yaml-guide.md:76 3fca839cede94cfd8e4f605c73ba699d
+msgid ""
+"If there is anything on the line before the comment, be sure to add at "
+"least one space before the `#`!"
+msgstr ""
+
+#: ../../src/topics/yaml-guide.md:79 da34c635707345b2a5e85a2fcd30bbaf
+msgid "Maps"
+msgstr ""
+
+#: ../../src/topics/yaml-guide.md:81 3ded0f125249485c921994b6e6b93ac9
+msgid ""
+"When describing a tool or workflow with CWL, it is usually necessary to "
+"construct more complex, nested representations. Referred to as _maps_, "
+"these hierarchical structures are described in YAML by providing "
+"additional key-value pairs as the value of any key. These pairs "
+"(sometimes referred to as \"children\") are written on new lines under "
+"the key to which they belong (the \"parent\"), and should be indented "
+"with two spaces (⇥tab characters are not allowed). For example:"
+msgstr ""
+
+#: ../../src/topics/yaml-guide.md:104 53ece35d309a4c8d99f1efb2122a7092
+msgid ""
+"The YAML above illustrates how to build up complex nested object "
+"descriptions relatively quickly. The `inputs` map contains a single key, "
+"`example_flag`, which itself contains two keys, `type` and "
+"`inputBinding`, while one of these children, `inputBinding`, contains a "
+"further two key-value pairs (`position` and `prefix`). See the "
+"[Arrays](#arrays) section below for more information about providing "
+"multiple values/key-value pairs for a single key. For comparison with the"
+" example YAML above, here is a graphical representation of the `inputs` "
+"object it describes."
+msgstr ""
+
+#: ../../src/topics/yaml-guide.md:127 d74321b111d84ae7a515f2f17dd39e23
+msgid "Arrays"
+msgstr ""
+
+#: ../../src/topics/yaml-guide.md:129 7fc0bdf2489a44f2a29e71b86f7c0055
+msgid ""
+"In certain circumstances, it is necessary to provide multiple values or "
+"objects for a single key. As we've already seen in the [Maps](#maps) "
+"section above, more than one key-value pair can be mapped to a single "
+"key. However, it is also possible to define multiple values for a key "
+"without having to provide a unique key for each value. We can achieve "
+"this with an _array_, where each value is defined on its own line and "
+"preceded by `-`. For example:"
+msgstr ""
+
+#: ../../src/topics/yaml-guide.md:146 fd64dd818ec64bb6aa9a11586a5747f6
+msgid "and a more complex example combining maps and arrays:"
+msgstr ""
+
+#: ../../src/topics/yaml-guide.md:167 8c06e542dd4144fa83388d8142552c8d
+msgid "JSON Style"
+msgstr ""
+
+#: ../../src/topics/yaml-guide.md:169 87bafb845c714b109874f6137b84462d
+msgid ""
+"YAML is based on [JavaScript Object Notation (JSON)][json]. Maps and "
+"arrays can also be defined in YAML using the native JSON syntax. For "
+"example:"
+msgstr ""
+
+#: ../../src/topics/yaml-guide.md:177 5ab9ddf613a540a2b8228e37600cc5dc
+msgid "and:"
+msgstr ""
+
+#: ../../src/topics/yaml-guide.md:184 fcd05b1ef31a4046946a2399c7fc5575
+msgid ""
+"Native JSON can be useful in indicating where a field is intentionally "
+"left empty (such as `[]` for an empty array), as well as where it makes "
+"more sense for the values to be located on the same line (For example, "
+"when providing option flags and their values in a shell command). "
+"However, as the second example above shows, it can severely affect the "
+"readability of a YAML file, and should be used sparingly."
+msgstr ""
+
+#: ../../src/topics/yaml-guide.md:194 f4b8fc8236044fada420def13a02813d
+msgid "Reference"
+msgstr ""
+
+#: ../../src/topics/yaml-guide.md:196 859368c1f25c4a4aad57abfd046c63f5
+msgid ""
+"The [Learn YAML in Y Minutes][yaml-y-mins] reference was very helpful for"
+" us while we wrote this guide, though it also covers features that are "
+"not valid in CWL."
+msgstr ""
+
+#: ../../src/tutorials.md:1 2203c93f02ac4514a43508ecb98dfcc5
+msgid "Tutorials"
+msgstr ""
+
+#: ../../src/tutorials.md:5 5d92464923c245818c070fbef102be89
+msgid ""
+"This is a list of tutorials provided by the CWL community. Use the `Edit "
+"this page` link in the menu if you would like to add another tutorial to "
+"the list."
+msgstr ""
+
+#: ../../src/tutorials.md:7 8a5cd557dab5456bb41cdc24af73b50c
+msgid "Beginner Tutorials"
+msgstr ""
+
+#: ../../src/tutorials.md:9 13d7e2e92e96432787c712cf6a595424
+msgid ""
+"[Introduction to Workflows with Common Workflow Language: For "
+"Contributors.](https://carpentries-incubator.github.io/cwl-novice-"
+"tutorial/)"
+msgstr ""
+
+#: ../../src/tutorials.md:11 0abdd85c9b964a4e89ba3d80a6c78d6f
+msgid "Advanced Tutorials"
+msgstr ""
+
+#: ../../src/tutorials.md:13 3cbf1f69a5514fd3bee90e68b201190f
+msgid "[Typescript in CWL](https://github.com/umccr/cwl-ica/wiki/TypeScript)"
+msgstr ""
+
+#: ../../src/tutorials.md:15 68c97a7065634d02956f3f5c1d4eeb9f
+msgid "Bioinformatics Tutorials"
+msgstr ""
+
+#: ../../src/tutorials.md:17 a67c7e0eaf4e4d27b3e5db303333a088
+msgid "[rnaseq with CWL](https://arvados.github.io/rnaseq-cwl-training/)"
+msgstr ""
+
