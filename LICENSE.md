@@ -16,9 +16,9 @@ You are free:
 for any purpose, even commercially.
 
 The licensor cannot revoke these freedoms as long as you follow the
-license terms.
+license terms:
 
-Under the following terms:
+
 
 * **Attribution**---You must give appropriate credit (mentioning that
   your work is derived from work that is Copyright © the Common Workflow
@@ -53,7 +53,7 @@ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 See the License for the specific language governing permissions and
 limitations under the License.
 
-## Trademark
+
 
 
 [cc-by-human]: https://creativecommons.org/licenses/by/4.0/
