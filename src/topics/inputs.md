@@ -174,84 +174,51 @@ inputs:
 ### Attaching Secondary files to the inputs file
 
 Secondary files are input files that should be staged in the same directory as the input files.
-The `secondaryFiles` field can define files or directories that can be automatically uploaded with the primary input file.
+The `secondaryFiles` parameter defines files or directories that can be automatically uploaded with the primary input file.
 For example, if the primary input is an HTML file (.html), an image file (.png or .jpg) could be included as a secondary file.
  
 The use of secondary files are optional for inputs. However, if secondary files are defined for an input file,
 they should exist. An implementation may fail workflow execution if an expected secondary file does not exist.
 
-Secondary files can also be used for output files.
 When defining primary and secondary files in your CWL workflow, 
-use the input parameter to specify your primary files, and use the `secondaryFiles` property to define your secondary files.
-An implementation must include matching Files and Directories in the `secondaryFiles` property of the primary file.
+use the input parameter to specify your primary files, and use the `secondaryFiles` parameter to define your secondary files.
+An implementation must include matching files and directories in the `secondaryFiles` parameter of the primary file.
 The following example demonstrates the `secondaryFiles` input parameter.
 
 ```cwl
-{
-  basename: example_file.bam
-  class: File
-  location: ../documents/example_file.bam
-  secondaryFiles: [
-    {
-      basename: example_file.bai,
-      class: File,
-      location: ../documents/example_file.bam.bai
-    }   
-  ]
-}
+inputs:
+  example_file:
+    type: File
+    inputBinding:
+      prefix: -e
+    secondaryFiles:
+      - .idx
 ```
-
-The fields within secondary files are `pattern` and `required`.
-Secondary files are specified using the following micro-DSL for secondary files:
-- If the value is a string, it is transformed to an object with two fields `pattern` and `required`.
-- By default, the value of `required` is null (this indicates default behavior, which may be based on the context).
-- If the value ends with a question mark "?", the question mark is stripped off and the value of the field `required` is set to False.
-- The remaining value is assigned to the field `pattern`.
-
-`pattern` in this context refers how we can reference secondary files,
-with respect to the value, ie if it is an expression, or a string.
-If the value is an expression, the value of self in the expression must be
-the primary input or output File object to which this binding applies.
-The basename, nameroot and nameext fields must be present in self. 
-For CommandLineTool outputs, the path field must also be present. 
-The expression must return a filename string relative to the path to the primary File, 
-a File or Directory object with either path or location and basename fields set, 
-or an array consisting of strings or File or Directory objects. 
-It is legal to reference an unchanged File or Directory object taken from input as a `secondaryFile`. 
-The expression may return "null" in which case there is no `secondaryFile` from that expression.
-
-To work on non-filename-preserving storage systems, 
-portable tool descriptions should avoid constructing new values from location, 
-but should construct relative references using basename or nameroot instead.
 
 If a value in `secondaryFiles` is a string that is not an expression, 
 it specifies that the following pattern should be applied to the path of the primary file 
 to yield a filename relative to the primary File:
 
-- If string begins with one or more caret "^" characters, for each caret, remove the last file extension from the path
-(the last period . and all following characters).
+- If the string begins with one or more caret "^" characters, for each caret, remove the last file extension from the path(the last period `.` and all following characters), and append the remainder of the string to the end of the file path.
 
-```{code-block} cwl
+```cwl
 inputs:
   example_file:
     type: File
-    secondaryFiles: [^.idx]
+    inputBinding:
+      prefix: -e
+    secondaryFiles: 
+      - ^.idx
 ```
 
-this will give "example_file.idx".
-
-- If string ends with "?" character, remove the last "?" and mark the resulting secondary file as optional.
-- If there are no file extensions, the path is unchanged.
-Append the remainder of the string to the end of the file path.
-
-An implementation must not fail workflow execution if `required` is set to false and the expected secondary file does not exist.
-Default value for `required` field is true for secondary files on input, and false for secondary files on output.
+assuming the primary file above has a .txt extension (example_file.txt), the secondary file will be "example_file.idx".
 
 ````{note}
 Secondary files are only valid when `type` has a value `File`, or is an array of `items: File`.
 All listed secondary files must be present in the same directory as the primary file,
 since an implementation may fail workflow execution if a listed secondary file is not present.
 It is an error for file names to be duplicated in `secondaryFiles`.
+Secondary files can also be used for output files.
 ````
 
 ## Array Inputs
