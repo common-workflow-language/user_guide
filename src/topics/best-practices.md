@@ -98,25 +98,19 @@ all are required.
 
 The following are a set of recommended good practices to keep in mind when running CWL workflows within Docker:
 
-- Make sure you are using the latest version of both CWL and Docker, as this will ensure that you have access to the latest features and bug
-  fixes.
+- Make sure you are using the latest version of both CWL and Docker, as this will ensure that you have access to the latest features and bug fixes.
 
-- It is good practice to keep your Dockerfiles in Git, just like your workflow definitions, because they are also scripts and should be
-  managed and tracked with version control.
+- It is good practice to keep your Dockerfiles in Git, just like your workflow definitions, because they are also scripts and should be managed and tracked with version control.
 
-- When creating a Dockerfile, it is important to specify the exact version of the software you want to install and the base image you
-  want to use. This helps ensure that your Docker image builds are consistent and reproducible. Additionally, when using the `FROM` command, specify a tag for the base image, otherwise it will default to "latest" which can change at any time.
+- When creating a Dockerfile, it is important to specify the exact version of the software you want to install and the base image you want to use. This helps ensure that your Docker image builds are consistent and reproducible. Additionally, when using the `FROM` command, specify a tag for the base image, otherwise it will default to "latest" which can change at any time.
 
-- To ensure that the user specified in the Dockerfile is actually used to run the tool, it is best to avoid using the `USER`
-  instruction in the Dockerfile. This is because cwltool will override the `USER` instruction and match the user instead, which means that the user specified in the `USER` instruction may not be the user that is actually used to run the tool.
+- To ensure that the user specified in the Dockerfile is actually used to run the tool, it is best to avoid using the `USER` instruction in the Dockerfile. This is because cwltool will override the `USER` instruction and match the user instead, which means that the user specified in the `USER` instruction may not be the user that is actually used to run the tool.
 
 - Keep your container images as small as possible, this speeds up the download time and consumes less storage space. Also, when using bioinformatics tools, reference data should be supplied externally (as workflow inputs), rather than including it in the container image. This way, it is easier to update the reference data without the need to rebuild the Docker image.
 
-- Avoid using the `ENTRYPOINT` command in your Dockerfile because it changes the command line that runs inside the container.
-  This can cause confusion when the command line that supplied to the container and the command that actually runs are different.
+- Avoid using the `ENTRYPOINT` command in your Dockerfile because it changes the command line that runs inside the container. This can cause confusion when the command line that supplied to the container and the command that actually runs are different.
 
-- Docker has a feature that can save you time during development by reusing a previous command and its base layer, instead of running it
-  again. However, this can also cause problems if a file being downloaded changes, but the command remains the same. In that case, the cached version of the file will be used instead of the updated one. To avoid this, use the `--no-cache` option to force Docker to re-run the steps.
+- Docker has a feature that can save you time during development by reusing a previous command and its base layer, instead of running it again. However, this can also cause problems if a file being downloaded changes, but the command remains the same. In that case, the cached version of the file will be used instead of the updated one. To avoid this, use the `--no-cache` option to force Docker to re-run the steps.
 
 [containers]: https://doi.org/10.12688/f1000research.15140.1
 [apache-license]: https://spdx.org/licenses/Apache-2.0.html
