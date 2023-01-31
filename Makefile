@@ -3,7 +3,7 @@
 
 # You can set these variables from the command line, and also
 # from the environment for the first two.
-SPHINXOPTS		= "-W"
+#SPHINXOPTS		=   # was "-W" (turn warnings into errors)
 SPHINXBUILD		= sphinx-build
 SOURCEDIR		= src
 BUILDDIR		= _build
@@ -41,6 +41,10 @@ check-json:
 
 container-pull:
 	for container in $$(git grep dockerPull $$(git ls-files *.cwl) | awk '-F: ' '{print $$3}'); do docker pull $${container}; done
+
+update_translations: gettext
+	sphinx-intl update -p _build/gettext
+
 
 .PHONY: help clean watch unittest-examples check-json Makefile
 
