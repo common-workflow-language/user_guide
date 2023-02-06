@@ -211,7 +211,7 @@ inputs:
       - ^.idx
 ```
 
-assuming the primary file above has a .txt extension (example_file.txt), the secondary file will be "example_file.idx".
+assuming the primary file above has a .txt extension (`example_file.txt`), the secondary file will be `example_file.idx`.
 
 ````{note}
 Secondary files are only valid when `type` has a value `File`, or is an array of `items: File`.
