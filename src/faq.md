@@ -454,43 +454,26 @@ CWL uses the POSIX glob(3) pathname matching. Wildcards are allowed in the glob 
 
 If an array used in the glob field, any files that match any pattern in the array are returned.
 
-In the example below, the glob field is used to specify the file(`hello.txt`) in which the output should be stored.
+In the example below, the glob field is used to return all outputs from the tool.
 
-```cwl
-outputs:
-  example_out:
+```
+cwlVersion: v1.0
+class: CommandLineTool
+baseCommand: [tar, --extract]
+inputs:
+  tarfile:
     type: File
-    outputBinding:
-      glob: "hello.txt"
-```
-
-The glob field in the above output section can also be written with the `*` wildcard character as
-
-```cwl
+    inputBinding:
+      prefix: --file
 outputs:
-  example_out:
-    type: File
-    outputBinding:
-      glob: '*.txt'
+    my_output:
+      type:
+          type: array
+          items: [Directory, File]
+      outputBinding:
+       glob: "*"
 ```
 
-Glob can also be used to return all files in the output directory. For example
-
-```
-  outputs:
-  type: Directory
-  outputBinding: { glob: . }
-```
-
-OR
-
-```
-  outputs:
-  type:
-    type: array
-    items: [Directory, File]
-  outputBinding: {glob: "*"}
-```
 
 ## Debug JavaScript Expressions
 
