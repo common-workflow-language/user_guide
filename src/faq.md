@@ -457,14 +457,19 @@ If an array used in the glob field, any files that match any pattern in the arra
 In the example below, the glob field is used to return all outputs from the tool.
 
 ```
-cwlVersion: v1.0
 class: CommandLineTool
-baseCommand: [tar, --extract]
+cwlVersion: v1.0
 inputs:
-  tarfile:
+  in1:
     type: File
+    default:
+      class: File
+      path: /path/to/my/file
     inputBinding:
-      prefix: --file
+      position: 1
+
+baseCommand: cat
+
 outputs:
     my_output:
       type:
