@@ -1,6 +1,6 @@
 [![DOI for the latest version](https://zenodo.org/badge/89621457.svg)](https://zenodo.org/badge/latestdoi/89621457)
 
-[![Syntax Check](https://app.travis-ci.com/common-workflow-language/user_guide.svg?branch=main)](https://app.travis-ci.com/common-workflow-language/user_guide)
+[![CI Tests](https://github.com/common-workflow-language/user_guide/actions/workflows/ci-tests.yml/badge.svg?branch=main)](https://github.com/common-workflow-language/user_guide/actions/workflows/ci-tests.yml)
 
 [![Translation status](https://hosted.weblate.org/widgets/commonwl/-/user-guide/svg-badge.svg)](https://hosted.weblate.org/engage/commonwl/)
 
