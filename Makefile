@@ -25,11 +25,13 @@ watch: clean
 	@echo
 	@echo "Building and watching for changes in the documentation."
 	sphinx-autobuild "$(SOURCEDIR)" "$(BUILDDIR)" \
+			-b html \
 			--ignore='**venv' \
 			--ignore='**.github' \
 			--ignore='*.egg-info' \
 			--ignore='**_includes/**/*.txt' \
-			--watch='cwl'
+			--watch='cwl' \
+			$(SPHINXOPTS) $(O)
 
 ## unittest-examples	:
 unittest-examples:
