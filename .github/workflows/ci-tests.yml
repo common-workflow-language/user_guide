@@ -1,0 +1,44 @@
+name: CI Tests
+
+# Migrated from .travis.yml, based on cwltool's ci-tests.yml.
+# See .travis.yml in git history for previous changes and configurations.
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+  workflow_dispatch:
+
+concurrency:
+  group: build-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
+
+jobs:
+
+  ci_tests:
+    name: CI Tests
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        py-ver-major: [ 3 ]
+        py-ver-minor: [ 9, 10, 11 ]
+
+    env:
+      py-semver: ${{ format('{0}.{1}', matrix.py-ver-major, matrix.py-ver-minor) }}
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: ${{ env.py-semver }}
+          cache: pip
+          cache-dependency-path: |
+            **/setup.cfg
+
+      - run: pip install -U pip setuptools wheel typing
+      - run: pip install -e .[all]
+
+      - run: make RUNNER=cwltool unittest-examples
