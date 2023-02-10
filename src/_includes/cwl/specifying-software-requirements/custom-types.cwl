@@ -1,4 +1,5 @@
-cwlVersion: v1.0
+#!/usr/bin/env cwl-runner
+cwlVersion: v1.2
 class: CommandLineTool
 
 label: "InterProScan: protein sequence classifier"
