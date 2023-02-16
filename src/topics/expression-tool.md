@@ -6,7 +6,7 @@ meant to be used as a way to isolate complex JavaScript expressions
 that need to operate on input data and produce some result as output.
 
 Similar to the command-line tool it requires `inputs` and `outputs`.
-But instead of `baseCommand`, it requires an `expression` attribute.
+But instead of `baseCommand`, it requires an [`expression`](https://w3id.org/cwl/CommandLineTool.html#Expressions_(Optional)) attribute.
 
 % TODO: Fix the missing link the graph below. We cannot have
 %       it here as this file is included in two other files.
@@ -64,7 +64,7 @@ expression: |
 
 ```{note}
 
-We had to use an `InlineJavascriptRequirement` as our expression
+We had to use an [`InlineJavascriptRequirement`](https://w3id.org/cwl/CommandLineTool.html#InlineJavascriptRequirement) as our expression
 contains a JavaScript call in `.toUpperCase()`. This means to tools
 using the expression tool that JavaScript is a requirement.
 ```

@@ -74,7 +74,7 @@ requirements:
 ```
 
 Note also that the author of this CWL description has also included
-`ResourceRequirement`s, specifying the minimum amount of RAM and number of cores
+[`ResourceRequirement`](https://w3id.org/cwl/CommandLineTool.html#ResourceRequirement)s, specifying the minimum amount of RAM and number of cores
 required for the tool to run successfully, as well as details of the version of
 the software that the description was written for and other useful metadata.
 These features are discussed further in other chapters of this user guide.
