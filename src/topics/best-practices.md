@@ -34,7 +34,7 @@ all are required.
   # other s: declarations
   ```
 
-  For more examples of providing metadata within CWL descriptions, see 
+  For more examples of providing metadata within CWL descriptions, see
   [the Metadata and Authorship section of this User Guide](../topics/metadata-and-authorship.md).
 
 - Include [attribution information][license-example] for the author(s) of
@@ -42,7 +42,7 @@ all are required.
   [ORCID][orcid].
 
 - In tool descriptions, list dependencies using short name(s) under
-  `SoftwareRequirement`.
+  [`SoftwareRequirement`](https://w3id.org/cwl/CommandLineTool.html#SoftwareRequirement).
 
 - Include [SciCrunch][scicrunch] identifiers for dependencies in
   `https://identifiers.org/rrid/RRID:SCR_NNNNNN` format.
@@ -53,7 +53,7 @@ all are required.
   `result`, `input`, `output`, and so forth.
 
 - In tool descriptions, include a list of version(s) of the tool that are
-  known to work with this description under `SoftwareRequirement`.
+  known to work with this description under [`SoftwareRequirement`](https://w3id.org/cwl/CommandLineTool.html#SoftwareRequirement).
 
 - `format` should be specified for all input and output `File`s.
   Bioinformatics tools should use format identifiers from [EDAM][edam-example].
@@ -66,7 +66,7 @@ all are required.
 - Mark all input and output `File`s that are read from or written to in a
   streaming compatible way (only once, no random-access), as `streamable: true`.
 
-- Each `CommandLineTool` description should focus on a single operation
+- Each [`CommandLineTool`](https://w3id.org/cwl/CommandLineTool.html#CommandLineTool) description should focus on a single operation
   only, even if the (sub)command is capable of more. Don't overcomplicate your
   tool descriptions with options that you don't need or use.
 

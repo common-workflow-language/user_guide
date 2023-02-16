@@ -1,7 +1,7 @@
 # Expressions
 
 If you need to manipulate input parameters, include the requirement
-`InlineJavascriptRequirement` and then anywhere a parameter reference is
+[`InlineJavascriptRequirement`](https://w3id.org/cwl/CommandLineTool.html#InlineJavascriptRequirement) and then anywhere a parameter reference is
 legal you can provide a fragment of Javascript that will be evaluated by
 the CWL runner.
 
@@ -80,7 +80,7 @@ only in certain fields.  These are:
     - From [CommandOutputBinding](https://www.commonwl.org/v1.0/CommandLineTool.html#CommandOutputBinding)
       - `glob`
       - `outputEval`
-- From `Workflow`
+- From [`Workflow`](https://w3id.org/cwl/Workflow.html)
   - From [InputParameter](https://www.commonwl.org/v1.0/Workflow.html#InputParameter) and [WorkflowOutputParameter](https://www.commonwl.org/v1.0/Workflow.html#WorkflowOutputParameter)
     - `format`
     - `secondaryFiles`
@@ -115,7 +115,7 @@ only in certain fields.  These are:
 
 ## Using External Libraries and Inline JavaScript Code with `expressionLib`
 
-The requirement `InlineJavascriptRequirement` supports an `expressionLib` attribute
+The requirement [`InlineJavascriptRequirement`](https://w3id.org/cwl/CommandLineTool.html#InlineJavascriptRequirement) supports an `expressionLib` attribute
 that allows users to load external JavaScript files, or to provide inline JavaScript
 code.
 
