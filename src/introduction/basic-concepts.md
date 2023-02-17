@@ -179,6 +179,7 @@ vendors.
 
 - Semantic Versioning - <https://semver.org/>
 - The CWL Specification page in the CWL website: <https://www.commonwl.org/specification/>
+- The Command Line Tool Description Standard: <[https://www.commonwl.org/v1.2/CommandLineTool.html](https://w3id.org/cwl/CommandLineTool.html)>
 - The current CWL specification on GitHub: {{ '<https://github.com/common-workflow-language/cwl-{}>'.format(cwl_version_text) }}
 - The list of Implementations in the CWL website: <https://www.commonwl.org/implementations/>
 - PROV-O: The PROV Ontology - <https://www.w3.org/TR/prov-o/>
