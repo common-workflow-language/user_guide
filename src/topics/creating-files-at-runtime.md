@@ -4,7 +4,7 @@ Sometimes you need to create a file on the fly from input parameters,
 such as tools that expect to read their input configuration from a file
 rather than the command line parameters, or need a small wrapper shell script.
 
-To generate such files, we can use the `InitialWorkDirRequirement`.
+To generate such files, we can use the [`InitialWorkDirRequirement`](https://w3id.org/cwl/CommandLineTool.html#InitialWorkDirRequirement).
 
 ```{literalinclude} /_includes/cwl/creating-files-at-runtime/createfile.cwl
 :language: cwl

@@ -1,7 +1,7 @@
 # File Formats
 
-Tools and workflows can take `File` types as input and produce them as output.
-We also recommend indicating the format for `File` types. This helps document
+Tools and workflows can take [`File`](https://w3id.org/cwl/CommandLineTool.html#File) types as input and produce them as output.
+We also recommend indicating the format for [`File`](https://w3id.org/cwl/CommandLineTool.html#File) types. This helps document
 for others how to use your tool while allowing you to do some simple
 type-checking when creating parameter files.
 
