@@ -450,15 +450,15 @@ specifying a Singularity format container is not part of the CWL standards.
 ## How does glob work when describing output values?
 The field outputBinding describes how to set the value of each output parameter. The 'glob' field specifies a pattern to find files/directories relative to the output directory. The pattern used for glob' must be either relative to the output directory, an absolute path to the output directory, or an absolute path to an input file.
 
-CWL uses the POSIX glob(3) pathname matching. Wildcards are allowed in the glob field and are useful when If you don’t know the exact name of a file or directory in advance. The wildcard characters can either be an asterisk *, a question mark matching pathnames in directories. `?` or a range `[]`.
+CWL uses the POSIX glob(3) pathname matching. Wildcards are allowed in the glob field and are useful when If you don’t know the exact name of a file or directory in advance. The wildcard characters can either be an asterisk `*`, a question mark matching pathnames in directories. `?` or a range `[]`.
 
 If an array used in the glob field, any files that match any pattern in the array are returned.
 
-In the example below, the glob field is used to return all outputs from the tool.
+In the example below, the glob field using the `*` wildcard is used to return all outputs from the tool.
 
 ```
-class: CommandLineTool
 cwlVersion: v1.0
+class: CommandLineTool
 inputs:
   in1:
     type: File
@@ -479,6 +479,24 @@ outputs:
        glob: "*"
 ```
 
+In the following example, the wildcard `?` is used in the glob field to return all tools with the letter `a` in their pathname.
+
+```
+cwlVersion: v1.0
+class: CommandLineTool
+baseCommand: [tar, --extract]
+inputs:
+  tarfile:
+    type: File
+    inputBinding:
+      prefix: --file
+outputs:
+  untarfile:
+    type: File[]
+    outputBinding:
+      glob: "?a"
+
+```
 
 ## Debug JavaScript Expressions
 
