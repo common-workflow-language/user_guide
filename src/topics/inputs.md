@@ -67,7 +67,7 @@ the tools aren't accidentally accessing files that were not explicitly
 specified
 ```
 
-The field `inputBinding` is optional and indicates whether and how the
+The field [`inputBinding`](https://w3id.org/cwl/CommandLineTool.html#Input_binding) is optional and indicates whether and how the
 input parameter should appear on the tool's command line.  If
 `inputBinding` is missing, the parameter does not appear on the command
 line.  Let's look at each example in detail.
