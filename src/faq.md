@@ -447,6 +447,41 @@ The reference runner and several other CWL implementations support running
 those Docker format containers using the Singularity engine. Directly
 specifying a Singularity format container is not part of the CWL standards.
 
+## How do I specify when network access is required?
+
+In CWL v1.1 and above, you need to specify when network access is required by including the `NetworkAccess` requirement.
+Below is an example using `Curl` where the network access requirement is used. The `networkAccess` value is set to `true` which indicates that the tool must be able to make outgoing connections to network resources.
+
+```
+cwlVersion: v1.2
+class: CommandLineTool
+
+requirements:
+  NetworkAccess:
+    networkAccess: true
+
+baseCommand: curl
+
+stdout: download.html
+
+inputs:
+  url:
+    type: string
+    inputBinding:
+       position: 1
+
+outputs:
+  out:
+    type: File
+    outputBinding:
+      glob: download.html
+```
+
+The input yaml file will be
+```
+url: https://www.commonwl.org/v1.2/
+```
+
 ## Debug JavaScript Expressions
 
 You can use the <code>--js-console</code> option of <code>cwltool</code>, or you can try
