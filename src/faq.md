@@ -449,13 +449,12 @@ specifying a Singularity format container is not part of the CWL standards.
 
 ## How do I specify when network access is required?
 
-In CWL v1.1 and above, you need to specify when network access is required by
-including the `NetworkAccess` requirement.
+In CWL v1.1 and above, you need to specify when network access
+is required by including the `NetworkAccess` requirement.
 If `networkAccess` is `true`the tool must be able to make
 outgoing connections to network resources.
-If `networkAccess` is `false` or not specified, is false or not
-specified, tools must not assume network access, except for localhost
-(the loopback device).
+If `networkAccess` is `false` or not specified, tools must not
+assume network access, except for localhost(the loopback device).
 
 Below is an example using `curl` where `networkAccess: true` which
 allows the page with the link in the yaml file to be downloaded and
