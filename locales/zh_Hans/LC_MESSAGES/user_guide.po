@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: Common Workflow Language User Guide\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-01-25 14:33+0100\n"
-"PO-Revision-Date: 2023-02-19 06:59+0000\n"
+"PO-Revision-Date: 2023-03-01 05:35+0000\n"
 "Last-Translator: Rhea-Xiao <xiao.translations@gmail.com>\n"
 "Language-Team: Chinese (Simplified) <https://hosted.weblate.org/projects/"
 "commonwl/user-guide/zh_Hans/>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 4.16-dev\n"
+"X-Generator: Weblate 4.16-rc\n"
 
 #: ../../LICENSE.md:2
 #: 4e203044f0464fd5a3256430391dde12
@@ -133,8 +133,8 @@ msgstr "本页已被移除"
 #: cc11f5d29206492d9f2f0922882b6159
 msgid "This page is out-of-date and was kept here to preserve the links of the old User Guide. Please use the new [Table of Contents](index.md#table-of-contents) to browse the User Guide."
 msgstr ""
-"本页已过时，仍然保留是为了保存旧版《用户指南》的链接，请使用新链接 "
-"[内容目录](index.md#table-of-contents)浏览《用户指南》。"
+"此页面已过时，保留在此以保留旧用户指南链接，请使用新链接 [内容目录](index.md"
+"#table-of-contents)浏览《用户指南》。"
 
 #: ../../src/faq.md:1
 #: e2ed894d325a4f50a5e2dc69da5531a1
@@ -144,7 +144,7 @@ msgstr "最常见问题"
 #: ../../src/faq.md:11
 #: 61edb787dab04ca2ad3ed07616d878a0
 msgid "Non \"`File`\" Types Using `evalFrom`"
-msgstr "使用 `evalFrom` 的非“`文件`”类型"
+msgstr "使用 `evalFrom` 的非“`File`”类型"
 
 #: ../../src/faq.md:41
 #: d5321589e7ed4f0db3c630cc39800791
@@ -155,9 +155,9 @@ msgstr "重命名“输入文件”"
 #: fc62427c0a004810b055dee90ec5e2d9
 msgid "This example demonstrates how to change the name of an input file as part of a tool description. This could be useful when you are taking files produced from another step in a workflow, and don't want to work with the default names that these files were given when they were created."
 msgstr ""
-"本例展示了如何更改“输入文件”名称，属于工具描述的内容。在打开创建于工作流其他"
-"步骤的文件后，若您不想保留默认文件名（文件创建时的命名），此时该工具可为您提"
-"供帮助。"
+"本示例演示了如何更改“输入文件”名称，属于工具描述的内容。在打开创建于工作流其"
+"他步骤的文件后，若您不想保留默认文件名（文件创建时的命名），此时该工具可为您"
+"提供帮助。"
 
 #: ../../src/faq.md:59
 #: 1c6b8a4194a14611b4061b1540c3807f
@@ -167,7 +167,7 @@ msgstr "重命名“输出文件”"
 #: ../../src/faq.md:61
 #: bc7ad10c929848a3a9a240a3c501d299
 msgid "This example demonstrates how to change the name of an output file from the default name given to it by a tool:"
-msgstr "本例展示了如何通过以下工具更改“输出文件”名称："
+msgstr "本示例演示了如何通过以下工具更改“输出文件”名称："
 
 #: ../../src/faq.md:82
 #: 7225a993d281421b95c8e3df2846a0e3
@@ -233,8 +233,9 @@ msgstr "现在，如果`cwltool`的输入绑定采用`self`，则无法处理缺
 
 #: ../../src/faq.md:165
 #: ce6db54bd0f54839a5beb948530a21f0
+#, fuzzy
 msgid "Model a \"one-or-the-other\" Parameter"
-msgstr "对“非此即彼”参数进行建模"
+msgstr "对一个“非此即彼”参数进行建模"
 
 #: ../../src/faq.md:167
 #: d06cbf89028b4638ad54c2529bcbfa25
@@ -257,7 +258,7 @@ msgstr ""
 #: ../../src/faq.md:194
 #: 941077158ec54ae19bfa2e2ad6662da1
 msgid "merge_nested"
-msgstr "merge_nested"
+msgstr ""
 
 #: ../../src/faq.md:196
 #: 937cb94a370640c788fbc3fe0b19f2e5
@@ -336,7 +337,6 @@ msgstr ""
 
 #: ../../src/faq.md:342
 #: b53dc77466b24a67b52b8aadf4fab724
-#, fuzzy
 msgid "Setting Booleans"
 msgstr "设置布尔运算"
 
@@ -373,262 +373,322 @@ msgstr "例如，文件名 `a space is here.txt`中包含了3个空格字符。"
 #: ../../src/faq.md:371
 #: 182959fc9f4746d082994e07d05c8cde
 msgid "If you can not avoid these dangerous characters, then pass `--relax-path-checks` to `cwltool`."
-msgstr ""
+msgstr "如果无法避开这些危险的字符，您可以将 `--relax-path-checks`传送至 `cwltool`。"
 
 #: ../../src/faq.md:373
 #: cc7752e9989e4a6d957682f479d6fc60
 msgid "CWL Parameter Reference Error due to Hyphen in Input Identifier"
-msgstr ""
+msgstr "由于输入标识符中包含连字符，显示CWL参数引用错误"
 
 #: ../../src/faq.md:375
 #: 6db1ebd2d6c74ceca889662cd7df5cd5
 msgid "If `cwltool --validate` returns valid"
-msgstr ""
+msgstr "如`cwltool --validate`返回有效"
 
 #: ../../src/faq.md:384
 #: 3de2513c7d7b4569ba63f7e6d29137b7
 msgid "But executing it causes an error like:"
-msgstr ""
+msgstr "但执行时显示如下错误："
 
 #: ../../src/faq.md:396
 #: ae3a9188706649e28f97bc4ec34c0821
 msgid "The file is here"
-msgstr ""
+msgstr "文件在此处"
 
 #: ../../src/faq.md:410
 #: e1ac97ab6ad3449b8c54933d25257f73
 msgid "Problem caused by `-` (hyphen character)."
-msgstr ""
+msgstr "由`-`（连字符）引发的问题。"
 
 #: ../../src/faq.md:423
 #: f6c402f7f6974edbbb5582c8e22f3869
 msgid "To fix this error, change `-` (hyphen) to `_` (underscore)"
-msgstr ""
+msgstr "要修复该错误，需将`-`（连字符）更改为`_` （下划线）"
 
 #: ../../src/faq.md:436
 #: 190099a242a645c9b9f8bc3ce89d920d
 msgid "If it is not possible to change the input identifier, then you can use an alternative CWL Parameter Reference syntax:"
-msgstr ""
+msgstr "如无法更改输入标识符，您可使用另一种CWL参数引用语法："
 
 #: ../../src/faq.md:442
 #: 06a4f6ffc2da4d43b453d4784b42efd3
 msgid "Use CWL and cwltool with Singularity"
-msgstr ""
+msgstr "将CWL和cwltool与Singularity一起使用"
 
 #: ../../src/faq.md:445
 #: 1901c34201054a9cae199b0dbb8b945e
 msgid "The CWL standards are built around (optional) Docker format containers. The reference runner and several other CWL implementations support running those Docker format containers using the Singularity engine. Directly specifying a Singularity format container is not part of the CWL standards."
 msgstr ""
+"CWL标准是围绕（可选）Docker格式容器建立的，且引用运行程序和其他几种CWL执行均"
+"支持通过Singularity引擎运行Docker格式容器，但直接指定一个Singularity "
+"格式容器不属于CWL标准的内容。"
 
 #: ../../src/faq.md:450
 #: 2d498470524d47f18f9936ace6acebb0
 msgid "Debug JavaScript Expressions"
-msgstr ""
+msgstr "调试 JavaScript 表达式"
 
 #: ../../src/faq.md:452
 #: d7b044f5224a48eda09bc949cf645193
 msgid "You can use the <code>--js-console</code> option of <code>cwltool</code>, or you can try creating a JavaScript or TypeScript project for your code, and load it using <code>expressionLib</code>, e.g.: <a href=\"https://github.com/common-workflow-language/common-workflow-language/blob/master/v1.0/v1.0/template-tool.cwl#L6-L8\"> https://github.com/common-workflow-language/common-workflow-language/blob/master/v1.0/v1.0/template-tool.cwl#L6-L8</a></dd>"
 msgstr ""
+"您可使用 <code>--js-console</code> option of <code>cwltool</code>，"
+"或尝试为代码创建一个JavaScript 或 "
+"TypeScript项目，并使用<code>expressionLib</code>进行加载， 比如： <a href="
+"\"https://github.com/common-workflow-language/common-workflow-language/blob/"
+"master/v1.0/v1.0/template-tool.cwl#L6-L8\"> https://github.com/"
+"common-workflow-language/common-workflow-language/blob/master/v1.0/v1.0/"
+"template-tool.cwl#L6-L8</a>"
 
 #: ../../src/index.md:1
 #: 2754519265eb426b940bbbd2b8d64e1e
 msgid "Common Workflow Language User Guide"
-msgstr ""
+msgstr "《通用工作流语言用户指南》"
 
 #: ../../src/index.md:3
 #: f8d6e4cd54cb42c88182a43171d97bab
 msgid "This guide will introduce you to writing workflows using the [Common Workflow Language](https://www.commonwl.org/) (CWL) open standards. This guide describes the latest specification {{ cwl_version }}."
 msgstr ""
+"本指南将指导您使用[Common Workflow Language](https://www.commonwl.org/) (CWL)"
+" 开放标准编写工作流，并介绍了最新规范 {{ cwl_version }}。"
 
 #: ../../src/index.md:7
 #: 132d40fee3b84469afa80d5ff613bf77
 msgid "Contributions and Feedback are Welcome!"
-msgstr ""
+msgstr "欢迎投稿和反馈！"
 
 #: ../../src/index.md:9
 #: 0f47157605a34ea58770ea898deebae4
 msgid "If you find that something is missing from this guide, or if you would like to provide other feedback, file an Issue on the [project repository for this guide][repo]. You can also suggest changes directly in a Pull Request by clicking the \"Edit this page\" button at the right sidebar of each page."
 msgstr ""
+"如您发现本指南存在内容缺失，或想提供其他反馈，请在[project repository for "
+"this guide][repo]上提交问题。您也可单击页面右侧边栏的 “Edit this "
+"page（编辑本页）”按钮，直接在Pull Request（拉取请求）中提交修改建议。"
 
 #: ../../src/index.md:16
 #: 6d269e8d70184034bcb56385a6ca198f
 msgid "Navigating the User Guide"
-msgstr ""
+msgstr "浏览《用户指南》"
 
 #: ../../src/index.md:18
 #: ed74c9a4b623464480e2c184668fcec0
 msgid "If you are a beginner user get started with the [Introduction](/introduction/index.md) section. For advanced users the subsections of the [Topics](/topics/index.md) have detailed information about the most common topics for CWL."
 msgstr ""
+"如您是初级用户，请查阅 [Introduction（介绍）](/introduction/index.md) "
+"章节。而对于高级用户而言， [Topics主题](/topics/index."
+"md)子章节则详细介绍了关于CWL的最常见主题。"
 
 #: ../../src/index.md:23
 #: cfa67cf5521b414da6f7d34cbed283f7
 msgid "The Table of Contents is displayed at the top menu and also on the left sidebar. It also appears further down this page but with links to subsections. The right sidebar contains links to the sections of each page, and the Search form is on the left sidebar."
-msgstr ""
+msgstr "目录显示在菜单顶部和左侧边栏，也出现在本页的下方（但也附带子章节的链接）。每"
+"页所在章节的链接显示在右侧边栏，而搜索窗口则显示在左侧边栏。"
 
 #: ../../src/index.md:28
 #: ee6b82bd86264e4bb1e8e4065b1e6b9c
 msgid "Table of Contents"
-msgstr ""
+msgstr "目录"
 
 #: ../../src/introduction/basic-concepts.md:1
 #: e208c8a7506e41dcac9a403c5d2850c1
 msgid "Basic Concepts"
-msgstr ""
+msgstr "基本概念"
 
 #: ../../src/introduction/basic-concepts.md:3
 #: ac62d326a68145b695e46b714d4e8156
 msgid "This section describes the basic concepts for users to get started on working with Common Workflow Language (CWL) workflows. Readers are expected to be familiar with workflow managers, YAML, and comfortable with following instructions for the command-line. The other sections of the user guide cover the same concepts, but in more detail. If you are already familiar with CWL or you are looking for more advanced content, you may want to skip this section."
 msgstr ""
+"本章节介绍了一些基本概念，以帮助用户更顺利地开始使用通用工作流语言（CWL）工作"
+"。我们相信读者已经非常熟悉工作流管理工具YAML，且能熟练地按照命令行说明进行操"
+"作。用户指南另一章节也介绍了相同的概念，但内容更为详细。如果您已经十分熟悉CWL"
+"或正在寻找更高级的内容，可能需要跳过本章节。"
 
 #: ../../src/introduction/basic-concepts.md:10
 #: 984e6676b9d04c7092bc492f195dfb91
 msgid "The CWL Specification"
-msgstr ""
+msgstr "CWL规范"
 
 #: ../../src/introduction/basic-concepts.md:21
 #: cbe1d761da5b403d9605fa1fb8e62fdf
 msgid "The CWL specification is a document written and maintained by the CWL community. The specification has different versions. The version covered in this user guide is the {{ cwl_version }}."
-msgstr ""
+msgstr "CWL规范文档由CWL社区撰写并维护，此规范有不同版本，本用户指南所用版本为 {{ "
+"cwl_version }}。"
 
 #: ../../src/introduction/basic-concepts.md:25
 #: 3a71b269bd3c49eb913cf69b60373c24
 msgid "The specification version can have up to three numbers separated by `.`s (dots). The first number is the major release, used for backward-incompatible changes like the removal of deprecated features. The second number is the minor release, used for new features or smaller changes that are backward-compatible. The last number is used for bug fixes, like typos and other corrections to the specification."
 msgstr ""
+"规范的版本最多包含三个数字，以 `.`（圆点）分隔。第一个数字说明主要版本，用于"
+"标注删除弃用功能等向后不可兼容的更改。第二个数字说明次要版本，用于标注增添新"
+"功能或小幅调整等向后兼容的更改。最后一个数字说明错误修复，用于标注拼写错误更"
+"正或对规范的其他修正。"
 
 #: ../../src/introduction/basic-concepts.md:33
 #: b171b72c48d44050a3416a7a42c4021d
 msgid "The model used for the specification version is called Semantic Versioning. See the end of this section to [learn more](#learn-more) about it."
-msgstr ""
+msgstr "用于规范版本的模型称为“语义版本控制”，请参阅本章节末尾以[了解更多](#learn-"
+"more)有关信息。"
 
 #: ../../src/introduction/basic-concepts.md:37
 #: b3df1607e9d242d78b22dc44335fbe2d
 msgid "Implementations"
-msgstr ""
+msgstr "实现"
 
 #: ../../src/introduction/basic-concepts.md:39
 #: 078b58ffc1cc4d25a7c4eea3bb76e025
 msgid "An implementation of the CWL specification is any software written following what is defined in a version of the specification document. However, implementations may not implement every aspect of the specification. CWL implementations are licensed under both Open Source and commercial licenses."
 msgstr ""
+"CWL规范的实现意味着所有软件的编写均需遵循规范文档中所定义版本的要求。但是，在"
+"实现过程中可能无法满足规范的所有方面。目前，CWL规范已同时获取开源和商业许可的"
+"授权。"
 
 #: ../../src/introduction/basic-concepts.md:44
 #: c3869b4ec5ff47d99e8da79770722e04
 msgid "CWL is well suited for describing large-scale workflows in cluster, cloud and high performance computing environments where tasks are scheduled in parallel across many nodes."
-msgstr ""
+msgstr "CWL非常适用于描述集群、云和高性能计算环境中的大规模工作流情况，因为其中可以跨"
+"节点并行调度任务。"
 
 #: ../../src/introduction/basic-concepts.md:51
 #: 2482c84831fc4dfab629e7bfcfb41cbf
 msgid "CWL specification, implementations, and other tools."
-msgstr ""
+msgstr "CWL规范、实现及其他工具。"
 
 #: ../../src/introduction/basic-concepts.md:105
 #: a5ebc727fb3443f78e81d6b7ed5ac750
 msgid "Processes and Requirements"
-msgstr ""
+msgstr "流程和要求"
 
 #: ../../src/introduction/basic-concepts.md:107
 #: 86e6a06992dc4228bfda7add48e28ca3
 msgid "A process is a computing unit that takes inputs and produces outputs. The behavior of a process can be affected by the inputs, requirements, and hints. There are four types of processes defined in the CWL specification {{ cwl_version }}:"
 msgstr ""
+"流程是指接收输入并产生输出的计算单元，流程的行为可能受到输入、要求及提示的影"
+"响。CWL规范{{ cwl_version }}定义的流程包括如下四种："
 
 #: ../../src/introduction/basic-concepts.md:112
 #: 8c9772f96caf4169924d22eb929a4f0f
 msgid "A command-line tool."
-msgstr ""
+msgstr "命令行工具。"
 
 #: ../../src/introduction/basic-concepts.md:113
 #: 4fac209a62114798b79e4810f7a0148b
 msgid "An expression tool."
-msgstr ""
+msgstr "表达式工具。"
 
 #: ../../src/introduction/basic-concepts.md:114
 #: b97ba368fd664caab0494e2392795697
 msgid "An operation."
-msgstr ""
+msgstr "操作。"
 
 #: ../../src/introduction/basic-concepts.md:115
 #: 903a6796e3304a19ad885b2428b0e80f
 msgid "A workflow."
-msgstr ""
+msgstr "工作流。"
 
 #: ../../src/introduction/basic-concepts.md:118
 #: 6e352ac1f8e144c392ac5adf18c28298
 msgid "The processing units available in the CWL objects model."
-msgstr ""
+msgstr "CWL对象模型中可用的处理单元。"
 
 #: ../../src/introduction/basic-concepts.md:119
 #: cf2922f645904ac7955428ecddc37b8a
 msgid "A command-line tool is a wrapper for a command-line utility like `echo`, `ls`, and `tar`. A command-line tool can be called from a workflow."
-msgstr ""
+msgstr "命令行工具是 `echo`、`ls` 及 `tar` "
+"等命令行实用程序的包装器。可从工作流中调用命令行工具。"
 
 #: ../../src/introduction/basic-concepts.md:122
 #: 5f47aae608c041aeb4134d59dad314d2
 msgid "An expression tool is a wrapper for a JavaScript expression. It can be used to simplify workflows and command-line tools, moving common parts of a workflow execution into reusable JavaScript code that takes inputs and produces outputs like a command-line tool."
 msgstr ""
+"表达式工具是 JavaScript 表达式的包装器，可用于简化工作流和命令行工具，"
+"将工作流执行的常见部分移动到可重用的 JavaScript "
+"代码中，这些代码像命令行工具一样接受输入并生成输出。"
 
 #: ../../src/introduction/basic-concepts.md:127
 #: f6f589481d0c4891beaccb63160619ef
 msgid "Operation is an abstract process that also takes inputs, produces outputs, and can be used in a workflow. But it is a special operation not so commonly used. It is discussed in the [Operations section](../topics/operations.md) of this user guide."
 msgstr ""
+"操作是一个抽象的流程，同样可接受输入并生成输出，且可用于工作流中。但是，这是"
+"一种特殊的操作，并不十分常用。在本用户指南的 [操作章节](../topics/operations."
+"md)中，我们对它进行了相关讨论。"
 
 #: ../../src/introduction/basic-concepts.md:131
 #: 73b0c1ccb18c4b74a2c0fdf9706eca85
 msgid "The workflow is a process that contains steps. Steps can be other workflows (nested workflows), command-line tools, or expression tools. The inputs of a workflow can be passed to any of its steps, while the outputs produced by its steps can be used in the final output of the workflow."
 msgstr ""
+"工作流是包含步骤的流程。步骤可以是其他工作流（嵌套工作流）、命令行工具或表达"
+"式工具。工作流的输入可以传送到其他任何步骤，而步骤生成的输出可用作工作流的最"
+"终输出。"
 
 #: ../../src/introduction/basic-concepts.md:137
 #: 4ace6b92f4e04a07aa202840ebe36417
 msgid "The CWL specification allows for implementations to provide extra functionality and specify prerequisites to workflows through *requirements*. There are many requirements defined in the CWL specification, for instance:"
-msgstr ""
+msgstr "CWL规范允许实现提供额外的功能或通过 "
+"*requirements*指定工作流的先决条件。CWL规范中定义了很多要求，比如："
 
 #: ../../src/introduction/basic-concepts.md:141
 #: cc6cd8cb81564cadb8e6a4c49423b7f7
 msgid "`InlineJavascriptWorkflow` - enables JavaScript in expressions."
-msgstr ""
+msgstr "`InlineJavascriptWorkflow`——在表达式中启用JavaScript。"
 
 #: ../../src/introduction/basic-concepts.md:142
 #: 2d9f53b6ed5041dbb6c0b54835897856
 msgid "`SubworkflowFeatureRequirement` - enables nested workflows."
-msgstr ""
+msgstr "`SubworkflowFeatureRequirement` ——启用嵌套工作流。"
 
 #: ../../src/introduction/basic-concepts.md:143
 #: 907674a4ecff4826a2b880e28fc38f33
 msgid "`InitialWorkDirRequirement` - controls staging files in the input directory."
-msgstr ""
+msgstr "`InitialWorkDirRequirement`——控制输入目录中的暂存文件。"
 
 #: ../../src/introduction/basic-concepts.md:145
 #: 037cd0e5ceda482eaeaca03d51745aee
 msgid "Some CWL runners may provide requirements that are not in the specification. For example, GPU requirements are supported in `cwltool` through the `cwltool:CUDARequirement` requirement, but it is not part of the {{ cwl_version }} specification and may not be supported by other CWL runners."
 msgstr ""
+"某些CWL运行程序可能提供规范之外的需求，比如`cwltool` 通过 "
+"`cwltool:CUDARequirement` 需求来支持GPU需求，但这不属于 {{ cwl_version "
+"}}版本规范的内容，可能不受其他CWL运行程序支持。"
 
 #: ../../src/introduction/basic-concepts.md:151
 #: e4643938445b48cc80eb8973ceeb126e
 msgid "Hints are similar to requirements, but while requirements list features that are required, hints list optional features. Requirements are explained in detail in the [Requirements](../topics/requirements-and-hints.md) section."
 msgstr ""
+"提示类似于需求。但是，需求列出必需功能，而提示仅列出可选功能。[需求](../"
+"topics/requirements-and-hints.md)章节对需求进行了详细介绍。"
 
 #: ../../src/introduction/basic-concepts.md:155
 #: c4c3315c96714e81b364f8cc003b87e6
 msgid "FAIR Workflows"
-msgstr ""
+msgstr "FAIR 工作流"
 
 #: ../../src/introduction/basic-concepts.md:157
 #: 3eb6a013a2a4478ca2ad134661f65c58
 msgid "The FAIR principles have laid a foundation for sharing and publishing digital assets, and in particular, data. The FAIR principles emphasize machine accessibility and that all digital assets should be Findable, Accessible, Interoperable, and Reusable. Workflows encode the methods by which the scientific process is conducted and via which data are created. It is thus important that workflows support the creation of FAIR data and adhere to the FAIR principles. — [FAIR Computational Workflows](https://workflows.community/groups/fair/), Workflows Community Initiative."
 msgstr ""
+"FAIR 原则为共享和公开数字资产（尤其是数据）提供了基础。FAIR 原则强调访问计算"
+"机的重要性，且所有数字资产都应是可发现、可访问、可互操及可重用的。工作流解码"
+"了执行科学流程的方法，并利用该方法来创建数据。因此，工作流必须支持FAIR数据的"
+"创建且始终坚持FAIR原则。—— [FAIRFAIR计算工作流](https://workflows.community/"
+"groups/fair/)，工作流社区协议。"
 
 #: ../../src/introduction/basic-concepts.md:167
 #: 074af9633627470485e5225326d5f20a
 msgid "CWL has roots in \"make\" and many similar tools that determine order of execution, based on dependencies between tasks. However, unlike \"make\", CWL tasks are isolated, and you must be explicit about your inputs and outputs."
 msgstr ""
+"CWL源于\"make\"，且拥有很多类似的工具，可基于任务间的依赖关系决定执行顺序。"
+"但不同于\"make\"的是，CWL任务是独立的，您必须明确输入和输出。"
 
 #: ../../src/introduction/basic-concepts.md:171
 #: 847951c055b94a83b1e081594cef22ee
 msgid "The benefit of explicitness and isolation are flexibility, portability, and scalability; tools and workflows described with CWL can transparently leverage technologies such as Docker and be used with CWL implementations from different vendors."
 msgstr ""
+"任务明确且独立的好处在于灵活、可移植及可拓展。使用CWL描述的工具和工作流可公开"
+"透明地使用Docker等技术，并与来自不同供应商的CWL实现一起使用。"
 
 #: ../../src/introduction/basic-concepts.md:176
 #: 44bde1fae06b4678bcac4f3224601296
 msgid "`cwltool` also uses the PROV-O standard ontology for data provenance."
-msgstr ""
+msgstr "`cwltool` 也使用PROV-O标准本体来追溯数据来源。"
 
 #: ../../src/introduction/basic-concepts.md:178
 #: ../../src/introduction/prerequisites.md:196
@@ -637,302 +697,368 @@ msgstr ""
 #: f059896039524095b4deb65d693f8ddf
 #: 3439764fab0e49d2bcb7c9fbae556e65
 msgid "Learn More"
-msgstr ""
+msgstr "了解更多信息"
 
 #: ../../src/introduction/basic-concepts.md:180
 #: 9d5100c7d0a040aea1020bf633ad17de
 msgid "Semantic Versioning - <https://semver.org/>"
-msgstr ""
+msgstr "语义版本控制 —— <https://semver.org/>"
 
 #: ../../src/introduction/basic-concepts.md:181
 #: 36eb4b3b966640af90faa55db3789cb6
 msgid "The CWL Specification page in the CWL website: <https://www.commonwl.org/specification/>"
-msgstr ""
+msgstr "在CWL网站上查阅CWL规范页面，请前往： <https://www.commonwl.org/specification/"
+">"
 
 #: ../../src/introduction/basic-concepts.md:182
 #: 2ccb956baa6b4376a04ad9fcc4654631
 msgid "The current CWL specification on GitHub: {{ '<https://github.com/common-workflow-language/cwl-{}>'.format(cwl_version_text) }}"
 msgstr ""
+"在Github上查阅当前版本CWL规范，请前往： {{ '<https://github.com/"
+"common-workflow-language/cwl-{}>'.format(cwl_version_text) }}"
 
 #: ../../src/introduction/basic-concepts.md:183
 #: 72889b830c514afe9a7cb1e64b5666a0
 msgid "The list of Implementations in the CWL website: <https://www.commonwl.org/implementations/>"
-msgstr ""
+msgstr "在CWL网站上查阅实现列表，请前往：<https://www.commonwl.org/implementations/>"
 
 #: ../../src/introduction/basic-concepts.md:184
 #: e29bd7f973544600be589c3b3f84cf63
 msgid "PROV-O: The PROV Ontology - <https://www.w3.org/TR/prov-o/>"
-msgstr ""
+msgstr "PROV-O：PROV 本体——<https://www.w3.org/TR/prov-o/>"
 
 #: ../../src/introduction/basic-concepts.md:185
 #: c377a7f5dbe645cebbb6c7eccf831a0b
 msgid "CWL Operations are covered in the [Operations](../topics/operations.md) section of this user guide."
-msgstr ""
+msgstr "本用户指南的[操作](../topics/operations.md)章节详细介绍了CWL操作。"
 
 #: ../../src/introduction/index.md:1
 #: 1769a0cbf4de4d77879c1f202cd11af9
 msgid "Introduction"
-msgstr ""
+msgstr "介绍"
 
 #: ../../src/introduction/index.md:3
 #: 950370f0a36048b38e1bde9b78f80816
 msgid "This section will guide you through a short introduction to CWL, the prerequisites for following this user guide, and some basic concepts that are useful to know before reading the rest of the user guide."
-msgstr ""
+msgstr "本章节将简要介绍CWL、遵循本用户指南的先决条件及一些基本概念，这些概念有助于阅"
+"读（理解）用户指南的其他内容。"
 
 #: ../../src/introduction/prerequisites.md:1
 #: f01faaf1b253407cbbc2f353c24774f3
 msgid "Prerequisites"
-msgstr ""
+msgstr "先决条件"
 
 #: ../../src/introduction/prerequisites.md:6
 #: 353b14f06ee845d0a06a829643e31534
 msgid "The software and configurations listed in this section are prerequisites for following this user guide. The CWL standards are implemented by many different workflow runners and platforms. This list of requirements focuses on the CWL reference runner, `cwltool`. You can use another CWL-compatible runner or workflow system, but the results and interface may look different (though the exact workflow outputs should be identical)."
 msgstr ""
+"本章节所列的软件和配置是遵循本用户指南的先决条件。CWL标准通过不同的工作流运行"
+"程序和平台实现。需求列表的重点在于CWL引用运行程序`cwltool`。您也可使用其他的"
+"兼容CWL的运行程序或工作流系统，但结果和界面可能看上去不同（尽管精确的工作流输"
+"出应该相同）。"
 
 #: ../../src/introduction/prerequisites.md:12
 #: b5a0607096814c0aa577f977c3b57c54
 msgid "CWL Implementations"
-msgstr ""
+msgstr "CWL实现"
 
 #: ../../src/introduction/prerequisites.md:14
 #: ff2bb4c6504b456bac7ca9c514414dbf
 msgid "There are many implementations of the CWL standards. Some are complete CWL runners, while others could be plug-ins or extensions to workflow engines. We have a better explanation in the [Implementations](basic-concepts.md#implementations) section."
 msgstr ""
+"CWL标准有很多种实现形式，可能是完整的CWL运行程序，或者是工作流引擎的插件或拓"
+"展程序。 [实现](basic-concepts.md#implementations)章节对此提供了更好的解释。"
 
 #: ../../src/introduction/prerequisites.md:19
 #: cbbcce4c2a96471b8b0ae3593ad59de4
 msgid "Operating System"
-msgstr ""
+msgstr "操作系统"
 
 #: ../../src/introduction/prerequisites.md:21
 #: 5089fdba8aed4113983fa86e698df98b
 msgid "We recommend using an up-to-date operating system. You can choose any of the following options for your operating system:"
-msgstr ""
+msgstr "建议使用最新的操作系统，您可从下选项选择合适的操作系统："
 
 #: ../../src/introduction/prerequisites.md:24
 #: dbaa4bae22fe4d05b18d7351967ddbc3
 msgid "Linux"
-msgstr ""
+msgstr "Linux操作系统"
 
 #: ../../src/introduction/prerequisites.md:25
 #: c05187af85be41b782678b79627f8fbf
 msgid "macOS"
-msgstr ""
+msgstr "macOS操作系统"
 
 #: ../../src/introduction/prerequisites.md:26
 #: beb6cf4d7c154eb9b6d7fe024a318ed7
 msgid "Windows"
-msgstr ""
+msgstr "Windows操作系统"
 
 #: ../../src/introduction/prerequisites.md:29
 #: 3b5fdc4c2ebd45dcb3703e59d2b3ef25
 msgid "If you are using Windows, you will have to install the [Windows Subsystem for Linux 2](https://learn.microsoft.com/en-us/windows/wsl/install) (WSL2). Visit the `cwltool` [documentation](https://github.com/common-workflow-language/cwltool/blob/main/README.rst#ms-windows-users) for details on installing WSL2. Your operating system also needs internet access and a recent version of Python (3.6+)."
 msgstr ""
+"如您使用的是Windows操作系统，必须安装 [适用于 Linux "
+"2的Windows子系统](https://learn.microsoft.com/en-us/windows/wsl/install) "
+"(WSL2)。请参阅 `cwltool` [documentation](https://github.com/"
+"common-workflow-language/cwltool/blob/main/README.rst#ms-windows-users) ，了"
+"解更多关于安装WSL2的信息。同时，您的操作系统需要网络访问及最新版本的Python(3."
+"56+)。"
 
 #: ../../src/introduction/prerequisites.md:35
 #: 56d78c95daa54135b6aa9b2bfdc34d01
 msgid "CWL Runner"
-msgstr ""
+msgstr "CWL运行程序"
 
 #: ../../src/introduction/prerequisites.md:41
 #: 0f2704bf1f7148be95e999e312899f11
 msgid "The first thing you will need for running CWL workflows is a CWL runner. `cwltool` is a Python Open Source project maintained by the CWL community. It is also the CWL reference runner, which means it must support everything in the current CWL specification, {{ cwl_version }}."
 msgstr ""
+"要运行CWL工作流，首先需要一个CWL运行程序。`cwltool`是由CWL社区维护的Python开"
+"源项目，也是CWL引用运行程序，这意味着其必须支持当前版本CWL规范{{ cwl_version "
+"}}的所有规定。"
 
 #: ../../src/introduction/prerequisites.md:46
 #: 86264c9e56104ecea9146407c379aae2
 msgid "`cwltool` can be installed with `pip`. We recommend using a virtual environment like `venv` or `conda`. The following commands will create and activate a Python virtual environment using the `venv` module, and install `cwltool` in that environment:"
 msgstr ""
+"可通过`pip`安装`cwltool` ，建议您使用`venv` 或 "
+"`conda`等虚拟环境进行安装。以下命令将使用`venv`模块创建和激活Python虚拟环境，"
+"并在该环境中安装 `cwltool`："
 
 #: ../../src/introduction/prerequisites.md:51
 #: 0a0f0e5151ab4c498b4f8a12c016f28d
 msgid "Installing `cwltool` with `pip` and `venv`."
-msgstr ""
+msgstr "使用 `pip` 和 `venv`安装`cwltool`。"
 
 #: ../../src/introduction/prerequisites.md:62
 #: f7aaafeee230400da056464c853582c2
 msgid "Visit the `cwltool` [documentation](https://github.com/common-workflow-language/cwltool#install) for other ways to install `cwltool` with `apt` and `conda`."
 msgstr ""
+"请参阅`cwltool` [documentation](https://github.com/common-workflow-language/"
+"cwltool#install)，了解使用 `apt` 和 `conda`安装`cwltool`的其他方法。"
 
 #: ../../src/introduction/prerequisites.md:65
 #: 5eced7e4cd084e8a806b1d3b12d0c000
 msgid "Let's use a simple CWL tool description `true.cwl` with `cwltool`."
-msgstr ""
+msgstr "让我们使用`cwltool` 来执行一个简单的CWL工具描述`true.cwl`。"
 
 #: ../../src/introduction/prerequisites.md:67
 #: 040c019b6e844eda8c8c2b210852516b
 msgid "`true.cwl`"
-msgstr ""
+msgstr "`true.cwl`"
 
 #: ../../src/introduction/prerequisites.md:73
 #: 6391e08e0bde49f4b21286d8fdb97433
 msgid "The `cwltool` command has an option to validate CWL tool and workflow descriptions. This option will parse the CWL document, look for syntax errors, and verify that the workflow descriptions are compliant with the CWL standards. However, these actions will be performed without running the document. To validate CWL workflows (or even a standalone command line tool description like the above) pass the `--validate` option to the `cwltool` command:"
 msgstr ""
+"`cwltool` 命令具有验证 CWL 工具和工作流描述的选项，此选项将解析 CWL "
+"文档，查找语法错误，并验证工作流描述是否符合 CWL "
+"标准。但是，这些操作将在不运行文档的情况下执行。要验证 CWL "
+"工作流（甚至是像上面这样的独立命令行工具描述），请将 `--validate` 选项传递给 "
+"`cwltool` 命令："
 
 #: ../../src/introduction/prerequisites.md:79
 #: cdef47fca304479c9a9df75afc0afb35
 msgid "Validating `true.cwl` with `cwltool`."
-msgstr ""
+msgstr "使用 `cwltool`验证 `true.cwl` 。"
 
 #: ../../src/introduction/prerequisites.md:84
 #: d41c4bc740aa474ea09a7cbd267c8840
 msgid "You can run the CWL tool description by omitting the `--validate` option:"
-msgstr ""
+msgstr "您也可以通过省略`--validate`选项来运行CWL工具描述："
 
 #: ../../src/introduction/prerequisites.md:86
 #: 24d7be55d3994f0b82c38da47918e0c9
 msgid "Running `true.cwl` with `cwltool`."
-msgstr ""
+msgstr "使用 `cwltool` 运行 `true.cwl`。"
 
 #: ../../src/introduction/prerequisites.md:91
 #: 39d6ceecb54a4a7fb5dff4a7cae1bfe7
 msgid "Cwl-runner Python Module"
-msgstr ""
+msgstr "Cwl-runner Python 模块"
 
 #: ../../src/introduction/prerequisites.md:93
 #: 096d0a50f69e48bd9915238d1b4264c1
 msgid "`cwl-runner` is an implementation-agnostic alias for any CWL compliant runner. This simply means that the `cwl-runner` alias command can be invoked independently, and is not reliant on a particular CWL runner program name. Users can invoke `cwl-runner` instead of invoking a CWL runner like `cwltool` directly. The `cwl-runner` is installed by a system administrator or user to point to the preferred CWL implementation. This is convenient for environments with multiple CWL runners."
 msgstr ""
+"`cwl-runner` 是任何符合标准的CWL运行程序的别名，其与实现无关。这仅仅意味着"
+"`cwl-runner` 别名命令可独立调用，且不依赖于特定CWL运行程序名。用户可调用`cwl-"
+"runner` ，而无需直接调用诸如 `cwltool`的CWL运行程序。 `cwl-"
+"runner`由系统管理员安装，或用户通过指定偏好CWL实现来安装， "
+"这对于拥有多个CWL运行程序的环境而言十分方便。"
 
 #: ../../src/introduction/prerequisites.md:101
 #: f9df974a8e2645a6918e67466bd1fdc2
 msgid "The CWL community publishes a Python package with the name `cwlref-runner` that installs an alias for `cwltool` under the name `cwl-runner`"
 msgstr ""
+"CWL 社区发布了一个名为 `cwlref-runner` 的 Python 包，该软件包以 `cwl-"
+"runner`作为`cwltool` 的别名"
 
 #: ../../src/introduction/prerequisites.md:104
 #: 71ebe91d4bda473abe87578929433212
 msgid "Installing `cwl-runner` alias for cwltool with `pip`."
-msgstr ""
+msgstr "使用 `pip`为cwltool安装`cwl-runner`别名。"
 
 #: ../../src/introduction/prerequisites.md:111
 #: 746c6fc9c29d466494458a08d4c96672
 msgid "Now you can validate and run your workflow with the `cwl-runner` executable, which will invoke `cwltool`. You should have the same results and output as in the previous section."
 msgstr ""
+"现在，执行 `cwl-runner` 以调用 `cwltool`，便可验证和运行您的工作流。执行此操"
+"作后，您应该得到与上一章节相同的结果和输出。"
 
 #: ../../src/introduction/prerequisites.md:115
 #: b9cc5a843a0f49daad56e9303657bdd5
 msgid "Validating `true.cwl` with `cwl-runner`."
-msgstr ""
+msgstr "使用 `cwl-runner`验证 `true.cwl`。"
 
 #: ../../src/introduction/prerequisites.md:120
 #: 34ab40437ab646488ba3ee86cd7fe071
 msgid "Running `true.cwl` with `cwl-runner`."
-msgstr ""
+msgstr "使用 `cwl-runner` 运行 `true.cwl`。"
 
 #: ../../src/introduction/prerequisites.md:125
 #: 705807fae182425dbf4244dbf2be1226
 msgid "Another way to execute `cwl-runner` is by invoking the file directly. For that, the first thing you need to do is copy `true.cwl` workflow into a new file: `true_shebang.cwl`, and include a special first line, a *shebang*:"
 msgstr ""
+"执行 `cwl-runner` 的另一种方法是直接调用文件。为此，首先您需要将`true.cwl` "
+"工作流复制到一个新文件中：`true_shebang.cwl`，并添加特殊的首行，即*shebang*："
 
 #: ../../src/introduction/prerequisites.md:129
 #: f74dd9bd4ff84bf48f3f8e8c8d6fb51a
 msgid "`true_shebang.cwl`"
-msgstr ""
+msgstr "`true_shebang.cwl`"
 
 #: ../../src/introduction/prerequisites.md:135
 #: 164c438baab54ec19bbb4584a10dd411
 msgid "Now you can make the file `true_shebang.cwl` executable with `chmod u+x`."
-msgstr ""
+msgstr "现在，您可使用 `chmod u+x` 执行 `true_shebang.cwl` 文件。"
 
 #: ../../src/introduction/prerequisites.md:137
 #: bf8be77af6154326b28442c5d2e2b852
 msgid "Making `true.cwl` executable."
-msgstr ""
+msgstr "执行 `true.cwl`文件。"
 
 #: ../../src/introduction/prerequisites.md:144
 #: 695184d1b45a42f393e2da99c3721773
 msgid "And finally, you can execute it directly in the command-line. On execution, the program specified in the shebang (`cwl-runner`) will be used to execute the rest of the file."
-msgstr ""
+msgstr "最后，您可直接在命令行执行此文件。在执行时，shebang （`cwl-runner`） "
+"中指定的程序将用于执行文件的其余部分。"
 
 #: ../../src/introduction/prerequisites.md:148
 #: 7c4f45b3e7b549e186126693aa4a3d4f
 msgid "Running `true_shebang.cwl` with a shebang."
-msgstr ""
+msgstr "使用 shebang 运行 `true_shebang.cwl`。"
 
 #: ../../src/introduction/prerequisites.md:154
 #: 3ba23b4ea01c46848e4e43bbeff5f5a1
 msgid "The *shebang* is the two-character sequence `#!` at the beginning of a script. When the script is executable, the operating system will execute the script using the executable specified after the shebang. It is considered a good practice to use `/usr/bin/env <executable>` rather than using a hard-coded location, since `/usr/bin/env <executable>` looks for the `<executable>` program in the system `PATH`,"
 msgstr ""
+"*shebang*是以`#！`两个字符序列开头的脚本。执行脚本时，"
+"操作系统将使用在shebang 之后指定的可执行文件来执行脚本。最好使用 `/usr/bin/"
+"env <executable>`， 而不是硬编码位置，因为/usr/bin/env <executable>可在系统 "
+"`PATH`中寻找`<executable>`程序，</executable></executable></executable>"
 
 #: ../../src/introduction/prerequisites.md:161
 #: eec6c07455384630809ff1c532bfe7d4
 msgid "Text Editor"
-msgstr ""
+msgstr "文本编辑器"
 
 #: ../../src/introduction/prerequisites.md:163
 #: f6b39b12bd5c495cb53e2795bf9200ed
 msgid "You can use any text editor with CWL, but for syntax highlighting we recommend an editor with YAML support. Popular editors are Visual Studio Code, Sublime, WebStorm, vim/neovim, and Emacs."
 msgstr ""
+"您可使用任何带有CWL "
+"的文本编辑器，但对于语法高亮而言，建议使用YAML支持的编辑器。"
+"流行的编辑器包括Visual Studio Code、Sublime、WebStorm、vim / "
+"neovim以及Emacs。"
 
 #: ../../src/introduction/prerequisites.md:167
 #: 2fdb62a13f9447bc89183426260ce781
 msgid "There are extensions for Visual Studio Code and WebStorm that provide integration with CWL, and features such as customized syntax highlighting and better auto-complete:"
-msgstr ""
+msgstr "以下Visual Studio Code和WebStorm的拓展程序支持与CWL集成，且具备自定义语法高亮"
+"及更好的自动补全等功能："
 
 #: ../../src/introduction/prerequisites.md:171
 #: 1f07135156254f74a6b043bf33d00cc3
 msgid "Visual Studio Code with the Benten (CWL) plugin - <https://github.com/rabix/benten#install-vs-code-extension>"
 msgstr ""
+"带有 Benten (CWL) 插件的 Visual Studio Code —— <https://github.com/rabix/"
+"benten#install-vs-code-extension>"
 
 #: ../../src/introduction/prerequisites.md:172
 #: de344f356b1c466d9131cdbd4d7353a3
 msgid "cwl-plugin for IntelliJ - <https://plugins.jetbrains.com/plugin/10040-cwl-plugin>"
 msgstr ""
+"IntelliJ支持的cwl插件 —— <https://plugins.jetbrains.com/plugin/10040-cwl-"
+"plugin>"
 
 #: ../../src/introduction/prerequisites.md:174
 #: 3f9324ede11441f58d93875867034cf0
 msgid "The CWL community also maintains a list of editors and viewers: <https://www.commonwl.org/tools/#editors>"
-msgstr ""
+msgstr "CWL社区也在维护一个编辑器和阅读器清单：<https://www.commonwl.org/tools/"
+"#editors>"
 
 #: ../../src/introduction/prerequisites.md:177
 #: 6ce8b81560e341c580d316d69202b268
 msgid "Docker"
-msgstr ""
+msgstr "Docker"
 
 #: ../../src/introduction/prerequisites.md:181
 #: 40cfd559d6a848d1aae354d3bdaa8e9c
 msgid "`cwltool` uses Docker to run tools, workflows, and workflow steps that specify a software container. Follow the instructions in the Docker documentation to install it for your operating system: <https://docs.docker.com/>."
 msgstr ""
+"`cwltool` 使用 Docker 运行指定软件容器的工具、工作流及工作流步骤。"
+"请按照Docker 文档中的说明，为您的操作系统安装Docker：<https://docs.docker."
+"com/>。"
 
 #: ../../src/introduction/prerequisites.md:185
 #: 8a9a50b0ebe847ce90593881ffe0d69c
 msgid "You do not need to know how to write and build Docker containers. In the rest of the user guide, we will use existing Docker images for running examples, and to clarify the differences between the execution models with and without containers."
 msgstr ""
+"您无需了解如何编写和构建 Docker 容器。在用户指南的其余部分，我们将使用现有的 "
+"Docker 镜像来运行示例，并解释带容器和不带容器的执行模型之间的差异。"
 
 #: ../../src/introduction/prerequisites.md:191
 #: 923cf9dd6d6c417aabe42f9fa62ffa35
 msgid "`cwltool` supports running containers with Docker, Podman, udocker, and Singularity. You can also use alternative container registries for pulling images."
 msgstr ""
+"`cwltool` 支持使用 Docker、Podman、udocker 和 Singularity "
+"运行容器，您也可使用其他容器注册表来拉取镜像。"
 
 #: ../../src/introduction/prerequisites.md:198
 #: 9390b03889de44638141d705e0ef8322
 msgid "The [Implementations](basic-concepts.md#implementations) topic in the next section, Basic Concepts."
-msgstr ""
+msgstr "下一章节（基本概念）中的 [实现](basic-concepts.md#implementations)主题。"
 
 #: ../../src/introduction/prerequisites.md:199
 #: 12042e411482458f8c35a2491f9433e0
 msgid "The Python `venv` module: <https://docs.python.org/3/library/venv.html>"
-msgstr ""
+msgstr "Python`venv`模块：<https://docs.python.org/3/library/venv.html>"
 
 #: ../../src/introduction/quick-start.md:1
 #: cdd4196f9aa34beba115901ec97913b6
 msgid "Quick Start"
-msgstr ""
+msgstr "快速入门"
 
 #: ../../src/introduction/quick-start.md:3
 #: c43d9675ed134b78b02acb5a102a764a
 msgid "This section will show you a brief overview of what CWL is, and where you can learn more about it. No previous knowledge of CWL is required, but you must be comfortable following instructions for the command-line."
-msgstr ""
+msgstr "本章节将向您简要介绍 CWL的定义以及您可以在哪里了解更多信息。不需要先前的 CWL "
+"知识，但您必须能够熟练地按照命令行说明进行操作。"
 
 #: ../../src/introduction/quick-start.md:7
 #: 280936bb2a22469799b2c9e9ba22adee
 msgid "“Hello World”"
-msgstr ""
+msgstr "“Hello World”"
 
 #: ../../src/introduction/quick-start.md:12
 #: cb203354977d42a58112d09357f62565
 msgid "CWL documents are written in [YAML](../topics/index.md) (and/or JSON). The example below shows a simple CWL “Hello World” workflow annotated with comments. Note that comments start with `#`:"
 msgstr ""
+"CWL 文档是[YAML](../topics/index.md) (and/or JSON)中编写的。"
+"下方例子演示了一个简单的 CWL“Hello World”工作流程，并带有注释。请注意，"
+"注释以 `#` 开头："
 
 #: ../../src/introduction/quick-start.md:16
 #: 9e51962a7e5c47248f3e20703ae101eb
@@ -943,61 +1069,77 @@ msgstr ""
 #: 7e475e3f3c4a4404bb0236124c0f7ce7
 msgid "The example above is just a wrapper for the `echo` command-line tool. Running the workflow above with the default input values will produce the same result as the command-line `echo \"Hello World\"`."
 msgstr ""
+"上面的示例只是 `echo` 命令行工具的包装器。"
+"使用默认输入值运行上述工作流将生成与命令行 `echo “Hello World”` 相同的结果。"
 
 #: ../../src/introduction/quick-start.md:27
 #: 82613ca4e32b4ccab1b7735f5ba2d5a1
 msgid "In CWL, there is a distinction between a command-line tool and a workflow. But for the sake of simplicity, we are using the term “workflow” here. You will learn more about this in the [basic concepts](basic-concepts.md) section."
 msgstr ""
+"在 CWL 中，命令行工具和工作流之间是有区别的。但为了简单起见，我们在这里使用术"
+"语“工作流”。您将在[基本概念ba](basic-concepts.md)章节了解更多有关信息。"
 
 #: ../../src/introduction/quick-start.md:32
 #: 498a43362a4749f3b8b433709d34a1d5
 msgid "Installing a CWL Runner"
-msgstr ""
+msgstr "安装 CWL 运行程序"
 
 #: ../../src/introduction/quick-start.md:34
 #: f3e56aedd56b4b93bdc3894273e8c144
 msgid "`cwltool` is an implementation of the CWL specification. It is also the CWL *Reference Runner* for the specification, and it is compliant with the latest version of the specification: {{ cwl_version }}. You can install `cwltool` using `pip`:"
 msgstr ""
+"`cwltool` 是 CWL 规范的实现，也是符合规范的 CWL "
+"*引用程序*，且符合最新版本的规范：{{ cwl_version }}。您可使用 `pip` 安装 "
+"`cwltool`："
 
 #: ../../src/introduction/quick-start.md:39
 #: 81481f5b82e4488398f87f0a169bd359
 msgid "Installing `cwltool` with `pip`."
-msgstr ""
+msgstr "使用 `pip` 安装 `cwltool`。"
 
 #: ../../src/introduction/quick-start.md:47
 #: a81342e756d24c40acc15835d0a768f2
 msgid "If installing the cwltool using the pip command doesn't work for you, the [prerequisites](prerequisites.md) section contains other ways to install `cwltool` and a more detailed list of software and libraries used for following the rest of this user guide."
 msgstr ""
+"如您无法使用 pip 命令安装 cwltool，请参阅[先决条件p](prerequisites.md) 章节，"
+"了解安装 `cwltool` "
+"的其他方法，以及了解助于遵循用户指南其余内容的软件和库详细清单。"
 
 #: ../../src/introduction/quick-start.md:51
 #: c12cf89f8b9a421ebd05330326e219b3
 msgid "Running \"Hello World\""
-msgstr ""
+msgstr "运行 “Hello World”"
 
 #: ../../src/introduction/quick-start.md:53
 #: 9b68bcb1a41849dc9601ab47c5bbb0fe
 msgid "The usage of the `cwltool` command-line executable is basically `cwltool [OPTIONS] <CWL_DOCUMENT> [INPUTS_OBJECT]`. You can run the `hello_world.cwl` workflow without specifying any option:"
 msgstr ""
+"执行 `cwltool`命令行的流程大致是 `cwltool [OPTIONS] <cwl_document> "
+"[INPUTS_OBJECT]`，因此您可直接运行 `hello_world."
+"cwl`工作流，无需指定以下任何选项：</cwl_document>"
 
 #: ../../src/introduction/quick-start.md:57
 #: ce04027dfcfe4b7b91ea3c2136b18b23
 msgid "Running `hello_world.cwl` with `cwltool`."
-msgstr ""
+msgstr "使用 `cwltool` 运行 `hello_world.cwl`。"
 
 #: ../../src/introduction/quick-start.md:62
 #: 0d8a788402914ebd8f09a5ca80650011
 msgid "Or you can override the default value of the input parameter `message`, similar to how you would change the argument of the `echo` base command:"
-msgstr ""
+msgstr "或者，您可替换输入参数 `message` 的默认值，方法类似于更改 `echo` "
+"基本命令的参数："
 
 #: ../../src/introduction/quick-start.md:65
 #: 6d0b679efab24813a7a3b709ade940d1
 msgid "Running `hello_world.cwl` with `cwltool` passing an input parameter."
-msgstr ""
+msgstr "使用传递输入参数的 `cwltool` 运行 `hello_world.cwl`。"
 
 #: ../../src/introduction/quick-start.md:70
 #: 2ea056ab04b6419a9faf350de22a17f2
 msgid "Another way of passing values to your workflow input parameters is via an *Inputs Object*. This is a file containing the input fields with their corresponding values. The Inputs Objects file can be written in JSON or YAML. For example:"
 msgstr ""
+"将值传递给工作流输入参数的另一种方法是通过*Inputs Object* "
+"实现，这是一个包含对应值输入字段的文件，可使用 JSON 或 YAML 编写。例如："
 
 #: ../../src/introduction/quick-start.md:74
 #: 1a44a545434b448aa956005deeed90a8
@@ -1007,72 +1149,89 @@ msgstr ""
 #: ../../src/introduction/quick-start.md:80
 #: e76bfcc0c9f84bcdb3f6d5277869a88c
 msgid "You can use this Inputs Object file now to execute the “Hello World” workflow:"
-msgstr ""
+msgstr "您现在可以使用此输入对象文件来执行“Hello World”工作流："
 
 #: ../../src/introduction/quick-start.md:82
 #: d4cdbe870a6f4a68b542ca719d989062
 msgid "Passing an Inputs Object file to `cwltool`."
-msgstr ""
+msgstr "将输入对象文件传递给 `cwltool`。"
 
 #: ../../src/introduction/quick-start.md:88
 #: b6d59e4b9c854abab1b3f7a0fa26f504
 msgid "We used a similar file name for the workflow and for the Inputs Object files. The *-job.json* suffix is very common in Inputs Object files, but it is not a requirement. You can choose any name for your workflows and Inputs Object files."
 msgstr ""
+"我们为工作流和输入对象文件使用了类似的文件名。*-job.json* 后缀在输入对象文件"
+"中很常见，但非必需要求，您可为工作流和输入对象文件选择任何名称。"
 
 #: ../../src/introduction/quick-start.md:96
 #: 5535b98e8b1342f09f003ec6db2b44b1
 msgid "Continue reading the next sections of this User Guide!"
-msgstr ""
+msgstr "继续阅读本用户指南的下一章节！"
 
 #: ../../src/introduction/quick-start.md:97
 #: 77e43c7117fd4c52b140f0dd52cc3963
 msgid "[List of CWL Implementations](https://www.commonwl.org/implementations)."
-msgstr ""
+msgstr "[ CWL 实现清单](https://www.commonwl.org/implementations)。"
 
 #: ../../src/introduction/quick-start.md:98
 #: 7282abfa7155497ca47c30f9abfb6474
 msgid "The [`common-workflow-language` organization](https://github.com/common-workflow-language) at GitHub."
 msgstr ""
+"在Github上访问 [`common-workflow-language` 组织](https://github.com/common-"
+"workflow-language)。"
 
 #: ../../src/introduction/quick-start.md:99
 #: 176d8d47830f4031bb95dc231ebf1303
 msgid "[Common Workflow Language at Wikipedia](https://en.wikipedia.org/wiki/Common_Workflow_Language)."
 msgstr ""
+"[在Wikipedia上查阅Common Workflow Language ](https://en.wikipedia.org/wiki/"
+"Common_Workflow_Language)。"
 
 #: ../../src/introduction/quick-start.md:100
 #: 82a7ca3703bc4f0daa18942a1ac8943b
 msgid "[YAML.org](http://yaml.org/) and [YAML at Wikipedia](https://en.wikipedia.org/wiki/YAML)."
 msgstr ""
+"访问[YAML.org](http://yaml.org/) 网站和[ 在Wikipedia上查阅YAML](https://en."
+"wikipedia.org/wiki/YAML)."
 
 #: ../../src/introduction/quick-start.md:101
 #: d039a9d6461c44628d4660c00d9ce6ff
 msgid "The {{'[CWL Specification VERSION](https://www.commonwl.org/VERSION)'.replace('VERSION', cwl_version_text) }}."
 msgstr ""
+"{{'[CWL 规范版本](https://www.commonwl.org/VERSION)'.替代('VERSION', "
+"cwl_version_text) }}。"
 
 #: ../../src/introduction/quick-start.md:102
 #: fbc3383d9e1c4eaca7931c3cc4f1752b
 msgid "[Workflow management system at Wikipedia](https://en.wikipedia.org/wiki/Workflow_management_system)."
 msgstr ""
+"[在 Wikipedia上查阅工作流管理系统 ](https://en.wikipedia.org/wiki/"
+"Workflow_management_system)。"
 
 #: ../../src/setup.md:9
 #: 1330bd38c4b5495f890b98c669f81a9d
 msgid "This page is out-of-date and was kept here to preserve the links of the old User Guide. The information on this page has been migrated to the [FAQ](/faq.md) section of the new user guide."
-msgstr ""
+msgstr "此页面已过时，保留在此以保留旧用户指南链接。此页面上的信息已迁移到新用户指南"
+"的[最常见问题](/faq.md)章节。"
 
 #: ../../src/topics/additional-arguments-and-parameters.md:1
 #: 9c87c76c690948ac8e18088a0fffe679
 msgid "Additional Arguments and Parameters"
-msgstr ""
+msgstr "额外参数和指定参数"
 
 #: ../../src/topics/additional-arguments-and-parameters.md:3
 #: ad00d94d4fb64bbdac356e64dd3803b9
 msgid "Sometimes tools require additional command line options that don't correspond exactly to input parameters."
-msgstr ""
+msgstr "有时工具需要额外的命令行选项，这些选项并不完全对应于输入参数。"
 
 #: ../../src/topics/additional-arguments-and-parameters.md:6
 #: d8110ed19da94ad8a9f56e7006c4a2cf
 msgid "In this example, we will wrap the Java compiler to compile a java source file to a class file.  By default, \"javac\" will create the class files in the same directory as the source file.  However, CWL input files (and the directories in which they appear) may be read-only, so we need to instruct \"javac\" to write the class file to the designated output directory instead."
 msgstr ""
+"在此示例中，我们将包装 Java 编译器，以将 java 源文件编译为类文件。 "
+"默认情况下，“javac”将在与源文件相同的目录中创建类文件。 但是，CWL "
+"输入文件（以及它们所在的目录）可能是只读的，因此我们需要指示 “javac” "
+"将类文件写入指定的输出目录。"
 
 #: ../../src/topics/additional-arguments-and-parameters.md:13
 #: a74935dc31664e979ca8f90a6a4ba53c
@@ -1089,162 +1248,213 @@ msgstr ""
 #: ../../src/topics/additional-arguments-and-parameters.md:24
 #: 6359191b4f684d5aa3602e4aaf394883
 msgid "Next, create a sample Java file to use with the command-line tool."
-msgstr ""
+msgstr "接下来，创建一个用于命令行工具的示例 Java 文件。"
 
 #: ../../src/topics/additional-arguments-and-parameters.md:30
 #: 9643449da1da46d7861866dce490cbcb
 msgid "And now invoke `cwltool` providing the tool description and the input object on the command line:"
-msgstr ""
+msgstr "现在，调用在命令行上提供工具描述和输入对象的 `cwltool`："
 
 #: ../../src/topics/additional-arguments-and-parameters.md:36
 #: 713666580a0a4466b4ba6e3eb2b54f0a
 msgid "Here we use the `arguments` field to add an additional argument to the command line that isn't tied to a specific input parameter."
-msgstr ""
+msgstr "此处我们使用`arguments`字段将一个额外的参数添加至命令行，此参数与指定输出参数"
+"无关。"
 
 #: ../../src/topics/additional-arguments-and-parameters.md:43
 #: d50574c8b9694f83aa376d39b9a6fcd6
 msgid "This example references a runtime parameter.  Runtime parameters provide information about the hardware or software environment when the tool is actually executed.  The `$(runtime.outdir)` parameter is the path to the designated output directory.  Other parameters include `$(runtime.tmpdir)`, `$(runtime.ram)`, `$(runtime.cores)`, `$(runtime.outdirSize)`, and `$(runtime.tmpdirSize)`.  See the [Runtime Environment][runtime] section of the CWL specification for details."
 msgstr ""
+"此示例引用了运行时参数。运行时参数提供有关工具实际执行时硬件或软件环境的信息"
+"。 `$(runtime.outdir)`参数是指定输出目录的路径。其他参数包括 `$(runtime."
+"tmpdir)`、 `$(runtime.ram)`、`$(runtime.cores)`、 `$(runtime."
+"outdirSize)`,以及`$(runtime.tmpdirSize)`。有关详细信息，请参阅 CWL 规范的 "
+"[运行时环境][运行时] 章节。"
 
 #: ../../src/topics/best-practices.md:1
 #: 612c4a66c36a43d4ac5d74c1757d6845
 msgid "Best Practices"
-msgstr ""
+msgstr "最佳实践"
 
 #: ../../src/topics/best-practices.md:3
 #: 939cd9e9eaff4e3ab74fe707a5d4eb21
 msgid "The following are a set of recommended good practices to keep in mind when writing a Common Workflow Language description for a tool or workflow. These guidelines are presented for consideration on a scale of usefulness: although more is better, not all are required."
 msgstr ""
+"以下提供了一些关于为工具或工作流编写通用语言描述的建议，请牢记在心。此处仅基"
+"于有用性量表提供部分指导原则：虽然越多越好，但并非所有原则都是必需的。"
 
 #: ../../src/topics/best-practices.md:8
 #: 4bcb84707acb40a0bfe2ea0853cb10b7
 msgid "No `type: string` parameters for names of input or reference files/directories; use `type: File` or `type: Directory` as appropriate."
 msgstr ""
+"无用于输入名称或引用文件/目录的`type: string`参数，请根据需要使用 `type: "
+"File`或`type: Directory`。"
 
 #: ../../src/topics/best-practices.md:11
 #: 4dee8504a8e5496081dadc386ab45540
 msgid "A CWL document (in conjunction with any external components like `Dockerfile`s) is software code. Workflow developers should be aware that the usual rules of software licensing apply to this document. For example, if the workflow is shared publicly, licensing terms must be clear so that a future user understands under what conditions they can run the workflow, modify it and/or combine it with other workflows. For this reason, please consider including a license field in the document. The authors of this guide urge you to choose a pre-existing license rather than trying to write your own (see the link below to learn more about choosing a license), and our recommended practice is to choose a license that allows for re-use by anyone, e.g. [Apache 2.0][apache-license]."
 msgstr ""
+"CWL 文档（结合 `Dockerfile`等外部组件）是软件代码。工作流开发人员应注意，软件"
+"许可的常规规则适用于本文档。例如，如果工作流是公开共享的，则许可条款必须明确"
+"，以便将来的用户了解在什么条件下可以运行工作流、修改工作流和/或将其与其他工作"
+"流组合。因此，请考虑在文档中包含许可证字段。本指南的作者敦促您选择预先存在的"
+"许可证，而不是尝试编写自己的许可证（请访问下方链接，了解有关选择许可证的更多"
+"信息），我们建议您选择允许任何人重复使用的许可证，例如 [Apache 2.0][apache-"
+"license]。"
 
 #: ../../src/topics/best-practices.md:20
 #: 674c238b25e240eda05e22e399f2f78f
 msgid "If possible, the license should be specified with its corresponding [SPDX identifier][spdx]. Construct the metadata field for the license by providing a URL of the form `https://spdx.org/licenses/[SPDX-ID]` where `SPDX-ID` is taken from the list of identifiers linked above. See the example snippet below for guidance. For non-standard licenses without an SPDX identifier, provide a URL to the license."
 msgstr ""
+"如可能，请使用相应的 [SPDX 标识符][spdx] 指定许可证。通过提供 `https://spdx."
+"org/licenses/[SPDX-ID]` 形式的URL构建许可证的元数据字段，其中 `SPDX-ID` "
+"取自上方链接的标识符列表。有关指导，请参阅下方的示例代码段。对于没有 SPDX "
+"标识符的非标准许可证，请提供许可证的 URL。"
 
 #: ../../src/topics/best-practices.md:26
 #: b651f80f47b4442fbf29454a233697fc
 msgid "Useful reading: \"[A Quick Guide to Software Licensing for the Scientist-Programmer][sci-license]\""
-msgstr ""
+msgstr "有用的阅读材料：“[A Quick科学家－程序员的软件许可快速入门指南 ][sci-license]”"
 
 #: ../../src/topics/best-practices.md:28
 #: 263a127a77cf4c41af76854f22f1f260
 msgid "_Example of metadata field for license with SPDX identifier:_"
-msgstr ""
+msgstr "_带有SPDX识别符的许可证元数据字段示例：_"
 
 #: ../../src/topics/best-practices.md:37
 #: 3a87a0fb2a364e3da5aaa4017e430b19
 msgid "For more examples of providing metadata within CWL descriptions, see  [the Metadata and Authorship section of this User Guide](../topics/metadata-and-authorship.md)."
 msgstr ""
+"有关在CWL描述中提供更多元数据的示例，请查阅[本用户指南中的元数据和作者授权章"
+"节](../topics/metadata-and-authorship.md)。"
 
 #: ../../src/topics/best-practices.md:40
 #: ecf2b9c0b1664afe9c4e180610610021
 msgid "Include [attribution information][license-example] for the author(s) of the CWL tool or workflow description. Use unambiguous identifiers like [ORCID][orcid]."
-msgstr ""
+msgstr "包括CWL工具或工作流描述作者的 "
+"[归属信息][许可证示例]。请使用明确的标识符，比如[ORCID][orcid]。"
 
 #: ../../src/topics/best-practices.md:44
 #: e24cb13d98014e558b6a6946758359e0
 msgid "In tool descriptions, list dependencies using short name(s) under `SoftwareRequirement`."
-msgstr ""
+msgstr "在工具需求中，使用 `SoftwareRequirement`下方的短命名列出依赖关系。"
 
 #: ../../src/topics/best-practices.md:47
 #: f2b14a92374e449d9fb1e8c86ae0dd61
 msgid "Include [SciCrunch][scicrunch] identifiers for dependencies in `https://identifiers.org/rrid/RRID:SCR_NNNNNN` format."
 msgstr ""
+"包括表示依赖关系的[SciCrunch][scicrunch]识别符，其格式为`https://identifiers."
+"org/rrid/RRID:SCR_NNNNNN`。"
 
 #: ../../src/topics/best-practices.md:50
 #: 928e3df7ca3e479ca6474a8e72cf36eb
 msgid "All `input` and `output` identifiers should reflect their conceptual identity. Use informative names like `unaligned_sequences`, `reference_genome`, `phylogeny`, or `aligned_sequences` instead of  `foo_input`, `foo_file`, `result`, `input`, `output`, and so forth."
 msgstr ""
+"所有`输入` 和`输出` "
+"的标识符均应反映其概念特性，请使用`unaligned_sequences`、`reference_genome`、"
+" `phylogeny`、或 `aligned_sequences` 等信息性名称，而不是`foo_input`、`foo_fi"
+"le`、`result`、`input`及`output`等非信息性名称。"
 
 #: ../../src/topics/best-practices.md:55
 #: d355f035676446c88b028f327aeb4829
 msgid "In tool descriptions, include a list of version(s) of the tool that are known to work with this description under `SoftwareRequirement`."
-msgstr ""
+msgstr "在工具描述中， `SoftwareRequirement` 下方包含已知可使用此描述的工具版本列表。"
 
 #: ../../src/topics/best-practices.md:58
 #: 339b852df24242189d6efcd2898a3396
 msgid "`format` should be specified for all input and output `File`s. Bioinformatics tools should use format identifiers from [EDAM][edam-example]. See also `iana:text/plain`, `iana:text/tab-separated-values` with `$namespaces: { iana: \"https://www.iana.org/assignments/media-types/\" }`. [Full IANA media type list][iana-types] (also known as MIME types). For non-bioinformatics tools, use or build an appropriate ontology/controlled vocabulary in the same way. Please edit this page to let us know about it."
 msgstr ""
+"应为所有输入和输出 `文件` 指定`格式` 。生物信息学工具应使用来自 [EDAM][edam-"
+"example] 的格式标识符。另请参阅 `iana:text/plain`、`iana:text/tab-separated-"
+"values` 和 `$namespaces: { iana: \"https://www.iana.org/assignments/"
+"media-types/\" }。[完整的 IANA 媒体列表][iana类型] (（也称为 MIME 类型）。对"
+"于非生物信息学工具，请以相同的方式使用或创建适当的本体/受控词汇表。请编辑此页"
+"面，让告知我们。"
 
 #: ../../src/topics/best-practices.md:66
 #: 3ef57e6862f240bebcf193a52397af0a
 msgid "Mark all input and output `File`s that are read from or written to in a streaming compatible way (only once, no random-access), as `streamable: true`."
-msgstr ""
+msgstr "将所有以流式兼容方式读取或编写的输入和输出 `文件`（仅一次，无随机访问）"
+"标记为 `流式传输：true`。"
 
 #: ../../src/topics/best-practices.md:69
 #: f1a7c4f896a04a80b0c5f6a1db61ff8c
 msgid "Each `CommandLineTool` description should focus on a single operation only, even if the (sub)command is capable of more. Don't overcomplicate your tool descriptions with options that you don't need or use."
 msgstr ""
+"每个 `CommandLineTool` 描述应仅关注单个操作，即使 （子） "
+"命令能够执行更多操作。请勿选择非必需或不使用的选项，以免工作描述过于复杂。"
 
 #: ../../src/topics/best-practices.md:73
 #: 1ac4c3d8c3e44bd1af3fc5df70051926
 msgid "Custom types should be defined with one external YAML per type definition for re-use."
-msgstr ""
+msgstr "为了方便重复使用，每个类型定义都应使用一个外部 YAML 来定义自定义的类型。"
 
 #: ../../src/topics/best-practices.md:76
 #: c858f64e66f048a5b0032ef3e4d83694
 msgid "Include a top-level short `label` summarising the tool/workflow."
-msgstr ""
+msgstr "包括总结工具/工作流的顶级短 ` 标签 `。"
 
 #: ../../src/topics/best-practices.md:78
 #: fae385da16aa443da996fa23ac03d6ae
 msgid "If useful, include a top-level `doc` as well. This should provide a longer, more detailed description than was provided in the top-level `label` (see above)."
-msgstr ""
+msgstr "如有需要，也可增加一个顶级`doc`。相比顶级 "
+"`label`（见上方），此标签应长度更长且内容更详细。"
 
 #: ../../src/topics/best-practices.md:82
 #: 92430be71ecc40e18bbbb80d5576c613
 msgid "Use `type: enum` instead of `type: string` for elements with a fixed list of valid values."
-msgstr ""
+msgstr "对于带有固定有效值列表的元素，请使用 `type： enum` ，而不是 `type： string`。"
 
 #: ../../src/topics/best-practices.md:85
 #: 387d83db81024f65aa9a890c2d07874a
 msgid "Evaluate all use of JavaScript for possible elimination or replacement. One common example: manipulating `File` names and paths? Consider whether one of the [built in `File` properties][file-prop] like `basename`, `nameroot`, `nameext`, etc., could be used instead."
 msgstr ""
+"评估所有 JavaScript 的使用，以了解可能的消除或替代情况。一个常见示例：操作 `"
+"文件 ` 名称和路径？考虑是否可使用 [内置 `文件` 属性][file-"
+"prop]中的其中一种（如`basename`、`nameroot`和`nameext`等）来替代。"
 
 #: ../../src/topics/best-practices.md:90
 #: d8e2280a75a74916a1630afaa2fe2ae3
 msgid "Give the tool description to a colleague (preferably at a different institution) to test and provide feedback."
-msgstr ""
+msgstr "邀请同事（最好来自其他公司）对工作描述进行测试并提供反馈。"
 
 #: ../../src/topics/best-practices.md:93
 #: f1c1340f9745458980e0fbd641738687
 msgid "Complex workflows with individual components which can be abstracted should utilise the [`SubworkflowFeatureRequirement`][subworkflow] to make their workflow modular and allow sections of them to be easily reused."
 msgstr ""
+"具有可抽象的单个组件的复杂工作流应利用 [`SubworkflowFeatureRequirement`][子工"
+"作流]使其工作流模块化，并允许轻松重用工作流的各个部分。"
 
 #: ../../src/topics/best-practices.md:97
 #: 5424e5472c3d466fa2a3d2022c6cb475
 msgid "Software containers should be made to be conformant to the [\"Recommendations for the packaging and containerizing of bioinformatics software\"][containers] (also useful to other disciplines)."
-msgstr ""
+msgstr "软件容器应符合[“生物信息学软件封装和容器化建议”][容器] （其他学科也适用）。"
 
 #: ../../src/topics/command-line-tool.md:1
 #: 3f4e98f6bfa141feba8c4b120e3d03e8
 msgid "Command Line Tool"
-msgstr ""
+msgstr "命令行工具"
 
 #: ../../src/topics/command-line-tool.md:3
 #: 12f57b2ba76b492abe1816e06bfb1417
 msgid "A command-line tool is a type of Process object that can be run by itself or as a Workflow step. It is a wrapper for a command like `ls`, `echo`, `tar`, etc. The command-line tool is defined in the `baseCommand` attribute of the command-line tool CWL document."
 msgstr ""
+"命令行工具是一种流程对象，可以单独运行或作为工作流步骤运行，它是 "
+"`ls`、`echo`、`tar` 等命令的包装器。命令行工具 CWL "
+"文档的`baseCommand`属性对命令行工具进行了定义。"
 
 #: ../../src/topics/command-line-tool.md:8
 #: e1f657a46ce94a0d83671540e2cc2dab
+#, fuzzy
 msgid "A CWL command-line tool must also have `inputs` and `outputs`. The following example contains a minimal example of a CWL command-line tool for the `echo` Linux command, using inputs and outputs."
 msgstr ""
+"CWL 命令行工具还必具有 ` 输入 ` 和 ` 输出 `。以下示例包含一个最小示例，演示了"
+"支持`echo`Linux命令的CWL命令行工具如何使用输入和输出。"
 
 #: ../../src/topics/command-line-tool.md:19
 #: abb83f0097654a43bd78639d3dbb2bc8
 msgid "CWL command-line tool."
-msgstr ""
+msgstr "CWL命令行工具。"
 
 #: ../../src/topics/command-line-tool.md:50
 #: 3b1a9ae3412f4d6e96a39b9a16934232
@@ -1255,36 +1465,40 @@ msgstr ""
 #: a5eacdbc9aa142c890b177869da4143d
 msgid "The example above uses a simplified form to define inputs and outputs. You will learn more about in the [Inputs](../topics/inputs.md) and in the [Outputs](../topics/outputs.md) sections."
 msgstr ""
+"上方示例仅使用简化形式来定义输入和输出。了解更多有关信息，请查阅[输入](../"
+"topics/inputs.md) 和 [输出](../topics/outputs.md) 章节。"
 
 #: ../../src/topics/command-line-tool.md:68
 #: 1849b8f3ae1c4a84ae59a78ffd6b371e
 msgid "Network Access"
-msgstr ""
+msgstr "网络访问"
 
 #: ../../src/topics/command-line-tool.md:69
 #: e3bdaceae8784ab0807b2cf356a98580
 msgid "This indicates whether a process requires outgoing IPv4/IPv6 network access. If a command-line tool is written manually in CWL v1.1+, there is a need to  specify when network access is required."
-msgstr ""
+msgstr "这指示进程是否需要传出 IPv4/IPv6 网络访问。如果在 CWL v1.1+ "
+"中手动编写命令行工具，则需指定何时需要网络访问。"
 
 #: ../../src/topics/command-line-tool.md:83
 #: ed521ac365db4a6ba5a1051fbaa2932e
 msgid "CWL v1.0 command-line tools that are upgraded to v1.1  or v1.2 get Network Access automatically."
-msgstr ""
+msgstr "升级到至版本1.1或 1.2的 CWL v1.0 命令行工具将自动获取网络访问权限。"
 
 #: ../../src/topics/creating-files-at-runtime.md:1
 #: a2a0f0eb0f404eb3aaf19cfd3cdb559b
 msgid "Creating Files at Runtime"
-msgstr ""
+msgstr "在运行时创建文件"
 
 #: ../../src/topics/creating-files-at-runtime.md:3
 #: 0cf51b6da6884065ae42032abc20eb0d
 msgid "Sometimes you need to create a file on the fly from input parameters, such as tools that expect to read their input configuration from a file rather than the command line parameters, or need a small wrapper shell script."
-msgstr ""
+msgstr "有时，您需要从输入参数动态创建文件，例如需要可从文件（而不是命令行参数）中读"
+"取输入配置的工具，或者需要一个小型包装器的 shell 脚本。"
 
 #: ../../src/topics/creating-files-at-runtime.md:7
 #: 2df3a3a9094d4b79b1d5dd99195f3bff
 msgid "To generate such files, we can use the `InitialWorkDirRequirement`."
-msgstr ""
+msgstr "要生成此类文件，我们可使用 `InitialWorkDirRequirements`。"
 
 #: ../../src/topics/creating-files-at-runtime.md:9
 #: d3f74c3b094a427fbec831afab657d50
@@ -1295,16 +1509,23 @@ msgstr ""
 #: cfffc518ba6e4ed1a80762ed6f7d25df
 msgid "Any [expressions](../topics/expressions.md) like `$(inputs.message)` are expanded by the CWL engine before creating the file. Here, insert the value at the input `message`."
 msgstr ""
+"在创建文件之前，CWL引擎将拓展所有诸如 `$(inputs.message)`的 [表达式](../"
+"topics/expressions.md)。此处，应在输入`消息`中插入值。"
 
 #: ../../src/topics/creating-files-at-runtime.md:20
 #: 9454a330b9324744b89448f2694b1b03
+#, fuzzy
 msgid "The _CWL expressions_ are independent of any _shell variables_ used later during command line tool invocation. That means that any genuine need for the character `$` must be **escaped** with `\\`. For instance, `\\${PREFIX}` above is expanded to `${PREFIX}` in the generated file to be evaluated by the shell script instead of the CWL engine."
 msgstr ""
+"_CWL 表达式 _ 独立于稍后在命令行工具调用期间使用的所有 _shell 变量 _，"
+"这意味着字符 `$` 的所有真实需要必须** 删除 ** `\\` 。例如，上面的 `\\"
+"${PREFIX}` 在生成的文件中扩展为 `${PREFIX}`，以供 shell 脚本（而不是 CWL "
+"引擎）评估。"
 
 #: ../../src/topics/creating-files-at-runtime.md:27
 #: 7f8d99a30b644457a62ac1523d0c72aa
 msgid "To test the above CWL tool, use this job to provide the input value `message`:"
-msgstr ""
+msgstr "若要测试上述 CWL 工具，请使用此作业提供输入值 `消息`："
 
 #: ../../src/topics/creating-files-at-runtime.md:29
 #: ../../src/topics/environment-variables.md:13
@@ -1319,16 +1540,25 @@ msgstr ""
 #: 10d1373bb14a4a3cacd3b92a2f83382d
 msgid "Before we run this, let us look at each step in a little more detail. The base command `baseCommand: [\"sh\", \"example.sh\"]` will execute the command `sh example.sh`. This will run the file we create in the shell."
 msgstr ""
+"在运行此步骤之前，让我们详细地看一下每个步骤。基本命令 `baseCommand： [“sh”，"
+" “example.sh”]` 将执行命令 `sh example.sh`，此步骤将运行我们在 shell "
+"中创建的文件。"
 
 #: ../../src/topics/creating-files-at-runtime.md:40
 #: 70e257091bdb456e8957f90a8fa90e8c
 msgid "`InitialWorkDirRequirement` requires a `listing`. As the `listing` is a YAML array, we need a `-` on the first line of each element of the array, in this case we have just one element. `entryname:` can have any value, but it must match what was specified in the `baseCommand`. The final part is `entry:`, this is followed by `|-` which is YAML quoting syntax, and means that you are using a multiline string (without it, we would need to write the whole script on one line)."
 msgstr ""
+"`InitialWorkDirRequirements` 需要 `列表 `。由于 `列表` 是一个 YAML 数组，"
+"我们需要在数组每个元素的首行添加一个 "
+"`-`，而在本示例中我们只有一个元素。`entryname:` 可以具有任何值，但它必须与 "
+"`baseCommand` 中指定的值相匹配。最后一个步骤是 `entry：`，后面跟着 `|-`，"
+"这是 YAML 引用语法，意味着正在使用多行字符串（没有它，我们则需要在一行上编写"
+"整个脚本）。"
 
 #: ../../src/topics/creating-files-at-runtime.md:51
 #: 1741804e33aa43ce88b4320c11ae5973
 msgid "See the [YAML Guide](../topics/yaml-guide.md#maps) for more about the formatting."
-msgstr ""
+msgstr "参阅 [YAML指南 ](../topics/yaml-guide.md#maps) ，了解更多有关格式的信息。"
 
 #: ../../src/topics/creating-files-at-runtime.md:54
 #: ../../src/topics/environment-variables.md:18
@@ -1341,22 +1571,26 @@ msgstr ""
 #: d6255506eebe44be94c5ce703c44a513
 #: 7bbd2d738fc54649aeb10f8d2bc38b6f
 msgid "Now invoke `cwltool` with the tool description and the input object on the command line:"
-msgstr ""
+msgstr "现在，通过命令行上的工具描述和输入对象调用 `cwltool`："
 
 #: ../../src/topics/custom-types.md:1
 #: cb34fd4c8cb04053ada491a227651048
 msgid "Custom Types"
-msgstr ""
+msgstr "自定义类型"
 
 #: ../../src/topics/custom-types.md:3
 #: 67573252cc064b27ab13eebc468ac58a
 msgid "Sometimes you may want to write your own custom types for use and reuse in CWL descriptions. Use of such custom types can reduce redundancy between multiple descriptions that all use the same type, and also allow for additional customisation/configuration of a tool/analysis without the need to fiddle with the CWL description directly."
 msgstr ""
+"有时您可能希望编写自己的自定义类型，以便在 CWL 描述中使用和重用。使用此类自定"
+"义类型可以减少全部使用相同类型的多个描述之间的冗余工作，并且还允许对工具/分析"
+"进行额外的自定义/配置，而无需直接修改 CWL 描述。"
 
 #: ../../src/topics/custom-types.md:9
 #: 73e68b3af9cf41338d843c0c40e50cdc
 msgid "The example below is a CWL description of the [biom convert format][biom] tool for converting a standard biom table file to hdf5 format."
-msgstr ""
+msgstr "下方示例为 [biom 转换格式][biom] 工具的 CWL 描述，该工具可将标准 biom "
+"表格文件转换为 hdf5 格式。"
 
 #: ../../src/topics/custom-types.md:12
 #: ef5f35acb97f4ddfad7b688712f53484
@@ -1372,21 +1606,30 @@ msgstr ""
 #: a999b1acda2641598086648c64aa3831
 msgid "___Note:___ To follow the example below, you need to [download the example input file](https://github.com/common-workflow-language/user_guide/blob/main/src/_includes/cwl/custom-types/rich_sparse_otu_table.biom), *rich_sparse_otu_table.biom* e.g. via `wget`:"
 msgstr ""
+"___注意：___要访问下方示例，您需要 [下载示例输入文件](https://github.com/"
+"common-workflow-language/user_guide/blob/main/src/_includes/cwl/custom-types/"
+"rich_sparse_otu_table.biom)， *rich_sparse_otu_table.biom* 比如通过 `wget`："
 
 #: ../../src/topics/custom-types.md:30
 #: f8c12a58cb0b46a488823c6ae95f25ea
 msgid "On line 29, in `inputs:table_type`, a list of allowable table options to be used in the table conversion are imported as a custom object:"
-msgstr ""
+msgstr "在29行的`inputs:table_type`中，可用于表格转换的表选项列表以自定义对象形式导入"
+"："
 
 #: ../../src/topics/custom-types.md:46
 #: f25a63e0926d4932bbe64b2e4bdabf9e
 msgid "The reference to a custom type is a combination of the name of the file in which the object is defined (`biom-convert-table.yaml`) and the name of the object within that file (`table_type`) that defines the custom type. In this case the `symbols` array from the imported `biom-convert-table.yaml` file define the allowable table options. For example, in `custom-types.yml`, we pass `OTU table` as an `input` that tells the tool to create an OTU table in hdf5 format."
 msgstr ""
+"自定义类型的引用是采用定义对象的文件名（`biom-convert-table.yaml` "
+"）和该文件中定义自定义类型的对象名（`table_type` ）的组合。在本示例中，导入的"
+"`biom-convert-table.yaml` 文件中的`符号` 数组定义了允许的表选项。例如，在 "
+"`custom-types.yml` ，我们把`OTU表` "
+"作为一个`输入`进行传递，告诉工具创建一个hdf5格式的OTU表。"
 
 #: ../../src/topics/custom-types.md:53
 #: b0a4df0fd3ca42338cff4689235dcf4e
 msgid "The contents of the YAML file describing the custom type are given below:"
-msgstr ""
+msgstr "描述自定义类型的 YAML 文件的内容如下所示："
 
 #: ../../src/topics/custom-types.md:55
 #: fecfbb44456640d8ba05e519bf2ff564
@@ -1397,21 +1640,28 @@ msgstr ""
 #: d718630a296545f3a989c8c71e9ddc77
 msgid "In order for the custom type to be used in the CWL description, it must be imported. Imports are described in `requirements:SchemaDefRequirement`, as below in the example `custom-types.cwl` description:"
 msgstr ""
+"为了在 CWL 描述中使用自定义类型，必须导入该类型。 "
+"`requirements：SchemaDefRequirements` 对导入进行了描述，如下方示例 `custom-"
+"types.cwl` 的描述所示："
 
 #: ../../src/topics/custom-types.md:76
 #: 9a97acd430064710bcdf76edbd9f711c
 msgid "Note also that the author of this CWL description has also included `ResourceRequirement`s, specifying the minimum amount of RAM and number of cores required for the tool to run successfully, as well as details of the version of the software that the description was written for and other useful metadata. These features are discussed further in other chapters of this user guide."
 msgstr ""
+"另请注意，此 CWL 描述的作者还增添了 `ResourceRequirement`，其指定了工具成功运"
+"行所需的最小内存量和内核数、编写描述的软件版本的详细信息以及其他有用的元数据"
+"。这些功能将在本用户指南的其他章节中进一步讨论。"
 
 #: ../../src/topics/environment-variables.md:1
 #: 59014808cbef4c02aaef03129d8a29b0
 msgid "Environment Variables"
-msgstr ""
+msgstr "环境变量"
 
 #: ../../src/topics/environment-variables.md:3
 #: 3c821c9c46d841ec89b8a5b1018f3af8
 msgid "Tools run in a restricted environment and do not inherit most environment variables from the parent process.  You can set environment variables for the tool using `EnvVarRequirement`."
-msgstr ""
+msgstr "工具在受限环境中运行，不会从父进程继承大多数环境变量。 您可以使用 "
+"`EnvVarRequirements` 为该工具设置环境变量。"
 
 #: ../../src/topics/environment-variables.md:7
 #: bfdebb32440a4034beb42135e38884e8
@@ -1421,22 +1671,26 @@ msgstr ""
 #: ../../src/topics/expression-tool.md:1
 #: 777d4a52f7554eff84db2df6d4d0f729
 msgid "Expression Tool"
-msgstr ""
+msgstr "表达式工具"
 
 #: ../../src/topics/expression-tool.md:3
 #: 48deb71f361a43e48a56ed483075bca8
 msgid "An expression tool is a type of Process that can be run by itself or as a Workflow step. It executes a pure JavaScript expression. It is meant to be used as a way to isolate complex JavaScript expressions that need to operate on input data and produce some result as output."
 msgstr ""
+"表达式工具是一种流程类型，可单独运行，或作为工作流的一个步骤运行。"
+"其执行一个纯 JavaScript 表达式，旨在隔离复杂的 JavaScript "
+"表达式，这些表达式需要对输入数据进行操作并产生一些结果作为输出。"
 
 #: ../../src/topics/expression-tool.md:8
 #: 716b56506ca7470299899c5d820a9ea2
 msgid "Similar to the command-line tool it requires `inputs` and `outputs`. But instead of `baseCommand`, it requires an `expression` attribute."
-msgstr ""
+msgstr "与命令行工具类似，其需要 ` 输入 ` 和 ` 输出 `，但需要的是`表达式 ` 属性，"
+"而不是 `baseCommand`。"
 
 #: ../../src/topics/expression-tool.md:17
 #: b63e6f5a2e89431c8fc7d04f47fd69fe
 msgid "CWL expression tool."
-msgstr ""
+msgstr "CWL 表达式工具。"
 
 #: ../../src/topics/expression-tool.md:48
 #: 39727e9058f24b62b8746a46d3f812c2
@@ -1447,21 +1701,29 @@ msgstr ""
 #: e3ecac0a8e604f2b98a2a12b0579990a
 msgid "We had to use an `InlineJavascriptRequirement` as our expression contains a JavaScript call in `.toUpperCase()`. This means to tools using the expression tool that JavaScript is a requirement."
 msgstr ""
+"我们必须使用 `InlineJavascriptRequirements`，因为我们的表达式包含 `."
+"toUpperCase（）` 中的 JavaScript "
+"调用，这意味着使用表达式工具必须调用JavaScript。"
 
 #: ../../src/topics/expressions.md:1
 #: c8d648b765ec499a8e9c464590838492
 msgid "Expressions"
-msgstr ""
+msgstr "表达式"
 
 #: ../../src/topics/expressions.md:3
 #: 007a345b4bad49cf996c4301b8386473
 msgid "If you need to manipulate input parameters, include the requirement `InlineJavascriptRequirement` and then anywhere a parameter reference is legal you can provide a fragment of Javascript that will be evaluated by the CWL runner."
 msgstr ""
+"如果需要操作输入参数，请添加需求 `InlineJavascriptRequirement`，"
+"然后在参数引用合法的任何地方提供将由 CWL 运行程序评估的 Javascript 片段。"
 
 #: ../../src/topics/expressions.md:9
 #: 2edbd398eadb458b8eacd5fa5496f0a2
 msgid "JavaScript expressions should only be used when absolutely necessary. When manipulating file names, extensions, paths etc, consider whether one of the [built in `File` properties][file-prop] like `basename`, `nameroot`, `nameext`, etc, could be used instead. See the [list of best practices](best-practices.md)."
 msgstr ""
+"只能在绝对必要时使用JavaScript表达式。操作文件名、扩展名、路径等时，请优先考"
+"虑能否使用`basename`、`nameroot`、`nameext`等 [内置 `文件` 属性][file-"
+"prop]。相关详细信息，请参阅[最佳实践列表]（bestpractice.md）。"
 
 #: ../../src/topics/expressions.md:16
 #: 7fdbfd1c937b4991bf4a2fa26ea310e4
@@ -1471,7 +1733,8 @@ msgstr ""
 #: ../../src/topics/expressions.md:22
 #: efb5fd14988c4e2a8f834ee5369d4102
 msgid "As this tool does not require any `inputs` we can run it with an (almost) empty job file:"
-msgstr ""
+msgstr "由于此工具不需要任何 ` 输入 "
+"`，因此我们可以使用一个（几乎）空的作业文件运行它："
 
 #: ../../src/topics/expressions.md:25
 #: e833649b951841c49397796f996d29f3
@@ -1481,42 +1744,49 @@ msgstr ""
 #: ../../src/topics/expressions.md:31
 #: 276f688ba7cc471a842f085ca852b1d9
 msgid "`empty.yml` contains a description of an empty JSON object. JSON objects descriptions are contained inside curly brackets `{}`, so an empty object is represented simply by a set of empty brackets."
-msgstr ""
+msgstr "`empty.yml` 包含一个空 JSON 对象的描述。JSON 对象描述包含在大括号 `{}` "
+"内，因此空对象仅由一组空括号表示。"
 
 #: ../../src/topics/expressions.md:35
 #: ebf399ea4d5f47b9be03e24f04c69f2d
 msgid "We can then run `expression.cwl`:"
-msgstr ""
+msgstr "然后我们可以运行 `expression.cwl`："
 
 #: ../../src/topics/expressions.md:37
 #: 65e0cdd505b944caa40f65e612cdddfc
 msgid "Running `expression.cwl`"
-msgstr ""
+msgstr "运行 `expression.cwl`"
 
 #: ../../src/topics/expressions.md:47
 #: 8b70a1ad70514039b97164fa630c12e4
 msgid "Note that requirements can be provided with the map syntax, as in the example above:"
-msgstr ""
+msgstr "请注意，如上例所示，可通过映射语法来提供要求："
 
 #: ../../src/topics/expressions.md:54
 #: 2f28ab412d2843ffa5f14acdc01fc732
 msgid "Or as an array, with each entry (in this case, only `class: InlineJavascriptRequirement`) marked by a `-`. The same syntax is used to describe the additional command line arguments."
 msgstr ""
+"或者作为一个数组，每个条目（在本示例中，只有`class: "
+"InlineJavascriptRequirement` ）均用 `-` "
+"标记，便可使用相同的语法描述其他命令行参数。"
 
 #: ../../src/topics/expressions.md:62
 #: d957f55a6377422c9834f85d45e35009
 msgid "Where are JavaScript expressions allowed?"
-msgstr ""
+msgstr "哪里允许使用 JavaScript 表达式？"
 
 #: ../../src/topics/expressions.md:64
 #: cbec9277b5004e50af2728cbda0df740
 msgid "Just like [parameter references](parameter-references.md), you can use JavaScript Expressions only in certain fields.  These are:"
-msgstr ""
+msgstr "和 [参数引用](parameter-references.md)一样，只能在某些字段中使用 JavaScript "
+"表达式。 这些字段是："
 
 #: ../../src/topics/expressions.md:66
 #: e259f55f8000479bbd8009e25cf0ca6c
 msgid "From [`CommandLineTool`](https://www.commonwl.org/v1.0/CommandLineTool.html#CommandLineTool)"
 msgstr ""
+"来自[`CommandLineTool`] （https://www.commonwl.org/v1.0/CommandLineTool."
+"html#CommandLineTool）"
 
 #: ../../src/topics/expressions.md:67
 #: ../../src/topics/parameter-references.md:64
@@ -1565,6 +1835,8 @@ msgstr ""
 #: 8210b36347a749889450529ecdf4ff0e
 msgid "From [CommandInputParameter](https://www.commonwl.org/v1.0/CommandLineTool.html#CommandInputParameter)"
 msgstr ""
+"来自 [CommandInputParameter](https://www.commonwl.org/v1.0/CommandLineTool."
+"html#CommandInputParameter)"
 
 #: ../../src/topics/expressions.md:73
 #: ../../src/topics/expressions.md:78
@@ -1608,16 +1880,22 @@ msgstr ""
 #: 23088850ad02459696f6bbd385109aac
 msgid "From [`inputBinding`](https://www.commonwl.org/v1.0/CommandLineTool.html#CommandLineBinding)"
 msgstr ""
+"来自[`inputBinding`](https://www.commonwl.org/v1.0/CommandLineTool."
+"html#CommandLineBinding)"
 
 #: ../../src/topics/expressions.md:77
 #: f02257a822ad46ac93c5981531cc85d5
 msgid "From [CommandOutputParamater](https://www.commonwl.org/v1.0/CommandLineTool.html#CommandOutputParameter)"
 msgstr ""
+"来自 [CommandOutputParamater](https://www.commonwl.org/v1.0/CommandLineTool."
+"html#CommandOutputParameter)的"
 
 #: ../../src/topics/expressions.md:80
 #: 989a1c4aaa1143be9f53b90cd8b6d500
 msgid "From [CommandOutputBinding](https://www.commonwl.org/v1.0/CommandLineTool.html#CommandOutputBinding)"
 msgstr ""
+"来自[CommandOutputBinding](https://www.commonwl.org/v1.0/CommandLineTool."
+"html#CommandOutputBinding)"
 
 #: ../../src/topics/expressions.md:81
 #: ../../src/topics/parameter-references.md:78
@@ -1638,24 +1916,29 @@ msgstr ""
 #: e9fa9430535c424fa3e8be5d460d2ba4
 #: 0e306cc923974d1db83fdfb45105a11c
 msgid "From `Workflow`"
-msgstr ""
+msgstr "来自`Workflow`"
 
 #: ../../src/topics/expressions.md:84
 #: d289541e460147aa933f7878996f8649
 msgid "From [InputParameter](https://www.commonwl.org/v1.0/Workflow.html#InputParameter) and [WorkflowOutputParameter](https://www.commonwl.org/v1.0/Workflow.html#WorkflowOutputParameter)"
 msgstr ""
+"来自 [InputParameter](https://www.commonwl.org/v1.0/Workflow."
+"html#InputParameter) 和 [WorkflowOutputParameter](https://www.commonwl.org/v1"
+".0/Workflow.html#WorkflowOutputParameter)"
 
 #: ../../src/topics/expressions.md:87
 #: ../../src/topics/parameter-references.md:84
 #: b0290d1a477b48119e17cf1fed9d6dff
 #: 446f1190af7a40a0913ff04ce7aa938c
 msgid "From `steps`"
-msgstr ""
+msgstr "来自`steps`"
 
 #: ../../src/topics/expressions.md:88
 #: 81b4d1f23a3642bfa9bb395b94260cd1
 msgid "From [WorkflowStepInput](https://www.commonwl.org/v1.0/Workflow.html#WorkflowStepInput)"
 msgstr ""
+"来自 [WorkflowStepInput](https://www.commonwl.org/v1.0/Workflow."
+"html#WorkflowStepInput)"
 
 #: ../../src/topics/expressions.md:90
 #: ../../src/topics/parameter-references.md:87
@@ -1663,6 +1946,8 @@ msgstr ""
 #: 557694f82e314baa9ccafba14d6ff2c9
 msgid "From [ExpressionTool](https://www.commonwl.org/v1.0/Workflow.html#ExpressionTool)"
 msgstr ""
+"来自 [ExpressionTool](https://www.commonwl.org/v1.0/Workflow."
+"html#ExpressionTool)"
 
 #: ../../src/topics/expressions.md:91
 #: ../../src/topics/parameter-references.md:88
@@ -1675,11 +1960,16 @@ msgstr ""
 #: f495da32f05a4a5ba9539be0a54c1a59
 msgid "From [InputParameter](https://www.commonwl.org/v1.0/Workflow.html#InputParameter) and [ExpressionToolOutputParameter](https://www.commonwl.org/v1.0/Workflow.html#ExpressionToolOutputParameter)"
 msgstr ""
+"来自 [InputParameter](https://www.commonwl.org/v1.0/Workflow."
+"html#InputParameter) 和 [ExpressionToolOutputParameter](https://www.commonwl."
+"org/v1.0/Workflow.html#ExpressionToolOutputParameter)"
 
 #: ../../src/topics/expressions.md:95
 #: bdb4c68a175047ddbe141ca24960127f
 msgid "From [`ResourceRequirement`](https://www.commonwl.org/v1.0/CommandLineTool.html#ResourceRequirement)"
 msgstr ""
+"来自[`ResourceRequirement`](https://www.commonwl.org/v1.0/CommandLineTool."
+"html#ResourceRequirement)"
 
 #: ../../src/topics/expressions.md:96
 #: ../../src/topics/parameter-references.md:93
@@ -1741,6 +2031,8 @@ msgstr ""
 #: 97b61352363f47cb890e8937c5613fa3
 msgid "From [`InitialWorkDirRequirement`](https://www.commonwl.org/v1.0/CommandLineTool.html#InitialWorkDirRequirement)"
 msgstr ""
+"来自 [`InitialWorkDirRequirement`](https://www.commonwl.org/v1.0/"
+"CommandLineTool.html#InitialWorkDirRequirement)"
 
 #: ../../src/topics/expressions.md:105
 #: ../../src/topics/parameter-references.md:102
@@ -1752,7 +2044,7 @@ msgstr ""
 #: ../../src/topics/expressions.md:106
 #: 8d0b142bb7ed4e61b8fb03de197240ce
 msgid "in [Dirent](https://www.commonwl.org/v1.0/CommandLineTool.html#Dirent)"
-msgstr ""
+msgstr "在 [Dirent](https://www.commonwl.org/v1.0/CommandLineTool.html#Dirent)中"
 
 #: ../../src/topics/expressions.md:107
 #: ../../src/topics/parameter-references.md:104
@@ -1773,12 +2065,14 @@ msgstr ""
 #: 2183ac54ae10428388649daa57b6a7f4
 #: 6abeba392b0444b19f92a19f178a4682
 msgid "From `EnvVarRequirement`"
-msgstr ""
+msgstr "来自 `EnvVarRequirement`"
 
 #: ../../src/topics/expressions.md:110
 #: 0bc424ef2ca346099f29b937379908a0
 msgid "From [EnvironmentDef](https://www.commonwl.org/v1.0/CommandLineTool.html#EnvironmentDef)"
 msgstr ""
+"来自 [EnvironmentDef](https://www.commonwl.org/v1.0/CommandLineTool."
+"html#EnvironmentDef)"
 
 #: ../../src/topics/expressions.md:111
 #: ../../src/topics/parameter-references.md:108
@@ -1790,27 +2084,37 @@ msgstr ""
 #: ../../src/topics/expressions.md:116
 #: 10d36a1adfd04144b401c993b12b4094
 msgid "Using External Libraries and Inline JavaScript Code with `expressionLib`"
-msgstr ""
+msgstr "通过 `expressionLib` 使用外部库和内联 JavaScript 代码"
 
 #: ../../src/topics/expressions.md:118
 #: 29b73e1dd72744f68377f0a38c10f062
 msgid "The requirement `InlineJavascriptRequirement` supports an `expressionLib` attribute that allows users to load external JavaScript files, or to provide inline JavaScript code."
 msgstr ""
+"需求 `InlineJavascriptRequirements` 支持 `expressionLib` 属性，"
+"该属性允许用户加载外部 JavaScript 文件或提供内联 JavaScript 代码。"
 
 #: ../../src/topics/expressions.md:122
 #: 38a2afaf4a6c4d04909af22c93f2808d
 msgid "Entries added to the `expressionLib` attribute are parsed with the JavaScript engine of a CWL runner. This can be used to include external files or to create JavaScript functions that can be called in other parts of the CWL document."
 msgstr ""
+"添加到 `expressionLib`属性的条目通过CWL运行程序的JavaScript引擎进行解析，可用"
+"于增添内部文件或创建可在CWL文档其他部分调用的JavaScript函数。"
 
 #: ../../src/topics/expressions.md:128
 #: cd74f34b21af4de9be96fd897efc469b
 msgid "The CWL standards (versions 1.0 through 1.2) [states](https://www.commonwl.org/v1.0/CommandLineTool.html#Expressions)  that the only version of JavaScript valid in CWL expressions is [ECMAScript 5.1](https://262.ecma-international.org/5.1/). This means that any code that you include or write in your CWL Document must be compliant with ECMAScript 5.1."
 msgstr ""
+"CWL 标准（版本 1.0 到 1.2）[声明](https://www.commonwl.org/v1.0/"
+"CommandLineTool.html#Expressions)在 CWL 表达式中唯一有效的 JavaScript 版本是["
+"ECMAScript 5.1](https://262.ecma-international.org/5.1/) ，这意味着在 CWL "
+"文档中添加或编写的所有代码都必须符合此版本。"
 
 #: ../../src/topics/expressions.md:135
 #: f12e371f3f1a4b0cb2cff9800352d48c
 msgid "For example, we can use `InlineJavascriptRequirement` and write a JavaScript function inline in `expressionLib`. That function can then be used in other parts of the CWL document:"
 msgstr ""
+"例如，我们可以使用 `InlineJavascriptRequirements` 并在 `expressionLib` "
+"中编写一个 内联JavaScript 函数，便可在 CWL 文档其他部分调用此函数："
 
 #: ../../src/topics/expressions.md:139
 #: 49d0fda2fc144e0b8b7c92afc1d8945e
@@ -1820,17 +2124,19 @@ msgstr ""
 #: ../../src/topics/expressions.md:146
 #: 8f0e8f050e334ac08334e9215e1dcf61
 msgid "Running this CWL workflow will invoke the JavaScript function and result in the `echo` command printing the input message with capital initial letters:"
-msgstr ""
+msgstr "运行此CWL工作流，将调用JavaScript函数并生成`echo` "
+"命令，以用大写首字母打印输入信息："
 
 #: ../../src/topics/expressions.md:149
 #: 26c74b11bb1849cea0763bb74ec43e42
 msgid "Running `hello-world-expressionlib-inline.cwl`."
-msgstr ""
+msgstr "运行 `hello-world-expressionlib-inline.cwl`。"
 
 #: ../../src/topics/expressions.md:155
 #: 7a6be0005a6441feb67f036d005d7885
 msgid "Let's move the `capitalizeWords` function to an external file, `custom-functions.js`, and import it in our CWL document:"
-msgstr ""
+msgstr "让我们将 `capitalizeWords` 函数移动到外部文件 `custom-functions.js`，"
+"并将其导入CWL 文档中："
 
 #: ../../src/topics/expressions.md:158
 #: ed590f9e6f4f425da886b110295c45db
@@ -1846,16 +2152,21 @@ msgstr ""
 #: 06635145b441418aaae84dc804f3d6ac
 msgid "The `custom-functions.js` file is included in the CWL document with the `$include: custom-functions.js` statement. That makes the functions and variables available to be used in other parts of the CWL document."
 msgstr ""
+"已通过 `$include: custom-functions.js`语句将`custom-functions."
+"js`文件添加至CWL文档，因此可在CWL文档其他部分调用相关函数和 变量。"
 
 #: ../../src/topics/expressions.md:175
 #: 973a9b257b1a4f0dbd4444d4f11dadd7
 msgid "Running `hello-world-expressionlib-external.cwl`."
-msgstr ""
+msgstr "运行 `hello-world-expressionlib-external.cwl`。"
 
 #: ../../src/topics/expressions.md:181
 #: 04eaf1f7c630450db318dcd8b7626e15
 msgid "Finally, note that you can have both inline and external JavaScript code in your CWL document. In this final example we have added another entry to the `expressionLib` attribute with the new function `createHelloWorldMessage`, that calls the `capitalizeWords` function from the external file `custom-functions.js`."
 msgstr ""
+"最后，请注意可在CWL文档中同时拥有内联和外部JavaScript代码。在最后一个示例中，"
+"通过新建函数`createHelloWorldMessage`调用外部文件`custom-functions."
+"js`中的`capitalizeWords` 函数，我们将其他条目添加至expressionLib`属性。"
 
 #: ../../src/topics/expressions.md:186
 #: c4098489fbb049789f022cd3e5c3d49b
@@ -1865,37 +2176,49 @@ msgstr ""
 #: ../../src/topics/expressions.md:193
 #: 5979e4ae5c424276bdbc47f69b379d0f
 msgid "Running `hello-world-expressionlib.cwl`."
-msgstr ""
+msgstr "运行 `hello-world-expressionlib.cwl`。"
 
 #: ../../src/topics/expressions.md:200
 #: fd4579a3c9844492b314b5c3c1775fc7
 msgid "The `$include` statement can be used to include a file from the local disk or from a remote location. It works with both relative and absolute paths. Read the [text about `$include`](https://www.commonwl.org/v1.0/SchemaSalad.html#Include) from the CWL specification to learn more about it."
 msgstr ""
+"可使用`$include` 语句添加本地磁盘或远程位置的文件。相对路径和绝对路径均可用。"
+"了解更多相关信息，请查阅 CWL 规范中关于 `$include`](https://www.commonwl.org/"
+"v1.0/SchemaSalad.html#Include) 的文本。"
 
 #: ../../src/topics/file-formats.md:1
 #: 3f038e7371f84ed9b4547358dfb55a11
 msgid "File Formats"
-msgstr ""
+msgstr "文件格式"
 
 #: ../../src/topics/file-formats.md:3
 #: e024bcb70e04412e90e1838426d1b69a
 msgid "Tools and workflows can take `File` types as input and produce them as output. We also recommend indicating the format for `File` types. This helps document for others how to use your tool while allowing you to do some simple type-checking when creating parameter files."
 msgstr ""
+"工具和工作流可将 `File` 类型作为输入，并将其生成为输出。同时，我们建议指定 `"
+"文件 ` 类型的格式，这有助于其他人记录如何使用您的工具，同时允许您在创建参数文"
+"件时执行一些简单的类型检查。"
 
 #: ../../src/topics/file-formats.md:8
 #: a3db21c0b3114802a8a5b610e252ef13
 msgid "For file formats, we recommend referencing existing ontologies (like EDAM in our example), reference a local ontology for your institution, or do not add a file format initially for quick development before sharing your tool with others. You can browse existing [IANA file format listings][IANA] and [EDAM file format listings][EDAM] on their websites."
 msgstr ""
+"对于文件格式，我们建议引用现有本体（如示例中的 EDAM），引用您所在机构的本地本"
+"体，或者在与他人共享工具之前不要添加文件格式以便快速开发。"
+"您可以在其网站上浏览现有的 [IANA 文件格式列表][IANA] 和 [EDAM "
+"文件格式列表][EDAM]。"
 
 #: ../../src/topics/file-formats.md:14
 #: 0f5bc8520d6a4dafa37c65343da9702a
 msgid "In the next tutorial, we explain  the `$namespaces` and `$schemas` section of the document in greater detail, so don't worry about these for now."
-msgstr ""
+msgstr "在下一个教程中，我们将更详细地解释文档的 `$namespaces` 和 `$schemas` "
+"章节，因此暂时不必担心这些。"
 
 #: ../../src/topics/file-formats.md:17
 #: 5cb830da47464a8b9c3950983fa4d56f
 msgid "Note that for added value `cwltool` can do some basic reasoning based on file formats and warn you if there seem to be some obvious mismatches."
-msgstr ""
+msgstr "请注意，对于附加值而言， `cwltool` "
+"可以根据文件格式进行一些基本推理，并在出现一些明显的不匹配时发出警告。"
 
 #: ../../src/topics/file-formats.md:20
 #: 0535d5de416b4ea3b2f5996583deecc1
@@ -1906,18 +2229,21 @@ msgstr ""
 #: ../../src/topics/metadata-and-authorship.md:22
 #: f558bcf2a993482195cd418b37761809
 #: fb47f73c38cf4ec59bd3021866a631f8
+#, fuzzy
 msgid "The equivalent of this CWL description in command line format is:"
-msgstr ""
+msgstr "CWL描述的等效项在命令行的格式是："
 
 #: ../../src/topics/file-formats.md:32
 #: 74b28c1b09c6429b82e462e4ec61808e
 msgid "Sample Parameter Files"
-msgstr ""
+msgstr "样本参数文件"
 
 #: ../../src/topics/file-formats.md:34
 #: a2ce43b391864e8bbde16328cc19b32b
 msgid "Below is an example of a parameter file for the example above. We encourage checking in working examples of parameter files for your tool. This allows others to quickly work with your tool, starting from a \"known good\" parameterization."
 msgstr ""
+"下方是一个样本参数文件的示例。我们鼓励您检查自己工具中的参数文件作业示例，这"
+"将帮助其他人从一个“已知良好的”参数文件入手，更快地上手使用您的工具。"
 
 #: ../../src/topics/file-formats.md:39
 #: aebee48b742c4145a600fd2daf8c75dc
@@ -1928,41 +2254,49 @@ msgstr ""
 #: 56ee4dcfff6141d5bef80eb96559876d
 msgid "___Note:___ To follow the example below, you need to download the example input file, *file-formats.bam*. The file is available from <https://github.com/common-workflow-language/user_guide/raw/main/src/_includes/cwl/file-formats/file-formats.bam>  and can be downloaded e.g. via `wget`:"
 msgstr ""
+"___注意：___ 要查阅以下示例，您需要下载示例输入文件*file-formats.bam*，"
+"该文件可从 <https://github.com/common-workflow-language/user_guide/raw/main/"
+"src/_includes/cwl/file-formats/file-formats.bam>获取，且可通过 "
+"`wget`等工具下载："
 
 #: ../../src/topics/index.md:1
 #: 8d3a6d83e2e54c56995893c41590b7ff
 msgid "Topics"
-msgstr ""
+msgstr "主题"
 
 #: ../../src/topics/inputs.md:1
 #: 5abcdebfa1cb401bb8892553be285fd3
 msgid "Inputs"
-msgstr ""
+msgstr "输入"
 
 #: ../../src/topics/inputs.md:3
 #: d3a55f71dc244026a97902de9ed819ea
 msgid "Essential Input Parameters"
-msgstr ""
+msgstr "基本输入参数"
 
 #: ../../src/topics/inputs.md:5
 #: 96671c56523c4ea9992fb5dfcfa6490e
 msgid "The `inputs` of a tool is a list of input parameters that control how to run the tool.  Each parameter has an `id` for the name of parameter, and `type` describing what types of values are valid for that parameter."
-msgstr ""
+msgstr "工具`输入`是一张控制工具运行方式的输入参数列表。"
+"每个参数都包含一个表示参数名称的 `id`和用于描述参数有效值类型的`type`。"
 
 #: ../../src/topics/inputs.md:9
 #: bcc6246742cb46bfb185e415c4a3431a
 msgid "Available primitive types are *string*, *int*, *long*, *float*, *double*, and *null*; complex types are *array* and *record*; in addition there are special types *File*, *Directory* and *Any*."
 msgstr ""
+"可用的基元类型包括*string*、 *int*、*long*、 *float*、*double*以及 "
+"*null*；复杂类型包括*array* 和*record* ；此外还有*File*、*Directory* 以及 "
+"*Any*等特殊类型。"
 
 #: ../../src/topics/inputs.md:13
 #: 86dce36de687449c88fb5eb9d64eb045
 msgid "The following example demonstrates some input parameters with different types and appearing on the command line in different ways."
-msgstr ""
+msgstr "下面的示例演示了一些不同类型的输入参数，并以不同的方式显示在命令行上。"
 
 #: ../../src/topics/inputs.md:16
 #: cd9cea15f57b492ba4098237cd7c5bed
 msgid "First, create a file called `inp.cwl`, containing the following:"
-msgstr ""
+msgstr "首先，新建一个名为 `inp.cwl` 的文件，包含以下内容："
 
 #: ../../src/topics/inputs.md:18
 #: 8bdb875b63104f699efe28ea0abb1e3d
@@ -1972,7 +2306,7 @@ msgstr ""
 #: ../../src/topics/inputs.md:24
 #: c6a0151a68494c0cb0176781e65e252e
 msgid "Create a file called `inp-job.yml`:"
-msgstr ""
+msgstr "新建一个名为`inp-job.yml`的文件："
 
 #: ../../src/topics/inputs.md:26
 #: dc5e6b5e01d64226bd5dbbf3175fe010
@@ -1982,82 +2316,112 @@ msgstr ""
 #: ../../src/topics/inputs.md:33
 #: 36ab1d9edafc4831bb1bca5f123b04b0
 msgid "You can use `cwltool` to create a template input object. That saves you from having to type all the input parameters in a input object file:"
-msgstr ""
+msgstr "您可以使用 `cwltool` "
+"创建模板输入对象，便无需在输入对象文件中键入所有输入参数："
 
 #: ../../src/topics/inputs.md:40
 #: 7dc630ea86464b1dba3a4e5079260b3b
 msgid "You can redirect the output to a file, i.e. `cwltool --make-template inp.cwl > inp-job.yml`, and then modify the default values with your desired input values."
 msgstr ""
+"您可将输出重定向到一个文件，即`cwltool --make-template inp.cwl &gt; inp-job."
+"yml`，然后将默认值更改为预期输入值。"
 
 #: ../../src/topics/inputs.md:44
 #: ae37901a8dbe48a59e27ab4e2e6e2d30
 msgid "Notice that \"example_file\", as a `File` type, must be provided as an object with the fields `class: File` and `path`."
-msgstr ""
+msgstr "注意: \"example_file\"是一种`文件` 类型，必须作为一个带有字段`class: File`和 "
+"`path`的对象提供。"
 
 #: ../../src/topics/inputs.md:47
 #: 651e032007ea4a119d20c820bb61f86b
 msgid "Next, create a whale.txt using [touch] by typing `touch whale.txt` on the command line."
-msgstr ""
+msgstr "然后，在命令行键入 `touch whale.txt`，以使用[touch]新建一个whale.txt 。"
 
 #: ../../src/topics/inputs.md:53
 #: 0b056dde9e87428996e47870b12119da
 msgid "Now invoke `cwltool` with the tool description and the input object on the command line, using the command `cwltool inp.cwl inp-job.yml`. The following boxed text describes these two commands and the expected output from the command line:"
 msgstr ""
+"现在，使用`cwltool inp.cwl inp-job.yml`命令，以通过命令行上的工具描述和输入对"
+"象调用`cwltool`。下方方框内文本描述了这两个命令及命令行的预期输出："
 
 #: ../../src/topics/inputs.md:64
 #: 628124a1670b4b058bb0fb6e495a099c
 msgid "The CWL reference runner (cwltool) and other runners create temporary directories with symbolic (\"soft\") links to your input files to ensure that the tools aren't accidentally accessing files that were not explicitly specified"
-msgstr ""
+msgstr "CWL 引用运行程序 （cwltool） 和其他运行程序通过输入文件符号（“软”）链接创建临"
+"时目录，以确保工具不会意外访问未明确指定的文件"
 
 #: ../../src/topics/inputs.md:70
 #: 10ca6321ce3e4b08ab6a5bb380b19c11
 msgid "The field `inputBinding` is optional and indicates whether and how the input parameter should appear on the tool's command line.  If `inputBinding` is missing, the parameter does not appear on the command line.  Let's look at each example in detail."
 msgstr ""
+"字段 `inputBinding` "
+"为可选项，指示输入参数是否应显示在工具的命令行上以及以何种方式显示。 "
+"如果`inputBinding`缺失 ，则该参数不会出现在命令行上。 "
+"让我们来详细看看每个示例。"
 
 #: ../../src/topics/inputs.md:83
 #: ec2adb3912bc46e28891229e9e0d9a1c
 msgid "Boolean types are treated as a flag.  If the input parameter \"example_flag\" is \"true\", then `prefix` will be added to the command line.  If false, no flag is added."
-msgstr ""
+msgstr "布尔类型充当一种标志。如果输入参数“example_flag”为“真”，则命令行会添加`前缀`"
+"。如果为假，则不添加任何标志。"
 
 #: ../../src/topics/inputs.md:95
 #: a519be60726a44af9941fdce04735353
 msgid "String types appear on the command line as literal values.  The `prefix` is optional, if provided, it appears as a separate argument on the command line before the parameter .  In the example above, this is rendered as `--example-string hello`."
 msgstr ""
+"字符串类型在命令行上显示为文本值。 `前缀`是可选的，如果提供，它将在命令行上作"
+"为单独的参数出现，且位于指定参数之前。 在上面的示例中，其显示为 `--example-"
+"string hello`。"
 
 #: ../../src/topics/inputs.md:109
 #: cb8fc8c4c79e467eac5fab4ca685201e
 msgid "Integer (and floating point) types appear on the command line with decimal text representation.  When the option `separate` is false (the default value is true), the prefix and value are combined into a single argument.  In the example above, this is rendered as `-i42`."
 msgstr ""
+"整数（和浮点）类型在命令行中以十进制文本显示。 若选项 `separate`为假（默认值"
+"为真），前缀和值被合并为一个参数。在上方的示例中，其显示为`-i42` 。"
 
 #: ../../src/topics/inputs.md:124
 #: a26cc105716f47cb807174c9003153b0
 msgid "File types appear on the command line as the path to the file.  When the parameter type ends with a question mark `?` it indicates that the parameter is optional.  In the example above, this is rendered as `--file=/tmp/random/path/whale.txt`.  However, if the \"example_file\" parameter were not provided in the input, nothing would appear on the command line."
 msgstr ""
+"文件类型在命令行中显示为文件路径。若参数类型以问号 `?` "
+"结尾，表示该参数为可选。在上方的示例中，其呈现为 `--file=/tmp/random/path/"
+"whale."
+"txt`。但是，如果输入中未提供“example_file”参数，则命令行上不会出现任何内容。"
 
 #: ../../src/topics/inputs.md:131
 #: cc159dd5fe5748caac838862f5b8c4d1
 msgid "Input files are read-only.  If you wish to update an input file, you must [first copy it to the output directory](staging-input-files.md)."
-msgstr ""
+msgstr "输入文件为只读。 如果要更新输入文件，必须 [首先将其复制到输出目录](staging-"
+"input-files.md)。"
 
 #: ../../src/topics/inputs.md:134
 #: 74f7a6b8f8f74dc2a970fdd6e63d8f80
 msgid "The value of `position` is used to determine where parameter should appear on the command line.  Positions are relative to one another, not absolute.  As a result, positions do not have to be sequential, three parameters with positions 1, 3, 5 will result in the same command line as 1, 2, 3.  More than one parameter can have the same position (ties are broken using the parameter name), and the position field itself is optional.  The default position is 0."
 msgstr ""
+"`位置` 的值用于确定参数在命令行中应出现的位置。 位置是相对的，不是绝对的。 因"
+"此，位置不一定是连续的，位置1、3、5的三个参数会生成与位置1、2、3相同的命令行"
+"。 多个参数可以有相同的位置（使用参数名称断开连接），而位置字段本身是可选的。"
+" 默认的位置是0。"
 
 #: ../../src/topics/inputs.md:142
 #: 6812698e9ad84d3385de5e88e9dde0b3
 msgid "The `baseCommand` field will always appear in the final command line before the parameters."
-msgstr ""
+msgstr "`baseCommand` 字段将始终出现在最后的命令行中，且位于指定参数之前。"
 
 #: ../../src/topics/inputs.md:146
 #: 9654e65b1c0642dbb5d4f34edb211989
 msgid "Array Inputs"
-msgstr ""
+msgstr "数组输入"
 
 #: ../../src/topics/inputs.md:148
 #: d1f02be278754267893dfce5a940997d
 msgid "It is easy to add arrays of input parameters represented to the command line. There are two ways to specify an array parameter. First is to provide `type` field with `type: array` and `items` defining the valid data types that may appear in the array. Alternatively, brackets `[]` may be added after the type name to indicate that input parameter is array of that type."
 msgstr ""
+"将显示的输入参数数组添加至命令行很简单。可通过两种方法指定数组参数。首先，"
+"可提供带有 `type： array` 和 `items`的 `type` "
+"字段，以定义数组中可能出现的有效数据类型。或者，可以在类型名称后添加方括号 "
+"`[]`，以指示输入参数为此类型的数组。"
 
 #: ../../src/topics/inputs.md:154
 #: 01f30e38dfdd452dba3a996073936e16
@@ -2076,27 +2440,38 @@ msgstr ""
 #: 02adef8ee8204842b5b4a0408f3bac33
 #: 9db68837918a4a349f32f15f12697a1d
 msgid "Now invoke `cwltool` providing the tool description and the input object on the command line:"
-msgstr ""
+msgstr "现在，调用在命令行上提供工具描述和输入对象的 `cwltool`："
 
 #: ../../src/topics/inputs.md:178
 #: 75d59e395c66416cae9b352db5081516
 msgid "The `inputBinding` can appear either on the outer array parameter definition or the inner array element definition, and these produce different behavior when constructing the command line, as shown above. In addition, the `itemSeparator` field, if provided, specifies that array values should be concatenated into a single argument separated by the item separator string."
 msgstr ""
+"`inputBinding` 可以出现在外部数组参数定义或内部数组元素定义中，如上所示，它们"
+"在构造命令行时会产生不同的行为。此外，`itemSeparator` "
+"字段（如提供的话）指明数组值应合并成一个独立参数，并以项目分隔符字符串分隔。"
 
 #: ../../src/topics/inputs.md:185
 #: 874c6f19abbf45d7ab7d30a378c4048d
 msgid "Note that the arrays of inputs are specified inside square brackets `[]` in `array-inputs-job.yml`. Arrays can also be expressed over multiple lines, where array values that are not defined with an associated key are marked by a leading `-`. This will be demonstrated in the next lesson and is discussed in more detail in the [YAML Guide](yaml-guide.md#arrays). You can specify arrays of arrays, arrays of records, and other complex types."
 msgstr ""
+"请注意，输入数组在 `array-inputs-job.yml` 的方括号 `[]` "
+"内指定。数组也可以用多行表示，其中未使用关联键定义的数组值由前导 `-` "
+"标记。这将在下一课中演示，并在 [YAML 指南]（yaml-guide.md#arrays） "
+"中详细讨论。你可以指定数组的数组、记录的数组及其他复杂类型的数组。"
 
 #: ../../src/topics/inputs.md:191
 #: 5d7d7a28cc5d4862803032aec78174d9
+#, fuzzy
 msgid "Inclusive and Exclusive Inputs"
-msgstr ""
+msgstr "包容性和互斥性输入"
 
 #: ../../src/topics/inputs.md:193
 #: dea0d4b681f94e73b13965dcfe75cf7d
 msgid "Sometimes an underlying tool has several arguments that must be provided together (they are dependent) or several arguments that cannot be provided together (they are exclusive).  You can use records and type unions to group parameters together to describe these two conditions."
 msgstr ""
+"有时，基础工具具有多个必须一起提供的参数（它们是相互依赖的）或多个不能一起提"
+"供的参数（它们是互斥的）。 "
+"您可以使用记录和类型联合将参数组合在一起，以描述这两种情况。"
 
 #: ../../src/topics/inputs.md:198
 #: ddf598abf4f34aca9fffa045860fbf96
@@ -2111,7 +2486,7 @@ msgstr ""
 #: ../../src/topics/inputs.md:215
 #: 750474486a84482292eeba45f118287f
 msgid "In the first example, you can't provide `itemA` without also providing `itemB`."
-msgstr ""
+msgstr "在第一个示例中，如果不同时提供 `itemB`，则无法提供 `itemA`。"
 
 #: ../../src/topics/inputs.md:217
 #: 9a5cf1d76fc84c1f9b0d123a3a2a480b
@@ -2122,6 +2497,8 @@ msgstr ""
 #: 1eb0e39bb6d04b8cab300f44a79f3add
 msgid "In the second example, `itemC` and `itemD` are exclusive, so only the first matching item (`itemC`) is added to the command line and remaining item (`itemD`) is ignored."
 msgstr ""
+"在第二个示例中，`itemC` 和 `itemD` 是互斥的，因此只有第一个匹配的项 "
+"（`itemC`） 被添加到命令行，其余项 （`itemD`） 将被忽略。"
 
 #: ../../src/topics/inputs.md:236
 #: bc21ee10bff843689cc98ac6630edcea
@@ -2131,22 +2508,25 @@ msgstr ""
 #: ../../src/topics/inputs.md:252
 #: 4b2ab812f62c4f949dd25c8527f2411c
 msgid "In the third example, only `itemD` is provided, so it appears on the command line."
-msgstr ""
+msgstr "在第三个示例中，仅提供了 `itemD`，因此它显示在命令行上。"
 
 #: ../../src/topics/inputs.md:255
 #: b771302d1bec4050a9417b080eef76c9
 msgid "Exclusive Input Parameters with Expressions"
-msgstr ""
+msgstr "带有表达式的互斥输入参数"
 
 #: ../../src/topics/inputs.md:257
 #: 2c3b884cb1c54521900cc90782e8a58d
 msgid "If you use exclusive input parameters combined with expressions, you need to be aware that the `inputs` JavaScript object will contain one of the exclusive input values. This means that you might need to use an **or** boolean operator to check which values are present."
 msgstr ""
+"若要将互斥的输入参数与表达式结合，需意识到`inputs`JavaScript对象将包含互斥输"
+"入值中的一个，这意味着你可能需要使用一个**or**布尔运算符来检查存在哪些值。"
 
 #: ../../src/topics/inputs.md:262
 #: a1073b6306044dffb414319ae01f68bb
 msgid "Let's use an example that contains an exclusive `file_format` input parameter that accepts `null` (i.e. no value provided), or any value from an enum."
-msgstr ""
+msgstr "让我们来一个示例，其包含了一个互斥的 `file_format`输入参数，该参数接受 "
+"`null`（即未提供任何值）或任何枚举的值。"
 
 #: ../../src/topics/inputs.md:265
 #: 4a31c733092142b1af834eab1747c224
@@ -2157,31 +2537,48 @@ msgstr ""
 #: 9a1d92334685449386dfa3b3a899ed48
 msgid "Note how the JavaScript expression uses the value of the exclusive input parameter without taking into consideration a `null` value. If you provide a valid value, such as “fasta” (one of the values of the enum), your command should execute successfully:"
 msgstr ""
+"请留意，在不考虑`null`值的情况下，JavaScript表达式如何使用互斥输入参数的值。"
+"如果提供一个有效值，比如 “fasta” （其中一个枚举的值），命令将成功执行："
 
 #: ../../src/topics/inputs.md:280
 #: fb623af4c480411b8fde28d01c981411
 msgid "However, if you do not provide any input value, then `file_format` will be evaluated to a `null` value, which does not match the expected type for the output field (a `string`), resulting in failure when running your workflow."
 msgstr ""
+"但是，如果未提供任何输入值，则 `file_format` 将被评估为 `null` "
+"值。由于该值与输出字段的预期类型（`字符串`）不匹配，工作流将运行失败。"
 
 #: ../../src/topics/inputs.md:289
 #: e98e165f6bba40809c90473d72f9d592
 msgid "To correct it, you must remember to use an or operator in your JavaScript expression when using exclusive parameters, or any parameter that allows `null`. For example, the expression could be changed to `$(inputs.file_format || 'auto')`, to have a default value if none was provided in the command line or job input file."
 msgstr ""
+"要进行纠正，请务必记住在使用互斥参数或任何允许 `null` 的参数时，应在 "
+"JavaScript 表达式中采用 or 运算符。例如，表达式可以更改为 `$（"
+"inputs.file_format "
+"||'auto'）`，如果命令行或作业输入文件中未提供默认值，则表达式具有默认值。"
 
 #: ../../src/topics/metadata-and-authorship.md:1
 #: d33aa2353ad44fb885d3a1ee48263dc4
+#, fuzzy
 msgid "Metadata and Authorship"
-msgstr ""
+msgstr "元数据和授权"
 
 #: ../../src/topics/metadata-and-authorship.md:3
 #: cd64d2d828834cbbb24ea5358caf5405
 msgid "Implementation extensions not required for correct execution (for example, fields related to GUI presentation) and metadata about the tool or workflow itself (for example, authorship for use in citations) may be provided as additional fields on any object. Such extensions fields (e.g. `format: edam:format_2572`) can use a namespace prefix listed in the `$namespaces` section of the document (e.g. edam: http://edamontology.org/) as described in the [Schema Salad specification][schema-salad]. Once you add the namespace prefix, you can access it anywhere in the document as shown below. Otherwise, one must use full URLs: `format: http://edamontology.org/format_2572`."
 msgstr ""
+"正确执行不需要的实现扩展（例如，与 GUI 表示相关的字段）和有关工具或工作流本身"
+"的元数据（例如，用于引文的作者身份）可以作为任何对象的附加字段提供。正如 ["
+"Schema Salad 规范][schema-salad]中所述，此类扩展字段（例如 `format: "
+"edam:format_2572`）可以使用文档的 `$namespaces` 章节中所列的命名空间前缀（"
+"例如 edam：http://edamontology.org/"
+"）。如下所示，添加命名空间前缀后，便可在文档的任何位置访问该字段。否则，"
+"必须使用完整的 URL：`格式：http://edamontology.org/format_2572`。"
 
 #: ../../src/topics/metadata-and-authorship.md:13
 #: 80af387fe3ff4e2da999903385bd602b
 msgid "For all developers, we recommend the following minimal metadata for your tool and workflows. This example includes metadata allowing others to cite your tool."
-msgstr ""
+msgstr "对于所有的开发人员，我们建议为你的工具和工作流程提供以下最小元数据。本示例包"
+"含允许他人引用您工具的元数据。"
 
 #: ../../src/topics/metadata-and-authorship.md:16
 #: 0d5200bbbfdc43e6a78b4e4c3096ebd7
@@ -2191,12 +2588,15 @@ msgstr ""
 #: ../../src/topics/metadata-and-authorship.md:28
 #: d402bf528c7f4eb69aaaa275be2bf1d4
 msgid "Extended Example"
-msgstr ""
+msgstr "扩展示例"
 
 #: ../../src/topics/metadata-and-authorship.md:30
 #: cb9980db4e5f4c74b01c2dec6d5e92d0
 msgid "For those that are highly motivated, it is also possible to annotate your tool with a much larger amount of metadata. This example includes EDAM ontology tags as keywords (allowing the grouping of related tools), hints at hardware requirements in order to use the tool, and a few more metadata fields."
 msgstr ""
+"对于积极性高的人而言，也可使用更多的元数据来注释工具。此示例包括作为关键字的 "
+"EDAM 本体标记（允许对相关工具进行分组）、使用该工具所需的硬件要求的提示以及更"
+"多元数据字段。"
 
 #: ../../src/topics/metadata-and-authorship.md:35
 #: 2dfbd4d580044ed083992f3ceb1bc64e
@@ -2206,17 +2606,19 @@ msgstr ""
 #: ../../src/topics/operations.md:1
 #: 8acf361cf77c4d45ba3f2e344146259f
 msgid "Operations"
-msgstr ""
+msgstr "操作"
 
 #: ../../src/topics/operations.md:3
 #: 83d3b9a0ed3148fda9ce72cd108cb9e1
 msgid "An Operation is a type of CWL process, just like a workflow, a command-line tool, or an expression tool. It is a step of a workflow that specifies inputs and outputs, but it does not provide enough information to be executed."
-msgstr ""
+msgstr "操作是一种 CWL 流程，与工作流、命令行工具或表达式工具类似。操作是工作流的一个"
+"步骤，用于指定输入和输出，但没有提供足够的信息来执行。"
 
 #: ../../src/topics/operations.md:7
 #: 5565c1b2d8a349169a305a9b26b4574d
 msgid "You can create operations to visualize a workflow during development, before you are ready to submit the workflow to a CWL runner:"
-msgstr ""
+msgstr "在准备将工作流提交至 CWL "
+"运行程序之前，您可以在开发期间创建操作以可视化工作流："
 
 #: ../../src/topics/operations.md:10
 #: 49cf614893d8438299b3bca384eb40cf
@@ -2226,62 +2628,76 @@ msgstr ""
 #: ../../src/topics/operations.md:16
 #: 88160cef4cfa4add9020aa89511a5749
 msgid "The `uppercase` step of the workflow is an operation. It can be used like a command line tool or an expression. You can also plot it with the CWL Viewer or `cwltool`:"
-msgstr ""
+msgstr "工作流中的 `uppercase`步骤是一个操作，可以像命令行工具或表达式一样使用，"
+"也可以使用 CWL 查看器或 `cwltool`进行绘制："
 
 #: ../../src/topics/operations.md:24
 #: 2f73a786b5d94dc0b23ed0cdd185afc8
 msgid "The output of the command above can be rendered with a Graphviz renderer. The following image is rendered with the Sphinx Graphviz directive (this user guide is built with Sphinx):"
 msgstr ""
+"上述命令的输出可使用Graphviz渲染器进行渲染。下面的图片是使用Sphinx "
+"Graphviz指令来渲染的（本用户指南是使用Sphinx构建的）："
 
 #: ../../src/topics/operations.md:55
 #: 730ba1434a1445ae847ec6153b6a3b72
 msgid "If you try running it with `cwltool`, the command will fail since `cwltool` does not have enough information to know how to execute it:"
-msgstr ""
+msgstr "如果您尝试通过`cwltool`来运行，命令将运行失败，因为`cwltool`缺少足够信息来了"
+"解执行的方法："
 
 #: ../../src/topics/operations.md:58
 #: 98d9b8d867594543890af99e77e24edb
 msgid "`cwltool` does not know how to run operations"
-msgstr ""
+msgstr "`cwltool`不知道如何运行操作"
 
 #: ../../src/topics/operations.md:66
 #: a25d0b1e13324b40a6b8fcd227948c4f
 msgid "CWL runners may come up with ways to bind operations to concrete steps. A CWL runner could, for instance, use abstract operations with ID's that correspond to steps executed by a different workflow engine."
 msgstr ""
+"CWL 运行程序可能会提出将操作绑定到具体步骤的方法。例如，CWL "
+"运行程序可以使用带有 ID "
+"的抽象操作，而这些操作对应于不同工作流引擎执行的步骤。"
 
 #: ../../src/topics/outputs.md:1
 #: da077da5eb8a4ffebfde041fc16300de
 msgid "Outputs"
-msgstr ""
+msgstr "输出"
 
 #: ../../src/topics/outputs.md:3
 #: 1b3016f0462f42deb42ddaa33f28bf3d
 msgid "Returning Output Files"
-msgstr ""
+msgstr "返回输出文件"
 
 #: ../../src/topics/outputs.md:5
 #: d661df070e3040869da412d07a71f716
 msgid "The `outputs` of a tool is a list of output parameters that should be returned after running the tool.  Each parameter has an `id` for the name of parameter, and `type` describing what types of values are valid for that parameter."
-msgstr ""
+msgstr "工具的 ` 输出 ` 是运行工具后应返回的输出参数列表。 "
+"每个参数都有一个代表其名称的 `id`以及描述其有效值类型的 `type`。"
 
 #: ../../src/topics/outputs.md:10
 #: a11585474d3849cca5467512ed964743
 msgid "When a tool runs under CWL, the starting working directory is the designated output directory.  The underlying tool or script must record its results in the form of files created in the output directory.  The output parameters returned by the CWL tool are either the output files themselves, or come from examining the content of those files."
 msgstr ""
+"工具在 CWL 下运行时，起始工作目录即为指定的输出目录。 "
+"基础工具或脚本必须以在输出目录中创建的文件形式记录其结果。 CWL "
+"工具返回的输出参数要么是输出文件本身，要么来自检查这些文件的内容。"
 
 #: ../../src/topics/outputs.md:16
 #: 2682f9ca8e604a0c9986f7746fdec960
 msgid "The following example demonstrates how to return a file that has been extracted from a tar file."
-msgstr ""
+msgstr "下面的示例演示了如何返回已从 tar 文件中提取的文件。"
 
 #: ../../src/topics/outputs.md:19
 #: 7e3fa7baf0f549ec89457e7004ac9545
 msgid "Passing mandatory arguments to the `baseCommand`"
-msgstr ""
+msgstr "将强制参数传递至 `baseCommand`"
 
 #: ../../src/topics/outputs.md:21
 #: 22447a560f6f4317bf67bd7c4336126c
 msgid "In previous examples, the `baseCommand` was just a string, with any arguments passed as CWL inputs. Instead of a single string we can use an _array of strings_.  The first element is the command to run, and any subsequent elements are mandatory command line arguments"
 msgstr ""
+"在前面的示例中，`baseCommand` 只是一个字符串，任何参数都作为 CWL 输入传递。"
+"我们可以使用 _ 字符串数组 _ ，而不是单个字符串。 "
+"第一个元素是要运行的命令，所有后续元素均为强制命令行参数"
 
 #: ../../src/topics/outputs.md:26
 #: f1ee2e00b0cc4112b51c9df3a919b73f
@@ -2296,32 +2712,36 @@ msgstr ""
 #: ../../src/topics/outputs.md:38
 #: dc200c6960ae4476a772645d021f14b8
 msgid "Next, create a tar file for the example."
-msgstr ""
+msgstr "接下来，为此示例新建一个 tar 文件。"
 
 #: ../../src/topics/outputs.md:45
 #: 52703d6b7f914097934bfad13663abeb
 msgid "And now invoke `cwltool` with the tool description and the input object on the command line:"
-msgstr ""
+msgstr "现在，通过命令行上的工具描述和输入对象调用 `cwltool`："
 
 #: ../../src/topics/outputs.md:51
 #: 5e1c79df657d4a6e84e055dd6b300a5d
 msgid "The field `outputBinding` describes how to set the value of each output parameter."
-msgstr ""
+msgstr "`outputBinding` 字段描述了如何设置每个输出参数的值。"
 
 #: ../../src/topics/outputs.md:62
 #: 329d2809dfae4f90bc638f5f03a47ee3
 msgid "The `glob` field consists of the name of a file in the output directory. If you don't know name of the file in advance, you can use a wildcard pattern like `glob: '*.txt'`."
-msgstr ""
+msgstr "`glob` "
+"字段由输出目录中的文件名称组成。如果事先不知道文件名，可以使用通配符模式，"
+"例如 `glob：“*.txt”`。"
 
 #: ../../src/topics/outputs.md:65
 #: 96df2d45e42441d49ce193ccbfab78a3
 msgid "Capturing Standard Output"
-msgstr ""
+msgstr "捕获标准输出"
 
 #: ../../src/topics/outputs.md:67
 #: c6bcf7c6a8774dd6be41cc775848c3b8
 msgid "To capture a tool's standard output stream, add the `stdout` field with the name of the file where the output stream should go.  Then add `type: stdout` on the corresponding output parameter."
 msgstr ""
+"要捕获工具的标准输出流，请添加 `stdout` 字段及文件名（即输出流目标位置）。 "
+"然后，在相应的输出参数上添加 `type： stdout`。"
 
 #: ../../src/topics/outputs.md:71
 #: 9d86c03ab44841c785b924cc44727e31
@@ -2331,12 +2751,12 @@ msgstr ""
 #: ../../src/topics/outputs.md:89
 #: 2fb58c2feaa84970bb5274c49f4b5b64
 msgid "Array Outputs"
-msgstr ""
+msgstr "数组输出"
 
 #: ../../src/topics/outputs.md:91
 #: 9647019d8c37466886e7aab6f176634d
 msgid "You can also capture multiple output files into an array of files using `glob`."
-msgstr ""
+msgstr "您也可使用`glob`捕获多个输出文件，并将其保存为一个文件数组。"
 
 #: ../../src/topics/outputs.md:93
 #: b9eaf21f5e014eefaae301c47dafd144
@@ -2352,16 +2772,25 @@ msgstr ""
 #: cc067051f22f433bbece08f60933e002
 msgid "As described in the [YAML Guide](yaml-guide.md#arrays), the array of expected outputs is specified in `array-outputs-job.yml` with each entry marked by a leading `-`. This format can also be used in CWL descriptions to mark entries in arrays, as demonstrated in several of the upcoming sections."
 msgstr ""
+"如 [YAML 指南](yaml-guide.md#arrays)中所述，预期输出数组在 `array-outputs-job"
+".yml` 中指定，每个条目均以前导符 `-`标记。这种格式也可以在 CWL "
+"描述中用于标记数组中的条目，这将在接下来几个章节中进行演示。"
 
 #: ../../src/topics/parameter-references.md:1
 #: a190a6440ec34898990cdac05d809f22
 msgid "Parameter References"
-msgstr ""
+msgstr "参数引用"
 
 #: ../../src/topics/parameter-references.md:3
 #: dbfe2c1123144316aa026374b0f353d3
 msgid "In a previous example, we extracted a file using the \"tar\" program. However, that example was very limited because it assumed that the file we were interested in was called \"hello.txt\", and this was written into the `.cwl` file. This is not the best way to do this, as the \"hello.txt\" filename may vary or be dependent on the input file(s) used.  To avoid this we can specify the name of the file we want in the job parameters file (`.yml`). In this example, you will see how to reference the value of input parameters dynamically from other fields, which will allow us to then specify the name of the file to extract."
 msgstr ""
+"在前面的示例中，我们使用“tar”程序提取了一个文件。但是，该示例非常有限，因为它"
+"假定我们感兴趣的文件称为“hello.txt”，并将其写入 `.cwl` "
+"文件中。这不是执行此操作的最佳方法，因为“hello."
+"txt”文件名可能会有所不同或取决于所使用的输入文件。 为了避免这种情况，"
+"我们可以在作业参数文件 （`.yml`） 中指定文件名称。本示例将演示如何从其他字段"
+"动态引用输入参数值，这将允许我们指定要提取的文件名称。"
 
 #: ../../src/topics/parameter-references.md:13
 #: 280f1a07d0ae41d7a4674504f832fcf0
@@ -2376,137 +2805,186 @@ msgstr ""
 #: ../../src/topics/parameter-references.md:25
 #: 074cf5d912854d8c864607cc24b15302
 msgid "Create your input files and invoke `cwltool` with the tool description and the input object on the command line:"
-msgstr ""
+msgstr "新建输入文件，并使用命令行上的工具描述和输入对象调用 `cwltool`："
 
 #: ../../src/topics/parameter-references.md:36
 #: 0290af3e3cbb4b32b0450c8771f3bf95
 msgid "Certain fields permit parameter references which are enclosed in `$(...)`. These are evaluated and replaced with value being referenced."
-msgstr ""
+msgstr "某些字段允许 `$（...） "
+"中所列的参数引用`，将对这些字段进行评估并替换为被引用的值。"
 
 #: ../../src/topics/parameter-references.md:47
 #: b54240bb94f746bba7511633aa969db0
 msgid "References are written using a subset of Javascript syntax.  In this example, `$(inputs.extractfile)`, `$(inputs[\"extractfile\"])`, and `$(inputs['extractfile'])` are equivalent."
 msgstr ""
+"需使用Javascript语法的子集编写引用。 在此示例中，`$（inputs."
+"extractfile）`、`$（inputs[“extractfile”]）` 以及 "
+"`$（inputs['extractfile']）` 为等效项。"
 
 #: ../../src/topics/parameter-references.md:51
 #: 8b70a072aa87414c88e89a3e19af0a51
 msgid "The value of the \"inputs\" variable is the input object provided when the CWL tool was invoked."
-msgstr ""
+msgstr "“输入”变量的值是调用 CWL 工具时提供的输入对象。"
 
 #: ../../src/topics/parameter-references.md:54
 #: eea20f89c45f424a888178df53713b28
 msgid "Note that because `File` parameters are objects, to get the path to an input file you must reference the path field on a file object; to reference the path to the tar file in the above example you would write `$(inputs.tarfile.path)`."
 msgstr ""
+"请注意，由于 `File` "
+"参数是对象，要获取输入文件的路径，必须引用文件对象上的路径字段；"
+"若要引用上方示例中 tar 文件的路径，您需要编写 `$（inputs.tarfile.path）`。"
 
 #: ../../src/topics/parameter-references.md:59
 #: cb4ea13f5db84c0da43df3f7f2478d78
 msgid "Where are parameter references allowed?"
-msgstr ""
+msgstr "哪里允许参数引用？"
 
 #: ../../src/topics/parameter-references.md:61
 #: 6d3fb423e6c4434697cd113fb27e28ad
 msgid "You can only use parameter references in certain fields.  These are:"
-msgstr ""
+msgstr "您只能在某些字段中使用参数引用。 这些字段是："
 
 #: ../../src/topics/parameter-references.md:63
 #: 7647e0229a924f988cf02b7812a55c06
 msgid "From [`CommandLineTool`](http://www.commonwl.org/v1.0/CommandLineTool.html#CommandLineTool)"
 msgstr ""
+"来自 [`CommandLineTool`](http://www.commonwl.org/v1.0/CommandLineTool."
+"html#CommandLineTool)"
 
 #: ../../src/topics/parameter-references.md:69
 #: 9d663249666045618a0d3acddb85a9a9
 msgid "From [CommandInputParameter](http://www.commonwl.org/v1.0/CommandLineTool.html#CommandInputParameter)"
 msgstr ""
+"来自 [CommandInputParameter](http://www.commonwl.org/v1.0/CommandLineTool."
+"html#CommandInputParameter)"
 
 #: ../../src/topics/parameter-references.md:72
 #: 5fed4984f6784347b4cbe0630b1dd2c2
 msgid "From [`inputBinding`](http://www.commonwl.org/v1.0/CommandLineTool.html#CommandLineBinding)"
 msgstr ""
+"来自 [`inputBinding`](http://www.commonwl.org/v1.0/CommandLineTool."
+"html#CommandLineBinding)"
 
 #: ../../src/topics/parameter-references.md:74
 #: dbf6153cd02542a6a01c172803122b7f
 msgid "From [CommandOutputParamater](http://www.commonwl.org/v1.0/CommandLineTool.html#CommandOutputParameter)"
 msgstr ""
+"来自 [CommandOutputParamater](http://www.commonwl.org/v1.0/CommandLineTool."
+"html#CommandOutputParameter)"
 
 #: ../../src/topics/parameter-references.md:77
 #: b6250cf6fa8a4a0c94b33302e0decca5
 msgid "From [CommandOutputBinding](http://www.commonwl.org/v1.0/CommandLineTool.html#CommandOutputBinding)"
 msgstr ""
+"来自 [CommandOutputBinding](http://www.commonwl.org/v1.0/CommandLineTool."
+"html#CommandOutputBinding)"
 
 #: ../../src/topics/parameter-references.md:81
 #: fa6ca3bbc6784380a03a950a6f49a180
 msgid "From [InputParameter](http://www.commonwl.org/v1.0/Workflow.html#InputParameter) and [WorkflowOutputParameter](http://www.commonwl.org/v1.0/Workflow.html#WorkflowOutputParameter)"
 msgstr ""
+"来自[InputParameter](http://www.commonwl.org/v1.0/Workflow."
+"html#InputParameter) 和 [WorkflowOutputParameter](http://www.commonwl.org/v1."
+"0/Workflow.html#WorkflowOutputParameter)"
 
 #: ../../src/topics/parameter-references.md:85
 #: b92b516e537a4773ad67b4af586e7a25
 msgid "From [WorkflowStepInput](http://www.commonwl.org/v1.0/Workflow.html#WorkflowStepInput)"
 msgstr ""
+"来自 [WorkflowStepInput](http://www.commonwl.org/v1.0/Workflow."
+"html#WorkflowStepInput)"
 
 #: ../../src/topics/parameter-references.md:89
 #: 467a701228504d06b971b79a59c69064
 msgid "From [InputParameter](http://www.commonwl.org/v1.0/Workflow.html#InputParameter) and [ExpressionToolOutputParameter](http://www.commonwl.org/v1.0/Workflow.html#ExpressionToolOutputParameter)"
 msgstr ""
+"来自 [InputParameter](http://www.commonwl.org/v1.0/Workflow."
+"html#InputParameter) 和 [ExpressionToolOutputParameter](http://www.commonwl."
+"org/v1.0/Workflow.html#ExpressionToolOutputParameter)"
 
 #: ../../src/topics/parameter-references.md:92
 #: 2634f989eb304009a8568d70ed42786c
 msgid "From [`ResourceRequirement`](http://www.commonwl.org/v1.0/CommandLineTool.html#ResourceRequirement)"
 msgstr ""
+"来自 [`ResourceRequirement`](http://www.commonwl.org/v1.0/CommandLineTool."
+"html#ResourceRequirement)"
 
 #: ../../src/topics/parameter-references.md:101
 #: 5d8bed66282c408695292ea92a03b2c4
 msgid "From [`InitialWorkDirRequirement`](http://www.commonwl.org/v1.0/CommandLineTool.html#InitialWorkDirRequirement)"
 msgstr ""
+"来自 [`InitialWorkDirRequirement`](http://www.commonwl.org/v1.0/"
+"CommandLineTool.html#InitialWorkDirRequirement)"
 
 #: ../../src/topics/parameter-references.md:103
 #: 958178d1fa8843aaa0541e2bb115cfd4
 msgid "in [Dirent](http://www.commonwl.org/v1.0/CommandLineTool.html#Dirent)"
-msgstr ""
+msgstr "位于 [Dirent](http://www.commonwl.org/v1.0/CommandLineTool.html#Dirent)"
 
 #: ../../src/topics/parameter-references.md:107
 #: 9a6b311ded8d4e43ae635b1b927dbdf2
 msgid "From [EnvironmentDef](http://www.commonwl.org/v1.0/CommandLineTool.html#EnvironmentDef)"
 msgstr ""
+"来自 [EnvironmentDef](http://www.commonwl.org/v1.0/CommandLineTool."
+"html#EnvironmentDef)"
 
 #: ../../src/topics/requirements-and-hints.md:5
 #: aac74f957774479a83aab4c6ff1390ae
 msgid "Requirements and Hints"
-msgstr ""
+msgstr "需求和提示"
 
 #: ../../src/topics/specifying-software-requirements.md:1
 #: b75d29d1d55d44488338f9689f156855
 msgid "Specifying Software Requirements"
-msgstr ""
+msgstr "指定软件需求"
 
 #: ../../src/topics/specifying-software-requirements.md:3
 #: 574d93d1d592458a985f259519c036cb
 msgid "Often, tool descriptions will be written for a specific version of a software. To make it easier for others to use your descriptions, you can include a `SoftwareRequirement` field in the `hints` section. This may also help to avoid confusion about which version of a tool the description was written for."
 msgstr ""
+"通常，工具描述将针对特定版本的软件编写。为了方便其他人使用您的描述，您可以在 "
+"`提示 ` 部分添加`SoftwareRequirement` "
+"字段，这也可能有助于他人了解此描述所适用的工具版本。"
 
 #: ../../src/topics/specifying-software-requirements.md:13
 #: 82e48b3e3c3f451480cc0b6a529271f6
 msgid "In this example, the software requirement being described is InterProScan version 5.21-60."
-msgstr ""
+msgstr "在本示例中，所描述的软件要求是InterProScan版本5.21-60。"
 
 #: ../../src/topics/specifying-software-requirements.md:25
 #: 02e40154eac74ecc98d0447d03475b44
 msgid "Depending on your CWL runner, these hints may be used to check that the required software is installed and available before the job is run. To enable these checks with the reference implementation, use the [dependency resolvers configuration][dependencies]."
 msgstr ""
+"根据您的 CWL 运行程序，可在运行作业之前使用这些提示检查所需软件是否已安装且可"
+"用。要使用参考实现启用这些检查，请使用 [依赖项解析程序配置][依赖项]。"
 
 #: ../../src/topics/specifying-software-requirements.md:29
 #: 8cb1c5d9b1a54c40924099494eb766c6
 msgid "As well as a version number, a unique resource identifier (URI) for the tool is given in the form of an [RRID][rrid]. Resources with RRIDs can be looked up in the [SciCrunch][scicrunch] registry, which provides a portal for finding, tracking, and referring to scientific resources consistently. If you want to specify a tool as a `SoftwareRequirement`, search for the tool on SciCrunch and use the RRID that it has been assigned in the registry. (Follow this [Adding a Resource Tutorial][scicrunch-add-tool] to add a tool to SciCrunch). You can use this RRID to refer to the tool (via [identifiers.org][identifiers]) in the `specs` field of your requirement description. Other good choices, in order of preference, are to include the DOI for the main tool citation and the URL to the tool."
 msgstr ""
+"除了版本号之外，该工具的唯一资源标识符 (URI) 以 [RRID][rrid] 的形式给出。"
+"可以在 [SciCrunch][scicrunch] 注册表中查找具有 RRID "
+"的资源，该注册表提供了一个用于查找、跟踪和一致引用科学资源的门户。"
+"如果要将工具指定为 `SoftwareRequirement`，请在 SciCrunch "
+"上搜索该工具并使用在注册表中分配的 RRID。 （按照 [添加资源教程][scicrunch-"
+"add-tool] 将工具添加到 SciCrunch）。您可以使用此 RRID 在需求描述的 `specs` "
+"字段中引用该工具（通过 [identifiers."
+"org][identifiers]）。其他不错的选择（按优先顺序）包括主要工具引用的 DOI "
+"和工具的 URL。"
 
 #: ../../src/topics/staging-input-files.md:1
 #: b85eb83e05e845d7a179f1b1d74db444
 msgid "Staging Input Files"
-msgstr ""
+msgstr "暂存输入文件"
 
 #: ../../src/topics/staging-input-files.md:3
 #: 35f97d37492b4c7ca3ad6cfc1e6fa366
 msgid "Normally, input files are located in a read-only directory separate from the output directory.  This causes problems if the underlying tool expects to write its output files alongside the input file in the same directory.  You use `InitialWorkDirRequirement` to stage input files into the output directory. In this example, we use a JavaScript expression to extract the base name of the input file from its leading directory path."
 msgstr ""
+"通常，输入文件位于独立于输出目录的只读目录中。 "
+"如果基础工具希望将其输出文件与输入文件一起写入同一目录中，则会导致问题。 "
+"使用 `InitialWorkDirRequirement` 将输入文件暂存到输出目录中。在此示例中，"
+"我们使用 JavaScript 表达式从输入文件的前导目录路径中提取该文件的基本名称。"
 
 #: ../../src/topics/staging-input-files.md:9
 #: c8159d0cb2ab452a9ce8e8d2adbaaa94
@@ -2516,7 +2994,7 @@ msgstr ""
 #: ../../src/topics/troubleshooting.md:1
 #: 0f7508ce59754a7eb230dea6042244c6
 msgid "Troubleshooting"
-msgstr ""
+msgstr "疑难解答"
 
 #: ../../src/topics/troubleshooting.md:3
 #: fbe0c65b444441f785d0054176d036a6
