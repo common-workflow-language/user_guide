@@ -519,12 +519,13 @@ two-step workflow to a single step subworkflow:
 Now the scatter acts on a single step, but that step consists of two steps so each step is performed
 in parallel.
 
-If `scatter` declares more than one input parameter, `scatterMethod`
-describes how to divide the inputs into separate jobs. There are 3 scatter methods in CWL: `dot_product`, `flat_crossproduct`, and `nested_crossproduct`
+If `scatter` declares more than one input parameter,
+`scatterMethod` describes how to divide the inputs into separate jobs.
+There are 3 scatter methods in CWL: `dot_product`, `flat_crossproduct`, and `nested_crossproduct`.
 
-`dotproduct` specifies that each of the input arrays are aligned and one
-element taken from each array to construct each job. It is an error
-if all input arrays are not the same length.
+`dotproduct` specifies that each of the input arrays are aligned,
+and one element taken from each array to construct each job.
+It is an error if all input arrays are not the same length.
 
 ```cwl
 #!/usr/bin/env cwl-runner
