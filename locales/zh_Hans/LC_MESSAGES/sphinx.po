@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: Common Workflow Language User Guide\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-01-25 14:33+0100\n"
-"PO-Revision-Date: 2023-02-19 06:59+0000\n"
-"Last-Translator: Rhea-Xiao <xiao.translations@gmail.com>\n"
+"PO-Revision-Date: 2023-04-26 11:48+0000\n"
+"Last-Translator: Zoë Ma <zoe.ma@curii.com>\n"
 "Language-Team: Chinese (Simplified) <https://hosted.weblate.org/projects/"
 "commonwl/cwl-user-guide-sphinx/zh_Hans/>\n"
 "Language: zh_Hans\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 4.16-dev\n"
+"X-Generator: Weblate 4.18-dev\n"
 
 #: ../../src/_templates/sidebar-nav-bs.html:1
 #: d65b012160e9455eb4d2628279fffc42
@@ -27,4 +27,4 @@ msgstr "主导航"
 #: ../../src/_templates/sidebar-nav-bs.html:3
 #: 4b3441eb77f448daa60718b7bfa862db
 msgid "Section Navigation"
-msgstr "部分导航"
+msgstr "章节导航"

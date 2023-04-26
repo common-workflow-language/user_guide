@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: Common Workflow Language User Guide\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-01-25 14:33+0100\n"
-"PO-Revision-Date: 2023-03-01 05:35+0000\n"
-"Last-Translator: Rhea-Xiao <xiao.translations@gmail.com>\n"
+"PO-Revision-Date: 2023-04-26 11:48+0000\n"
+"Last-Translator: Zoë Ma <zoe.ma@curii.com>\n"
 "Language-Team: Chinese (Simplified) <https://hosted.weblate.org/projects/"
 "commonwl/user-guide/zh_Hans/>\n"
 "Language: zh_Hans\n"
@@ -17,78 +17,79 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 4.16-rc\n"
+"X-Generator: Weblate 4.18-dev\n"
 
 #: ../../LICENSE.md:2
 #: 4e203044f0464fd5a3256430391dde12
 msgid "Licenses"
-msgstr "许可证"
+msgstr "许可协议"
 
 #: ../../LICENSE.md:4
 #: 79a9837f877147fa8e3931968aae7fb5
 msgid "Instructional Material"
-msgstr "指导材料"
+msgstr "指南资料"
 
 #: ../../LICENSE.md:6
 #: 747f9dd48bc54f44adcd8b18c57f4d9d
 msgid "All Common Workflow Language project instructional material and changes to the structure are also made available under the [Creative Commons Attribution license][cc-by-human]. The following is a human-readable summary of (and not a substitute for) the [full legal text of the CC BY 4.0 license][cc-by-legal]."
 msgstr ""
-"所有通用工作流语言项目的指导材料及结构变更信息均可在[知识共享署名许可][cc-by-"
-"human]下查阅。以下是[CC BY 4.0许可的完整法律文本][cc-by-"
-"legal]的可读摘要（不能替代原文本）。"
+"通用工作流语言项目的所有指南资料，以及对其结构的修改，均可在遵照["
+"知识共享署名公共许可协议 (Creative Commons Attribution license)][cc-by-"
+"human]的前提下获得授权使用。以下是[CC BY 4.0许可完整法律条文][cc-by-"
+"legal]的可读摘要（不能替代原条文）。"
 
 #: ../../LICENSE.md:12
 #: 98f18f72afa043f9a79aa9b5fc8bdf22
 msgid "You are free:"
-msgstr "您可随时/自由执行以下操作："
+msgstr "您可以自由地："
 
 #: ../../LICENSE.md:14
 #: 466be810dd8d4a838e0edb5869f2c4eb
 msgid "to **Share**---copy and redistribute the material in any medium or format"
-msgstr "**共享**——通过任何媒介或以任何格式复制和重新分发材料"
+msgstr "**共享**——通过任何媒介、以任意格式复制和重新分发本作品"
 
 #: ../../LICENSE.md:15
 #: 18a3a0aec35743848c97bc178f9c94ff
 msgid "to **Adapt**---remix, transform, and build upon the material"
-msgstr "**改编**——调整、大幅修改及在原有材料基础上编写新材料"
+msgstr "**演绎**——修改、转换或以本作品为基础进行创作"
 
 #: ../../LICENSE.md:17
 #: b746b1e4dca14de1a8e18036b7602a73
 msgid "for any purpose, even commercially."
-msgstr "出于任何目的，甚至是商业目的。"
+msgstr "在任何用途下，甚至商业目的。"
 
 #: ../../LICENSE.md:19
 #: 6021e65292a149d5b15e14491f3eb05e
 msgid "The licensor cannot revoke these freedoms as long as you follow the license terms:"
-msgstr "只要遵守以下许可条款，许可方便无法阻止您的自由操作："
+msgstr "只要你遵守许可协议条款，许可人就无法收回你的这些权利："
 
 #: ../../LICENSE.md:24
 #: 8fb7a2946c384364814c6ec3910997d3
 msgid "**Attribution**---You must give appropriate credit (mentioning that your work is derived from work that is Copyright © the Common Workflow Language project, and, where practical, linking to https://www.commonwl.org/ ), provide a [link to the license][cc-by-human], and indicate if changes were made. You may do so in any reasonable manner, but not in any way that suggests the licensor endorses you or your use."
 msgstr ""
-"**归属**——您必须进行适当说明（提及您的作品源自版权属于 Common Workflow "
-"Language 项目的作品，更明确地说，源自官网 https://www.commonwl.org/"
-"），并提供[许可链接][cc-by-human]。如有改动，也请指明。您可通过任何合理的方式"
-"进行操作，但不能以任何方式暗示许可方支持您/您的使用。"
+"**署名**——您必须给出适当的署名，即声明您作品之原始版本的版权为 Common "
+"Workflow Language Project 所有 (\"Copyright © the Common Workflow Language "
+"project\")。如条件允许，您应提供 https://www.commonwl.org/ 和[许可协议][cc-"
+"by-human]的链接，同时标明是否对原始作品作了修改。您可以用任何合理的方式来署名"
+"，但是不得以任何方式暗示许可人为您或您的使用背书。"
 
 #: ../../LICENSE.md:32
 #: 8161753b7526445db319210044566200
 msgid "**No additional restrictions**---You may not apply legal terms or technological measures that legally restrict others from doing anything the license permits.  With the understanding that:"
-msgstr "**无额外限制**——您可能未运用法律条款，或未采用可合法限制他人执行许可操作的技"
-"术手段。这点可以理解为："
+msgstr "**没有附加限制**——您不得适用法律术语或者技术措施从而限制其他人做许可协议允许"
+"的事情。并且您理解："
 
 #: ../../LICENSE.md:36
 #: 15314ba527864eaa834cf1185cfcc4e3
 msgid "You do not have to comply with the license for elements of the material in the public domain or where your use is permitted by an applicable exception or limitation."
-msgstr "若材料内容衍自公有领域，或所采用部分为适用例外或限制所许可，您无需遵循许可条"
-"款。"
+msgstr "您不必因为公共领域的作品要素而遵守许可协议，或者您的使用被可适用的例外或限制"
+"所允许。"
 
 #: ../../LICENSE.md:39
 #: b351ddf9847d48b1a2a87fc78eaba4d2
 msgid "No warranties are given. The license may not give you all of the permissions necessary for your intended use. For example, other rights such as publicity, privacy, or moral rights may limit how you use the material."
-msgstr ""
-"未提供任何担保。许可证可能未赋予所有必要的许可，无法满足您出于特定用途使用材"
-"料的需求。比如，出版权、隐私权或道德权等其他权利可能限制您使用材料的方式。"
+msgstr "不提供担保。许可协议可能不会给与您意图使用的所必须的所有许可。例如，其他权利"
+"比如形象权、隐私权或人格权可能限制您如何使用作品。"
 
 #: ../../LICENSE.md:44
 #: a091addc2dea4830a06bb72ead56c5ea
@@ -99,17 +100,17 @@ msgstr "软件"
 #: 84b2c685bbab48449fdc72d2a1e42bf4
 msgid "Except where otherwise noted, the example programs and other software provided by Common Workflow Language project are made available under the [OSI][osi]-approved [Apache 2.0 license][apache-2.0-license]."
 msgstr ""
-"除非其他地方已注明，所有Common Workflow "
-"Language项目提供的示例程序及其他软件均可从 [OSI][osi]-已批准 [Apache 2.0 "
-"license][apache-2.0-license]下方获取。"
+"除非另有注明，Common Workflow Language project "
+"提供的示例程序及其他软件均可在遵照[OSI][osi]所批准的[Apache 2.0 "
+"许可协议][apache-2.0-license]之前提下获取并使用。"
 
 #: ../../LICENSE.md:51
 #: 0f68eafafaef4b54accba7e13bfaa702
 msgid "Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an \"AS IS\" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License."
 msgstr ""
-"除非受适用法律要求或者书面同意，软件均根据在\"AS IS\" 基础上分发的许可证进行"
-"发布，不提供任何形式的担保或条件，明示或默示。请查阅许可证，了解有关许可项下"
-"管理许可和限制的特定语言。"
+"除非受适用法律要求或者经书面许可，据本许可协议发行的软件均为“依照其原样”发行"
+"，不存在任何类型的、无论是明文还是隐含的担保或合约条款。请查阅许可协议有关本"
+"许可协议下授权行为和责任免除的具体条文。"
 
 #: ../../src/_includes/what-is-cwl.md:1
 #: ../../src/_includes/what-is-cwl.md:2
@@ -118,28 +119,28 @@ msgstr ""
 #: d6ccd4b546254f56a597d67dd4fdc5d6
 msgid "CWL is a way to describe command-line tools and connect them together to create workflows. Because CWL is a specification and not a specific piece of software, tools and workflows described using CWL are portable across a variety of platforms that support the CWL standard."
 msgstr ""
-"CWL是一种描述命令行工具的方式，并连接这些工具以创建工作流。由于CWL是一种规范"
-"，而不是一个具体的软件，使用CWL描述的工具和工作流可在支持CWL标准的各种平台上"
-"移植。"
+"CWL 的作用在于描述各种命令行工具，并且将它们连接起来，以创建工作流 "
+"(workflow)。CWL 是一种规范，而非某种特定的软件。因此，由 CWL "
+"描述的工具和工作流能够移植到支持 CWL 标准的多种平台。"
 
 #: ../../src/episodes.md:5
 #: ../../src/setup.md:5
 #: 0d3267f84f4e4aedb1e9fce00b4ea4bc
 #: 436cfca6f857469bbff7c652df32160f
 msgid "This page has moved"
-msgstr "本页已被移除"
+msgstr "此页面已转移"
 
 #: ../../src/episodes.md:9
 #: cc11f5d29206492d9f2f0922882b6159
 msgid "This page is out-of-date and was kept here to preserve the links of the old User Guide. Please use the new [Table of Contents](index.md#table-of-contents) to browse the User Guide."
 msgstr ""
-"此页面已过时，保留在此以保留旧用户指南链接，请使用新链接 [内容目录](index.md"
-"#table-of-contents)浏览《用户指南》。"
+"此页面已过时，保留在此仅用于留存旧版《用户指南》的链接。请使用[新版目录](inde"
+"x.md#table-of-contents)浏览《用户指南》。"
 
 #: ../../src/faq.md:1
 #: e2ed894d325a4f50a5e2dc69da5531a1
 msgid "FAQ"
-msgstr "最常见问题"
+msgstr "常见问题"
 
 #: ../../src/faq.md:11
 #: 61edb787dab04ca2ad3ed07616d878a0
@@ -149,25 +150,25 @@ msgstr "使用 `evalFrom` 的非“`File`”类型"
 #: ../../src/faq.md:41
 #: d5321589e7ed4f0db3c630cc39800791
 msgid "Rename an Input File"
-msgstr "重命名“输入文件”"
+msgstr "重命名输入文件"
 
 #: ../../src/faq.md:43
 #: fc62427c0a004810b055dee90ec5e2d9
 msgid "This example demonstrates how to change the name of an input file as part of a tool description. This could be useful when you are taking files produced from another step in a workflow, and don't want to work with the default names that these files were given when they were created."
 msgstr ""
-"本示例演示了如何更改“输入文件”名称，属于工具描述的内容。在打开创建于工作流其"
-"他步骤的文件后，若您不想保留默认文件名（文件创建时的命名），此时该工具可为您"
-"提供帮助。"
+"本示例演示如何在工具描述 (tool description) 中更改输入文件名称。如果要使用工"
+"作流中其它步骤产生的文件，但又不想使用这些文件创建时的默认名称，这时候更名操"
+"作可以派上用场。"
 
 #: ../../src/faq.md:59
 #: 1c6b8a4194a14611b4061b1540c3807f
 msgid "Rename an Output File"
-msgstr "重命名“输出文件”"
+msgstr "重命名输出文件"
 
 #: ../../src/faq.md:61
 #: bc7ad10c929848a3a9a240a3c501d299
 msgid "This example demonstrates how to change the name of an output file from the default name given to it by a tool:"
-msgstr "本示例演示了如何通过以下工具更改“输出文件”名称："
+msgstr "本示例演示更改输出文件名，不再使用某个工具赋予它的默认名称："
 
 #: ../../src/faq.md:82
 #: 7225a993d281421b95c8e3df2846a0e3
@@ -177,38 +178,40 @@ msgstr "引用本地脚本"
 #: ../../src/faq.md:84
 #: 7ef1dbb81993473f948d9c6f3c64b381
 msgid "There are two ways to reference a local script:"
-msgstr "可通过两种方法引用本地脚本:"
+msgstr "引用本地脚本有两种方法："
 
 #: ../../src/faq.md:86
 #: 450edf800a18423195bea4fe8793a2cb
 msgid "The first method involves adding the folder containing your scripts to the `PATH` environment variable. This allows you to run the shell script directly without using `sh` or `bash` commands."
-msgstr "第一种方法是将包含相关脚本的文件夹添加至`PATH`环境变量中，便可直接运行shell "
-"脚本，无需使用`sh` 或 `bash`命令。"
+msgstr ""
+"第一种方法是将包含相关脚本的文件夹添加至`PATH`（路径）环境变量。"
+"这样可以直接运行 shell 脚本，无需使用 `sh` 或 `bash` 命令。"
 
 #: ../../src/faq.md:89
 #: 1a8cc75ea6174b9297871b2e58971077
 msgid "Start with adding a _shebang_ at the top of your file:"
-msgstr "首先，在文件顶部添加一个 _shebang_ ："
+msgstr "首先，将 _\"shebang\"_ 添加为文件首行："
 
 #: ../../src/faq.md:95
 #: a7d84f740a714ec588503ee084fbbc34
 msgid "After that, make the script executable with the command `chmod +x scriptname.sh`"
-msgstr "然后，使用 `chmod +x scriptname.sh`命令执行脚本"
+msgstr "然后，用 `chmod +x scriptname.sh` 命令将脚本设为可执行。"
 
 #: ../../src/faq.md:97
 #: 569d553abe85450c9d1c37456bf412f4
 msgid "Finally, modify your `PATH` to add the directory where your script is located. (It is good practice to use `$HOME/bin` for storing your own scripts)."
-msgstr "最后，修改`PATH`以添加脚本所在目录。（最好使用 `$HOME/bin`存储脚本）。"
+msgstr "最后，修改 `PATH`, 添加该脚本所在的目录。（把你自己的脚本保存在 `$HOME/bin` "
+"目录下是较好的做法）。"
 
 #: ../../src/faq.md:104
 #: 95f5dbbd21084a318413b9528fb867be
 msgid "Now you can use `baseCommand: scriptname.sh` to run the script directly."
-msgstr "现在，您可使用 `baseCommand: scriptname.sh` 直接运行脚本。"
+msgstr "这样，您就能用 `baseCommand: scriptname.sh` 直接运行脚本了。"
 
 #: ../../src/faq.md:113
 #: 1b3cae80fa9a40ffb2259b8c1cd2b468
 msgid "When you wish to share your work later, you can place your script in a software container in the Docker format."
-msgstr "若想稍后共享您的工作，您可将脚本放在一个Docker格式的软件容器中。"
+msgstr "接下来若想共享您的工作，可将脚本存放在 Docker 格式的容器 (container) 中。"
 
 #: ../../src/faq.md:115
 #: 8d86baa239364f799d4f9d5ea2b0e314
@@ -223,42 +226,42 @@ msgstr "在CWL中，一切都必须直接说明。"
 #: ../../src/faq.md:138
 #: c2c752b86bf94d6fb3751f4dd81bc7a7
 msgid "Setting `self`-based Input Bindings for Optional Inputs"
-msgstr "为可选输入设置`self`的输入绑定"
+msgstr "为可选输入项设置用到 `self` 变量的输入绑定"
 
 #: ../../src/faq.md:140
 #: 2c38cc58cbb340bc935a5f00e96ba95c
 msgid "Currently, `cwltool` can't cope with missing optional inputs if their input binding makes use of `self`. Below is an example workaround for this, pending a more sophisticated fix."
-msgstr "现在，如果`cwltool`的输入绑定采用`self`，则无法处理缺少的可选输入。下方是一个"
-"示例解决方法，等待更复杂的修复。"
+msgstr "目前，如果缺失的可选输入项用到了 `self`, `cwltool` "
+"将无法处理。在更高明的解决办法出现前，下面的例子可作为临时变通一用。"
 
 #: ../../src/faq.md:165
 #: ce6db54bd0f54839a5beb948530a21f0
-#, fuzzy
 msgid "Model a \"one-or-the-other\" Parameter"
-msgstr "对一个“非此即彼”参数进行建模"
+msgstr "构建“非此即彼”参数的模型"
 
 #: ../../src/faq.md:167
 #: d06cbf89028b4638ad54c2529bcbfa25
 msgid "Below is an example showing how to specify different strings to be added to a command line, based on the value given to a Boolean parameter."
-msgstr "下方示例演示了如何根据给定的布尔参数值，来指定要添加至命令行的不同字符串。"
+msgstr "以下示例演示的，是根据某个布尔参数的取值，来指定添加到命令行的字符串。"
 
 #: ../../src/faq.md:188
 #: d53fb28dcad04e7788cba9e280a2343c
 msgid "Connect a Solo Value to an Input that Expects an Array of that Type"
-msgstr "将一个单独的值连接到一个期望有该类型数组的输入上"
+msgstr "将某个元素值与期待该值类型的数组关联起来"
 
 #: ../../src/faq.md:190
 #: d9e30e11533b4d53a144f5df7041268d
 msgid "Using [`MultipleInputFeatureRequirement`](https://www.commonwl.org/v1.0/Workflow.html#MultipleInputFeatureRequirement) along with [`linkMerge: merge_nested`](https://www.commonwl.org/v1.0/Workflow.html#WorkflowStepInput)"
 msgstr ""
-"使用 [`MultipleInputFeatureRequirement`](https://www.commonwl.org/v1.0/"
-"Workflow.html#MultipleInputFeatureRequirement)及 [`linkMerge: "
+"将 [`MultipleInputFeatureRequirement`](https://www.commonwl.org/v1.0/Workflow"
+".html#MultipleInputFeatureRequirement) 与 [`linkMerge: "
 "merge_nested`](https://www.commonwl.org/v1.0/Workflow.html#WorkflowStepInput)"
+" 联合使用"
 
 #: ../../src/faq.md:194
 #: 941077158ec54ae19bfa2e2ad6662da1
 msgid "merge_nested"
-msgstr ""
+msgstr "merge_nested"
 
 #: ../../src/faq.md:196
 #: 937cb94a370640c788fbc3fe0b19f2e5
@@ -269,15 +272,16 @@ msgstr "输入必须是一个数组，每个输入链接只包含一个条目。
 #: ../../src/faq.md:199
 #: a1d57e15656548128a76a8b975c564c9
 msgid "Which means \"create a list with exactly these sources as elements\""
-msgstr "这意味着“创建一个将这些源作为元素的列表”"
+msgstr "这段话意思是，“创建一个列表，其中的元素正是这些源”"
 
 #: ../../src/faq.md:201
 #: c8c235a9bf6240628f0b5493ffebf7e0
 msgid "Or in other words: if the destination is of type `File[]` (an array of `File`s) and the source is a single `File` then add `MultipleInputFeatureRequirement` to the Workflow level `requirements` and add `linkMerge: merge_nested` under the appropriate `in` entry of the destination step."
 msgstr ""
-"换言之：如果目标类型为 `文件[]`（`File ` 的数组），并且源类型为单个 `文件 `，"
-"则将 `MultipleInputFeatureRequirements` 添加到工作流级别 `requirements`，"
-"并在目标步骤的相应 `` 条目下添加 `linkMerge： merge_nested`。"
+"换言之：如果目标的类型是 `File[]`（元素类型为 `File ` 的数组），"
+"而源是单独一个 `File`，那么将 `MultipleInputFeatureRequirements` "
+"添加到工作流级别的 `requirements`，并在目标步骤相应的 `in` 条目下添加 "
+"`linkMerge： merge_nested`。"
 
 #: ../../src/faq.md:229
 #: 3da4dcb043eb4423a53a14182949d9cd
@@ -287,12 +291,12 @@ msgstr "可选输入💯"
 #: ../../src/faq.md:231
 #: 89b90d3bf1ea4ebd88482d435241fac5
 msgid "To make an input parameter optional, add a question mark to the type declaration."
-msgstr "若要使输入参数可选，请在类型声明中添加问号。"
+msgstr "若要令某个输入参数为可选，请在其类型声明中添加问号。"
 
 #: ../../src/faq.md:247
 #: a854006054ce4ffe94bbfa73bdbecbf2
 msgid "<a name=\"enuminputs\"></a>"
-msgstr ""
+msgstr "<a name=\"enuminputs\"></a>"
 
 #: ../../src/faq.md:248
 #: f80eb714e9df417fbba555b5dd5f4d8c
@@ -303,8 +307,9 @@ msgstr "枚举输入 ⚜️"
 #: 10af80fa13af4158aec7060550485350
 msgid "For command line flags that require a specific input as the argument an enum type can be declared in CWL. **Specifying null here is known as long form style. It does the same thing as the question mark on the other inputs.**"
 msgstr ""
-"对于需要特定输入作为参数的命令行标志，可以在 CWL 中声明枚举类型。**"
-"在此处指定 null 称为长格式样式。它与其他输入上的问号执行相同的操作。**"
+"某些命令行标志需要特定的参数值；对此，可以在 CWL 中声明枚举类型。**此处指定 "
+"null, 这样的编程风格称为“长格式” (long "
+"form)。它的作用与其他输入上的问号相同。**"
 
 #: ../../src/faq.md:267
 #: ad1c26711ccd4efd8fdb25f9293d33fd
@@ -319,109 +324,111 @@ msgstr "记录输入 📀"
 #: ../../src/faq.md:270
 #: 52b8538177c64090af51f5f6a696c28c
 msgid "For commandline flags that are either **mutually exclusive** or **dependent** a special record type can be defined. You can also specify null here to create optional inputs."
-msgstr "对于 ** 互斥 ** 或 ** 依赖 ** 的命令行标志，可以定义特殊的记录类型。"
-"您还可以在此处指定 null 以创建可选输入。"
+msgstr ""
+"如果部分命令行标志之间存在 ** 互斥 ** 或 ** 依赖 ** 的关系，"
+"可以为其定义专门的记录类型 (record type)。此处也可以指定 null 创建可选输入。"
 
 #: ../../src/faq.md:322
 #: f96c9257e3734b8aa0cc5e065f74f944
 msgid "Setting Mutually Exclusive Parameters"
-msgstr "设置互斥参数"
+msgstr "设定互斥参数"
 
 #: ../../src/faq.md:324
 #: 7dc0540508084a3495ff3b2ac90fd323
 msgid "To properly set fields in a record input type, you need to pass a dictionary to the input to properly set the parameters. This is done by using inline JavaScript and returning the dictionary with the key of the field you want to set. The source field is set to indicate the input from the workflow to be used as the value."
 msgstr ""
-"要在记录输入类型中正确设置字段，您需要将字典传递给输入，以正确设置参数。"
-"此操作通过使用内联 JavaScript 并返回包含欲设置字段键的字典来完成。源字段应设"
-"置为指示工作流中要充当值的输入。"
+"为了正确地设置记录输入类型的字段，您需要将字典传递给输入，以正确设置参数。"
+"具体方法是使用内联 JavaScript 返回以待设置字段为主键的字典。此处设定了 "
+"source （源）字段，以指示工作流中要充当其键值的输入。"
 
 #: ../../src/faq.md:342
 #: b53dc77466b24a67b52b8aadf4fab724
 msgid "Setting Booleans"
-msgstr "设置布尔运算"
+msgstr "设置布尔参数"
 
 #: ../../src/faq.md:344
 #: cf4e7f3977ae4f9b877072c2b1c4b533
 msgid "These can be set by using the default field"
-msgstr "可使用默认字段进行设置"
+msgstr "可使用 default（默认）字段设置"
 
 #: ../../src/faq.md:349
 #: 99b37739ef18443ca7c0e715a131e0c7
 msgid "Concatenating Strings in Inputs"
-msgstr "在输入中连接字符串"
+msgstr "在输入中串联字符串"
 
 #: ../../src/faq.md:351
 #: 9b00b5a55ee941e1adbfe89e133791e3
 msgid "The valueFrom field must be used instead of default."
-msgstr "必须使用 valueFrom 字段，而不是默认值。"
+msgstr "为此必须使用 valueFrom 而非 default 字段。"
 
 #: ../../src/faq.md:359
 #: 07922147f7ab487ba2a1e7c43c9f410c
 msgid "`cwltool` Errors due to Filenames with Space Characters Inside"
-msgstr "由于文件名包含空格字符，显示`cwltool`错误"
+msgstr "因文件名含有空格字符，`cwltool`报错"
 
 #: ../../src/faq.md:361
 #: 7a11806f0c7045b48fe58a271f814797
 msgid "`cwltool` does not allow some characters in filenames by default."
-msgstr "在默认情况下，`cwltool`不允许在文件名中使用某些字符。"
+msgstr "默认情况下，`cwltool`不允许某些字符出现在文件名中。"
 
 #: ../../src/faq.md:363
 #: fdaec25650ab4b0fb1c527610e24ae5a
 msgid "For example, the filename `a space is here.txt` includes 3 space characters."
-msgstr "例如，文件名 `a space is here.txt`中包含了3个空格字符。"
+msgstr "例如，文件名 `a space is here.txt`包含三个空格字符。"
 
 #: ../../src/faq.md:371
 #: 182959fc9f4746d082994e07d05c8cde
 msgid "If you can not avoid these dangerous characters, then pass `--relax-path-checks` to `cwltool`."
-msgstr "如果无法避开这些危险的字符，您可以将 `--relax-path-checks`传送至 `cwltool`。"
+msgstr "如果不能避开这些危险的字符，您可以为 `cwltool` 传递 `--relax-path-checks` "
+"选项。"
 
 #: ../../src/faq.md:373
 #: cc7752e9989e4a6d957682f479d6fc60
 msgid "CWL Parameter Reference Error due to Hyphen in Input Identifier"
-msgstr "由于输入标识符中包含连字符，显示CWL参数引用错误"
+msgstr "输入标识符中包含连字符导致 CWL 参数引用错误"
 
 #: ../../src/faq.md:375
 #: 6db1ebd2d6c74ceca889662cd7df5cd5
 msgid "If `cwltool --validate` returns valid"
-msgstr "如`cwltool --validate`返回有效"
+msgstr "如 `cwltool --validate` 返回 valid（验证通过）"
 
 #: ../../src/faq.md:384
 #: 3de2513c7d7b4569ba63f7e6d29137b7
 msgid "But executing it causes an error like:"
-msgstr "但执行时显示如下错误："
+msgstr "但执行时导致如下错误："
 
 #: ../../src/faq.md:396
 #: ae3a9188706649e28f97bc4ec34c0821
 msgid "The file is here"
-msgstr "文件在此处"
+msgstr "该文件如下"
 
 #: ../../src/faq.md:410
 #: e1ac97ab6ad3449b8c54933d25257f73
 msgid "Problem caused by `-` (hyphen character)."
-msgstr "由`-`（连字符）引发的问题。"
+msgstr "问题由 `-`（连字符）引发。"
 
 #: ../../src/faq.md:423
 #: f6c402f7f6974edbbb5582c8e22f3869
 msgid "To fix this error, change `-` (hyphen) to `_` (underscore)"
-msgstr "要修复该错误，需将`-`（连字符）更改为`_` （下划线）"
+msgstr "修复方法是将 `-`（连字符）更改为 `_`（下划线）"
 
 #: ../../src/faq.md:436
 #: 190099a242a645c9b9f8bc3ce89d920d
 msgid "If it is not possible to change the input identifier, then you can use an alternative CWL Parameter Reference syntax:"
-msgstr "如无法更改输入标识符，您可使用另一种CWL参数引用语法："
+msgstr "如果不能改动输入标识符，您可使用另一种 CWL 参数引用句法："
 
 #: ../../src/faq.md:442
 #: 06a4f6ffc2da4d43b453d4784b42efd3
 msgid "Use CWL and cwltool with Singularity"
-msgstr "将CWL和cwltool与Singularity一起使用"
+msgstr "在 Singularity 下使用 CWL 和 cwltool"
 
 #: ../../src/faq.md:445
 #: 1901c34201054a9cae199b0dbb8b945e
 msgid "The CWL standards are built around (optional) Docker format containers. The reference runner and several other CWL implementations support running those Docker format containers using the Singularity engine. Directly specifying a Singularity format container is not part of the CWL standards."
 msgstr ""
-"CWL标准是围绕（可选）Docker格式容器建立的，且引用运行程序和其他几种CWL执行均"
-"支持通过Singularity引擎运行Docker格式容器，但直接指定一个Singularity "
-"格式容器不属于CWL标准的内容。"
+"CWL 标准是依照 Docker 容器格式建立的，其参考运行程序和另外几种 CWL "
+"实现均支持适应 Singularity 引擎运行 Docker 格式容器。不过，直接指定 "
+"Singularity 格式容器不在 CWL 标准之内。"
 
 #: ../../src/faq.md:450
 #: 2d498470524d47f18f9936ace6acebb0
@@ -432,38 +439,37 @@ msgstr "调试 JavaScript 表达式"
 #: d7b044f5224a48eda09bc949cf645193
 msgid "You can use the <code>--js-console</code> option of <code>cwltool</code>, or you can try creating a JavaScript or TypeScript project for your code, and load it using <code>expressionLib</code>, e.g.: <a href=\"https://github.com/common-workflow-language/common-workflow-language/blob/master/v1.0/v1.0/template-tool.cwl#L6-L8\"> https://github.com/common-workflow-language/common-workflow-language/blob/master/v1.0/v1.0/template-tool.cwl#L6-L8</a></dd>"
 msgstr ""
-"您可使用 <code>--js-console</code> option of <code>cwltool</code>，"
-"或尝试为代码创建一个JavaScript 或 "
-"TypeScript项目，并使用<code>expressionLib</code>进行加载， 比如： <a href="
-"\"https://github.com/common-workflow-language/common-workflow-language/blob/"
-"master/v1.0/v1.0/template-tool.cwl#L6-L8\"> https://github.com/"
+"您可使用 <code>cwltool</code> 的 <code>--js-console</code> 选项，"
+"也可以考虑为您的代码创建 JavaScript 或 TypeScript 项目后使用 "
+"<code>expressionLib</code> 加载， 比如： <a href=\"https://github.com/"
 "common-workflow-language/common-workflow-language/blob/master/v1.0/v1.0/"
-"template-tool.cwl#L6-L8</a>"
+"template-tool.cwl#L6-L8\"> https://github.com/common-workflow-language/"
+"common-workflow-language/blob/master/v1.0/v1.0/template-tool.cwl#L6-L8</a>"
 
 #: ../../src/index.md:1
 #: 2754519265eb426b940bbbd2b8d64e1e
 msgid "Common Workflow Language User Guide"
-msgstr "《通用工作流语言用户指南》"
+msgstr "通用工作流语言用户指南"
 
 #: ../../src/index.md:3
 #: f8d6e4cd54cb42c88182a43171d97bab
 msgid "This guide will introduce you to writing workflows using the [Common Workflow Language](https://www.commonwl.org/) (CWL) open standards. This guide describes the latest specification {{ cwl_version }}."
 msgstr ""
-"本指南将指导您使用[Common Workflow Language](https://www.commonwl.org/) (CWL)"
-" 开放标准编写工作流，并介绍了最新规范 {{ cwl_version }}。"
+"这本指南将向您介绍使用 [Common Workflow Language](https://www.commonwl.org/) "
+"(CWL) 开放标准编写工作流。本指南所描述的是 {{ cwl_version }} 版本最新规范。"
 
 #: ../../src/index.md:7
 #: 132d40fee3b84469afa80d5ff613bf77
 msgid "Contributions and Feedback are Welcome!"
-msgstr "欢迎投稿和反馈！"
+msgstr "欢迎您的来稿和意见！"
 
 #: ../../src/index.md:9
 #: 0f47157605a34ea58770ea898deebae4
 msgid "If you find that something is missing from this guide, or if you would like to provide other feedback, file an Issue on the [project repository for this guide][repo]. You can also suggest changes directly in a Pull Request by clicking the \"Edit this page\" button at the right sidebar of each page."
 msgstr ""
-"如您发现本指南存在内容缺失，或想提供其他反馈，请在[project repository for "
-"this guide][repo]上提交问题。您也可单击页面右侧边栏的 “Edit this "
-"page（编辑本页）”按钮，直接在Pull Request（拉取请求）中提交修改建议。"
+"如您发现本指南的疏漏之处，或想提供其他反馈，请在[本指南项目源码库][repo]"
+"上提交报告 (Issue). 您也可在任意页面点击右边栏的 “Edit this "
+"page”（编辑本页）按钮，创建 Pull Request（拉取请求）直接提交修改建议。"
 
 #: ../../src/index.md:16
 #: 6d269e8d70184034bcb56385a6ca198f
@@ -474,15 +480,15 @@ msgstr "浏览《用户指南》"
 #: ed74c9a4b623464480e2c184668fcec0
 msgid "If you are a beginner user get started with the [Introduction](/introduction/index.md) section. For advanced users the subsections of the [Topics](/topics/index.md) have detailed information about the most common topics for CWL."
 msgstr ""
-"如您是初级用户，请查阅 [Introduction（介绍）](/introduction/index.md) "
-"章节。而对于高级用户而言， [Topics主题](/topics/index."
-"md)子章节则详细介绍了关于CWL的最常见主题。"
+"如您是新用户，请从 [《入门》](/introduction/index.md) "
+"章节出发。而对于进阶用户而言， [《主题》](/topics/index.md)"
+"部分各小节涵盖了关于 CWL 最常见话题的详细信息。"
 
 #: ../../src/index.md:23
 #: cfa67cf5521b414da6f7d34cbed283f7
 msgid "The Table of Contents is displayed at the top menu and also on the left sidebar. It also appears further down this page but with links to subsections. The right sidebar contains links to the sections of each page, and the Search form is on the left sidebar."
-msgstr "目录显示在菜单顶部和左侧边栏，也出现在本页的下方（但也附带子章节的链接）。每"
-"页所在章节的链接显示在右侧边栏，而搜索窗口则显示在左侧边栏。"
+msgstr "目录显示在顶部菜单和左侧边栏，本页更下方也有带小节链接的目录。右侧边栏有当前"
+"单页分节链接，搜索功能在左侧边栏。"
 
 #: ../../src/index.md:28
 #: ee6b82bd86264e4bb1e8e4065b1e6b9c
@@ -498,36 +504,36 @@ msgstr "基本概念"
 #: ac62d326a68145b695e46b714d4e8156
 msgid "This section describes the basic concepts for users to get started on working with Common Workflow Language (CWL) workflows. Readers are expected to be familiar with workflow managers, YAML, and comfortable with following instructions for the command-line. The other sections of the user guide cover the same concepts, but in more detail. If you are already familiar with CWL or you are looking for more advanced content, you may want to skip this section."
 msgstr ""
-"本章节介绍了一些基本概念，以帮助用户更顺利地开始使用通用工作流语言（CWL）工作"
-"。我们相信读者已经非常熟悉工作流管理工具YAML，且能熟练地按照命令行说明进行操"
-"作。用户指南另一章节也介绍了相同的概念，但内容更为详细。如果您已经十分熟悉CWL"
-"或正在寻找更高级的内容，可能需要跳过本章节。"
+"本章节介绍用户开始运用通用工作流语言（CWL）所需的基本概念。"
+"读者应了解工作流管理工具和 YAML, 且能较为自如地按照文中指示操作命令行。这些概"
+"念在《用户指南》其他部分有更详尽的说明。如果您已了解 CWL, "
+"或想查阅进阶内容，可以考虑跳过本章节。"
 
 #: ../../src/introduction/basic-concepts.md:10
 #: 984e6676b9d04c7092bc492f195dfb91
 msgid "The CWL Specification"
-msgstr "CWL规范"
+msgstr "CWL 规约"
 
 #: ../../src/introduction/basic-concepts.md:21
 #: cbe1d761da5b403d9605fa1fb8e62fdf
 msgid "The CWL specification is a document written and maintained by the CWL community. The specification has different versions. The version covered in this user guide is the {{ cwl_version }}."
-msgstr "CWL规范文档由CWL社区撰写并维护，此规范有不同版本，本用户指南所用版本为 {{ "
-"cwl_version }}。"
+msgstr "CWL 规约由 CWL 社群撰写并维护，此规约现有多个版本，本《用户指南》"
+"所涵盖的是版本 {{ cwl_version }}."
 
 #: ../../src/introduction/basic-concepts.md:25
 #: 3a71b269bd3c49eb913cf69b60373c24
 msgid "The specification version can have up to three numbers separated by `.`s (dots). The first number is the major release, used for backward-incompatible changes like the removal of deprecated features. The second number is the minor release, used for new features or smaller changes that are backward-compatible. The last number is used for bug fixes, like typos and other corrections to the specification."
 msgstr ""
-"规范的版本最多包含三个数字，以 `.`（圆点）分隔。第一个数字说明主要版本，用于"
-"标注删除弃用功能等向后不可兼容的更改。第二个数字说明次要版本，用于标注增添新"
-"功能或小幅调整等向后兼容的更改。最后一个数字说明错误修复，用于标注拼写错误更"
-"正或对规范的其他修正。"
+"规约的版本号码由至多三个数字构成，以 `.`（圆点）分隔。第一个数字为主发布版本"
+"，用于向后不可兼容的更改，例如删除过时的功能。第二个数字是次级发布版本，用于"
+"新增功能或向后兼容的小幅调整。最后一个数字用于错误修复，例如打字错误或其他更"
+"正。"
 
 #: ../../src/introduction/basic-concepts.md:33
 #: b171b72c48d44050a3416a7a42c4021d
 msgid "The model used for the specification version is called Semantic Versioning. See the end of this section to [learn more](#learn-more) about it."
-msgstr "用于规范版本的模型称为“语义版本控制”，请参阅本章节末尾以[了解更多](#learn-"
-"more)有关信息。"
+msgstr "规约所使用的版本标号模型称为“语义化版本”，请参阅本章结尾以[了解更多](#learn-"
+"more)相关信息。"
 
 #: ../../src/introduction/basic-concepts.md:37
 #: b3df1607e9d242d78b22dc44335fbe2d
@@ -538,20 +544,20 @@ msgstr "实现"
 #: 078b58ffc1cc4d25a7c4eea3bb76e025
 msgid "An implementation of the CWL specification is any software written following what is defined in a version of the specification document. However, implementations may not implement every aspect of the specification. CWL implementations are licensed under both Open Source and commercial licenses."
 msgstr ""
-"CWL规范的实现意味着所有软件的编写均需遵循规范文档中所定义版本的要求。但是，在"
-"实现过程中可能无法满足规范的所有方面。目前，CWL规范已同时获取开源和商业许可的"
-"授权。"
+"所谓 CWL 规约的某种“实现” (implementation), 指的是任何一种依照某版本的规约内"
+"容而编写的软件。然而，诸实现未必能将规约的每个方面都转化为软件实体。目前，"
+"CWL 各种实现的许可协议包括开源和商业许可。"
 
 #: ../../src/introduction/basic-concepts.md:44
 #: c3869b4ec5ff47d99e8da79770722e04
 msgid "CWL is well suited for describing large-scale workflows in cluster, cloud and high performance computing environments where tasks are scheduled in parallel across many nodes."
-msgstr "CWL非常适用于描述集群、云和高性能计算环境中的大规模工作流情况，因为其中可以跨"
-"节点并行调度任务。"
+msgstr "CWL非常适用于描述集群、云计算和高性能计算 (HPC) "
+"等多节点、任务并行调度环境中的大规模工作流。"
 
 #: ../../src/introduction/basic-concepts.md:51
 #: 2482c84831fc4dfab629e7bfcfb41cbf
 msgid "CWL specification, implementations, and other tools."
-msgstr "CWL规范、实现及其他工具。"
+msgstr "CWL 规约、实现及其他工具。"
 
 #: ../../src/introduction/basic-concepts.md:105
 #: a5ebc727fb3443f78e81d6b7ed5ac750
@@ -1063,7 +1069,7 @@ msgstr ""
 #: ../../src/introduction/quick-start.md:16
 #: 9e51962a7e5c47248f3e20703ae101eb
 msgid "`hello_world.cwl`"
-msgstr ""
+msgstr "`hello_world.cwl`"
 
 #: ../../src/introduction/quick-start.md:22
 #: 7e475e3f3c4a4404bb0236124c0f7ce7
@@ -1144,7 +1150,7 @@ msgstr ""
 #: ../../src/introduction/quick-start.md:74
 #: 1a44a545434b448aa956005deeed90a8
 msgid "`hello_world-job.json`"
-msgstr ""
+msgstr "`hello_world-job.json`"
 
 #: ../../src/introduction/quick-start.md:80
 #: e76bfcc0c9f84bcdb3f6d5277869a88c
@@ -1236,14 +1242,14 @@ msgstr ""
 #: ../../src/topics/additional-arguments-and-parameters.md:13
 #: a74935dc31664e979ca8f90a6a4ba53c
 msgid "`arguments.cwl`"
-msgstr ""
+msgstr "`arguments.cwl`"
 
 #: ../../src/topics/additional-arguments-and-parameters.md:19
 #: ../../src/topics/staging-input-files.md:15
 #: 0a8065edd8af4eaea08989a1060ce48f
 #: f357755f6dcb4971bade8636064f8dd1
 msgid "`arguments-job.yml`"
-msgstr ""
+msgstr "`arguments-job.yml`"
 
 #: ../../src/topics/additional-arguments-and-parameters.md:24
 #: 6359191b4f684d5aa3602e4aaf394883
@@ -1459,7 +1465,7 @@ msgstr "CWL命令行工具。"
 #: ../../src/topics/command-line-tool.md:50
 #: 3b1a9ae3412f4d6e96a39b9a16934232
 msgid "`echo.cwl`"
-msgstr ""
+msgstr "`echo.cwl`"
 
 #: ../../src/topics/command-line-tool.md:57
 #: a5eacdbc9aa142c890b177869da4143d
@@ -1503,7 +1509,7 @@ msgstr "要生成此类文件，我们可使用 `InitialWorkDirRequirements`。"
 #: ../../src/topics/creating-files-at-runtime.md:9
 #: d3f74c3b094a427fbec831afab657d50
 msgid "`createfile.cwl`"
-msgstr ""
+msgstr "`createfile.cwl`"
 
 #: ../../src/topics/creating-files-at-runtime.md:15
 #: cfffc518ba6e4ed1a80762ed6f7d25df
