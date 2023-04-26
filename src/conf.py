@@ -20,12 +20,12 @@ from pygments.lexers.data import YamlLexer
 
 # -- Project information -----------------------------------------------------
 
-project = 'Common Workflow Language User Guide'
-copyright = '2013, CWL Project Team'
-author = 'CWL Project Team'
+project = "Common Workflow Language User Guide"
+copyright = "2013, CWL Project Team"
+author = "CWL Project Team"
 
 # The full version, including alpha/beta/rc tags
-release = '0.1'
+release = "0.1"
 
 # Define the version we use for matching in the version switcher.
 version_match = os.environ.get("READTHEDOCS_VERSION")
@@ -37,35 +37,36 @@ json_url = "https://common-workflow-languageuser-guide.readthedocs.io/en/latest/
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
 # ones.
 extensions = [
-    'myst_parser',
-    'sphinx.ext.graphviz',
-    'sphinx_reredirects',
-    'cwl.sphinx.runcmd'
+    "myst_parser",
+    "sphinx.ext.graphviz",
+    "sphinx_reredirects",
+    "sphinx_favicon",
+    "cwl.sphinx.runcmd",
 ]
 
 # myst-parser settings
 myst_heading_anchors = 4
 myst_enable_extensions = [
-    'colon_fence',
-    'deflist',
-    'substitution',
-    'replacements',
+    "colon_fence",
+    "deflist",
+    "substitution",
+    "replacements",
 ]
-CWL_VERSION = 'v1.2'
+CWL_VERSION = "v1.2"
 myst_substitutions = {
-    'repo_url': 'https://github.com/common-workflow-language/user_guide/',
-    'source_branch': 'main',
-    'cwl_version': f'`{CWL_VERSION}`',
-    'cwl_version_text': f'{CWL_VERSION}'
+    "repo_url": "https://github.com/common-workflow-language/user_guide/",
+    "source_branch": "main",
+    "cwl_version": f"`{CWL_VERSION}`",
+    "cwl_version_text": f"{CWL_VERSION}",
 }
 
-master_doc = 'index'
+master_doc = "index"
 
 # Set the default role so we can use `foo` instead of ``foo``
-default_role = 'literal'
+default_role = "literal"
 
 # Add any paths that contain templates here, relative to this directory.
-templates_path = ['_templates']
+templates_path = ["_templates"]
 
 # List of patterns, relative to source directory, that match files and
 # directories to ignore when looking for source files.
@@ -73,106 +74,126 @@ templates_path = ['_templates']
 # CONTRIBUTING.md is referenced in the footer, but not linked via Sphinx
 # aio.md is also referenced in one page, but not directly via Sphinx, hence the exclusions here.
 exclude_patterns = [
-    '**/Thumbs.db',
-    '**/.DS_Store',
-    '**/.git',
-    '.idea',
-    '.github',
-    '**/_build',
-    '**/_includes',
-    'cwl',
-    'venv',
-    'README.md',
-    'CODE_OF_CONDUCT.md',
-    'CONTRIBUTING.md'
+    "**/Thumbs.db",
+    "**/.DS_Store",
+    "**/.git",
+    ".idea",
+    ".github",
+    "**/_build",
+    "**/_includes",
+    "cwl",
+    "venv",
+    "README.md",
+    "CODE_OF_CONDUCT.md",
+    "CONTRIBUTING.md",
 ]
 
-source_suffix = ['.rst', '.md']
+source_suffix = [".rst", ".md"]
 
 # -- Options for URL redirects -----------------------------------------------
 
 redirects = {
-    '01-introduction/index.md': '../introduction/quick-start.html',
-    '02-1st-example/index.md': '../introduction/quick-start.html',
-    '03-input/index.md': '../topics/inputs.html',
-    '04-output/index.md': '../topics/outputs.html',
-    '05-stdout/index.md': '../topics/outputs.html',
-    '06-params/index.md': '../topics/parameter-references.html',
-    '07-containers/index.md': '../topics/using-containers.html',
-    '08-arguments/index.md': '../topics/additional-arguments-and-parameters.html',
-    '09-array-inputs/index.md': '../topics/inputs.html',
-    '10-array-outputs/index.md': '../topics/outputs.html',
-    '11-records/index.md': '../topics/inputs.html',
-    '12-env/index.md': '../topics/environment-variables.html',
-    '13-expressions/index.md': '../topics/expressions.html',
-    '14-runtime/index.md': '../topics/creating-files-at-runtime.html',
-    '15-staging/index.md': '../topics/staging-input-files.html',
-    '16-file-formats/index.md': '../topics/file-formats.html',
-    '17-metadata/index.md': '../topics/metadata-and-authorship.html',
-    '19-custom-types/index.md': '../topics/custom-types.html',
-    '20-software-requirements/index.md': '../topics/specifying-software-requirements.html',
-    '21-1st-workflow/index.md': '../topics/workflows.html',
-    '22-nested-workflows/index.md': '../topics/workflows.html#nested-workflows',
-    '23-scatter-workflow/index.md': '../topics/workflows.html#scattering-workflows',
-    '24_conditional-workflow/index.md': '../topics/workflows.html#conditional-workflows',
-    'rec-practices/index.md': '../topics/best-practices.html',
-    'misc/index.md': '../faq.html',
-    'episodes.md': 'index.html#table-of-contents',
-    'setup.md': 'introduction/prerequisites.html',
-    'extras.md': '/index.html',
-    'yaml/index.md': '../topics/yaml-guide.html',
-    'CODE_OF_CONDUCT.html': 'https://github.com/common-workflow-language/user_guide/blob/main/CODE_OF_CONDUCT.md'
+    "01-introduction/index.md": "../introduction/quick-start.html",
+    "02-1st-example/index.md": "../introduction/quick-start.html",
+    "03-input/index.md": "../topics/inputs.html",
+    "04-output/index.md": "../topics/outputs.html",
+    "05-stdout/index.md": "../topics/outputs.html",
+    "06-params/index.md": "../topics/parameter-references.html",
+    "07-containers/index.md": "../topics/using-containers.html",
+    "08-arguments/index.md": "../topics/additional-arguments-and-parameters.html",
+    "09-array-inputs/index.md": "../topics/inputs.html",
+    "10-array-outputs/index.md": "../topics/outputs.html",
+    "11-records/index.md": "../topics/inputs.html",
+    "12-env/index.md": "../topics/environment-variables.html",
+    "13-expressions/index.md": "../topics/expressions.html",
+    "14-runtime/index.md": "../topics/creating-files-at-runtime.html",
+    "15-staging/index.md": "../topics/staging-input-files.html",
+    "16-file-formats/index.md": "../topics/file-formats.html",
+    "17-metadata/index.md": "../topics/metadata-and-authorship.html",
+    "19-custom-types/index.md": "../topics/custom-types.html",
+    "20-software-requirements/index.md": "../topics/specifying-software-requirements.html",
+    "21-1st-workflow/index.md": "../topics/workflows.html",
+    "22-nested-workflows/index.md": "../topics/workflows.html#nested-workflows",
+    "23-scatter-workflow/index.md": "../topics/workflows.html#scattering-workflows",
+    "24_conditional-workflow/index.md": "../topics/workflows.html#conditional-workflows",
+    "rec-practices/index.md": "../topics/best-practices.html",
+    "misc/index.md": "../faq.html",
+    "episodes.md": "index.html#table-of-contents",
+    "setup.md": "introduction/prerequisites.html",
+    "extras.md": "/index.html",
+    "yaml/index.md": "../topics/yaml-guide.html",
+    "CODE_OF_CONDUCT.html": "https://github.com/common-workflow-language/user_guide/blob/main/CODE_OF_CONDUCT.md",
 }
 
 # -- Options for Pygments ----------------------------------------------------
 
-pygments_style = 'default'
+pygments_style = "default"
 
 # TODO: maybe write our own lexer to customize tokens, keywords, etc?
-lexers['cwl'] = YamlLexer()
+lexers["cwl"] = YamlLexer()
 
-highlight_options = {
-  'default': {
-      'stripall': True
-  }
-}
+highlight_options = {"default": {"stripall": True}}
 
 # -- GraphViz configuration --------------------------------------------------
 
 from cwl.doc.graphs import create_processing_units_graph
 
-graphviz_output_format = 'svg'
+graphviz_output_format = "svg"
 
-myst_substitutions['CWL_PROCESSING_UNITS_GRAPH'] = create_processing_units_graph()
+myst_substitutions["CWL_PROCESSING_UNITS_GRAPH"] = create_processing_units_graph()
 
 # -- Options for HTML output -------------------------------------------------
 
 # The theme to use for HTML and HTML Help pages.  See the documentation for
 # a list of builtin themes.
 #
-html_theme = 'pydata_sphinx_theme'
+html_theme = "pydata_sphinx_theme"
 
 # Add any paths that contain custom static files (such as style sheets) here,
 # relative to this directory. They are copied after the builtin static files,
 # so a file named "default.css" will overwrite the builtin "default.css".
-html_static_path = ['_static']
+html_static_path = ["_static"]
+favicons = [
+    {
+        "rel": "icon",
+        "sizes": "16x16",
+        "href": "images/favicons/cwl/favicon-16x16.png",
+    },
+    {
+        "rel": "icon",
+        "sizes": "32x32",
+        "href": "images/favicons/cwl/favicon-32x32.png",
+    },
+    {
+        "rel": "icon",
+        "sizes": "96x96",
+        "href": "images/favicons/cwl/favicon-96x96.png",
+    },
+    {
+        "rel": "icon",
+        "sizes": "128x128",
+        "href": "images/favicons/cwl/favicon-128.png",
+    },
+    {
+        "rel": "icon",
+        "sizes": "196x196",
+        "href": "images/favicons/cwl/favicon-196x196.png",
+    },
+]
+
 
 html_css_files = [
-    'css/custom.css',
+    "css/custom.css",
 ]
 
-html_logo = '_static/images/logos/cwl/CWL-Logo-HD-cropped2.png'
-html_favicon = '_static/images/favicons/cwl/favicon.ico'
+html_logo = "_static/images/logos/cwl/CWL-Logo-HD-cropped2.png"
+html_favicon = "_static/images/favicons/cwl/favicon.ico"
 
-html_extra_path = [
-    'browserconfig.xml',
-    'favicon.ico',
-    'manifest.json'
-]
+html_extra_path = ["browserconfig.xml", "favicon.ico", "manifest.json"]
 
 html_theme_options = {
     "external_links": [
-      {"name": "Community", "url": "https://www.commonwl.org/community/"},
+        {"name": "Community", "url": "https://www.commonwl.org/community/"},
     ],
     "header_links_before_dropdown": 6,
     "icon_links": [
@@ -191,39 +212,12 @@ html_theme_options = {
     "navbar_end": [
         # "version-switcher",
         "theme-switcher",
-        "navbar-icon-links"
+        "navbar-icon-links",
     ],
     "show_nav_level": 2,
     "navigation_depth": 2,
     "collapse_navigation": True,
     "show_prev_next": True,
-    "favicons": [
-        {
-            "rel": "icon",
-            "sizes": "16x16",
-            "href": "images/favicons/cwl/favicon-16x16.png"
-        },
-        {
-            "rel": "icon",
-            "sizes": "32x32",
-            "href": "images/favicons/cwl/favicon-32x32.png"
-        },
-        {
-            "rel": "icon",
-            "sizes": "96x96",
-            "href": "images/favicons/cwl/favicon-96x96.png"
-        },
-        {
-            "rel": "icon",
-            "sizes": "128x128",
-            "href": "images/favicons/cwl/favicon-128.png"
-        },
-        {
-            "rel": "icon",
-            "sizes": "196x196",
-            "href": "images/favicons/cwl/favicon-196x196.png"
-        }
-    ],
     "footer_items": ["copyright"],
 }
 
@@ -232,12 +226,12 @@ html_context = {
     "github_repo": "user_guide",
     "github_version": "main",
     "doc_path": "src",
-    "default_mode": "light"
+    "default_mode": "light",
 }
 
 gettext_uuid = True
 gettext_compact = "user_guide"
-locale_dirs = ['../locales/']
+locale_dirs = ["../locales/"]
 
 
 # Patched MyST parser
@@ -259,6 +253,7 @@ from myst_parser.warnings_ import create_warning
 from myst_parser.parsers.mdit import create_md_parser
 
 SPHINX_LOGGER = logging.getLogger(__name__)
+
 
 class MystParser(SphinxParser):
     """Sphinx parser for Markedly Structured Text (MyST)."""
@@ -309,7 +304,9 @@ class MystParser(SphinxParser):
         #       gives you the translation without resolving the links. Here we just re-use the
         #       ``md_env`` dictionary that contains the ``.references`` populated in the first
         #       pass, fixing i18n with MyST Parser.
-        env = {} if not hasattr(document.settings, 'md_env') else document.settings.md_env
+        env = (
+            {} if not hasattr(document.settings, "md_env") else document.settings.md_env
+        )
         parser.options["document"] = document
         parser.render(inputstring, env)
         document.settings.md_env = parser.renderer.md_env
