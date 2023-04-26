@@ -254,7 +254,8 @@ from myst_parser.config.main import (
     merge_file_level,
     read_topmatter,
 )
-from myst_parser.mdit_to_docutils.sphinx_ import SphinxRenderer, create_warning
+from myst_parser.mdit_to_docutils.sphinx_ import SphinxRenderer
+from myst_parser.warnings_ import create_warning
 from myst_parser.parsers.mdit import create_md_parser
 
 SPHINX_LOGGER = logging.getLogger(__name__)
