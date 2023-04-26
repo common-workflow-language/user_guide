@@ -9,8 +9,8 @@ msgstr ""
 "Project-Id-Version: Common Workflow Language User Guide\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-01-27 16:02+0100\n"
-"PO-Revision-Date: 2023-03-01 05:35+0000\n"
-"Last-Translator: \"Bruno P. Kinoshita\" <brunodepaulak@gmail.com>\n"
+"PO-Revision-Date: 2023-04-03 19:41+0000\n"
+"Last-Translator: ssantos <ssantos@web.de>\n"
 "Language-Team: Portuguese <https://hosted.weblate.org/projects/commonwl/"
 "user-guide/pt/>\n"
 "Language: pt\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Generator: Weblate 4.16-rc\n"
+"X-Generator: Weblate 4.17-dev\n"
 "Generated-By: Babel 2.10.3\n"
 
 #: ../../LICENSE.md:2 3eb955b4f3dd4c3188924b97ea6ab592
@@ -45,7 +45,7 @@ msgstr ""
 
 #: ../../LICENSE.md:12 a8e98ad541c642e58e201afa625ec791
 msgid "You are free:"
-msgstr "Você tem o direito de:"
+msgstr "Tem o direito de:"
 
 #: ../../LICENSE.md:14 b4cb4bc4261347fcb0d2c8a93995ab76
 msgid ""
@@ -93,9 +93,9 @@ msgid ""
 "technological measures that legally restrict others from doing anything the "
 "license permits.  With the understanding that:"
 msgstr ""
-"**Sem restrições adicionais**---Você não pode aplicar termos jurídicos ou "
-"medidas de caráter tecnológico que restrinjam legalmente outros de fazerem "
-"algo que a licença permita.    Com o entendimento de que:"
+"**Sem restrições adicionais**---Não pode aplicar termos jurídicos ou medidas "
+"de caráter tecnológico que restrinjam legalmente outros de fazerem algo que "
+"a licença permita.    Com o entendimento de que:"
 
 #: ../../LICENSE.md:36 3cfedee64d4e46098a159cb2acdba4ef
 msgid ""
@@ -171,8 +171,8 @@ msgid ""
 "contents) to browse the User Guide."
 msgstr ""
 "O conteúdo desta página está desatualizado e foi mantido para preservar os "
-"links do antigo Guia do Usuário. Por favor, use o novo [Índice](index.md"
-"#table-of-contents) para navegar o Guia do Usuário."
+"links do antigo Guia do Utilizador. Por favor, use o novo [Índice](index.md"
+"#table-of-contents) para navegar o Guia do Utilizador."
 
 #: ../../src/faq.md:1 f2c4882e0e164c2b869e3eb969241061
 msgid "FAQ"
@@ -247,7 +247,8 @@ msgid ""
 "scripts)."
 msgstr ""
 "E finalmente, modifique o seu `PATH` para adicionar o diretório que contém o "
-"seu script. (É boa prática usar `$HOME/bin` para scripts do usuário local)."
+"seu script. (É boa prática usar `$HOME/bin` para scripts do utilizador "
+"local)."
 
 #: ../../src/faq.md:104 dd6fc2a04e3b476892f05bc5b746d0fa
 msgid ""
@@ -438,7 +439,7 @@ msgid ""
 "checks` to `cwltool`."
 msgstr ""
 "Se você não tem opção e precisa utilizar estes caracteres apesar do risco, "
-"você deve então passar `--relax-path-checks` ao chamar o `cwltool`."
+"você deve então passar `--relax-path-verificks` ao chamar o `cwltool`."
 
 #: ../../src/faq.md:373 857024702f624885be706c405b7a088e
 msgid "CWL Parameter Reference Error due to Hyphen in Input Identifier"
@@ -1216,7 +1217,7 @@ msgid ""
 "You can use this Inputs Object file now to execute the “Hello World” "
 "workflow:"
 msgstr ""
-"Você pode utilizar este arquivo de Objetos de Inputs agora para executar o "
+"Pode utilizar este arquivo de Objetos de Inputs agora para executar o "
 "workflow “Hello World”:"
 
 #: ../../src/introduction/quick-start.md:82 98b6d400cb274d08ad6489adbef08c4b
@@ -1233,7 +1234,7 @@ msgstr ""
 
 #: ../../src/introduction/quick-start.md:96 48beaccb16a24427bd015c63f9e06d37
 msgid "Continue reading the next sections of this User Guide!"
-msgstr "Continue lendo as seções seguintes deste Guia do Usuário!"
+msgstr "Continue lendo as secções seguintes deste Guia do Utilizador!"
 
 #: ../../src/introduction/quick-start.md:97 68035ead1c6844128011ca32c04fd20f
 msgid ""
@@ -1288,8 +1289,8 @@ msgid ""
 "md) section of the new user guide."
 msgstr ""
 "O conteúdo desta página está desatualizado mas foi mantido aqui para "
-"preservar os links do antigo Guia do Usuário. A informação desta página foi "
-"migrada para a seção [FAQ](/faq.md) do novo guia do usuário."
+"preservar os links do antigo Guia do Utilizador. A informação desta página "
+"foi migrada para a secção [FAQ](/faq.md) do novo guia do utilizador."
 
 #: ../../src/topics/additional-arguments-and-parameters.md:1
 #: 3821c2d16b254672a494522e47386cb0
