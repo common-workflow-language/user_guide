@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: Common Workflow Language User Guide\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-01-25 14:33+0100\n"
-"PO-Revision-Date: 2023-04-26 11:48+0000\n"
+"PO-Revision-Date: 2023-05-02 11:00+0000\n"
 "Last-Translator: Zoë Ma <zoe.ma@curii.com>\n"
 "Language-Team: Chinese (Simplified) <https://hosted.weblate.org/projects/"
 "commonwl/user-guide/zh_Hans/>\n"
@@ -109,8 +109,8 @@ msgstr ""
 msgid "Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an \"AS IS\" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License."
 msgstr ""
 "除非受适用法律要求或者经书面许可，据本许可协议发行的软件均为“依照其原样”发行"
-"，不存在任何类型的、无论是明文还是隐含的担保或合约条款。请查阅许可协议有关本"
-"许可协议下授权行为和责任免除的具体条文。"
+"，不存在任何种类的、无论是明文还是隐含的担保或合约要件。请查阅许可协议中关于"
+"本协议下授权许可行为和责任免除的具体条文。"
 
 #: ../../src/_includes/what-is-cwl.md:1
 #: ../../src/_includes/what-is-cwl.md:2
@@ -532,7 +532,7 @@ msgstr ""
 #: ../../src/introduction/basic-concepts.md:33
 #: b171b72c48d44050a3416a7a42c4021d
 msgid "The model used for the specification version is called Semantic Versioning. See the end of this section to [learn more](#learn-more) about it."
-msgstr "规约所使用的版本标号模型称为“语义化版本”，请参阅本章结尾以[了解更多](#learn-"
+msgstr "规约所使用的版本标号模型称为“语义型版本”，请参阅本章结尾以[了解更多](#learn-"
 "more)相关信息。"
 
 #: ../../src/introduction/basic-concepts.md:37
@@ -568,8 +568,9 @@ msgstr "流程和要求"
 #: 86e6a06992dc4228bfda7add48e28ca3
 msgid "A process is a computing unit that takes inputs and produces outputs. The behavior of a process can be affected by the inputs, requirements, and hints. There are four types of processes defined in the CWL specification {{ cwl_version }}:"
 msgstr ""
-"流程是指接收输入并产生输出的计算单元，流程的行为可能受到输入、要求及提示的影"
-"响。CWL规范{{ cwl_version }}定义的流程包括如下四种："
+"流程 (process) 是指接收输入并生成输出的计算单元，影响其行为的包括输入 "
+"(input)、要求 (requirement) 及提示 (hint)。CWL 规约 {{ cwl_version }} "
+"版定义了如下四种流程："
 
 #: ../../src/introduction/basic-concepts.md:112
 #: 8c9772f96caf4169924d22eb929a4f0f
@@ -594,73 +595,73 @@ msgstr "工作流。"
 #: ../../src/introduction/basic-concepts.md:118
 #: 6e352ac1f8e144c392ac5adf18c28298
 msgid "The processing units available in the CWL objects model."
-msgstr "CWL对象模型中可用的处理单元。"
+msgstr "可用在 CWL 对象模型中的处理单元。"
 
 #: ../../src/introduction/basic-concepts.md:119
 #: cf2922f645904ac7955428ecddc37b8a
 msgid "A command-line tool is a wrapper for a command-line utility like `echo`, `ls`, and `tar`. A command-line tool can be called from a workflow."
-msgstr "命令行工具是 `echo`、`ls` 及 `tar` "
-"等命令行实用程序的包装器。可从工作流中调用命令行工具。"
+msgstr "“命令行工具”指的是 `echo`、`ls` 及 `tar` 等命令行程序的包装器 "
+"(wrapper)。从工作流中可以调用命令行工具。"
 
 #: ../../src/introduction/basic-concepts.md:122
 #: 5f47aae608c041aeb4134d59dad314d2
 msgid "An expression tool is a wrapper for a JavaScript expression. It can be used to simplify workflows and command-line tools, moving common parts of a workflow execution into reusable JavaScript code that takes inputs and produces outputs like a command-line tool."
 msgstr ""
-"表达式工具是 JavaScript 表达式的包装器，可用于简化工作流和命令行工具，"
-"将工作流执行的常见部分移动到可重用的 JavaScript "
-"代码中，这些代码像命令行工具一样接受输入并生成输出。"
+"“表达式工具”是 JavaScript 表达式的包装器。"
+"通过将工作流执行过程中的相同部分整理为可重用的 JavaScript "
+"代码，像命令行工具一样接受输入并生成输出，工作流和命令行工具可以得到简化。"
 
 #: ../../src/introduction/basic-concepts.md:127
 #: f6f589481d0c4891beaccb63160619ef
 msgid "Operation is an abstract process that also takes inputs, produces outputs, and can be used in a workflow. But it is a special operation not so commonly used. It is discussed in the [Operations section](../topics/operations.md) of this user guide."
 msgstr ""
-"操作是一个抽象的流程，同样可接受输入并生成输出，且可用于工作流中。但是，这是"
-"一种特殊的操作，并不十分常用。在本用户指南的 [操作章节](../topics/operations."
-"md)中，我们对它进行了相关讨论。"
+"“操作”是一种抽象的过程，它同样可接受输入、生成输出，并用于工作流中。但是，这"
+"一类特殊操作并不十分常用。用户指南的 [《操作》](../topics/operations."
+"md)一节将进行讨论。"
 
 #: ../../src/introduction/basic-concepts.md:131
 #: 73b0c1ccb18c4b74a2c0fdf9706eca85
 msgid "The workflow is a process that contains steps. Steps can be other workflows (nested workflows), command-line tools, or expression tools. The inputs of a workflow can be passed to any of its steps, while the outputs produced by its steps can be used in the final output of the workflow."
 msgstr ""
-"工作流是包含步骤的流程。步骤可以是其他工作流（嵌套工作流）、命令行工具或表达"
-"式工具。工作流的输入可以传送到其他任何步骤，而步骤生成的输出可用作工作流的最"
-"终输出。"
+"“工作流”指的是可分为步骤的流程。“步骤”可以是其他工作流（嵌套工作流），也可以"
+"是命令行工具或表达式工具。工作流的输入可以传递给它的任一步骤，而其步骤生成的"
+"输出可用作工作流的最终输出。"
 
 #: ../../src/introduction/basic-concepts.md:137
 #: 4ace6b92f4e04a07aa202840ebe36417
 msgid "The CWL specification allows for implementations to provide extra functionality and specify prerequisites to workflows through *requirements*. There are many requirements defined in the CWL specification, for instance:"
-msgstr "CWL规范允许实现提供额外的功能或通过 "
-"*requirements*指定工作流的先决条件。CWL规范中定义了很多要求，比如："
+msgstr "CWL 规约允许其实现提供额外功能，或通过 *requirements* "
+"（要求）指定工作流的先决条件。CWL 规约定义了诸种要求，如："
 
 #: ../../src/introduction/basic-concepts.md:141
 #: cc6cd8cb81564cadb8e6a4c49423b7f7
 msgid "`InlineJavascriptWorkflow` - enables JavaScript in expressions."
-msgstr "`InlineJavascriptWorkflow`——在表达式中启用JavaScript。"
+msgstr "`InlineJavascriptWorkflow` —— 在表达式中启用 JavaScript。"
 
 #: ../../src/introduction/basic-concepts.md:142
 #: 2d9f53b6ed5041dbb6c0b54835897856
 msgid "`SubworkflowFeatureRequirement` - enables nested workflows."
-msgstr "`SubworkflowFeatureRequirement` ——启用嵌套工作流。"
+msgstr "`SubworkflowFeatureRequirement` —— 启用嵌套工作流。"
 
 #: ../../src/introduction/basic-concepts.md:143
 #: 907674a4ecff4826a2b880e28fc38f33
 msgid "`InitialWorkDirRequirement` - controls staging files in the input directory."
-msgstr "`InitialWorkDirRequirement`——控制输入目录中的暂存文件。"
+msgstr "`InitialWorkDirRequirement` —— 控制输入目录中的暂存文件。"
 
 #: ../../src/introduction/basic-concepts.md:145
 #: 037cd0e5ceda482eaeaca03d51745aee
 msgid "Some CWL runners may provide requirements that are not in the specification. For example, GPU requirements are supported in `cwltool` through the `cwltool:CUDARequirement` requirement, but it is not part of the {{ cwl_version }} specification and may not be supported by other CWL runners."
 msgstr ""
-"某些CWL运行程序可能提供规范之外的需求，比如`cwltool` 通过 "
-"`cwltool:CUDARequirement` 需求来支持GPU需求，但这不属于 {{ cwl_version "
-"}}版本规范的内容，可能不受其他CWL运行程序支持。"
+"某些 CWL 运行程序可能提供规约之外的需求。例如 `cwltool` 提供 "
+"`cwltool:CUDARequirement` 以支持GPU需求，但这不在 {{ cwl_version }} "
+"版本规约之内，可能不受其他 CWL 运行程序支持。"
 
 #: ../../src/introduction/basic-concepts.md:151
 #: e4643938445b48cc80eb8973ceeb126e
 msgid "Hints are similar to requirements, but while requirements list features that are required, hints list optional features. Requirements are explained in detail in the [Requirements](../topics/requirements-and-hints.md) section."
 msgstr ""
-"提示类似于需求。但是，需求列出必需功能，而提示仅列出可选功能。[需求](../"
-"topics/requirements-and-hints.md)章节对需求进行了详细介绍。"
+"“提示”与需求类似。其区别是，列为“需求”的功能是不可缺少的，而提示仅列出可选功"
+"能。更详细介绍请见 [《需求》](../topics/requirements-and-hints.md)一章。"
 
 #: ../../src/introduction/basic-concepts.md:155
 #: c4c3315c96714e81b364f8cc003b87e6
@@ -671,30 +672,32 @@ msgstr "FAIR 工作流"
 #: 3eb6a013a2a4478ca2ad134661f65c58
 msgid "The FAIR principles have laid a foundation for sharing and publishing digital assets, and in particular, data. The FAIR principles emphasize machine accessibility and that all digital assets should be Findable, Accessible, Interoperable, and Reusable. Workflows encode the methods by which the scientific process is conducted and via which data are created. It is thus important that workflows support the creation of FAIR data and adhere to the FAIR principles. — [FAIR Computational Workflows](https://workflows.community/groups/fair/), Workflows Community Initiative."
 msgstr ""
-"FAIR 原则为共享和公开数字资产（尤其是数据）提供了基础。FAIR 原则强调访问计算"
-"机的重要性，且所有数字资产都应是可发现、可访问、可互操及可重用的。工作流解码"
-"了执行科学流程的方法，并利用该方法来创建数据。因此，工作流必须支持FAIR数据的"
-"创建且始终坚持FAIR原则。—— [FAIRFAIR计算工作流](https://workflows.community/"
-"groups/fair/)，工作流社区协议。"
+"FAIR 为数字资源（尤其是数据）的共享和发布提供了一组基本原则。FAIR "
+"四项原则强调了“机器可读”的重要性，进而提出应使所有数字资源可发现、可访问、"
+"可互操作以及可重用 (Findable, Accessible, Interoperable, and Reusable)。工作"
+"流通过代码所描述的，正是科学工作得以开展、数据得以创建的过程。因此，"
+"应强调工作流须支持创建 FAIR 数据，遵从 FAIR 原则。—— 工作流社群行动之[FAIR "
+"计算工作流](https://workflows.community/groups/fair/)。"
 
 #: ../../src/introduction/basic-concepts.md:167
 #: 074af9633627470485e5225326d5f20a
 msgid "CWL has roots in \"make\" and many similar tools that determine order of execution, based on dependencies between tasks. However, unlike \"make\", CWL tasks are isolated, and you must be explicit about your inputs and outputs."
 msgstr ""
-"CWL源于\"make\"，且拥有很多类似的工具，可基于任务间的依赖关系决定执行顺序。"
-"但不同于\"make\"的是，CWL任务是独立的，您必须明确输入和输出。"
+"CWL 滥觞于“make”一类推定任务间依赖关系，并据此决定其执行次序的工具。但与“"
+"make\"的不同在于，CWL 任务是存在于独立环境中的，其输入和输出需要明确指定。"
 
 #: ../../src/introduction/basic-concepts.md:171
 #: 847951c055b94a83b1e081594cef22ee
 msgid "The benefit of explicitness and isolation are flexibility, portability, and scalability; tools and workflows described with CWL can transparently leverage technologies such as Docker and be used with CWL implementations from different vendors."
 msgstr ""
-"任务明确且独立的好处在于灵活、可移植及可拓展。使用CWL描述的工具和工作流可公开"
-"透明地使用Docker等技术，并与来自不同供应商的CWL实现一起使用。"
+"明确而独立，其益处在于灵活、可移植及可扩缩。CWL 所描述的工具和工作流，"
+"既能无缝对接 Docker 等技术以发挥其优势，又能通用于不同供应方的 CWL "
+"实现环境中。"
 
 #: ../../src/introduction/basic-concepts.md:176
 #: 44bde1fae06b4678bcac4f3224601296
 msgid "`cwltool` also uses the PROV-O standard ontology for data provenance."
-msgstr "`cwltool` 也使用PROV-O标准本体来追溯数据来源。"
+msgstr "同时，`cwltool` 将 PROV-O 标准本体 (standard ontology) 运用于数据来源的保证。"
 
 #: ../../src/introduction/basic-concepts.md:178
 #: ../../src/introduction/prerequisites.md:196
@@ -708,72 +711,73 @@ msgstr "了解更多信息"
 #: ../../src/introduction/basic-concepts.md:180
 #: 9d5100c7d0a040aea1020bf633ad17de
 msgid "Semantic Versioning - <https://semver.org/>"
-msgstr "语义版本控制 —— <https://semver.org/>"
+msgstr "语义型版本 —— <https://semver.org/>"
 
 #: ../../src/introduction/basic-concepts.md:181
 #: 36eb4b3b966640af90faa55db3789cb6
 msgid "The CWL Specification page in the CWL website: <https://www.commonwl.org/specification/>"
-msgstr "在CWL网站上查阅CWL规范页面，请前往： <https://www.commonwl.org/specification/"
-">"
+msgstr "CWL网站上的规约页面： <https://www.commonwl.org/specification/>"
 
 #: ../../src/introduction/basic-concepts.md:182
 #: 2ccb956baa6b4376a04ad9fcc4654631
 msgid "The current CWL specification on GitHub: {{ '<https://github.com/common-workflow-language/cwl-{}>'.format(cwl_version_text) }}"
 msgstr ""
-"在Github上查阅当前版本CWL规范，请前往： {{ '<https://github.com/"
+"GitHub 上的 CWL 规约当前版本： {{ '<https://github.com/"
 "common-workflow-language/cwl-{}>'.format(cwl_version_text) }}"
 
 #: ../../src/introduction/basic-concepts.md:183
 #: 72889b830c514afe9a7cb1e64b5666a0
 msgid "The list of Implementations in the CWL website: <https://www.commonwl.org/implementations/>"
-msgstr "在CWL网站上查阅实现列表，请前往：<https://www.commonwl.org/implementations/>"
+msgstr "CWL 网站所列的诸种实现：<https://www.commonwl.org/implementations/>"
 
 #: ../../src/introduction/basic-concepts.md:184
 #: e29bd7f973544600be589c3b3f84cf63
 msgid "PROV-O: The PROV Ontology - <https://www.w3.org/TR/prov-o/>"
-msgstr "PROV-O：PROV 本体——<https://www.w3.org/TR/prov-o/>"
+msgstr "PROV-O：PROV 本体 —— <https://www.w3.org/TR/prov-o/>"
 
 #: ../../src/introduction/basic-concepts.md:185
 #: c377a7f5dbe645cebbb6c7eccf831a0b
 msgid "CWL Operations are covered in the [Operations](../topics/operations.md) section of this user guide."
-msgstr "本用户指南的[操作](../topics/operations.md)章节详细介绍了CWL操作。"
+msgstr "CWL 操作 (operations) 见于本《用户指南》中[《操作》](../topics/operations."
+"md)一章。"
 
 #: ../../src/introduction/index.md:1
 #: 1769a0cbf4de4d77879c1f202cd11af9
 msgid "Introduction"
-msgstr "介绍"
+msgstr "概述"
 
 #: ../../src/introduction/index.md:3
 #: 950370f0a36048b38e1bde9b78f80816
 msgid "This section will guide you through a short introduction to CWL, the prerequisites for following this user guide, and some basic concepts that are useful to know before reading the rest of the user guide."
-msgstr "本章节将简要介绍CWL、遵循本用户指南的先决条件及一些基本概念，这些概念有助于阅"
-"读（理解）用户指南的其他内容。"
+msgstr "本章节将引导您了解 CWL简介、学习本《用户指南》所需的准备，以及有利于您阅读理"
+"解本《指南》的若干基本概念。"
 
 #: ../../src/introduction/prerequisites.md:1
 #: f01faaf1b253407cbbc2f353c24774f3
 msgid "Prerequisites"
-msgstr "先决条件"
+msgstr "学习前的准备"
 
 #: ../../src/introduction/prerequisites.md:6
 #: 353b14f06ee845d0a06a829643e31534
 msgid "The software and configurations listed in this section are prerequisites for following this user guide. The CWL standards are implemented by many different workflow runners and platforms. This list of requirements focuses on the CWL reference runner, `cwltool`. You can use another CWL-compatible runner or workflow system, but the results and interface may look different (though the exact workflow outputs should be identical)."
 msgstr ""
-"本章节所列的软件和配置是遵循本用户指南的先决条件。CWL标准通过不同的工作流运行"
-"程序和平台实现。需求列表的重点在于CWL引用运行程序`cwltool`。您也可使用其他的"
-"兼容CWL的运行程序或工作流系统，但结果和界面可能看上去不同（尽管精确的工作流输"
-"出应该相同）。"
+"学习本《用户指南》前，首先需要准备好本节所述的软件及其配置。CWL "
+"标准现有多种工作流运行器和平台实现。本节列出的要求主要着眼于 CWL "
+"的参考运行程序即 `cwltool`。您也可以使用与之兼容的其他 CWL 运行程序或工作流系"
+"统，但运行结果和界面可能有所出入（尽管严格意义上属于工作流的输出应该相同）。"
 
 #: ../../src/introduction/prerequisites.md:12
 #: b5a0607096814c0aa577f977c3b57c54
 msgid "CWL Implementations"
-msgstr "CWL实现"
+msgstr "CWL 实现"
 
 #: ../../src/introduction/prerequisites.md:14
 #: ff2bb4c6504b456bac7ca9c514414dbf
 msgid "There are many implementations of the CWL standards. Some are complete CWL runners, while others could be plug-ins or extensions to workflow engines. We have a better explanation in the [Implementations](basic-concepts.md#implementations) section."
 msgstr ""
-"CWL标准有很多种实现形式，可能是完整的CWL运行程序，或者是工作流引擎的插件或拓"
-"展程序。 [实现](basic-concepts.md#implementations)章节对此提供了更好的解释。"
+"CWL 标准有多种实现，既包括完整的 CWL "
+"运行程序，也有工作流引擎的插件或扩展程序。 详见[《实现》](basic-concepts."
+"md#implementations)一章。"
 
 #: ../../src/introduction/prerequisites.md:19
 #: cbbcce4c2a96471b8b0ae3593ad59de4
@@ -783,71 +787,71 @@ msgstr "操作系统"
 #: ../../src/introduction/prerequisites.md:21
 #: 5089fdba8aed4113983fa86e698df98b
 msgid "We recommend using an up-to-date operating system. You can choose any of the following options for your operating system:"
-msgstr "建议使用最新的操作系统，您可从下选项选择合适的操作系统："
+msgstr "建议使用以下任一可选系统的最新版本："
 
 #: ../../src/introduction/prerequisites.md:24
 #: dbaa4bae22fe4d05b18d7351967ddbc3
 msgid "Linux"
-msgstr "Linux操作系统"
+msgstr "Linux"
 
 #: ../../src/introduction/prerequisites.md:25
 #: c05187af85be41b782678b79627f8fbf
 msgid "macOS"
-msgstr "macOS操作系统"
+msgstr "macOS"
 
 #: ../../src/introduction/prerequisites.md:26
 #: beb6cf4d7c154eb9b6d7fe024a318ed7
 msgid "Windows"
-msgstr "Windows操作系统"
+msgstr "Windows"
 
 #: ../../src/introduction/prerequisites.md:29
 #: 3b5fdc4c2ebd45dcb3703e59d2b3ef25
 msgid "If you are using Windows, you will have to install the [Windows Subsystem for Linux 2](https://learn.microsoft.com/en-us/windows/wsl/install) (WSL2). Visit the `cwltool` [documentation](https://github.com/common-workflow-language/cwltool/blob/main/README.rst#ms-windows-users) for details on installing WSL2. Your operating system also needs internet access and a recent version of Python (3.6+)."
 msgstr ""
-"如您使用的是Windows操作系统，必须安装 [适用于 Linux "
-"2的Windows子系统](https://learn.microsoft.com/en-us/windows/wsl/install) "
-"(WSL2)。请参阅 `cwltool` [documentation](https://github.com/"
-"common-workflow-language/cwltool/blob/main/README.rst#ms-windows-users) ，了"
-"解更多关于安装WSL2的信息。同时，您的操作系统需要网络访问及最新版本的Python(3."
-"56+)。"
+"如使用 Windows 操作系统，须首先安装[适用于 Linux 的 Windows 子系统 "
+"2](https://learn.microsoft.com/en-us/windows/wsl/install) (WSL2)。请参阅 "
+"`cwltool` [说明文件](https://github.com/common-workflow-language/cwltool/"
+"blob/main/README.rst#ms-windows-users) ，了解关于安装 WSL2 "
+"的细节。同时，您的操作系统还需能接入互联网，以及运行较新版本（3.6 以上）的 "
+"Python."
 
 #: ../../src/introduction/prerequisites.md:35
 #: 56d78c95daa54135b6aa9b2bfdc34d01
 msgid "CWL Runner"
-msgstr "CWL运行程序"
+msgstr "CWL 运行程序"
 
 #: ../../src/introduction/prerequisites.md:41
 #: 0f2704bf1f7148be95e999e312899f11
 msgid "The first thing you will need for running CWL workflows is a CWL runner. `cwltool` is a Python Open Source project maintained by the CWL community. It is also the CWL reference runner, which means it must support everything in the current CWL specification, {{ cwl_version }}."
 msgstr ""
-"要运行CWL工作流，首先需要一个CWL运行程序。`cwltool`是由CWL社区维护的Python开"
-"源项目，也是CWL引用运行程序，这意味着其必须支持当前版本CWL规范{{ cwl_version "
-"}}的所有规定。"
+"要运行CWL工作流，首先要用到的就是 CWL 运行程序 (runner). `cwltool`作为 CWL "
+"社群共同维护开发的 Python 开源项目，正是 CWL 运行程序的参考实现，也就是说，"
+"它必须完整支持当前 {{ cwl_version }} 版本 CWL 规约。"
 
 #: ../../src/introduction/prerequisites.md:46
 #: 86264c9e56104ecea9146407c379aae2
 msgid "`cwltool` can be installed with `pip`. We recommend using a virtual environment like `venv` or `conda`. The following commands will create and activate a Python virtual environment using the `venv` module, and install `cwltool` in that environment:"
 msgstr ""
-"可通过`pip`安装`cwltool` ，建议您使用`venv` 或 "
-"`conda`等虚拟环境进行安装。以下命令将使用`venv`模块创建和激活Python虚拟环境，"
-"并在该环境中安装 `cwltool`："
+"`cwltool` 可以用 `pip` 命令安装，而且我们推荐使用 `venv` 或 `conda` "
+"等虚拟环境。以下命令将使用 `venv` 模块创建并激活一个 Python 虚拟环境，"
+"并在该环境中安装 `cwltool`:"
 
 #: ../../src/introduction/prerequisites.md:51
 #: 0a0f0e5151ab4c498b4f8a12c016f28d
 msgid "Installing `cwltool` with `pip` and `venv`."
-msgstr "使用 `pip` 和 `venv`安装`cwltool`。"
+msgstr "使用 `pip` 和 `venv` 安装 `cwltool`."
 
 #: ../../src/introduction/prerequisites.md:62
 #: f7aaafeee230400da056464c853582c2
 msgid "Visit the `cwltool` [documentation](https://github.com/common-workflow-language/cwltool#install) for other ways to install `cwltool` with `apt` and `conda`."
 msgstr ""
-"请参阅`cwltool` [documentation](https://github.com/common-workflow-language/"
-"cwltool#install)，了解使用 `apt` 和 `conda`安装`cwltool`的其他方法。"
+"请参阅 `cwltool` [说明文件](https://github.com/common-workflow-language/"
+"cwltool#install)查看其他安装方法，包括用 `apt` 或 `conda`."
 
 #: ../../src/introduction/prerequisites.md:65
 #: 5eced7e4cd084e8a806b1d3b12d0c000
 msgid "Let's use a simple CWL tool description `true.cwl` with `cwltool`."
-msgstr "让我们使用`cwltool` 来执行一个简单的CWL工具描述`true.cwl`。"
+msgstr "我们来用`cwltool` 处理名为 `true.cwl` 的一个简单 CWL 工具描述。"
 
 #: ../../src/introduction/prerequisites.md:67
 #: 040c019b6e844eda8c8c2b210852516b
@@ -858,77 +862,77 @@ msgstr "`true.cwl`"
 #: 6391e08e0bde49f4b21286d8fdb97433
 msgid "The `cwltool` command has an option to validate CWL tool and workflow descriptions. This option will parse the CWL document, look for syntax errors, and verify that the workflow descriptions are compliant with the CWL standards. However, these actions will be performed without running the document. To validate CWL workflows (or even a standalone command line tool description like the above) pass the `--validate` option to the `cwltool` command:"
 msgstr ""
-"`cwltool` 命令具有验证 CWL 工具和工作流描述的选项，此选项将解析 CWL "
-"文档，查找语法错误，并验证工作流描述是否符合 CWL "
-"标准。但是，这些操作将在不运行文档的情况下执行。要验证 CWL "
-"工作流（甚至是像上面这样的独立命令行工具描述），请将 `--validate` 选项传递给 "
-"`cwltool` 命令："
+"`cwltool` 命令有一个选项可用于“确认” (validate) 也就是检验 CWL "
+"工具和工作流描述。使用该选项可以进行 CWL 文件语法分析，查找语法错误，并以 "
+"CWL 标准验证工作流描述的规范性。然而，进行这一系列操作并不会运行 CWL 文件。"
+"要确认 CWL 工作流（包括类似前例的独立命令行工具描述），请将 `--validate` "
+"选项传递给 `cwltool` 命令："
 
 #: ../../src/introduction/prerequisites.md:79
 #: cdef47fca304479c9a9df75afc0afb35
 msgid "Validating `true.cwl` with `cwltool`."
-msgstr "使用 `cwltool`验证 `true.cwl` 。"
+msgstr "用 `cwltool` 确认（即检验）`true.cwl`."
 
 #: ../../src/introduction/prerequisites.md:84
 #: d41c4bc740aa474ea09a7cbd267c8840
 msgid "You can run the CWL tool description by omitting the `--validate` option:"
-msgstr "您也可以通过省略`--validate`选项来运行CWL工具描述："
+msgstr "去掉 `--validate` 选项，才能运行 CWL 工具描述："
 
 #: ../../src/introduction/prerequisites.md:86
 #: 24d7be55d3994f0b82c38da47918e0c9
 msgid "Running `true.cwl` with `cwltool`."
-msgstr "使用 `cwltool` 运行 `true.cwl`。"
+msgstr "用 `cwltool` 运行 `true.cwl`."
 
 #: ../../src/introduction/prerequisites.md:91
 #: 39d6ceecb54a4a7fb5dff4a7cae1bfe7
 msgid "Cwl-runner Python Module"
-msgstr "Cwl-runner Python 模块"
+msgstr "Python 模块 cwl-runner"
 
 #: ../../src/introduction/prerequisites.md:93
 #: 096d0a50f69e48bd9915238d1b4264c1
 msgid "`cwl-runner` is an implementation-agnostic alias for any CWL compliant runner. This simply means that the `cwl-runner` alias command can be invoked independently, and is not reliant on a particular CWL runner program name. Users can invoke `cwl-runner` instead of invoking a CWL runner like `cwltool` directly. The `cwl-runner` is installed by a system administrator or user to point to the preferred CWL implementation. This is convenient for environments with multiple CWL runners."
 msgstr ""
-"`cwl-runner` 是任何符合标准的CWL运行程序的别名，其与实现无关。这仅仅意味着"
-"`cwl-runner` 别名命令可独立调用，且不依赖于特定CWL运行程序名。用户可调用`cwl-"
-"runner` ，而无需直接调用诸如 `cwltool`的CWL运行程序。 `cwl-"
-"runner`由系统管理员安装，或用户通过指定偏好CWL实现来安装， "
-"这对于拥有多个CWL运行程序的环境而言十分方便。"
+"`cwl-runner` 是任何符合标准的 CWL 运行程序“不分实现”的别名 (alias). 简言之"
+"，`cwl-runner` 这个别名命令可独立地启用，不依赖于 CWL 运行程序的具体名称。"
+"用户只需调用 `cwl-runner`, 而无需直接调用诸如 `cwltool` 这样的某个 CWL "
+"运行程序。经系统管理员或用户安装后，`cwl-runner` 命令用来代指其首选的 CWL "
+"实现。这样的安排更便利于多个 CWL 运行程序共存的环境。"
 
 #: ../../src/introduction/prerequisites.md:101
 #: f9df974a8e2645a6918e67466bd1fdc2
 msgid "The CWL community publishes a Python package with the name `cwlref-runner` that installs an alias for `cwltool` under the name `cwl-runner`"
 msgstr ""
-"CWL 社区发布了一个名为 `cwlref-runner` 的 Python 包，该软件包以 `cwl-"
-"runner`作为`cwltool` 的别名"
+"CWL 社群发布有名为 `cwlref-runner` 的 Python 包，以安装 `cwl-runner` 作为 "
+"`cwltool` 的别名"
 
 #: ../../src/introduction/prerequisites.md:104
 #: 71ebe91d4bda473abe87578929433212
 msgid "Installing `cwl-runner` alias for cwltool with `pip`."
-msgstr "使用 `pip`为cwltool安装`cwl-runner`别名。"
+msgstr "用 `pip` 为 cwltool 安装别名 `cwl-runner`."
 
 #: ../../src/introduction/prerequisites.md:111
 #: 746c6fc9c29d466494458a08d4c96672
 msgid "Now you can validate and run your workflow with the `cwl-runner` executable, which will invoke `cwltool`. You should have the same results and output as in the previous section."
-msgstr ""
-"现在，执行 `cwl-runner` 以调用 `cwltool`，便可验证和运行您的工作流。执行此操"
-"作后，您应该得到与上一章节相同的结果和输出。"
+msgstr "现在要检验或运行工作流就可以用 `cwl-runner` 这个命令了，它将为你调用 "
+"`cwltool`. 其运行结果和输出应当与上一节中相同。"
 
 #: ../../src/introduction/prerequisites.md:115
 #: b9cc5a843a0f49daad56e9303657bdd5
 msgid "Validating `true.cwl` with `cwl-runner`."
-msgstr "使用 `cwl-runner`验证 `true.cwl`。"
+msgstr "用 `cwl-runner` 检验 `true.cwl`."
 
 #: ../../src/introduction/prerequisites.md:120
 #: 34ab40437ab646488ba3ee86cd7fe071
 msgid "Running `true.cwl` with `cwl-runner`."
-msgstr "使用 `cwl-runner` 运行 `true.cwl`。"
+msgstr "用 `cwl-runner` 运行 `true.cwl`."
 
 #: ../../src/introduction/prerequisites.md:125
 #: 705807fae182425dbf4244dbf2be1226
 msgid "Another way to execute `cwl-runner` is by invoking the file directly. For that, the first thing you need to do is copy `true.cwl` workflow into a new file: `true_shebang.cwl`, and include a special first line, a *shebang*:"
 msgstr ""
-"执行 `cwl-runner` 的另一种方法是直接调用文件。为此，首先您需要将`true.cwl` "
-"工作流复制到一个新文件中：`true_shebang.cwl`，并添加特殊的首行，即*shebang*："
+"执行 `cwl-runner` 还有一种方法，即直接调用 CWL 文件。为此，首先将 `true.cwl` "
+"工作流复制为新文件 `true_shebang.cwl`, 然后加入特定的 *shebang* (即 \"hash-"
+"bang\") 作为首行："
 
 #: ../../src/introduction/prerequisites.md:129
 #: f74dd9bd4ff84bf48f3f8e8c8d6fb51a
@@ -938,32 +942,34 @@ msgstr "`true_shebang.cwl`"
 #: ../../src/introduction/prerequisites.md:135
 #: 164c438baab54ec19bbb4584a10dd411
 msgid "Now you can make the file `true_shebang.cwl` executable with `chmod u+x`."
-msgstr "现在，您可使用 `chmod u+x` 执行 `true_shebang.cwl` 文件。"
+msgstr "现在，用 `chmod u+x` 命令将 `true_shebang.cwl` 设为可执行。"
 
 #: ../../src/introduction/prerequisites.md:137
 #: bf8be77af6154326b28442c5d2e2b852
 msgid "Making `true.cwl` executable."
-msgstr "执行 `true.cwl`文件。"
+msgstr "令 `true.cwl` 可执行。"
 
 #: ../../src/introduction/prerequisites.md:144
 #: 695184d1b45a42f393e2da99c3721773
 msgid "And finally, you can execute it directly in the command-line. On execution, the program specified in the shebang (`cwl-runner`) will be used to execute the rest of the file."
-msgstr "最后，您可直接在命令行执行此文件。在执行时，shebang （`cwl-runner`） "
-"中指定的程序将用于执行文件的其余部分。"
+msgstr ""
+"到此，此 CWL 文件即可在命令行直接执行了。一旦下令执行这个文件，“shebang”"
+"所指定的程序 (即 `cwl-runner`) 将实际执行其余部分。"
 
 #: ../../src/introduction/prerequisites.md:148
 #: 7c4f45b3e7b549e186126693aa4a3d4f
 msgid "Running `true_shebang.cwl` with a shebang."
-msgstr "使用 shebang 运行 `true_shebang.cwl`。"
+msgstr "使用 shebang 运行 `true_shebang.cwl`."
 
 #: ../../src/introduction/prerequisites.md:154
 #: 3ba23b4ea01c46848e4e43bbeff5f5a1
 msgid "The *shebang* is the two-character sequence `#!` at the beginning of a script. When the script is executable, the operating system will execute the script using the executable specified after the shebang. It is considered a good practice to use `/usr/bin/env <executable>` rather than using a hard-coded location, since `/usr/bin/env <executable>` looks for the `<executable>` program in the system `PATH`,"
 msgstr ""
-"*shebang*是以`#！`两个字符序列开头的脚本。执行脚本时，"
-"操作系统将使用在shebang 之后指定的可执行文件来执行脚本。最好使用 `/usr/bin/"
-"env <executable>`， 而不是硬编码位置，因为/usr/bin/env <executable>可在系统 "
-"`PATH`中寻找`<executable>`程序，</executable></executable></executable>"
+"所谓 *shebang* 是指脚本起始处的 `#!` 两个连续字符。如果脚本可执行，"
+"操作系统将用紧跟在 shebang 之后写明的可执行程序来执行此脚本。一个好习惯是用 "
+"`/usr/bin/env &lt;可执行程序名&gt;`， 而不是硬性编码其所在路径，理由是 `/usr/"
+"bin/env &lt;可执行程序名&gt;` 进行的，是在系统 `PATH`（命令路径环境变量）"
+"中查找 `&lt;可执行程序名&gt;` 的实际路径"
 
 #: ../../src/introduction/prerequisites.md:161
 #: eec6c07455384630809ff1c532bfe7d4
@@ -974,36 +980,34 @@ msgstr "文本编辑器"
 #: f6b39b12bd5c495cb53e2795bf9200ed
 msgid "You can use any text editor with CWL, but for syntax highlighting we recommend an editor with YAML support. Popular editors are Visual Studio Code, Sublime, WebStorm, vim/neovim, and Emacs."
 msgstr ""
-"您可使用任何带有CWL "
-"的文本编辑器，但对于语法高亮而言，建议使用YAML支持的编辑器。"
-"流行的编辑器包括Visual Studio Code、Sublime、WebStorm、vim / "
-"neovim以及Emacs。"
+"任何文本编辑器都可以用于 CWL 编程。不过，我们建议使用支持显示 YAML "
+"语法的编辑器。常用的编辑器包括 Visual Studio Code、Sublime、WebStorm、vim/"
+"neovim 以及 Emacs 等。"
 
 #: ../../src/introduction/prerequisites.md:167
 #: 2fdb62a13f9447bc89183426260ce781
 msgid "There are extensions for Visual Studio Code and WebStorm that provide integration with CWL, and features such as customized syntax highlighting and better auto-complete:"
-msgstr "以下Visual Studio Code和WebStorm的拓展程序支持与CWL集成，且具备自定义语法高亮"
-"及更好的自动补全等功能："
+msgstr "以下 Visual Studio Code 和 WebStorm 的扩展程序支持 CWL "
+"集成，提供自定义语法显示、改进的自动补全等功能："
 
 #: ../../src/introduction/prerequisites.md:171
 #: 1f07135156254f74a6b043bf33d00cc3
 msgid "Visual Studio Code with the Benten (CWL) plugin - <https://github.com/rabix/benten#install-vs-code-extension>"
 msgstr ""
-"带有 Benten (CWL) 插件的 Visual Studio Code —— <https://github.com/rabix/"
-"benten#install-vs-code-extension>"
+"带 Benten (CWL) 插件的 Visual Studio Code —— <https://github.com/rabix/benten"
+"#install-vs-code-extension>"
 
 #: ../../src/introduction/prerequisites.md:172
 #: de344f356b1c466d9131cdbd4d7353a3
 msgid "cwl-plugin for IntelliJ - <https://plugins.jetbrains.com/plugin/10040-cwl-plugin>"
 msgstr ""
-"IntelliJ支持的cwl插件 —— <https://plugins.jetbrains.com/plugin/10040-cwl-"
-"plugin>"
+"IntelliJ 的 cwl-plugin 插件 —— <https://plugins.jetbrains.com/plugin/10040"
+"-cwl-plugin>"
 
 #: ../../src/introduction/prerequisites.md:174
 #: 3f9324ede11441f58d93875867034cf0
 msgid "The CWL community also maintains a list of editors and viewers: <https://www.commonwl.org/tools/#editors>"
-msgstr "CWL社区也在维护一个编辑器和阅读器清单：<https://www.commonwl.org/tools/"
-"#editors>"
+msgstr "CWL 社群维护的编辑器和阅览器列表：<https://www.commonwl.org/tools/#editors>"
 
 #: ../../src/introduction/prerequisites.md:177
 #: 6ce8b81560e341c580d316d69202b268
@@ -1014,33 +1018,32 @@ msgstr "Docker"
 #: 40cfd559d6a848d1aae354d3bdaa8e9c
 msgid "`cwltool` uses Docker to run tools, workflows, and workflow steps that specify a software container. Follow the instructions in the Docker documentation to install it for your operating system: <https://docs.docker.com/>."
 msgstr ""
-"`cwltool` 使用 Docker 运行指定软件容器的工具、工作流及工作流步骤。"
-"请按照Docker 文档中的说明，为您的操作系统安装Docker：<https://docs.docker."
-"com/>。"
+"`cwltool` 使用 Docker 运行指定了软件容器的工具、工作流及工作流步骤。请按照 "
+"Docker 文档在您的操作系统中安装 Docker: <https://docs.docker.com/>。"
 
 #: ../../src/introduction/prerequisites.md:185
 #: 8a9a50b0ebe847ce90593881ffe0d69c
 msgid "You do not need to know how to write and build Docker containers. In the rest of the user guide, we will use existing Docker images for running examples, and to clarify the differences between the execution models with and without containers."
 msgstr ""
-"您无需了解如何编写和构建 Docker 容器。在用户指南的其余部分，我们将使用现有的 "
-"Docker 镜像来运行示例，并解释带容器和不带容器的执行模型之间的差异。"
+"您无需掌握如何编写和构建 Docker 容器。在接下来的部分里，我们将用现成的 "
+"Docker 映像来运行范例，并阐明有无容器的执行模型之间有何不同。"
 
 #: ../../src/introduction/prerequisites.md:191
 #: 923cf9dd6d6c417aabe42f9fa62ffa35
 msgid "`cwltool` supports running containers with Docker, Podman, udocker, and Singularity. You can also use alternative container registries for pulling images."
 msgstr ""
 "`cwltool` 支持使用 Docker、Podman、udocker 和 Singularity "
-"运行容器，您也可使用其他容器注册表来拉取镜像。"
+"运行容器，并支持从非官方容器仓库拉取映像。"
 
 #: ../../src/introduction/prerequisites.md:198
 #: 9390b03889de44638141d705e0ef8322
 msgid "The [Implementations](basic-concepts.md#implementations) topic in the next section, Basic Concepts."
-msgstr "下一章节（基本概念）中的 [实现](basic-concepts.md#implementations)主题。"
+msgstr "下一节《基本概念》之[“实现”](basic-concepts.md#implementations)主题。"
 
 #: ../../src/introduction/prerequisites.md:199
 #: 12042e411482458f8c35a2491f9433e0
 msgid "The Python `venv` module: <https://docs.python.org/3/library/venv.html>"
-msgstr "Python`venv`模块：<https://docs.python.org/3/library/venv.html>"
+msgstr "Python `venv` 模块：<https://docs.python.org/3/library/venv.html>"
 
 #: ../../src/introduction/quick-start.md:1
 #: cdd4196f9aa34beba115901ec97913b6
@@ -1050,21 +1053,21 @@ msgstr "快速入门"
 #: ../../src/introduction/quick-start.md:3
 #: c43d9675ed134b78b02acb5a102a764a
 msgid "This section will show you a brief overview of what CWL is, and where you can learn more about it. No previous knowledge of CWL is required, but you must be comfortable following instructions for the command-line."
-msgstr "本章节将向您简要介绍 CWL的定义以及您可以在哪里了解更多信息。不需要先前的 CWL "
-"知识，但您必须能够熟练地按照命令行说明进行操作。"
+msgstr "本节将为您概述 CWL 是什么，以及在何处可以进一步学习。您不需要有 CWL "
+"知识储备，但要能较为自如地按照文中指示操作命令行。"
 
 #: ../../src/introduction/quick-start.md:7
 #: 280936bb2a22469799b2c9e9ba22adee
 msgid "“Hello World”"
-msgstr "“Hello World”"
+msgstr "“Hello World”（“世界您好”程序）"
 
 #: ../../src/introduction/quick-start.md:12
 #: cb203354977d42a58112d09357f62565
 msgid "CWL documents are written in [YAML](../topics/index.md) (and/or JSON). The example below shows a simple CWL “Hello World” workflow annotated with comments. Note that comments start with `#`:"
 msgstr ""
-"CWL 文档是[YAML](../topics/index.md) (and/or JSON)中编写的。"
-"下方例子演示了一个简单的 CWL“Hello World”工作流程，并带有注释。请注意，"
-"注释以 `#` 开头："
+"CWL 文件按照 [YAML](../topics/index.md) 或者 JSON 格式编写的。"
+"下例演示了一个简单的 CWL 工作流“Hello World”，并且标有注释，即 `#` "
+"符号后面的文字："
 
 #: ../../src/introduction/quick-start.md:16
 #: 9e51962a7e5c47248f3e20703ae101eb
@@ -1075,15 +1078,16 @@ msgstr "`hello_world.cwl`"
 #: 7e475e3f3c4a4404bb0236124c0f7ce7
 msgid "The example above is just a wrapper for the `echo` command-line tool. Running the workflow above with the default input values will produce the same result as the command-line `echo \"Hello World\"`."
 msgstr ""
-"上面的示例只是 `echo` 命令行工具的包装器。"
-"使用默认输入值运行上述工作流将生成与命令行 `echo “Hello World”` 相同的结果。"
+"上面的示例不过是 `echo` 命令行工具的包装器 (wrapper). "
+"使用默认输入值运行上述工作流，产生的结果会和命令 `echo \"Hello World\"` "
+"别无二致。"
 
 #: ../../src/introduction/quick-start.md:27
 #: 82613ca4e32b4ccab1b7735f5ba2d5a1
 msgid "In CWL, there is a distinction between a command-line tool and a workflow. But for the sake of simplicity, we are using the term “workflow” here. You will learn more about this in the [basic concepts](basic-concepts.md) section."
 msgstr ""
-"在 CWL 中，命令行工具和工作流之间是有区别的。但为了简单起见，我们在这里使用术"
-"语“工作流”。您将在[基本概念ba](basic-concepts.md)章节了解更多有关信息。"
+"CWL 中“命令行工具”和“工作流”是有所区别的。但为了简单起见，这里我们仍然用了“工"
+"作流”一次。更多有关信息可在[《基本概念》](basic-concepts.md)一节中学到。"
 
 #: ../../src/introduction/quick-start.md:32
 #: 498a43362a4749f3b8b433709d34a1d5
@@ -1094,58 +1098,56 @@ msgstr "安装 CWL 运行程序"
 #: f3e56aedd56b4b93bdc3894273e8c144
 msgid "`cwltool` is an implementation of the CWL specification. It is also the CWL *Reference Runner* for the specification, and it is compliant with the latest version of the specification: {{ cwl_version }}. You can install `cwltool` using `pip`:"
 msgstr ""
-"`cwltool` 是 CWL 规范的实现，也是符合规范的 CWL "
-"*引用程序*，且符合最新版本的规范：{{ cwl_version }}。您可使用 `pip` 安装 "
-"`cwltool`："
+"`cwltool` 是 CWL 规约的一种实现，也为该规约编写的 CWL *参考运行程序*。"
+"它符合规约的最新版本 {{ cwl_version }} 版。您可用 `pip` 安装 `cwltool`:"
 
 #: ../../src/introduction/quick-start.md:39
 #: 81481f5b82e4488398f87f0a169bd359
 msgid "Installing `cwltool` with `pip`."
-msgstr "使用 `pip` 安装 `cwltool`。"
+msgstr "使用 `pip` 安装 `cwltool`."
 
 #: ../../src/introduction/quick-start.md:47
 #: a81342e756d24c40acc15835d0a768f2
 msgid "If installing the cwltool using the pip command doesn't work for you, the [prerequisites](prerequisites.md) section contains other ways to install `cwltool` and a more detailed list of software and libraries used for following the rest of this user guide."
 msgstr ""
-"如您无法使用 pip 命令安装 cwltool，请参阅[先决条件p](prerequisites.md) 章节，"
-"了解安装 `cwltool` "
-"的其他方法，以及了解助于遵循用户指南其余内容的软件和库详细清单。"
+"如果您无法用 pip 命令安装 cwltool，请参阅[《学习前的准备》](prerequisites.md)"
+" 一节，了解安装 `cwltool` "
+"的其他方法，以及继续学习《用户指南》所需软件和库的详细列表。"
 
 #: ../../src/introduction/quick-start.md:51
 #: c12cf89f8b9a421ebd05330326e219b3
 msgid "Running \"Hello World\""
-msgstr "运行 “Hello World”"
+msgstr "运行“Hello World”"
 
 #: ../../src/introduction/quick-start.md:53
 #: 9b68bcb1a41849dc9601ab47c5bbb0fe
 msgid "The usage of the `cwltool` command-line executable is basically `cwltool [OPTIONS] <CWL_DOCUMENT> [INPUTS_OBJECT]`. You can run the `hello_world.cwl` workflow without specifying any option:"
 msgstr ""
-"执行 `cwltool`命令行的流程大致是 `cwltool [OPTIONS] <cwl_document> "
-"[INPUTS_OBJECT]`，因此您可直接运行 `hello_world."
-"cwl`工作流，无需指定以下任何选项：</cwl_document>"
+"`cwltool` 命令行程序的基本用法是 `cwltool [选项] &lt;CWL 文件名&gt; "
+"[输入对象]`. 您可以不指定任何选项，直接运行 `hello_world.cwl` 工作流："
 
 #: ../../src/introduction/quick-start.md:57
 #: ce04027dfcfe4b7b91ea3c2136b18b23
 msgid "Running `hello_world.cwl` with `cwltool`."
-msgstr "使用 `cwltool` 运行 `hello_world.cwl`。"
+msgstr "使用 `cwltool` 运行 `hello_world.cwl`."
 
 #: ../../src/introduction/quick-start.md:62
 #: 0d8a788402914ebd8f09a5ca80650011
 msgid "Or you can override the default value of the input parameter `message`, similar to how you would change the argument of the `echo` base command:"
-msgstr "或者，您可替换输入参数 `message` 的默认值，方法类似于更改 `echo` "
-"基本命令的参数："
+msgstr "您还可以撤销输入参数 `message` 的默认值，有如更改 `echo` 基本命令的参数："
 
 #: ../../src/introduction/quick-start.md:65
 #: 6d0b679efab24813a7a3b709ade940d1
 msgid "Running `hello_world.cwl` with `cwltool` passing an input parameter."
-msgstr "使用传递输入参数的 `cwltool` 运行 `hello_world.cwl`。"
+msgstr "向 `cwltool` 传递输入参数值运行 `hello_world.cwl`."
 
 #: ../../src/introduction/quick-start.md:70
 #: 2ea056ab04b6419a9faf350de22a17f2
 msgid "Another way of passing values to your workflow input parameters is via an *Inputs Object*. This is a file containing the input fields with their corresponding values. The Inputs Objects file can be written in JSON or YAML. For example:"
 msgstr ""
-"将值传递给工作流输入参数的另一种方法是通过*Inputs Object* "
-"实现，这是一个包含对应值输入字段的文件，可使用 JSON 或 YAML 编写。例如："
+"将值传递给工作流输入参数的另一种方法是利用*输入对象* (Inputs "
+"Object)。它是由输入字段及其相应值构成的文件，可使用 JSON 或 YAML "
+"格式编写。例如："
 
 #: ../../src/introduction/quick-start.md:74
 #: 1a44a545434b448aa956005deeed90a8
