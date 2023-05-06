@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: Common Workflow Language User Guide\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-01-25 14:33+0100\n"
-"PO-Revision-Date: 2023-05-02 11:00+0000\n"
+"PO-Revision-Date: 2023-05-06 08:50+0000\n"
 "Last-Translator: Zoë Ma <zoe.ma@curii.com>\n"
 "Language-Team: Chinese (Simplified) <https://hosted.weblate.org/projects/"
 "commonwl/user-guide/zh_Hans/>\n"
@@ -1157,88 +1157,89 @@ msgstr "`hello_world-job.json`"
 #: ../../src/introduction/quick-start.md:80
 #: e76bfcc0c9f84bcdb3f6d5277869a88c
 msgid "You can use this Inputs Object file now to execute the “Hello World” workflow:"
-msgstr "您现在可以使用此输入对象文件来执行“Hello World”工作流："
+msgstr "这样就可以在执行“Hello World”工作流时使用此输入对象文件："
 
 #: ../../src/introduction/quick-start.md:82
 #: d4cdbe870a6f4a68b542ca719d989062
 msgid "Passing an Inputs Object file to `cwltool`."
-msgstr "将输入对象文件传递给 `cwltool`。"
+msgstr "将输入对象文件传递给 `cwltool`."
 
 #: ../../src/introduction/quick-start.md:88
 #: b6d59e4b9c854abab1b3f7a0fa26f504
 msgid "We used a similar file name for the workflow and for the Inputs Object files. The *-job.json* suffix is very common in Inputs Object files, but it is not a requirement. You can choose any name for your workflows and Inputs Object files."
 msgstr ""
-"我们为工作流和输入对象文件使用了类似的文件名。*-job.json* 后缀在输入对象文件"
-"中很常见，但非必需要求，您可为工作流和输入对象文件选择任何名称。"
+"我们为工作流和输入对象文件起了类似的文件名。输入对象文件名中的 *-job.json* "
+"后缀是很常见的，但并非规定。工作流和输入对象文件的命名方式可由您任意选择。"
 
 #: ../../src/introduction/quick-start.md:96
 #: 5535b98e8b1342f09f003ec6db2b44b1
 msgid "Continue reading the next sections of this User Guide!"
-msgstr "继续阅读本用户指南的下一章节！"
+msgstr "请继续阅读《用户指南》后续部分！"
 
 #: ../../src/introduction/quick-start.md:97
 #: 77e43c7117fd4c52b140f0dd52cc3963
 msgid "[List of CWL Implementations](https://www.commonwl.org/implementations)."
-msgstr "[ CWL 实现清单](https://www.commonwl.org/implementations)。"
+msgstr "[ 各种 CWL 实现汇总](https://www.commonwl.org/implementations)。"
 
 #: ../../src/introduction/quick-start.md:98
 #: 7282abfa7155497ca47c30f9abfb6474
 msgid "The [`common-workflow-language` organization](https://github.com/common-workflow-language) at GitHub."
 msgstr ""
-"在Github上访问 [`common-workflow-language` 组织](https://github.com/common-"
+"GitHub上的 [`common-workflow-language` 组织](https://github.com/common-"
 "workflow-language)。"
 
 #: ../../src/introduction/quick-start.md:99
 #: 176d8d47830f4031bb95dc231ebf1303
 msgid "[Common Workflow Language at Wikipedia](https://en.wikipedia.org/wiki/Common_Workflow_Language)."
 msgstr ""
-"[在Wikipedia上查阅Common Workflow Language ](https://en.wikipedia.org/wiki/"
-"Common_Workflow_Language)。"
+"[英文维基百科中的 Common Workflow Language 条目](https://en.wikipedia.org/"
+"wiki/Common_Workflow_Language)。"
 
 #: ../../src/introduction/quick-start.md:100
 #: 82a7ca3703bc4f0daa18942a1ac8943b
 msgid "[YAML.org](http://yaml.org/) and [YAML at Wikipedia](https://en.wikipedia.org/wiki/YAML)."
 msgstr ""
-"访问[YAML.org](http://yaml.org/) 网站和[ 在Wikipedia上查阅YAML](https://en."
-"wikipedia.org/wiki/YAML)."
+"[YAML.org](http://yaml.org/) 网站，以及[维基百科中的 YAML 条目](https://en."
+"wikipedia.org/wiki/YAML)。"
 
 #: ../../src/introduction/quick-start.md:101
 #: d039a9d6461c44628d4660c00d9ce6ff
 msgid "The {{'[CWL Specification VERSION](https://www.commonwl.org/VERSION)'.replace('VERSION', cwl_version_text) }}."
 msgstr ""
-"{{'[CWL 规范版本](https://www.commonwl.org/VERSION)'.替代('VERSION', "
-"cwl_version_text) }}。"
+"{{'[CWL 规约 VERSION 版](https://www.commonwl.org/VERSION)'.replace("
+"'VERSION', cwl_version_text) }}."
 
 #: ../../src/introduction/quick-start.md:102
 #: fbc3383d9e1c4eaca7931c3cc4f1752b
 msgid "[Workflow management system at Wikipedia](https://en.wikipedia.org/wiki/Workflow_management_system)."
 msgstr ""
-"[在 Wikipedia上查阅工作流管理系统 ](https://en.wikipedia.org/wiki/"
-"Workflow_management_system)。"
+"[Wikipedia 条目 Workflow Management System ](https://en.wikipedia.org/wiki/"
+"Workflow_management_system)."
 
 #: ../../src/setup.md:9
 #: 1330bd38c4b5495f890b98c669f81a9d
 msgid "This page is out-of-date and was kept here to preserve the links of the old User Guide. The information on this page has been migrated to the [FAQ](/faq.md) section of the new user guide."
-msgstr "此页面已过时，保留在此以保留旧用户指南链接。此页面上的信息已迁移到新用户指南"
-"的[最常见问题](/faq.md)章节。"
+msgstr "此页面已过时，存留在此仅用于保留旧《用户指南》链接。此页面上的内容已迁移到新"
+"《用户指南》的[《常见问题》](/faq.md)一节。"
 
 #: ../../src/topics/additional-arguments-and-parameters.md:1
 #: 9c87c76c690948ac8e18088a0fffe679
 msgid "Additional Arguments and Parameters"
-msgstr "额外参数和指定参数"
+msgstr "附加参数"
 
 #: ../../src/topics/additional-arguments-and-parameters.md:3
 #: ad00d94d4fb64bbdac356e64dd3803b9
 msgid "Sometimes tools require additional command line options that don't correspond exactly to input parameters."
-msgstr "有时工具需要额外的命令行选项，这些选项并不完全对应于输入参数。"
+msgstr "有时，一些工具需要额外的命令行选项，但我们无法让它们与 (CWL) "
+"输入参数一一对应。"
 
 #: ../../src/topics/additional-arguments-and-parameters.md:6
 #: d8110ed19da94ad8a9f56e7006c4a2cf
 msgid "In this example, we will wrap the Java compiler to compile a java source file to a class file.  By default, \"javac\" will create the class files in the same directory as the source file.  However, CWL input files (and the directories in which they appear) may be read-only, so we need to instruct \"javac\" to write the class file to the designated output directory instead."
 msgstr ""
-"在此示例中，我们将包装 Java 编译器，以将 java 源文件编译为类文件。 "
-"默认情况下，“javac”将在与源文件相同的目录中创建类文件。 但是，CWL "
-"输入文件（以及它们所在的目录）可能是只读的，因此我们需要指示 “javac” "
+"本例中，我们将包装 Java 编译器，将 java 源文件编译为类 (class) 文件。 "
+"默认情况下，“javac” 将在源文件所在目录中创建类文件。 然而，CWL "
+"输入文件（及其所在目录）可能是只读的，因此我们需要令 “javac” "
 "将类文件写入指定的输出目录。"
 
 #: ../../src/topics/additional-arguments-and-parameters.md:13
@@ -1256,78 +1257,79 @@ msgstr "`arguments-job.yml`"
 #: ../../src/topics/additional-arguments-and-parameters.md:24
 #: 6359191b4f684d5aa3602e4aaf394883
 msgid "Next, create a sample Java file to use with the command-line tool."
-msgstr "接下来，创建一个用于命令行工具的示例 Java 文件。"
+msgstr "接下来，创建一个示例 Java 文件，用来让命令行工具处理它。"
 
 #: ../../src/topics/additional-arguments-and-parameters.md:30
 #: 9643449da1da46d7861866dce490cbcb
 msgid "And now invoke `cwltool` providing the tool description and the input object on the command line:"
-msgstr "现在，调用在命令行上提供工具描述和输入对象的 `cwltool`："
+msgstr "现在，将刚才创建的工具描述和输入对象通过命令行传递给 `cwltool` ："
 
 #: ../../src/topics/additional-arguments-and-parameters.md:36
 #: 713666580a0a4466b4ba6e3eb2b54f0a
 msgid "Here we use the `arguments` field to add an additional argument to the command line that isn't tied to a specific input parameter."
-msgstr "此处我们使用`arguments`字段将一个额外的参数添加至命令行，此参数与指定输出参数"
-"无关。"
+msgstr "此处我们使用 `arguments` "
+"字段，给命令行添加一个与任何具体输入参数都无关的附加参数。"
 
 #: ../../src/topics/additional-arguments-and-parameters.md:43
 #: d50574c8b9694f83aa376d39b9a6fcd6
 msgid "This example references a runtime parameter.  Runtime parameters provide information about the hardware or software environment when the tool is actually executed.  The `$(runtime.outdir)` parameter is the path to the designated output directory.  Other parameters include `$(runtime.tmpdir)`, `$(runtime.ram)`, `$(runtime.cores)`, `$(runtime.outdirSize)`, and `$(runtime.tmpdirSize)`.  See the [Runtime Environment][runtime] section of the CWL specification for details."
 msgstr ""
-"此示例引用了运行时参数。运行时参数提供有关工具实际执行时硬件或软件环境的信息"
-"。 `$(runtime.outdir)`参数是指定输出目录的路径。其他参数包括 `$(runtime."
-"tmpdir)`、 `$(runtime.ram)`、`$(runtime.cores)`、 `$(runtime."
-"outdirSize)`,以及`$(runtime.tmpdirSize)`。有关详细信息，请参阅 CWL 规范的 "
-"[运行时环境][运行时] 章节。"
+"此示例用到了运行时 (runtime) "
+"参数，它们提供的是工具实际执行时的硬件或软件环境信息。 `$(runtime.outdir)` "
+"参数是指定输出目录的路径。其他运行时参数还有 `$(runtime.tmpdir)`、`$(runtime."
+"ram)`、`$(runtime.cores)`、`$(runtime.outdirSize)`, 以及 `$(runtime."
+"tmpdirSize)` 等，详见 CWL 规约的 [Runtime "
+"Environment][runtime]（运行环境）部分。"
 
 #: ../../src/topics/best-practices.md:1
 #: 612c4a66c36a43d4ac5d74c1757d6845
 msgid "Best Practices"
-msgstr "最佳实践"
+msgstr "优良习惯"
 
 #: ../../src/topics/best-practices.md:3
 #: 939cd9e9eaff4e3ab74fe707a5d4eb21
 msgid "The following are a set of recommended good practices to keep in mind when writing a Common Workflow Language description for a tool or workflow. These guidelines are presented for consideration on a scale of usefulness: although more is better, not all are required."
-msgstr ""
-"以下提供了一些关于为工具或工作流编写通用语言描述的建议，请牢记在心。此处仅基"
-"于有用性量表提供部分指导原则：虽然越多越好，但并非所有原则都是必需的。"
+msgstr "本节列举一组值得留心的好习惯，推荐您在用 CWL "
+"编写工具或工作流描述时参考。您只需结合实际尽量做到，无需求全。"
 
 #: ../../src/topics/best-practices.md:8
 #: 4bcb84707acb40a0bfe2ea0853cb10b7
 msgid "No `type: string` parameters for names of input or reference files/directories; use `type: File` or `type: Directory` as appropriate."
 msgstr ""
-"无用于输入名称或引用文件/目录的`type: string`参数，请根据需要使用 `type: "
-"File`或`type: Directory`。"
+"不要将 `type: string` 参数用于输入或引用文件、目录的名称；请根据实际情况选用 "
+"`type: File` 或 `type: Directory`."
 
 #: ../../src/topics/best-practices.md:11
 #: 4dee8504a8e5496081dadc386ab45540
 msgid "A CWL document (in conjunction with any external components like `Dockerfile`s) is software code. Workflow developers should be aware that the usual rules of software licensing apply to this document. For example, if the workflow is shared publicly, licensing terms must be clear so that a future user understands under what conditions they can run the workflow, modify it and/or combine it with other workflows. For this reason, please consider including a license field in the document. The authors of this guide urge you to choose a pre-existing license rather than trying to write your own (see the link below to learn more about choosing a license), and our recommended practice is to choose a license that allows for re-use by anyone, e.g. [Apache 2.0][apache-license]."
 msgstr ""
-"CWL 文档（结合 `Dockerfile`等外部组件）是软件代码。工作流开发人员应注意，软件"
-"许可的常规规则适用于本文档。例如，如果工作流是公开共享的，则许可条款必须明确"
-"，以便将来的用户了解在什么条件下可以运行工作流、修改工作流和/或将其与其他工作"
-"流组合。因此，请考虑在文档中包含许可证字段。本指南的作者敦促您选择预先存在的"
-"许可证，而不是尝试编写自己的许可证（请访问下方链接，了解有关选择许可证的更多"
-"信息），我们建议您选择允许任何人重复使用的许可证，例如 [Apache 2.0][apache-"
-"license]。"
+"CWL 文件（连同 `Dockerfile` "
+"等外部组件）是一种软件代码。工作流开发人员应明白的是，"
+"关于软件许可的通用规则也同样适用于您编写的 CWL 文件。例如，如果您的工作流是公"
+"开共享的，则许可条款一定要明确，以便将来的用户了解在什么条件下可以将它运行、"
+"修改、或并入其他工作流。因此，请考虑在 CWL 文件中加入 license（许可协议）字段"
+"。笔者敦促您选用现成的许可协议，不要独辟蹊径（关于挑选许可协议请参见下文链接"
+"）。同时，建议您选取允许任何人重复使用的许可证，如 [Apache 2.0][apache-"
+"license]."
 
 #: ../../src/topics/best-practices.md:20
 #: 674c238b25e240eda05e22e399f2f78f
 msgid "If possible, the license should be specified with its corresponding [SPDX identifier][spdx]. Construct the metadata field for the license by providing a URL of the form `https://spdx.org/licenses/[SPDX-ID]` where `SPDX-ID` is taken from the list of identifiers linked above. See the example snippet below for guidance. For non-standard licenses without an SPDX identifier, provide a URL to the license."
 msgstr ""
-"如可能，请使用相应的 [SPDX 标识符][spdx] 指定许可证。通过提供 `https://spdx."
-"org/licenses/[SPDX-ID]` 形式的URL构建许可证的元数据字段，其中 `SPDX-ID` "
-"取自上方链接的标识符列表。有关指导，请参阅下方的示例代码段。对于没有 SPDX "
-"标识符的非标准许可证，请提供许可证的 URL。"
+"请尽可能使用 [SPDX 标识符][spdx] 指定许可协议。许可协议的元数据字段由形如 "
+"`https://spdx.org/licenses/[SPDX-ID]` 的 URL 构成，其中 `SPDX-ID` "
+"取自前面链接提到的标识符列表，参见下例这段代码。对于没有 SPDX "
+"标识符的非标准许可协议，请提供许可协议的 URL。"
 
 #: ../../src/topics/best-practices.md:26
 #: b651f80f47b4442fbf29454a233697fc
 msgid "Useful reading: \"[A Quick Guide to Software Licensing for the Scientist-Programmer][sci-license]\""
-msgstr "有用的阅读材料：“[A Quick科学家－程序员的软件许可快速入门指南 ][sci-license]”"
+msgstr "相关阅读：《[给科学界程序员的软件许可简明指南][sci-license]》"
 
 #: ../../src/topics/best-practices.md:28
 #: 263a127a77cf4c41af76854f22f1f260
 msgid "_Example of metadata field for license with SPDX identifier:_"
-msgstr "_带有SPDX识别符的许可证元数据字段示例：_"
+msgstr "_用 SPDX 标识符指定许可协议的元数据字段示例：_"
 
 #: ../../src/topics/best-practices.md:37
 #: 3a87a0fb2a364e3da5aaa4017e430b19
