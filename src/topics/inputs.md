@@ -31,7 +31,7 @@ Create a file called `inp-job.yml`:
 
 ````{note}
 You can use `cwltool` to create a template input object. That saves you from having
-to type all the input parameters in a input object file:
+to type all the input parameters in an input object file:
 
 ```{runcmd} cwltool --make-template inp.cwl
 :working-directory: src/_includes/cwl/inputs
