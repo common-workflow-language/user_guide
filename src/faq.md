@@ -79,6 +79,9 @@ outputs:
       outputEval: ${self[0].basename=inputs.otu_table_name; return self;}
 ```
 
+By modifying the `basename` field in the `outputEval` field, a workflow engine renames
+the file name when staging to the output directory.
+
 ## How do I reference a local script?
 
 There are two ways to reference a local script:
