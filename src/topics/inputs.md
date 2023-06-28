@@ -296,7 +296,7 @@ Here, the boolean “or” operator `||` in JavaScript is used for its
 _short-circuiting_ property. If `inputs.file_format` takes a “truthy” value
 (e.g. a valid string from the enum), the evaluation of the expression stops at
 the first operand of `||`; it “short-circuits”. If however `inputs.file_format`
-is `null` or any other “falsy” value, the expression’s value becomes that of
+is `null` -- a “falsy” value, the whole expression’s value becomes that of
 the second operand, which is why a reasonable default can be provided there.
 
 % TODO
