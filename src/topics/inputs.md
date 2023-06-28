@@ -293,10 +293,10 @@ For example, the expression could be changed to `$(inputs.file_format ||
 line or job input file.
 
 Here, the boolean “or” operator `||` in JavaScript is used for its
-_short-circuiting_ property. If `inputs.file_format` takes a “truthy” value
-(e.g. a valid string from the enum), the evaluation of the expression stops at
-the first operand of `||`; it “short-circuits”. If however `inputs.file_format`
-is `null` -- a “falsy” value, the whole expression’s value becomes that of
+_short-circuiting_ property. If `inputs.file_format` is “true” in a boolean
+context (e.g. a valid non-empty string from the enum), the evaluation of the
+expression stops at the first operand of `||`; it “short-circuits”. If however
+`inputs.file_format` is `null`, the whole expression’s value becomes that of
 the second operand, which is why a reasonable default can be provided there.
 
 % TODO
