@@ -48,9 +48,9 @@ s:keywords: edam:topic_0091 , edam:topic_0622
 s:programmingLanguage: C
 
 $namespaces:
- s: https://schema.org/
- edam: http://edamontology.org/
+  s: https://schema.org/
+  edam: http://edamontology.org/
 
 $schemas:
- - https://schema.org/version/latest/schemaorg-current-http.rdf
- - http://edamontology.org/EDAM_1.18.owl
+  - https://schema.org/version/latest/schemaorg-current-https.rdf
+  - http://edamontology.org/EDAM_1.18.owl
