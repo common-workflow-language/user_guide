@@ -62,14 +62,15 @@ This example demonstrates how to change the name of an output file
 from the default name given to it by a tool:
 
 ```yaml
-cwlVersion: v1.0 # or v1.1
+cwlVersion: v1.0
 class: CommandLineTool
 requirements:
   InlineJavascriptRequirement: {}
 
-baseCommand: []
+baseCommand: [ touch, otu_table.txt ]
 
-inputs: []
+inputs:
+  otu_table_name: string
 
 outputs:
  otu_table:
@@ -79,8 +80,8 @@ outputs:
       outputEval: ${self[0].basename=inputs.otu_table_name; return self;}
 ```
 
-By modifying the `basename` field in the `outputEval` field, a workflow engine renames
-the file name when staging to the output directory.
+By modifying the `basename` field in the `outputEval` field, CWL workflow engines will rename
+the file using the new name for subsequent steps or as a workflow-level output.
 
 ## How do I reference a local script?
 
