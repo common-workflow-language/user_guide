@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: Common Workflow Language User Guide\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-01-25 14:33+0100\n"
-"PO-Revision-Date: 2023-06-27 04:50+0000\n"
+"PO-Revision-Date: 2023-06-29 03:51+0000\n"
 "Last-Translator: Zoë Ma <zoe.ma@curii.com>\n"
 "Language-Team: Chinese (Simplified) <https://hosted.weblate.org/projects/"
 "commonwl/user-guide/zh_Hans/>\n"
@@ -2497,192 +2497,195 @@ msgstr "相容和互斥输入"
 msgid "Sometimes an underlying tool has several arguments that must be provided together (they are dependent) or several arguments that cannot be provided together (they are exclusive).  You can use records and type unions to group parameters together to describe these two conditions."
 msgstr ""
 "有时，基础工具具有多个必须一起提供的参数（它们是相互依赖的）或多个不能一起提"
-"供的参数（它们是互斥的）。 "
-"您可以使用记录和类型联合将参数组合在一起，以描述这两种情况。"
+"供的参数（它们是互斥的）。 您可以使用记录类型或共用体 (union) "
+"类型将参数加以组合，以分别描述这两种情况。"
 
 #: ../../src/topics/inputs.md:198
 #: ddf598abf4f34aca9fffa045860fbf96
 msgid "`record.cwl`"
-msgstr ""
+msgstr "`record.cwl`"
 
 #: ../../src/topics/inputs.md:204
 #: d52a8089920e45bd89d582533b50e3a1
 msgid "`record-job1.yml`"
-msgstr ""
+msgstr "`record-job1.yml`"
 
 #: ../../src/topics/inputs.md:215
 #: 750474486a84482292eeba45f118287f
 msgid "In the first example, you can't provide `itemA` without also providing `itemB`."
-msgstr "在第一个示例中，如果不同时提供 `itemB`，则无法提供 `itemA`。"
+msgstr "在第一个示例中，一旦提供 `itemA` 就必须同时提供 `itemB`."
 
 #: ../../src/topics/inputs.md:217
 #: 9a5cf1d76fc84c1f9b0d123a3a2a480b
 msgid "`record-job2.yml`"
-msgstr ""
+msgstr "`record-job2.yml`"
 
 #: ../../src/topics/inputs.md:233
 #: 1eb0e39bb6d04b8cab300f44a79f3add
 msgid "In the second example, `itemC` and `itemD` are exclusive, so only the first matching item (`itemC`) is added to the command line and remaining item (`itemD`) is ignored."
 msgstr ""
-"在第二个示例中，`itemC` 和 `itemD` 是互斥的，因此只有第一个匹配的项 "
-"（`itemC`） 被添加到命令行，其余项 （`itemD`） 将被忽略。"
+"在第二个示例中，`itemC` 和 `itemD` 是互斥的。因此，只有第一个匹配项 (`itemC`)"
+" 会添加到命令行，而余下的 (`itemD`) 将被忽略。"
 
 #: ../../src/topics/inputs.md:236
 #: bc21ee10bff843689cc98ac6630edcea
 msgid "`record-job3.yml`"
-msgstr ""
+msgstr "`record-job3.yml`"
 
 #: ../../src/topics/inputs.md:252
 #: 4b2ab812f62c4f949dd25c8527f2411c
 msgid "In the third example, only `itemD` is provided, so it appears on the command line."
-msgstr "在第三个示例中，仅提供了 `itemD`，因此它显示在命令行上。"
+msgstr "在第三个示例中，仅提供了 `itemD`, 因此它出现在命令行上。"
 
 #: ../../src/topics/inputs.md:255
 #: b771302d1bec4050a9417b080eef76c9
 msgid "Exclusive Input Parameters with Expressions"
-msgstr "带有表达式的互斥输入参数"
+msgstr "互斥输入参数与表达式"
 
 #: ../../src/topics/inputs.md:257
 #: 2c3b884cb1c54521900cc90782e8a58d
 msgid "If you use exclusive input parameters combined with expressions, you need to be aware that the `inputs` JavaScript object will contain one of the exclusive input values. This means that you might need to use an **or** boolean operator to check which values are present."
 msgstr ""
-"若要将互斥的输入参数与表达式结合，需意识到`inputs`JavaScript对象将包含互斥输"
-"入值中的一个，这意味着你可能需要使用一个**or**布尔运算符来检查存在哪些值。"
+"将互斥的输入参数与表达式结合使用时，需要注意 `inputs` 这个 JavaScript 对象可"
+"能包含互斥输入值中的任何一个。这意味着你可能需要用逻辑“**或**”运算符来检查哪"
+"些值是存在的。"
 
 #: ../../src/topics/inputs.md:262
 #: a1073b6306044dffb414319ae01f68bb
 msgid "Let's use an example that contains an exclusive `file_format` input parameter that accepts `null` (i.e. no value provided), or any value from an enum."
-msgstr "让我们来一个示例，其包含了一个互斥的 `file_format`输入参数，该参数接受 "
-"`null`（即未提供任何值）或任何枚举的值。"
+msgstr ""
+"我们来看一个例子，其中 `file_format` 输入参数的取值是互斥的。该参数接受 "
+"`null`（即未提供任何值），或一个特定的枚举类型所包括的值。"
 
 #: ../../src/topics/inputs.md:265
 #: 4a31c733092142b1af834eab1747c224
 msgid "`exclusive-parameter-expressions.cwl`"
-msgstr ""
+msgstr "`exclusive-parameter-expressions.cwl`"
 
 #: ../../src/topics/inputs.md:271
 #: 9a1d92334685449386dfa3b3a899ed48
 msgid "Note how the JavaScript expression uses the value of the exclusive input parameter without taking into consideration a `null` value. If you provide a valid value, such as “fasta” (one of the values of the enum), your command should execute successfully:"
 msgstr ""
-"请留意，在不考虑`null`值的情况下，JavaScript表达式如何使用互斥输入参数的值。"
-"如果提供一个有效值，比如 “fasta” （其中一个枚举的值），命令将成功执行："
+"请注意，这里的 JavaScript 表达式用到了互斥输入参数的值，但没有考虑到空值 "
+"`null` 的情况。如果提供的值有效，比如 “fasta” "
+"（枚举中的一个值），命令将会成功执行："
 
 #: ../../src/topics/inputs.md:280
 #: fb623af4c480411b8fde28d01c981411
 msgid "However, if you do not provide any input value, then `file_format` will be evaluated to a `null` value, which does not match the expected type for the output field (a `string`), resulting in failure when running your workflow."
 msgstr ""
-"但是，如果未提供任何输入值，则 `file_format` 将被评估为 `null` "
-"值。由于该值与输出字段的预期类型（`字符串`）不匹配，工作流将运行失败。"
+"但是，如果未提供任何输入值，则 `file_format` 的值为 `null`, "
+"从而不符合输出字段的预期类型（字符串 `string`），导致工作流运行失败。"
 
 #: ../../src/topics/inputs.md:289
 #: e98e165f6bba40809c90473d72f9d592
 msgid "To correct it, you must remember to use an or operator in your JavaScript expression when using exclusive parameters, or any parameter that allows `null`. For example, the expression could be changed to `$(inputs.file_format || 'auto')`, to have a default value if none was provided in the command line or job input file."
 msgstr ""
-"要进行纠正，请务必记住在使用互斥参数或任何允许 `null` 的参数时，应在 "
-"JavaScript 表达式中采用 or 运算符。例如，表达式可以更改为 `$（"
-"inputs.file_format "
-"||'auto'）`，如果命令行或作业输入文件中未提供默认值，则表达式具有默认值。"
+"为了修正这个问题，需要记住的，是在 JavaScript "
+"表达式中使用互斥参数或任何允许为空 (`null`) "
+"的参数时，应使用逻辑“或”运算符。例如，表达式可以修改为 `$(inputs.file_format "
+"|| 'auto')`, 从而在命令行或作业输入文件未提供值的情况下有默认值可用。"
 
 #: ../../src/topics/metadata-and-authorship.md:1
 #: d33aa2353ad44fb885d3a1ee48263dc4
-#, fuzzy
 msgid "Metadata and Authorship"
-msgstr "元数据和授权"
+msgstr "元数据和著作人信息"
 
 #: ../../src/topics/metadata-and-authorship.md:3
 #: cd64d2d828834cbbb24ea5358caf5405
 msgid "Implementation extensions not required for correct execution (for example, fields related to GUI presentation) and metadata about the tool or workflow itself (for example, authorship for use in citations) may be provided as additional fields on any object. Such extensions fields (e.g. `format: edam:format_2572`) can use a namespace prefix listed in the `$namespaces` section of the document (e.g. edam: http://edamontology.org/) as described in the [Schema Salad specification][schema-salad]. Once you add the namespace prefix, you can access it anywhere in the document as shown below. Otherwise, one must use full URLs: `format: http://edamontology.org/format_2572`."
 msgstr ""
-"正确执行不需要的实现扩展（例如，与 GUI 表示相关的字段）和有关工具或工作流本身"
-"的元数据（例如，用于引文的作者身份）可以作为任何对象的附加字段提供。正如 ["
-"Schema Salad 规范][schema-salad]中所述，此类扩展字段（例如 `format: "
-"edam:format_2572`）可以使用文档的 `$namespaces` 章节中所列的命名空间前缀（"
-"例如 edam：http://edamontology.org/"
-"）。如下所示，添加命名空间前缀后，便可在文档的任何位置访问该字段。否则，"
-"必须使用完整的 URL：`格式：http://edamontology.org/format_2572`。"
+"由某个实现所提供的非必需、不影响正确执行的扩展（如关于图形界面中展示的字段）"
+"，以及关于工具或工作流本身的元数据（如用于引文的作者信息），都可以作为任意对"
+"象的附加字段提供。这种扩展字段（形如 `format: edam:format_2572`）"
+"可以使用文件 `$namespaces`（命名空间）部分依照 [Schema Salad 规约][schema-"
+"salad]的要求列举的命名空间前缀（例如 `edam：http://edamontology.org/"
+"`）。如下所示，一旦添加了命名空间前缀，便可在文档的任何位置使用它。否则，"
+"必须使用完整的 URL: `format: http://edamontology.org/format_2572`."
 
 #: ../../src/topics/metadata-and-authorship.md:13
 #: 80af387fe3ff4e2da999903385bd602b
 msgid "For all developers, we recommend the following minimal metadata for your tool and workflows. This example includes metadata allowing others to cite your tool."
-msgstr "对于所有的开发人员，我们建议为你的工具和工作流程提供以下最小元数据。本示例包"
-"含允许他人引用您工具的元数据。"
+msgstr "我们建议所有的开发者为自己编写的工具和工作流提供类似下面所示的精简版元数据。"
+"此例中的元数据向他人说明如何在文献中引用你的工具。"
 
 #: ../../src/topics/metadata-and-authorship.md:16
 #: 0d5200bbbfdc43e6a78b4e4c3096ebd7
 msgid "`metadata_example2.cwl`"
-msgstr ""
+msgstr "`metadata_example2.cwl`"
 
 #: ../../src/topics/metadata-and-authorship.md:28
 #: d402bf528c7f4eb69aaaa275be2bf1d4
 msgid "Extended Example"
-msgstr "扩展示例"
+msgstr "进一步扩展的例子"
 
 #: ../../src/topics/metadata-and-authorship.md:30
 #: cb9980db4e5f4c74b01c2dec6d5e92d0
 msgid "For those that are highly motivated, it is also possible to annotate your tool with a much larger amount of metadata. This example includes EDAM ontology tags as keywords (allowing the grouping of related tools), hints at hardware requirements in order to use the tool, and a few more metadata fields."
 msgstr ""
-"对于积极性高的人而言，也可使用更多的元数据来注释工具。此示例包括作为关键字的 "
-"EDAM 本体标记（允许对相关工具进行分组）、使用该工具所需的硬件要求的提示以及更"
-"多元数据字段。"
+"如果您积极性更高，也可以加入更多的元数据来注释工具。此例中加入了 EDAM 本体标"
+"签作为关键字（以便将彼此关联的工具分组）、关于硬件要求的软性提示，以及其他元"
+"数据字段。"
 
 #: ../../src/topics/metadata-and-authorship.md:35
 #: 2dfbd4d580044ed083992f3ceb1bc64e
 msgid "`metadata_example3.cwl`"
-msgstr ""
+msgstr "`metadata_example3.cwl`"
 
 #: ../../src/topics/operations.md:1
 #: 8acf361cf77c4d45ba3f2e344146259f
 msgid "Operations"
-msgstr "操作"
+msgstr "抽象操作"
 
 #: ../../src/topics/operations.md:3
 #: 83d3b9a0ed3148fda9ce72cd108cb9e1
 msgid "An Operation is a type of CWL process, just like a workflow, a command-line tool, or an expression tool. It is a step of a workflow that specifies inputs and outputs, but it does not provide enough information to be executed."
-msgstr "操作是一种 CWL 流程，与工作流、命令行工具或表达式工具类似。操作是工作流的一个"
-"步骤，用于指定输入和输出，但没有提供足够的信息来执行。"
+msgstr ""
+"抽象操作 (Operation) 与工作流、命令行工具或表达式工具类似，是一种 CWL 流程。"
+"作为工作流中的一个步骤，它可以指定输入和输出，但不完全提供具体执行所需的信息"
+"。"
 
 #: ../../src/topics/operations.md:7
 #: 5565c1b2d8a349169a305a9b26b4574d
 msgid "You can create operations to visualize a workflow during development, before you are ready to submit the workflow to a CWL runner:"
-msgstr "在准备将工作流提交至 CWL "
-"运行程序之前，您可以在开发期间创建操作以可视化工作流："
+msgstr "在开发周期中，工作流准备就绪、可以提交给 CWL "
+"运行程序之前，您可以创建抽象操作，将工作流可视化："
 
 #: ../../src/topics/operations.md:10
 #: 49cf614893d8438299b3bca384eb40cf
 msgid "`operations.cwl`"
-msgstr ""
+msgstr "`operations.cwl`"
 
 #: ../../src/topics/operations.md:16
 #: 88160cef4cfa4add9020aa89511a5749
 msgid "The `uppercase` step of the workflow is an operation. It can be used like a command line tool or an expression. You can also plot it with the CWL Viewer or `cwltool`:"
-msgstr "工作流中的 `uppercase`步骤是一个操作，可以像命令行工具或表达式一样使用，"
-"也可以使用 CWL 查看器或 `cwltool`进行绘制："
+msgstr ""
+"工作流中的 `uppercase` 步骤是一个抽象操作，可以充当命令行工具或表达式使用。"
+"您可以用 CWL Viewer 或 `cwltool` 将它绘制出来："
 
 #: ../../src/topics/operations.md:24
 #: 2f73a786b5d94dc0b23ed0cdd185afc8
 msgid "The output of the command above can be rendered with a Graphviz renderer. The following image is rendered with the Sphinx Graphviz directive (this user guide is built with Sphinx):"
 msgstr ""
-"上述命令的输出可使用Graphviz渲染器进行渲染。下面的图片是使用Sphinx "
-"Graphviz指令来渲染的（本用户指南是使用Sphinx构建的）："
+"以上命令的输出可用 Graphviz 渲染出来。下面的图片是使用 Sphinx Graphviz "
+"指令来渲染的（本《用户指南》是以 Sphinx 编译）："
 
 #: ../../src/topics/operations.md:55
 #: 730ba1434a1445ae847ec6153b6a3b72
 msgid "If you try running it with `cwltool`, the command will fail since `cwltool` does not have enough information to know how to execute it:"
-msgstr "如果您尝试通过`cwltool`来运行，命令将运行失败，因为`cwltool`缺少足够信息来了"
-"解执行的方法："
+msgstr "如果您尝试用 `cwltool` 运行它，该命令会失败，因为 `cwltool` "
+"缺少足够信息，无从知晓如何运行它："
 
 #: ../../src/topics/operations.md:58
 #: 98d9b8d867594543890af99e77e24edb
 msgid "`cwltool` does not know how to run operations"
-msgstr "`cwltool`不知道如何运行操作"
+msgstr "`cwltool` 不知道如何运行抽象操作"
 
 #: ../../src/topics/operations.md:66
 #: a25d0b1e13324b40a6b8fcd227948c4f
 msgid "CWL runners may come up with ways to bind operations to concrete steps. A CWL runner could, for instance, use abstract operations with ID's that correspond to steps executed by a different workflow engine."
-msgstr ""
-"CWL 运行程序可能会提出将操作绑定到具体步骤的方法。例如，CWL "
-"运行程序可以使用带有 ID "
-"的抽象操作，而这些操作对应于不同工作流引擎执行的步骤。"
+msgstr "CWL 运行程序可能安排一些将抽象操作绑定到具体步骤的方法。例如，带有 ID "
+"的抽象操作有可能对映到其他工作流引擎中执行的步骤。"
 
 #: ../../src/topics/outputs.md:1
 #: da077da5eb8a4ffebfde041fc16300de
@@ -2697,66 +2700,66 @@ msgstr "返回输出文件"
 #: ../../src/topics/outputs.md:5
 #: d661df070e3040869da412d07a71f716
 msgid "The `outputs` of a tool is a list of output parameters that should be returned after running the tool.  Each parameter has an `id` for the name of parameter, and `type` describing what types of values are valid for that parameter."
-msgstr "工具的 ` 输出 ` 是运行工具后应返回的输出参数列表。 "
-"每个参数都有一个代表其名称的 `id`以及描述其有效值类型的 `type`。"
+msgstr ""
+"某个工具的 ` outputs `（输出）项是运行该工具后应返回的输出参数列表。 "
+"每个参数都有一个代表其名称的 `id`字段，以及描述其有效值类型的 `type` 字段。"
 
 #: ../../src/topics/outputs.md:10
 #: a11585474d3849cca5467512ed964743
 msgid "When a tool runs under CWL, the starting working directory is the designated output directory.  The underlying tool or script must record its results in the form of files created in the output directory.  The output parameters returned by the CWL tool are either the output files themselves, or come from examining the content of those files."
 msgstr ""
-"工具在 CWL 下运行时，起始工作目录即为指定的输出目录。 "
-"基础工具或脚本必须以在输出目录中创建的文件形式记录其结果。 CWL "
-"工具返回的输出参数要么是输出文件本身，要么来自检查这些文件的内容。"
+"工具在 CWL 下运行时，起始工作目录即指定输出目录。 "
+"基础工具或脚本记录运行结果，必须以输出目录下文件的形式实现。 CWL "
+"工具返回的输出参数要么是输出文件本身，要么是分析这些文件的内容而得出的信息。"
 
 #: ../../src/topics/outputs.md:16
 #: 2682f9ca8e604a0c9986f7746fdec960
 msgid "The following example demonstrates how to return a file that has been extracted from a tar file."
-msgstr "下面的示例演示了如何返回已从 tar 文件中提取的文件。"
+msgstr "下例演示怎样返回从 tar 文件中提取的文件。"
 
 #: ../../src/topics/outputs.md:19
 #: 7e3fa7baf0f549ec89457e7004ac9545
 msgid "Passing mandatory arguments to the `baseCommand`"
-msgstr "将强制参数传递至 `baseCommand`"
+msgstr "将必要参数传递给 `baseCommand`"
 
 #: ../../src/topics/outputs.md:21
 #: 22447a560f6f4317bf67bd7c4336126c
 msgid "In previous examples, the `baseCommand` was just a string, with any arguments passed as CWL inputs. Instead of a single string we can use an _array of strings_.  The first element is the command to run, and any subsequent elements are mandatory command line arguments"
 msgstr ""
-"在前面的示例中，`baseCommand` 只是一个字符串，任何参数都作为 CWL 输入传递。"
-"我们可以使用 _ 字符串数组 _ ，而不是单个字符串。 "
-"第一个元素是要运行的命令，所有后续元素均为强制命令行参数"
+"在此前的例子里，`baseCommand` 命令不过是一个字符串，命令的参数都由 CWL 输入传"
+"递而来。不过，我们也可以用字符串数组构建命令。为此，只需要让待运行的命令成为"
+"数组的第一个元素，这样所有后续元素均成为命令行的必要参数"
 
 #: ../../src/topics/outputs.md:26
 #: f1ee2e00b0cc4112b51c9df3a919b73f
 msgid "`tar.cwl`"
-msgstr ""
+msgstr "`tar.cwl`"
 
 #: ../../src/topics/outputs.md:32
 #: ad8e1acb251246d2a47c39b20d4e483a
 msgid "`tar-job.yml`"
-msgstr ""
+msgstr "`tar-job.yml`"
 
 #: ../../src/topics/outputs.md:38
 #: dc200c6960ae4476a772645d021f14b8
 msgid "Next, create a tar file for the example."
-msgstr "接下来，为此示例新建一个 tar 文件。"
+msgstr "接下来，新建一个 tar 文件供本示例使用。"
 
 #: ../../src/topics/outputs.md:45
 #: 52703d6b7f914097934bfad13663abeb
 msgid "And now invoke `cwltool` with the tool description and the input object on the command line:"
-msgstr "现在，通过命令行上的工具描述和输入对象调用 `cwltool`："
+msgstr "现在，在命令行上结合工具描述和输入对象运行 `cwltool`:"
 
 #: ../../src/topics/outputs.md:51
 #: 5e1c79df657d4a6e84e055dd6b300a5d
 msgid "The field `outputBinding` describes how to set the value of each output parameter."
-msgstr "`outputBinding` 字段描述了如何设置每个输出参数的值。"
+msgstr "`outputBinding` 字段描述如何设置每个输出参数的值。"
 
 #: ../../src/topics/outputs.md:62
 #: 329d2809dfae4f90bc638f5f03a47ee3
 msgid "The `glob` field consists of the name of a file in the output directory. If you don't know name of the file in advance, you can use a wildcard pattern like `glob: '*.txt'`."
-msgstr "`glob` "
-"字段由输出目录中的文件名称组成。如果事先不知道文件名，可以使用通配符模式，"
-"例如 `glob：“*.txt”`。"
+msgstr "`glob` 字段由输出目录中的文件名组成。如果事先不知道文件名，可以使用通配符，"
+"例如 `glob: '*.txt'`."
 
 #: ../../src/topics/outputs.md:65
 #: 96df2d45e42441d49ce193ccbfab78a3
@@ -2767,13 +2770,13 @@ msgstr "捕获标准输出"
 #: c6bcf7c6a8774dd6be41cc775848c3b8
 msgid "To capture a tool's standard output stream, add the `stdout` field with the name of the file where the output stream should go.  Then add `type: stdout` on the corresponding output parameter."
 msgstr ""
-"要捕获工具的标准输出流，请添加 `stdout` 字段及文件名（即输出流目标位置）。 "
-"然后，在相应的输出参数上添加 `type： stdout`。"
+"要捕获工具的标准输出流，请添加 `stdout` 字段，配上输出流应定向到的文件名。 "
+"然后，给相应的输出参数添加 `type: stdout` 字段。"
 
 #: ../../src/topics/outputs.md:71
 #: 9d86c03ab44841c785b924cc44727e31
 msgid "`stdout.cwl`"
-msgstr ""
+msgstr "`stdout.cwl`"
 
 #: ../../src/topics/outputs.md:89
 #: 2fb58c2feaa84970bb5274c49f4b5b64
@@ -2783,25 +2786,25 @@ msgstr "数组输出"
 #: ../../src/topics/outputs.md:91
 #: 9647019d8c37466886e7aab6f176634d
 msgid "You can also capture multiple output files into an array of files using `glob`."
-msgstr "您也可使用`glob`捕获多个输出文件，并将其保存为一个文件数组。"
+msgstr "您也可以用 `glob` 将多个输出文件捕获至一个文件数组。"
 
 #: ../../src/topics/outputs.md:93
 #: b9eaf21f5e014eefaae301c47dafd144
 msgid "`array-outputs.cwl`"
-msgstr ""
+msgstr "`array-outputs.cwl`"
 
 #: ../../src/topics/outputs.md:99
 #: cffff6c43b4945daa3b2a49763bc50ae
 msgid "`array-outputs-job.yml`"
-msgstr ""
+msgstr "`array-outputs-job.yml`"
 
 #: ../../src/topics/outputs.md:112
 #: cc067051f22f433bbece08f60933e002
 msgid "As described in the [YAML Guide](yaml-guide.md#arrays), the array of expected outputs is specified in `array-outputs-job.yml` with each entry marked by a leading `-`. This format can also be used in CWL descriptions to mark entries in arrays, as demonstrated in several of the upcoming sections."
 msgstr ""
-"如 [YAML 指南](yaml-guide.md#arrays)中所述，预期输出数组在 `array-outputs-job"
-".yml` 中指定，每个条目均以前导符 `-`标记。这种格式也可以在 CWL "
-"描述中用于标记数组中的条目，这将在接下来几个章节中进行演示。"
+"如[《YAML 指南》](yaml-guide.md#arrays)中所述，`array-outputs-job.yml` "
+"文件中行首为 `-` 的成员代表数组元素，用以指明我们期待的各个输出。"
+"这种格式还可以用在 CWL 描述中表示数组成员。接下来若干章节中会演示这一用法。"
 
 #: ../../src/topics/parameter-references.md:1
 #: a190a6440ec34898990cdac05d809f22

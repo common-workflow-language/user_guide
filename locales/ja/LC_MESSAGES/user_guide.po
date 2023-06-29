@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: Common Workflow Language User Guide\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-01-25 14:33+0100\n"
-"PO-Revision-Date: 2023-05-09 10:35+0000\n"
+"PO-Revision-Date: 2023-06-29 03:51+0000\n"
 "Last-Translator: Manabu ISHII <manabu.ishii.rb@gmail.com>\n"
 "Language-Team: Japanese <https://hosted.weblate.org/projects/commonwl/"
 "user-guide/ja/>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 4.18-dev\n"
+"X-Generator: Weblate 4.18.1\n"
 
 #: ../../LICENSE.md:2
 #: 4e203044f0464fd5a3256430391dde12
@@ -117,7 +117,7 @@ msgstr ""
 #: ../../src/faq.md:1
 #: e2ed894d325a4f50a5e2dc69da5531a1
 msgid "FAQ"
-msgstr ""
+msgstr "よくある質問"
 
 #: ../../src/faq.md:11
 #: 61edb787dab04ca2ad3ed07616d878a0
@@ -127,7 +127,7 @@ msgstr ""
 #: ../../src/faq.md:41
 #: d5321589e7ed4f0db3c630cc39800791
 msgid "Rename an Input File"
-msgstr "入力ファイル名を変更します"
+msgstr "入力ファイルの名前を変更する"
 
 #: ../../src/faq.md:43
 #: fc62427c0a004810b055dee90ec5e2d9
@@ -137,22 +137,23 @@ msgstr ""
 #: ../../src/faq.md:59
 #: 1c6b8a4194a14611b4061b1540c3807f
 msgid "Rename an Output File"
-msgstr ""
+msgstr "出力ファイルの名前を変更する"
 
 #: ../../src/faq.md:61
 #: bc7ad10c929848a3a9a240a3c501d299
 msgid "This example demonstrates how to change the name of an output file from the default name given to it by a tool:"
-msgstr ""
+msgstr "この例では、出力ファイルの名前を、ツールから与えられたデフォルトの名前から変"
+"更する方法を示します："
 
 #: ../../src/faq.md:82
 #: 7225a993d281421b95c8e3df2846a0e3
 msgid "Referencing a Local Script"
-msgstr ""
+msgstr "ローカルスクリプトを参照する"
 
 #: ../../src/faq.md:84
 #: 7ef1dbb81993473f948d9c6f3c64b381
 msgid "There are two ways to reference a local script:"
-msgstr ""
+msgstr "ローカルスクリプトを参照するには、2つの方法があります："
 
 #: ../../src/faq.md:86
 #: 450edf800a18423195bea4fe8793a2cb
@@ -167,12 +168,16 @@ msgstr ""
 #: ../../src/faq.md:95
 #: a7d84f740a714ec588503ee084fbbc34
 msgid "After that, make the script executable with the command `chmod +x scriptname.sh`"
-msgstr ""
+msgstr "その後、`chmod +x scriptname.sh` "
+"というコマンドでスクリプトを実行可能な状態にします。"
 
 #: ../../src/faq.md:97
 #: 569d553abe85450c9d1c37456bf412f4
 msgid "Finally, modify your `PATH` to add the directory where your script is located. (It is good practice to use `$HOME/bin` for storing your own scripts)."
 msgstr ""
+"最後に、`PATH` "
+"を変更し、スクリプトが置かれているディレクトリを追加します。(`$HOME/bin` "
+"を自分のスクリプトを保存するために使用するのは良い習慣です）。"
 
 #: ../../src/faq.md:104
 #: 95f5dbbd21084a318413b9528fb867be
@@ -392,12 +397,16 @@ msgstr ""
 #: ../../src/index.md:1
 #: 2754519265eb426b940bbbd2b8d64e1e
 msgid "Common Workflow Language User Guide"
-msgstr ""
+msgstr "Common Workflow Language ユーザーガイド"
 
 #: ../../src/index.md:3
 #: f8d6e4cd54cb42c88182a43171d97bab
 msgid "This guide will introduce you to writing workflows using the [Common Workflow Language](https://www.commonwl.org/) (CWL) open standards. This guide describes the latest specification {{ cwl_version }}."
 msgstr ""
+"本ガイドは、オープンスタンダードである [Common Workflow Language](https://www"
+".commonwl.org/) (CWL) "
+"を使用したワークフローの書き方を紹介するものです。本ガイドは、最新仕様{{ "
+"cwl_version }}を解説しています。"
 
 #: ../../src/index.md:7
 #: 132d40fee3b84469afa80d5ff613bf77
@@ -721,7 +730,7 @@ msgstr ""
 #: ../../src/introduction/prerequisites.md:67
 #: 040c019b6e844eda8c8c2b210852516b
 msgid "`true.cwl`"
-msgstr ""
+msgstr "`truc.cwl`"
 
 #: ../../src/introduction/prerequisites.md:73
 #: 6391e08e0bde49f4b21286d8fdb97433
@@ -731,7 +740,7 @@ msgstr ""
 #: ../../src/introduction/prerequisites.md:79
 #: cdef47fca304479c9a9df75afc0afb35
 msgid "Validating `true.cwl` with `cwltool`."
-msgstr ""
+msgstr "`cwltool` を使って `true.cwl` を検証します。"
 
 #: ../../src/introduction/prerequisites.md:84
 #: d41c4bc740aa474ea09a7cbd267c8840
@@ -741,7 +750,7 @@ msgstr ""
 #: ../../src/introduction/prerequisites.md:86
 #: 24d7be55d3994f0b82c38da47918e0c9
 msgid "Running `true.cwl` with `cwltool`."
-msgstr ""
+msgstr "`cwltool` を使って `true.cwl` を実行します。"
 
 #: ../../src/introduction/prerequisites.md:91
 #: 39d6ceecb54a4a7fb5dff4a7cae1bfe7
@@ -771,7 +780,7 @@ msgstr ""
 #: ../../src/introduction/prerequisites.md:115
 #: b9cc5a843a0f49daad56e9303657bdd5
 msgid "Validating `true.cwl` with `cwl-runner`."
-msgstr ""
+msgstr "検証`true.cwl` with`cwl-runner`."
 
 #: ../../src/introduction/prerequisites.md:120
 #: 34ab40437ab646488ba3ee86cd7fe071
@@ -846,7 +855,7 @@ msgstr ""
 #: ../../src/introduction/prerequisites.md:177
 #: 6ce8b81560e341c580d316d69202b268
 msgid "Docker"
-msgstr ""
+msgstr "Docker"
 
 #: ../../src/introduction/prerequisites.md:181
 #: 40cfd559d6a848d1aae354d3bdaa8e9c
@@ -876,7 +885,7 @@ msgstr ""
 #: ../../src/introduction/quick-start.md:1
 #: cdd4196f9aa34beba115901ec97913b6
 msgid "Quick Start"
-msgstr ""
+msgstr "クイックスタート"
 
 #: ../../src/introduction/quick-start.md:3
 #: c43d9675ed134b78b02acb5a102a764a
@@ -921,7 +930,7 @@ msgstr ""
 #: ../../src/introduction/quick-start.md:39
 #: 81481f5b82e4488398f87f0a169bd359
 msgid "Installing `cwltool` with `pip`."
-msgstr ""
+msgstr "`cwltool` を`pip` でインストールします。"
 
 #: ../../src/introduction/quick-start.md:47
 #: a81342e756d24c40acc15835d0a768f2
@@ -3103,6 +3112,9 @@ msgstr ""
 #: 13d7e2e92e96432787c712cf6a595424
 msgid "[Introduction to Workflows with Common Workflow Language: For Contributors.](https://carpentries-incubator.github.io/cwl-novice-tutorial/)"
 msgstr ""
+"[Common Workflow "
+"Languageによるワークフロー入門：コントリビューターのために】(https"
+"://carpentries-incubator.github.io/cwl-novice-tutorial/)"
 
 #: ../../src/tutorials.md:11
 #: 0abdd85c9b964a4e89ba3d80a6c78d6f
@@ -3112,7 +3124,7 @@ msgstr ""
 #: ../../src/tutorials.md:13
 #: 3cbf1f69a5514fd3bee90e68b201190f
 msgid "[Typescript in CWL](https://github.com/umccr/cwl-ica/wiki/TypeScript)"
-msgstr ""
+msgstr "[CWLでのTypeScript](https://github.com/umccr/cwl-ica/wiki/TypeScript)"
 
 #: ../../src/tutorials.md:15
 #: 68c97a7065634d02956f3f5c1d4eeb9f
@@ -3122,4 +3134,4 @@ msgstr ""
 #: ../../src/tutorials.md:17
 #: a67c7e0eaf4e4d27b3e5db303333a088
 msgid "[rnaseq with CWL](https://arvados.github.io/rnaseq-cwl-training/)"
-msgstr ""
+msgstr "[CWLでrnaseq](https://arvados.github.io/rnaseq-cwl-training/)"
