@@ -56,7 +56,7 @@ two commands and the expected output from the command line:
 
 ```{runcmd} cwltool inp.cwl inp-job.yml
 :working-directory: src/_includes/cwl/inputs
-````
+```
 
 ```{tip}
 <p class="rubric">Where did those `/tmp` paths come from?</p>
@@ -223,7 +223,7 @@ In the first example, you can't provide `itemA` without also providing `itemB`.
 ```{runcmd} cwltool record.cwl record-job2.yml
 :working-directory: src/_includes/cwl/inputs
 :emphasize-lines: 4, 10-11, 23
-````
+```
 
 ```{code-block} console
 $ cat output.txt
@@ -242,7 +242,7 @@ matching item (`itemC`) is added to the command line and remaining item (`itemD`
 ```{runcmd} cwltool record.cwl record-job3.yml
 :working-directory: src/_includes/cwl/inputs
 :emphasize-lines: 9-10, 22
-````
+```
 
 ```{code-block} console
 $ cat output.txt
@@ -254,10 +254,11 @@ command line.
 
 ### Exclusive Input Parameters with Expressions
 
-If you use exclusive input parameters combined with expressions, you need to be
-aware that the `inputs` JavaScript object will contain one of the exclusive
-input values. This means that you might need to use an **or** boolean operator
-to check which values are present.
+If you use exclusive input parameters and reference them in expressions, you
+need to be aware that the `inputs` JavaScript object will contain one of the
+possible, mutually-exclusive input values. Because the types of these exclusive
+values may differ, you may need to check which type is in use when you
+reference the properties of the `input` object.
 
 Let's use an example that contains an exclusive `file_format` input parameter
 that accepts `null` (i.e. no value provided), or any value from an enum.
@@ -268,17 +269,17 @@ that accepts `null` (i.e. no value provided), or any value from an enum.
 :name: exclusive-parameter-expressions.cwl
 ```
 
-Note how the JavaScript expression uses the value of the exclusive input parameter
-without taking into consideration a `null` value. If you provide a valid value,
-such as “fasta” (one of the values of the enum), your command should execute
-successfully:
+Note how the JavaScript expression uses the value of the exclusive input
+parameter without taking into consideration a `null` value. If you provide a
+valid value, such as `fasta` (one of the possible values of the enum), your
+command should execute successfully:
 
 ```{runcmd} cwltool exclusive-parameter-expressions.cwl --file_format fasta
 :working-directory: src/_includes/cwl/inputs
-````
+```
 
 However, if you do not provide any input value, then `file_format` will be
-evaluated to a `null` value, which does not match the expected type for the
+evaluated to `null`, which does not match the expected type for the
 output field (a `string`), resulting in failure when running your workflow.
 
 ```{runcmd} cwltool exclusive-parameter-expressions.cwl
@@ -286,10 +287,17 @@ output field (a `string`), resulting in failure when running your workflow.
 :emphasize-lines: 5-10
 ```
 
-To correct it, you must remember to use an or operator in your JavaScript expression
-when using exclusive parameters, or any parameter that allows `null`. For example,
-the expression could be changed to `$(inputs.file_format || 'auto')`, to have
-a default value if none was provided in the command line or job input file.
+To correct it, you should explicitly handle the possibility of a `null` value.
+For example, the expression could be changed to `$(inputs.file_format ||
+'auto')`, to have a default value `"auto"` if none was provided in the command
+line or job input file.
+
+Here, the boolean “or” operator `||` in JavaScript is used for its
+_short-circuiting_ property. If `inputs.file_format` is “true” in a boolean
+context (e.g. a valid non-empty string from the enum), the evaluation of the
+expression stops at the first operand of `||`; it “short-circuits”. If however
+`inputs.file_format` is `null`, the whole expression’s value becomes that of
+the second operand, which is why a reasonable default can be provided there.
 
 % TODO
 %
