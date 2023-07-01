@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: Common Workflow Language User Guide\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-01-25 14:33+0100\n"
-"PO-Revision-Date: 2023-06-29 03:51+0000\n"
+"PO-Revision-Date: 2023-07-01 03:53+0000\n"
 "Last-Translator: Manabu ISHII <manabu.ishii.rb@gmail.com>\n"
 "Language-Team: Japanese <https://hosted.weblate.org/projects/commonwl/"
 "user-guide/ja/>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 4.18.1\n"
+"X-Generator: Weblate 5.0-dev\n"
 
 #: ../../LICENSE.md:2
 #: 4e203044f0464fd5a3256430391dde12
@@ -169,7 +169,7 @@ msgstr ""
 #: a7d84f740a714ec588503ee084fbbc34
 msgid "After that, make the script executable with the command `chmod +x scriptname.sh`"
 msgstr "その後、`chmod +x scriptname.sh` "
-"というコマンドでスクリプトを実行可能な状態にします。"
+"というコマンドでスクリプトを実行可能な状態にします"
 
 #: ../../src/faq.md:97
 #: 569d553abe85450c9d1c37456bf412f4
@@ -785,7 +785,7 @@ msgstr "検証`true.cwl` with`cwl-runner`."
 #: ../../src/introduction/prerequisites.md:120
 #: 34ab40437ab646488ba3ee86cd7fe071
 msgid "Running `true.cwl` with `cwl-runner`."
-msgstr ""
+msgstr "`true.cwl` を `cwl-runner` で実行します。"
 
 #: ../../src/introduction/prerequisites.md:125
 #: 705807fae182425dbf4244dbf2be1226
