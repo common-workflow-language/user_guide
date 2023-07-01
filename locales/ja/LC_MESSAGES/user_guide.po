@@ -9,7 +9,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-01-25 14:33+0100\n"
 "PO-Revision-Date: 2023-07-01 03:53+0000\n"
-"Last-Translator: Manabu ISHII <manabu.ishii.rb@gmail.com>\n"
+"Last-Translator: Michael Crusoe <mrc@commonwl.org>\n"
 "Language-Team: Japanese <https://hosted.weblate.org/projects/commonwl/"
 "user-guide/ja/>\n"
 "Language: ja\n"
@@ -730,7 +730,7 @@ msgstr ""
 #: ../../src/introduction/prerequisites.md:67
 #: 040c019b6e844eda8c8c2b210852516b
 msgid "`true.cwl`"
-msgstr "`truc.cwl`"
+msgstr "`true.cwl`"
 
 #: ../../src/introduction/prerequisites.md:73
 #: 6391e08e0bde49f4b21286d8fdb97433
@@ -3113,7 +3113,7 @@ msgstr ""
 msgid "[Introduction to Workflows with Common Workflow Language: For Contributors.](https://carpentries-incubator.github.io/cwl-novice-tutorial/)"
 msgstr ""
 "[Common Workflow "
-"Languageによるワークフロー入門：コントリビューターのために】(https"
+"Languageによるワークフロー入門：コントリビューターのために](https"
 "://carpentries-incubator.github.io/cwl-novice-tutorial/)"
 
 #: ../../src/tutorials.md:11
