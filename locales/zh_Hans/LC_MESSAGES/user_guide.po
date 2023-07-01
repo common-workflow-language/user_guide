@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: Common Workflow Language User Guide\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-01-25 14:33+0100\n"
-"PO-Revision-Date: 2023-06-29 03:51+0000\n"
+"PO-Revision-Date: 2023-07-01 03:53+0000\n"
 "Last-Translator: Zoë Ma <zoe.ma@curii.com>\n"
 "Language-Team: Chinese (Simplified) <https://hosted.weblate.org/projects/"
 "commonwl/user-guide/zh_Hans/>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 4.18.1\n"
+"X-Generator: Weblate 5.0-dev\n"
 
 #: ../../LICENSE.md:2
 #: 4e203044f0464fd5a3256430391dde12
@@ -2815,64 +2815,63 @@ msgstr "参数引用"
 #: dbfe2c1123144316aa026374b0f353d3
 msgid "In a previous example, we extracted a file using the \"tar\" program. However, that example was very limited because it assumed that the file we were interested in was called \"hello.txt\", and this was written into the `.cwl` file. This is not the best way to do this, as the \"hello.txt\" filename may vary or be dependent on the input file(s) used.  To avoid this we can specify the name of the file we want in the job parameters file (`.yml`). In this example, you will see how to reference the value of input parameters dynamically from other fields, which will allow us to then specify the name of the file to extract."
 msgstr ""
-"在前面的示例中，我们使用“tar”程序提取了一个文件。但是，该示例非常有限，因为它"
-"假定我们感兴趣的文件称为“hello.txt”，并将其写入 `.cwl` "
-"文件中。这不是执行此操作的最佳方法，因为“hello."
-"txt”文件名可能会有所不同或取决于所使用的输入文件。 为了避免这种情况，"
-"我们可以在作业参数文件 （`.yml`） 中指定文件名称。本示例将演示如何从其他字段"
-"动态引用输入参数值，这将允许我们指定要提取的文件名称。"
+"在前面的例子中，我们使用 “tar” 程序提取了一个文件。但是，该示例局限性很强，"
+"因为它假定了我们感兴趣的文件名就是 “hello.txt”, 而且这种假设直接写入了 `.cwl`"
+" 代码文件里。这种做法有欠妥当，因为文件名 “hello.txt” "
+"可能会改变，也可能依赖我们实际用到的输入文件。 为了避免这类情况，"
+"我们可以在作业参数 (`.yml`) 文件中指定我们想要的文件名。本示例将演示如何从其"
+"他字段动态引用输入参数值，以便指定待提取的文件名。"
 
 #: ../../src/topics/parameter-references.md:13
 #: 280f1a07d0ae41d7a4674504f832fcf0
 msgid "`tar-param.cwl`"
-msgstr ""
+msgstr "`tar-param.cwl`"
 
 #: ../../src/topics/parameter-references.md:19
 #: 5c64d938862747cb9fb52515a656ce27
 msgid "`tar-param-job.yml`"
-msgstr ""
+msgstr "`tar-param-job.yml`"
 
 #: ../../src/topics/parameter-references.md:25
 #: 074cf5d912854d8c864607cc24b15302
 msgid "Create your input files and invoke `cwltool` with the tool description and the input object on the command line:"
-msgstr "新建输入文件，并使用命令行上的工具描述和输入对象调用 `cwltool`："
+msgstr "创建输入文件，然后以工具描述和输入对象为命令行参数调用 `cwltool`:"
 
 #: ../../src/topics/parameter-references.md:36
 #: 0290af3e3cbb4b32b0450c8771f3bf95
 msgid "Certain fields permit parameter references which are enclosed in `$(...)`. These are evaluated and replaced with value being referenced."
-msgstr "某些字段允许 `$（...） "
-"中所列的参数引用`，将对这些字段进行评估并替换为被引用的值。"
+msgstr "某些字段允许出现用 `$(...)` 符号括起来的参数引用，由求值的结果代入。"
 
 #: ../../src/topics/parameter-references.md:47
 #: b54240bb94f746bba7511633aa969db0
 msgid "References are written using a subset of Javascript syntax.  In this example, `$(inputs.extractfile)`, `$(inputs[\"extractfile\"])`, and `$(inputs['extractfile'])` are equivalent."
 msgstr ""
-"需使用Javascript语法的子集编写引用。 在此示例中，`$（inputs."
-"extractfile）`、`$（inputs[“extractfile”]）` 以及 "
-"`$（inputs['extractfile']）` 为等效项。"
+"引用的编写用的是 JavaScript 语法的一个子集。 本例中，`$(inputs."
+"extractfile)`、`$(inputs[\"extractfile\"])` 和 `$(inputs['extractfile'])` "
+"效果相同。"
 
 #: ../../src/topics/parameter-references.md:51
 #: 8b70a072aa87414c88e89a3e19af0a51
 msgid "The value of the \"inputs\" variable is the input object provided when the CWL tool was invoked."
-msgstr "“输入”变量的值是调用 CWL 工具时提供的输入对象。"
+msgstr "“inputs” 变量的取值为 CWL 工具被调用时获得的输入对象。"
 
 #: ../../src/topics/parameter-references.md:54
 #: eea20f89c45f424a888178df53713b28
 msgid "Note that because `File` parameters are objects, to get the path to an input file you must reference the path field on a file object; to reference the path to the tar file in the above example you would write `$(inputs.tarfile.path)`."
 msgstr ""
-"请注意，由于 `File` "
-"参数是对象，要获取输入文件的路径，必须引用文件对象上的路径字段；"
-"若要引用上方示例中 tar 文件的路径，您需要编写 `$（inputs.tarfile.path）`。"
+"请注意，由于 `File`（文件）参数是对象。因此，要获取输入文件的路径，须引用文件"
+"对象上的“path”（路径）字段。例如，要引用上面例子中 tar 文件的路径，"
+"则需要写为 `$(inputs.tarfile.path)`."
 
 #: ../../src/topics/parameter-references.md:59
 #: cb4ea13f5db84c0da43df3f7f2478d78
 msgid "Where are parameter references allowed?"
-msgstr "哪里允许参数引用？"
+msgstr "参数引用可以出现在哪些地方？"
 
 #: ../../src/topics/parameter-references.md:61
 #: 6d3fb423e6c4434697cd113fb27e28ad
 msgid "You can only use parameter references in certain fields.  These are:"
-msgstr "您只能在某些字段中使用参数引用。 这些字段是："
+msgstr "参数引用只能出现在有限的字段中，即："
 
 #: ../../src/topics/parameter-references.md:63
 #: 7647e0229a924f988cf02b7812a55c06
@@ -2949,7 +2948,7 @@ msgstr ""
 #: ../../src/topics/parameter-references.md:103
 #: 958178d1fa8843aaa0541e2bb115cfd4
 msgid "in [Dirent](http://www.commonwl.org/v1.0/CommandLineTool.html#Dirent)"
-msgstr "位于 [Dirent](http://www.commonwl.org/v1.0/CommandLineTool.html#Dirent)"
+msgstr "[Dirent](http://www.commonwl.org/v1.0/CommandLineTool.html#Dirent) 对象中"
 
 #: ../../src/topics/parameter-references.md:107
 #: 9a6b311ded8d4e43ae635b1b927dbdf2
@@ -2972,21 +2971,21 @@ msgstr "指定软件需求"
 #: 574d93d1d592458a985f259519c036cb
 msgid "Often, tool descriptions will be written for a specific version of a software. To make it easier for others to use your descriptions, you can include a `SoftwareRequirement` field in the `hints` section. This may also help to avoid confusion about which version of a tool the description was written for."
 msgstr ""
-"通常，工具描述将针对特定版本的软件编写。为了方便其他人使用您的描述，您可以在 "
-"`提示 ` 部分添加`SoftwareRequirement` "
-"字段，这也可能有助于他人了解此描述所适用的工具版本。"
+"工具描述往往是针对特定版本的软件而编写。为了方便他人使用您的工具描述，"
+"您可以在 `hints` 部分添加`SoftwareRequirement` "
+"字段，用来指明该描述适用于哪些版本的工具。"
 
 #: ../../src/topics/specifying-software-requirements.md:13
 #: 82e48b3e3c3f451480cc0b6a529271f6
 msgid "In this example, the software requirement being described is InterProScan version 5.21-60."
-msgstr "在本示例中，所描述的软件要求是InterProScan版本5.21-60。"
+msgstr "本例中描述的软件要求为 5.21-60 版本的 InterProScan."
 
 #: ../../src/topics/specifying-software-requirements.md:25
 #: 02e40154eac74ecc98d0447d03475b44
 msgid "Depending on your CWL runner, these hints may be used to check that the required software is installed and available before the job is run. To enable these checks with the reference implementation, use the [dependency resolvers configuration][dependencies]."
 msgstr ""
-"根据您的 CWL 运行程序，可在运行作业之前使用这些提示检查所需软件是否已安装且可"
-"用。要使用参考实现启用这些检查，请使用 [依赖项解析程序配置][依赖项]。"
+"您的 CWL 运行程序有可能支持在运行作业之前，根据提示检查所需软件是否已安装就绪"
+"。如果要让参考实现启用这些检查，请使用[依赖项解析配置][dependencies]。"
 
 #: ../../src/topics/specifying-software-requirements.md:29
 #: 8cb1c5d9b1a54c40924099494eb766c6
