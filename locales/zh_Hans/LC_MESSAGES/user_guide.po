@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: Common Workflow Language User Guide\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-01-25 14:33+0100\n"
-"PO-Revision-Date: 2023-07-01 03:53+0000\n"
-"Last-Translator: Zoë Ma <zoe.ma@curii.com>\n"
+"PO-Revision-Date: 2023-07-05 09:51+0000\n"
+"Last-Translator: Michael Crusoe <mrc@commonwl.org>\n"
 "Language-Team: Chinese (Simplified) <https://hosted.weblate.org/projects/"
 "commonwl/user-guide/zh_Hans/>\n"
 "Language: zh_Hans\n"
@@ -3018,7 +3018,7 @@ msgstr ""
 #: ../../src/topics/staging-input-files.md:9
 #: c8159d0cb2ab452a9ce8e8d2adbaaa94
 msgid "`linkfile.cwl`"
-msgstr ""
+msgstr "`linkfile.cwl`"
 
 #: ../../src/topics/troubleshooting.md:1
 #: 0f7508ce59754a7eb230dea6042244c6
@@ -3103,12 +3103,12 @@ msgstr ""
 #: ../../src/topics/using-containers.md:21
 #: 7921a837ee744c5aa9a5bda04b0c8db1
 msgid "`docker.cwl`"
-msgstr ""
+msgstr "`docker.cwl`"
 
 #: ../../src/topics/using-containers.md:27
 #: 387e9bc9381a4450af54aff77e4df6a2
 msgid "`docker-job.yml`"
-msgstr ""
+msgstr "`docker-job.yml`"
 
 #: ../../src/topics/using-containers.md:33
 #: 2713594c937d4c528fc8d04d9e9819ed
@@ -3128,7 +3128,7 @@ msgstr ""
 #: ../../src/topics/using-containers.md:55
 #: 1a5596243cec4c948d9b6bf0bb12fad0
 msgid "`hello.js`"
-msgstr ""
+msgstr "`hello.js`"
 
 #: ../../src/topics/using-containers.md:69
 #: 483181f498fc4d968b5fe6ef427709f7
@@ -3163,7 +3163,7 @@ msgstr ""
 #: ../../src/topics/workflows.md:51
 #: a913c76d06164fa18718a8a6a7dcf0d6
 msgid "`echo-uppercase.cwl`"
-msgstr ""
+msgstr "`echo-uppercase.cwl`"
 
 #: ../../src/topics/workflows.md:81
 #: 93188ed43ee949cc98b3ea679ce14feb
@@ -3173,7 +3173,7 @@ msgstr ""
 #: ../../src/topics/workflows.md:91
 #: 36618126a4df4326b236ebe2ea42cffa
 msgid "`echo-uppercase-single-file.cwl`"
-msgstr ""
+msgstr "`echo-uppercase-single-file.cwl`"
 
 #: ../../src/topics/workflows.md:150
 #: 1cc17ad26e9c474b895ba5cd20c8b66a
@@ -3198,7 +3198,7 @@ msgstr ""
 #: ../../src/topics/workflows.md:170
 #: 55ab007d472f43388e4c77aae8f165e7
 msgid "`1st-workflow.cwl`"
-msgstr ""
+msgstr "`1st-workflow.cwl`"
 
 #: ../../src/topics/workflows.md:179
 #: ../../src/topics/workflows.md:180
@@ -3220,7 +3220,7 @@ msgstr ""
 #: ../../src/topics/workflows.md:185
 #: 26c51dcb76364ed780376aecb7cbacda
 msgid "`1st-workflow-job.yml`"
-msgstr ""
+msgstr "`1st-workflow-job.yml`"
 
 #: ../../src/topics/workflows.md:191
 #: 6fcf8ad3d1bd49afa4a105622437bd59
@@ -3360,7 +3360,7 @@ msgstr ""
 #: ../../src/topics/workflows.md:415
 #: 1e1f4d85fc5f49b5aac5c5b00f77d6fd
 msgid "`scatter-workflow.cwl`"
-msgstr ""
+msgstr "`scatter-workflow.cwl`"
 
 #: ../../src/topics/workflows.md:421
 #: 3a67d77a2e7b4c0bb61cc3585ceae942
@@ -3390,7 +3390,7 @@ msgstr ""
 #: ../../src/topics/workflows.md:452
 #: 842b926ae34542cb9023021f137b08be
 msgid "`scatter-job.yml`"
-msgstr ""
+msgstr "`scatter-job.yml`"
 
 #: ../../src/topics/workflows.md:458
 #: b662c1a5a4424c8d8350a806356acc61
@@ -3410,7 +3410,7 @@ msgstr ""
 #: ../../src/topics/workflows.md:472
 #: 242993d42b164ee5abe7ca10d45856de
 msgid "`hello_world_to_stdout.cwl`"
-msgstr ""
+msgstr "`hello_world_to_stdout.cwl`"
 
 #: ../../src/topics/workflows.md:480
 #: 4a94e5f7e1bc4d628702140e4e51d6d3
@@ -3420,7 +3420,7 @@ msgstr ""
 #: ../../src/topics/workflows.md:483
 #: e61d93b848184c8e8e573928427b4d0a
 msgid "`wc-tool.cwl`"
-msgstr ""
+msgstr "`wc-tool.cwl`"
 
 #: ../../src/topics/workflows.md:489
 #: e3a7182f00f440b8b5461da91194a64b
@@ -3430,7 +3430,7 @@ msgstr ""
 #: ../../src/topics/workflows.md:491
 #: 99fa96caacaa45cb97aded9a24fcac6d
 msgid "`scatter-two-steps.cwl`"
-msgstr ""
+msgstr "`scatter-two-steps.cwl`"
 
 #: ../../src/topics/workflows.md:497
 #: b5338f39e8c74ff28e139da68089a742
@@ -3445,7 +3445,7 @@ msgstr ""
 #: ../../src/topics/workflows.md:513
 #: 1c9e386922324ec8a59306572c19fb8b
 msgid "`scatter-nested-workflow.cwl`"
-msgstr ""
+msgstr "`scatter-nested-workflow.cwl`"
 
 #: ../../src/topics/workflows.md:519
 #: d80ab383eec9402faba997b548fe42eb
@@ -3465,7 +3465,7 @@ msgstr ""
 #: ../../src/topics/workflows.md:527
 #: 20b9f181420c401d8615c17a10027517
 msgid "`conditional-workflow.cwl`"
-msgstr ""
+msgstr "`conditional-workflow.cwl`"
 
 #: ../../src/topics/workflows.md:566
 #: 8dbd56473f8c40c0bb12a48be06117e3
