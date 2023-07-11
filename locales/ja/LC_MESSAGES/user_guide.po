@@ -8,10 +8,10 @@ msgstr ""
 "Project-Id-Version: Common Workflow Language User Guide\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-01-25 14:33+0100\n"
-"PO-Revision-Date: 2023-07-01 03:53+0000\n"
-"Last-Translator: Michael Crusoe <mrc@commonwl.org>\n"
-"Language-Team: Japanese <https://hosted.weblate.org/projects/commonwl/user-"
-"guide/ja/>\n"
+"PO-Revision-Date: 2023-07-11 22:53+0000\n"
+"Last-Translator: Manabu ISHII <manabu.ishii.rb@gmail.com>\n"
+"Language-Team: Japanese <https://hosted.weblate.org/projects/commonwl/"
+"user-guide/ja/>\n"
 "Language: ja\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -234,7 +234,7 @@ msgstr ""
 
 #: ../../src/faq.md:165 ce6db54bd0f54839a5beb948530a21f0
 msgid "Model a \"one-or-the-other\" Parameter"
-msgstr ""
+msgstr "「一か八か」のパラメータをモデル化する"
 
 #: ../../src/faq.md:167 d06cbf89028b4638ad54c2529bcbfa25
 msgid ""
@@ -255,7 +255,7 @@ msgstr ""
 
 #: ../../src/faq.md:194 941077158ec54ae19bfa2e2ad6662da1
 msgid "merge_nested"
-msgstr ""
+msgstr "merge_nested"
 
 #: ../../src/faq.md:196 937cb94a370640c788fbc3fe0b19f2e5
 msgid ""
@@ -279,21 +279,21 @@ msgstr ""
 
 #: ../../src/faq.md:229 3da4dcb043eb4423a53a14182949d9cd
 msgid "Optional Inputs 💯"
-msgstr ""
+msgstr "オプション入力 💯"
 
 #: ../../src/faq.md:231 89b90d3bf1ea4ebd88482d435241fac5
 msgid ""
 "To make an input parameter optional, add a question mark to the type "
 "declaration."
-msgstr ""
+msgstr "入力パラメータをオプションにするには、型宣言に疑問符を付けます。"
 
 #: ../../src/faq.md:247 a854006054ce4ffe94bbfa73bdbecbf2
 msgid "<a name=\"enuminputs\"></a>"
-msgstr ""
+msgstr "<a name=\"enuminputs\"></a>"
 
 #: ../../src/faq.md:248 f80eb714e9df417fbba555b5dd5f4d8c
 msgid "Enum Inputs ⚜️"
-msgstr ""
+msgstr "列挙型入力 ⚜️"
 
 #: ../../src/faq.md:250 10af80fa13af4158aec7060550485350
 msgid ""
@@ -304,11 +304,11 @@ msgstr ""
 
 #: ../../src/faq.md:267 ad1c26711ccd4efd8fdb25f9293d33fd
 msgid "<a name=\"recordinputs\"></a>"
-msgstr ""
+msgstr "<a name=\"recordinputs\"></a>"
 
 #: ../../src/faq.md:268 49e2095b51f84f609f5d4bc088ad9745
 msgid "Record Inputs 📀"
-msgstr ""
+msgstr "レコード入力 📀"
 
 #: ../../src/faq.md:270 52b8538177c64090af51f5f6a696c28c
 msgid ""
@@ -348,16 +348,17 @@ msgstr ""
 
 #: ../../src/faq.md:359 07922147f7ab487ba2a1e7c43c9f410c
 msgid "`cwltool` Errors due to Filenames with Space Characters Inside"
-msgstr ""
+msgstr "`cwltool` ファイル名の中に空白文字があるために起こるエラー"
 
 #: ../../src/faq.md:361 7a11806f0c7045b48fe58a271f814797
 msgid "`cwltool` does not allow some characters in filenames by default."
-msgstr ""
+msgstr "`cwltool` は、デフォルトではファイル名に一部の文字を許可していません。"
 
 #: ../../src/faq.md:363 fdaec25650ab4b0fb1c527610e24ae5a
 msgid ""
 "For example, the filename `a space is here.txt` includes 3 space characters."
-msgstr ""
+msgstr "例えば、`a space is here.txt` "
+"というファイル名には、3つの空白文字が含まれています。"
 
 #: ../../src/faq.md:371 182959fc9f4746d082994e07d05c8cde
 msgid ""
