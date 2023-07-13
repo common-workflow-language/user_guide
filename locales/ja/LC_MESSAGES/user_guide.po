@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: Common Workflow Language User Guide\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-01-25 14:33+0100\n"
-"PO-Revision-Date: 2023-07-11 22:53+0000\n"
+"PO-Revision-Date: 2023-07-13 02:28+0000\n"
 "Last-Translator: Manabu ISHII <manabu.ishii.rb@gmail.com>\n"
 "Language-Team: Japanese <https://hosted.weblate.org/projects/commonwl/"
 "user-guide/ja/>\n"
@@ -451,7 +451,7 @@ msgstr ""
 
 #: ../../src/index.md:16 6d269e8d70184034bcb56385a6ca198f
 msgid "Navigating the User Guide"
-msgstr ""
+msgstr "ユーザーガイドの使い方"
 
 #: ../../src/index.md:18 ed74c9a4b623464480e2c184668fcec0
 msgid ""
@@ -471,11 +471,11 @@ msgstr ""
 
 #: ../../src/index.md:28 ee6b82bd86264e4bb1e8e4065b1e6b9c
 msgid "Table of Contents"
-msgstr ""
+msgstr "目次"
 
 #: ../../src/introduction/basic-concepts.md:1 e208c8a7506e41dcac9a403c5d2850c1
 msgid "Basic Concepts"
-msgstr ""
+msgstr "基本コンセプト"
 
 #: ../../src/introduction/basic-concepts.md:3 ac62d326a68145b695e46b714d4e8156
 msgid ""
@@ -490,7 +490,7 @@ msgstr ""
 
 #: ../../src/introduction/basic-concepts.md:10 984e6676b9d04c7092bc492f195dfb91
 msgid "The CWL Specification"
-msgstr ""
+msgstr "CWLの仕様"
 
 #: ../../src/introduction/basic-concepts.md:21 cbe1d761da5b403d9605fa1fb8e62fdf
 msgid ""
@@ -517,7 +517,7 @@ msgstr ""
 
 #: ../../src/introduction/basic-concepts.md:37 b3df1607e9d242d78b22dc44335fbe2d
 msgid "Implementations"
-msgstr ""
+msgstr "実装"
 
 #: ../../src/introduction/basic-concepts.md:39 078b58ffc1cc4d25a7c4eea3bb76e025
 msgid ""
