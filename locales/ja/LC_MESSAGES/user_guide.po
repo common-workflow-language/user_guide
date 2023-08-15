@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: Common Workflow Language User Guide\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-01-25 14:33+0100\n"
-"PO-Revision-Date: 2023-08-15 01:54+0000\n"
+"PO-Revision-Date: 2023-08-15 12:33+0000\n"
 "Last-Translator: Manabu ISHII <manabu.ishii.rb@gmail.com>\n"
 "Language-Team: Japanese <https://hosted.weblate.org/projects/commonwl/"
 "user-guide/ja/>\n"
@@ -559,27 +559,27 @@ msgstr ""
 #: ../../src/introduction/basic-concepts.md:112
 #: 8c9772f96caf4169924d22eb929a4f0f
 msgid "A command-line tool."
-msgstr ""
+msgstr "コマンドラインツール。"
 
 #: ../../src/introduction/basic-concepts.md:113
 #: 4fac209a62114798b79e4810f7a0148b
 msgid "An expression tool."
-msgstr ""
+msgstr "Expression ツール。"
 
 #: ../../src/introduction/basic-concepts.md:114
 #: b97ba368fd664caab0494e2392795697
 msgid "An operation."
-msgstr ""
+msgstr "Operation。"
 
 #: ../../src/introduction/basic-concepts.md:115
 #: 903a6796e3304a19ad885b2428b0e80f
 msgid "A workflow."
-msgstr ""
+msgstr "ワークフロー。"
 
 #: ../../src/introduction/basic-concepts.md:118
 #: 6e352ac1f8e144c392ac5adf18c28298
 msgid "The processing units available in the CWL objects model."
-msgstr ""
+msgstr "CWLオブジェクトモデルで使用可能な処理単位です。"
 
 #: ../../src/introduction/basic-concepts.md:119
 #: cf2922f645904ac7955428ecddc37b8a
@@ -587,6 +587,8 @@ msgid ""
 "A command-line tool is a wrapper for a command-line utility like `echo`, "
 "`ls`, and `tar`. A command-line tool can be called from a workflow."
 msgstr ""
+"コマンドラインツールは、`echo` 、`ls` 、`tar` のようなコマンドラインユーティ"
+"リティのラッパーです。コマンドラインツールは、ワークフローから呼び出せます。"
 
 #: ../../src/introduction/basic-concepts.md:122
 #: 5f47aae608c041aeb4134d59dad314d2
@@ -626,18 +628,19 @@ msgstr ""
 #: ../../src/introduction/basic-concepts.md:141
 #: cc6cd8cb81564cadb8e6a4c49423b7f7
 msgid "`InlineJavascriptWorkflow` - enables JavaScript in expressions."
-msgstr ""
+msgstr "`InlineJavascriptWorkflow` - でJavaScriptを有効にします。"
 
 #: ../../src/introduction/basic-concepts.md:142
 #: 2d9f53b6ed5041dbb6c0b54835897856
 msgid "`SubworkflowFeatureRequirement` - enables nested workflows."
-msgstr ""
+msgstr "`SubworkflowFeatureRequirement` - ネストしたワークフローを有効にします。"
 
 #: ../../src/introduction/basic-concepts.md:143
 #: 907674a4ecff4826a2b880e28fc38f33
 msgid ""
 "`InitialWorkDirRequirement` - controls staging files in the input directory."
-msgstr ""
+msgstr "`InitialWorkDirRequirement` - "
+"入力ディレクトリのステージングファイルを制御します。"
 
 #: ../../src/introduction/basic-concepts.md:145
 #: 037cd0e5ceda482eaeaca03d51745aee
@@ -660,7 +663,7 @@ msgstr ""
 #: ../../src/introduction/basic-concepts.md:155
 #: c4c3315c96714e81b364f8cc003b87e6
 msgid "FAIR Workflows"
-msgstr ""
+msgstr "FAIRワークフロー"
 
 #: ../../src/introduction/basic-concepts.md:157
 #: 3eb6a013a2a4478ca2ad134661f65c58
