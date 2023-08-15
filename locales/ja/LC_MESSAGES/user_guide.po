@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: Common Workflow Language User Guide\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-01-25 14:33+0100\n"
-"PO-Revision-Date: 2023-07-13 02:28+0000\n"
+"PO-Revision-Date: 2023-08-15 01:54+0000\n"
 "Last-Translator: Manabu ISHII <manabu.ishii.rb@gmail.com>\n"
 "Language-Team: Japanese <https://hosted.weblate.org/projects/commonwl/"
 "user-guide/ja/>\n"
@@ -219,7 +219,7 @@ msgstr ""
 
 #: ../../src/faq.md:135 f2c109998c76434893ff16b17fdb2bd0
 msgid "In CWL, everything must be directly stated."
-msgstr ""
+msgstr "CWLでは、すべてを直接的に記述する必要があります。。"
 
 #: ../../src/faq.md:138 c2c752b86bf94d6fb3751f4dd81bc7a7
 msgid "Setting `self`-based Input Bindings for Optional Inputs"
@@ -319,7 +319,7 @@ msgstr ""
 
 #: ../../src/faq.md:322 f96c9257e3734b8aa0cc5e065f74f944
 msgid "Setting Mutually Exclusive Parameters"
-msgstr ""
+msgstr "相互に排他的なパラメータを設定する"
 
 #: ../../src/faq.md:324 7dc0540508084a3495ff3b2ac90fd323
 msgid ""
@@ -332,19 +332,19 @@ msgstr ""
 
 #: ../../src/faq.md:342 b53dc77466b24a67b52b8aadf4fab724
 msgid "Setting Booleans"
-msgstr ""
+msgstr "ブール値の設定"
 
 #: ../../src/faq.md:344 cf4e7f3977ae4f9b877072c2b1c4b533
 msgid "These can be set by using the default field"
-msgstr ""
+msgstr "デフォルトフィールドを使って、これらを設定します"
 
 #: ../../src/faq.md:349 99b37739ef18443ca7c0e715a131e0c7
 msgid "Concatenating Strings in Inputs"
-msgstr ""
+msgstr "入力された文字列を連結する"
 
 #: ../../src/faq.md:351 9b00b5a55ee941e1adbfe89e133791e3
 msgid "The valueFrom field must be used instead of default."
-msgstr ""
+msgstr "defaultフィールドの代わりにvalueFromフィールドを使用する必要があります。"
 
 #: ../../src/faq.md:359 07922147f7ab487ba2a1e7c43c9f410c
 msgid "`cwltool` Errors due to Filenames with Space Characters Inside"
@@ -364,7 +364,8 @@ msgstr "例えば、`a space is here.txt` "
 msgid ""
 "If you can not avoid these dangerous characters, then pass `--relax-path-"
 "checks` to `cwltool`."
-msgstr ""
+msgstr "これらの危険な文字を避けられない場合は、`--relax-path-checks` を`cwltool` "
+"に渡してください。"
 
 #: ../../src/faq.md:373 cc7752e9989e4a6d957682f479d6fc60
 msgid "CWL Parameter Reference Error due to Hyphen in Input Identifier"
@@ -410,7 +411,7 @@ msgstr ""
 
 #: ../../src/faq.md:450 2d498470524d47f18f9936ace6acebb0
 msgid "Debug JavaScript Expressions"
-msgstr ""
+msgstr "JavaScriptの式をデバッグする"
 
 #: ../../src/faq.md:452 d7b044f5224a48eda09bc949cf645193
 msgid ""
@@ -439,7 +440,7 @@ msgstr ""
 
 #: ../../src/index.md:7 132d40fee3b84469afa80d5ff613bf77
 msgid "Contributions and Feedback are Welcome!"
-msgstr ""
+msgstr "ご意見、ご感想、貢献をお待ちしております!"
 
 #: ../../src/index.md:9 0f47157605a34ea58770ea898deebae4
 msgid ""
@@ -498,6 +499,9 @@ msgid ""
 "community. The specification has different versions. The version covered in "
 "this user guide is the {{ cwl_version }}."
 msgstr ""
+"CWL仕様は、CWLコミュニティによって書かれ、維持されている文書です。この仕様に"
+"は異なるバージョンが存在します。このユーザーガイドで扱うバージョンは{{ "
+"cwl_version }}です。"
 
 #: ../../src/introduction/basic-concepts.md:25 3a71b269bd3c49eb913cf69b60373c24
 msgid ""
