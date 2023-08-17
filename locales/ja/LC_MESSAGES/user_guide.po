@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: Common Workflow Language User Guide\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-01-25 14:33+0100\n"
-"PO-Revision-Date: 2023-08-15 12:33+0000\n"
+"PO-Revision-Date: 2023-08-17 01:56+0000\n"
 "Last-Translator: Manabu ISHII <manabu.ishii.rb@gmail.com>\n"
 "Language-Team: Japanese <https://hosted.weblate.org/projects/commonwl/"
 "user-guide/ja/>\n"
@@ -706,19 +706,19 @@ msgstr ""
 #: ../../src/introduction/quick-start.md:94 65c24244713741e196da08cb9ba237b2
 #: f059896039524095b4deb65d693f8ddf 3439764fab0e49d2bcb7c9fbae556e65
 msgid "Learn More"
-msgstr ""
+msgstr "さらなる学習"
 
 #: ../../src/introduction/basic-concepts.md:180
 #: 9d5100c7d0a040aea1020bf633ad17de
 msgid "Semantic Versioning - <https://semver.org/>"
-msgstr ""
+msgstr "セマンティック・バージョニング -<https://semver.org/>"
 
 #: ../../src/introduction/basic-concepts.md:181
 #: 36eb4b3b966640af90faa55db3789cb6
 msgid ""
 "The CWL Specification page in the CWL website: <https://www.commonwl.org/"
 "specification/>"
-msgstr ""
+msgstr "CWLサイト内の「CWL仕様」ページ：<https://www.commonwl.org/specification/>"
 
 #: ../../src/introduction/basic-concepts.md:182
 #: 2ccb956baa6b4376a04ad9fcc4654631
@@ -726,13 +726,15 @@ msgid ""
 "The current CWL specification on GitHub: {{ '<https://github.com/common-"
 "workflow-language/cwl-{}>'.format(cwl_version_text) }}"
 msgstr ""
+"GitHubにある現在のCWL仕様：{{ '<https://github.com/common-workflow-language/"
+"cwl-{}>'.format(cwl_version_text) }}"
 
 #: ../../src/introduction/basic-concepts.md:183
 #: 72889b830c514afe9a7cb1e64b5666a0
 msgid ""
 "The list of Implementations in the CWL website: <https://www.commonwl.org/"
 "implementations/>"
-msgstr ""
+msgstr "CWLサイト内の実装のリスト：<https://www.commonwl.org/implementations/>"
 
 #: ../../src/introduction/basic-concepts.md:184
 #: e29bd7f973544600be589c3b3f84cf63
@@ -748,7 +750,7 @@ msgstr ""
 
 #: ../../src/introduction/index.md:1 1769a0cbf4de4d77879c1f202cd11af9
 msgid "Introduction"
-msgstr ""
+msgstr "はじめに"
 
 #: ../../src/introduction/index.md:3 950370f0a36048b38e1bde9b78f80816
 msgid ""
@@ -759,7 +761,7 @@ msgstr ""
 
 #: ../../src/introduction/prerequisites.md:1 f01faaf1b253407cbbc2f353c24774f3
 msgid "Prerequisites"
-msgstr ""
+msgstr "前提条件"
 
 #: ../../src/introduction/prerequisites.md:6 353b14f06ee845d0a06a829643e31534
 msgid ""
@@ -773,7 +775,7 @@ msgstr ""
 
 #: ../../src/introduction/prerequisites.md:12 b5a0607096814c0aa577f977c3b57c54
 msgid "CWL Implementations"
-msgstr ""
+msgstr "CWL実装"
 
 #: ../../src/introduction/prerequisites.md:14 ff2bb4c6504b456bac7ca9c514414dbf
 msgid ""
@@ -785,25 +787,26 @@ msgstr ""
 
 #: ../../src/introduction/prerequisites.md:19 cbbcce4c2a96471b8b0ae3593ad59de4
 msgid "Operating System"
-msgstr ""
+msgstr "オペレーティングシステム"
 
 #: ../../src/introduction/prerequisites.md:21 5089fdba8aed4113983fa86e698df98b
 msgid ""
 "We recommend using an up-to-date operating system. You can choose any of the "
 "following options for your operating system:"
-msgstr ""
+msgstr "最新のオペレーティングシステムを使用することをお勧めします。OSは、以下のいず"
+"れかをお選びいただけます："
 
 #: ../../src/introduction/prerequisites.md:24 dbaa4bae22fe4d05b18d7351967ddbc3
 msgid "Linux"
-msgstr ""
+msgstr "Linux"
 
 #: ../../src/introduction/prerequisites.md:25 c05187af85be41b782678b79627f8fbf
 msgid "macOS"
-msgstr ""
+msgstr "macOS"
 
 #: ../../src/introduction/prerequisites.md:26 beb6cf4d7c154eb9b6d7fe024a318ed7
 msgid "Windows"
-msgstr ""
+msgstr "Windows"
 
 #: ../../src/introduction/prerequisites.md:29 3b5fdc4c2ebd45dcb3703e59d2b3ef25
 msgid ""
