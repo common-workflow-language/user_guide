@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: Common Workflow Language User Guide\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-01-25 14:33+0100\n"
-"PO-Revision-Date: 2023-08-17 01:56+0000\n"
+"PO-Revision-Date: 2023-08-22 00:00+0000\n"
 "Last-Translator: Manabu ISHII <manabu.ishii.rb@gmail.com>\n"
 "Language-Team: Japanese <https://hosted.weblate.org/projects/commonwl/"
 "user-guide/ja/>\n"
@@ -901,10 +901,13 @@ msgid ""
 "The CWL community publishes a Python package with the name `cwlref-runner` "
 "that installs an alias for `cwltool` under the name `cwl-runner`"
 msgstr ""
+"CWLコミュニティは、`cwlref-runner` "
+"という名前のPythonパッケージを公開しており、`cwltool` のエイリアスを`cwl-"
+"runner` という名前でインストールします。"
 
 #: ../../src/introduction/prerequisites.md:104 71ebe91d4bda473abe87578929433212
 msgid "Installing `cwl-runner` alias for cwltool with `pip`."
-msgstr ""
+msgstr "cwltool のエイリアス `cwl-runner` を `pip` でインストールします。"
 
 #: ../../src/introduction/prerequisites.md:111 746c6fc9c29d466494458a08d4c96672
 msgid ""
@@ -912,6 +915,9 @@ msgid ""
 "which will invoke `cwltool`. You should have the same results and output as "
 "in the previous section."
 msgstr ""
+"これで `cwl-runner` 実行ファイルを用いてワークフローを検証・実行し、`cwltool`"
+" を呼び出すことができるようになりました。前のセクションと同じ結果と出力が得ら"
+"れるはずです。"
 
 #: ../../src/introduction/prerequisites.md:115 b9cc5a843a0f49daad56e9303657bdd5
 msgid "Validating `true.cwl` with `cwl-runner`."
@@ -930,16 +936,17 @@ msgstr ""
 
 #: ../../src/introduction/prerequisites.md:129 f74dd9bd4ff84bf48f3f8e8c8d6fb51a
 msgid "`true_shebang.cwl`"
-msgstr ""
+msgstr "`true_shebang.cwl`"
 
 #: ../../src/introduction/prerequisites.md:135 164c438baab54ec19bbb4584a10dd411
 msgid ""
 "Now you can make the file `true_shebang.cwl` executable with `chmod u+x`."
-msgstr ""
+msgstr "`chmod u+x` を実行することで、 `true_shebang.cwl` "
+"を実行可能なファイルにすることができます。"
 
 #: ../../src/introduction/prerequisites.md:137 bf8be77af6154326b28442c5d2e2b852
 msgid "Making `true.cwl` executable."
-msgstr ""
+msgstr "`true.cwl` 実行可能なものにする。"
 
 #: ../../src/introduction/prerequisites.md:144 695184d1b45a42f393e2da99c3721773
 msgid ""
@@ -950,7 +957,7 @@ msgstr ""
 
 #: ../../src/introduction/prerequisites.md:148 7c4f45b3e7b549e186126693aa4a3d4f
 msgid "Running `true_shebang.cwl` with a shebang."
-msgstr ""
+msgstr "`true_shebang.cwl` をシェバングで実行する。"
 
 #: ../../src/introduction/prerequisites.md:154 3ba23b4ea01c46848e4e43bbeff5f5a1
 msgid ""
@@ -964,7 +971,7 @@ msgstr ""
 
 #: ../../src/introduction/prerequisites.md:161 eec6c07455384630809ff1c532bfe7d4
 msgid "Text Editor"
-msgstr ""
+msgstr "テキストエディタ"
 
 #: ../../src/introduction/prerequisites.md:163 f6b39b12bd5c495cb53e2795bf9200ed
 msgid ""
@@ -997,6 +1004,8 @@ msgid ""
 "The CWL community also maintains a list of editors and viewers: <https://www."
 "commonwl.org/tools/#editors>"
 msgstr ""
+"CWLコミュニティでは、エディターやビューアーのリストも管理しています：<https:/"
+"/www.commonwl.org/tools/#editors>"
 
 #: ../../src/introduction/prerequisites.md:177 6ce8b81560e341c580d316d69202b268
 msgid "Docker"
@@ -1029,11 +1038,12 @@ msgstr ""
 msgid ""
 "The [Implementations](basic-concepts.md#implementations) topic in the next "
 "section, Basic Concepts."
-msgstr ""
+msgstr "次項の「基本コンセプト」の[実装](basic-concepts."
+"md#implementations)のトピックを参照してください。"
 
 #: ../../src/introduction/prerequisites.md:199 12042e411482458f8c35a2491f9433e0
 msgid "The Python `venv` module: <https://docs.python.org/3/library/venv.html>"
-msgstr ""
+msgstr "Python`venv` モジュール:<https://docs.python.org/3/library/venv.html>"
 
 #: ../../src/introduction/quick-start.md:1 cdd4196f9aa34beba115901ec97913b6
 msgid "Quick Start"
@@ -1048,7 +1058,7 @@ msgstr ""
 
 #: ../../src/introduction/quick-start.md:7 280936bb2a22469799b2c9e9ba22adee
 msgid "“Hello World”"
-msgstr ""
+msgstr "\"Hello World\""
 
 #: ../../src/introduction/quick-start.md:12 cb203354977d42a58112d09357f62565
 msgid ""
@@ -1059,7 +1069,7 @@ msgstr ""
 
 #: ../../src/introduction/quick-start.md:16 9e51962a7e5c47248f3e20703ae101eb
 msgid "`hello_world.cwl`"
-msgstr ""
+msgstr "`hello_world.cwl`"
 
 #: ../../src/introduction/quick-start.md:22 7e475e3f3c4a4404bb0236124c0f7ce7
 msgid ""
@@ -1145,7 +1155,7 @@ msgstr ""
 
 #: ../../src/introduction/quick-start.md:82 d4cdbe870a6f4a68b542ca719d989062
 msgid "Passing an Inputs Object file to `cwltool`."
-msgstr ""
+msgstr "`cwltool` に Inputs Object ファイルをします。"
 
 #: ../../src/introduction/quick-start.md:88 b6d59e4b9c854abab1b3f7a0fa26f504
 msgid ""
@@ -1157,30 +1167,36 @@ msgstr ""
 
 #: ../../src/introduction/quick-start.md:96 5535b98e8b1342f09f003ec6db2b44b1
 msgid "Continue reading the next sections of this User Guide!"
-msgstr ""
+msgstr "このユーザーガイドの次のセクションを読み進めてください！"
 
 #: ../../src/introduction/quick-start.md:97 77e43c7117fd4c52b140f0dd52cc3963
 msgid ""
 "[List of CWL Implementations](https://www.commonwl.org/implementations)."
-msgstr ""
+msgstr "[CWL 実装一覧](https://www.commonwl.org/implementations)。"
 
 #: ../../src/introduction/quick-start.md:98 7282abfa7155497ca47c30f9abfb6474
 msgid ""
 "The [`common-workflow-language` organization](https://github.com/common-"
 "workflow-language) at GitHub."
 msgstr ""
+"GitHubの[`common-workflow-language` organization](https://github.com/common-"
+"workflow-language)です。"
 
 #: ../../src/introduction/quick-start.md:99 176d8d47830f4031bb95dc231ebf1303
 msgid ""
 "[Common Workflow Language at Wikipedia](https://en.wikipedia.org/wiki/"
 "Common_Workflow_Language)."
 msgstr ""
+"[Wikipedia上のCommon Workflow Language](https://en.wikipedia.org/wiki/"
+"Common_Workflow_Language)。"
 
 #: ../../src/introduction/quick-start.md:100 82a7ca3703bc4f0daa18942a1ac8943b
 msgid ""
 "[YAML.org](http://yaml.org/) and [YAML at Wikipedia](https://en.wikipedia."
 "org/wiki/YAML)."
 msgstr ""
+"[YAML.org](http://yaml.org/) と [WikipediaにあるYAML](https://en.wikipedia."
+"org/wiki/YAML) です。"
 
 #: ../../src/introduction/quick-start.md:101 d039a9d6461c44628d4660c00d9ce6ff
 msgid ""
@@ -1193,6 +1209,8 @@ msgid ""
 "[Workflow management system at Wikipedia](https://en.wikipedia.org/wiki/"
 "Workflow_management_system)."
 msgstr ""
+"[Wikipediaの項目としてのワークフロー管理システム](https://en.wikipedia.org/"
+"wiki/Workflow_management_system)。"
 
 #: ../../src/setup.md:9 1330bd38c4b5495f890b98c669f81a9d
 msgid ""
@@ -1244,7 +1262,8 @@ msgstr ""
 msgid ""
 "And now invoke `cwltool` providing the tool description and the input object "
 "on the command line:"
-msgstr ""
+msgstr "そして、コマンドラインでツール定義と入力オブジェクトを渡して`cwltool` "
+"を起動します："
 
 #: ../../src/topics/additional-arguments-and-parameters.md:36
 #: 713666580a0a4466b4ba6e3eb2b54f0a
@@ -1267,7 +1286,7 @@ msgstr ""
 
 #: ../../src/topics/best-practices.md:1 612c4a66c36a43d4ac5d74c1757d6845
 msgid "Best Practices"
-msgstr ""
+msgstr "ベストプラクティス"
 
 #: ../../src/topics/best-practices.md:3 939cd9e9eaff4e3ab74fe707a5d4eb21
 msgid ""
@@ -1312,7 +1331,8 @@ msgstr ""
 msgid ""
 "Useful reading: \"[A Quick Guide to Software Licensing for the Scientist-"
 "Programmer][sci-license]\""
-msgstr ""
+msgstr "参考文献：\"[科学者・プログラマーのためのソフトウェアライセンス "
+"クイックガイド][sci-license]\""
 
 #: ../../src/topics/best-practices.md:28 263a127a77cf4c41af76854f22f1f260
 msgid "_Example of metadata field for license with SPDX identifier:_"
@@ -1336,7 +1356,8 @@ msgstr ""
 msgid ""
 "In tool descriptions, list dependencies using short name(s) under "
 "`SoftwareRequirement`."
-msgstr ""
+msgstr "ツール定義では、`SoftwareRequirement` "
+"の下に、短い名前を使用して依存関係をリストアップします。"
 
 #: ../../src/topics/best-practices.md:47 f2b14a92374e449d9fb1e8c86ae0dd61
 msgid ""
@@ -1357,6 +1378,8 @@ msgid ""
 "In tool descriptions, include a list of version(s) of the tool that are "
 "known to work with this description under `SoftwareRequirement`."
 msgstr ""
+"ツール定義では、`SoftwareRequirement` の下に、このツール定義で動作することが"
+"確認されているツールのバージョンのリストを含めるます。"
 
 #: ../../src/topics/best-practices.md:58 339b852df24242189d6efcd2898a3396
 msgid ""
@@ -1399,12 +1422,15 @@ msgid ""
 "more detailed description than was provided in the top-level `label` (see "
 "above)."
 msgstr ""
+"有用であれば、トップレベル`doc` も含めてください。これは、トップレベル`label`"
+" （上記参照）で提供されたものより長く詳細な説明を記述します。"
 
 #: ../../src/topics/best-practices.md:82 92430be71ecc40e18bbbb80d5576c613
 msgid ""
 "Use `type: enum` instead of `type: string` for elements with a fixed list of "
 "valid values."
-msgstr ""
+msgstr "有効な値のリストが決まっている要素には、`type: string` の代わりに、`type: "
+"enum` を使用してください。"
 
 #: ../../src/topics/best-practices.md:85 387d83db81024f65aa9a890c2d07874a
 msgid ""
@@ -1418,7 +1444,8 @@ msgstr ""
 msgid ""
 "Give the tool description to a colleague (preferably at a different "
 "institution) to test and provide feedback."
-msgstr ""
+msgstr "ツール定義を同僚（できれば別の機関の人）に渡し、テストしてもらい、フィードバ"
+"ックをもらいましょう。"
 
 #: ../../src/topics/best-practices.md:93 f1c1340f9745458980e0fbd641738687
 msgid ""
@@ -1436,7 +1463,7 @@ msgstr ""
 
 #: ../../src/topics/command-line-tool.md:1 3f4e98f6bfa141feba8c4b120e3d03e8
 msgid "Command Line Tool"
-msgstr ""
+msgstr "コマンドラインツール"
 
 #: ../../src/topics/command-line-tool.md:3 12f57b2ba76b492abe1816e06bfb1417
 msgid ""
@@ -1452,14 +1479,17 @@ msgid ""
 "example contains a minimal example of a CWL command-line tool for the `echo` "
 "Linux command, using inputs and outputs."
 msgstr ""
+"CWLコマンドラインツールは、`inputs` と`outputs` "
+"も持っていなければなりません。次の例は、Linuxコマンド `echo` "
+"のためのCWLコマンドラインツールの最小限の例で、inputsとoutputsを使用します。"
 
 #: ../../src/topics/command-line-tool.md:19 abb83f0097654a43bd78639d3dbb2bc8
 msgid "CWL command-line tool."
-msgstr ""
+msgstr "CWLコマンドラインツール。"
 
 #: ../../src/topics/command-line-tool.md:50 3b1a9ae3412f4d6e96a39b9a16934232
 msgid "`echo.cwl`"
-msgstr ""
+msgstr "`echo.cwl`"
 
 #: ../../src/topics/command-line-tool.md:57 a5eacdbc9aa142c890b177869da4143d
 msgid ""
@@ -1506,7 +1536,7 @@ msgstr ""
 #: ../../src/topics/creating-files-at-runtime.md:9
 #: d3f74c3b094a427fbec831afab657d50
 msgid "`createfile.cwl`"
-msgstr ""
+msgstr "`createfile.cwl`"
 
 #: ../../src/topics/creating-files-at-runtime.md:15
 #: cfffc518ba6e4ed1a80762ed6f7d25df
@@ -1531,14 +1561,15 @@ msgstr ""
 msgid ""
 "To test the above CWL tool, use this job to provide the input value "
 "`message`:"
-msgstr ""
+msgstr "上記のCWLツールをテストするために、このジョブを使用して、入力値`message` "
+"を与えます："
 
 #: ../../src/topics/creating-files-at-runtime.md:29
 #: ../../src/topics/environment-variables.md:13 ../../src/topics/outputs.md:77
 #: 2d2ef4769b2347e79db827655f1bcdeb 2699fbc4376148af91b7a5a6cdac467c
 #: ca03defa3ad14cf698171cb09e3055c1
 msgid "`echo-job.yml`"
-msgstr ""
+msgstr "`echo-job.yml`"
 
 #: ../../src/topics/creating-files-at-runtime.md:35
 #: 10d1373bb14a4a3cacd3b92a2f83382d
@@ -1565,7 +1596,8 @@ msgstr ""
 msgid ""
 "See the [YAML Guide](../topics/yaml-guide.md#maps) for more about the "
 "formatting."
-msgstr ""
+msgstr "フォーマットについては、[YAMLガイド](../topics/yaml-guide."
+"md#maps)を参照してください。"
 
 #: ../../src/topics/creating-files-at-runtime.md:54
 #: ../../src/topics/environment-variables.md:18
@@ -1577,11 +1609,12 @@ msgstr ""
 msgid ""
 "Now invoke `cwltool` with the tool description and the input object on the "
 "command line:"
-msgstr ""
+msgstr "ここで、コマンドラインにツール定義と入力オブジェクトを指定して、`cwltool` "
+"を起動します："
 
 #: ../../src/topics/custom-types.md:1 cb34fd4c8cb04053ada491a227651048
 msgid "Custom Types"
-msgstr ""
+msgstr "カスタムタイプ"
 
 #: ../../src/topics/custom-types.md:3 67573252cc064b27ab13eebc468ac58a
 msgid ""
@@ -1597,14 +1630,16 @@ msgid ""
 "The example below is a CWL description of the [biom convert format][biom] "
 "tool for converting a standard biom table file to hdf5 format."
 msgstr ""
+"以下の例は、標準的なbiomテーブルファイルをhdf5形式に変換する[biom convert "
+"format][biom] ツールのCWL定義です。"
 
 #: ../../src/topics/custom-types.md:12 ef5f35acb97f4ddfad7b688712f53484
 msgid "`custom-types.cwl`"
-msgstr ""
+msgstr "`custom-types.cwl`"
 
 #: ../../src/topics/custom-types.md:18 7015dfa99a6f4cfb87ebf0ed61e8043c
 msgid "`custom-types.yml`"
-msgstr ""
+msgstr "`custom-types.yml`"
 
 #: ../../src/topics/custom-types.md:24 a999b1acda2641598086648c64aa3831
 msgid ""
@@ -1634,11 +1669,11 @@ msgstr ""
 #: ../../src/topics/custom-types.md:53 b0a4df0fd3ca42338cff4689235dcf4e
 msgid ""
 "The contents of the YAML file describing the custom type are given below:"
-msgstr ""
+msgstr "カスタムタイプを記述するYAMLファイルの内容を以下に示します："
 
 #: ../../src/topics/custom-types.md:55 fecfbb44456640d8ba05e519bf2ff564
 msgid "`biom-convert-table.yaml`"
-msgstr ""
+msgstr "`biom-convert-table.yaml`"
 
 #: ../../src/topics/custom-types.md:61 d718630a296545f3a989c8c71e9ddc77
 msgid ""
@@ -1659,7 +1694,7 @@ msgstr ""
 
 #: ../../src/topics/environment-variables.md:1 59014808cbef4c02aaef03129d8a29b0
 msgid "Environment Variables"
-msgstr ""
+msgstr "環境変数"
 
 #: ../../src/topics/environment-variables.md:3 3c821c9c46d841ec89b8a5b1018f3af8
 msgid ""
@@ -1670,11 +1705,11 @@ msgstr ""
 
 #: ../../src/topics/environment-variables.md:7 bfdebb32440a4034beb42135e38884e8
 msgid "`env.cwl`"
-msgstr ""
+msgstr "`env.cwl`"
 
 #: ../../src/topics/expression-tool.md:1 777d4a52f7554eff84db2df6d4d0f729
 msgid "Expression Tool"
-msgstr ""
+msgstr "Expression Tool"
 
 #: ../../src/topics/expression-tool.md:3 48deb71f361a43e48a56ed483075bca8
 msgid ""
