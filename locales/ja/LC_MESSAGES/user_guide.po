@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: Common Workflow Language User Guide\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-01-25 14:33+0100\n"
-"PO-Revision-Date: 2023-08-22 00:00+0000\n"
+"PO-Revision-Date: 2023-08-25 00:56+0000\n"
 "Last-Translator: Manabu ISHII <manabu.ishii.rb@gmail.com>\n"
 "Language-Team: Japanese <https://hosted.weblate.org/projects/commonwl/"
 "user-guide/ja/>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 5.0-dev\n"
+"X-Generator: Weblate 5.0\n"
 
 #: ../../LICENSE.md:2 4e203044f0464fd5a3256430391dde12
 msgid "Licenses"
@@ -1794,7 +1794,7 @@ msgstr ""
 msgid ""
 "Note that requirements can be provided with the map syntax, as in the "
 "example above:"
-msgstr ""
+msgstr "なお、上の例のように、map構文で requirements を指定することも可能です："
 
 #: ../../src/topics/expressions.md:54 2f28ab412d2843ffa5f14acdc01fc732
 msgid ""
@@ -1805,7 +1805,7 @@ msgstr ""
 
 #: ../../src/topics/expressions.md:62 d957f55a6377422c9834f85d45e35009
 msgid "Where are JavaScript expressions allowed?"
-msgstr ""
+msgstr "JavaScriptはどこで使えますか？"
 
 #: ../../src/topics/expressions.md:64 cbec9277b5004e50af2728cbda0df740
 msgid ""
@@ -1814,16 +1814,19 @@ msgid ""
 msgstr ""
 
 #: ../../src/topics/expressions.md:66 e259f55f8000479bbd8009e25cf0ca6c
+#, fuzzy
 msgid ""
 "From [`CommandLineTool`](https://www.commonwl.org/v1.0/CommandLineTool."
 "html#CommandLineTool)"
 msgstr ""
+"[`CommandLineTool`](https://www.commonwl.org/v1.0/CommandLineTool."
+"html#CommandLineTool)から"
 
 #: ../../src/topics/expressions.md:67
 #: ../../src/topics/parameter-references.md:64 1acb064f7a4a482aa0174bdc847c6382
 #: 0222780b98ac48e89b1b4f57c9df8590
 msgid "`arguments`"
-msgstr ""
+msgstr "`arguments`"
 
 #: ../../src/topics/expressions.md:68 ../../src/topics/expressions.md:76
 #: ../../src/topics/expressions.md:89
@@ -1834,31 +1837,34 @@ msgstr ""
 #: ffd3ca1f97cf4d3a892ef4f4b04771e4 e4e68011dc5f42e4918c747afa7d764b
 #: d44e3cfa661840eb851782e24caf1b68
 msgid "`valueFrom`"
-msgstr ""
+msgstr "`valueFrom`"
 
 #: ../../src/topics/expressions.md:69
 #: ../../src/topics/parameter-references.md:66 0bddedfe40e841f7878e09792531e6bf
 #: 17ac6d2c703b466f9720b7489209a2ff
 msgid "`stdin`"
-msgstr ""
+msgstr "`stdin`"
 
 #: ../../src/topics/expressions.md:70
 #: ../../src/topics/parameter-references.md:67 58a6510ef69a4c51a4ea348cd98ef0d2
 #: a11d0de5ac6a4a6d9afe0e34823e3b45
 msgid "`stdout`"
-msgstr ""
+msgstr "`stdout`"
 
 #: ../../src/topics/expressions.md:71
 #: ../../src/topics/parameter-references.md:68 2437656e20354d63bede1b98d5348e2c
 #: 37392218309d4baebe62fc38bf50efe9
 msgid "`stderr`"
-msgstr ""
+msgstr "`stderr`"
 
 #: ../../src/topics/expressions.md:72 8210b36347a749889450529ecdf4ff0e
+#, fuzzy
 msgid ""
 "From [CommandInputParameter](https://www.commonwl.org/v1.0/CommandLineTool."
 "html#CommandInputParameter)"
 msgstr ""
+"[CommandInputParameter](https://www.commonwl.org/v1.0/CommandLineTool."
+"html#CommandInputParameter)から"
 
 #: ../../src/topics/expressions.md:73 ../../src/topics/expressions.md:78
 #: ../../src/topics/expressions.md:85 ../../src/topics/expressions.md:93
@@ -1871,7 +1877,7 @@ msgstr ""
 #: e89dbeb22f41430ca39c923d9fdf68cb bd61499b71e64164878dea08d6d7141e
 #: ed875a006df64f9e8a55fa5e9fa87404
 msgid "`format`"
-msgstr ""
+msgstr "`format`"
 
 #: ../../src/topics/expressions.md:74 ../../src/topics/expressions.md:79
 #: ../../src/topics/expressions.md:86 ../../src/topics/expressions.md:94
@@ -1884,76 +1890,94 @@ msgstr ""
 #: da5188d3bedc4997a35bdf417f2f643c cd7a0190511d4613b09600a3b1e9d55f
 #: 47def3b078e2402182039be0227090ae
 msgid "`secondaryFiles`"
-msgstr ""
+msgstr "`secondaryFiles`"
 
 #: ../../src/topics/expressions.md:75 23088850ad02459696f6bbd385109aac
 msgid ""
 "From [`inputBinding`](https://www.commonwl.org/v1.0/CommandLineTool."
 "html#CommandLineBinding)"
 msgstr ""
+"[`inputBinding`](https://www.commonwl.org/v1.0/CommandLineTool."
+"html#CommandLineBinding)から"
 
 #: ../../src/topics/expressions.md:77 f02257a822ad46ac93c5981531cc85d5
 msgid ""
 "From [CommandOutputParamater](https://www.commonwl.org/v1.0/CommandLineTool."
 "html#CommandOutputParameter)"
 msgstr ""
+"[CommandOutputParamater](https://www.commonwl.org/v1.0/CommandLineTool."
+"html#CommandOutputParameter)から"
 
 #: ../../src/topics/expressions.md:80 989a1c4aaa1143be9f53b90cd8b6d500
 msgid ""
 "From [CommandOutputBinding](https://www.commonwl.org/v1.0/CommandLineTool."
 "html#CommandOutputBinding)"
 msgstr ""
+"[CommandOutputBinding](https://www.commonwl.org/v1.0/CommandLineTool."
+"html#CommandOutputBinding)から"
 
 #: ../../src/topics/expressions.md:81
 #: ../../src/topics/parameter-references.md:78 582b03ac742745a89f4dfc86b7404db2
 #: d193ce0123db4535a4f0b11405ad0322
 msgid "`glob`"
-msgstr ""
+msgstr "`glob`"
 
 #: ../../src/topics/expressions.md:82
 #: ../../src/topics/parameter-references.md:79 d555a3d991e344a5a8e1289168d7c6d1
 #: 44b3f123c9b04a308c1161b742a7b34b
 msgid "`outputEval`"
-msgstr ""
+msgstr "`outputEval`"
 
 #: ../../src/topics/expressions.md:83
 #: ../../src/topics/parameter-references.md:80 e9fa9430535c424fa3e8be5d460d2ba4
 #: 0e306cc923974d1db83fdfb45105a11c
+#, fuzzy
 msgid "From `Workflow`"
-msgstr ""
+msgstr "`Workflow`から"
 
 #: ../../src/topics/expressions.md:84 d289541e460147aa933f7878996f8649
+#, fuzzy
 msgid ""
 "From [InputParameter](https://www.commonwl.org/v1.0/Workflow."
 "html#InputParameter) and [WorkflowOutputParameter](https://www.commonwl.org/"
 "v1.0/Workflow.html#WorkflowOutputParameter)"
 msgstr ""
+"[InputParameter](https://www.commonwl.org/v1.0/Workflow.html#InputParameter) "
+"と [WorkflowOutputParameter](https://www.commonwl.org/v1.0/Workflow."
+"html#WorkflowOutputParameter)から"
 
 #: ../../src/topics/expressions.md:87
 #: ../../src/topics/parameter-references.md:84 b0290d1a477b48119e17cf1fed9d6dff
 #: 446f1190af7a40a0913ff04ce7aa938c
+#, fuzzy
 msgid "From `steps`"
-msgstr ""
+msgstr "`steps`から"
 
 #: ../../src/topics/expressions.md:88 81b4d1f23a3642bfa9bb395b94260cd1
+#, fuzzy
 msgid ""
 "From [WorkflowStepInput](https://www.commonwl.org/v1.0/Workflow."
 "html#WorkflowStepInput)"
 msgstr ""
+"[WorkflowStepInput](https://www.commonwl.org/v1.0/Workflow."
+"html#WorkflowStepInput)から"
 
 #: ../../src/topics/expressions.md:90
 #: ../../src/topics/parameter-references.md:87 e1cde4aa32c041238ed2596173c6d824
 #: 557694f82e314baa9ccafba14d6ff2c9
+#, fuzzy
 msgid ""
 "From [ExpressionTool](https://www.commonwl.org/v1.0/Workflow."
 "html#ExpressionTool)"
 msgstr ""
+"[ExpressionTool](https://www.commonwl.org/v1.0/Workflow."
+"html#ExpressionTool)から"
 
 #: ../../src/topics/expressions.md:91
 #: ../../src/topics/parameter-references.md:88 c2a92d3eca7f4ee39cec649170eeea53
 #: 3c939769ede94602a67fc50c435741cf
 msgid "`expression`"
-msgstr ""
+msgstr "`expression`"
 
 #: ../../src/topics/expressions.md:92 f495da32f05a4a5ba9539be0a54c1a59
 msgid ""
@@ -1961,106 +1985,119 @@ msgid ""
 "html#InputParameter) and [ExpressionToolOutputParameter](https://www."
 "commonwl.org/v1.0/Workflow.html#ExpressionToolOutputParameter)"
 msgstr ""
+"[InputParameter](https://www.commonwl.org/v1.0/Workflow.html#InputParameter) "
+"と [ExpressionToolOutputParameter](https://www.commonwl.org/v1.0/Workflow."
+"html#ExpressionToolOutputParameter)から"
 
 #: ../../src/topics/expressions.md:95 bdb4c68a175047ddbe141ca24960127f
+#, fuzzy
 msgid ""
 "From [`ResourceRequirement`](https://www.commonwl.org/v1.0/CommandLineTool."
 "html#ResourceRequirement)"
 msgstr ""
+"[`ResourceRequirement`](https://www.commonwl.org/v1.0/CommandLineTool."
+"html#ResourceRequirement)から"
 
 #: ../../src/topics/expressions.md:96
 #: ../../src/topics/parameter-references.md:93 4b73495cf18a4d908525292b6f23c419
 #: d0eec6969d174b258e0f010800884cc6
 msgid "`coresMin`"
-msgstr ""
+msgstr "`coresMin`"
 
 #: ../../src/topics/expressions.md:97
 #: ../../src/topics/parameter-references.md:94 718ceee9973240ec9c100977bbcc8921
 #: 2b25152f6df5494a8632f3ce631c20d8
 msgid "`coresMax`"
-msgstr ""
+msgstr "`coresMax`"
 
 #: ../../src/topics/expressions.md:98
 #: ../../src/topics/parameter-references.md:95 c07ab08eb75d4528949c56a3d7c12b28
 #: 846cd427ae25410eae7c920b237edcb0
 msgid "`ramMin`"
-msgstr ""
+msgstr "`ramMin`"
 
 #: ../../src/topics/expressions.md:99
 #: ../../src/topics/parameter-references.md:96 594bc5b7e5be4be9b5e1f6b2502e3bd3
 #: b885e108dced4981a445e5fa0a044394
 msgid "`ramMax`"
-msgstr ""
+msgstr "`ramMax`"
 
 #: ../../src/topics/expressions.md:100
 #: ../../src/topics/parameter-references.md:97 700c57ccd5e347be86702c83a8af24b3
 #: e9f5306ae6ea49bbb6801dcce9be2d67
 msgid "`tmpdirMin`"
-msgstr ""
+msgstr "`tmpdirMin`"
 
 #: ../../src/topics/expressions.md:101
 #: ../../src/topics/parameter-references.md:98 509a5e2ec52d413eb57754d359f133e4
 #: 58bf8016f5f04c26b645025f405e2288
 msgid "`tmpdirMax`"
-msgstr ""
+msgstr "`tmpdirMax`"
 
 #: ../../src/topics/expressions.md:102
 #: ../../src/topics/parameter-references.md:99 5a60ab5ee19446f8a6f49ab8583101a9
 #: 7c817029d55b4700ae8e84be4d0f0ca0
 msgid "`outdirMin`"
-msgstr ""
+msgstr "`outdirMin`"
 
 #: ../../src/topics/expressions.md:103
 #: ../../src/topics/parameter-references.md:100
 #: 1f39f016524a459895ed03c72d74932b e3b76f42c924489f9a0bcf5a7b636d23
 msgid "`outdirMax`"
-msgstr ""
+msgstr "`outdirMax`"
 
 #: ../../src/topics/expressions.md:104 97b61352363f47cb890e8937c5613fa3
 msgid ""
 "From [`InitialWorkDirRequirement`](https://www.commonwl.org/v1.0/"
 "CommandLineTool.html#InitialWorkDirRequirement)"
 msgstr ""
+"[`InitialWorkDirRequirement`](https://www.commonwl.org/v1.0/CommandLineTool."
+"html#InitialWorkDirRequirement)から"
 
 #: ../../src/topics/expressions.md:105
 #: ../../src/topics/parameter-references.md:102
 #: 9359ef94c41249ea8e76fe629926054e a258554d462f4f5f83ece28d5b2fc584
 msgid "`listing`"
-msgstr ""
+msgstr "`listing`"
 
 #: ../../src/topics/expressions.md:106 8d0b142bb7ed4e61b8fb03de197240ce
+#, fuzzy
 msgid "in [Dirent](https://www.commonwl.org/v1.0/CommandLineTool.html#Dirent)"
-msgstr ""
+msgstr "[Dirent](https://www.commonwl.org/v1.0/CommandLineTool.html#Dirent)に"
 
 #: ../../src/topics/expressions.md:107
 #: ../../src/topics/parameter-references.md:104
 #: effc0208cf4f4551958db6e526c0528b 9d4889c8cec24351a7a9e3c547e331b6
 msgid "`entry`"
-msgstr ""
+msgstr "`entry`"
 
 #: ../../src/topics/expressions.md:108
 #: ../../src/topics/parameter-references.md:105
 #: be6c1e85c7b6495d8086c262daad20e7 af4f7f232a9d42388c0ba1cfc7c2cdf7
 msgid "`entryname`"
-msgstr ""
+msgstr "`entryname`"
 
 #: ../../src/topics/expressions.md:109
 #: ../../src/topics/parameter-references.md:106
 #: 2183ac54ae10428388649daa57b6a7f4 6abeba392b0444b19f92a19f178a4682
+#, fuzzy
 msgid "From `EnvVarRequirement`"
-msgstr ""
+msgstr "`EnvVarRequirement`から"
 
 #: ../../src/topics/expressions.md:110 0bc424ef2ca346099f29b937379908a0
+#, fuzzy
 msgid ""
 "From [EnvironmentDef](https://www.commonwl.org/v1.0/CommandLineTool."
 "html#EnvironmentDef)"
 msgstr ""
+"[EnvironmentDef](https://www.commonwl.org/v1.0/CommandLineTool."
+"html#EnvironmentDef)から"
 
 #: ../../src/topics/expressions.md:111
 #: ../../src/topics/parameter-references.md:108
 #: 107b54b832df4d408d1315bdba05b4dd 949c376120d8441796ec9c89364f8851
 msgid "`envValue`"
-msgstr ""
+msgstr "`envValue`"
 
 #: ../../src/topics/expressions.md:116 10d36a1adfd04144b401c993b12b4094
 msgid ""
@@ -2100,7 +2137,7 @@ msgstr ""
 
 #: ../../src/topics/expressions.md:139 49d0fda2fc144e0b8b7c92afc1d8945e
 msgid "`hello-world-expressionlib-inline.cwl`"
-msgstr ""
+msgstr "`hello-world-expressionlib-inline.cwl`"
 
 #: ../../src/topics/expressions.md:146 8f0e8f050e334ac08334e9215e1dcf61
 msgid ""
@@ -2197,17 +2234,17 @@ msgstr ""
 
 #: ../../src/topics/file-formats.md:20 0535d5de416b4ea3b2f5996583deecc1
 msgid "`metadata_example.cwl`"
-msgstr ""
+msgstr "`metadata_example.cwl`"
 
 #: ../../src/topics/file-formats.md:26
 #: ../../src/topics/metadata-and-authorship.md:22
 #: f558bcf2a993482195cd418b37761809 fb47f73c38cf4ec59bd3021866a631f8
 msgid "The equivalent of this CWL description in command line format is:"
-msgstr ""
+msgstr "このCWL定義に相当するものをコマンドライン形式にすると"
 
 #: ../../src/topics/file-formats.md:32 74b28c1b09c6429b82e462e4ec61808e
 msgid "Sample Parameter Files"
-msgstr ""
+msgstr "サンプルパラメーターファイル"
 
 #: ../../src/topics/file-formats.md:34 a2ce43b391864e8bbde16328cc19b32b
 msgid ""
@@ -2219,7 +2256,7 @@ msgstr ""
 
 #: ../../src/topics/file-formats.md:39 aebee48b742c4145a600fd2daf8c75dc
 msgid "`sample.yml`"
-msgstr ""
+msgstr "`sample.yml`"
 
 #: ../../src/topics/file-formats.md:45 56ee4dcfff6141d5bef80eb96559876d
 msgid ""
@@ -2231,15 +2268,15 @@ msgstr ""
 
 #: ../../src/topics/index.md:1 8d3a6d83e2e54c56995893c41590b7ff
 msgid "Topics"
-msgstr ""
+msgstr "トピックス"
 
 #: ../../src/topics/inputs.md:1 5abcdebfa1cb401bb8892553be285fd3
 msgid "Inputs"
-msgstr ""
+msgstr "Inputs"
 
 #: ../../src/topics/inputs.md:3 d3a55f71dc244026a97902de9ed819ea
 msgid "Essential Input Parameters"
-msgstr ""
+msgstr "必須入力パラメータ"
 
 #: ../../src/topics/inputs.md:5 96671c56523c4ea9992fb5dfcfa6490e
 msgid ""
