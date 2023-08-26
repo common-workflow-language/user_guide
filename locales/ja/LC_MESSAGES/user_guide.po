@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: Common Workflow Language User Guide\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-01-25 14:33+0100\n"
-"PO-Revision-Date: 2023-08-25 00:56+0000\n"
+"PO-Revision-Date: 2023-08-26 23:56+0000\n"
 "Last-Translator: Manabu ISHII <manabu.ishii.rb@gmail.com>\n"
 "Language-Team: Japanese <https://hosted.weblate.org/projects/commonwl/"
 "user-guide/ja/>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 5.0\n"
+"X-Generator: Weblate 5.0.1-dev\n"
 
 #: ../../LICENSE.md:2 4e203044f0464fd5a3256430391dde12
 msgid "Licenses"
@@ -2337,7 +2337,8 @@ msgstr ""
 msgid ""
 "Next, create a whale.txt using [touch] by typing `touch whale.txt` on the "
 "command line."
-msgstr ""
+msgstr "次に、コマンドラインで`touch whale.txt` と入力し、[touch]"
+"をコマンドを使用して whale.txt を作成します。"
 
 #: ../../src/topics/inputs.md:53 0b056dde9e87428996e47870b12119da
 msgid ""
@@ -2400,6 +2401,9 @@ msgid ""
 "Input files are read-only.  If you wish to update an input file, you must "
 "[first copy it to the output directory](staging-input-files.md)."
 msgstr ""
+"入力ファイルは読み取り専用です。  "
+"入力ファイルを更新したい場合は、[まず出力ディレクトリにコピーする](staging-"
+"input-files.md)必要があります。"
 
 #: ../../src/topics/inputs.md:134 74f7a6b8f8f74dc2a970fdd6e63d8f80
 msgid ""
@@ -2416,11 +2420,12 @@ msgstr ""
 msgid ""
 "The `baseCommand` field will always appear in the final command line before "
 "the parameters."
-msgstr ""
+msgstr "`baseCommand` "
+"フィールドは、常にパラメータの前の最終コマンド行に表示されます。"
 
 #: ../../src/topics/inputs.md:146 9654e65b1c0642dbb5d4f34edb211989
 msgid "Array Inputs"
-msgstr ""
+msgstr "配列入力"
 
 #: ../../src/topics/inputs.md:148 d1f02be278754267893dfce5a940997d
 msgid ""
@@ -2433,11 +2438,11 @@ msgstr ""
 
 #: ../../src/topics/inputs.md:154 01f30e38dfdd452dba3a996073936e16
 msgid "`array-inputs.cwl`"
-msgstr ""
+msgstr "`array-inputs.cwl`"
 
 #: ../../src/topics/inputs.md:160 787d4bfb093c4ad287b902084706b751
 msgid "`array-inputs-job.yml`"
-msgstr ""
+msgstr "`array-inputs-job.yml`"
 
 #: ../../src/topics/inputs.md:166 ../../src/topics/outputs.md:82
 #: ../../src/topics/outputs.md:105 588f0f7f967f4d69af27c9729d6d3119
@@ -2480,21 +2485,21 @@ msgstr ""
 
 #: ../../src/topics/inputs.md:198 ddf598abf4f34aca9fffa045860fbf96
 msgid "`record.cwl`"
-msgstr ""
+msgstr "`record.cwl`"
 
 #: ../../src/topics/inputs.md:204 d52a8089920e45bd89d582533b50e3a1
 msgid "`record-job1.yml`"
-msgstr ""
+msgstr "`record-job1.yml`"
 
 #: ../../src/topics/inputs.md:215 750474486a84482292eeba45f118287f
 msgid ""
 "In the first example, you can't provide `itemA` without also providing "
 "`itemB`."
-msgstr ""
+msgstr "最初の例では、`itemB` も与えずに、`itemA` を与えることはできません。"
 
 #: ../../src/topics/inputs.md:217 9a5cf1d76fc84c1f9b0d123a3a2a480b
 msgid "`record-job2.yml`"
-msgstr ""
+msgstr "`record-job2.yml`"
 
 #: ../../src/topics/inputs.md:233 1eb0e39bb6d04b8cab300f44a79f3add
 msgid ""
@@ -2505,13 +2510,14 @@ msgstr ""
 
 #: ../../src/topics/inputs.md:236 bc21ee10bff843689cc98ac6630edcea
 msgid "`record-job3.yml`"
-msgstr ""
+msgstr "`record-job3.yml`"
 
 #: ../../src/topics/inputs.md:252 4b2ab812f62c4f949dd25c8527f2411c
 msgid ""
 "In the third example, only `itemD` is provided, so it appears on the command "
 "line."
-msgstr ""
+msgstr "3番目の例では、`itemD` "
+"のみが提供されているので、コマンドラインに表示されます。"
 
 #: ../../src/topics/inputs.md:255 b771302d1bec4050a9417b080eef76c9
 msgid "Exclusive Input Parameters with Expressions"
