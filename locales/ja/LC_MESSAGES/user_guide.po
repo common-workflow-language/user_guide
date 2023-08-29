@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: Common Workflow Language User Guide\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-01-25 14:33+0100\n"
-"PO-Revision-Date: 2023-08-26 23:56+0000\n"
+"PO-Revision-Date: 2023-08-29 01:18+0000\n"
 "Last-Translator: Manabu ISHII <manabu.ishii.rb@gmail.com>\n"
 "Language-Team: Japanese <https://hosted.weblate.org/projects/commonwl/"
 "user-guide/ja/>\n"
@@ -2620,8 +2620,9 @@ msgid "`metadata_example3.cwl`"
 msgstr ""
 
 #: ../../src/topics/operations.md:1 8acf361cf77c4d45ba3f2e344146259f
+#, fuzzy
 msgid "Operations"
-msgstr ""
+msgstr "Operations"
 
 #: ../../src/topics/operations.md:3 83d3b9a0ed3148fda9ce72cd108cb9e1
 msgid ""
@@ -2635,11 +2636,12 @@ msgstr ""
 msgid ""
 "You can create operations to visualize a workflow during development, before "
 "you are ready to submit the workflow to a CWL runner:"
-msgstr ""
+msgstr "CWLランナーにワークフローを送信する前に、開発中のワークフローを可視化すること"
+"ができます："
 
 #: ../../src/topics/operations.md:10 49cf614893d8438299b3bca384eb40cf
 msgid "`operations.cwl`"
-msgstr ""
+msgstr "`operations.cwl`"
 
 #: ../../src/topics/operations.md:16 88160cef4cfa4add9020aa89511a5749
 msgid ""
@@ -2659,11 +2661,12 @@ msgstr ""
 msgid ""
 "If you try running it with `cwltool`, the command will fail since `cwltool` "
 "does not have enough information to know how to execute it:"
-msgstr ""
+msgstr "`cwltool` だけで実行しようとすると、`cwltool` "
+"は実行するのに必要な情報がないため、コマンドは失敗します："
 
 #: ../../src/topics/operations.md:58 98d9b8d867594543890af99e77e24edb
 msgid "`cwltool` does not know how to run operations"
-msgstr ""
+msgstr "`cwltool` は、どうやってoperationsを実行するかを知りません。"
 
 #: ../../src/topics/operations.md:66 a25d0b1e13324b40a6b8fcd227948c4f
 msgid ""
@@ -2674,11 +2677,12 @@ msgstr ""
 
 #: ../../src/topics/outputs.md:1 da077da5eb8a4ffebfde041fc16300de
 msgid "Outputs"
-msgstr ""
+msgstr "Outputs"
 
 #: ../../src/topics/outputs.md:3 1b3016f0462f42deb42ddaa33f28bf3d
+#, fuzzy
 msgid "Returning Output Files"
-msgstr ""
+msgstr "出力ファイルの回収"
 
 #: ../../src/topics/outputs.md:5 d661df070e3040869da412d07a71f716
 msgid ""
@@ -2701,11 +2705,11 @@ msgstr ""
 msgid ""
 "The following example demonstrates how to return a file that has been "
 "extracted from a tar file."
-msgstr ""
+msgstr "次の例は、tarファイルから抽出されたファイルを返す方法を示しています。"
 
 #: ../../src/topics/outputs.md:19 7e3fa7baf0f549ec89457e7004ac9545
 msgid "Passing mandatory arguments to the `baseCommand`"
-msgstr ""
+msgstr "`baseCommand` に必須引数を渡します。"
 
 #: ../../src/topics/outputs.md:21 22447a560f6f4317bf67bd7c4336126c
 msgid ""
@@ -2717,21 +2721,23 @@ msgstr ""
 
 #: ../../src/topics/outputs.md:26 f1ee2e00b0cc4112b51c9df3a919b73f
 msgid "`tar.cwl`"
-msgstr ""
+msgstr "`tar.cwl`"
 
 #: ../../src/topics/outputs.md:32 ad8e1acb251246d2a47c39b20d4e483a
 msgid "`tar-job.yml`"
-msgstr ""
+msgstr "`tar-job.yml`"
 
 #: ../../src/topics/outputs.md:38 dc200c6960ae4476a772645d021f14b8
+#, fuzzy
 msgid "Next, create a tar file for the example."
-msgstr ""
+msgstr "次に、サンプルとなるtarファイルを作成します。"
 
 #: ../../src/topics/outputs.md:45 52703d6b7f914097934bfad13663abeb
 msgid ""
 "And now invoke `cwltool` with the tool description and the input object on "
 "the command line:"
-msgstr ""
+msgstr "そして、今度はコマンドラインにツール定義と入力オブジェクトを指定して`cwltool`"
+" を呼び出します："
 
 #: ../../src/topics/outputs.md:51 5e1c79df657d4a6e84e055dd6b300a5d
 msgid ""
@@ -2810,13 +2816,15 @@ msgstr ""
 
 #: ../../src/topics/parameter-references.md:19 5c64d938862747cb9fb52515a656ce27
 msgid "`tar-param-job.yml`"
-msgstr ""
+msgstr "`tar-param-job.yml`"
 
 #: ../../src/topics/parameter-references.md:25 074cf5d912854d8c864607cc24b15302
+#, fuzzy
 msgid ""
 "Create your input files and invoke `cwltool` with the tool description and "
 "the input object on the command line:"
-msgstr ""
+msgstr "入力ファイル(入力オブジェクト)を作成し、コマンドラインでツール定義と入力オブ"
+"ジェクトを指定して`cwltool` を呼び出します："
 
 #: ../../src/topics/parameter-references.md:36 0290af3e3cbb4b32b0450c8771f3bf95
 msgid ""
@@ -2835,7 +2843,7 @@ msgstr ""
 msgid ""
 "The value of the \"inputs\" variable is the input object provided when the "
 "CWL tool was invoked."
-msgstr ""
+msgstr "変数 \"inputs \"の値は、CWLツールの起動時に提供された入力オブジェクトです。"
 
 #: ../../src/topics/parameter-references.md:54 eea20f89c45f424a888178df53713b28
 msgid ""
@@ -2847,96 +2855,129 @@ msgstr ""
 
 #: ../../src/topics/parameter-references.md:59 cb4ea13f5db84c0da43df3f7f2478d78
 msgid "Where are parameter references allowed?"
-msgstr ""
+msgstr "パラメータ参照はどこで許されるのですか？"
 
 #: ../../src/topics/parameter-references.md:61 6d3fb423e6c4434697cd113fb27e28ad
 msgid "You can only use parameter references in certain fields.  These are:"
 msgstr ""
 
 #: ../../src/topics/parameter-references.md:63 7647e0229a924f988cf02b7812a55c06
+#, fuzzy
 msgid ""
 "From [`CommandLineTool`](http://www.commonwl.org/v1.0/CommandLineTool."
 "html#CommandLineTool)"
 msgstr ""
+"[`CommandLineTool`](http://www.commonwl.org/v1.0/CommandLineTool."
+"html#CommandLineTool) から"
 
 #: ../../src/topics/parameter-references.md:69 9d663249666045618a0d3acddb85a9a9
 msgid ""
 "From [CommandInputParameter](http://www.commonwl.org/v1.0/CommandLineTool."
 "html#CommandInputParameter)"
 msgstr ""
+"[CommandInputParameter](http://www.commonwl.org/v1.0/CommandLineTool."
+"html#CommandInputParameter) から"
 
 #: ../../src/topics/parameter-references.md:72 5fed4984f6784347b4cbe0630b1dd2c2
 msgid ""
 "From [`inputBinding`](http://www.commonwl.org/v1.0/CommandLineTool."
 "html#CommandLineBinding)"
 msgstr ""
+"[`inputBinding`](http://www.commonwl.org/v1.0/CommandLineTool."
+"html#CommandLineBinding) から"
 
 #: ../../src/topics/parameter-references.md:74 dbf6153cd02542a6a01c172803122b7f
+#, fuzzy
 msgid ""
 "From [CommandOutputParamater](http://www.commonwl.org/v1.0/CommandLineTool."
 "html#CommandOutputParameter)"
 msgstr ""
+"[CommandOutputParamater](http://www.commonwl.org/v1.0/CommandLineTool."
+"html#CommandOutputParameter) から"
 
 #: ../../src/topics/parameter-references.md:77 b6250cf6fa8a4a0c94b33302e0decca5
+#, fuzzy
 msgid ""
 "From [CommandOutputBinding](http://www.commonwl.org/v1.0/CommandLineTool."
 "html#CommandOutputBinding)"
 msgstr ""
+"[CommandOutputBinding](http://www.commonwl.org/v1.0/CommandLineTool."
+"html#CommandOutputBinding) から"
 
 #: ../../src/topics/parameter-references.md:81 fa6ca3bbc6784380a03a950a6f49a180
+#, fuzzy
 msgid ""
 "From [InputParameter](http://www.commonwl.org/v1.0/Workflow."
 "html#InputParameter) and [WorkflowOutputParameter](http://www.commonwl.org/"
 "v1.0/Workflow.html#WorkflowOutputParameter)"
 msgstr ""
+"[InputParameter](http://www.commonwl.org/v1.0/Workflow.html#InputParameter) "
+"と [WorkflowOutputParameter](http://www.commonwl.org/v1.0/Workflow."
+"html#WorkflowOutputParameter) から"
 
 #: ../../src/topics/parameter-references.md:85 b92b516e537a4773ad67b4af586e7a25
 msgid ""
 "From [WorkflowStepInput](http://www.commonwl.org/v1.0/Workflow."
 "html#WorkflowStepInput)"
 msgstr ""
+"[WorkflowStepInput](http://www.commonwl.org/v1.0/Workflow."
+"html#WorkflowStepInput) から"
 
 #: ../../src/topics/parameter-references.md:89 467a701228504d06b971b79a59c69064
+#, fuzzy
 msgid ""
 "From [InputParameter](http://www.commonwl.org/v1.0/Workflow."
 "html#InputParameter) and [ExpressionToolOutputParameter](http://www.commonwl."
 "org/v1.0/Workflow.html#ExpressionToolOutputParameter)"
 msgstr ""
+"[InputParameter](http://www.commonwl.org/v1.0/Workflow.html#InputParameter) "
+"と [ExpressionToolOutputParameter](http://www.commonwl.org/v1.0/Workflow."
+"html#ExpressionToolOutputParameter) から"
 
 #: ../../src/topics/parameter-references.md:92 2634f989eb304009a8568d70ed42786c
+#, fuzzy
 msgid ""
 "From [`ResourceRequirement`](http://www.commonwl.org/v1.0/CommandLineTool."
 "html#ResourceRequirement)"
 msgstr ""
+"[`ResourceRequirement`](http://www.commonwl.org/v1.0/CommandLineTool."
+"html#ResourceRequirement) から"
 
 #: ../../src/topics/parameter-references.md:101
 #: 5d8bed66282c408695292ea92a03b2c4
+#, fuzzy
 msgid ""
 "From [`InitialWorkDirRequirement`](http://www.commonwl.org/v1.0/"
 "CommandLineTool.html#InitialWorkDirRequirement)"
 msgstr ""
+"[`InitialWorkDirRequirement`](http://www.commonwl.org/v1.0/CommandLineTool."
+"html#InitialWorkDirRequirement) から"
 
 #: ../../src/topics/parameter-references.md:103
 #: 958178d1fa8843aaa0541e2bb115cfd4
+#, fuzzy
 msgid "in [Dirent](http://www.commonwl.org/v1.0/CommandLineTool.html#Dirent)"
-msgstr ""
+msgstr "[Dirent](http://www.commonwl.org/v1.0/CommandLineTool.html#Dirent) の中に"
 
 #: ../../src/topics/parameter-references.md:107
 #: 9a6b311ded8d4e43ae635b1b927dbdf2
+#, fuzzy
 msgid ""
 "From [EnvironmentDef](http://www.commonwl.org/v1.0/CommandLineTool."
 "html#EnvironmentDef)"
 msgstr ""
+"[EnvironmentDef](http://www.commonwl.org/v1.0/CommandLineTool."
+"html#EnvironmentDef) から"
 
 #: ../../src/topics/requirements-and-hints.md:5
 #: aac74f957774479a83aab4c6ff1390ae
 msgid "Requirements and Hints"
-msgstr ""
+msgstr "Requirements と Hints"
 
 #: ../../src/topics/specifying-software-requirements.md:1
 #: b75d29d1d55d44488338f9689f156855
 msgid "Specifying Software Requirements"
-msgstr ""
+msgstr "ソフトウェア要求事項の指定"
 
 #: ../../src/topics/specifying-software-requirements.md:3
 #: 574d93d1d592458a985f259519c036cb
