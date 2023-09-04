@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: Common Workflow Language User Guide\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-01-25 14:33+0100\n"
-"PO-Revision-Date: 2023-08-29 01:18+0000\n"
+"PO-Revision-Date: 2023-09-03 01:58+0000\n"
 "Last-Translator: Manabu ISHII <manabu.ishii.rb@gmail.com>\n"
 "Language-Team: Japanese <https://hosted.weblate.org/projects/commonwl/"
 "user-guide/ja/>\n"
@@ -3120,11 +3120,11 @@ msgstr ""
 
 #: ../../src/topics/using-containers.md:1 eff5f28ca83c458a9b07faf7a81f7e91
 msgid "Using Containers"
-msgstr ""
+msgstr "コンテナの使用"
 
 #: ../../src/topics/using-containers.md:3 2e634f3737d04d279ae78ceee4b0a664
 msgid "Running Tools Inside Docker"
-msgstr ""
+msgstr "Dockerの内部でツールを実行する"
 
 #: ../../src/topics/using-containers.md:5 e07f33d01b804663a25ffb08aad74821
 msgid ""
@@ -3149,15 +3149,16 @@ msgstr ""
 msgid ""
 "This example runs a simple Node.js script inside a Docker container which "
 "will then print \"Hello World\" to the standard output."
-msgstr ""
+msgstr "この例では、Dockerコンテナ内で簡単なNode.jsスクリプトを実行し、標準出力に「"
+"Hello World」と表示します。"
 
 #: ../../src/topics/using-containers.md:21 7921a837ee744c5aa9a5bda04b0c8db1
 msgid "`docker.cwl`"
-msgstr ""
+msgstr "`docker.cwl`"
 
 #: ../../src/topics/using-containers.md:27 387e9bc9381a4450af54aff77e4df6a2
 msgid "`docker-job.yml`"
-msgstr ""
+msgstr "`docker-job.yml`"
 
 #: ../../src/topics/using-containers.md:33 2713594c937d4c528fc8d04d9e9819ed
 msgid ""
@@ -3184,16 +3185,19 @@ msgid ""
 "Create a Javascript file named \"hello.js\" and invoke `cwltool` providing "
 "the tool description and the input object on the command line:"
 msgstr ""
+"Javascriptで \"hello.js \"というファイルを作成し、`cwltool` "
+"コマンドラインでツール定義と入力オブジェクトを指定して呼び出します："
 
 #: ../../src/topics/using-containers.md:55 1a5596243cec4c948d9b6bf0bb12fad0
 msgid "`hello.js`"
-msgstr ""
+msgstr "`hello.js`"
 
 #: ../../src/topics/using-containers.md:69 483181f498fc4d968b5fe6ef427709f7
 msgid ""
 "Notice the CWL runner has constructed a Docker command line to run the "
 "script."
-msgstr ""
+msgstr "CWLランナーがスクリプトを実行するためにDockerコマンドラインを構築していること"
+"に注目してください。"
 
 #: ../../src/topics/using-containers.md:72 7487485d6aa4458089a4b4bdf107ea64
 msgid ""
@@ -3202,10 +3206,14 @@ msgid ""
 "job369354770_examples/hello.js` inside the container, as reflected in the "
 "invocation of the `node` command."
 msgstr ""
+"この例では、スクリプト`hello.js` のパスは、コンテナの外側では `/home/me/cwl/"
+"user_guide/hello.js` が、コンテナの内側では`/var/lib/cwl/"
+"job369354770_examples/hello.js` です。これは`node` "
+"コマンドの呼び出しに反映されているためです。"
 
 #: ../../src/topics/workflows.md:1 7394e7690f934043af617436b40845f0
 msgid "Workflows"
-msgstr ""
+msgstr "ワークフロー"
 
 #: ../../src/topics/workflows.md:3 b9ae9e9a896048caad7e6c38a5bc1bd1
 msgid ""
@@ -3215,29 +3223,38 @@ msgid ""
 msgstr ""
 
 #: ../../src/topics/workflows.md:13 f228fb7953ea48ed99d89880205f4620
+#, fuzzy
 msgid "CWL workflow."
-msgstr ""
+msgstr "CWLのワークフローです。"
 
 #: ../../src/topics/workflows.md:41 5870ac44e4c24b8daf5f06c49f95ce04
+#, fuzzy
 msgid ""
 "The CWL document `echo-uppercase.cwl` defines a workflow that runs the "
 "command-line tool, and the expression tool showed in the earlier examples."
 msgstr ""
+"CWL定義`echo-uppercase.cwl` は、コマンドラインツール、および先の例で示したExp"
+"ressionToolを実行するワークフローを定義しています。"
 
 #: ../../src/topics/workflows.md:51 a913c76d06164fa18718a8a6a7dcf0d6
 msgid "`echo-uppercase.cwl`"
-msgstr ""
+msgstr "`echo-uppercase.cwl`"
 
 #: ../../src/topics/workflows.md:81 93188ed43ee949cc98b3ea679ce14feb
+#, fuzzy
 msgid ""
 "A command-line tool or expression tool can also be written directly in the "
 "same CWL document as the workflow. For example, we can rewrite the `echo-"
 "uppercase.cwl` workflow as a single file:"
 msgstr ""
+"コマンドラインツールやExpressionToolは、ワークフローと同じCWLドキュメントに直"
+"接記述することも可能です。例えば、`echo-uppercase.cwl` "
+"ワークフローを1つのファイルとして書き換えることができます："
 
 #: ../../src/topics/workflows.md:91 36618126a4df4326b236ebe2ea42cffa
+#, fuzzy
 msgid "`echo-uppercase-single-file.cwl`"
-msgstr ""
+msgstr "`echo-uppercase-single-file.cwl`"
 
 #: ../../src/topics/workflows.md:150 1cc17ad26e9c474b895ba5cd20c8b66a
 msgid ""
@@ -3271,7 +3288,7 @@ msgstr ""
 #: ../../src/topics/workflows.md:179 ../../src/topics/workflows.md:180
 #: 23af7bd2facf4043b2b1c4373fce15fa 307b6618a92948fca4203ccb497c77e6
 msgid "Visualization of 1st-workflow.cwl"
-msgstr ""
+msgstr "1st-workflow.cwlの可視化。"
 
 #: ../../src/topics/workflows.md:180 a2dd833fdca4443181648e41051a5232
 msgid ""
@@ -3287,27 +3304,32 @@ msgstr ""
 msgid ""
 "Use a YAML or a JSON object in a separate file to describe the input of a "
 "run:"
-msgstr ""
+msgstr "Runの入力データを記述するために、別ファイルのYAMLまたはJSONオブジェクトを使用"
+"します："
 
 #: ../../src/topics/workflows.md:185 26c51dcb76364ed780376aecb7cbacda
 msgid "`1st-workflow-job.yml`"
-msgstr ""
+msgstr "`1st-workflow-job.yml`"
 
 #: ../../src/topics/workflows.md:191 6fcf8ad3d1bd49afa4a105622437bd59
 msgid ""
 "Next, create a sample Java file and add it to a tar file to use with the "
 "command-line tool."
-msgstr ""
+msgstr "次に、サンプルとなるJavaファイルを作成し、コマンドラインツールで使用するため"
+"にtarファイルに追加します。"
 
 #: ../../src/topics/workflows.md:205 71cb81fa4511495b80422244849979e4
 msgid "What's going on here?  Let's break it down:"
-msgstr ""
+msgstr "どうなっているのでしょう？  分解してみましょう："
 
 #: ../../src/topics/workflows.md:212 def35d6021394def80a53ae49a2cdbde
+#, fuzzy
 msgid ""
 "The `cwlVersion` field indicates the version of the CWL spec used by the "
 "document.  The `class` field indicates this document describes a workflow."
 msgstr ""
+"`cwlVersion` フィールドは、この文書が使用するCWL仕様のバージョンを示します。"
+"  ` class` フィールドは、この文書がワークフローを記述していることを示します。"
 
 #: ../../src/topics/workflows.md:221 ea94a9a02cd44b9d8e06bfe16e6b8cc8
 msgid ""
@@ -3480,8 +3502,9 @@ msgid ""
 msgstr ""
 
 #: ../../src/topics/workflows.md:398 cfa765264a27411ab914de569aa3dac4
+#, fuzzy
 msgid "Scattering Steps"
-msgstr ""
+msgstr "Scatter ステップ"
 
 #: ../../src/topics/workflows.md:400 35f8ee0a00274a5bbb8a80c0f1fcbad6
 msgid ""
@@ -3504,19 +3527,24 @@ msgstr ""
 
 #: ../../src/topics/workflows.md:415 1e1f4d85fc5f49b5aac5c5b00f77d6fd
 msgid "`scatter-workflow.cwl`"
-msgstr ""
+msgstr "`scatter-workflow.cwl`"
 
 #: ../../src/topics/workflows.md:421 3a67d77a2e7b4c0bb61cc3585ceae942
+#, fuzzy
 msgid ""
 "Aside from the `requirements` section including `ScatterFeatureRequirement`, "
 "what is going on here?"
 msgstr ""
+"`requirements` セクションの`ScatterFeatureRequirement` "
+"などを含めて、ここはどうなっているのでしょうか。"
 
 #: ../../src/topics/workflows.md:429 f1cb55fc59824cc18a95fd6dcb32cf4c
+#, fuzzy
 msgid ""
 "First of all, notice that the main workflow level input here requires an "
 "array of strings."
-msgstr ""
+msgstr "まず、ここでのメインワークフローの入力には、文字列の配列が必要であることに注"
+"目してください。"
 
 #: ../../src/topics/workflows.md:441 d947c54933d64aad90df392a1cedd63f
 msgid ""
