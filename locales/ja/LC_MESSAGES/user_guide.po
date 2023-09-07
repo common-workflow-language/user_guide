@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: Common Workflow Language User Guide\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-01-25 14:33+0100\n"
-"PO-Revision-Date: 2023-09-03 01:58+0000\n"
+"PO-Revision-Date: 2023-09-07 04:57+0000\n"
 "Last-Translator: Manabu ISHII <manabu.ishii.rb@gmail.com>\n"
 "Language-Team: Japanese <https://hosted.weblate.org/projects/commonwl/"
 "user-guide/ja/>\n"
@@ -3583,26 +3583,32 @@ msgid ""
 "our `message_array`. Ok, so how about if we want to scatter over two steps "
 "in a workflow?"
 msgstr ""
+"ワークフローは、`message_array` の各要素毎に、echo を呼び出していることがわか"
+"ります。では、ワークフローの2つのステップに分散させたい場合はどうでしょうか？"
 
 #: ../../src/topics/workflows.md:469 2eaacf1a90204a2b9bd621344560f2a1
 msgid ""
 "Let's perform a simple echo like above, but capturing `stdout` by adding the "
 "following lines instead of `outputs: []`"
-msgstr ""
+msgstr "上記のような簡単なエコーを実行します、`outputs: "
+"[]`の代わりに次の行を追加して`stdout` をキャプチャしてみましょう"
 
 #: ../../src/topics/workflows.md:472 242993d42b164ee5abe7ca10d45856de
+#, fuzzy
 msgid "`hello_world_to_stdout.cwl`"
-msgstr ""
+msgstr "`hello_world_to_stdout.cwl`"
 
 #: ../../src/topics/workflows.md:480 4a94e5f7e1bc4d628702140e4e51d6d3
 msgid ""
 "And add a second step that uses `wc` to count the characters in each file. "
 "See the tool below:"
-msgstr ""
+msgstr "そして、`wc` を使って各ファイルの文字数をカウントする第2ステップを追加します"
+"。以下のツールを見てください："
 
 #: ../../src/topics/workflows.md:483 e61d93b848184c8e8e573928427b4d0a
+#, fuzzy
 msgid "`wc-tool.cwl`"
-msgstr ""
+msgstr "`wc-tool.cwl`"
 
 #: ../../src/topics/workflows.md:489 e3a7182f00f440b8b5461da91194a64b
 msgid ""
@@ -3611,8 +3617,9 @@ msgid ""
 msgstr ""
 
 #: ../../src/topics/workflows.md:491 99fa96caacaa45cb97aded9a24fcac6d
+#, fuzzy
 msgid "`scatter-two-steps.cwl`"
-msgstr ""
+msgstr "`scatter-two-steps.cwl`"
 
 #: ../../src/topics/workflows.md:497 b5338f39e8c74ff28e139da68089a742
 msgid ""
@@ -3640,18 +3647,22 @@ msgid ""
 msgstr ""
 
 #: ../../src/topics/workflows.md:513 1c9e386922324ec8a59306572c19fb8b
+#, fuzzy
 msgid "`scatter-nested-workflow.cwl`"
-msgstr ""
+msgstr "`scatter-nested-workflow.cwl`"
 
 #: ../../src/topics/workflows.md:519 d80ab383eec9402faba997b548fe42eb
+#, fuzzy
 msgid ""
 "Now the scatter acts on a single step, but that step consists of two steps "
 "so each step is performed in parallel."
-msgstr ""
+msgstr "今、scatter は1つのステップに作用しますが、そのステップは2つのステップで構成"
+"されているので、各ステップは並行して実行されます。"
 
 #: ../../src/topics/workflows.md:522 f7d2827d97db4bf4ab84b5d6621c3b48
+#, fuzzy
 msgid "Conditional Workflows"
-msgstr ""
+msgstr "条件分岐ワークフロー"
 
 #: ../../src/topics/workflows.md:524 49217c02f58c43ff9ec00f10da8d4e84
 msgid ""
@@ -3711,35 +3722,35 @@ msgstr ""
 
 #: ../../src/topics/yaml-guide.md:13 c38438fbf9a04e729ec2e3c962435289
 msgid "You can skip this section if you are already comfortable with YAML."
-msgstr ""
+msgstr "すでにYAMLに慣れている方は、このセクションを読み飛ばしてもかまいません。"
 
 #: ../../src/topics/yaml-guide.md:16 fdb9cc750cec43ee962517e637dc5fea
 msgid "Contents"
-msgstr ""
+msgstr "目次"
 
 #: ../../src/topics/yaml-guide.md:18 08da9cd8056b4ddd8f5150cc85ba72ee
 msgid "[Key-Value Pairs](#key-value-pairs)"
-msgstr ""
+msgstr "[キーバリューペア](#key-value-pairs)"
 
 #: ../../src/topics/yaml-guide.md:19 b027fc234ed943bbb00d4c6bc03c040a
 msgid "[Comments](#comments)"
-msgstr ""
+msgstr "[コメント](#comments)"
 
 #: ../../src/topics/yaml-guide.md:20 b8befec0d8684638aaa616a659e0100c
 msgid "[Maps](#maps)"
-msgstr ""
+msgstr "[マップ](#maps)"
 
 #: ../../src/topics/yaml-guide.md:21 4ea28c6f8faf4cc1a5b29fdcf34c5fdc
 msgid "[Arrays](#arrays)"
-msgstr ""
+msgstr "[配列](#arrays)"
 
 #: ../../src/topics/yaml-guide.md:22 36db4f26b5194e9da5c6a1ed8cb0ad04
 msgid "[JSON Style](#json-style)"
-msgstr ""
+msgstr "[JSON 形式](#json-style)"
 
 #: ../../src/topics/yaml-guide.md:24 98056c5cfd5640ad9de0679360797cc7
 msgid "Key-Value Pairs"
-msgstr ""
+msgstr "キーバリューペア"
 
 #: ../../src/topics/yaml-guide.md:26 cda73485875d4c8e9464679a20558616
 msgid ""
@@ -3772,7 +3783,7 @@ msgstr ""
 
 #: ../../src/topics/yaml-guide.md:61 dcdaadc7dfff4ebc9fef0d5d05b34cc1
 msgid "Comments"
-msgstr ""
+msgstr "コメント"
 
 #: ../../src/topics/yaml-guide.md:63 9ca3554d771d45998e88aaede525b227
 msgid ""
@@ -3782,14 +3793,17 @@ msgid ""
 msgstr ""
 
 #: ../../src/topics/yaml-guide.md:76 3fca839cede94cfd8e4f605c73ba699d
+#, fuzzy
 msgid ""
 "If there is anything on the line before the comment, be sure to add at least "
 "one space before the `#`!"
-msgstr ""
+msgstr "同じ行内のコメントの前に何かある場合は、必ず`#` "
+"の前に少なくとも1つのスペースを追加してください！"
 
 #: ../../src/topics/yaml-guide.md:79 da34c635707345b2a5e85a2fcd30bbaf
+#, fuzzy
 msgid "Maps"
-msgstr ""
+msgstr "マップ"
 
 #: ../../src/topics/yaml-guide.md:81 3ded0f125249485c921994b6e6b93ac9
 msgid ""
