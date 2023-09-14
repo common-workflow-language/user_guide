@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: Common Workflow Language User Guide\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-01-25 14:33+0100\n"
-"PO-Revision-Date: 2023-09-07 04:57+0000\n"
+"PO-Revision-Date: 2023-09-14 04:51+0000\n"
 "Last-Translator: Manabu ISHII <manabu.ishii.rb@gmail.com>\n"
 "Language-Team: Japanese <https://hosted.weblate.org/projects/commonwl/"
 "user-guide/ja/>\n"
@@ -24,8 +24,9 @@ msgid "Licenses"
 msgstr "ライセンス"
 
 #: ../../LICENSE.md:4 79a9837f877147fa8e3931968aae7fb5
+#, fuzzy
 msgid "Instructional Material"
-msgstr ""
+msgstr "指導資料"
 
 #: ../../LICENSE.md:6 747f9dd48bc54f44adcd8b18c57f4d9d
 msgid ""
@@ -113,12 +114,17 @@ msgstr ""
 #: ../../src/_includes/what-is-cwl.md:1 ../../src/_includes/what-is-cwl.md:2
 #: eab02dc13915490bb3c9ba744d78b6a7 d4f35995b0f6494d9771a4be0a82538f
 #: d6ccd4b546254f56a597d67dd4fdc5d6
+#, fuzzy
 msgid ""
 "CWL is a way to describe command-line tools and connect them together to "
 "create workflows. Because CWL is a specification and not a specific piece of "
 "software, tools and workflows described using CWL are portable across a "
 "variety of platforms that support the CWL standard."
 msgstr ""
+"CWLは、コマンドラインツールを定義し、それらを結びつけてワークフローを作成する"
+"ための方法です。CWLは仕様であり、特定のソフトウェアではないため、CWLを使用し"
+"て記述されたツールやワークフローは、CWL標準をサポートするさまざまなプラットフ"
+"ォームで利用可能です。"
 
 #: ../../src/episodes.md:5 ../../src/setup.md:5
 #: 0d3267f84f4e4aedb1e9fce00b4ea4bc 436cfca6f857469bbff7c652df32160f
@@ -131,6 +137,9 @@ msgid ""
 "User Guide. Please use the new [Table of Contents](index.md#table-of-"
 "contents) to browse the User Guide."
 msgstr ""
+"このページは古いもので、旧ユーザーガイドのリンクを保存するためにここに残され"
+"ています。ユーザーガイドの閲覧には、新しい[目次](index.md#table-of-"
+"contents)をご利用ください。"
 
 #: ../../src/faq.md:1 e2ed894d325a4f50a5e2dc69da5531a1
 msgid "FAQ"
@@ -203,27 +212,32 @@ msgstr ""
 #: ../../src/faq.md:104 95f5dbbd21084a318413b9528fb867be
 msgid ""
 "Now you can use `baseCommand: scriptname.sh` to run the script directly."
-msgstr ""
+msgstr "これで、`baseCommand: scriptname.sh` "
+"を使って、スクリプトを直接実行できるようになりました。"
 
 #: ../../src/faq.md:113 1b3cae80fa9a40ffb2259b8c1cd2b468
+#, fuzzy
 msgid ""
 "When you wish to share your work later, you can place your script in a "
 "software container in the Docker format."
-msgstr ""
+msgstr "後で作ったものを共有したいときは、スクリプトをDockerコンテナに入れることがで"
+"きます。"
 
 #: ../../src/faq.md:115 8d86baa239364f799d4f9d5ea2b0e314
+#, fuzzy
 msgid ""
 "The second method involves including an input of `type: File` in the script "
 "itself:"
-msgstr ""
+msgstr "2つ目の方法は、`type: File` をスクリプト自体に含める方法です："
 
 #: ../../src/faq.md:135 f2c109998c76434893ff16b17fdb2bd0
 msgid "In CWL, everything must be directly stated."
 msgstr "CWLでは、すべてを直接的に記述する必要があります。。"
 
 #: ../../src/faq.md:138 c2c752b86bf94d6fb3751f4dd81bc7a7
+#, fuzzy
 msgid "Setting `self`-based Input Bindings for Optional Inputs"
-msgstr ""
+msgstr "オプショナル入力のために `self`-形式のInput Bindings を設定します"
 
 #: ../../src/faq.md:140 2c38cc58cbb340bc935a5f00e96ba95c
 msgid ""
@@ -240,18 +254,25 @@ msgstr "「一か八か」のパラメータをモデル化する"
 msgid ""
 "Below is an example showing how to specify different strings to be added to "
 "a command line, based on the value given to a Boolean parameter."
-msgstr ""
+msgstr "以下は、Booleanパラメータの値によって、コマンドラインに追加する文字列を変える"
+"例を示しています。"
 
 #: ../../src/faq.md:188 d53fb28dcad04e7788cba9e280a2343c
+#, fuzzy
 msgid "Connect a Solo Value to an Input that Expects an Array of that Type"
-msgstr ""
+msgstr "ある型の配列を期待する入力に１つの値を与える"
 
 #: ../../src/faq.md:190 d9e30e11533b4d53a144f5df7041268d
+#, fuzzy
 msgid ""
 "Using [`MultipleInputFeatureRequirement`](https://www.commonwl.org/v1.0/"
 "Workflow.html#MultipleInputFeatureRequirement) along with [`linkMerge: "
 "merge_nested`](https://www.commonwl.org/v1.0/Workflow.html#WorkflowStepInput)"
 msgstr ""
+"[`MultipleInputFeatureRequirement`](https://www.commonwl.org/v1.0/Workflow."
+"html#MultipleInputFeatureRequirement) と [`linkMerge: "
+"merge_nested`](https://www.commonwl.org/v1.0/Workflow."
+"html#WorkflowStepInput)を一緒に使います。"
 
 #: ../../src/faq.md:194 941077158ec54ae19bfa2e2ad6662da1
 msgid "merge_nested"
@@ -372,34 +393,38 @@ msgid "CWL Parameter Reference Error due to Hyphen in Input Identifier"
 msgstr ""
 
 #: ../../src/faq.md:375 6db1ebd2d6c74ceca889662cd7df5cd5
+#, fuzzy
 msgid "If `cwltool --validate` returns valid"
-msgstr ""
+msgstr "`cwltool --validate` の結果が問題ない場合"
 
 #: ../../src/faq.md:384 3de2513c7d7b4569ba63f7e6d29137b7
 msgid "But executing it causes an error like:"
-msgstr ""
+msgstr "しかし、実行すると以下のようなエラーが発生します："
 
 #: ../../src/faq.md:396 ae3a9188706649e28f97bc4ec34c0821
 msgid "The file is here"
-msgstr ""
+msgstr "ファイルはこちらです"
 
 #: ../../src/faq.md:410 e1ac97ab6ad3449b8c54933d25257f73
+#, fuzzy
 msgid "Problem caused by `-` (hyphen character)."
-msgstr ""
+msgstr "`-` (ハイフン文字、引き算の記号)が原因で発生した問題です。"
 
 #: ../../src/faq.md:423 f6c402f7f6974edbbb5582c8e22f3869
 msgid "To fix this error, change `-` (hyphen) to `_` (underscore)"
-msgstr ""
+msgstr "このエラーを修正するには、`-` (ハイフン) を`_` (アンダースコア) "
+"に変更してください。"
 
 #: ../../src/faq.md:436 190099a242a645c9b9f8bc3ce89d920d
 msgid ""
 "If it is not possible to change the input identifier, then you can use an "
 "alternative CWL Parameter Reference syntax:"
-msgstr ""
+msgstr "入力識別子を変更することができない場合は、別のCWLパラメータリファレンス構文を"
+"使用することができます："
 
 #: ../../src/faq.md:442 06a4f6ffc2da4d43b453d4784b42efd3
 msgid "Use CWL and cwltool with Singularity"
-msgstr ""
+msgstr "CWLとcwltoolをSingularityで使う"
 
 #: ../../src/faq.md:445 1901c34201054a9cae199b0dbb8b945e
 msgid ""
@@ -449,18 +474,26 @@ msgid ""
 "guide][repo]. You can also suggest changes directly in a Pull Request by "
 "clicking the \"Edit this page\" button at the right sidebar of each page."
 msgstr ""
+"このガイドに足りないものがある場合、またはその他のフィードバックを提供したい"
+"場合は、[このユーザーガイドのプロジェクトリポジトリ][repo]にIssueを作成してく"
+"ださい。また、各ページの右サイドバーにある「このページを編集する」ボタンをク"
+"リックすると、Pull Requestで直接変更を提案することができます。"
 
 #: ../../src/index.md:16 6d269e8d70184034bcb56385a6ca198f
 msgid "Navigating the User Guide"
 msgstr "ユーザーガイドの使い方"
 
 #: ../../src/index.md:18 ed74c9a4b623464480e2c184668fcec0
+#, fuzzy
 msgid ""
 "If you are a beginner user get started with the [Introduction](/introduction/"
 "index.md) section. For advanced users the subsections of the [Topics](/"
 "topics/index.md) have detailed information about the most common topics for "
 "CWL."
 msgstr ""
+"初心者の方は、[はじめに](/introduction/index."
+"md)のセクションから始めてください。上級者向けには、[Topics](/topics/index."
+"md)のサブセクションに、CWLで最も一般的なトピックに関する詳細情報があります。"
 
 #: ../../src/index.md:23 cfa67cf5521b414da6f7d34cbed283f7
 msgid ""
@@ -592,30 +625,43 @@ msgstr ""
 
 #: ../../src/introduction/basic-concepts.md:122
 #: 5f47aae608c041aeb4134d59dad314d2
+#, fuzzy
 msgid ""
 "An expression tool is a wrapper for a JavaScript expression. It can be used "
 "to simplify workflows and command-line tools, moving common parts of a "
 "workflow execution into reusable JavaScript code that takes inputs and "
 "produces outputs like a command-line tool."
 msgstr ""
+"ExpressionToolは、JavaScriptの式のラッパーです。WorkflowやCommandLineToolの簡"
+"略化に使用でき、ワークフロー実行の共通部分を、CommandLineToolのように入力を受"
+"けて出力を生成する再利用可能なJavaScriptコードに移動させることができます。"
 
 #: ../../src/introduction/basic-concepts.md:127
 #: f6f589481d0c4891beaccb63160619ef
+#, fuzzy
 msgid ""
 "Operation is an abstract process that also takes inputs, produces outputs, "
 "and can be used in a workflow. But it is a special operation not so commonly "
 "used. It is discussed in the [Operations section](../topics/operations.md) "
 "of this user guide."
 msgstr ""
+"Operationは、入力を受け、出力を出す抽象的なプロセスでもあり、ワークフローで使"
+"用することができます。しかし、あまり一般的に使われていない特別な処理です。こ"
+"のユーザーガイドの[Operation編](../topics/operations.md)で説明します。"
 
 #: ../../src/introduction/basic-concepts.md:131
 #: 73b0c1ccb18c4b74a2c0fdf9706eca85
+#, fuzzy
 msgid ""
 "The workflow is a process that contains steps. Steps can be other workflows "
 "(nested workflows), command-line tools, or expression tools. The inputs of a "
 "workflow can be passed to any of its steps, while the outputs produced by "
 "its steps can be used in the final output of the workflow."
 msgstr ""
+"Workflowは、ステップを含むプロセスである。ステップには、他のWorkflow（ネスト"
+"されたWorkflow）、CommandLineTool、またはExpressionToolを使用することができま"
+"す。Workflowの入力は、そのステップのいずれかに渡すことができ、ステップによっ"
+"て生成された出力は、Workflowの最終出力に使用することができます。"
 
 #: ../../src/introduction/basic-concepts.md:137
 #: 4ace6b92f4e04a07aa202840ebe36417
@@ -624,6 +670,9 @@ msgid ""
 "functionality and specify prerequisites to workflows through *requirements*. "
 "There are many requirements defined in the CWL specification, for instance:"
 msgstr ""
+"CWL 仕様では、*requirements* を通じて、実装が追加機能を提供し、ワークフローの"
+"前提条件を指定することができます。CWL仕様には、例えば、以下のような多くの要件"
+"が定義されています："
 
 #: ../../src/introduction/basic-concepts.md:141
 #: cc6cd8cb81564cadb8e6a4c49423b7f7
@@ -644,6 +693,7 @@ msgstr "`InitialWorkDirRequirement` - "
 
 #: ../../src/introduction/basic-concepts.md:145
 #: 037cd0e5ceda482eaeaca03d51745aee
+#, fuzzy
 msgid ""
 "Some CWL runners may provide requirements that are not in the specification. "
 "For example, GPU requirements are supported in `cwltool` through the "
@@ -651,14 +701,22 @@ msgid ""
 "{{ cwl_version }} specification and may not be supported by other CWL "
 "runners."
 msgstr ""
+"いくつかのCWLランナーは、仕様にないrequirementsを提供することがあります。例え"
+"ば、GPUに関するrequirementsは`cwltool` で`cwltool:CUDARequirement` "
+"を通してサポートされていますが、{{ cwl_version }}仕様の一部ではないので、他の"
+"CWLランナーではサポートされていないかもしれません。"
 
 #: ../../src/introduction/basic-concepts.md:151
 #: e4643938445b48cc80eb8973ceeb126e
+#, fuzzy
 msgid ""
 "Hints are similar to requirements, but while requirements list features that "
 "are required, hints list optional features. Requirements are explained in "
 "detail in the [Requirements](../topics/requirements-and-hints.md) section."
 msgstr ""
+"Hintsはrequirementsと似ていますが、requirementsが必須の機能を列挙するのに対し"
+"、hintsはオプションの機能を列挙します。requirementsについては、[requirements]"
+"(../topics/requirements-and-hints.md) セクションで詳しく説明しています。"
 
 #: ../../src/introduction/basic-concepts.md:155
 #: c4c3315c96714e81b364f8cc003b87e6
@@ -680,26 +738,34 @@ msgstr ""
 
 #: ../../src/introduction/basic-concepts.md:167
 #: 074af9633627470485e5225326d5f20a
+#, fuzzy
 msgid ""
 "CWL has roots in \"make\" and many similar tools that determine order of "
 "execution, based on dependencies between tasks. However, unlike \"make\", "
 "CWL tasks are isolated, and you must be explicit about your inputs and "
 "outputs."
 msgstr ""
+"CWLのルーツは、タスク間の依存関係に基づき、実行順序を決定する \"make\" "
+"や多くの類似ツールにあります。しかし、\"make\" "
+"とは異なり、CWLのタスクは分離されており、入力と出力を明示する必要があります。"
 
 #: ../../src/introduction/basic-concepts.md:171
 #: 847951c055b94a83b1e081594cef22ee
+#, fuzzy
 msgid ""
 "The benefit of explicitness and isolation are flexibility, portability, and "
 "scalability; tools and workflows described with CWL can transparently "
 "leverage technologies such as Docker and be used with CWL implementations "
 "from different vendors."
 msgstr ""
+"CWLで定義されたツールやワークフローは、Dockerなどの技術を透過的に活用し、異な"
+"るベンダーのCWL実装と組み合わせて使用することができるためです。"
 
 #: ../../src/introduction/basic-concepts.md:176
 #: 44bde1fae06b4678bcac4f3224601296
 msgid "`cwltool` also uses the PROV-O standard ontology for data provenance."
-msgstr ""
+msgstr "`cwltool` "
+"はまた、データプロベナンスのためのPROV-O標準オントロジーを使用しています。"
 
 #: ../../src/introduction/basic-concepts.md:178
 #: ../../src/introduction/prerequisites.md:196
@@ -739,7 +805,7 @@ msgstr "CWLサイト内の実装のリスト：<https://www.commonwl.org/impleme
 #: ../../src/introduction/basic-concepts.md:184
 #: e29bd7f973544600be589c3b3f84cf63
 msgid "PROV-O: The PROV Ontology - <https://www.w3.org/TR/prov-o/>"
-msgstr ""
+msgstr "PROV-O: PROVオントロジー -<https://www.w3.org/TR/prov-o/>"
 
 #: ../../src/introduction/basic-concepts.md:185
 #: c377a7f5dbe645cebbb6c7eccf831a0b
@@ -747,17 +813,23 @@ msgid ""
 "CWL Operations are covered in the [Operations](../topics/operations.md) "
 "section of this user guide."
 msgstr ""
+"CWLのOperationsについては、本ユーザーガイドの[Operations](../topics/"
+"operations.md)セクションで説明します。"
 
 #: ../../src/introduction/index.md:1 1769a0cbf4de4d77879c1f202cd11af9
 msgid "Introduction"
 msgstr "はじめに"
 
 #: ../../src/introduction/index.md:3 950370f0a36048b38e1bde9b78f80816
+#, fuzzy
 msgid ""
 "This section will guide you through a short introduction to CWL, the "
 "prerequisites for following this user guide, and some basic concepts that "
 "are useful to know before reading the rest of the user guide."
 msgstr ""
+"このセクションでは、CWLの簡単な紹介、このユーザーガイドに従うための前提条件、"
+"そしてユーザーガイドの他の部分を読む前に知っておくと便利な基本概念について案"
+"内します。"
 
 #: ../../src/introduction/prerequisites.md:1 f01faaf1b253407cbbc2f353c24774f3
 msgid "Prerequisites"
@@ -778,12 +850,16 @@ msgid "CWL Implementations"
 msgstr "CWL実装"
 
 #: ../../src/introduction/prerequisites.md:14 ff2bb4c6504b456bac7ca9c514414dbf
+#, fuzzy
 msgid ""
 "There are many implementations of the CWL standards. Some are complete CWL "
 "runners, while others could be plug-ins or extensions to workflow engines. "
 "We have a better explanation in the [Implementations](basic-concepts."
 "md#implementations) section."
 msgstr ""
+"CWL規格の実装は数多く存在します。あるものは完全なCWL実装であり、他のものはワ"
+"ークフローエンジンのプラグインや拡張になり得ます。[実装](basic-concepts."
+"md#implementations)のセクションでより詳しいをしています。"
 
 #: ../../src/introduction/prerequisites.md:19 cbbcce4c2a96471b8b0ae3593ad59de4
 msgid "Operating System"
@@ -875,15 +951,17 @@ msgstr "`cwltool` を使って `true.cwl` を検証します。"
 #: ../../src/introduction/prerequisites.md:84 d41c4bc740aa474ea09a7cbd267c8840
 msgid ""
 "You can run the CWL tool description by omitting the `--validate` option:"
-msgstr ""
+msgstr "`--validate` "
+"オプションを省略することで、CWLツール定義を実行することができます："
 
 #: ../../src/introduction/prerequisites.md:86 24d7be55d3994f0b82c38da47918e0c9
 msgid "Running `true.cwl` with `cwltool`."
 msgstr "`cwltool` を使って `true.cwl` を実行します。"
 
 #: ../../src/introduction/prerequisites.md:91 39d6ceecb54a4a7fb5dff4a7cae1bfe7
+#, fuzzy
 msgid "Cwl-runner Python Module"
-msgstr ""
+msgstr "Cwl-runner Pythonモジュール"
 
 #: ../../src/introduction/prerequisites.md:93 096d0a50f69e48bd9915238d1b4264c1
 msgid ""
@@ -933,6 +1011,9 @@ msgid ""
 "that, the first thing you need to do is copy `true.cwl` workflow into a new "
 "file: `true_shebang.cwl`, and include a special first line, a *shebang*:"
 msgstr ""
+"`cwl-runner` を実行するもう一つの方法は、ファイルを直接起動することです。その"
+"ためには、まず`true.cwl` ワークフローを新しいファイル`true_shebang.cwl` "
+"にコピーし、特別な最初の行、*shebang* を含める必要があります："
 
 #: ../../src/introduction/prerequisites.md:129 f74dd9bd4ff84bf48f3f8e8c8d6fb51a
 msgid "`true_shebang.cwl`"
@@ -954,6 +1035,9 @@ msgid ""
 "the program specified in the shebang (`cwl-runner`) will be used to execute "
 "the rest of the file."
 msgstr ""
+"そして最後に、コマンドラインで直接実行することができます。実行時には、shebang"
+"で指定されたプログラム(`cwl-"
+"runner`)が、ファイルの残りの部分を実行するために使用されます。"
 
 #: ../../src/introduction/prerequisites.md:148 7c4f45b3e7b549e186126693aa4a3d4f
 msgid "Running `true_shebang.cwl` with a shebang."
@@ -998,6 +1082,8 @@ msgid ""
 "cwl-plugin for IntelliJ - <https://plugins.jetbrains.com/plugin/10040-cwl-"
 "plugin>"
 msgstr ""
+"IntelliJ 用 cwl-plugin -<https://plugins.jetbrains.com/plugin/10040-cwl-"
+"plugin>"
 
 #: ../../src/introduction/prerequisites.md:174 3f9324ede11441f58d93875867034cf0
 msgid ""
@@ -1012,27 +1098,40 @@ msgid "Docker"
 msgstr "Docker"
 
 #: ../../src/introduction/prerequisites.md:181 40cfd559d6a848d1aae354d3bdaa8e9c
+#, fuzzy
 msgid ""
 "`cwltool` uses Docker to run tools, workflows, and workflow steps that "
 "specify a software container. Follow the instructions in the Docker "
 "documentation to install it for your operating system: <https://docs.docker."
 "com/>."
 msgstr ""
+"`cwltool` は、ツール、ワークフロー、およびワークフロー "
+"ステップで指定されたソフトウェアコンテナをDockerを使用して実行します。Docker "
+"ドキュメントの指示に従って、お使いのオペレーティングシステム用にインストール"
+"してください：<https://docs.docker.com/>."
 
 #: ../../src/introduction/prerequisites.md:185 8a9a50b0ebe847ce90593881ffe0d69c
+#, fuzzy
 msgid ""
 "You do not need to know how to write and build Docker containers. In the "
 "rest of the user guide, we will use existing Docker images for running "
 "examples, and to clarify the differences between the execution models with "
 "and without containers."
 msgstr ""
+"Dockerコンテナの書き方や構築方法を知っておく必要はありません。このユーザーガ"
+"イドの残りの部分では、実行例として既存のDockerイメージを使用し、コンテナのあ"
+"る実行モデルとない実行モデルの違いを明確にすることにします。"
 
 #: ../../src/introduction/prerequisites.md:191 923cf9dd6d6c417aabe42f9fa62ffa35
+#, fuzzy
 msgid ""
 "`cwltool` supports running containers with Docker, Podman, udocker, and "
 "Singularity. You can also use alternative container registries for pulling "
 "images."
 msgstr ""
+"`cwltool` Docker、Podman、udocker、Singularityによるコンテナの実行をサポート"
+"しています。また、コンテナイメージを取得するために代替のコンテナレジストリを"
+"使用することもできます。"
 
 #: ../../src/introduction/prerequisites.md:198 9390b03889de44638141d705e0ef8322
 msgid ""
@@ -1050,11 +1149,15 @@ msgid "Quick Start"
 msgstr "クイックスタート"
 
 #: ../../src/introduction/quick-start.md:3 c43d9675ed134b78b02acb5a102a764a
+#, fuzzy
 msgid ""
 "This section will show you a brief overview of what CWL is, and where you "
 "can learn more about it. No previous knowledge of CWL is required, but you "
 "must be comfortable following instructions for the command-line."
 msgstr ""
+"このセクションでは、CWLとは何か、またCWLについてもっと詳しく知ることができる"
+"場所について、簡単に紹介します。CWLに関する予備知識は必要ありませんが、コマン"
+"ドラインを使用することに慣れていると良いです。"
 
 #: ../../src/introduction/quick-start.md:7 280936bb2a22469799b2c9e9ba22adee
 msgid "“Hello World”"
@@ -1066,6 +1169,10 @@ msgid ""
 "example below shows a simple CWL “Hello World” workflow annotated with "
 "comments. Note that comments start with `#`:"
 msgstr ""
+"CWLドキュメントは[YAML](../topics/index."
+"md)(および/またはJSON)で書かれています。以下の例は、"
+"コメントで注釈されたシンプルなCWL \"Hello World\" "
+"ワークフローを示しています。コメントは`#` で始まることに注意してください："
 
 #: ../../src/introduction/quick-start.md:16 9e51962a7e5c47248f3e20703ae101eb
 msgid "`hello_world.cwl`"
@@ -3891,10 +3998,13 @@ msgid ""
 "this page` link in the menu if you would like to add another tutorial to the "
 "list."
 msgstr ""
+"これは、CWL コミュニティによって提供されたチュートリアルのリストです。リスト"
+"に他のチュートリアルを追加したい場合は、メニューの`Edit this page` "
+"リンクを使用してください。"
 
 #: ../../src/tutorials.md:7 8a5cd557dab5456bb41cdc24af73b50c
 msgid "Beginner Tutorials"
-msgstr ""
+msgstr "初心者向けチュートリアル"
 
 #: ../../src/tutorials.md:9 13d7e2e92e96432787c712cf6a595424
 msgid ""
@@ -3906,7 +4016,7 @@ msgstr ""
 
 #: ../../src/tutorials.md:11 0abdd85c9b964a4e89ba3d80a6c78d6f
 msgid "Advanced Tutorials"
-msgstr ""
+msgstr "上級者向けチュートリアル"
 
 #: ../../src/tutorials.md:13 3cbf1f69a5514fd3bee90e68b201190f
 msgid "[Typescript in CWL](https://github.com/umccr/cwl-ica/wiki/TypeScript)"
@@ -3914,7 +4024,7 @@ msgstr "[CWLでのTypeScript](https://github.com/umccr/cwl-ica/wiki/TypeScript)"
 
 #: ../../src/tutorials.md:15 68c97a7065634d02956f3f5c1d4eeb9f
 msgid "Bioinformatics Tutorials"
-msgstr ""
+msgstr "バイオインフォマティクス・チュートリアル"
 
 #: ../../src/tutorials.md:17 a67c7e0eaf4e4d27b3e5db303333a088
 msgid "[rnaseq with CWL](https://arvados.github.io/rnaseq-cwl-training/)"
