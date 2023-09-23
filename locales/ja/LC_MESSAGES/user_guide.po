@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: Common Workflow Language User Guide\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-01-25 14:33+0100\n"
-"PO-Revision-Date: 2023-09-14 04:51+0000\n"
+"PO-Revision-Date: 2023-09-23 04:03+0000\n"
 "Last-Translator: Manabu ISHII <manabu.ishii.rb@gmail.com>\n"
 "Language-Team: Japanese <https://hosted.weblate.org/projects/commonwl/"
 "user-guide/ja/>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 5.0.1-dev\n"
+"X-Generator: Weblate 5.1-dev\n"
 
 #: ../../LICENSE.md:2 4e203044f0464fd5a3256430391dde12
 msgid "Licenses"
@@ -1230,7 +1230,7 @@ msgstr ""
 
 #: ../../src/introduction/quick-start.md:57 ce04027dfcfe4b7b91ea3c2136b18b23
 msgid "Running `hello_world.cwl` with `cwltool`."
-msgstr ""
+msgstr "`hello_world.cwl` を `cwltool` で実行します。"
 
 #: ../../src/introduction/quick-start.md:62 0d8a788402914ebd8f09a5ca80650011
 msgid ""
@@ -1240,7 +1240,7 @@ msgstr ""
 
 #: ../../src/introduction/quick-start.md:65 6d0b679efab24813a7a3b709ade940d1
 msgid "Running `hello_world.cwl` with `cwltool` passing an input parameter."
-msgstr ""
+msgstr "`hello_world.cwl` を`cwltool` で入力パラメータを渡して実行する。"
 
 #: ../../src/introduction/quick-start.md:70 2ea056ab04b6419a9faf350de22a17f2
 msgid ""
@@ -1252,13 +1252,14 @@ msgstr ""
 
 #: ../../src/introduction/quick-start.md:74 1a44a545434b448aa956005deeed90a8
 msgid "`hello_world-job.json`"
-msgstr ""
+msgstr "`hello_world-job.json`"
 
 #: ../../src/introduction/quick-start.md:80 e76bfcc0c9f84bcdb3f6d5277869a88c
 msgid ""
 "You can use this Inputs Object file now to execute the “Hello World” "
 "workflow:"
-msgstr ""
+msgstr "このInputs Objectファイルを使用して、「Hello "
+"World」ワークフローを実行することができるようになりました："
 
 #: ../../src/introduction/quick-start.md:82 d4cdbe870a6f4a68b542ca719d989062
 msgid "Passing an Inputs Object file to `cwltool`."
@@ -1306,10 +1307,13 @@ msgstr ""
 "org/wiki/YAML) です。"
 
 #: ../../src/introduction/quick-start.md:101 d039a9d6461c44628d4660c00d9ce6ff
+#, fuzzy
 msgid ""
 "The {{'[CWL Specification VERSION](https://www.commonwl.org/VERSION)'."
 "replace('VERSION', cwl_version_text) }}."
 msgstr ""
+"{{'[CWL 仕様 VERSION](https://www.commonwl.org/VERSION)'.replace('VERSION', "
+"cwl_version_text) }} のことです。"
 
 #: ../../src/introduction/quick-start.md:102 fbc3383d9e1c4eaca7931c3cc4f1752b
 msgid ""
@@ -1328,8 +1332,9 @@ msgstr ""
 
 #: ../../src/topics/additional-arguments-and-parameters.md:1
 #: 9c87c76c690948ac8e18088a0fffe679
+#, fuzzy
 msgid "Additional Arguments and Parameters"
-msgstr ""
+msgstr "追加の引数とパラメータ"
 
 #: ../../src/topics/additional-arguments-and-parameters.md:3
 #: ad00d94d4fb64bbdac356e64dd3803b9
@@ -1351,18 +1356,18 @@ msgstr ""
 #: ../../src/topics/additional-arguments-and-parameters.md:13
 #: a74935dc31664e979ca8f90a6a4ba53c
 msgid "`arguments.cwl`"
-msgstr ""
+msgstr "`arguments.cwl`"
 
 #: ../../src/topics/additional-arguments-and-parameters.md:19
 #: ../../src/topics/staging-input-files.md:15 0a8065edd8af4eaea08989a1060ce48f
 #: f357755f6dcb4971bade8636064f8dd1
 msgid "`arguments-job.yml`"
-msgstr ""
+msgstr "`arguments-job.yml`"
 
 #: ../../src/topics/additional-arguments-and-parameters.md:24
 #: 6359191b4f684d5aa3602e4aaf394883
 msgid "Next, create a sample Java file to use with the command-line tool."
-msgstr ""
+msgstr "次に、CommandLineToolで使用するサンプルJavaファイルを作成します。"
 
 #: ../../src/topics/additional-arguments-and-parameters.md:30
 #: 9643449da1da46d7861866dce490cbcb
@@ -1377,7 +1382,8 @@ msgstr "そして、コマンドラインでツール定義と入力オブジェ
 msgid ""
 "Here we use the `arguments` field to add an additional argument to the "
 "command line that isn't tied to a specific input parameter."
-msgstr ""
+msgstr "ここでは、`arguments` フィールドを使用して、特定の入力パラメータに結びつかな"
+"い追加の引数をコマンドラインに追加しています。"
 
 #: ../../src/topics/additional-arguments-and-parameters.md:43
 #: d50574c8b9694f83aa376d39b9a6fcd6
@@ -1396,18 +1402,24 @@ msgid "Best Practices"
 msgstr "ベストプラクティス"
 
 #: ../../src/topics/best-practices.md:3 939cd9e9eaff4e3ab74fe707a5d4eb21
+#, fuzzy
 msgid ""
 "The following are a set of recommended good practices to keep in mind when "
 "writing a Common Workflow Language description for a tool or workflow. These "
 "guidelines are presented for consideration on a scale of usefulness: "
 "although more is better, not all are required."
 msgstr ""
+"以下は、ツールやワークフローのCWL定義を書く際に留意すべき推奨グッドプラクティ"
+"スのセットです。これらのガイドラインは、有用性の尺度で検討するために提示され"
+"ています：多ければ多いほど良いが、すべてが必要なわけではありません。"
 
 #: ../../src/topics/best-practices.md:8 4bcb84707acb40a0bfe2ea0853cb10b7
 msgid ""
 "No `type: string` parameters for names of input or reference files/"
 "directories; use `type: File` or `type: Directory` as appropriate."
 msgstr ""
+"入力または参照のファイルやディレクトリの名前に `type: string` "
+"を使用しません。 `type:File` または `type: Direcotry` を適宜使用します。"
 
 #: ../../src/topics/best-practices.md:11 4dee8504a8e5496081dadc386ab45540
 msgid ""
@@ -1451,6 +1463,8 @@ msgid ""
 "Metadata and Authorship section of this User Guide](../topics/metadata-and-"
 "authorship.md)."
 msgstr ""
+"CW定義にメタデータを与える例については、［このユーザーガイドのメタデータと著"
+"者名のセクション］(../topics/metadata-and-authorship.md)を参照してください。"
 
 #: ../../src/topics/best-practices.md:40 ecf2b9c0b1664afe9c4e180610610021
 msgid ""
@@ -1610,22 +1624,29 @@ msgid "Network Access"
 msgstr ""
 
 #: ../../src/topics/command-line-tool.md:69 e3bdaceae8784ab0807b2cf356a98580
+#, fuzzy
 msgid ""
 "This indicates whether a process requires outgoing IPv4/IPv6 network access. "
 "If a command-line tool is written manually in CWL v1.1+, there is a need to  "
 "specify when network access is required."
 msgstr ""
+"これは、プロセスが発信IPv4/"
+"IPv6ネットワークアクセスを必要とするかどうかを示します。CWL v1.1+でCommandLin"
+"eToolを手動で記述する場合、ネットワークアクセスが必要なタイミングを指定する必"
+"要があります。"
 
 #: ../../src/topics/command-line-tool.md:83 ed521ac365db4a6ba5a1051fbaa2932e
 msgid ""
 "CWL v1.0 command-line tools that are upgraded to v1.1  or v1.2 get Network "
 "Access automatically."
-msgstr ""
+msgstr "CWL v1.0のコマンドラインツールをv1.1またはv1."
+"2にアップグレードすると、自動的にネットワークアクセスを取得します。"
 
 #: ../../src/topics/creating-files-at-runtime.md:1
 #: a2a0f0eb0f404eb3aaf19cfd3cdb559b
+#, fuzzy
 msgid "Creating Files at Runtime"
-msgstr ""
+msgstr "実行時にファイルを作成する"
 
 #: ../../src/topics/creating-files-at-runtime.md:3
 #: 0cf51b6da6884065ae42032abc20eb0d
@@ -1638,7 +1659,8 @@ msgstr ""
 #: ../../src/topics/creating-files-at-runtime.md:7
 #: 2df3a3a9094d4b79b1d5dd99195f3bff
 msgid "To generate such files, we can use the `InitialWorkDirRequirement`."
-msgstr ""
+msgstr "このようなファイルを生成するために、`InitialWorkDirRequirement` "
+"を利用することができます。"
 
 #: ../../src/topics/creating-files-at-runtime.md:9
 #: d3f74c3b094a427fbec831afab657d50
@@ -1809,6 +1831,9 @@ msgid ""
 "variables from the parent process.  You can set environment variables for "
 "the tool using `EnvVarRequirement`."
 msgstr ""
+"ツールは制限された環境で実行されるため、親プロセスからほとんどの環境変数を引"
+"き継ぎません。  ツールの環境変数は、`EnvVarRequirement` "
+"を使って設定できます。"
 
 #: ../../src/topics/environment-variables.md:7 bfdebb32440a4034beb42135e38884e8
 msgid "`env.cwl`"
@@ -1819,37 +1844,52 @@ msgid "Expression Tool"
 msgstr "Expression Tool"
 
 #: ../../src/topics/expression-tool.md:3 48deb71f361a43e48a56ed483075bca8
+#, fuzzy
 msgid ""
 "An expression tool is a type of Process that can be run by itself or as a "
 "Workflow step. It executes a pure JavaScript expression. It is meant to be "
 "used as a way to isolate complex JavaScript expressions that need to operate "
 "on input data and produce some result as output."
 msgstr ""
+"ExpressionToolは、それ自体またはワークフローのステップとして実行することがで"
+"きるProcessの一種です。純粋な JavaScript 式を実行します。入力データを操作し、"
+"出力として結果を生成する必要がある複雑な JavaScript "
+"式を分離する方法として使用されることを意図しています。"
 
 #: ../../src/topics/expression-tool.md:8 716b56506ca7470299899c5d820a9ea2
 msgid ""
 "Similar to the command-line tool it requires `inputs` and `outputs`. But "
 "instead of `baseCommand`, it requires an `expression` attribute."
 msgstr ""
+"CommandLinetToolと同様に、`inputs` と`outputs` "
+"が必要です。しかし、`baseCommand` の代わりに、`expression` "
+"属性を必要とします。"
 
 #: ../../src/topics/expression-tool.md:17 b63e6f5a2e89431c8fc7d04f47fd69fe
+#, fuzzy
 msgid "CWL expression tool."
-msgstr ""
+msgstr "CWL expression tool."
 
 #: ../../src/topics/expression-tool.md:48 39727e9058f24b62b8746a46d3f812c2
+#, fuzzy
 msgid "`uppercase.cwl`"
-msgstr ""
+msgstr "`uppercase.cwl`"
 
 #: ../../src/topics/expression-tool.md:67 e3ecac0a8e604f2b98a2a12b0579990a
+#, fuzzy
 msgid ""
 "We had to use an `InlineJavascriptRequirement` as our expression contains a "
 "JavaScript call in `.toUpperCase()`. This means to tools using the "
 "expression tool that JavaScript is a requirement."
 msgstr ""
+"`InlineJavascriptRequirement` を使用する必要がありました。この式には`."
+"toUpperCase()` で JavaScript の呼び出しが含まれているからです。これは、Expres"
+"sionToolを使用するツールにとって、JavaScriptが必要であることを意味します。"
 
 #: ../../src/topics/expressions.md:1 c8d648b765ec499a8e9c464590838492
+#, fuzzy
 msgid "Expressions"
-msgstr ""
+msgstr "Expressions"
 
 #: ../../src/topics/expressions.md:3 007a345b4bad49cf996c4301b8386473
 msgid ""
@@ -1869,18 +1909,22 @@ msgid ""
 msgstr ""
 
 #: ../../src/topics/expressions.md:16 7fdbfd1c937b4991bf4a2fa26ea310e4
+#, fuzzy
 msgid "`expression.cwl`"
-msgstr ""
+msgstr "`expression.cwl`"
 
 #: ../../src/topics/expressions.md:22 efb5fd14988c4e2a8f834ee5369d4102
+#, fuzzy
 msgid ""
 "As this tool does not require any `inputs` we can run it with an (almost) "
 "empty job file:"
-msgstr ""
+msgstr "このツールは`inputs` "
+"を必要としないので、（ほとんど）空のジョブファイルで実行することができます："
 
 #: ../../src/topics/expressions.md:25 e833649b951841c49397796f996d29f3
+#, fuzzy
 msgid "`empty.yml`"
-msgstr ""
+msgstr "`empty.yml`"
 
 #: ../../src/topics/expressions.md:31 276f688ba7cc471a842f085ca852b1d9
 msgid ""
@@ -2247,14 +2291,17 @@ msgid "`hello-world-expressionlib-inline.cwl`"
 msgstr "`hello-world-expressionlib-inline.cwl`"
 
 #: ../../src/topics/expressions.md:146 8f0e8f050e334ac08334e9215e1dcf61
+#, fuzzy
 msgid ""
 "Running this CWL workflow will invoke the JavaScript function and result in "
 "the `echo` command printing the input message with capital initial letters:"
-msgstr ""
+msgstr "このCWLワークフローを実行すると、JavaScript関数が起動し、`echo` "
+"コマンドが入力メッセージを大文字の頭文字で表示します："
 
 #: ../../src/topics/expressions.md:149 26c74b11bb1849cea0763bb74ec43e42
+#, fuzzy
 msgid "Running `hello-world-expressionlib-inline.cwl`."
-msgstr ""
+msgstr "`hello-world-expressionlib-inline.cwl` 実行しています。"
 
 #: ../../src/topics/expressions.md:155 7a6be0005a6441feb67f036d005d7885
 msgid ""
@@ -2263,23 +2310,30 @@ msgid ""
 msgstr ""
 
 #: ../../src/topics/expressions.md:158 ed590f9e6f4f425da886b110295c45db
+#, fuzzy
 msgid "`custom-functions.js`"
-msgstr ""
+msgstr "`custom-functions.js`"
 
 #: ../../src/topics/expressions.md:164 093235307d6f47d4858e559b780ef5e5
+#, fuzzy
 msgid "`hello-world-expressionlib-external.cwl`"
-msgstr ""
+msgstr "`hello-world-expressionlib-external.cwl`"
 
 #: ../../src/topics/expressions.md:171 06635145b441418aaae84dc804f3d6ac
+#, fuzzy
 msgid ""
 "The `custom-functions.js` file is included in the CWL document with the `"
 "$include: custom-functions.js` statement. That makes the functions and "
 "variables available to be used in other parts of the CWL document."
 msgstr ""
+"`custom-functions.js` ファイルは、`$include: custom-functions.js` という記述"
+"でCWL定義に含まれます。これにより、関数と変数がCWL定義の他の部分で使用できる"
+"ようになります。"
 
 #: ../../src/topics/expressions.md:175 973a9b257b1a4f0dbd4444d4f11dadd7
+#, fuzzy
 msgid "Running `hello-world-expressionlib-external.cwl`."
-msgstr ""
+msgstr "`hello-world-expressionlib-external.cwl`実行しています。"
 
 #: ../../src/topics/expressions.md:181 04eaf1f7c630450db318dcd8b7626e15
 msgid ""
@@ -2331,7 +2385,8 @@ msgstr ""
 msgid ""
 "In the next tutorial, we explain  the `$namespaces` and `$schemas` section "
 "of the document in greater detail, so don't worry about these for now."
-msgstr ""
+msgstr "次のチュートリアルで、`$namespaces` と`$schemas` "
+"の部分をより詳しく説明しますので、今は気にしないでください。"
 
 #: ../../src/topics/file-formats.md:17 5cb830da47464a8b9c3950983fa4d56f
 msgid ""
