@@ -6,7 +6,7 @@ The `inputs` of a tool is a list of input parameters that control how to
 run the tool.  Each parameter has an `id` for the name of parameter, and
 `type` describing what types of values are valid for that parameter.
 
-Available primitive types are *string*, *int*, *long*, *float*, *double*,
+Available primitive types are *string*, *boolean*, *int*, *long*, *float*, *double*,
 and *null*; complex types are *array* and *record*; in addition there are
 special types *File*, *Directory* and *Any*.
 
