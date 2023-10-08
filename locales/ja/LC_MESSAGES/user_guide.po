@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: Common Workflow Language User Guide\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-01-25 14:33+0100\n"
-"PO-Revision-Date: 2023-09-23 04:03+0000\n"
+"PO-Revision-Date: 2023-10-08 04:10+0000\n"
 "Last-Translator: Manabu ISHII <manabu.ishii.rb@gmail.com>\n"
 "Language-Team: Japanese <https://hosted.weblate.org/projects/commonwl/"
 "user-guide/ja/>\n"
@@ -2441,46 +2441,59 @@ msgid "Essential Input Parameters"
 msgstr "必須入力パラメータ"
 
 #: ../../src/topics/inputs.md:5 96671c56523c4ea9992fb5dfcfa6490e
+#, fuzzy
 msgid ""
 "The `inputs` of a tool is a list of input parameters that control how to run "
 "the tool.  Each parameter has an `id` for the name of parameter, and `type` "
 "describing what types of values are valid for that parameter."
 msgstr ""
+"ツールの`inputs` は、ツールの実行に関わる入力パラメーターのリストです。  "
+"各パラメーターには、パラメーター名を示す`id` "
+"と、そのパラメーターに有効な値の種類を示す`type` があります。"
 
 #: ../../src/topics/inputs.md:9 bcc6246742cb46bfb185e415c4a3431a
+#, fuzzy
 msgid ""
 "Available primitive types are *string*, *int*, *long*, *float*, *double*, "
 "and *null*; complex types are *array* and *record*; in addition there are "
 "special types *File*, *Directory* and *Any*."
 msgstr ""
+"利用可能なプリミティブ型は*string*,*int*,*long*,*float*,*double*, *null*; "
+"複合型は*array* and*record*; さらに特殊型*File*,*Directory* ,*Any* "
+"があります。"
 
 #: ../../src/topics/inputs.md:13 86dce36de687449c88fb5eb9d64eb045
 msgid ""
 "The following example demonstrates some input parameters with different "
 "types and appearing on the command line in different ways."
-msgstr ""
+msgstr "次の例では、異なる型の入力パラメーターが、異なる方法でコマンドライン上に表示"
+"されることを示します。"
 
 #: ../../src/topics/inputs.md:16 cd9cea15f57b492ba4098237cd7c5bed
 msgid "First, create a file called `inp.cwl`, containing the following:"
-msgstr ""
+msgstr "まず、以下の内容を含む`inp.cwl` というファイルを作成します："
 
 #: ../../src/topics/inputs.md:18 8bdb875b63104f699efe28ea0abb1e3d
 msgid "`inp.cwl`"
-msgstr ""
+msgstr "`inp.cwl`"
 
 #: ../../src/topics/inputs.md:24 c6a0151a68494c0cb0176781e65e252e
 msgid "Create a file called `inp-job.yml`:"
-msgstr ""
+msgstr "`inp-job.yml` というファイルを作成します："
 
 #: ../../src/topics/inputs.md:26 dc5e6b5e01d64226bd5dbbf3175fe010
 msgid "`inp-job.yml`"
-msgstr ""
+msgstr "`inp-job.yml`"
 
 #: ../../src/topics/inputs.md:33 36ab1d9edafc4831bb1bca5f123b04b0
+#, fuzzy
 msgid ""
 "You can use `cwltool` to create a template input object. That saves you from "
 "having to type all the input parameters in a input object file:"
 msgstr ""
+"`cwltool` を使って、テンプレートとなる入力オブジェクトを作成することができま"
+"す。これにより、入力オブジェクトファイルにすべての入力パラメータを入力する手"
+"間を省くことができます："
 
 #: ../../src/topics/inputs.md:40 7dc630ea86464b1dba3a4e5079260b3b
 msgid ""
@@ -2609,10 +2622,12 @@ msgstr "`array-inputs-job.yml`"
 #: ../../src/topics/inputs.md:166 ../../src/topics/outputs.md:82
 #: ../../src/topics/outputs.md:105 588f0f7f967f4d69af27c9729d6d3119
 #: 02adef8ee8204842b5b4a0408f3bac33 9db68837918a4a349f32f15f12697a1d
+#, fuzzy
 msgid ""
 "Now invoke `cwltool` providing the tool description and the input object on "
 "the command line:"
-msgstr ""
+msgstr "ここで、コマンドラインにツール定義と入力オブジェクトを指定し `cwltool` "
+"を起動します："
 
 #: ../../src/topics/inputs.md:178 75d59e395c66416cae9b352db5081516
 msgid ""
@@ -2669,6 +2684,9 @@ msgid ""
 "matching item (`itemC`) is added to the command line and remaining item "
 "(`itemD`) is ignored."
 msgstr ""
+"2番目の例では、`itemC` と`itemD` が排他的であるため、最初に一致した項目 "
+"(`itemC`) のみがコマンドラインに追加され、残りの項目 (`itemD`) "
+"は無視されます。"
 
 #: ../../src/topics/inputs.md:236 bc21ee10bff843689cc98ac6630edcea
 msgid "`record-job3.yml`"
@@ -2682,8 +2700,9 @@ msgstr "3番目の例では、`itemD` "
 "のみが提供されているので、コマンドラインに表示されます。"
 
 #: ../../src/topics/inputs.md:255 b771302d1bec4050a9417b080eef76c9
+#, fuzzy
 msgid "Exclusive Input Parameters with Expressions"
-msgstr ""
+msgstr "式で入力パラメータを排他的に指定する"
 
 #: ../../src/topics/inputs.md:257 2c3b884cb1c54521900cc90782e8a58d
 msgid ""
@@ -2694,30 +2713,41 @@ msgid ""
 msgstr ""
 
 #: ../../src/topics/inputs.md:262 a1073b6306044dffb414319ae01f68bb
+#, fuzzy
 msgid ""
 "Let's use an example that contains an exclusive `file_format` input "
 "parameter that accepts `null` (i.e. no value provided), or any value from an "
 "enum."
 msgstr ""
+"`file_format` 入力パラメータに、`null` (つまり、値が提供されていない)、"
+"または enum の任意の値を受け入れる排他的なものを含む例を使ってみましょう。"
 
 #: ../../src/topics/inputs.md:265 4a31c733092142b1af834eab1747c224
 msgid "`exclusive-parameter-expressions.cwl`"
-msgstr ""
+msgstr "`exclusive-parameter-expressions.cwl`"
 
 #: ../../src/topics/inputs.md:271 9a1d92334685449386dfa3b3a899ed48
+#, fuzzy
 msgid ""
 "Note how the JavaScript expression uses the value of the exclusive input "
 "parameter without taking into consideration a `null` value. If you provide a "
 "valid value, such as “fasta” (one of the values of the enum), your command "
 "should execute successfully:"
 msgstr ""
+"JavaScriptの式では、`null` の値を考慮せずに、排他的入力パラメータの値を使用し"
+"ていることに注意してください。\"fasta\"（enumの値の1つ）のような有効な値を指"
+"定すると、コマンドは正常に実行されるはずです："
 
 #: ../../src/topics/inputs.md:280 fb623af4c480411b8fde28d01c981411
+#, fuzzy
 msgid ""
 "However, if you do not provide any input value, then `file_format` will be "
 "evaluated to a `null` value, which does not match the expected type for the "
 "output field (a `string`), resulting in failure when running your workflow."
 msgstr ""
+"しかし、入力値を提供しない場合、`file_format` は、`null` "
+"の値として評価されます。これは、出力フィールドが期待する型（`string` "
+"）と一致しないため、ワークフロー実行時に失敗することになります。"
 
 #: ../../src/topics/inputs.md:289 e98e165f6bba40809c90473d72f9d592
 msgid ""
@@ -2779,7 +2809,7 @@ msgstr ""
 #: ../../src/topics/metadata-and-authorship.md:35
 #: 2dfbd4d580044ed083992f3ceb1bc64e
 msgid "`metadata_example3.cwl`"
-msgstr ""
+msgstr "`metadata_example3.cwl`"
 
 #: ../../src/topics/operations.md:1 8acf361cf77c4d45ba3f2e344146259f
 #, fuzzy
@@ -2787,12 +2817,16 @@ msgid "Operations"
 msgstr "Operations"
 
 #: ../../src/topics/operations.md:3 83d3b9a0ed3148fda9ce72cd108cb9e1
+#, fuzzy
 msgid ""
 "An Operation is a type of CWL process, just like a workflow, a command-line "
 "tool, or an expression tool. It is a step of a workflow that specifies "
 "inputs and outputs, but it does not provide enough information to be "
 "executed."
 msgstr ""
+"Operationは、Workflow、CommandLineTool、ExpressionToolと同様に、CWL Processの"
+"一種です。Workflowのステップで、入力と出力を指定しますが、実行するのに十分な"
+"情報を提供しません。"
 
 #: ../../src/topics/operations.md:7 5565c1b2d8a349169a305a9b26b4574d
 msgid ""
@@ -2806,11 +2840,15 @@ msgid "`operations.cwl`"
 msgstr "`operations.cwl`"
 
 #: ../../src/topics/operations.md:16 88160cef4cfa4add9020aa89511a5749
+#, fuzzy
 msgid ""
 "The `uppercase` step of the workflow is an operation. It can be used like a "
 "command line tool or an expression. You can also plot it with the CWL Viewer "
 "or `cwltool`:"
 msgstr ""
+"ワークフローの`uppercase` ステップは Operation "
+"です。CommandLineToolやExpressionToolのように使用することができます。また、"
+"CWL Viewerや`cwltool` を使ってプロットすることもできます："
 
 #: ../../src/topics/operations.md:24 2f73a786b5d94dc0b23ed0cdd185afc8
 msgid ""
@@ -2818,6 +2856,9 @@ msgid ""
 "The following image is rendered with the Sphinx Graphviz directive (this "
 "user guide is built with Sphinx):"
 msgstr ""
+"上記のコマンドの出力は、Graphvizレンダラーでレンダリングすることができます。"
+"以下の画像は、SphinxのGraphvizディレクティブでレンダリングしたものです（この"
+"ユーザーガイドはSphinxで構築されています）："
 
 #: ../../src/topics/operations.md:55 730ba1434a1445ae847ec6153b6a3b72
 msgid ""
@@ -2847,12 +2888,17 @@ msgid "Returning Output Files"
 msgstr "出力ファイルの回収"
 
 #: ../../src/topics/outputs.md:5 d661df070e3040869da412d07a71f716
+#, fuzzy
 msgid ""
 "The `outputs` of a tool is a list of output parameters that should be "
 "returned after running the tool.  Each parameter has an `id` for the name of "
 "parameter, and `type` describing what types of values are valid for that "
 "parameter."
 msgstr ""
+"ツールの`outputs` "
+"は、ツールの実行後に返されるべき出力パラメータのリストです。  "
+"各パラメーターには、パラメーター名を示す`id` "
+"と、そのパラメーターに有効な値の型を示す`type` があります。"
 
 #: ../../src/topics/outputs.md:10 a11585474d3849cca5467512ed964743
 msgid ""
@@ -2919,33 +2965,39 @@ msgid "Capturing Standard Output"
 msgstr ""
 
 #: ../../src/topics/outputs.md:67 c6bcf7c6a8774dd6be41cc775848c3b8
+#, fuzzy
 msgid ""
 "To capture a tool's standard output stream, add the `stdout` field with the "
 "name of the file where the output stream should go.  Then add `type: stdout` "
 "on the corresponding output parameter."
 msgstr ""
+"ツールの標準出力をキャプチャするには、`stdout` "
+"フィールドに、標準出力を保存したいファイル名を追加します。  "
+"次に、対応する出力パラメータに`type: stdout` を追加します。"
 
 #: ../../src/topics/outputs.md:71 9d86c03ab44841c785b924cc44727e31
+#, fuzzy
 msgid "`stdout.cwl`"
-msgstr ""
+msgstr "`stdout.cwl`"
 
 #: ../../src/topics/outputs.md:89 2fb58c2feaa84970bb5274c49f4b5b64
 msgid "Array Outputs"
-msgstr ""
+msgstr "出力の配列"
 
 #: ../../src/topics/outputs.md:91 9647019d8c37466886e7aab6f176634d
 msgid ""
 "You can also capture multiple output files into an array of files using "
 "`glob`."
-msgstr ""
+msgstr "また、`glob` を使って、複数の出力ファイルを配列に取り込むことができます。"
 
 #: ../../src/topics/outputs.md:93 b9eaf21f5e014eefaae301c47dafd144
+#, fuzzy
 msgid "`array-outputs.cwl`"
-msgstr ""
+msgstr "`array-outputs.cwl`"
 
 #: ../../src/topics/outputs.md:99 cffff6c43b4945daa3b2a49763bc50ae
 msgid "`array-outputs-job.yml`"
-msgstr ""
+msgstr "`array-outputs-job.yml`"
 
 #: ../../src/topics/outputs.md:112 cc067051f22f433bbece08f60933e002
 msgid ""
@@ -2957,7 +3009,7 @@ msgstr ""
 
 #: ../../src/topics/parameter-references.md:1 a190a6440ec34898990cdac05d809f22
 msgid "Parameter References"
-msgstr ""
+msgstr "パラメータリファレンス"
 
 #: ../../src/topics/parameter-references.md:3 dbfe2c1123144316aa026374b0f353d3
 msgid ""
@@ -2974,7 +3026,7 @@ msgstr ""
 
 #: ../../src/topics/parameter-references.md:13 280f1a07d0ae41d7a4674504f832fcf0
 msgid "`tar-param.cwl`"
-msgstr ""
+msgstr "`tar-param.cwl`"
 
 #: ../../src/topics/parameter-references.md:19 5c64d938862747cb9fb52515a656ce27
 msgid "`tar-param-job.yml`"
@@ -2989,17 +3041,23 @@ msgstr "入力ファイル(入力オブジェクト)を作成し、コマンド�
 "ジェクトを指定して`cwltool` を呼び出します："
 
 #: ../../src/topics/parameter-references.md:36 0290af3e3cbb4b32b0450c8771f3bf95
+#, fuzzy
 msgid ""
 "Certain fields permit parameter references which are enclosed in `$(...)`. "
 "These are evaluated and replaced with value being referenced."
-msgstr ""
+msgstr "`$(...)` で囲まれたパラメータ参照を許可するフィールドもあります。これらは評価"
+"され、参照されている値に置き換えられます。"
 
 #: ../../src/topics/parameter-references.md:47 b54240bb94f746bba7511633aa969db0
+#, fuzzy
 msgid ""
 "References are written using a subset of Javascript syntax.  In this "
 "example, `$(inputs.extractfile)`, `$(inputs[\"extractfile\"])`, and `"
 "$(inputs['extractfile'])` are equivalent."
 msgstr ""
+"パラメータリファレンスは、Javascriptの構文のサブセットを使用して記述します。"
+"  この例では、`$(inputs.extractfile)` 、`$(inputs[\"extractfile\"])` "
+"、`$(inputs['extractfile'])` は同等です。"
 
 #: ../../src/topics/parameter-references.md:51 8b70a072aa87414c88e89a3e19af0a51
 msgid ""
@@ -3211,6 +3269,9 @@ msgid ""
 "executing CWL. We focus on `cwltool` here but some of these techniques may "
 "apply to other CWL Runners."
 msgstr ""
+"このセクションでは、CWLの実行に問題がある場合にトラブルシューティングを行う方"
+"法を説明します。ここでは、`cwltool` に焦点を当てますが、これらのテクニックの"
+"いくつかは他のCWLランナーにも適用されるかもしれません。"
 
 #: ../../src/topics/troubleshooting.md:6 1b6b7a75cc754775bf9dd80c0941e8da
 msgid "Run `cwltool` with `cachedir`"
