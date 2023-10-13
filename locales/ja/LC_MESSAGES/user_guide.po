@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: Common Workflow Language User Guide\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-01-25 14:33+0100\n"
-"PO-Revision-Date: 2023-10-08 04:10+0000\n"
+"PO-Revision-Date: 2023-10-13 08:02+0000\n"
 "Last-Translator: Manabu ISHII <manabu.ishii.rb@gmail.com>\n"
 "Language-Team: Japanese <https://hosted.weblate.org/projects/commonwl/"
 "user-guide/ja/>\n"
@@ -3274,8 +3274,9 @@ msgstr ""
 "いくつかは他のCWLランナーにも適用されるかもしれません。"
 
 #: ../../src/topics/troubleshooting.md:6 1b6b7a75cc754775bf9dd80c0941e8da
+#, fuzzy
 msgid "Run `cwltool` with `cachedir`"
-msgstr ""
+msgstr "`cwltool` を`cachedir` で実行する。"
 
 #: ../../src/topics/troubleshooting.md:8 9a710602e00c4934ae3a3b471aa68458
 msgid ""
@@ -3297,13 +3298,17 @@ msgstr ""
 
 #: ../../src/topics/troubleshooting.md:20 0490b1fab86749e49b473949c52bbe8b
 msgid "`troubleshooting-wf1.cwl`"
-msgstr ""
+msgstr "`troubleshooting-wf1.cwl`"
 
 #: ../../src/topics/troubleshooting.md:27 cfe9d8241fe84bd5b74042a5625d933f
+#, fuzzy
 msgid ""
 "Let's execute this workflow with `/tmp/cachedir/` as the `--cachedir` value "
 "(`cwltool` will create the directory for you if it does not exist already):"
 msgstr ""
+"`--cachedir` に `/tmp/cachedir/` "
+"を指定して、このワークフローを実行してみましょう（`cwltool` "
+"は、ディレクトリがまだ存在しない場合、新規作成します）："
 
 #: ../../src/topics/troubleshooting.md:35 764d933cc4da446abd8dd8f913f05dac
 msgid ""
@@ -3363,10 +3368,12 @@ msgid ""
 msgstr ""
 
 #: ../../src/topics/using-containers.md:15 7a644506619a4f08958ec7d4540cd557
+#, fuzzy
 msgid ""
 "One of the responsibilities of the CWL runner is to adjust the paths of "
 "input files to reflect the location where they appear inside the container."
-msgstr ""
+msgstr "CWLランナーの役割のひとつに、入力ファイルのパスをコンテナ内のでの配置位置に合"
+"わせて調整することがあります。"
 
 #: ../../src/topics/using-containers.md:18 b5195b7d8eaa419fb2b90cb33a57783a
 msgid ""
@@ -3496,17 +3503,19 @@ msgstr ""
 
 #: ../../src/topics/workflows.md:165 46cc4859856e4367a9e5e68eecd48b73
 msgid "Writing Workflows"
-msgstr ""
+msgstr "ワークフローを書く"
 
 #: ../../src/topics/workflows.md:167 9c56528acd5f49deb139e034dfbfac7c
 msgid ""
 "This workflow extracts a java source file from a tar file and then compiles "
 "it."
-msgstr ""
+msgstr "このワークフローでは、tarファイルからJavaのソースファイルを取り出し、コンパイ"
+"ルします。"
 
 #: ../../src/topics/workflows.md:170 55ab007d472f43388e4c77aae8f165e7
+#, fuzzy
 msgid "`1st-workflow.cwl`"
-msgstr ""
+msgstr "`1st-workflow.cwl`"
 
 #: ../../src/topics/workflows.md:179 ../../src/topics/workflows.md:180
 #: 23af7bd2facf4043b2b1c4373fce15fa 307b6618a92948fca4203ccb497c77e6
@@ -3514,6 +3523,7 @@ msgid "Visualization of 1st-workflow.cwl"
 msgstr "1st-workflow.cwlの可視化。"
 
 #: ../../src/topics/workflows.md:180 a2dd833fdca4443181648e41051a5232
+#, fuzzy
 msgid ""
 "[![Visualization of 1st-workflow.cwl](https://view.commonwl.org/graph/png/"
 "github.com/common-workflow-language/user_guide/blob/"
@@ -3522,6 +3532,13 @@ msgid ""
 "workflow-language/user_guide/blob/a29e7eae0006660946fc705a310b37a21a7e1edc/"
 "_includes/cwl/21-1st-workflow/1st-workflow.cwl)"
 msgstr ""
+"[[1st-workflow.cwlを可視化したもの]](https://view.commonwl.org/graph/png/"
+"github.com/common-workflow-language/user_guide/blob/"
+"a29e7eae0006660946fc705a310b37a21a7e1edc/_includes/cwl/21-1st-workflow/1st-"
+"workflow.cwl)](https://view.commonwl.org/graph/png/github.com/"
+"common-workflow-language/user_guide/blob/"
+"a29e7eae0006660946fc705a310b37a21a7e1edc/_includes/cwl/21-1st-workflow/1st-"
+"workflow.cwl)"
 
 #: ../../src/topics/workflows.md:183 7e40cc9f9e1341c195e843c009575b94
 msgid ""
@@ -3555,20 +3572,30 @@ msgstr ""
 "  ` class` フィールドは、この文書がワークフローを記述していることを示します。"
 
 #: ../../src/topics/workflows.md:221 ea94a9a02cd44b9d8e06bfe16e6b8cc8
+#, fuzzy
 msgid ""
 "The `inputs` section describes the inputs of the workflow.  This is a list "
 "of input parameters where each parameter consists of an identifier and a "
 "data type.  These parameters can be used as sources for input to specific "
 "workflows steps."
 msgstr ""
+"`inputs` セクションでは、ワークフローの入力について記述します。  これは入力パ"
+"ラメータのリストであり、各パラメータは識別子とデータ型から構成されます。  こ"
+"れらのパラメータは、特定のワークフロー・ステップへの入力ソースとして使用でき"
+"ます。"
 
 #: ../../src/topics/workflows.md:233 c84d4450bc6a475dbf34e0b22cea9130
+#, fuzzy
 msgid ""
 "The `outputs` section describes the outputs of the workflow.  This is a list "
 "of output parameters where each parameter consists of an identifier and a "
 "data type.  The `outputSource` connects the output parameter `classfile` of "
 "the `compile` step to the workflow output parameter `compiled_class`."
 msgstr ""
+"`outputs` セクションでは、ワークフローの出力について記述します。  これは出力"
+"パラメータのリストであり、各パラメータは識別子とデータ型から構成されます。  `"
+" outputSource` は、`compile` ステップの出力パラメータ`classfile` "
+"を、ワークフロー出力パラメータ`compiled_class` に接続します。"
 
 #: ../../src/topics/workflows.md:248 cca9665f6daa44b49233baf34ab9fcc7
 msgid ""
@@ -3582,12 +3609,17 @@ msgid ""
 msgstr ""
 
 #: ../../src/topics/workflows.md:256 547edbf5fa424b8286cc21674ff159b0
+#, fuzzy
 msgid ""
 "The first step, `untar` runs `tar-param.cwl` (described previously in "
 "[Parameter References](parameter-references.md)). This tool has two input "
 "parameters, `tarfile` and `extractfile` and one output parameter "
 "`extracted_file`."
 msgstr ""
+"最初のステップである`untar` は、`tar-param.cwl` を実行します（[パラメータ参照"
+"](parameter-references."
+"md)で以前説明しました）。このツールは、2つの入力パラメータ、`tarfile` "
+"と`extractfile` と1つの出力パラメータ`extracted_file` を持ちます。"
 
 #: ../../src/topics/workflows.md:261 7ca248888b9d484cb544cd76ba538662
 msgid ""
@@ -3599,10 +3631,12 @@ msgid ""
 msgstr ""
 
 #: ../../src/topics/workflows.md:267 ae6b240718104380b08db5552d7355ea
+#, fuzzy
 msgid ""
 "The `out` section of the workflow step lists the output parameters that are "
 "expected from the tool."
-msgstr ""
+msgstr "ワークフローステップの`out` "
+"セクションには、ツールから期待される出力パラメータが記載されています。"
 
 #: ../../src/topics/workflows.md:278 e5a8b7f84be64020b191099f3fad30ed
 msgid ""
@@ -3693,11 +3727,15 @@ msgid ""
 msgstr ""
 
 #: ../../src/topics/workflows.md:366 3bea5822b8694e2aa32c446e1c54a045
+#, fuzzy
 msgid ""
 "In this case our step can assume `Hello.java` rather than be parameterized, "
 "so we can use hardcoded values `hello.tar` and `Hello.java` in a "
 "`baseCommand` and the resulting `outputs`:"
 msgstr ""
+"この場合、ステップではパラメータ化するのではなく、`Hello.java` "
+"を想定することができるので、`baseCommand` で直接書かれた値`hello.tar` "
+"と`Hello.java` を使用でき、結果として`outputs` が得られます："
 
 #: ../../src/topics/workflows.md:383 426023bd6e3a471cbb30dbda3d6f9e57
 msgid ""
