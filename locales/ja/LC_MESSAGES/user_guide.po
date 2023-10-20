@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: Common Workflow Language User Guide\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-01-25 14:33+0100\n"
-"PO-Revision-Date: 2023-10-13 08:02+0000\n"
+"PO-Revision-Date: 2023-10-20 04:13+0000\n"
 "Last-Translator: Manabu ISHII <manabu.ishii.rb@gmail.com>\n"
 "Language-Team: Japanese <https://hosted.weblate.org/projects/commonwl/"
 "user-guide/ja/>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 5.1-dev\n"
+"X-Generator: Weblate 5.1\n"
 
 #: ../../LICENSE.md:2 4e203044f0464fd5a3256430391dde12
 msgid "Licenses"
@@ -146,8 +146,9 @@ msgid "FAQ"
 msgstr "よくある質問"
 
 #: ../../src/faq.md:11 61edb787dab04ca2ad3ed07616d878a0
+#, fuzzy
 msgid "Non \"`File`\" Types Using `evalFrom`"
-msgstr ""
+msgstr "\"`File`\" 型をつかわず  `evalFrom`を使う方法"
 
 #: ../../src/faq.md:41 d5321589e7ed4f0db3c630cc39800791
 msgid "Rename an Input File"
@@ -187,10 +188,13 @@ msgid ""
 "`PATH` environment variable. This allows you to run the shell script "
 "directly without using `sh` or `bash` commands."
 msgstr ""
+"最初の方法は、スクリプトの入ったフォルダを`PATH` "
+"環境変数に追加する方法です。これにより、`sh` や`bash` "
+"コマンドを使用せずに、シェルスクリプトを直接実行することができます。"
 
 #: ../../src/faq.md:89 1a8cc75ea6174b9297871b2e58971077
 msgid "Start with adding a _shebang_ at the top of your file:"
-msgstr ""
+msgstr "まず、ファイルの先頭に_shebang_ を追加します："
 
 #: ../../src/faq.md:95 a7d84f740a714ec588503ee084fbbc34
 msgid ""
@@ -240,11 +244,15 @@ msgid "Setting `self`-based Input Bindings for Optional Inputs"
 msgstr "オプショナル入力のために `self`-形式のInput Bindings を設定します"
 
 #: ../../src/faq.md:140 2c38cc58cbb340bc935a5f00e96ba95c
+#, fuzzy
 msgid ""
 "Currently, `cwltool` can't cope with missing optional inputs if their input "
 "binding makes use of `self`. Below is an example workaround for this, "
 "pending a more sophisticated fix."
 msgstr ""
+"現在、`cwltool` は、入力バインディングが`self` を使用している場合、見つからな"
+"いオプション入力に対処することができません。以下は、より洗練された修正を待つ"
+"間の回避策の例です。"
 
 #: ../../src/faq.md:165 ce6db54bd0f54839a5beb948530a21f0
 msgid "Model a \"one-or-the-other\" Parameter"
@@ -279,17 +287,23 @@ msgid "merge_nested"
 msgstr "merge_nested"
 
 #: ../../src/faq.md:196 937cb94a370640c788fbc3fe0b19f2e5
+#, fuzzy
 msgid ""
 "The input must be an array consisting of exactly one entry for each input "
 "link. If \"merge_nested\" is specified with a single link, the value from "
 "the link must be wrapped in a single-item list."
 msgstr ""
+"入力は、各入力リンクに対して正確に1つのエントリで構成される配列でなければなり"
+"ません。\"merge_nested\"が1つのリンクで指定された場合"
+"、リンクからの値は1つのアイテムリストでラップされなければなりません。"
 
 #: ../../src/faq.md:199 a1d57e15656548128a76a8b975c564c9
+#, fuzzy
 msgid "Which means \"create a list with exactly these sources as elements\""
-msgstr ""
+msgstr "つまり、\"まさにこれらのソースを要素とするリストを作成する\" ということです。"
 
 #: ../../src/faq.md:201 c8c235a9bf6240628f0b5493ffebf7e0
+#, fuzzy
 msgid ""
 "Or in other words: if the destination is of type `File[]` (an array of "
 "`File`s) and the source is a single `File` then add "
@@ -297,6 +311,10 @@ msgid ""
 "add `linkMerge: merge_nested` under the appropriate `in` entry of the "
 "destination step."
 msgstr ""
+"`File[]` (`File`の配列) で、ソースが単一の`File` "
+"の場合、`MultipleInputFeatureRequirement` "
+"をワークフローレベルの`requirements` に追加し、`linkMerge: merge_nested` "
+"を目的ステップのエントリの該当`in`に追加します。"
 
 #: ../../src/faq.md:229 3da4dcb043eb4423a53a14182949d9cd
 msgid "Optional Inputs 💯"
@@ -317,11 +335,16 @@ msgid "Enum Inputs ⚜️"
 msgstr "列挙型入力 ⚜️"
 
 #: ../../src/faq.md:250 10af80fa13af4158aec7060550485350
+#, fuzzy
 msgid ""
 "For command line flags that require a specific input as the argument an enum "
 "type can be declared in CWL. **Specifying null here is known as long form "
 "style. It does the same thing as the question mark on the other inputs.**"
 msgstr ""
+"引数として特定の入力を必要とするコマンドラインフラグについては、CWLで列挙型を"
+"宣言することで実現できます。**ここでnullを指定することは、ロングフォーム・ス"
+"タイルとして知られています。他の入力のクエスチョンマークと同じ働きをします。*"
+"*"
 
 #: ../../src/faq.md:267 ad1c26711ccd4efd8fdb25f9293d33fd
 msgid "<a name=\"recordinputs\"></a>"
@@ -332,11 +355,15 @@ msgid "Record Inputs 📀"
 msgstr "レコード入力 📀"
 
 #: ../../src/faq.md:270 52b8538177c64090af51f5f6a696c28c
+#, fuzzy
 msgid ""
 "For commandline flags that are either **mutually exclusive** or "
 "**dependent** a special record type can be defined. You can also specify "
 "null here to create optional inputs."
 msgstr ""
+"**相互排他的** または**依存的** のいずれかのコマンドラインフラグについては、"
+"特別なレコードタイプを定義することができます。また、ここにnullを指定すること"
+"で、オプションの入力を作成することができます。"
 
 #: ../../src/faq.md:322 f96c9257e3734b8aa0cc5e065f74f944
 msgid "Setting Mutually Exclusive Parameters"
@@ -389,8 +416,9 @@ msgstr "これらの危険な文字を避けられない場合は、`--relax-pat
 "に渡してください。"
 
 #: ../../src/faq.md:373 cc7752e9989e4a6d957682f479d6fc60
+#, fuzzy
 msgid "CWL Parameter Reference Error due to Hyphen in Input Identifier"
-msgstr ""
+msgstr "入力識別子の中のハイフンに起因するCWLパラメータリファレンスエラー"
 
 #: ../../src/faq.md:375 6db1ebd2d6c74ceca889662cd7df5cd5
 #, fuzzy
@@ -502,6 +530,10 @@ msgid ""
 "subsections. The right sidebar contains links to the sections of each page, "
 "and the Search form is on the left sidebar."
 msgstr ""
+"目次は、トップメニューと左サイドバーに表示されています。また、このページのさ"
+"らに下にも表示されますが、サブセクションへのリンクがあります。右サイドバーに"
+"は各ページのセクションへのリンクがあり、左サイドバーには「検索フォーム」があ"
+"ります。"
 
 #: ../../src/index.md:28 ee6b82bd86264e4bb1e8e4065b1e6b9c
 msgid "Table of Contents"
@@ -547,10 +579,14 @@ msgid ""
 msgstr ""
 
 #: ../../src/introduction/basic-concepts.md:33 b171b72c48d44050a3416a7a42c4021d
+#, fuzzy
 msgid ""
 "The model used for the specification version is called Semantic Versioning. "
 "See the end of this section to [learn more](#learn-more) about it."
 msgstr ""
+"仕様のバージョンアップに使われるモデルは、セマンティックバージョニングを利用"
+"しています。それについて[もっと知りたい](#learn-"
+"more)方は、このセクションの最後をご覧ください。"
 
 #: ../../src/introduction/basic-concepts.md:37 b3df1607e9d242d78b22dc44335fbe2d
 msgid "Implementations"
@@ -565,29 +601,38 @@ msgid ""
 msgstr ""
 
 #: ../../src/introduction/basic-concepts.md:44 c3869b4ec5ff47d99e8da79770722e04
+#, fuzzy
 msgid ""
 "CWL is well suited for describing large-scale workflows in cluster, cloud "
 "and high performance computing environments where tasks are scheduled in "
 "parallel across many nodes."
 msgstr ""
+"CWLは、多くのノードでタスクが並列にスケジューリングされるクラスタ、クラウド、"
+"ハイパフォーマンスコンピューティング環境における大規模なワークフローを記述す"
+"るのに適しています。"
 
 #: ../../src/introduction/basic-concepts.md:51 2482c84831fc4dfab629e7bfcfb41cbf
 msgid "CWL specification, implementations, and other tools."
-msgstr ""
+msgstr "CWL仕様、実装、その他ツール。"
 
 #: ../../src/introduction/basic-concepts.md:105
 #: a5ebc727fb3443f78e81d6b7ed5ac750
+#, fuzzy
 msgid "Processes and Requirements"
-msgstr ""
+msgstr "Processes 及び Requirements"
 
 #: ../../src/introduction/basic-concepts.md:107
 #: 86e6a06992dc4228bfda7add48e28ca3
+#, fuzzy
 msgid ""
 "A process is a computing unit that takes inputs and produces outputs. The "
 "behavior of a process can be affected by the inputs, requirements, and "
 "hints. There are four types of processes defined in the CWL specification "
 "{{ cwl_version }}:"
 msgstr ""
+"Processとは、入力を受けて出力を生成する計算のユニットです。Processの動作は、i"
+"nputs、requirements、hintsに影響されることがあります。CWL仕様{{ cwl_version "
+"}}では、4種類のProcessが定義されています："
 
 #: ../../src/introduction/basic-concepts.md:112
 #: 8c9772f96caf4169924d22eb929a4f0f
@@ -895,8 +940,9 @@ msgid ""
 msgstr ""
 
 #: ../../src/introduction/prerequisites.md:35 56d78c95daa54135b6aa9b2bfdc34d01
+#, fuzzy
 msgid "CWL Runner"
-msgstr ""
+msgstr "CWL Runner"
 
 #: ../../src/introduction/prerequisites.md:41 0f2704bf1f7148be95e999e312899f11
 msgid ""
@@ -913,21 +959,32 @@ msgid ""
 "activate a Python virtual environment using the `venv` module, and install "
 "`cwltool` in that environment:"
 msgstr ""
+"`cwltool` は、`pip` でインストールすることができます。`venv` または`conda` "
+"のような仮想環境を使用することをお勧めします。以下のコマンドは、`venv` "
+"モジュールを使用して Python "
+"仮想環境を作成およびアクティブ化し、その環境内に`cwltool` "
+"をインストールします："
 
 #: ../../src/introduction/prerequisites.md:51 0a0f0e5151ab4c498b4f8a12c016f28d
+#, fuzzy
 msgid "Installing `cwltool` with `pip` and `venv`."
-msgstr ""
+msgstr "`pip` と `venv` での `cwltool` のインストール"
 
 #: ../../src/introduction/prerequisites.md:62 f7aaafeee230400da056464c853582c2
+#, fuzzy
 msgid ""
 "Visit the `cwltool` [documentation](https://github.com/common-workflow-"
 "language/cwltool#install) for other ways to install `cwltool` with `apt` and "
 "`conda`."
 msgstr ""
+"`cwltool` を`apt` と`conda` "
+"とともにインストールする他の方法については、`cwltool` "
+"[documentation](https://github.com/common-workflow-language/cwltool#install) "
+"を参照してください。"
 
 #: ../../src/introduction/prerequisites.md:65 5eced7e4cd084e8a806b1d3b12d0c000
 msgid "Let's use a simple CWL tool description `true.cwl` with `cwltool`."
-msgstr ""
+msgstr "簡単なCWLツール定義`true.cwl` で`cwltool` を使ってみましょう。"
 
 #: ../../src/introduction/prerequisites.md:67 040c019b6e844eda8c8c2b210852516b
 msgid "`true.cwl`"
@@ -1195,15 +1252,19 @@ msgstr ""
 
 #: ../../src/introduction/quick-start.md:32 498a43362a4749f3b8b433709d34a1d5
 msgid "Installing a CWL Runner"
-msgstr ""
+msgstr "CWL Runnerのインストール"
 
 #: ../../src/introduction/quick-start.md:34 f3e56aedd56b4b93bdc3894273e8c144
+#, fuzzy
 msgid ""
 "`cwltool` is an implementation of the CWL specification. It is also the CWL "
 "*Reference Runner* for the specification, and it is compliant with the "
 "latest version of the specification: {{ cwl_version }}. You can install "
 "`cwltool` using `pip`:"
 msgstr ""
+"`cwltool` は、CWL仕様の実装の１つです。また、同仕様のCWL*Reference Runner* "
+"でもあり、同仕様の最新バージョンに準拠しています：{cwl_version "
+"}}に準拠しています。`cwltool` は、`pip` を使ってインストールできます："
 
 #: ../../src/introduction/quick-start.md:39 81481f5b82e4488398f87f0a169bd359
 msgid "Installing `cwltool` with `pip`."
@@ -1236,7 +1297,8 @@ msgstr "`hello_world.cwl` を `cwltool` で実行します。"
 msgid ""
 "Or you can override the default value of the input parameter `message`, "
 "similar to how you would change the argument of the `echo` base command:"
-msgstr ""
+msgstr "また、`echo` base コマンドの引数を変更するのと同様に、入力パラメータ`message`"
+" のデフォルト値を上書きすることもできます："
 
 #: ../../src/introduction/quick-start.md:65 6d0b679efab24813a7a3b709ade940d1
 msgid "Running `hello_world.cwl` with `cwltool` passing an input parameter."
@@ -1249,6 +1311,10 @@ msgid ""
 "corresponding values. The Inputs Objects file can be written in JSON or "
 "YAML. For example:"
 msgstr ""
+"ワークフロー入力パラメータに値を渡すもう一つの方法は、*Inputs Object* "
+"を介する方法です。これは、入力フィールドとその対応する値を含むファイルです。"
+"Inputs Objects ファイルは、JSON または YAML "
+"で記述することができます。例えば、以下のようになります："
 
 #: ../../src/introduction/quick-start.md:74 1a44a545434b448aa956005deeed90a8
 msgid "`hello_world-job.json`"
@@ -1266,12 +1332,18 @@ msgid "Passing an Inputs Object file to `cwltool`."
 msgstr "`cwltool` に Inputs Object ファイルをします。"
 
 #: ../../src/introduction/quick-start.md:88 b6d59e4b9c854abab1b3f7a0fa26f504
+#, fuzzy
 msgid ""
 "We used a similar file name for the workflow and for the Inputs Object "
 "files. The *-job.json* suffix is very common in Inputs Object files, but it "
 "is not a requirement. You can choose any name for your workflows and Inputs "
 "Object files."
 msgstr ""
+"ワークフローとInputs "
+"Objectファイルには、同様のファイル名を使用しました。*-job.json* "
+"という接尾辞は、Inputs Object "
+"ファイルでは非常に一般的ですが必須ではありません。ワークフローとInputs "
+"Objectファイルには、任意の名前を付けることができます。"
 
 #: ../../src/introduction/quick-start.md:96 5535b98e8b1342f09f003ec6db2b44b1
 msgid "Continue reading the next sections of this User Guide!"
@@ -1324,11 +1396,15 @@ msgstr ""
 "wiki/Workflow_management_system)。"
 
 #: ../../src/setup.md:9 1330bd38c4b5495f890b98c669f81a9d
+#, fuzzy
 msgid ""
 "This page is out-of-date and was kept here to preserve the links of the old "
 "User Guide. The information on this page has been migrated to the [FAQ](/faq."
 "md) section of the new user guide."
 msgstr ""
+"このページは古いもので、旧ユーザーガイドのリンクを保存するためにここに残され"
+"ていました。このページの情報は、新しいユーザーガイドの [FAQ](/faq.md) "
+"セクションに移行されました。"
 
 #: ../../src/topics/additional-arguments-and-parameters.md:1
 #: 9c87c76c690948ac8e18088a0fffe679
@@ -1338,10 +1414,12 @@ msgstr "追加の引数とパラメータ"
 
 #: ../../src/topics/additional-arguments-and-parameters.md:3
 #: ad00d94d4fb64bbdac356e64dd3803b9
+#, fuzzy
 msgid ""
 "Sometimes tools require additional command line options that don't "
 "correspond exactly to input parameters."
-msgstr ""
+msgstr "ツールには、入力パラメータに正確に対応しない追加のコマンドラインオプションが"
+"必要な場合があります。"
 
 #: ../../src/topics/additional-arguments-and-parameters.md:6
 #: d8110ed19da94ad8a9f56e7006c4a2cf
@@ -1467,11 +1545,14 @@ msgstr ""
 "者名のセクション］(../topics/metadata-and-authorship.md)を参照してください。"
 
 #: ../../src/topics/best-practices.md:40 ecf2b9c0b1664afe9c4e180610610021
+#, fuzzy
 msgid ""
 "Include [attribution information][license-example] for the author(s) of the "
 "CWL tool or workflow description. Use unambiguous identifiers like [ORCID]"
 "[orcid]."
 msgstr ""
+"CWLツールやワークフローの定義の著者の[帰属情報][ライセンス例]を含みます。[ORC"
+"ID][orcid]のような曖昧でない識別子を使用してください。"
 
 #: ../../src/topics/best-practices.md:44 e24cb13d98014e558b6a6946758359e0
 msgid ""
@@ -1481,10 +1562,13 @@ msgstr "ツール定義では、`SoftwareRequirement` "
 "の下に、短い名前を使用して依存関係をリストアップします。"
 
 #: ../../src/topics/best-practices.md:47 f2b14a92374e449d9fb1e8c86ae0dd61
+#, fuzzy
 msgid ""
 "Include [SciCrunch][scicrunch] identifiers for dependencies in `https://"
 "identifiers.org/rrid/RRID:SCR_NNNNNN` format."
 msgstr ""
+"`https://identifiers.org/rrid/RRID:SCR_NNNNNN` "
+"フォーマットで依存関係のための [SciCrunch][scicrunch] 識別子を含みます。"
 
 #: ../../src/topics/best-practices.md:50 928e3df7ca3e479ca6474a8e72cf36eb
 msgid ""
@@ -1514,28 +1598,38 @@ msgid ""
 msgstr ""
 
 #: ../../src/topics/best-practices.md:66 3ef57e6862f240bebcf193a52397af0a
+#, fuzzy
 msgid ""
 "Mark all input and output `File`s that are read from or written to in a "
 "streaming compatible way (only once, no random-access), as `streamable: "
 "true`."
 msgstr ""
+"`File`の入出力のうち、ストリーミング互換の方法（一度だけ、ランダムアクセスな"
+"し）で読み書きされるものを、`streamable: true` としてマークします。"
 
 #: ../../src/topics/best-practices.md:69 f1a7c4f896a04a80b0c5f6a1db61ff8c
+#, fuzzy
 msgid ""
 "Each `CommandLineTool` description should focus on a single operation only, "
 "even if the (sub)command is capable of more. Don't overcomplicate your tool "
 "descriptions with options that you don't need or use."
 msgstr ""
+"各`CommandLineTool` の定義は、たとえ（サブ）コマンドがそれ以上の機能を備えて"
+"いたとしても、単一の操作のみに焦点を当てるべきです。必要でない、または使用し"
+"ないオプションでツールの定義を複雑にし過ぎないようにしましょう。"
 
 #: ../../src/topics/best-practices.md:73 1ac4c3d8c3e44bd1af3fc5df70051926
+#, fuzzy
 msgid ""
 "Custom types should be defined with one external YAML per type definition "
 "for re-use."
-msgstr ""
+msgstr "カスタム型は、再利用のため、タイプ定義ごとに1つの外部YAMLで定義する必要があり"
+"ます。"
 
 #: ../../src/topics/best-practices.md:76 c858f64e66f048a5b0032ef3e4d83694
+#, fuzzy
 msgid "Include a top-level short `label` summarising the tool/workflow."
-msgstr ""
+msgstr "ツール/ワークフローを要約したトップレベルの短い`label` を含めます。"
 
 #: ../../src/topics/best-practices.md:78 fae385da16aa443da996fa23ac03d6ae
 msgid ""
@@ -1569,30 +1663,44 @@ msgstr "ツール定義を同僚（できれば別の機関の人）に渡し、
 "ックをもらいましょう。"
 
 #: ../../src/topics/best-practices.md:93 f1c1340f9745458980e0fbd641738687
+#, fuzzy
 msgid ""
 "Complex workflows with individual components which can be abstracted should "
 "utilise the [`SubworkflowFeatureRequirement`][subworkflow] to make their "
 "workflow modular and allow sections of them to be easily reused."
 msgstr ""
+"抽象化できる個々のコンポーネントを持つ複雑なワークフローは、ワークフローをモ"
+"ジュール化し、その一部を容易に再利用できるようにするために、[`SubworkflowFeat"
+"ureRequirement`][サブワークフロー]を利用します。"
 
 #: ../../src/topics/best-practices.md:97 5424e5472c3d466fa2a3d2022c6cb475
+#, fuzzy
 msgid ""
 "Software containers should be made to be conformant to the "
 "[\"Recommendations for the packaging and containerizing of bioinformatics "
 "software\"][containers] (also useful to other disciplines)."
 msgstr ""
+"ソフトウェアのコンテナは、[\"Recommendations for packaging and "
+"containerizing of bioinformatics software\"][containers] "
+"に準拠するようにします（他の分野でも有用です）。"
 
 #: ../../src/topics/command-line-tool.md:1 3f4e98f6bfa141feba8c4b120e3d03e8
 msgid "Command Line Tool"
 msgstr "コマンドラインツール"
 
 #: ../../src/topics/command-line-tool.md:3 12f57b2ba76b492abe1816e06bfb1417
+#, fuzzy
 msgid ""
 "A command-line tool is a type of Process object that can be run by itself or "
 "as a Workflow step. It is a wrapper for a command like `ls`, `echo`, `tar`, "
 "etc. The command-line tool is defined in the `baseCommand` attribute of the "
 "command-line tool CWL document."
 msgstr ""
+"コマンドラインツールは、Processオブジェクトの一種であり、"
+"それ自体またはワークフローのステップとし "
+"て実行することができます。`ls`,`echo`,`tar` などのコマンドのラッパーです。コ"
+"マンドラインツールは、コマンドラインツールCWL文書の`baseCommand` "
+"属性で定義されています。"
 
 #: ../../src/topics/command-line-tool.md:8 e1f657a46ce94a0d83671540e2cc2dab
 msgid ""
@@ -1613,15 +1721,19 @@ msgid "`echo.cwl`"
 msgstr "`echo.cwl`"
 
 #: ../../src/topics/command-line-tool.md:57 a5eacdbc9aa142c890b177869da4143d
+#, fuzzy
 msgid ""
 "The example above uses a simplified form to define inputs and outputs. You "
 "will learn more about in the [Inputs](../topics/inputs.md) and in the "
 "[Outputs](../topics/outputs.md) sections."
 msgstr ""
+"上記の例では、簡略化した形で入力と出力を定義しています。[Inputs](../topics/"
+"inputs.md)と[Outputs](../topics/outputs."
+"md)のセクションで、より詳しく説明する予定です。"
 
 #: ../../src/topics/command-line-tool.md:68 1849b8f3ae1c4a84ae59a78ffd6b371e
 msgid "Network Access"
-msgstr ""
+msgstr "ネットワークアクセス"
 
 #: ../../src/topics/command-line-tool.md:69 e3bdaceae8784ab0807b2cf356a98580
 #, fuzzy
@@ -1892,12 +2004,16 @@ msgid "Expressions"
 msgstr "Expressions"
 
 #: ../../src/topics/expressions.md:3 007a345b4bad49cf996c4301b8386473
+#, fuzzy
 msgid ""
 "If you need to manipulate input parameters, include the requirement "
 "`InlineJavascriptRequirement` and then anywhere a parameter reference is "
 "legal you can provide a fragment of Javascript that will be evaluated by the "
 "CWL runner."
 msgstr ""
+"入力パラメータを操作する必要がある場合は、`InlineJavascriptRequirement` "
+"を含めると、パラメータ参照が合法な場所であれば、CWL "
+"runnerによって評価されるJavascriptを使用できます。"
 
 #: ../../src/topics/expressions.md:9 2edbd398eadb458b8eacd5fa5496f0a2
 msgid ""
@@ -1932,14 +2048,17 @@ msgid ""
 "descriptions are contained inside curly brackets `{}`, so an empty object is "
 "represented simply by a set of empty brackets."
 msgstr ""
+"`empty.yml` には、空のJSONオブジェクトの記述があります。JSONオブジェクトの記"
+"述は、中括弧`{}` "
+"の中に含まれるので、空のオブジェクトは、単に空の括弧のセットで表されます。"
 
 #: ../../src/topics/expressions.md:35 ebf399ea4d5f47b9be03e24f04c69f2d
 msgid "We can then run `expression.cwl`:"
-msgstr ""
+msgstr "次に、`expression.cwl` を実行することができます："
 
 #: ../../src/topics/expressions.md:37 65e0cdd505b944caa40f65e612cdddfc
 msgid "Running `expression.cwl`"
-msgstr ""
+msgstr "`expression.cwl` を実行する。"
 
 #: ../../src/topics/expressions.md:47 8b70a1ad70514039b97164fa630c12e4
 msgid ""
@@ -1948,21 +2067,28 @@ msgid ""
 msgstr "なお、上の例のように、map構文で requirements を指定することも可能です："
 
 #: ../../src/topics/expressions.md:54 2f28ab412d2843ffa5f14acdc01fc732
+#, fuzzy
 msgid ""
 "Or as an array, with each entry (in this case, only `class: "
 "InlineJavascriptRequirement`) marked by a `-`. The same syntax is used to "
 "describe the additional command line arguments."
 msgstr ""
+"または配列として、各エントリ（この場合、`class: InlineJavascriptRequirement` "
+"だけです）に`-` "
+"を付けます。同じ構文で、追加のコマンドライン引数を定義します。"
 
 #: ../../src/topics/expressions.md:62 d957f55a6377422c9834f85d45e35009
 msgid "Where are JavaScript expressions allowed?"
 msgstr "JavaScriptはどこで使えますか？"
 
 #: ../../src/topics/expressions.md:64 cbec9277b5004e50af2728cbda0df740
+#, fuzzy
 msgid ""
 "Just like [parameter references](parameter-references.md), you can use "
 "JavaScript Expressions only in certain fields.  These are:"
 msgstr ""
+"[パラメータ参照](parameter-references.md)と同様に、JavaScript "
+"式は特定のフィールドにのみ使用できます。  以下はその例です："
 
 #: ../../src/topics/expressions.md:66 e259f55f8000479bbd8009e25cf0ca6c
 #, fuzzy
@@ -2251,9 +2377,10 @@ msgid "`envValue`"
 msgstr "`envValue`"
 
 #: ../../src/topics/expressions.md:116 10d36a1adfd04144b401c993b12b4094
+#, fuzzy
 msgid ""
 "Using External Libraries and Inline JavaScript Code with `expressionLib`"
-msgstr ""
+msgstr "`expressionLib` による外部ライブラリの利用とインラインJavaScriptコードの利用"
 
 #: ../../src/topics/expressions.md:118 29b73e1dd72744f68377f0a38c10f062
 msgid ""
@@ -3755,12 +3882,16 @@ msgid ""
 msgstr ""
 
 #: ../../src/topics/workflows.md:394 b2d75045e02741b4850f5ff1243f7858
+#, fuzzy
 msgid ""
 "Nested workflows can be a powerful feature to generate higher-level "
 "functional and reusable workflow units - but just like for creating a CWL "
 "Tool description, care must be taken to improve its usability in multiple "
 "workflows."
 msgstr ""
+"ネストされたワークフローは、より高機能で再利用可能なワークフローユニットを生"
+"成する強力な機能ですが、CWLツール定義の作成と同様に、複数のワークフローでの使"
+"い勝手を向上させるための配慮が必要です。"
 
 #: ../../src/topics/workflows.md:398 cfa765264a27411ab914de569aa3dac4
 #, fuzzy
@@ -3785,6 +3916,10 @@ msgid ""
 "that calls our first example (`hello_world.cwl`) and takes an array of "
 "strings as input to the workflow:"
 msgstr ""
+"新規ユーザーがscatterを使いたいと思う最も一般的な理由は、異なるサンプルに対し"
+"て同じ分析を実行することです。最初の例（`hello_world.cwl` ）を呼び出し、ワー"
+"クフローへの入力として文字列の配列を受け取る、簡単なワークフローから始めまし"
+"ょう："
 
 #: ../../src/topics/workflows.md:415 1e1f4d85fc5f49b5aac5c5b00f77d6fd
 msgid "`scatter-workflow.cwl`"
@@ -3808,35 +3943,50 @@ msgstr "まず、ここでのメインワークフローの入力には、文字
 "目してください。"
 
 #: ../../src/topics/workflows.md:441 d947c54933d64aad90df392a1cedd63f
+#, fuzzy
 msgid ""
 "Here we've added a new field to the step `echo` called `scatter`. This field "
 "tells the runner that we'd like to scatter over this input for this "
 "particular step. Note that the input name listed after scatter is the one of "
 "the step's input, not a workflow level input."
 msgstr ""
+"ここでは、ステップ`echo` に、`scatter` という新しいフィールドを追加しました。"
+"このフィールドは、CWLランナーに、この特定のステップのためにこの入力を分散した"
+"いことを伝えます。scatterの後に記載されている入力名は、ワークフローレベルの入"
+"力名ではなく、ステップの入力名であることに注意してください。"
 
 #: ../../src/topics/workflows.md:445 651d35997332404186aa6d5711da4a3d
+#, fuzzy
 msgid ""
 "For our first scatter, it's as simple as that! Since our tool doesn't "
 "collect any outputs, we still use `outputs: []` in our workflow, but if you "
 "expect that the final output of your workflow will now have multiple outputs "
 "to collect, be sure to update that to an array type as well!"
 msgstr ""
+"最初のスキャッターでは、これと同じくらい簡単です！このツールは出力を回収しな"
+"いので、`outputs: []` を使います。しかし、ワークフローの最終出力に収集する複"
+"数の出力があることが予想される場合、それを配列型に更新するようにしてください"
+"！"
 
 #: ../../src/topics/workflows.md:450 61642a1a4eaa49eaa1fc2ffa7fc99bf2
 msgid "Using the following input file:"
-msgstr ""
+msgstr "以下の入力ファイルを使用します："
 
 #: ../../src/topics/workflows.md:452 842b926ae34542cb9023021f137b08be
 msgid "`scatter-job.yml`"
-msgstr ""
+msgstr "`scatter-job.yml`"
 
 #: ../../src/topics/workflows.md:458 b662c1a5a4424c8d8350a806356acc61
+#, fuzzy
 msgid ""
 "As a reminder, [`hello_world.cwl`](../introduction/quick-start.md) simply "
 "calls the command `echo` on a message. If we invoke `cwltool scatter-"
 "workflow.cwl scatter-job.yml` on the command line:"
 msgstr ""
+"注意点として、[`hello_world.cwl`](../introduction/quick-start.md) "
+"は単にメッセージに対して`echo` というコマンドを呼び出します。"
+"コマンドラインで `cwltool scatter-workflow.cwl scatter-job.yml` "
+"を呼び出すとします："
 
 #: ../../src/topics/workflows.md:466 04d6babfd87343d7a5f13867ea02b65f
 msgid ""
@@ -3872,10 +4022,12 @@ msgid "`wc-tool.cwl`"
 msgstr "`wc-tool.cwl`"
 
 #: ../../src/topics/workflows.md:489 e3a7182f00f440b8b5461da91194a64b
+#, fuzzy
 msgid ""
 "Now, how do we incorporate scatter? Remember the scatter field is under each "
 "step:"
-msgstr ""
+msgstr "さて、スキャッターはどのように取り入れるのでしょうか？スキャッターフィールド"
+"は各ステップの下にあることを思い出してください："
 
 #: ../../src/topics/workflows.md:491 99fa96caacaa45cb97aded9a24fcac6d
 #, fuzzy
@@ -3926,60 +4078,85 @@ msgid "Conditional Workflows"
 msgstr "条件分岐ワークフロー"
 
 #: ../../src/topics/workflows.md:524 49217c02f58c43ff9ec00f10da8d4e84
+#, fuzzy
 msgid ""
 "This workflow contains a conditional step and is executed based on the "
 "input. This allows workflows to skip additional steps based on input "
 "parameters given at the start of the program or by previous steps."
 msgstr ""
+"このワークフローは、条件付きステップを含み、入力に基づき実行されます。これに"
+"より、ワークフローは、プログラムの開始時に与えられた入力パラメータや以前のス"
+"テップによって、追加のステップをスキップすることができます。"
 
 #: ../../src/topics/workflows.md:527 20b9f181420c401d8615c17a10027517
 msgid "`conditional-workflow.cwl`"
-msgstr ""
+msgstr "`conditional-workflow.cwl`"
 
 #: ../../src/topics/workflows.md:566 8dbd56473f8c40c0bb12a48be06117e3
+#, fuzzy
 msgid ""
 "The first thing you'll notice is that this workflow is only compatible for "
 "version 1.2 or greater of the CWL standards."
-msgstr ""
+msgstr "まず、このワークフローはCWL仕様のバージョン1."
+"2以降でしか対応していないことがわかります。"
 
 #: ../../src/topics/workflows.md:573 78d7f3ede2c746d482042adef050b2c4
+#, fuzzy
 msgid ""
 "The first step of the workflow (step1) contains two input properties and "
 "will execute foo.cwl when the conditions are met. The new property `when` is "
 "where the condition validation takes place. In this case only when `in1`  "
 "from the workflow contains a value `< 1` this step will be executed."
 msgstr ""
+"ワークフローの最初のステップ（step1）には2つの入力プロパティがあり、条件を満"
+"たしたときにfoo.cwlを実行します。新しいプロパティ`when` "
+"は、条件の検証が行われる場所です。この場合、ワークフローから`in1` に値`&lt; "
+"1` が含まれるときのみ、このステップが実行されます。"
 
 #: ../../src/topics/workflows.md:587 cbbf93c70fe04ba7932ba25758ddc611
+#, fuzzy
 msgid ""
 "Using the following command `cwltool cond-wf-003.1.cwl --val 0` the value "
 "will pass the first conditional step and will therefore be executed and is "
 "shown in the log by `INFO [step step1] start` whereas the second step is "
 "skipped as indicated by `INFO [step step2] will be skipped`."
 msgstr ""
+"次のコマンドを実行します。`cwltool cond-wf-003.1.cwl --val 0` "
+"この値は最初の条件ステップを通過するため実行され、ログには`INFO [step step1] "
+"start` で示されています。一方、2番目のステップは`INFO [step step2] will be "
+"skipped` で示されているようにスキップされ ます。"
 
 #: ../../src/topics/workflows.md:607 cfa1c1fde4454df283f87cc54a9c59ec
+#, fuzzy
 msgid ""
 "When a value of 3 is given the first conditional step will not be executed "
 "but the second step will `cwltool cond-wf-003.1.cwl --val 3`."
 msgstr ""
+"値3が与えられた場合、最初の条件ステップは実行されませんが、2番目の条件ステッ"
+"プは実行されます`cwltool cond-wf-003.1.cwl --val 3`."
 
 #: ../../src/topics/workflows.md:627 1a8be2950cbb475bbb2617e005f0fac9
+#, fuzzy
 msgid ""
 "If no conditions are met for example when using `--val 2` the workflow will "
 "raise a permanentFail."
-msgstr ""
+msgstr "`--val 2` を使用した場合など、条件を満たさない場合は、ワークフローはpermanent"
+"Failを発生させ、失敗となります。"
 
 #: ../../src/topics/yaml-guide.md:1 5f09d4d897cf457d80b9a11b8c01747e
 msgid "YAML Guide"
-msgstr ""
+msgstr "YAMLガイド"
 
 #: ../../src/topics/yaml-guide.md:6 5d83c56102e141cc978500f678dd0c1c
+#, fuzzy
 msgid ""
 "[YAML][yaml] is a file format designed to be readable by both computers and "
 "humans. This guide introduces the features of YAML that are relevant when "
 "writing CWL descriptions and input parameter files."
 msgstr ""
+"[YAML][yaml]は、コンピュータと人間の両方が読むことができるように設計されたフ"
+"ァイル形式です。本ガイドでは、CWL定義や入力パラメータファイルを書く際に関連す"
+"るYAMLの機能を紹介します。"
 
 #: ../../src/topics/yaml-guide.md:13 c38438fbf9a04e729ec2e3c962435289
 msgid "You can skip this section if you are already comfortable with YAML."
@@ -4024,14 +4201,20 @@ msgid ""
 msgstr ""
 
 #: ../../src/topics/yaml-guide.md:42 98cae24919b74c088a5d89706aec581b
+#, fuzzy
 msgid ""
 "The YAML above defines four keys - `first_name`, `last_name`, `age_years`, "
 "and `home` - with their four respective values. Values can be character "
 "strings, numeric (integer, floating point, or scientific representation), "
 "Boolean (`true` or `false`), or more complex nested types (see below)."
 msgstr ""
+"上記のYAMLは4つのキー -`first_name`,`last_name`,`age_years`, `home` - と4つの"
+"それぞれの値を定義しています。値は、文字列、数値（整数、浮動小数点、科学的表"
+"現）、ブール値（`true` または`false` "
+"）、またはより複雑な入れ子型（下記参照）にすることができます。"
 
 #: ../../src/topics/yaml-guide.md:51 b4b0940b4b5743c09637b36b964202d0
+#, fuzzy
 msgid ""
 "Values may be wrapped in quotation marks, but be aware that this may change "
 "the way that they are interpreted i.e. `\"1234\"` will be treated as a "
@@ -4041,17 +4224,25 @@ msgid ""
 "to specify a fixed numeric value to a command, make sure that you wrap that "
 "numeric value in quotes: `baseCommand: [echo, \"42\"]`."
 msgstr ""
+"値は引用符で括ることができますが、意味が変わってきます。例えば、`\"1234\"` "
+"は文字列として扱われ、`1234` は整数値として扱われます。CWLでは、`baseCommand`"
+" のすべての部分が文字列でなければならないので、コマンドに固定した数値を指定す"
+"る場合は、その数値を引用符で囲むようにしてください：[echo, \"42\"]`."
 
 #: ../../src/topics/yaml-guide.md:61 dcdaadc7dfff4ebc9fef0d5d05b34cc1
 msgid "Comments"
 msgstr "コメント"
 
 #: ../../src/topics/yaml-guide.md:63 9ca3554d771d45998e88aaede525b227
+#, fuzzy
 msgid ""
 "You may use `#` to add comments to your CWL and parameter files. Any "
 "characters to the right of ` #` will be ignored by the program interpreting "
 "the YAML. For example:"
 msgstr ""
+"`#` を使って、CWL定義と入力パラメータファイルにコメントを追加することができま"
+"す。` #` の右側にある文字は、YAML "
+"を解釈するプログラムによって無視されます。たとえば、次のようになります："
 
 #: ../../src/topics/yaml-guide.md:76 3fca839cede94cfd8e4f605c73ba699d
 #, fuzzy
@@ -4090,8 +4281,9 @@ msgid ""
 msgstr ""
 
 #: ../../src/topics/yaml-guide.md:127 d74321b111d84ae7a515f2f17dd39e23
+#, fuzzy
 msgid "Arrays"
-msgstr ""
+msgstr "配列"
 
 #: ../../src/topics/yaml-guide.md:129 7fc0bdf2489a44f2a29e71b86f7c0055
 msgid ""
@@ -4104,22 +4296,27 @@ msgid ""
 msgstr ""
 
 #: ../../src/topics/yaml-guide.md:146 fd64dd818ec64bb6aa9a11586a5747f6
+#, fuzzy
 msgid "and a more complex example combining maps and arrays:"
-msgstr ""
+msgstr "と、マップと配列を組み合わせたより複雑な例です："
 
 #: ../../src/topics/yaml-guide.md:167 8c06e542dd4144fa83388d8142552c8d
 msgid "JSON Style"
-msgstr ""
+msgstr "JSON形式"
 
 #: ../../src/topics/yaml-guide.md:169 87bafb845c714b109874f6137b84462d
+#, fuzzy
 msgid ""
 "YAML is based on [JavaScript Object Notation (JSON)][json]. Maps and arrays "
 "can also be defined in YAML using the native JSON syntax. For example:"
 msgstr ""
+"YAMLは[JavaScript Object Notation (JSON)][json]に基づいています。マップと配列"
+"は、JSON構文を使ってYAMLで定義することもできます。例えば"
 
 #: ../../src/topics/yaml-guide.md:177 5ab9ddf613a540a2b8228e37600cc5dc
+#, fuzzy
 msgid "and:"
-msgstr ""
+msgstr "と："
 
 #: ../../src/topics/yaml-guide.md:184 fcd05b1ef31a4046946a2399c7fc5575
 msgid ""
@@ -4133,18 +4330,22 @@ msgstr ""
 
 #: ../../src/topics/yaml-guide.md:194 f4b8fc8236044fada420def13a02813d
 msgid "Reference"
-msgstr ""
+msgstr "リファレンス"
 
 #: ../../src/topics/yaml-guide.md:196 859368c1f25c4a4aad57abfd046c63f5
+#, fuzzy
 msgid ""
 "The [Learn YAML in Y Minutes][yaml-y-mins] reference was very helpful for us "
 "while we wrote this guide, though it also covers features that are not valid "
 "in CWL."
 msgstr ""
+"[Learn YAML in Y Minutes][yaml-y-mins] リファレンスは、CWLでは有効でない機能"
+"もカバーしていますが、このガイドを書く間、私たちにとって非常に役に立ちました"
+"。"
 
 #: ../../src/tutorials.md:1 2203c93f02ac4514a43508ecb98dfcc5
 msgid "Tutorials"
-msgstr ""
+msgstr "チュートリアル"
 
 #: ../../src/tutorials.md:5 5d92464923c245818c070fbef102be89
 msgid ""
