@@ -131,10 +131,6 @@ baseCommand: sh
 outputs: []
 ```
 
-```{note}
-In CWL, everything must be directly stated.
-```
-
 ## Setting `self`-based Input Bindings for Optional Inputs
 
 Currently, `cwltool` can't cope with missing optional inputs if their

@@ -52,8 +52,8 @@ style=dashed;
 }
 ```
 
-If you try running it with `cwltool`, the command will fail since `cwltool`
-does not have enough information to know how to execute it:
+The operation file will fail to run with `cwltool` because `cwltool`
+lacks the necessary information to execute it:
 
 ```{runcmd} cwltool operations.cwl --message Hello
 :working-directory: src/_includes/cwl/operations/
