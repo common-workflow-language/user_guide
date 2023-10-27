@@ -191,16 +191,16 @@ outputs: []
 
 ## How do I connect a solo value to an input that expects an array of that type?
 
-Using [`MultipleInputFeatureRequirement`](https://www.commonwl.org/v1.0/Workflow.html#MultipleInputFeatureRequirement)
+Add a [`MultipleInputFeatureRequirement`](https://www.commonwl.org/v1.0/Workflow.html#MultipleInputFeatureRequirement)
 along with
-[`linkMerge: merge_nested`](https://www.commonwl.org/v1.0/Workflow.html#WorkflowStepInput)
+[`linkMerge: merge_nested`](https://www.commonwl.org/v1.0/Workflow.html#WorkflowStepInput):
 
 >   merge_nested
 >
 > The input must be an array consisting of exactly one entry for each input link.
 > If "merge_nested" is specified with a single link, the value from the link must be wrapped in a single-item list.
 
-Which means "create a list with exactly these sources as elements"
+Which means "create a list with exactly these sources as elements".
 
 Or in other words: if the destination is of type `File[]` (an array of `File`s)
 and the source is a single `File` then add `MultipleInputFeatureRequirement` to the Workflow level `requirements`
@@ -424,7 +424,7 @@ inputs:
 ```
 
 
-To fix this error, change `-` (hyphen) to `_` (underscore)
+To fix this error, change `-` (hyphen) to `_` (underscore):
 
 ```cwl
 valueFrom: $(inputs.sample_input)

@@ -87,7 +87,7 @@ CWL implementation.
 This is convenient for environments with multiple CWL runners.
 
 The CWL community publishes a Python package with the name `cwlref-runner` that installs
-an alias for `cwltool` under the name `cwl-runner`
+an alias for `cwltool` under the name `cwl-runner`.
 
 ```{code-block} console
 :name: installing-cwlrunner-with-pip
