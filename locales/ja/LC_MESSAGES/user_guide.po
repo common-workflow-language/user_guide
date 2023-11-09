@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: Common Workflow Language User Guide\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-01-25 14:33+0100\n"
-"PO-Revision-Date: 2023-10-20 04:13+0000\n"
-"Last-Translator: Manabu ISHII <manabu.ishii.rb@gmail.com>\n"
+"PO-Revision-Date: 2023-10-27 09:22+0000\n"
+"Last-Translator: Michael Crusoe <mrc@commonwl.org>\n"
 "Language-Team: Japanese <https://hosted.weblate.org/projects/commonwl/"
 "user-guide/ja/>\n"
 "Language: ja\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 5.1\n"
+"X-Generator: Weblate 5.2-dev\n"
 
 #: ../../LICENSE.md:2 4e203044f0464fd5a3256430391dde12
 msgid "Licenses"
@@ -146,9 +146,8 @@ msgid "FAQ"
 msgstr "よくある質問"
 
 #: ../../src/faq.md:11 61edb787dab04ca2ad3ed07616d878a0
-#, fuzzy
 msgid "Non \"`File`\" Types Using `evalFrom`"
-msgstr "\"`File`\" 型をつかわず  `evalFrom`を使う方法"
+msgstr "\"`File`\" 型をつかわず `evalFrom`を使う方法"
 
 #: ../../src/faq.md:41 d5321589e7ed4f0db3c630cc39800791
 msgid "Rename an Input File"
@@ -194,7 +193,7 @@ msgstr ""
 
 #: ../../src/faq.md:89 1a8cc75ea6174b9297871b2e58971077
 msgid "Start with adding a _shebang_ at the top of your file:"
-msgstr "まず、ファイルの先頭に_shebang_ を追加します："
+msgstr "まず、ファイルの先頭に _shebang_ を追加します："
 
 #: ../../src/faq.md:95 a7d84f740a714ec588503ee084fbbc34
 msgid ""
@@ -1541,18 +1540,18 @@ msgid ""
 "Metadata and Authorship section of this User Guide](../topics/metadata-and-"
 "authorship.md)."
 msgstr ""
-"CW定義にメタデータを与える例については、［このユーザーガイドのメタデータと著"
-"者名のセクション］(../topics/metadata-and-authorship.md)を参照してください。"
+"CW定義にメタデータを与える例については、 "
+"[このユーザーガイドのメタデータと著者名のセクション](../topics/metadata-and-"
+"authorship.md)を参照してください。"
 
 #: ../../src/topics/best-practices.md:40 ecf2b9c0b1664afe9c4e180610610021
-#, fuzzy
 msgid ""
 "Include [attribution information][license-example] for the author(s) of the "
 "CWL tool or workflow description. Use unambiguous identifiers like [ORCID]"
 "[orcid]."
 msgstr ""
-"CWLツールやワークフローの定義の著者の[帰属情報][ライセンス例]を含みます。[ORC"
-"ID][orcid]のような曖昧でない識別子を使用してください。"
+"CWLツールやワークフローの定義の著者の[帰属情報][license-example]を含みます。["
+"ORCID][orcid]のような曖昧でない識別子を使用してください。"
 
 #: ../../src/topics/best-practices.md:44 e24cb13d98014e558b6a6946758359e0
 msgid ""
@@ -1663,7 +1662,6 @@ msgstr "ツール定義を同僚（できれば別の機関の人）に渡し、
 "ックをもらいましょう。"
 
 #: ../../src/topics/best-practices.md:93 f1c1340f9745458980e0fbd641738687
-#, fuzzy
 msgid ""
 "Complex workflows with individual components which can be abstracted should "
 "utilise the [`SubworkflowFeatureRequirement`][subworkflow] to make their "
@@ -1671,7 +1669,7 @@ msgid ""
 msgstr ""
 "抽象化できる個々のコンポーネントを持つ複雑なワークフローは、ワークフローをモ"
 "ジュール化し、その一部を容易に再利用できるようにするために、[`SubworkflowFeat"
-"ureRequirement`][サブワークフロー]を利用します。"
+"ureRequirement`][subworkflow]を利用します。"
 
 #: ../../src/topics/best-practices.md:97 5424e5472c3d466fa2a3d2022c6cb475
 #, fuzzy
