@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: Common Workflow Language User Guide\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-01-25 14:33+0100\n"
-"PO-Revision-Date: 2023-10-20 04:13+0000\n"
+"PO-Revision-Date: 2023-11-09 05:34+0000\n"
 "Last-Translator: Manabu ISHII <manabu.ishii.rb@gmail.com>\n"
 "Language-Team: Japanese <https://hosted.weblate.org/projects/commonwl/"
 "user-guide/ja/>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 5.1\n"
+"X-Generator: Weblate 5.2-dev\n"
 
 #: ../../LICENSE.md:2 4e203044f0464fd5a3256430391dde12
 msgid "Licenses"
@@ -146,9 +146,8 @@ msgid "FAQ"
 msgstr "よくある質問"
 
 #: ../../src/faq.md:11 61edb787dab04ca2ad3ed07616d878a0
-#, fuzzy
 msgid "Non \"`File`\" Types Using `evalFrom`"
-msgstr "\"`File`\" 型をつかわず  `evalFrom`を使う方法"
+msgstr "\"`File`\" 型をつかわず `evalFrom`を使う方法"
 
 #: ../../src/faq.md:41 d5321589e7ed4f0db3c630cc39800791
 msgid "Rename an Input File"
@@ -194,7 +193,7 @@ msgstr ""
 
 #: ../../src/faq.md:89 1a8cc75ea6174b9297871b2e58971077
 msgid "Start with adding a _shebang_ at the top of your file:"
-msgstr "まず、ファイルの先頭に_shebang_ を追加します："
+msgstr "まず、ファイルの先頭に _shebang_ を追加します："
 
 #: ../../src/faq.md:95 a7d84f740a714ec588503ee084fbbc34
 msgid ""
@@ -1541,18 +1540,18 @@ msgid ""
 "Metadata and Authorship section of this User Guide](../topics/metadata-and-"
 "authorship.md)."
 msgstr ""
-"CW定義にメタデータを与える例については、［このユーザーガイドのメタデータと著"
-"者名のセクション］(../topics/metadata-and-authorship.md)を参照してください。"
+"CW定義にメタデータを与える例については、 "
+"[このユーザーガイドのメタデータと著者名のセクション](../topics/metadata-and-"
+"authorship.md)を参照してください。"
 
 #: ../../src/topics/best-practices.md:40 ecf2b9c0b1664afe9c4e180610610021
-#, fuzzy
 msgid ""
 "Include [attribution information][license-example] for the author(s) of the "
 "CWL tool or workflow description. Use unambiguous identifiers like [ORCID]"
 "[orcid]."
 msgstr ""
-"CWLツールやワークフローの定義の著者の[帰属情報][ライセンス例]を含みます。[ORC"
-"ID][orcid]のような曖昧でない識別子を使用してください。"
+"CWLツールやワークフローの定義の著者の[帰属情報][license-example]を含みます。["
+"ORCID][orcid]のような曖昧でない識別子を使用してください。"
 
 #: ../../src/topics/best-practices.md:44 e24cb13d98014e558b6a6946758359e0
 msgid ""
@@ -1663,7 +1662,6 @@ msgstr "ツール定義を同僚（できれば別の機関の人）に渡し、
 "ックをもらいましょう。"
 
 #: ../../src/topics/best-practices.md:93 f1c1340f9745458980e0fbd641738687
-#, fuzzy
 msgid ""
 "Complex workflows with individual components which can be abstracted should "
 "utilise the [`SubworkflowFeatureRequirement`][subworkflow] to make their "
@@ -1671,7 +1669,7 @@ msgid ""
 msgstr ""
 "抽象化できる個々のコンポーネントを持つ複雑なワークフローは、ワークフローをモ"
 "ジュール化し、その一部を容易に再利用できるようにするために、[`SubworkflowFeat"
-"ureRequirement`][サブワークフロー]を利用します。"
+"ureRequirement`][subworkflow]を利用します。"
 
 #: ../../src/topics/best-practices.md:97 5424e5472c3d466fa2a3d2022c6cb475
 #, fuzzy
@@ -2516,10 +2514,12 @@ msgstr "次のチュートリアルで、`$namespaces` と`$schemas` "
 "の部分をより詳しく説明しますので、今は気にしないでください。"
 
 #: ../../src/topics/file-formats.md:17 5cb830da47464a8b9c3950983fa4d56f
+#, fuzzy
 msgid ""
 "Note that for added value `cwltool` can do some basic reasoning based on "
 "file formats and warn you if there seem to be some obvious mismatches."
-msgstr ""
+msgstr "なお、さらなる利点として`cwltool` は、ファイル形式に基づく基本的な推論を行い"
+"、明らかな不一致があるようであれば警告を発します。"
 
 #: ../../src/topics/file-formats.md:20 0535d5de416b4ea3b2f5996583deecc1
 msgid "`metadata_example.cwl`"
@@ -2536,24 +2536,34 @@ msgid "Sample Parameter Files"
 msgstr "サンプルパラメーターファイル"
 
 #: ../../src/topics/file-formats.md:34 a2ce43b391864e8bbde16328cc19b32b
+#, fuzzy
 msgid ""
 "Below is an example of a parameter file for the example above. We encourage "
 "checking in working examples of parameter files for your tool. This allows "
 "others to quickly work with your tool, starting from a \"known good\" "
 "parameterization."
 msgstr ""
+"以下は、上記の例のパラメータファイルの例です。あなたのツールのパラメータファ"
+"イルの実例をチェックすることをお勧めします。これにより、他の人が「既知の良い"
+"」パラメータ化から始めて、あなたのツールで素早く作業することができます。"
 
 #: ../../src/topics/file-formats.md:39 aebee48b742c4145a600fd2daf8c75dc
 msgid "`sample.yml`"
 msgstr "`sample.yml`"
 
 #: ../../src/topics/file-formats.md:45 56ee4dcfff6141d5bef80eb96559876d
+#, fuzzy
 msgid ""
 "___Note:___ To follow the example below, you need to download the example "
 "input file, *file-formats.bam*. The file is available from <https://github."
 "com/common-workflow-language/user_guide/raw/main/src/_includes/cwl/file-"
 "formats/file-formats.bam>  and can be downloaded e.g. via `wget`:"
 msgstr ""
+"___注：___ 以下の例に実行するには、例の入力ファイル、*file-formats.bam* "
+"をダウンロードする必要があります。このファイルは<https://github.com/"
+"common-workflow-language/user_guide/raw/main/src/_includes/cwl/file-formats/"
+"file-formats.bam> から入手可能で、`wget` "
+"などでダウンロードすることができます："
 
 #: ../../src/topics/index.md:1 8d3a6d83e2e54c56995893c41590b7ff
 msgid "Topics"
@@ -2623,11 +2633,14 @@ msgstr ""
 "間を省くことができます："
 
 #: ../../src/topics/inputs.md:40 7dc630ea86464b1dba3a4e5079260b3b
+#, fuzzy
 msgid ""
 "You can redirect the output to a file, i.e. `cwltool --make-template inp.cwl "
 "> inp-job.yml`, and then modify the default values with your desired input "
 "values."
 msgstr ""
+"`cwltool --make-template inp.cwl &gt; inp-job.yml` のように、出力をファイルに"
+"リダイレクトし、デフォルト値を希望の入力値で修正することができます。"
 
 #: ../../src/topics/inputs.md:44 ae37901a8dbe48a59e27ab4e2e6e2d30
 msgid ""
