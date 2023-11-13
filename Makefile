@@ -3,7 +3,7 @@
 
 # You can set these variables from the command line, and also
 # from the environment for the first two.
-SPHINXOPTS		= "-W"
+#SPHINXOPTS		=   # was "-W" (turn warnings into errors)
 SPHINXBUILD		= sphinx-build
 SOURCEDIR		= src
 BUILDDIR		= _build
@@ -25,15 +25,17 @@ watch: clean
 	@echo
 	@echo "Building and watching for changes in the documentation."
 	sphinx-autobuild "$(SOURCEDIR)" "$(BUILDDIR)" \
+			-b html \
 			--ignore='**venv' \
 			--ignore='**.github' \
 			--ignore='*.egg-info' \
 			--ignore='**_includes/**/*.txt' \
-			--watch='cwl'
+			--watch='cwl' \
+			$(SPHINXOPTS) $(O)
 
 ## unittest-examples	:
 unittest-examples:
-	cd src/_includes/cwl; cwltest --test=conformance-test.yml --tool=${RUNNER}
+	cd src/_includes/cwl; cwltest --test=cwl_tests.yml --tool=${RUNNER}
 
 ## check-json			:
 check-json:
@@ -41,6 +43,10 @@ check-json:
 
 container-pull:
 	for container in $$(git grep dockerPull $$(git ls-files *.cwl) | awk '-F: ' '{print $$3}'); do docker pull $${container}; done
+
+update_translations: gettext
+	sphinx-intl update -p _build/gettext
+
 
 .PHONY: help clean watch unittest-examples check-json Makefile
 

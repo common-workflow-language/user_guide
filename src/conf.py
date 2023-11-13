@@ -157,6 +157,10 @@ html_theme = 'pydata_sphinx_theme'
 # so a file named "default.css" will overwrite the builtin "default.css".
 html_static_path = ['_static']
 
+html_css_files = [
+    'css/custom.css',
+]
+
 html_logo = '_static/images/logos/cwl/CWL-Logo-HD-cropped2.png'
 html_favicon = '_static/images/favicons/cwl/favicon.ico'
 
@@ -167,6 +171,10 @@ html_extra_path = [
 ]
 
 html_theme_options = {
+    "external_links": [
+      {"name": "Community", "url": "https://www.commonwl.org/community/"},
+    ],
+    "header_links_before_dropdown": 6,
     "icon_links": [
         {
             "name": "GitHub",
@@ -226,3 +234,89 @@ html_context = {
     "doc_path": "src",
     "default_mode": "light"
 }
+
+gettext_uuid = True
+gettext_compact = "user_guide"
+locale_dirs = ['../locales/']
+
+
+# Patched MyST parser
+# from __future__ import annotations
+
+from docutils import nodes
+from docutils.parsers.rst import Parser as RstParser
+from sphinx.parsers import Parser as SphinxParser
+from sphinx.util import logging
+
+from myst_parser.config.main import (
+    MdParserConfig,
+    TopmatterReadError,
+    merge_file_level,
+    read_topmatter,
+)
+from myst_parser.mdit_to_docutils.sphinx_ import SphinxRenderer, create_warning
+from myst_parser.parsers.mdit import create_md_parser
+
+SPHINX_LOGGER = logging.getLogger(__name__)
+
+class MystParser(SphinxParser):
+    """Sphinx parser for Markedly Structured Text (MyST)."""
+
+    supported: tuple[str, ...] = ("md", "markdown", "myst")
+    """Aliases this parser supports."""
+
+    settings_spec = RstParser.settings_spec
+    """Runtime settings specification.
+    Defines runtime settings and associated command-line options, as used by
+    `docutils.frontend.OptionParser`.  This is a concatenation of tuples of:
+    - Option group title (string or `None` which implies no group, just a list
+      of single options).
+    - Description (string or `None`).
+    - A sequence of option tuples
+    """
+
+    config_section = "myst parser"
+    config_section_dependencies = ("parsers",)
+    translate_section_name = None
+
+    def parse(self, inputstring: str, document: nodes.document) -> None:
+        """Parse source text.
+        :param inputstring: The source string to parse
+        :param document: The root docutils node to add AST elements to
+        """
+        # get the global config
+        config: MdParserConfig = document.settings.env.myst_config
+
+        # update the global config with the file-level config
+        try:
+            topmatter = read_topmatter(inputstring)
+        except TopmatterReadError:
+            pass  # this will be reported during the render
+        else:
+            if topmatter:
+                warning = lambda wtype, msg: create_warning(  # noqa: E731
+                    document, msg, line=1, append_to=document, subtype=wtype
+                )
+                config = merge_file_level(config, topmatter, warning)
+
+        parser = create_md_parser(config, SphinxRenderer)
+        # TODO: In the first pass, the call above will use MarkdownIt over the whole document,
+        #       populating the ``.md_env`` correctly. Over the next passes, from transforms as
+        #       ``sphinx.transforms.i18n.Locale`` it will create a blank new document, as well
+        #       as a new MarkdownIT parser but using just the Docutils document that is being
+        #       translated. As a result of this, the translation has no reference-links, and it
+        #       gives you the translation without resolving the links. Here we just re-use the
+        #       ``md_env`` dictionary that contains the ``.references`` populated in the first
+        #       pass, fixing i18n with MyST Parser.
+        env = {} if not hasattr(document.settings, 'md_env') else document.settings.md_env
+        parser.options["document"] = document
+        parser.render(inputstring, env)
+        document.settings.md_env = parser.renderer.md_env
+
+
+def setup(app):
+    """Sphinx setup callback."""
+
+    # TODO: Here we replace the MySTParser (that replaces the Sphinx default parser...),
+    #       with our patched version above.
+    app.add_source_parser(MystParser, override=True)

@@ -106,12 +106,12 @@ The `dot` program from Graphviz is needed to render some of the diagrams.
 
 * For Debian/Ubuntu users:
 ```bash
-sudo apt get install graphviz
+sudo apt-get install graphviz
 ```
 * For non-Debian/Ubuntu users, follow the directions at [the GraphViz download site](https://graphviz.org/download).
 ```bash
 # Create and activate a virtual environment
-python -m venv venv
+python3 -m venv venv
 source venv/bin/activate
 # update the version of pip, setuptools, and wheel
 (venv) pip install -U pip setuptools wheel
@@ -119,11 +119,15 @@ source venv/bin/activate
 (venv) pip install ".[all]"
 # Create the HTML to visualize locally
 (venv) make html
-(venv) open _build/index.html
+(venv) open _build/html/index.html
 # Or you can start a serve that watches for local file changes
 (venv) make watch
 # Open <http://localhost:8000/> in your browser
 ```
+
+You can use `udocker` or any other Docker compatible engine to build the
+user guide, by setting the following environment variable:
+`CWLTOOL_OPTIONS=--udocker`, or `CWLTOOL_OPTIONS=--podman` for Podman, or `CWLTOOL_OPTIONS=--singularity` for Singularity/Apptainer.
 
 > NOTE: When you modify the packages installed with apt or pip, please verify
 > if the change needs to be applied to either or to both of CI and readthedocs.
@@ -148,7 +152,10 @@ are still working after the change.
 Use “tool description” not “tool wrapper” for describing the first argument
 given to the `cwl-runner` or `cwltool` commands.
 
-### Code examples
+
+### Code Examples
+
+All CWL documents should be version 1.2 unless there is a very good reason otherwise.
 
 To include code into a Markdown file you have two options. For external files use
 the following command:
@@ -181,6 +188,34 @@ into an anchor link `#cwl-standard`.
 If you are having trouble with links to sections or code blocks, it might
 be due to duplicated sections, or to spaces or other characters. To
 preview the generated links, use the `myst-anchors` tool.
+
+### Troubleshooting
+
+General advice for troubleshooting is to increase the verbosity of Sphinx
+logs. When using `make`, change your command to the following pattern:
+`make SPHINXOPTS="-vvv" html`. Or if you are using `sphinx-build`, then
+use the following: `sphinx-build -vvv -b html src build/`.
+
+It is also worth removing build directories and files such as `_build`, `build`,
+and [`~/.cache/salad`](https://github.com/common-workflow-language/user_guide/issues/268#issuecomment-1276068865).
+You may want to start afresh with a new Python virtual environment,
+installing the dependencies from scratch.
+
+If running `make html` or `make watch` appears to run fine but [gets stuck
+](https://github.com/common-workflow-language/user_guide/issues/268) at some
+part of the process (`10%`, `33%`, `57%`, etc.) for longer than 2-5 minutes
+you may have to try the following:
+
+1. Check if the Python dependencies installed in your Python virtual environment
+   have updates available (you can re-create the virtual environment, use `--upgrade`
+   for `pip`, or manually verify in PyPI and `pip`).
+2. Use `top` or `htop` to find out if there is any `cwltool` command running. Then
+   try running that command individually to see what is the error message.
+3. Upgrade your version of `docker` if you have [an error message](
+   https://github.com/docker/compose/issues/8121#issuecomment-806055733) similar to
+   `docker: Failed to create the container ID file: open /tmp/....cid: no such file or directory.`.
+4. Try using `udocker` instead of `docker`, by using `pip` to install it, and setting
+   `CWLTOOL_OPTIONS` to `--udocker`.
 
 ## Other Resources
 

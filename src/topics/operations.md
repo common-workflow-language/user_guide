@@ -1,6 +1,6 @@
 # Operations
 
-Operation is a type of CWL process just like a workflow, a command line tool, or
+An Operation is a type of CWL process, just like a workflow, a command-line tool, or
 an expression tool. It is a step of a workflow that specifies inputs and outputs,
 but it does not provide enough information to be executed.
 
@@ -14,7 +14,7 @@ you are ready to submit the workflow to a CWL runner:
 ```
 
 The `uppercase` step of the workflow is an operation. It can be used like
-use a command line tool or an expression. You can also plot it with the
+a command line tool or an expression. You can also plot it with the
 CWL Viewer or `cwltool`:
 
 ```{runcmd} cwltool --print-dot operations.cwl
@@ -52,8 +52,8 @@ style=dashed;
 }
 ```
 
-If you try running it with `cwltool` the command will fail, since `cwltool`
-does not have enough information to know how to execute it:
+The operation file will fail to run with `cwltool` because `cwltool`
+lacks the necessary information to execute it:
 
 ```{runcmd} cwltool operations.cwl --message Hello
 :working-directory: src/_includes/cwl/operations/

@@ -8,7 +8,7 @@
 :backlinks: "top"
 ```
 
-## Non "`File`" types using `evalFrom`
+## Non "`File`" Types Using `evalFrom`
 
 ```yaml
 cwlVersion: v1.0  # or v1.1
@@ -38,12 +38,12 @@ outputs:
        outputEval: $(self[0].contents)
 ```
 
-## Rename an input file
+## Rename an Input File
 
-This example shows how you can change the name of an input file
+This example demonstrates how to change the name of an input file
 as part of a tool description.
 This could be useful when you are taking files produced from another
-step in a workflow and don't want to work with the default names that these
+step in a workflow, and don't want to work with the default names that these
 files were given when they were created.
 
 ```yaml
@@ -56,9 +56,9 @@ requirements:
         entryName: $(inputs.src1.basename)_custom_extension
 ```
 
-## Rename an output file
+## Rename an Output File
 
-This example shows how you can change the name of an output file
+This example demonstrates how to change the name of an output file
 from the default name given to it by a tool:
 
 ```yaml
@@ -79,7 +79,59 @@ outputs:
       outputEval: ${self[0].basename=inputs.otu_table_name; return self;}
 ```
 
-## Setting `self`-based input bindings for optional inputs
+## Referencing a Local Script
+
+There are two ways to reference a local script:
+
+The first method involves adding the path to a folder containing your scripts to the `PATH` environment variable. This
+allows you to execute the shell script directly (without explicitly using the `sh` or `bash` commands).
+
+Start with adding a _shebang_ at the top of your file:
+
+```{code-block}
+#!/bin/bash
+```
+
+After that, make the script executable with the command `chmod +x scriptname.sh`
+
+Finally, modify your `PATH` to add the directory where your script is located.
+(It is good practice to use `$HOME/bin` for storing your own scripts).
+
+```bash
+export PATH=$PATH:$HOME/bin
+```
+
+Now you can use `baseCommand: scriptname.sh` to run the script directly.
+
+```cwl
+#!/bin/bash
+cwlVersion: v1.0
+class: CommandLineTool
+baseCommand: scriptname.sh
+```
+
+When you wish to share your work later, you can place your script in a software container in the Docker format.
+
+The second method involves including an input of `type: File` in the script itself:
+
+```cwl
+class: CommandLineTool
+
+inputs:
+  my_script:
+     type: File
+     inputBinding:
+        position: 0
+
+
+  # other inputs go here
+
+baseCommand: sh
+
+outputs: []
+```
+
+## Setting `self`-based Input Bindings for Optional Inputs
 
 Currently, `cwltool` can't cope with missing optional inputs if their
 input binding makes use of `self`.
@@ -106,10 +158,10 @@ baseCommand: echo
 outputs: []
 ```
 
-## Model a "one-or-the-other" parameter
+## Model a "one-or-the-other" Parameter
 
-Below is an example of how
-you can specify different strings to be added to a command line
+Below is an example showing how
+to specify different strings to be added to a command line,
 based on the value given to a Boolean parameter.
 
 ```yaml
@@ -129,7 +181,7 @@ baseCommand: echo
 outputs: []
 ```
 
-## Connect a solo value to an input that expects an array of that type
+## Connect a Solo Value to an Input that Expects an Array of that Type
 
 Using [`MultipleInputFeatureRequirement`](https://www.commonwl.org/v1.0/Workflow.html#MultipleInputFeatureRequirement)
 along with
@@ -191,7 +243,7 @@ inputs:
 <a name="enuminputs"></a>
 ## Enum Inputs ⚜️
 
-For command-line flags that require a specific input as the argument, an enum type can be declared in CWL. **Specifying null here is known as long form style. It does the same thing as the question mark on the other inputs.**
+For command line flags that require a specific input as the argument an enum type can be declared in CWL. **Specifying null here is known as long form style. It does the same thing as the question mark on the other inputs.**
 
 ```yaml
 Format:
@@ -211,7 +263,7 @@ Format:
 <a name="recordinputs"></a>
 ## Record Inputs 📀
 
-For command-line flags that are either **mutually exclusive** or **dependent**, a special record type can be defined. You can also specify null here to create optional inputs.
+For commandline flags that are either **mutually exclusive** or **dependent** a special record type can be defined. You can also specify null here to create optional inputs.
 
 ```yaml
 #Using record inputs to create mutually exclusive inputs
@@ -265,7 +317,7 @@ For command-line flags that are either **mutually exclusive** or **dependent**, 
 ```
 ## Setting Mutually Exclusive Parameters
 
-In order to properly set fields in a record input type, you need to pass a dictionary to the input to properly set the parameters. This is done by using inline javascript and returning the dictionary with the key of the field you want to set. The source field is set to indicate the input from the workflow to be used as the value.
+To properly set fields in a record input type, you need to pass a dictionary to the input to properly set the parameters. This is done by using inline JavaScript and returning the dictionary with the key of the field you want to set. The source field is set to indicate the input from the workflow to be used as the value.
 
 ```yaml
 steps:
@@ -300,7 +352,7 @@ input:
      My String: $(input.stringvalue)
 ```
 
-## `cwltool` errors due to filenames with space characters inside
+## `cwltool` Errors due to Filenames with Space Characters Inside
 
 `cwltool` does not allow some characters in filenames by default.
 
@@ -314,7 +366,7 @@ Invalid filename: 'a space is here.txt' contains illegal characters
 
 If you can not avoid these dangerous characters, then pass `--relax-path-checks` to `cwltool`.
 
-## CWL Parameter Reference error due to hyphen in input identifier
+## CWL Parameter Reference Error due to Hyphen in Input Identifier
 
 If `cwltool --validate` returns valid
 
@@ -391,7 +443,7 @@ The reference runner and several other CWL implementations support running
 those Docker format containers using the Singularity engine. Directly
 specifying a Singularity format container is not part of the CWL standards.
 
-## Debug JavaScript expressions
+## Debug JavaScript Expressions
 
 You can use the <code>--js-console</code> option of <code>cwltool</code>, or you can try
 creating a JavaScript or TypeScript project for your code, and load it

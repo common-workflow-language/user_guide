@@ -113,7 +113,7 @@ only in certain fields.  These are:
 
 [file-prop]: https://www.commonwl.org/v1.0/CommandLineTool.html#File
 
-## Using external libraries and inline JavaScript code with `expressionLib`
+## Using External Libraries and Inline JavaScript Code with `expressionLib`
 
 The requirement `InlineJavascriptRequirement` supports an `expressionLib` attribute
 that allows users to load external JavaScript files, or to provide inline JavaScript
