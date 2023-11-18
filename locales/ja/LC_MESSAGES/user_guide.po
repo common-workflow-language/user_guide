@@ -8,16 +8,16 @@ msgstr ""
 "Project-Id-Version: Common Workflow Language User Guide\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-01-25 14:33+0100\n"
-"PO-Revision-Date: 2023-11-09 05:34+0000\n"
+"PO-Revision-Date: 2023-11-18 05:11+0000\n"
 "Last-Translator: Manabu ISHII <manabu.ishii.rb@gmail.com>\n"
-"Language-Team: Japanese <https://hosted.weblate.org/projects/commonwl/user-"
-"guide/ja/>\n"
+"Language-Team: Japanese <https://hosted.weblate.org/projects/commonwl/"
+"user-guide/ja/>\n"
 "Language: ja\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 5.2-dev\n"
+"X-Generator: Weblate 5.2\n"
 
 #: ../../LICENSE.md:2 4e203044f0464fd5a3256430391dde12
 msgid "Licenses"
@@ -273,15 +273,15 @@ msgid "Connect a Solo Value to an Input that Expects an Array of that Type"
 msgstr "ある型の配列を期待する入力に１つの値を与える"
 
 #: ../../src/faq.md:190 d9e30e11533b4d53a144f5df7041268d
-#, fuzzy
 msgid ""
 "Using [`MultipleInputFeatureRequirement`](https://www.commonwl.org/v1.0/"
 "Workflow.html#MultipleInputFeatureRequirement) along with [`linkMerge: "
 "merge_nested`](https://www.commonwl.org/v1.0/Workflow.html#WorkflowStepInput)"
 msgstr ""
 "[`MultipleInputFeatureRequirement`](https://www.commonwl.org/v1.0/Workflow."
-"html#MultipleInputFeatureRequirement) と [`linkMerge: merge_nested`](https://"
-"www.commonwl.org/v1.0/Workflow.html#WorkflowStepInput)を一緒に使います。"
+"html#MultipleInputFeatureRequirement) と [`linkMerge: "
+"merge_nested`](https://www.commonwl.org/v1.0/Workflow."
+"html#WorkflowStepInput)を一緒に使います"
 
 #: ../../src/faq.md:194 941077158ec54ae19bfa2e2ad6662da1
 msgid "merge_nested"
@@ -299,10 +299,8 @@ msgstr ""
 "アイテムリストでラップされなければなりません。"
 
 #: ../../src/faq.md:199 a1d57e15656548128a76a8b975c564c9
-#, fuzzy
 msgid "Which means \"create a list with exactly these sources as elements\""
-msgstr ""
-"つまり、\"まさにこれらのソースを要素とするリストを作成する\" ということです。"
+msgstr "つまり、\"まさにこれらのソースを要素とするリストを作成する\" ということです"
 
 #: ../../src/faq.md:201 c8c235a9bf6240628f0b5493ffebf7e0
 #, fuzzy
@@ -445,9 +443,8 @@ msgstr "`-` (ハイフン文字、引き算の記号)が原因で発生した問
 
 #: ../../src/faq.md:423 f6c402f7f6974edbbb5582c8e22f3869
 msgid "To fix this error, change `-` (hyphen) to `_` (underscore)"
-msgstr ""
-"このエラーを修正するには、`-` (ハイフン) を`_` (アンダースコア) に変更してく"
-"ださい。"
+msgstr "このエラーを修正するには、`-` (ハイフン) を`_` (アンダースコア) "
+"に変更してください"
 
 #: ../../src/faq.md:436 190099a242a645c9b9f8bc3ce89d920d
 msgid ""
@@ -958,12 +955,18 @@ msgid "CWL Runner"
 msgstr "CWL Runner"
 
 #: ../../src/introduction/prerequisites.md:41 0f2704bf1f7148be95e999e312899f11
+#, fuzzy
 msgid ""
 "The first thing you will need for running CWL workflows is a CWL runner. "
 "`cwltool` is a Python Open Source project maintained by the CWL community. "
 "It is also the CWL reference runner, which means it must support everything "
 "in the current CWL specification, {{ cwl_version }}."
 msgstr ""
+"CWL ワークフローを実行するために最初に必要なものは、CWL runnerです。`cwltool`"
+" は、CWL コミュニティによって維持されている Python "
+"オープンソース・プロジェクトです。これはCWL reference runner(訳注: "
+"CWLの参照実装)でもあり、現在のCWL仕様{{ cwl_version "
+"}}のすべてをサポートしなければならないことを意味します。"
 
 #: ../../src/introduction/prerequisites.md:46 86264c9e56104ecea9146407c379aae2
 msgid ""
@@ -978,9 +981,8 @@ msgstr ""
 "`cwltool` をインストールします："
 
 #: ../../src/introduction/prerequisites.md:51 0a0f0e5151ab4c498b4f8a12c016f28d
-#, fuzzy
 msgid "Installing `cwltool` with `pip` and `venv`."
-msgstr "`pip` と `venv` での `cwltool` のインストール"
+msgstr "`pip` と `venv` での `cwltool` のインストール。"
 
 #: ../../src/introduction/prerequisites.md:62 f7aaafeee230400da056464c853582c2
 #, fuzzy
@@ -1048,8 +1050,9 @@ msgid ""
 "The CWL community publishes a Python package with the name `cwlref-runner` "
 "that installs an alias for `cwltool` under the name `cwl-runner`"
 msgstr ""
-"CWLコミュニティは、`cwlref-runner` という名前のPythonパッケージを公開してお"
-"り、`cwltool` のエイリアスを`cwl-runner` という名前でインストールします。"
+"CWLコミュニティは、`cwlref-runner` "
+"という名前のPythonパッケージを公開しており、`cwltool` のエイリアスを`cwl-"
+"runner` という名前でインストールします"
 
 #: ../../src/introduction/prerequisites.md:104 71ebe91d4bda473abe87578929433212
 msgid "Installing `cwl-runner` alias for cwltool with `pip`."
@@ -2081,7 +2084,7 @@ msgstr "次に、`expression.cwl` を実行することができます："
 
 #: ../../src/topics/expressions.md:37 65e0cdd505b944caa40f65e612cdddfc
 msgid "Running `expression.cwl`"
-msgstr "`expression.cwl` を実行する。"
+msgstr "`expression.cwl` を実行する"
 
 #: ../../src/topics/expressions.md:47 8b70a1ad70514039b97164fa630c12e4
 msgid ""
@@ -2559,7 +2562,7 @@ msgstr "`metadata_example.cwl`"
 #: ../../src/topics/metadata-and-authorship.md:22
 #: f558bcf2a993482195cd418b37761809 fb47f73c38cf4ec59bd3021866a631f8
 msgid "The equivalent of this CWL description in command line format is:"
-msgstr "このCWL定義に相当するものをコマンドライン形式にすると"
+msgstr "このCWL定義に相当するものをコマンドライン形式にすると:"
 
 #: ../../src/topics/file-formats.md:32 74b28c1b09c6429b82e462e4ec61808e
 msgid "Sample Parameter Files"
@@ -2715,6 +2718,9 @@ msgid ""
 "\"example_flag\" is \"true\", then `prefix` will be added to the command "
 "line.  If false, no flag is added."
 msgstr ""
+"ブール型はフラグとして扱われます。  入力パラメータ \"example_flag \"が \"true"
+" \"の場合、コマンドラインに`prefix` が追加されます。  "
+"falseの場合、フラグは付加されません。"
 
 #: ../../src/topics/inputs.md:95 a519be60726a44af9941fdce04735353
 msgid ""
@@ -2723,6 +2729,9 @@ msgid ""
 "before the parameter .  In the example above, this is rendered as `--example-"
 "string hello`."
 msgstr ""
+"文字列型は、コマンドライン上ではリテラル値として与えられます。  ` prefix` は"
+"オプションです。与えられた場合、コマンドライン上のパラメータの前に別の引数と"
+"して与えられます。  上の例では、`--example-string hello` と与えられます。"
 
 #: ../../src/topics/inputs.md:109 cb8fc8c4c79e467eac5fab4ca685201e
 msgid ""
@@ -2820,8 +2829,9 @@ msgid ""
 msgstr ""
 
 #: ../../src/topics/inputs.md:191 5d7d7a28cc5d4862803032aec78174d9
+#, fuzzy
 msgid "Inclusive and Exclusive Inputs"
-msgstr ""
+msgstr "包括的入力と排他的入力"
 
 #: ../../src/topics/inputs.md:193 dea0d4b681f94e73b13965dcfe75cf7d
 msgid ""
@@ -2877,12 +2887,17 @@ msgid "Exclusive Input Parameters with Expressions"
 msgstr "式で入力パラメータを排他的に指定する"
 
 #: ../../src/topics/inputs.md:257 2c3b884cb1c54521900cc90782e8a58d
+#, fuzzy
 msgid ""
 "If you use exclusive input parameters combined with expressions, you need to "
 "be aware that the `inputs` JavaScript object will contain one of the "
 "exclusive input values. This means that you might need to use an **or** "
 "boolean operator to check which values are present."
 msgstr ""
+"排他的入力パラメータを式と組み合わせて使用する場合、`inputs` JavaScript オブ"
+"ジェクトに排他的入力値のいずれかが含まれることを意識する必要があります。つま"
+"り、**or** のブーリアン演算子を使用して、どの値が存在するかをチェックする必要"
+"がある場合があります。"
 
 #: ../../src/topics/inputs.md:262 a1073b6306044dffb414319ae01f68bb
 #, fuzzy
@@ -2922,6 +2937,7 @@ msgstr ""
 "ロー実行時に失敗することになります。"
 
 #: ../../src/topics/inputs.md:289 e98e165f6bba40809c90473d72f9d592
+#, fuzzy
 msgid ""
 "To correct it, you must remember to use an or operator in your JavaScript "
 "expression when using exclusive parameters, or any parameter that allows "
@@ -2929,11 +2945,16 @@ msgid ""
 "file_format || 'auto')`, to have a default value if none was provided in the "
 "command line or job input file."
 msgstr ""
+"これを修正するには、排他的パラメータ、または`null` "
+"を許可するパラメータを使用する場合、JavaScript 式で or "
+"演算子を使用することを忘れてはなりません。たとえば、式を`$("
+"inputs.file_format || 'auto')` に変更すると、コマンドラインやジョブ入力ファイ"
+"ルで何も指定されていない場合にデフォルト値を持つようになります。"
 
 #: ../../src/topics/metadata-and-authorship.md:1
 #: d33aa2353ad44fb885d3a1ee48263dc4
 msgid "Metadata and Authorship"
-msgstr ""
+msgstr "メタデータと著者"
 
 #: ../../src/topics/metadata-and-authorship.md:3
 #: cd64d2d828834cbbb24ea5358caf5405
@@ -2970,6 +2991,7 @@ msgstr ""
 
 #: ../../src/topics/metadata-and-authorship.md:30
 #: cb9980db4e5f4c74b01c2dec6d5e92d0
+#, fuzzy
 msgid ""
 "For those that are highly motivated, it is also possible to annotate your "
 "tool with a much larger amount of metadata. This example includes EDAM "
@@ -2977,6 +2999,10 @@ msgid ""
 "hardware requirements in order to use the tool, and a few more metadata "
 "fields."
 msgstr ""
+"高いモチベーションを持つ人であれば、ツールにもっと多くのメタデータを付与する"
+"ことも可能です。この例では、EDAMオントロジーのタグをキーワードとして含み（関"
+"連するツールのグループ化が可能）、ツールを使用するために必要なハードウェアの"
+"ヒントや、さらにいくつかのメタデータフィールドがあります。"
 
 #: ../../src/topics/metadata-and-authorship.md:35
 #: 2dfbd4d580044ed083992f3ceb1bc64e
@@ -3043,14 +3069,19 @@ msgstr ""
 
 #: ../../src/topics/operations.md:58 98d9b8d867594543890af99e77e24edb
 msgid "`cwltool` does not know how to run operations"
-msgstr "`cwltool` は、どうやってoperationsを実行するかを知りません。"
+msgstr "`cwltool` は、どうやってoperationsを実行するかを知りません"
 
 #: ../../src/topics/operations.md:66 a25d0b1e13324b40a6b8fcd227948c4f
+#, fuzzy
 msgid ""
 "CWL runners may come up with ways to bind operations to concrete steps. A "
 "CWL runner could, for instance, use abstract operations with ID's that "
 "correspond to steps executed by a different workflow engine."
 msgstr ""
+"CWL runnerは、操作を具体的なステップにバインドする方法を思いつくかもしれませ"
+"ん。例えば、CWL runnerは、"
+"異なるワークフローエンジンで実行されるステップに対応するIDを持つ抽象的な "
+"operation を使用することができます。"
 
 #: ../../src/topics/outputs.md:1 da077da5eb8a4ffebfde041fc16300de
 msgid "Outputs"
@@ -3099,6 +3130,10 @@ msgid ""
 "_array of strings_.  The first element is the command to run, and any "
 "subsequent elements are mandatory command line arguments"
 msgstr ""
+"これまでの例では、`baseCommand` "
+"は単なる文字列で、引数はCWL入力として渡していました。単一の文字列の代わりに、"
+"文字列の配列__ を使用することができます。  最初の要素は実行するコマンドで、そ"
+"れ以降の要素は必須のコマンドライン引数です。"
 
 #: ../../src/topics/outputs.md:26 f1ee2e00b0cc4112b51c9df3a919b73f
 msgid "`tar.cwl`"
@@ -3125,7 +3160,8 @@ msgstr ""
 msgid ""
 "The field `outputBinding` describes how to set the value of each output "
 "parameter."
-msgstr ""
+msgstr "`outputBinding` "
+"フィールドには、各出力パラメータの値の設定方法が記述されています。"
 
 #: ../../src/topics/outputs.md:62 329d2809dfae4f90bc638f5f03a47ee3
 msgid ""
@@ -3133,10 +3169,13 @@ msgid ""
 "you don't know name of the file in advance, you can use a wildcard pattern "
 "like `glob: '*.txt'`."
 msgstr ""
+"`glob` フィールドは、出力ディレクトリ内のファイル名で構成されます。ファイル名"
+"が予め分からない場合は、`glob: '*.txt'` "
+"のようにワイルドカードパターンを使用することができます。"
 
 #: ../../src/topics/outputs.md:65 96df2d45e42441d49ce193ccbfab78a3
 msgid "Capturing Standard Output"
-msgstr ""
+msgstr "標準出力をキャプチャする"
 
 #: ../../src/topics/outputs.md:67 c6bcf7c6a8774dd6be41cc775848c3b8
 #, fuzzy
@@ -3453,9 +3492,8 @@ msgstr ""
 "いくつかは他のCWLランナーにも適用されるかもしれません。"
 
 #: ../../src/topics/troubleshooting.md:6 1b6b7a75cc754775bf9dd80c0941e8da
-#, fuzzy
 msgid "Run `cwltool` with `cachedir`"
-msgstr "`cwltool` を`cachedir` で実行する。"
+msgstr "`cwltool` を`cachedir` で実行する"
 
 #: ../../src/topics/troubleshooting.md:8 9a710602e00c4934ae3a3b471aa68458
 msgid ""
@@ -3702,7 +3740,7 @@ msgstr "`1st-workflow.cwl`"
 #: ../../src/topics/workflows.md:179 ../../src/topics/workflows.md:180
 #: 23af7bd2facf4043b2b1c4373fce15fa 307b6618a92948fca4203ccb497c77e6
 msgid "Visualization of 1st-workflow.cwl"
-msgstr "1st-workflow.cwlの可視化。"
+msgstr "1st-workflow.cwlの可視化"
 
 #: ../../src/topics/workflows.md:180 a2dd833fdca4443181648e41051a5232
 #, fuzzy
@@ -3984,13 +4022,12 @@ msgid "`scatter-workflow.cwl`"
 msgstr "`scatter-workflow.cwl`"
 
 #: ../../src/topics/workflows.md:421 3a67d77a2e7b4c0bb61cc3585ceae942
-#, fuzzy
 msgid ""
 "Aside from the `requirements` section including `ScatterFeatureRequirement`, "
 "what is going on here?"
 msgstr ""
-"`requirements` セクションの`ScatterFeatureRequirement` などを含めて、ここはど"
-"うなっているのでしょうか。"
+"`requirements` セクションの`ScatterFeatureRequirement` "
+"などを含めて、ここはどうなっているのでしょうか？"
 
 #: ../../src/topics/workflows.md:429 f1cb55fc59824cc18a95fd6dcb32cf4c
 #, fuzzy
@@ -4371,13 +4408,12 @@ msgid "JSON Style"
 msgstr "JSON形式"
 
 #: ../../src/topics/yaml-guide.md:169 87bafb845c714b109874f6137b84462d
-#, fuzzy
 msgid ""
 "YAML is based on [JavaScript Object Notation (JSON)][json]. Maps and arrays "
 "can also be defined in YAML using the native JSON syntax. For example:"
 msgstr ""
 "YAMLは[JavaScript Object Notation (JSON)][json]に基づいています。マップと配列"
-"は、JSON構文を使ってYAMLで定義することもできます。例えば"
+"は、JSON構文を使ってYAMLで定義することもできます。例えば:"
 
 #: ../../src/topics/yaml-guide.md:177 5ab9ddf613a540a2b8228e37600cc5dc
 #, fuzzy
