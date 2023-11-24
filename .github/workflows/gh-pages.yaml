@@ -12,6 +12,8 @@ jobs:
   # Ref: https://stackoverflow.com/questions/57989790/using-github-actions-to-publish-documentation
   deploy:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
     steps:
       - uses: actions/checkout@v3
 
@@ -30,7 +32,7 @@ jobs:
           python3 -m pip install --upgrade pip
       - name: Get pip cache dir
         id: pip-cache
-        run: echo "::set-output name=dir::$(pip cache dir)"
+        run: echo "dir=$(pip cache dir)" >> "$GITHUB_OUTPUT"
 
       - name: Cache dependencies
         uses: actions/cache@v3
@@ -40,7 +42,7 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-pip-
       - name: Install dependencies
-        run: python3 -m pip install -U -e .[all]
+        run: python3 -m pip install -U -e ".[all]"
 
       - name: pre-pull container images
         run: make container-pull

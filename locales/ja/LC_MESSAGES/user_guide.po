@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: Common Workflow Language User Guide\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-01-25 14:33+0100\n"
-"PO-Revision-Date: 2023-11-18 05:11+0000\n"
+"PO-Revision-Date: 2023-11-22 21:01+0000\n"
 "Last-Translator: Manabu ISHII <manabu.ishii.rb@gmail.com>\n"
 "Language-Team: Japanese <https://hosted.weblate.org/projects/commonwl/"
 "user-guide/ja/>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 5.2\n"
+"X-Generator: Weblate 5.2.1-rc\n"
 
 #: ../../LICENSE.md:2 4e203044f0464fd5a3256430391dde12
 msgid "Licenses"
@@ -3132,8 +3132,8 @@ msgid ""
 msgstr ""
 "これまでの例では、`baseCommand` "
 "は単なる文字列で、引数はCWL入力として渡していました。単一の文字列の代わりに、"
-"文字列の配列__ を使用することができます。  最初の要素は実行するコマンドで、そ"
-"れ以降の要素は必須のコマンドライン引数です。"
+"文字列の配列__ を使用することができます。  "
+"最初の要素は実行するコマンドで、それ以降の要素は必須のコマンドライン引数です"
 
 #: ../../src/topics/outputs.md:26 f1ee2e00b0cc4112b51c9df3a919b73f
 msgid "`tar.cwl`"
@@ -3461,7 +3461,7 @@ msgstr ""
 
 #: ../../src/topics/staging-input-files.md:1 b85eb83e05e845d7a179f1b1d74db444
 msgid "Staging Input Files"
-msgstr ""
+msgstr "入力ファイルのステージング"
 
 #: ../../src/topics/staging-input-files.md:3 35f97d37492b4c7ca3ad6cfc1e6fa366
 msgid ""
@@ -3475,11 +3475,11 @@ msgstr ""
 
 #: ../../src/topics/staging-input-files.md:9 c8159d0cb2ab452a9ce8e8d2adbaaa94
 msgid "`linkfile.cwl`"
-msgstr ""
+msgstr "`linkfile.cwl`"
 
 #: ../../src/topics/troubleshooting.md:1 0f7508ce59754a7eb230dea6042244c6
 msgid "Troubleshooting"
-msgstr ""
+msgstr "トラブルシューティング"
 
 #: ../../src/topics/troubleshooting.md:3 fbe0c65b444441f785d0054176d036a6
 msgid ""
@@ -3609,11 +3609,15 @@ msgid "`docker-job.yml`"
 msgstr "`docker-job.yml`"
 
 #: ../../src/topics/using-containers.md:33 2713594c937d4c528fc8d04d9e9819ed
+#, fuzzy
 msgid ""
 "Before we run this, let's just break it down and see what some bits do.  "
 "Most of this has been explained in previous sections, the only part that is "
 "really new is the `dockerRequirement` section."
 msgstr ""
+"これを実行する前に、これを分解して、いくつか細かく何をするのかを見てみましょ"
+"う。  この大部分は以前のセクションで説明したもので、本当に新しいのは`dockerRe"
+"quirement` の部分だけです。"
 
 #: ../../src/topics/using-containers.md:44 cf94c1424fc2413c85647fd1ee73d951
 msgid ""
@@ -3873,7 +3877,7 @@ msgstr ""
 
 #: ../../src/topics/workflows.md:285 f0b04849253c4693904512ddd7f9ce84
 msgid "Nested Workflows"
-msgstr ""
+msgstr "ネストされたワークフロー"
 
 #: ../../src/topics/workflows.md:287 12a06d8358534102b202965d4258c18e
 msgid ""
@@ -3882,16 +3886,20 @@ msgid ""
 "be used as a step in another CWL workflow, if the workflow engine supports "
 "the `SubworkflowFeatureRequirement`:"
 msgstr ""
+"ワークフローは、複数のツールを組み合わせてより大きな処理を実行するための方法"
+"です。ワークフローエンジンが`SubworkflowFeatureRequirement` "
+"をサポートしている場合、CWL ワークフローを別の CWL "
+"ワークフローのステップとすることができます ："
 
 #: ../../src/topics/workflows.md:297 1658cac0de1b47e9b60f6d4a4ad9bb19
 msgid ""
 "Here's an example workflow that uses our `1st-workflow.cwl` as a nested "
 "workflow:"
-msgstr ""
+msgstr "`1st-workflow.cwl` をネストしたワークフローの例を紹介します："
 
 #: ../../src/topics/workflows.md:300 49ed137fe996452a8534c68d100db941
 msgid "`nestedworkflows.cwl`"
-msgstr ""
+msgstr "`nestedworkflows.cwl`"
 
 #: ../../src/topics/workflows.md:309 b7f93705e5b8416696be01850072e8c0
 msgid ""
@@ -3900,6 +3908,11 @@ msgid ""
 "on the right. In purple we see the fixed string `\"Hello.java\"` being "
 "supplied as the `name_of_file_to_extract`."
 msgstr ""
+"この2ステップのワークフローは、`create-tar` "
+"ステップから始まり、オレンジ色の`compile` "
+"ステップに接続されています。`compile` "
+"は、右図にある別のワークフローです。紫色では、固定文字列`\"Hello.java\"` "
+"が`name_of_file_to_extract` として与えられているのがわかります。"
 
 #: ../../src/topics/workflows.md:314 e87045829b344089ab59dc27063ddd7a
 msgid ""
@@ -3916,12 +3929,17 @@ msgid ""
 msgstr ""
 
 #: ../../src/topics/workflows.md:322 42ef2f145b824d69b63abc1da175c216
+#, fuzzy
 msgid ""
 "A CWL `Workflow` can be used as a `step` just like a `CommandLineTool`, its "
 "CWL file is included with `run`. The workflow inputs (`tarball` and "
 "`name_of_file_to_extract`) and outputs (`compiled_class`) then can be mapped "
 "to become the step's input/outputs."
 msgstr ""
+"CWL`Workflow` は、`CommandLineTool` を`step` として使用することができ、その "
+"CWL ファイルは`run` に記述されます。ワークフローの入力（`tarball` "
+"および`name_of_file_to_extract` ）と出力（`compiled_class` "
+"）は、ステップの入力/出力になるようにマッピングすることができます。"
 
 #: ../../src/topics/workflows.md:336 c61cedf543664d388183e04b3939cc39
 msgid ""

@@ -39,6 +39,6 @@ jobs:
             **/setup.cfg
 
       - run: pip install -U pip setuptools wheel typing
-      - run: pip install -e .[all]
+      - run: pip install -e ".[all]"
 
       - run: make RUNNER=cwltool unittest-examples
