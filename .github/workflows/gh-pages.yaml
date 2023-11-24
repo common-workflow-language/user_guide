@@ -34,7 +34,11 @@ jobs:
         run: make container-pull
 
       - name: Build documentation
-        run: make html
+        run: |
+          make html
+          for lang in en es pt_BR pt_PT ja zh_Hans; do
+            make html BUILDDIR=_build/${lang} SPHINXOPTS="-D language=${lang}"
+          done
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
