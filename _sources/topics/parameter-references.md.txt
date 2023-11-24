@@ -77,7 +77,7 @@ You can only use parameter references in certain fields.  These are:
     - From [CommandOutputBinding](http://www.commonwl.org/v1.0/CommandLineTool.html#CommandOutputBinding)
       - `glob`
       - `outputEval`
-- From `Workflow`
+- From [`Workflow`](https://w3id.org/cwl/Workflow.html)
   - From [InputParameter](http://www.commonwl.org/v1.0/Workflow.html#InputParameter) and [WorkflowOutputParameter](http://www.commonwl.org/v1.0/Workflow.html#WorkflowOutputParameter)
     - `format`
     - `secondaryFiles`

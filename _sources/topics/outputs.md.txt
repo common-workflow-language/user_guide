@@ -11,16 +11,18 @@ When a tool runs under CWL, the starting working directory is the
 designated output directory.  The underlying tool or script must record
 its results in the form of files created in the output directory.  The
 output parameters returned by the CWL tool are either the output files
-themselves, or come from examining the content of those files.
+themselves, or the result of examining the content of those files.
 
 The following example demonstrates how to return a file that has been extracted from a tar file.
 
 ```{tip}
 Passing mandatory arguments to the `baseCommand`
 
-In previous examples, the `baseCommand` was just a string, with any arguments passed as CWL inputs.
-Instead of a single string we can use an _array of strings_.  The first element is the command to run, and
-any subsequent elements are mandatory command line arguments
+In previous examples, the `baseCommand` was just a string, with any arguments
+passed as CWL inputs. Instead of a single string, we can use an _array of
+strings_ as the value of `baseCommand`. The first element of the array is the
+command to run, and any subsequent elements are mandatory command line
+arguments
 ```
 
 ```{literalinclude} /_includes/cwl/outputs/tar.cwl
@@ -48,7 +50,7 @@ And now invoke `cwltool` with the tool description and the input object on the c
 :working-directory: src/_includes/cwl/outputs/
 ```
 
-The field `outputBinding` describes how to set the value of each
+The field [`outputBinding`](https://w3id.org/cwl/CommandLineTool.html#CommandOutputBinding) describes how to set the value of each
 output parameter.
 
 ```cwl
@@ -59,12 +61,14 @@ outputs:
       glob: hello.txt
 ```
 
-The `glob` field consists of the name of a file in the output directory.
-If you don't know name of the file in advance, you can use a wildcard pattern like `glob: '*.txt'`.
+The [`glob`](https://w3id.org/cwl/CommandLineTool.html#CommandOutputBinding)
+field consists of the pattern to match file names in the output directory.
+This can simply be the file's exact name. But if you don't know the name of the
+file in advance, you can use a wildcard pattern like `glob: '*.txt'`.
 
 ## Capturing Standard Output
 
-To capture a tool's standard output stream, add the `stdout` field with
+To capture a tool's standard output stream, add the [`stdout`](https://w3id.org/cwl/CommandLineTool.html#stdout) field with
 the name of the file where the output stream should go.  Then add `type:
 stdout` on the corresponding output parameter.
 

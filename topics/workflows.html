@@ -1,41 +1,46 @@
 
+
 <!DOCTYPE html>
 
-<html lang="en">
+
+<html lang="en" data-theme="light">
+
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
-
+    <link rel="icon" sizes="16x16" href="../_static/images/favicons/cwl/favicon-16x16.png" type="image/png">
+    <link rel="icon" sizes="32x32" href="../_static/images/favicons/cwl/favicon-32x32.png" type="image/png">
+    <link rel="icon" sizes="96x96" href="../_static/images/favicons/cwl/favicon-96x96.png" type="image/png">
+    <link rel="icon" sizes="128x128" href="../_static/images/favicons/cwl/favicon-128.png" type="image/png">
+    <link rel="icon" sizes="196x196" href="../_static/images/favicons/cwl/favicon-196x196.png" type="image/png">
     <title>2.10. Workflows &#8212; Common Workflow Language User Guide 0.1 documentation</title>
-  <script>
+  
+  
+  
+  <script data-cfasync="false">
     document.documentElement.dataset.mode = localStorage.getItem("mode") || "light";
     document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
   </script>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../_static/styles/theme.css?digest=1e1de1a1873e13ef5536" rel="stylesheet">
-<link href="../_static/styles/pydata-sphinx-theme.css?digest=1e1de1a1873e13ef5536" rel="stylesheet">
+  <link href="../_static/styles/theme.css?digest=365ca57ee442770a23c6" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=365ca57ee442770a23c6" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=365ca57ee442770a23c6" rel="stylesheet" />
 
   
-  <link rel="stylesheet"
-    href="../_static/vendor/fontawesome/6.1.2/css/all.min.css">
-  <link rel="preload" as="font" type="font/woff2" crossorigin
-    href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2">
-  <link rel="preload" as="font" type="font/woff2" crossorigin
-    href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2">
-  <link rel="preload" as="font" type="font/woff2" crossorigin
-    href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2">
+  <link href="../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=365ca57ee442770a23c6" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
 
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../_static/graphviz.css" />
-    <link rel="icon" sizes="16x16" type="image/png" href="../_static/images/favicons/cwl/favicon-16x16.png" />
-    <link rel="icon" sizes="32x32" type="image/png" href="../_static/images/favicons/cwl/favicon-32x32.png" />
-    <link rel="icon" sizes="96x96" type="image/png" href="../_static/images/favicons/cwl/favicon-96x96.png" />
-    <link rel="icon" sizes="128x128" type="image/png" href="../_static/images/favicons/cwl/favicon-128.png" />
-    <link rel="icon" sizes="196x196" type="image/png" href="../_static/images/favicons/cwl/favicon-196x196.png" />
+    <link rel="stylesheet" type="text/css" href="../_static/css/custom.css" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=1e1de1a1873e13ef5536">
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=365ca57ee442770a23c6" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=365ca57ee442770a23c6" />
+  <script src="../_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=365ca57ee442770a23c6"></script>
 
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
@@ -49,133 +54,177 @@
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="2.11. Operations" href="operations.html" />
     <link rel="prev" title="2.9. Expression Tool" href="expression-tool.html" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="docsearch:language" content="en">
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
   </head>
   
   
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="180" data-default-mode="light">
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="light">
 
   
-  <input type="checkbox" class="sidebar-toggle" name="__primary" id="__primary">
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
   <label class="overlay overlay-primary" for="__primary"></label>
-
   
-  <input type="checkbox" class="sidebar-toggle" name="__secondary" id="__secondary">
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
   <label class="overlay overlay-secondary" for="__secondary"></label>
-
   
   <div class="search-button__wrapper">
     <div class="search-button__overlay"></div>
     <div class="search-button__search-container">
-      
-<form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
   <i class="fa-solid fa-magnifying-glass"></i>
-  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search the docs ..."
+         aria-label="Search the docs ..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
   <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
-</form>
-    </div>
+</form></div>
   </div>
-
   
-  <nav class="bd-header navbar navbar-expand-lg bd-navbar" id="navbar-main"><div class="bd-header__inner bd-page-width">
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+<div class="bd-header__inner bd-page-width">
   <label class="sidebar-toggle primary-toggle" for="__primary">
-      <span class="fa-solid fa-bars"></span>
+    <span class="fa-solid fa-bars"></span>
   </label>
-  <div id="navbar-start">
-    
-    
   
-
+  
+  <div class="col-lg-3 navbar-header-items__start">
+    
+      <div class="navbar-item">
+  
 
 <a class="navbar-brand logo" href="../index.html">
-
   
   
   
   
   
+    
+    
+    
+    <img src="../_static/CWL-Logo-HD-cropped2.png" class="logo__image only-light" alt="Common Workflow Language User Guide 0.1 documentation - Home"/>
+    <script>document.write(`<img src="../_static/CWL-Logo-HD-cropped2.png" class="logo__image only-dark" alt="Common Workflow Language User Guide 0.1 documentation - Home"/>`);</script>
   
   
-
-  
-    <img src="../_static/CWL-Logo-HD-cropped2.png" class="logo__image only-light" alt="Logo image">
-    <img src="../_static/CWL-Logo-HD-cropped2.png" class="logo__image only-dark" alt="Logo image">
-  
-  
-</a>
+</a></div>
     
   </div>
-
   
   <div class="col-lg-9 navbar-header-items">
-    <div id="navbar-center" class="mr-auto">
+    
+    <div class="me-auto navbar-header-items__center">
       
-      <div class="navbar-center-item">
-        <nav class="navbar-nav">
-    <p class="sidebar-header-items__title" role="heading" aria-level="1" aria-label="Site Navigation">
-        Site Navigation
-    </p>
-    <ul id="navbar-main-elements" class="navbar-nav">
-        
-                <li class="nav-item">
-                    <a class="nav-link" href="../introduction/index.html">
+        <div class="navbar-item"><nav class="navbar-nav">
+  <p class="sidebar-header-items__title"
+     role="heading"
+     aria-level="1"
+     aria-label="Site Navigation">
+    Site Navigation
+  </p>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../introduction/index.html">
                         Introduction
-                    </a>
-                </li>
+                      </a>
+                    </li>
                 
 
-                <li class="nav-item current active">
-                    <a class="nav-link" href="index.html">
+                    <li class="nav-item current active">
+                      <a class="nav-link nav-internal" href="index.html">
                         Topics
-                    </a>
-                </li>
+                      </a>
+                    </li>
                 
 
-                <li class="nav-item">
-                    <a class="nav-link" href="../tutorials.html">
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../tutorials.html">
                         Tutorials
-                    </a>
-                </li>
+                      </a>
+                    </li>
                 
 
-                <li class="nav-item">
-                    <a class="nav-link" href="../faq.html">
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../faq.html">
                         FAQ
-                    </a>
-                </li>
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../LICENSE.html">
+                        Licenses
+                      </a>
+                    </li>
                 
 
                 <li class="nav-item">
-                    <a class="nav-link" href="../LICENSE.html">
-                        Licenses
-                    </a>
+                  <a class="nav-link nav-external" href="https://www.commonwl.org/community/">
+                    Community
+                  </a>
                 </li>
                 
-    </ul>
-</nav>
-      </div>
+  </ul>
+</nav></div>
       
     </div>
-
-    <div id="navbar-end">
-      <div class="navbar-end-item navbar-end__search-button-container">
-        
-<button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" data-toggle="tooltip">
-  <i class="fa-solid fa-magnifying-glass"></i>
-</button>
-      </div>
+    
+    
+    <div class="navbar-header-items__end">
       
-      <div class="navbar-end-item">
-        <span class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" data-toggle="tooltip">
-    <a class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></a>
-    <a class="theme-switch" data-mode="dark"><i class="fa-regular fa-moon"></i></a>
-    <a class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></a>
-</span>
-      </div>
+        <div class="navbar-item navbar-persistent--container">
+          
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script>
+        </div>
       
-      <div class="navbar-end-item">
-        <ul id="navbar-icon-links" class="navbar-nav" aria-label="Icon Links">
+      
+        <div class="navbar-item">
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script></div>
+      
+        <div class="navbar-item"><ul class="navbar-icon-links navbar-nav"
+    aria-label="Icon Links">
         <li class="nav-item">
           
           
@@ -184,106 +233,123 @@
           
           
           
-          <a href="https://github.com/common-workflow-language/user_guide/" title="GitHub" class="nav-link" rel="noopener" target="_blank" data-toggle="tooltip"><span><i class="fab fa-github-square"></i></span>
-            <label class="sr-only">GitHub</label></a>
+          
+          <a href="https://github.com/common-workflow-language/user_guide/" title="GitHub" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fab fa-github-square fa-lg" aria-hidden="true"></i></span>
+            <span class="sr-only">GitHub</span></a>
         </li>
-      </ul>
-      </div>
+</ul></div>
       
     </div>
+    
   </div>
-
+  
+  
+    <div class="navbar-persistent--mobile">
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script>
+    </div>
+  
 
   
-  <div class="search-button-container--mobile">
-<button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" data-toggle="tooltip">
-  <i class="fa-solid fa-magnifying-glass"></i>
-</button>
-  </div>
-
-  
-  <label class="sidebar-toggle secondary-toggle" for="__secondary">
+    <label class="sidebar-toggle secondary-toggle" for="__secondary" tabindex="0">
       <span class="fa-solid fa-outdent"></span>
-  </label>
+    </label>
   
-
 </div>
-  </nav>
-  
 
+    </nav>
+  
   <div class="bd-container">
     <div class="bd-container__inner bd-page-width">
       
       <div class="bd-sidebar-primary bd-sidebar">
         
+
   
   <div class="sidebar-header-items sidebar-primary__section">
     
     
       <div class="sidebar-header-items__center">
-      
-      <div class="navbar-center-item">
-        <nav class="navbar-nav">
-    <p class="sidebar-header-items__title" role="heading" aria-level="1" aria-label="Site Navigation">
-        Site Navigation
-    </p>
-    <ul id="navbar-main-elements" class="navbar-nav">
         
-                <li class="nav-item">
-                    <a class="nav-link" href="../introduction/index.html">
+          <div class="navbar-item"><nav class="navbar-nav">
+  <p class="sidebar-header-items__title"
+     role="heading"
+     aria-level="1"
+     aria-label="Site Navigation">
+    Site Navigation
+  </p>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../introduction/index.html">
                         Introduction
-                    </a>
-                </li>
+                      </a>
+                    </li>
                 
 
-                <li class="nav-item current active">
-                    <a class="nav-link" href="index.html">
+                    <li class="nav-item current active">
+                      <a class="nav-link nav-internal" href="index.html">
                         Topics
-                    </a>
-                </li>
+                      </a>
+                    </li>
                 
 
-                <li class="nav-item">
-                    <a class="nav-link" href="../tutorials.html">
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../tutorials.html">
                         Tutorials
-                    </a>
-                </li>
+                      </a>
+                    </li>
                 
 
-                <li class="nav-item">
-                    <a class="nav-link" href="../faq.html">
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../faq.html">
                         FAQ
-                    </a>
-                </li>
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../LICENSE.html">
+                        Licenses
+                      </a>
+                    </li>
                 
 
                 <li class="nav-item">
-                    <a class="nav-link" href="../LICENSE.html">
-                        Licenses
-                    </a>
+                  <a class="nav-link nav-external" href="https://www.commonwl.org/community/">
+                    Community
+                  </a>
                 </li>
                 
-    </ul>
-</nav>
-      </div>
-      
+  </ul>
+</nav></div>
+        
       </div>
     
-
     
     
-    <div class="sidebar-header-items__end">
-      
-      <div class="navbar-end-item">
-        <span class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" data-toggle="tooltip">
-    <a class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></a>
-    <a class="theme-switch" data-mode="dark"><i class="fa-regular fa-moon"></i></a>
-    <a class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></a>
-</span>
-      </div>
-      
-      <div class="navbar-end-item">
-        <ul id="navbar-icon-links" class="navbar-nav" aria-label="Icon Links">
+      <div class="sidebar-header-items__end">
+        
+          <div class="navbar-item">
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script></div>
+        
+          <div class="navbar-item"><ul class="navbar-icon-links navbar-nav"
+    aria-label="Icon Links">
         <li class="nav-item">
           
           
@@ -292,76 +358,101 @@
           
           
           
-          <a href="https://github.com/common-workflow-language/user_guide/" title="GitHub" class="nav-link" rel="noopener" target="_blank" data-toggle="tooltip"><span><i class="fab fa-github-square"></i></span>
-            <label class="sr-only">GitHub</label></a>
+          
+          <a href="https://github.com/common-workflow-language/user_guide/" title="GitHub" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fab fa-github-square fa-lg" aria-hidden="true"></i></span>
+            <span class="sr-only">GitHub</span></a>
         </li>
-      </ul>
+</ul></div>
+        
       </div>
-      
-    </div>
     
   </div>
-
   
-  <div class="sidebar-start-items sidebar-primary__section">
-    <div class="sidebar-start-items__item"><nav class="bd-links d-none d-md-block" id="bd-docs-nav" aria-label="Main navigation">
-  <div class="bd-toc-item active">
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item"><nav class="bd-links d-none d-md-block" id="bd-docs-nav" aria-label="Main navigation">
+  <p class="bd-links__title" role="heading" aria-level="1">
+    Section Navigation
+  </p>
+  <div class="bd-toc-item navbar-nav">
     <ul class="current nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../introduction/index.html">1. Introduction</a></li>
-<li class="toctree-l1 current active has-children"><a class="reference internal" href="index.html">2. Topics</a><input checked class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="yaml-guide.html">2.1. YAML Guide</a></li>
-<li class="toctree-l2"><a class="reference internal" href="command-line-tool.html">2.2. Command Line Tool</a></li>
-<li class="toctree-l2"><a class="reference internal" href="expressions.html">2.3. Expressions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="inputs.html">2.4. Inputs</a></li>
-<li class="toctree-l2"><a class="reference internal" href="additional-arguments-and-parameters.html">2.5. Additional Arguments and Parameters</a></li>
-<li class="toctree-l2"><a class="reference internal" href="parameter-references.html">2.6. Parameter References</a></li>
-<li class="toctree-l2"><a class="reference internal" href="outputs.html">2.7. Outputs</a></li>
-<li class="toctree-l2"><a class="reference internal" href="custom-types.html">2.8. Custom Types</a></li>
-<li class="toctree-l2"><a class="reference internal" href="expression-tool.html">2.9. Expression Tool</a></li>
-<li class="toctree-l2 current active"><a class="current reference internal" href="#">2.10. Workflows</a></li>
-<li class="toctree-l2"><a class="reference internal" href="operations.html">2.11. Operations</a></li>
-<li class="toctree-l2"><a class="reference internal" href="environment-variables.html">2.12. Environment Variables</a></li>
-<li class="toctree-l2"><a class="reference internal" href="using-containers.html">2.13. Using Containers</a></li>
-<li class="toctree-l2"><a class="reference internal" href="creating-files-at-runtime.html">2.14. Creating Files at Runtime</a></li>
-<li class="toctree-l2"><a class="reference internal" href="staging-input-files.html">2.15. Staging Input Files</a></li>
-<li class="toctree-l2"><a class="reference internal" href="best-practices.html">2.16. Best Practices</a></li>
-<li class="toctree-l2"><a class="reference internal" href="file-formats.html">2.17. File Formats</a></li>
-<li class="toctree-l2"><a class="reference internal" href="metadata-and-authorship.html">2.18. Metadata and Authorship</a></li>
-<li class="toctree-l2"><a class="reference internal" href="specifying-software-requirements.html">2.19. Specifying Software Requirements</a></li>
-<li class="toctree-l2"><a class="reference internal" href="troubleshooting.html">2.20. Troubleshooting</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="../tutorials.html">3. Tutorials</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../faq.html">4. FAQ</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../LICENSE.html">5. Licenses</a></li>
+<li class="toctree-l1"><a class="reference internal" href="yaml-guide.html">2.1. YAML Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="command-line-tool.html">2.2. Command Line Tool</a></li>
+<li class="toctree-l1"><a class="reference internal" href="expressions.html">2.3. Expressions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="inputs.html">2.4. Inputs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="additional-arguments-and-parameters.html">2.5. Additional Arguments and Parameters</a></li>
+<li class="toctree-l1"><a class="reference internal" href="parameter-references.html">2.6. Parameter References</a></li>
+<li class="toctree-l1"><a class="reference internal" href="outputs.html">2.7. Outputs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="custom-types.html">2.8. Custom Types</a></li>
+<li class="toctree-l1"><a class="reference internal" href="expression-tool.html">2.9. Expression Tool</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">2.10. Workflows</a></li>
+<li class="toctree-l1"><a class="reference internal" href="operations.html">2.11. Operations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="environment-variables.html">2.12. Environment Variables</a></li>
+<li class="toctree-l1"><a class="reference internal" href="using-containers.html">2.13. Using Containers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="creating-files-at-runtime.html">2.14. Creating Files at Runtime</a></li>
+<li class="toctree-l1"><a class="reference internal" href="staging-input-files.html">2.15. Staging Input Files</a></li>
+<li class="toctree-l1"><a class="reference internal" href="best-practices.html">2.16. Best Practices</a></li>
+<li class="toctree-l1"><a class="reference internal" href="file-formats.html">2.17. File Formats</a></li>
+<li class="toctree-l1"><a class="reference internal" href="metadata-and-authorship.html">2.18. Metadata and Authorship</a></li>
+<li class="toctree-l1"><a class="reference internal" href="specifying-software-requirements.html">2.19. Specifying Software Requirements</a></li>
+<li class="toctree-l1"><a class="reference internal" href="troubleshooting.html">2.20. Troubleshooting</a></li>
 </ul>
 
   </div>
-</nav>
+</nav></div>
     </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
   </div>
   
+  <div id="rtd-footer-container"></div>
 
-  
-  <div class="sidebar-end-items sidebar-primary__section">
-    <div class="sidebar-end-items__item">
-    </div>
-  </div>
 
       </div>
-      <main class="bd-main">
+      
+      <main id="main-content" class="bd-main">
         
         
-        <div class="bd-content">
-          <div class="bd-article-container">
-            
-            <div class="bd-header-article">
-                
-            </div>
-            
-            
-            <article class="bd-article" role="main">
+          <div class="bd-content">
+            <div class="bd-article-container">
               
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item">
+
+
+
+<nav aria-label="Breadcrumb">
+  <ul class="bd-breadcrumbs">
+    
+    <li class="breadcrumb-item breadcrumb-home">
+      <a href="../index.html" class="nav-link" aria-label="Home">
+        <i class="fa-solid fa-home"></i>
+      </a>
+    </li>
+    
+    <li class="breadcrumb-item"><a href="index.html" class="nav-link"><span class="section-number">2. </span>Topics</a></li>
+    
+    <li class="breadcrumb-item active" aria-current="page"><span...</li>
+  </ul>
+</nav>
+</div>
+      
+    </div>
+  
+  
+</div>
+</div>
+              
+              
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
   <section id="workflows">
 <h1><span class="section-number">2.10. </span>Workflows<a class="headerlink" href="#workflows" title="Permalink to this heading">#</a></h1>
 <p>A workflow is a CWL processing unit that executes command-line tools,
@@ -400,32 +491,32 @@ the command-line tool, and the expression tool showed in the earlier
 examples.</p>
 <div class="literal-block-wrapper docutils container" id="id2">
 <div class="code-block-caption"><span class="caption-text"><code class="docutils literal notranslate"><span class="pre">echo-uppercase.cwl</span></code></span><a class="headerlink" href="#id2" title="Permalink to this code">#</a></div>
-<div class="highlight-cwl notranslate"><div class="highlight"><pre><span></span><span class="nt">cwlVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">v1.2</span><span class="w"></span>
-<span class="nt">class</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Workflow</span><span class="w"></span>
+<div class="highlight-cwl notranslate"><div class="highlight"><pre><span></span><span class="nt">cwlVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">v1.2</span>
+<span class="nt">class</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Workflow</span>
 
-<span class="nt">requirements</span><span class="p">:</span><span class="w"></span>
-<span class="w">  </span><span class="nt">InlineJavascriptRequirement</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">{}</span><span class="w"></span>
+<span class="nt">requirements</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">InlineJavascriptRequirement</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">{}</span>
 
-<span class="nt">inputs</span><span class="p">:</span><span class="w"></span>
-<span class="w">  </span><span class="nt">message</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">string</span><span class="w"></span>
+<span class="nt">inputs</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">message</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">string</span>
 
-<span class="nt">outputs</span><span class="p">:</span><span class="w"></span>
-<span class="w">  </span><span class="nt">out</span><span class="p">:</span><span class="w"></span>
-<span class="w">    </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">string</span><span class="w"></span>
-<span class="w">    </span><span class="nt">outputSource</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">uppercase/uppercase_message</span><span class="w"></span>
+<span class="nt">outputs</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">out</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">string</span>
+<span class="w">    </span><span class="nt">outputSource</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">uppercase/uppercase_message</span>
 
-<span class="nt">steps</span><span class="p">:</span><span class="w"></span>
-<span class="w">  </span><span class="nt">echo</span><span class="p">:</span><span class="w"></span>
-<span class="w">    </span><span class="nt">run</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">echo.cwl</span><span class="w"></span>
-<span class="w">    </span><span class="nt">in</span><span class="p">:</span><span class="w"></span>
-<span class="w">      </span><span class="nt">message</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">message</span><span class="w"></span>
-<span class="w">    </span><span class="nt">out</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="nv">out</span><span class="p p-Indicator">]</span><span class="w"></span>
-<span class="w">  </span><span class="nt">uppercase</span><span class="p">:</span><span class="w"></span>
-<span class="w">    </span><span class="nt">run</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">uppercase.cwl</span><span class="w"></span>
-<span class="w">    </span><span class="nt">in</span><span class="p">:</span><span class="w"></span>
-<span class="w">      </span><span class="nt">message</span><span class="p">:</span><span class="w"></span>
-<span class="w">        </span><span class="nt">source</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">echo/out</span><span class="w"></span>
-<span class="w">    </span><span class="nt">out</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="nv">uppercase_message</span><span class="p p-Indicator">]</span><span class="w"></span>
+<span class="nt">steps</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">echo</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">run</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">echo.cwl</span>
+<span class="w">    </span><span class="nt">in</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">message</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">message</span>
+<span class="w">    </span><span class="nt">out</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="nv">out</span><span class="p p-Indicator">]</span>
+<span class="w">  </span><span class="nt">uppercase</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">run</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">uppercase.cwl</span>
+<span class="w">    </span><span class="nt">in</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">message</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">source</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">echo/out</span>
+<span class="w">    </span><span class="nt">out</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="nv">uppercase_message</span><span class="p p-Indicator">]</span>
 </pre></div>
 </div>
 </div>
@@ -434,61 +525,61 @@ in the same CWL document as the workflow. For example, we can rewrite
 the <code class="docutils literal notranslate"><span class="pre">echo-uppercase.cwl</span></code> workflow as a single file:</p>
 <div class="literal-block-wrapper docutils container" id="id3">
 <div class="code-block-caption"><span class="caption-text"><code class="docutils literal notranslate"><span class="pre">echo-uppercase-single-file.cwl</span></code></span><a class="headerlink" href="#id3" title="Permalink to this code">#</a></div>
-<div class="highlight-cwl notranslate"><div class="highlight"><pre><span></span><span class="nt">cwlVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">v1.2</span><span class="w"></span>
-<span class="nt">class</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Workflow</span><span class="w"></span>
+<div class="highlight-cwl notranslate"><div class="highlight"><pre><span></span><span class="nt">cwlVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">v1.2</span>
+<span class="nt">class</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Workflow</span>
 
-<span class="nt">requirements</span><span class="p">:</span><span class="w"></span>
-<span class="w">  </span><span class="nt">InlineJavascriptRequirement</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">{}</span><span class="w"></span>
+<span class="nt">requirements</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">InlineJavascriptRequirement</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">{}</span>
 
-<span class="nt">inputs</span><span class="p">:</span><span class="w"></span>
-<span class="w">  </span><span class="nt">message</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">string</span><span class="w"></span>
+<span class="nt">inputs</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">message</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">string</span>
 
-<span class="nt">outputs</span><span class="p">:</span><span class="w"></span>
-<span class="w">  </span><span class="nt">out</span><span class="p">:</span><span class="w"></span>
-<span class="w">    </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">string</span><span class="w"></span>
-<span class="w">    </span><span class="nt">outputSource</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">uppercase/uppercase_message</span><span class="w"></span>
+<span class="nt">outputs</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">out</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">string</span>
+<span class="w">    </span><span class="nt">outputSource</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">uppercase/uppercase_message</span>
 
-<span class="nt">steps</span><span class="p">:</span><span class="w"></span>
-<span class="w">  </span><span class="nt">echo</span><span class="p">:</span><span class="w"></span>
-<span class="w">    </span><span class="nt">run</span><span class="p">:</span><span class="w"></span>
-<span class="w">      </span><span class="nt">class</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">CommandLineTool</span><span class="w"></span>
+<span class="nt">steps</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">echo</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">run</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">class</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">CommandLineTool</span>
 
-<span class="w">      </span><span class="nt">baseCommand</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">echo</span><span class="w"></span>
+<span class="w">      </span><span class="nt">baseCommand</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">echo</span>
 
-<span class="w">      </span><span class="nt">stdout</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">output.txt</span><span class="w"></span>
+<span class="w">      </span><span class="nt">stdout</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">output.txt</span>
 
-<span class="w">      </span><span class="nt">inputs</span><span class="p">:</span><span class="w"></span>
-<span class="w">        </span><span class="nt">message</span><span class="p">:</span><span class="w"></span>
-<span class="w">          </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">string</span><span class="w"></span>
-<span class="w">          </span><span class="nt">inputBinding</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">{}</span><span class="w"></span>
-<span class="w">      </span><span class="nt">outputs</span><span class="p">:</span><span class="w"></span>
-<span class="w">        </span><span class="nt">out</span><span class="p">:</span><span class="w"></span>
-<span class="w">          </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">string</span><span class="w"></span>
-<span class="w">          </span><span class="nt">outputBinding</span><span class="p">:</span><span class="w"></span>
-<span class="w">            </span><span class="nt">glob</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">output.txt</span><span class="w"></span>
-<span class="w">            </span><span class="nt">loadContents</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span><span class="w"></span>
-<span class="w">            </span><span class="nt">outputEval</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">$(self[0].contents)</span><span class="w"></span>
-<span class="w">    </span><span class="nt">in</span><span class="p">:</span><span class="w"></span>
-<span class="w">      </span><span class="nt">message</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">message</span><span class="w"></span>
-<span class="w">    </span><span class="nt">out</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="nv">out</span><span class="p p-Indicator">]</span><span class="w"></span>
-<span class="w">  </span><span class="nt">uppercase</span><span class="p">:</span><span class="w"></span>
-<span class="w">    </span><span class="nt">run</span><span class="p">:</span><span class="w"></span>
-<span class="w">      </span><span class="nt">class</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ExpressionTool</span><span class="w"></span>
+<span class="w">      </span><span class="nt">inputs</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">message</span><span class="p">:</span>
+<span class="w">          </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">string</span>
+<span class="w">          </span><span class="nt">inputBinding</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">{}</span>
+<span class="w">      </span><span class="nt">outputs</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">out</span><span class="p">:</span>
+<span class="w">          </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">string</span>
+<span class="w">          </span><span class="nt">outputBinding</span><span class="p">:</span>
+<span class="w">            </span><span class="nt">glob</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">output.txt</span>
+<span class="w">            </span><span class="nt">loadContents</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="w">            </span><span class="nt">outputEval</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">$(self[0].contents)</span>
+<span class="w">    </span><span class="nt">in</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">message</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">message</span>
+<span class="w">    </span><span class="nt">out</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="nv">out</span><span class="p p-Indicator">]</span>
+<span class="w">  </span><span class="nt">uppercase</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">run</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">class</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ExpressionTool</span>
 
-<span class="w">      </span><span class="nt">requirements</span><span class="p">:</span><span class="w"></span>
-<span class="w">        </span><span class="nt">InlineJavascriptRequirement</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">{}</span><span class="w"></span>
+<span class="w">      </span><span class="nt">requirements</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">InlineJavascriptRequirement</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">{}</span>
 
-<span class="w">      </span><span class="nt">inputs</span><span class="p">:</span><span class="w"></span>
-<span class="w">        </span><span class="nt">message</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">string</span><span class="w"></span>
-<span class="w">      </span><span class="nt">outputs</span><span class="p">:</span><span class="w"></span>
-<span class="w">        </span><span class="nt">uppercase_message</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">string</span><span class="w"></span>
+<span class="w">      </span><span class="nt">inputs</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">message</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">string</span>
+<span class="w">      </span><span class="nt">outputs</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">uppercase_message</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">string</span>
 
-<span class="w">      </span><span class="nt">expression</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">|</span><span class="w"></span>
-<span class="w">        </span><span class="no">${ return {&quot;uppercase_message&quot;: inputs.message.toUpperCase()}; }</span><span class="w"></span>
-<span class="w">    </span><span class="nt">in</span><span class="p">:</span><span class="w"></span>
-<span class="w">      </span><span class="nt">message</span><span class="p">:</span><span class="w"></span>
-<span class="w">        </span><span class="nt">source</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">echo/out</span><span class="w"></span>
-<span class="w">    </span><span class="nt">out</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="nv">uppercase_message</span><span class="p p-Indicator">]</span><span class="w"></span>
+<span class="w">      </span><span class="nt">expression</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">|</span>
+<span class="w">        </span><span class="no">${ return {&quot;uppercase_message&quot;: inputs.message.toUpperCase()}; }</span>
+<span class="w">    </span><span class="nt">in</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">message</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">source</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">echo/out</span>
+<span class="w">    </span><span class="nt">out</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="nv">uppercase_message</span><span class="p p-Indicator">]</span>
 </pre></div>
 </div>
 </div>
@@ -509,32 +600,31 @@ of this user guide in more detail.</p>
 compiles it.</p>
 <div class="literal-block-wrapper docutils container" id="st-workflow-cwl">
 <div class="code-block-caption"><span class="caption-text"><code class="docutils literal notranslate"><span class="pre">1st-workflow.cwl</span></code></span><a class="headerlink" href="#st-workflow-cwl" title="Permalink to this code">#</a></div>
-<div class="highlight-cwl notranslate"><div class="highlight"><pre><span></span><span class="c1">#!/usr/bin/env cwl-runner</span><span class="w"></span>
+<div class="highlight-cwl notranslate"><div class="highlight"><pre><span></span><span class="c1">#!/usr/bin/env cwl-runner</span>
+<span class="nt">cwlVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">v1.2</span>
+<span class="nt">class</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Workflow</span>
+<span class="nt">inputs</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">tarball</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">File</span>
+<span class="w">  </span><span class="nt">name_of_file_to_extract</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">string</span>
 
-<span class="nt">cwlVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">v1.0</span><span class="w"></span>
-<span class="nt">class</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Workflow</span><span class="w"></span>
-<span class="nt">inputs</span><span class="p">:</span><span class="w"></span>
-<span class="w">  </span><span class="nt">tarball</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">File</span><span class="w"></span>
-<span class="w">  </span><span class="nt">name_of_file_to_extract</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">string</span><span class="w"></span>
+<span class="nt">outputs</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">compiled_class</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">File</span>
+<span class="w">    </span><span class="nt">outputSource</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">compile/classfile</span>
 
-<span class="nt">outputs</span><span class="p">:</span><span class="w"></span>
-<span class="w">  </span><span class="nt">compiled_class</span><span class="p">:</span><span class="w"></span>
-<span class="w">    </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">File</span><span class="w"></span>
-<span class="w">    </span><span class="nt">outputSource</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">compile/classfile</span><span class="w"></span>
+<span class="nt">steps</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">untar</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">run</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">tar-param.cwl</span>
+<span class="w">    </span><span class="nt">in</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">tarfile</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">tarball</span>
+<span class="w">      </span><span class="nt">extractfile</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">name_of_file_to_extract</span>
+<span class="w">    </span><span class="nt">out</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="nv">extracted_file</span><span class="p p-Indicator">]</span>
 
-<span class="nt">steps</span><span class="p">:</span><span class="w"></span>
-<span class="w">  </span><span class="nt">untar</span><span class="p">:</span><span class="w"></span>
-<span class="w">    </span><span class="nt">run</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">tar-param.cwl</span><span class="w"></span>
-<span class="w">    </span><span class="nt">in</span><span class="p">:</span><span class="w"></span>
-<span class="w">      </span><span class="nt">tarfile</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">tarball</span><span class="w"></span>
-<span class="w">      </span><span class="nt">extractfile</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">name_of_file_to_extract</span><span class="w"></span>
-<span class="w">    </span><span class="nt">out</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="nv">extracted_file</span><span class="p p-Indicator">]</span><span class="w"></span>
-
-<span class="w">  </span><span class="nt">compile</span><span class="p">:</span><span class="w"></span>
-<span class="w">    </span><span class="nt">run</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">arguments.cwl</span><span class="w"></span>
-<span class="w">    </span><span class="nt">in</span><span class="p">:</span><span class="w"></span>
-<span class="w">      </span><span class="nt">src</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">untar/extracted_file</span><span class="w"></span>
-<span class="w">    </span><span class="nt">out</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="nv">classfile</span><span class="p p-Indicator">]</span><span class="w"></span>
+<span class="w">  </span><span class="nt">compile</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">run</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">arguments.cwl</span>
+<span class="w">    </span><span class="nt">in</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">src</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">untar/extracted_file</span>
+<span class="w">    </span><span class="nt">out</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="nv">classfile</span><span class="p p-Indicator">]</span>
 </pre></div>
 </div>
 </div>
@@ -545,103 +635,102 @@ compiles it.</p>
 <p>Use a YAML or a JSON object in a separate file to describe the input of a run:</p>
 <div class="literal-block-wrapper docutils container" id="st-workflow-job-yml">
 <div class="code-block-caption"><span class="caption-text"><code class="docutils literal notranslate"><span class="pre">1st-workflow-job.yml</span></code></span><a class="headerlink" href="#st-workflow-job-yml" title="Permalink to this code">#</a></div>
-<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">tarball</span><span class="p">:</span><span class="w"></span>
-<span class="w">  </span><span class="nt">class</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">File</span><span class="w"></span>
-<span class="w">  </span><span class="nt">path</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">hello.tar</span><span class="w"></span>
-<span class="nt">name_of_file_to_extract</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Hello.java</span><span class="w"></span>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">tarball</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">class</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">File</span>
+<span class="w">  </span><span class="nt">path</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">hello.tar</span>
+<span class="nt">name_of_file_to_extract</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Hello.java</span>
 </pre></div>
 </div>
 </div>
 <p>Next, create a sample Java file and add it to a tar file to use with the command-line tool.</p>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span><span class="nb">echo</span> <span class="s2">&quot;public class Hello {}&quot;</span> &gt; Hello.java <span class="o">&amp;&amp;</span> tar -cvf hello.tar Hello.java
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;public class Hello {}&quot;</span><span class="w"> </span>&gt;<span class="w"> </span>Hello.java<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>tar<span class="w"> </span>-cvf<span class="w"> </span>hello.tar<span class="w"> </span>Hello.java
 <span class="go">Hello.java</span>
 </pre></div>
 </div>
 <p>Now invoke <code class="docutils literal notranslate"><span class="pre">cwltool</span></code> with the tool description and the input object on the
 command line:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ cwltool 1st-workflow.cwl 1st-workflow-job.yml
-INFO /opt/hostedtoolcache/Python/3.9.14/x64/bin/cwltool <span class="m">3</span>.1.20221008225030
-INFO Resolved <span class="s1">&#39;1st-workflow.cwl&#39;</span> to <span class="s1">&#39;file:///home/runner/work/user_guide/user_guide/src/_includes/cwl/workflows/1st-workflow.cwl&#39;</span>
-INFO <span class="o">[</span>workflow <span class="o">]</span> start
-INFO <span class="o">[</span>workflow <span class="o">]</span> starting step untar
-INFO <span class="o">[</span>step untar<span class="o">]</span> start
-INFO <span class="o">[</span>job untar<span class="o">]</span> /tmp/n60ibj8b$ tar <span class="se">\</span>
-    --extract <span class="se">\</span>
-    --file <span class="se">\</span>
-    /tmp/l9xjjts5/stge16afc56-e414-473f-9df6-892fde551a24/hello.tar <span class="se">\</span>
-    Hello.java
-INFO <span class="o">[</span>job untar<span class="o">]</span> completed success
-INFO <span class="o">[</span>step untar<span class="o">]</span> completed success
-INFO <span class="o">[</span>workflow <span class="o">]</span> starting step compile
-INFO <span class="o">[</span>step compile<span class="o">]</span> start
-INFO <span class="o">[</span>job compile<span class="o">]</span> /tmp/2ra5s50i$ docker <span class="se">\</span>
-    run <span class="se">\</span>
-    -i <span class="se">\</span>
-    --mount<span class="o">=</span><span class="nv">type</span><span class="o">=</span>bind,source<span class="o">=</span>/tmp/2ra5s50i,target<span class="o">=</span>/rZmzll <span class="se">\</span>
-    --mount<span class="o">=</span><span class="nv">type</span><span class="o">=</span>bind,source<span class="o">=</span>/tmp/__5svis4,target<span class="o">=</span>/tmp <span class="se">\</span>
-    --mount<span class="o">=</span><span class="nv">type</span><span class="o">=</span>bind,source<span class="o">=</span>/tmp/n60ibj8b/Hello.java,target<span class="o">=</span>/var/lib/cwl/stg251b5fff-2431-4c73-ac0d-4e2e3c5b1ce8/Hello.java,readonly <span class="se">\</span>
-    --workdir<span class="o">=</span>/rZmzll <span class="se">\</span>
-    --read-only<span class="o">=</span><span class="nb">true</span> <span class="se">\</span>
-    --user<span class="o">=</span><span class="m">1001</span>:121 <span class="se">\</span>
-    --rm <span class="se">\</span>
-    --cidfile<span class="o">=</span>/tmp/1zzu4qoe/20221018123436-342566.cid <span class="se">\</span>
-    --env<span class="o">=</span><span class="nv">TMPDIR</span><span class="o">=</span>/tmp <span class="se">\</span>
-    --env<span class="o">=</span><span class="nv">HOME</span><span class="o">=</span>/rZmzll <span class="se">\</span>
-    openjdk:9.0.1-11-slim <span class="se">\</span>
-    javac <span class="se">\</span>
-    -d <span class="se">\</span>
-    /rZmzll <span class="se">\</span>
-    /var/lib/cwl/stg251b5fff-2431-4c73-ac0d-4e2e3c5b1ce8/Hello.java
-INFO <span class="o">[</span>job compile<span class="o">]</span> Max memory used: 0MiB
-INFO <span class="o">[</span>job compile<span class="o">]</span> completed success
-INFO <span class="o">[</span>step compile<span class="o">]</span> completed success
-INFO <span class="o">[</span>workflow <span class="o">]</span> completed success
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>cwltool<span class="w"> </span>1st-workflow.cwl<span class="w"> </span>1st-workflow-job.yml
+INFO<span class="w"> </span>/opt/hostedtoolcache/Python/3.9.18/x64/bin/cwltool<span class="w"> </span><span class="m">3</span>.1.20231114134824
+INFO<span class="w"> </span>Resolved<span class="w"> </span><span class="s1">&#39;1st-workflow.cwl&#39;</span><span class="w"> </span>to<span class="w"> </span><span class="s1">&#39;file:///home/runner/work/user_guide/user_guide/src/_includes/cwl/workflows/1st-workflow.cwl&#39;</span>
+INFO<span class="w"> </span><span class="o">[</span>workflow<span class="w"> </span><span class="o">]</span><span class="w"> </span>start
+INFO<span class="w"> </span><span class="o">[</span>workflow<span class="w"> </span><span class="o">]</span><span class="w"> </span>starting<span class="w"> </span>step<span class="w"> </span>untar
+INFO<span class="w"> </span><span class="o">[</span>step<span class="w"> </span>untar<span class="o">]</span><span class="w"> </span>start
+INFO<span class="w"> </span><span class="o">[</span>job<span class="w"> </span>untar<span class="o">]</span><span class="w"> </span>/tmp/qqmxewrl$<span class="w"> </span>tar<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>--extract<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>--file<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>/tmp/vasfayit/stg19dcbd0b-93ce-4138-a564-0d33168d54ed/hello.tar<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>Hello.java
+INFO<span class="w"> </span><span class="o">[</span>job<span class="w"> </span>untar<span class="o">]</span><span class="w"> </span>completed<span class="w"> </span>success
+INFO<span class="w"> </span><span class="o">[</span>step<span class="w"> </span>untar<span class="o">]</span><span class="w"> </span>completed<span class="w"> </span>success
+INFO<span class="w"> </span><span class="o">[</span>workflow<span class="w"> </span><span class="o">]</span><span class="w"> </span>starting<span class="w"> </span>step<span class="w"> </span>compile
+INFO<span class="w"> </span><span class="o">[</span>step<span class="w"> </span>compile<span class="o">]</span><span class="w"> </span>start
+INFO<span class="w"> </span><span class="o">[</span>job<span class="w"> </span>compile<span class="o">]</span><span class="w"> </span>/tmp/ks6yt84o$<span class="w"> </span>docker<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>run<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>-i<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>--mount<span class="o">=</span><span class="nv">type</span><span class="o">=</span>bind,source<span class="o">=</span>/tmp/ks6yt84o,target<span class="o">=</span>/pLpxhZ<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>--mount<span class="o">=</span><span class="nv">type</span><span class="o">=</span>bind,source<span class="o">=</span>/tmp/sr_p0k_t,target<span class="o">=</span>/tmp<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>--mount<span class="o">=</span><span class="nv">type</span><span class="o">=</span>bind,source<span class="o">=</span>/tmp/qqmxewrl/Hello.java,target<span class="o">=</span>/var/lib/cwl/stg4c664112-5a2c-4f63-8ec9-5932b91b3776/Hello.java,readonly<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>--workdir<span class="o">=</span>/pLpxhZ<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>--read-only<span class="o">=</span><span class="nb">true</span><span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>--net<span class="o">=</span>none<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>--user<span class="o">=</span><span class="m">1001</span>:127<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>--rm<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>--cidfile<span class="o">=</span>/tmp/o4lz_d_9/20231124104440-302170.cid<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>--env<span class="o">=</span><span class="nv">TMPDIR</span><span class="o">=</span>/tmp<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>--env<span class="o">=</span><span class="nv">HOME</span><span class="o">=</span>/pLpxhZ<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>openjdk:9.0.1-11-slim<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>javac<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>-d<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>/pLpxhZ<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>/var/lib/cwl/stg4c664112-5a2c-4f63-8ec9-5932b91b3776/Hello.java
+INFO<span class="w"> </span><span class="o">[</span>job<span class="w"> </span>compile<span class="o">]</span><span class="w"> </span>completed<span class="w"> </span>success
+INFO<span class="w"> </span><span class="o">[</span>step<span class="w"> </span>compile<span class="o">]</span><span class="w"> </span>completed<span class="w"> </span>success
+INFO<span class="w"> </span><span class="o">[</span>workflow<span class="w"> </span><span class="o">]</span><span class="w"> </span>completed<span class="w"> </span>success
 <span class="o">{</span>
-    <span class="s2">&quot;compiled_class&quot;</span>: <span class="o">{</span>
-        <span class="s2">&quot;location&quot;</span>: <span class="s2">&quot;file:///home/runner/work/user_guide/user_guide/src/_includes/cwl/workflows/Hello.class&quot;</span>,
-        <span class="s2">&quot;basename&quot;</span>: <span class="s2">&quot;Hello.class&quot;</span>,
-        <span class="s2">&quot;class&quot;</span>: <span class="s2">&quot;File&quot;</span>,
-        <span class="s2">&quot;checksum&quot;</span>: <span class="s2">&quot;sha1</span><span class="nv">$39</span><span class="s2">e3219327347c05aa3e82236f83aa6d77fe6bfd&quot;</span>,
-        <span class="s2">&quot;size&quot;</span>: <span class="m">419</span>,
-        <span class="s2">&quot;path&quot;</span>: <span class="s2">&quot;/home/runner/work/user_guide/user_guide/src/_includes/cwl/workflows/Hello.class&quot;</span>
-    <span class="o">}</span>
-<span class="o">}</span>
-INFO Final process status is success
+<span class="w">    </span><span class="s2">&quot;compiled_class&quot;</span>:<span class="w"> </span><span class="o">{</span>
+<span class="w">        </span><span class="s2">&quot;location&quot;</span>:<span class="w"> </span><span class="s2">&quot;file:///home/runner/work/user_guide/user_guide/src/_includes/cwl/workflows/Hello.class&quot;</span>,
+<span class="w">        </span><span class="s2">&quot;basename&quot;</span>:<span class="w"> </span><span class="s2">&quot;Hello.class&quot;</span>,
+<span class="w">        </span><span class="s2">&quot;class&quot;</span>:<span class="w"> </span><span class="s2">&quot;File&quot;</span>,
+<span class="w">        </span><span class="s2">&quot;checksum&quot;</span>:<span class="w"> </span><span class="s2">&quot;sha1</span><span class="nv">$39</span><span class="s2">e3219327347c05aa3e82236f83aa6d77fe6bfd&quot;</span>,
+<span class="w">        </span><span class="s2">&quot;size&quot;</span>:<span class="w"> </span><span class="m">419</span>,
+<span class="w">        </span><span class="s2">&quot;path&quot;</span>:<span class="w"> </span><span class="s2">&quot;/home/runner/work/user_guide/user_guide/src/_includes/cwl/workflows/Hello.class&quot;</span>
+<span class="w">    </span><span class="o">}</span>
+<span class="o">}</span>INFO<span class="w"> </span>Final<span class="w"> </span>process<span class="w"> </span>status<span class="w"> </span>is<span class="w"> </span>success
 </pre></div>
 </div>
 <p>What’s going on here?  Let’s break it down:</p>
-<div class="highlight-cwl notranslate"><div class="highlight"><pre><span></span><span class="nt">cwlVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">v1.0</span><span class="w"></span>
-<span class="nt">class</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Workflow</span><span class="w"></span>
+<div class="highlight-cwl notranslate"><div class="highlight"><pre><span></span><span class="nt">cwlVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">v1.0</span>
+<span class="nt">class</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Workflow</span>
 </pre></div>
 </div>
 <p>The <code class="docutils literal notranslate"><span class="pre">cwlVersion</span></code> field indicates the version of the CWL spec used by the
 document.  The <code class="docutils literal notranslate"><span class="pre">class</span></code> field indicates this document describes a workflow.</p>
-<div class="highlight-cwl notranslate"><div class="highlight"><pre><span></span><span class="nt">inputs</span><span class="p">:</span><span class="w"></span>
-<span class="w">  </span><span class="nt">tarball</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">File</span><span class="w"></span>
-<span class="w">  </span><span class="nt">name_of_file_to_extract</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">string</span><span class="w"></span>
+<div class="highlight-cwl notranslate"><div class="highlight"><pre><span></span><span class="nt">inputs</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">tarball</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">File</span>
+<span class="w">  </span><span class="nt">name_of_file_to_extract</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">string</span>
 </pre></div>
 </div>
 <p>The <code class="docutils literal notranslate"><span class="pre">inputs</span></code> section describes the inputs of the workflow.  This is a
 list of input parameters where each parameter consists of an identifier
 and a data type.  These parameters can be used as sources for input to
 specific workflows steps.</p>
-<div class="highlight-cwl notranslate"><div class="highlight"><pre><span></span><span class="nt">outputs</span><span class="p">:</span><span class="w"></span>
-<span class="w">  </span><span class="nt">compiled_class</span><span class="p">:</span><span class="w"></span>
-<span class="w">    </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">File</span><span class="w"></span>
-<span class="w">    </span><span class="nt">outputSource</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">compile/classfile</span><span class="w"></span>
+<div class="highlight-cwl notranslate"><div class="highlight"><pre><span></span><span class="nt">outputs</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">compiled_class</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">File</span>
+<span class="w">    </span><span class="nt">outputSource</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">compile/classfile</span>
 </pre></div>
 </div>
 <p>The <code class="docutils literal notranslate"><span class="pre">outputs</span></code> section describes the outputs of the workflow.  This is a
 list of output parameters where each parameter consists of an identifier
 and a data type.  The <code class="docutils literal notranslate"><span class="pre">outputSource</span></code> connects the output parameter <code class="docutils literal notranslate"><span class="pre">classfile</span></code>
 of the <code class="docutils literal notranslate"><span class="pre">compile</span></code> step to the workflow output parameter <code class="docutils literal notranslate"><span class="pre">compiled_class</span></code>.</p>
-<div class="highlight-cwl notranslate"><div class="highlight"><pre><span></span><span class="nt">steps</span><span class="p">:</span><span class="w"></span>
-<span class="w">  </span><span class="nt">untar</span><span class="p">:</span><span class="w"></span>
-<span class="w">    </span><span class="nt">run</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">tar-param.cwl</span><span class="w"></span>
-<span class="w">    </span><span class="nt">in</span><span class="p">:</span><span class="w"></span>
-<span class="w">      </span><span class="nt">tarfile</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">tarball</span><span class="w"></span>
-<span class="w">      </span><span class="nt">extractfile</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">name_of_file_to_extract</span><span class="w"></span>
-<span class="w">    </span><span class="nt">out</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="nv">extracted_file</span><span class="p p-Indicator">]</span><span class="w"></span>
+<div class="highlight-cwl notranslate"><div class="highlight"><pre><span></span><span class="nt">steps</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">untar</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">run</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">tar-param.cwl</span>
+<span class="w">    </span><span class="nt">in</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">tarfile</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">tarball</span>
+<span class="w">      </span><span class="nt">extractfile</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">name_of_file_to_extract</span>
+<span class="w">    </span><span class="nt">out</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="nv">extracted_file</span><span class="p p-Indicator">]</span>
 </pre></div>
 </div>
 <p>The <code class="docutils literal notranslate"><span class="pre">steps</span></code> section describes the actual steps of the workflow.  In this
@@ -652,7 +741,7 @@ instead the order is determined by the dependencies between steps (using
 <code class="docutils literal notranslate"><span class="pre">source</span></code>).  In addition, workflow steps which do not depend on one
 another may run in parallel.</p>
 <p>The first step, <code class="docutils literal notranslate"><span class="pre">untar</span></code> runs <code class="docutils literal notranslate"><span class="pre">tar-param.cwl</span></code> (described previously in
-<a class="reference internal" href="parameter-references.html"><span class="doc std std-doc">Parameter References</span></a>).
+<a class="reference internal" href="parameter-references.html"><span class="std std-doc">Parameter References</span></a>).
 This tool has two input parameters, <code class="docutils literal notranslate"><span class="pre">tarfile</span></code> and <code class="docutils literal notranslate"><span class="pre">extractfile</span></code> and one output
 parameter <code class="docutils literal notranslate"><span class="pre">extracted_file</span></code>.</p>
 <p>The <code class="docutils literal notranslate"><span class="pre">in</span></code> section of the workflow step connects these two input parameters to
@@ -662,17 +751,17 @@ assigned to <code class="docutils literal notranslate"><span class="pre">tarball
 parameters <code class="docutils literal notranslate"><span class="pre">tarfile</span></code> and <code class="docutils literal notranslate"><span class="pre">extractfile</span></code> in order to run the tool.</p>
 <p>The <code class="docutils literal notranslate"><span class="pre">out</span></code> section of the workflow step lists the output parameters that are
 expected from the tool.</p>
-<div class="highlight-cwl notranslate"><div class="highlight"><pre><span></span><span class="w">  </span><span class="nt">compile</span><span class="p">:</span><span class="w"></span>
-<span class="w">    </span><span class="nt">run</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">arguments.cwl</span><span class="w"></span>
-<span class="w">    </span><span class="nt">in</span><span class="p">:</span><span class="w"></span>
-<span class="w">      </span><span class="nt">src</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">untar/extracted_file</span><span class="w"></span>
-<span class="w">    </span><span class="nt">out</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="nv">classfile</span><span class="p p-Indicator">]</span><span class="w"></span>
+<div class="highlight-cwl notranslate"><div class="highlight"><pre><span></span><span class="w">  </span><span class="nt">compile</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">run</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">arguments.cwl</span>
+<span class="w">    </span><span class="nt">in</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">src</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">untar/extracted_file</span>
+<span class="w">    </span><span class="nt">out</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="nv">classfile</span><span class="p p-Indicator">]</span>
 </pre></div>
 </div>
 <p>The second step <code class="docutils literal notranslate"><span class="pre">compile</span></code> depends on the results from the first step by
 connecting the input parameter <code class="docutils literal notranslate"><span class="pre">src</span></code> to the output parameter of <code class="docutils literal notranslate"><span class="pre">untar</span></code> using
 <code class="docutils literal notranslate"><span class="pre">untar/extracted_file</span></code>.  It runs <code class="docutils literal notranslate"><span class="pre">arguments.cwl</span></code> (described previously in
-<a class="reference internal" href="additional-arguments-and-parameters.html"><span class="doc std std-doc">Additional Arguments and Parameters</span></a>).
+<a class="reference internal" href="additional-arguments-and-parameters.html"><span class="std std-doc">Additional Arguments and Parameters</span></a>).
 The output of this step <code class="docutils literal notranslate"><span class="pre">classfile</span></code> is connected to the
 <code class="docutils literal notranslate"><span class="pre">outputs</span></code> section for the Workflow, described above.</p>
 </section>
@@ -682,61 +771,60 @@ The output of this step <code class="docutils literal notranslate"><span class="
 We can also think of a workflow as being a tool itself; a CWL workflow can be
 used as a step in another CWL workflow, if the workflow engine supports the
 <code class="docutils literal notranslate"><span class="pre">SubworkflowFeatureRequirement</span></code>:</p>
-<div class="highlight-cwl notranslate"><div class="highlight"><pre><span></span><span class="nt">requirements</span><span class="p">:</span><span class="w"></span>
-<span class="w">  </span><span class="nt">SubworkflowFeatureRequirement</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">{}</span><span class="w"></span>
+<div class="highlight-cwl notranslate"><div class="highlight"><pre><span></span><span class="nt">requirements</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">SubworkflowFeatureRequirement</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">{}</span>
 </pre></div>
 </div>
 <p>Here’s an example workflow that uses our <code class="docutils literal notranslate"><span class="pre">1st-workflow.cwl</span></code> as a nested
 workflow:</p>
 <div class="literal-block-wrapper docutils container" id="nestedworkflows-cwl">
 <div class="code-block-caption"><span class="caption-text"><code class="docutils literal notranslate"><span class="pre">nestedworkflows.cwl</span></code></span><a class="headerlink" href="#nestedworkflows-cwl" title="Permalink to this code">#</a></div>
-<div class="highlight-cwl notranslate"><div class="highlight"><pre><span></span><span class="c1">#!/usr/bin/env cwl-runner</span><span class="w"></span>
+<div class="highlight-cwl notranslate"><div class="highlight"><pre><span></span><span class="c1">#!/usr/bin/env cwl-runner</span>
+<span class="nt">cwlVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">v1.2</span>
+<span class="nt">class</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Workflow</span>
 
-<span class="nt">cwlVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">v1.0</span><span class="w"></span>
-<span class="nt">class</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Workflow</span><span class="w"></span>
+<span class="nt">inputs</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[]</span>
 
-<span class="nt">inputs</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[]</span><span class="w"></span>
+<span class="nt">outputs</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">classout</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">File</span>
+<span class="w">    </span><span class="nt">outputSource</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">compile/compiled_class</span>
 
-<span class="nt">outputs</span><span class="p">:</span><span class="w"></span>
-<span class="w">  </span><span class="nt">classout</span><span class="p">:</span><span class="w"></span>
-<span class="w">    </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">File</span><span class="w"></span>
-<span class="w">    </span><span class="nt">outputSource</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">compile/compiled_class</span><span class="w"></span>
+<span class="nt">requirements</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">SubworkflowFeatureRequirement</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">{}</span>
 
-<span class="nt">requirements</span><span class="p">:</span><span class="w"></span>
-<span class="w">  </span><span class="nt">SubworkflowFeatureRequirement</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">{}</span><span class="w"></span>
+<span class="nt">steps</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">compile</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">run</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1st-workflow.cwl</span>
+<span class="w">    </span><span class="nt">in</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">tarball</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">create-tar/tar_compressed_java_file</span>
+<span class="w">      </span><span class="nt">name_of_file_to_extract</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">default</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;Hello.java&quot;</span>
+<span class="w">    </span><span class="nt">out</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="nv">compiled_class</span><span class="p p-Indicator">]</span>
 
-<span class="nt">steps</span><span class="p">:</span><span class="w"></span>
-<span class="w">  </span><span class="nt">compile</span><span class="p">:</span><span class="w"></span>
-<span class="w">    </span><span class="nt">run</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1st-workflow.cwl</span><span class="w"></span>
-<span class="w">    </span><span class="nt">in</span><span class="p">:</span><span class="w"></span>
-<span class="w">      </span><span class="nt">tarball</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">create-tar/tar_compressed_java_file</span><span class="w"></span>
-<span class="w">      </span><span class="nt">name_of_file_to_extract</span><span class="p">:</span><span class="w"></span>
-<span class="w">        </span><span class="nt">default</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;Hello.java&quot;</span><span class="w"></span>
-<span class="w">    </span><span class="nt">out</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="nv">compiled_class</span><span class="p p-Indicator">]</span><span class="w"></span>
-
-<span class="w">  </span><span class="nt">create-tar</span><span class="p">:</span><span class="w"></span>
-<span class="w">    </span><span class="nt">in</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[]</span><span class="w"></span>
-<span class="w">    </span><span class="nt">out</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="nv">tar_compressed_java_file</span><span class="p p-Indicator">]</span><span class="w"></span>
-<span class="w">    </span><span class="nt">run</span><span class="p">:</span><span class="w"></span>
-<span class="w">      </span><span class="nt">class</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">CommandLineTool</span><span class="w"></span>
-<span class="w">      </span><span class="nt">requirements</span><span class="p">:</span><span class="w"></span>
-<span class="w">        </span><span class="nt">InitialWorkDirRequirement</span><span class="p">:</span><span class="w"></span>
-<span class="w">          </span><span class="nt">listing</span><span class="p">:</span><span class="w"></span>
-<span class="w">            </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">entryname</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Hello.java</span><span class="w"></span>
-<span class="w">              </span><span class="nt">entry</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">|</span><span class="w"></span>
-<span class="w">                </span><span class="no">public class Hello {</span><span class="w"></span>
-<span class="w">                  </span><span class="no">public static void main(String[] argv) {</span><span class="w"></span>
-<span class="w">                      </span><span class="no">System.out.println(&quot;Hello from Java&quot;);</span><span class="w"></span>
-<span class="w">                  </span><span class="no">}</span><span class="w"></span>
-<span class="w">                </span><span class="no">}</span><span class="w"></span>
-<span class="w">      </span><span class="nt">inputs</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[]</span><span class="w"></span>
-<span class="w">      </span><span class="nt">baseCommand</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="nv">tar</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">--create</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">--file=hello.tar</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">Hello.java</span><span class="p p-Indicator">]</span><span class="w"></span>
-<span class="w">      </span><span class="nt">outputs</span><span class="p">:</span><span class="w"></span>
-<span class="w">        </span><span class="nt">tar_compressed_java_file</span><span class="p">:</span><span class="w"></span>
-<span class="w">          </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">File</span><span class="w"></span>
-<span class="w">          </span><span class="nt">streamable</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span><span class="w"></span>
-<span class="w">          </span><span class="nt">outputBinding</span><span class="p">:</span><span class="w"></span>
-<span class="w">            </span><span class="nt">glob</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;hello.tar&quot;</span><span class="w"></span>
+<span class="w">  </span><span class="nt">create-tar</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">in</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[]</span>
+<span class="w">    </span><span class="nt">out</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="nv">tar_compressed_java_file</span><span class="p p-Indicator">]</span>
+<span class="w">    </span><span class="nt">run</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">class</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">CommandLineTool</span>
+<span class="w">      </span><span class="nt">requirements</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">InitialWorkDirRequirement</span><span class="p">:</span>
+<span class="w">          </span><span class="nt">listing</span><span class="p">:</span>
+<span class="w">            </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">entryname</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Hello.java</span>
+<span class="w">              </span><span class="nt">entry</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">|</span>
+<span class="w">                </span><span class="no">public class Hello {</span>
+<span class="w">                  </span><span class="no">public static void main(String[] argv) {</span>
+<span class="w">                      </span><span class="no">System.out.println(&quot;Hello from Java&quot;);</span>
+<span class="w">                  </span><span class="no">}</span>
+<span class="w">                </span><span class="no">}</span>
+<span class="w">      </span><span class="nt">inputs</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[]</span>
+<span class="w">      </span><span class="nt">baseCommand</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="nv">tar</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">--create</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">--file=hello.tar</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">Hello.java</span><span class="p p-Indicator">]</span>
+<span class="w">      </span><span class="nt">outputs</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">tar_compressed_java_file</span><span class="p">:</span>
+<span class="w">          </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">File</span>
+<span class="w">          </span><span class="nt">streamable</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="w">          </span><span class="nt">outputBinding</span><span class="p">:</span>
+<span class="w">            </span><span class="nt">glob</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;hello.tar&quot;</span>
 </pre></div>
 </div>
 </div>
@@ -757,13 +845,13 @@ alt="Visualization of 1st-workflow.cwl" /></a></p>
 <p>A CWL <code class="docutils literal notranslate"><span class="pre">Workflow</span></code> can be used as a <code class="docutils literal notranslate"><span class="pre">step</span></code> just like a <code class="docutils literal notranslate"><span class="pre">CommandLineTool</span></code>, its CWL
 file is included with <code class="docutils literal notranslate"><span class="pre">run</span></code>. The workflow inputs (<code class="docutils literal notranslate"><span class="pre">tarball</span></code> and <code class="docutils literal notranslate"><span class="pre">name_of_file_to_extract</span></code>) and outputs
 (<code class="docutils literal notranslate"><span class="pre">compiled_class</span></code>) then can be mapped to become the step’s input/outputs.</p>
-<div class="highlight-cwl notranslate"><div class="highlight"><pre><span></span><span class="w">  </span><span class="nt">compile</span><span class="p">:</span><span class="w"></span>
-<span class="w">    </span><span class="nt">run</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1st-workflow.cwl</span><span class="w"></span>
-<span class="w">    </span><span class="nt">in</span><span class="p">:</span><span class="w"></span>
-<span class="w">      </span><span class="nt">tarball</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">create-tar/tar_compressed_java_file</span><span class="w"></span>
-<span class="w">      </span><span class="nt">name_of_file_to_extract</span><span class="p">:</span><span class="w"></span>
-<span class="w">        </span><span class="nt">default</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;Hello.java&quot;</span><span class="w"></span>
-<span class="w">    </span><span class="nt">out</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="nv">compiled_class</span><span class="p p-Indicator">]</span><span class="w"></span>
+<div class="highlight-cwl notranslate"><div class="highlight"><pre><span></span><span class="w">  </span><span class="nt">compile</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">run</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1st-workflow.cwl</span>
+<span class="w">    </span><span class="nt">in</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">tarball</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">create-tar/tar_compressed_java_file</span>
+<span class="w">      </span><span class="nt">name_of_file_to_extract</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">default</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;Hello.java&quot;</span>
+<span class="w">    </span><span class="nt">out</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="nv">compiled_class</span><span class="p p-Indicator">]</span>
 </pre></div>
 </div>
 <p>Our <code class="docutils literal notranslate"><span class="pre">1st-workflow.cwl</span></code> was parameterized with workflow inputs, so when running
@@ -779,32 +867,32 @@ appear in its usage as a tool.</p>
 dependencies in the job file. So in this workflow we can generate a hard-coded
 <code class="docutils literal notranslate"><span class="pre">Hello.java</span></code> file using the previously mentioned <code class="docutils literal notranslate"><span class="pre">InitialWorkDirRequirement</span></code>
 requirement, before adding it to a tar file.</p>
-<div class="highlight-cwl notranslate"><div class="highlight"><pre><span></span><span class="w">  </span><span class="nt">create-tar</span><span class="p">:</span><span class="w"></span>
-<span class="w">    </span><span class="nt">requirements</span><span class="p">:</span><span class="w"></span>
-<span class="w">      </span><span class="nt">InitialWorkDirRequirement</span><span class="p">:</span><span class="w"></span>
-<span class="w">        </span><span class="nt">listing</span><span class="p">:</span><span class="w"></span>
-<span class="w">          </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">entryname</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Hello.java</span><span class="w"></span>
-<span class="w">            </span><span class="nt">entry</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">|</span><span class="w"></span>
-<span class="w">              </span><span class="no">public class Hello {</span><span class="w"></span>
-<span class="w">                </span><span class="no">public static void main(String[] argv) {</span><span class="w"></span>
-<span class="w">                    </span><span class="no">System.out.println(&quot;Hello from Java&quot;);</span><span class="w"></span>
-<span class="w">                </span><span class="no">}</span><span class="w"></span>
-<span class="w">              </span><span class="no">}</span><span class="w"></span>
+<div class="highlight-cwl notranslate"><div class="highlight"><pre><span></span><span class="w">  </span><span class="nt">create-tar</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">requirements</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">InitialWorkDirRequirement</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">listing</span><span class="p">:</span>
+<span class="w">          </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">entryname</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Hello.java</span>
+<span class="w">            </span><span class="nt">entry</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">|</span>
+<span class="w">              </span><span class="no">public class Hello {</span>
+<span class="w">                </span><span class="no">public static void main(String[] argv) {</span>
+<span class="w">                    </span><span class="no">System.out.println(&quot;Hello from Java&quot;);</span>
+<span class="w">                </span><span class="no">}</span>
+<span class="w">              </span><span class="no">}</span>
 </pre></div>
 </div>
 <p>In this case our step can assume <code class="docutils literal notranslate"><span class="pre">Hello.java</span></code> rather than be parameterized, so
 we can use hardcoded values <code class="docutils literal notranslate"><span class="pre">hello.tar</span></code> and <code class="docutils literal notranslate"><span class="pre">Hello.java</span></code> in a <code class="docutils literal notranslate"><span class="pre">baseCommand</span></code> and
 the resulting <code class="docutils literal notranslate"><span class="pre">outputs</span></code>:</p>
-<div class="highlight-cwl notranslate"><div class="highlight"><pre><span></span><span class="w">  </span><span class="nt">run</span><span class="p">:</span><span class="w"></span>
-<span class="w">    </span><span class="nt">class</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">CommandLineTool</span><span class="w"></span>
-<span class="w">    </span><span class="nt">inputs</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[]</span><span class="w"></span>
-<span class="w">    </span><span class="nt">baseCommand</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="nv">tar</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">--create</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">--file=hello.tar</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">Hello.java</span><span class="p p-Indicator">]</span><span class="w"></span>
-<span class="w">    </span><span class="nt">outputs</span><span class="p">:</span><span class="w"></span>
-<span class="w">      </span><span class="nt">tar_compressed_java_file</span><span class="p">:</span><span class="w"></span>
-<span class="w">        </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">File</span><span class="w"></span>
-<span class="w">        </span><span class="nt">streamable</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span><span class="w"></span>
-<span class="w">        </span><span class="nt">outputBinding</span><span class="p">:</span><span class="w"></span>
-<span class="w">          </span><span class="nt">glob</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;hello.tar&quot;</span><span class="w"></span>
+<div class="highlight-cwl notranslate"><div class="highlight"><pre><span></span><span class="w">  </span><span class="nt">run</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">class</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">CommandLineTool</span>
+<span class="w">    </span><span class="nt">inputs</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[]</span>
+<span class="w">    </span><span class="nt">baseCommand</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="nv">tar</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">--create</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">--file=hello.tar</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">Hello.java</span><span class="p p-Indicator">]</span>
+<span class="w">    </span><span class="nt">outputs</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">tar_compressed_java_file</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">File</span>
+<span class="w">        </span><span class="nt">streamable</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="w">        </span><span class="nt">outputBinding</span><span class="p">:</span>
+<span class="w">          </span><span class="nt">glob</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;hello.tar&quot;</span>
 </pre></div>
 </div>
 <p>Did you notice that we didn’t split out the <code class="docutils literal notranslate"><span class="pre">tar</span> <span class="pre">--create</span></code> tool to a separate file,
@@ -827,8 +915,8 @@ This feature tells the runner that you wish to run a tool or workflow multiple t
 of inputs. The workflow then takes the input(s) as an array and will run the specified step(s)
 on each element of the array as if it were a single input. This allows you to run the same workflow
 on multiple inputs without having to generate many different commands or input yaml files.</p>
-<div class="highlight-cwl notranslate"><div class="highlight"><pre><span></span><span class="nt">requirements</span><span class="p">:</span><span class="w"></span>
-<span class="w">  </span><span class="nt">ScatterFeatureRequirement</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">{}</span><span class="w"></span>
+<div class="highlight-cwl notranslate"><div class="highlight"><pre><span></span><span class="nt">requirements</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">ScatterFeatureRequirement</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">{}</span>
 </pre></div>
 </div>
 <p>The most common reason a new user might want to use scatter is to perform the same analysis on
@@ -836,43 +924,42 @@ different samples. Let’s start with a simple workflow that calls our first exa
 (<code class="docutils literal notranslate"><span class="pre">hello_world.cwl</span></code>) and takes an array of strings as input to the workflow:</p>
 <div class="literal-block-wrapper docutils container" id="scatter-workflow-cwl">
 <div class="code-block-caption"><span class="caption-text"><code class="docutils literal notranslate"><span class="pre">scatter-workflow.cwl</span></code></span><a class="headerlink" href="#scatter-workflow-cwl" title="Permalink to this code">#</a></div>
-<div class="highlight-cwl notranslate"><div class="highlight"><pre><span></span><span class="c1">#!/usr/bin/env cwl-runner</span><span class="w"></span>
+<div class="highlight-cwl notranslate"><div class="highlight"><pre><span></span><span class="c1">#!/usr/bin/env cwl-runner</span>
+<span class="nt">cwlVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">v1.2</span>
+<span class="nt">class</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Workflow</span>
 
-<span class="nt">cwlVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">v1.0</span><span class="w"></span>
-<span class="nt">class</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Workflow</span><span class="w"></span>
+<span class="nt">requirements</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">ScatterFeatureRequirement</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">{}</span>
 
-<span class="nt">requirements</span><span class="p">:</span><span class="w"></span>
-<span class="w">  </span><span class="nt">ScatterFeatureRequirement</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">{}</span><span class="w"></span>
+<span class="nt">inputs</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">message_array</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">string[]</span>
 
-<span class="nt">inputs</span><span class="p">:</span><span class="w"></span>
-<span class="w">  </span><span class="nt">message_array</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">string[]</span><span class="w"></span>
+<span class="nt">steps</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">echo</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">run</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">hello_world.cwl</span>
+<span class="w">    </span><span class="nt">scatter</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">message</span>
+<span class="w">    </span><span class="nt">in</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">message</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">message_array</span>
+<span class="w">    </span><span class="nt">out</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[]</span>
 
-<span class="nt">steps</span><span class="p">:</span><span class="w"></span>
-<span class="w">  </span><span class="nt">echo</span><span class="p">:</span><span class="w"></span>
-<span class="w">    </span><span class="nt">run</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">hello_world.cwl</span><span class="w"></span>
-<span class="w">    </span><span class="nt">scatter</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">message</span><span class="w"></span>
-<span class="w">    </span><span class="nt">in</span><span class="p">:</span><span class="w"></span>
-<span class="w">      </span><span class="nt">message</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">message_array</span><span class="w"></span>
-<span class="w">    </span><span class="nt">out</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[]</span><span class="w"></span>
-
-<span class="nt">outputs</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[]</span><span class="w"></span>
+<span class="nt">outputs</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[]</span>
 </pre></div>
 </div>
 </div>
 <p>Aside from the <code class="docutils literal notranslate"><span class="pre">requirements</span></code> section including <code class="docutils literal notranslate"><span class="pre">ScatterFeatureRequirement</span></code>, what is
 going on here?</p>
-<div class="highlight-cwl notranslate"><div class="highlight"><pre><span></span><span class="nt">inputs</span><span class="p">:</span><span class="w"></span>
-<span class="w">  </span><span class="nt">message_array</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">string[]</span><span class="w"></span>
+<div class="highlight-cwl notranslate"><div class="highlight"><pre><span></span><span class="nt">inputs</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">message_array</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">string[]</span>
 </pre></div>
 </div>
 <p>First of all, notice that the main workflow level input here requires an array of strings.</p>
-<div class="highlight-cwl notranslate"><div class="highlight"><pre><span></span><span class="nt">steps</span><span class="p">:</span><span class="w"></span>
-<span class="w">  </span><span class="nt">echo</span><span class="p">:</span><span class="w"></span>
-<span class="w">    </span><span class="nt">run</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">hello_world.cwl</span><span class="w"></span>
-<span class="w">    </span><span class="nt">scatter</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">message</span><span class="w"></span>
-<span class="w">    </span><span class="nt">in</span><span class="p">:</span><span class="w"></span>
-<span class="w">      </span><span class="nt">message</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">message_array</span><span class="w"></span>
-<span class="w">    </span><span class="nt">out</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[]</span><span class="w"></span>
+<div class="highlight-cwl notranslate"><div class="highlight"><pre><span></span><span class="nt">steps</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">echo</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">run</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">hello_world.cwl</span>
+<span class="w">    </span><span class="nt">scatter</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">message</span>
+<span class="w">    </span><span class="nt">in</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">message</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">message_array</span>
+<span class="w">    </span><span class="nt">out</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[]</span>
 </pre></div>
 </div>
 <p>Here we’ve added a new field to the step <code class="docutils literal notranslate"><span class="pre">echo</span></code> called <code class="docutils literal notranslate"><span class="pre">scatter</span></code>. This field tells the
@@ -886,41 +973,40 @@ as well!</p>
 <div class="literal-block-wrapper docutils container" id="scatter-job-yml">
 <div class="code-block-caption"><span class="caption-text"><code class="docutils literal notranslate"><span class="pre">scatter-job.yml</span></code></span><a class="headerlink" href="#scatter-job-yml" title="Permalink to this code">#</a></div>
 <div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">message_array</span><span class="p">:</span><span class="w"> </span>
-<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Hello world!</span><span class="w"></span>
-<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Hola mundo!</span><span class="w"></span>
-<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Bonjour le monde!</span><span class="w"></span>
-<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Hallo welt!</span><span class="w"></span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Hello world!</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Hola mundo!</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Bonjour le monde!</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Hallo welt!</span>
 </pre></div>
 </div>
 </div>
-<p>As a reminder, <a class="reference internal" href="../introduction/quick-start.html"><span class="doc std std-doc"><code class="docutils literal notranslate"><span class="pre">hello_world.cwl</span></code></span></a> simply calls the command
+<p>As a reminder, <a class="reference internal" href="../introduction/quick-start.html"><span class="std std-doc"><code class="docutils literal notranslate"><span class="pre">hello_world.cwl</span></code></span></a> simply calls the command
 <code class="docutils literal notranslate"><span class="pre">echo</span></code> on a message. If we invoke <code class="docutils literal notranslate"><span class="pre">cwltool</span> <span class="pre">scatter-workflow.cwl</span> <span class="pre">scatter-job.yml</span></code> on the
 command line:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ cwltool scatter-workflow.cwl scatter-job.yml
-INFO /opt/hostedtoolcache/Python/3.9.14/x64/bin/cwltool <span class="m">3</span>.1.20221008225030
-INFO Resolved <span class="s1">&#39;scatter-workflow.cwl&#39;</span> to <span class="s1">&#39;file:///home/runner/work/user_guide/user_guide/src/_includes/cwl/workflows/scatter-workflow.cwl&#39;</span>
-INFO <span class="o">[</span>workflow <span class="o">]</span> start
-INFO <span class="o">[</span>workflow <span class="o">]</span> starting step <span class="nb">echo</span>
-INFO <span class="o">[</span>step echo<span class="o">]</span> start
-INFO <span class="o">[</span>job echo<span class="o">]</span> /tmp/a__r0vvm$ <span class="nb">echo</span> <span class="se">\</span>
-    <span class="s1">&#39;Hello world!&#39;</span> &gt; /tmp/a__r0vvm/3f8f180805bc1795e077d75bc6dbec026a376483
-INFO <span class="o">[</span>job echo<span class="o">]</span> completed success
-INFO <span class="o">[</span>step echo<span class="o">]</span> start
-INFO <span class="o">[</span>job echo_2<span class="o">]</span> /tmp/kpx6ncrz$ <span class="nb">echo</span> <span class="se">\</span>
-    <span class="s1">&#39;Hola mundo!&#39;</span> &gt; /tmp/kpx6ncrz/3f8f180805bc1795e077d75bc6dbec026a376483
-INFO <span class="o">[</span>job echo_2<span class="o">]</span> completed success
-INFO <span class="o">[</span>step echo<span class="o">]</span> start
-INFO <span class="o">[</span>job echo_3<span class="o">]</span> /tmp/a4jfbxjk$ <span class="nb">echo</span> <span class="se">\</span>
-    <span class="s1">&#39;Bonjour le monde!&#39;</span> &gt; /tmp/a4jfbxjk/3f8f180805bc1795e077d75bc6dbec026a376483
-INFO <span class="o">[</span>job echo_3<span class="o">]</span> completed success
-INFO <span class="o">[</span>step echo<span class="o">]</span> start
-INFO <span class="o">[</span>job echo_4<span class="o">]</span> /tmp/aicz1v67$ <span class="nb">echo</span> <span class="se">\</span>
-    <span class="s1">&#39;Hallo welt!&#39;</span> &gt; /tmp/aicz1v67/3f8f180805bc1795e077d75bc6dbec026a376483
-INFO <span class="o">[</span>job echo_4<span class="o">]</span> completed success
-INFO <span class="o">[</span>step echo<span class="o">]</span> completed success
-INFO <span class="o">[</span>workflow <span class="o">]</span> completed success
-<span class="o">{}</span>
-INFO Final process status is success
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>cwltool<span class="w"> </span>scatter-workflow.cwl<span class="w"> </span>scatter-job.yml
+INFO<span class="w"> </span>/opt/hostedtoolcache/Python/3.9.18/x64/bin/cwltool<span class="w"> </span><span class="m">3</span>.1.20231114134824
+INFO<span class="w"> </span>Resolved<span class="w"> </span><span class="s1">&#39;scatter-workflow.cwl&#39;</span><span class="w"> </span>to<span class="w"> </span><span class="s1">&#39;file:///home/runner/work/user_guide/user_guide/src/_includes/cwl/workflows/scatter-workflow.cwl&#39;</span>
+INFO<span class="w"> </span><span class="o">[</span>workflow<span class="w"> </span><span class="o">]</span><span class="w"> </span>start
+INFO<span class="w"> </span><span class="o">[</span>workflow<span class="w"> </span><span class="o">]</span><span class="w"> </span>starting<span class="w"> </span>step<span class="w"> </span><span class="nb">echo</span>
+INFO<span class="w"> </span><span class="o">[</span>step<span class="w"> </span>echo<span class="o">]</span><span class="w"> </span>start
+INFO<span class="w"> </span><span class="o">[</span>job<span class="w"> </span>echo<span class="o">]</span><span class="w"> </span>/tmp/qpj8pgbj$<span class="w"> </span><span class="nb">echo</span><span class="w"> </span><span class="se">\</span>
+<span class="w">    </span><span class="s1">&#39;Hello world!&#39;</span><span class="w"> </span>&gt;<span class="w"> </span>/tmp/qpj8pgbj/4e58fa7cfe8505476c857c252be2f391ddbf1187
+INFO<span class="w"> </span><span class="o">[</span>job<span class="w"> </span>echo<span class="o">]</span><span class="w"> </span>completed<span class="w"> </span>success
+INFO<span class="w"> </span><span class="o">[</span>step<span class="w"> </span>echo<span class="o">]</span><span class="w"> </span>start
+INFO<span class="w"> </span><span class="o">[</span>job<span class="w"> </span>echo_2<span class="o">]</span><span class="w"> </span>/tmp/ksmzsr8h$<span class="w"> </span><span class="nb">echo</span><span class="w"> </span><span class="se">\</span>
+<span class="w">    </span><span class="s1">&#39;Hola mundo!&#39;</span><span class="w"> </span>&gt;<span class="w"> </span>/tmp/ksmzsr8h/4e58fa7cfe8505476c857c252be2f391ddbf1187
+INFO<span class="w"> </span><span class="o">[</span>job<span class="w"> </span>echo_2<span class="o">]</span><span class="w"> </span>completed<span class="w"> </span>success
+INFO<span class="w"> </span><span class="o">[</span>step<span class="w"> </span>echo<span class="o">]</span><span class="w"> </span>start
+INFO<span class="w"> </span><span class="o">[</span>job<span class="w"> </span>echo_3<span class="o">]</span><span class="w"> </span>/tmp/y60f5_tn$<span class="w"> </span><span class="nb">echo</span><span class="w"> </span><span class="se">\</span>
+<span class="w">    </span><span class="s1">&#39;Bonjour le monde!&#39;</span><span class="w"> </span>&gt;<span class="w"> </span>/tmp/y60f5_tn/4e58fa7cfe8505476c857c252be2f391ddbf1187
+INFO<span class="w"> </span><span class="o">[</span>job<span class="w"> </span>echo_3<span class="o">]</span><span class="w"> </span>completed<span class="w"> </span>success
+INFO<span class="w"> </span><span class="o">[</span>step<span class="w"> </span>echo<span class="o">]</span><span class="w"> </span>start
+INFO<span class="w"> </span><span class="o">[</span>job<span class="w"> </span>echo_4<span class="o">]</span><span class="w"> </span>/tmp/1uq71g8c$<span class="w"> </span><span class="nb">echo</span><span class="w"> </span><span class="se">\</span>
+<span class="w">    </span><span class="s1">&#39;Hallo welt!&#39;</span><span class="w"> </span>&gt;<span class="w"> </span>/tmp/1uq71g8c/4e58fa7cfe8505476c857c252be2f391ddbf1187
+INFO<span class="w"> </span><span class="o">[</span>job<span class="w"> </span>echo_4<span class="o">]</span><span class="w"> </span>completed<span class="w"> </span>success
+INFO<span class="w"> </span><span class="o">[</span>step<span class="w"> </span>echo<span class="o">]</span><span class="w"> </span>completed<span class="w"> </span>success
+INFO<span class="w"> </span><span class="o">[</span>workflow<span class="w"> </span><span class="o">]</span><span class="w"> </span>completed<span class="w"> </span>success
+<span class="o">{}</span>INFO<span class="w"> </span>Final<span class="w"> </span>process<span class="w"> </span>status<span class="w"> </span>is<span class="w"> </span>success
 </pre></div>
 </div>
 <p>You can see that the workflow calls echo multiple times on each element of our
@@ -929,9 +1015,9 @@ INFO Final process status is success
 lines instead of <code class="docutils literal notranslate"><span class="pre">outputs:</span> <span class="pre">[]</span></code></p>
 <div class="literal-block-wrapper docutils container" id="hello-world-to-stdout-cwl">
 <div class="code-block-caption"><span class="caption-text"><code class="docutils literal notranslate"><span class="pre">hello_world_to_stdout.cwl</span></code></span><a class="headerlink" href="#hello-world-to-stdout-cwl" title="Permalink to this code">#</a></div>
-<div class="highlight-cwl notranslate"><div class="highlight"><pre><span></span><span class="nt">outputs</span><span class="p">:</span><span class="w"></span>
-<span class="w">  </span><span class="nt">echo_out</span><span class="p">:</span><span class="w"></span>
-<span class="w">    </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">stdout</span><span class="w"></span>
+<div class="highlight-cwl notranslate"><div class="highlight"><pre><span></span><span class="nt">outputs</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">echo_out</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">stdout</span>
 </pre></div>
 </div>
 </div>
@@ -939,50 +1025,48 @@ lines instead of <code class="docutils literal notranslate"><span class="pre">ou
 below:</p>
 <div class="literal-block-wrapper docutils container" id="wc-tool-cwl">
 <div class="code-block-caption"><span class="caption-text"><code class="docutils literal notranslate"><span class="pre">wc-tool.cwl</span></code></span><a class="headerlink" href="#wc-tool-cwl" title="Permalink to this code">#</a></div>
-<div class="highlight-cwl notranslate"><div class="highlight"><pre><span></span><span class="c1">#!/usr/bin/env cwl-runner</span><span class="w"></span>
-
-<span class="nt">cwlVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">v1.0</span><span class="w"></span>
-<span class="nt">class</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">CommandLineTool</span><span class="w"></span>
-<span class="nt">baseCommand</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">wc</span><span class="w"></span>
-<span class="nt">arguments</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="s">&quot;-c&quot;</span><span class="p p-Indicator">]</span><span class="w"></span>
-<span class="nt">inputs</span><span class="p">:</span><span class="w"></span>
-<span class="w">  </span><span class="nt">input_file</span><span class="p">:</span><span class="w"></span>
-<span class="w">    </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">File</span><span class="w"></span>
-<span class="w">    </span><span class="nt">inputBinding</span><span class="p">:</span><span class="w"></span>
-<span class="w">      </span><span class="nt">position</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1</span><span class="w"></span>
-<span class="nt">outputs</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[]</span><span class="w"></span>
+<div class="highlight-cwl notranslate"><div class="highlight"><pre><span></span><span class="c1">#!/usr/bin/env cwl-runner</span>
+<span class="nt">cwlVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">v1.2</span>
+<span class="nt">class</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">CommandLineTool</span>
+<span class="nt">baseCommand</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">wc</span>
+<span class="nt">arguments</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="s">&quot;-c&quot;</span><span class="p p-Indicator">]</span>
+<span class="nt">inputs</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">input_file</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">File</span>
+<span class="w">    </span><span class="nt">inputBinding</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">position</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1</span>
+<span class="nt">outputs</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[]</span>
 </pre></div>
 </div>
 </div>
 <p>Now, how do we incorporate scatter? Remember the scatter field is under each step:</p>
 <div class="literal-block-wrapper docutils container" id="scatter-two-steps-cwl">
 <div class="code-block-caption"><span class="caption-text"><code class="docutils literal notranslate"><span class="pre">scatter-two-steps.cwl</span></code></span><a class="headerlink" href="#scatter-two-steps-cwl" title="Permalink to this code">#</a></div>
-<div class="highlight-cwl notranslate"><div class="highlight"><pre><span></span><span class="c1">#!/usr/bin/env cwl-runner</span><span class="w"></span>
+<div class="highlight-cwl notranslate"><div class="highlight"><pre><span></span><span class="c1">#!/usr/bin/env cwl-runner</span>
+<span class="nt">cwlVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">v1.2</span>
+<span class="nt">class</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Workflow</span>
 
-<span class="nt">cwlVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">v1.0</span><span class="w"></span>
-<span class="nt">class</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Workflow</span><span class="w"></span>
+<span class="nt">requirements</span><span class="p">:</span>
+<span class="w"> </span><span class="nt">ScatterFeatureRequirement</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">{}</span>
 
-<span class="nt">requirements</span><span class="p">:</span><span class="w"></span>
-<span class="w"> </span><span class="nt">ScatterFeatureRequirement</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">{}</span><span class="w"></span>
+<span class="nt">inputs</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">message_array</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">string[]</span>
 
-<span class="nt">inputs</span><span class="p">:</span><span class="w"></span>
-<span class="w">  </span><span class="nt">message_array</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">string[]</span><span class="w"></span>
+<span class="nt">steps</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">echo</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">run</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">hello_world_to_stdout.cwl</span>
+<span class="w">    </span><span class="nt">scatter</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">message</span>
+<span class="w">    </span><span class="nt">in</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">message</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">message_array</span>
+<span class="w">    </span><span class="nt">out</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="nv">echo_out</span><span class="p p-Indicator">]</span>
+<span class="w">  </span><span class="nt">wc</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">run</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">wc-tool.cwl</span>
+<span class="w">    </span><span class="nt">scatter</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">input_file</span>
+<span class="w">    </span><span class="nt">in</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">input_file</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">echo/echo_out</span>
+<span class="w">    </span><span class="nt">out</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[]</span>
 
-<span class="nt">steps</span><span class="p">:</span><span class="w"></span>
-<span class="w">  </span><span class="nt">echo</span><span class="p">:</span><span class="w"></span>
-<span class="w">    </span><span class="nt">run</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">hello_world_to_stdout.cwl</span><span class="w"></span>
-<span class="w">    </span><span class="nt">scatter</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">message</span><span class="w"></span>
-<span class="w">    </span><span class="nt">in</span><span class="p">:</span><span class="w"></span>
-<span class="w">      </span><span class="nt">message</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">message_array</span><span class="w"></span>
-<span class="w">    </span><span class="nt">out</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="nv">echo_out</span><span class="p p-Indicator">]</span><span class="w"></span>
-<span class="w">  </span><span class="nt">wc</span><span class="p">:</span><span class="w"></span>
-<span class="w">    </span><span class="nt">run</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">wc-tool.cwl</span><span class="w"></span>
-<span class="w">    </span><span class="nt">scatter</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">input_file</span><span class="w"></span>
-<span class="w">    </span><span class="nt">in</span><span class="p">:</span><span class="w"></span>
-<span class="w">      </span><span class="nt">input_file</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">echo/echo_out</span><span class="w"></span>
-<span class="w">    </span><span class="nt">out</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[]</span><span class="w"></span>
-
-<span class="nt">outputs</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[]</span><span class="w"></span>
+<span class="nt">outputs</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[]</span>
 </pre></div>
 </div>
 </div>
@@ -998,45 +1082,44 @@ Even though <code class="docutils literal notranslate"><span class="pre">echo</s
 because the first step must wait on <code class="docutils literal notranslate"><span class="pre">echo</span> <span class="pre">Hallo</span> <span class="pre">welt!</span></code>. You can see how this might not scale
 well.</p>
 <p>Ok, so how do we scatter on steps that can proceed independent of other samples? Remember from
-<a class="reference internal" href="#nested-workflows"><span class="std std-doc">Nested Workflows</span></a>, that we can make an entire workflow a single step in another workflow! Convert our
+<a class="reference external" href="#nested-workflows">Nested Workflows</a>, that we can make an entire workflow a single step in another workflow! Convert our
 two-step workflow to a single step subworkflow:</p>
 <div class="literal-block-wrapper docutils container" id="scatter-nested-workflow-cwl">
 <div class="code-block-caption"><span class="caption-text"><code class="docutils literal notranslate"><span class="pre">scatter-nested-workflow.cwl</span></code></span><a class="headerlink" href="#scatter-nested-workflow-cwl" title="Permalink to this code">#</a></div>
-<div class="highlight-cwl notranslate"><div class="highlight"><pre><span></span><span class="c1">#!/usr/bin/env cwl-runner</span><span class="w"></span>
+<div class="highlight-cwl notranslate"><div class="highlight"><pre><span></span><span class="c1">#!/usr/bin/env cwl-runner</span>
+<span class="nt">cwlVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">v1.2</span>
+<span class="nt">class</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Workflow</span>
 
-<span class="nt">cwlVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">v1.0</span><span class="w"></span>
-<span class="nt">class</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Workflow</span><span class="w"></span>
+<span class="nt">requirements</span><span class="p">:</span>
+<span class="w"> </span><span class="nt">ScatterFeatureRequirement</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">{}</span>
+<span class="w"> </span><span class="nt">SubworkflowFeatureRequirement</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">{}</span>
 
-<span class="nt">requirements</span><span class="p">:</span><span class="w"></span>
-<span class="w"> </span><span class="nt">ScatterFeatureRequirement</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">{}</span><span class="w"></span>
-<span class="w"> </span><span class="nt">SubworkflowFeatureRequirement</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">{}</span><span class="w"></span>
+<span class="nt">inputs</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">message_array</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">string[]</span>
 
-<span class="nt">inputs</span><span class="p">:</span><span class="w"></span>
-<span class="w">  </span><span class="nt">message_array</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">string[]</span><span class="w"></span>
-
-<span class="nt">steps</span><span class="p">:</span><span class="w"></span>
-<span class="w">  </span><span class="nt">subworkflow</span><span class="p">:</span><span class="w"></span>
-<span class="w">    </span><span class="nt">run</span><span class="p">:</span><span class="w"></span>
-<span class="w">      </span><span class="nt">class</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Workflow</span><span class="w"></span>
-<span class="w">      </span><span class="nt">inputs</span><span class="p">:</span><span class="w"></span>
-<span class="w">        </span><span class="nt">message</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">string</span><span class="w"></span>
-<span class="w">      </span><span class="nt">outputs</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[]</span><span class="w"></span>
-<span class="w">      </span><span class="nt">steps</span><span class="p">:</span><span class="w"></span>
-<span class="w">        </span><span class="nt">echo</span><span class="p">:</span><span class="w"></span>
-<span class="w">          </span><span class="nt">run</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">hello_world_to_stdout.cwl</span><span class="w"></span>
-<span class="w">          </span><span class="nt">in</span><span class="p">:</span><span class="w"></span>
-<span class="w">            </span><span class="nt">message</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">message</span><span class="w"></span>
-<span class="w">          </span><span class="nt">out</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="nv">echo_out</span><span class="p p-Indicator">]</span><span class="w"></span>
-<span class="w">        </span><span class="nt">wc</span><span class="p">:</span><span class="w"></span>
-<span class="w">          </span><span class="nt">run</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">wc-tool.cwl</span><span class="w"></span>
-<span class="w">          </span><span class="nt">in</span><span class="p">:</span><span class="w"></span>
-<span class="w">            </span><span class="nt">input_file</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">echo/echo_out</span><span class="w"></span>
-<span class="w">          </span><span class="nt">out</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[]</span><span class="w"></span>
-<span class="w">    </span><span class="nt">scatter</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">message</span><span class="w"></span>
-<span class="w">    </span><span class="nt">in</span><span class="p">:</span><span class="w"></span>
-<span class="w">      </span><span class="nt">message</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">message_array</span><span class="w"></span>
-<span class="w">    </span><span class="nt">out</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[]</span><span class="w"></span>
-<span class="nt">outputs</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[]</span><span class="w"></span>
+<span class="nt">steps</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">subworkflow</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">run</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">class</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Workflow</span>
+<span class="w">      </span><span class="nt">inputs</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">message</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">string</span>
+<span class="w">      </span><span class="nt">outputs</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[]</span>
+<span class="w">      </span><span class="nt">steps</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">echo</span><span class="p">:</span>
+<span class="w">          </span><span class="nt">run</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">hello_world_to_stdout.cwl</span>
+<span class="w">          </span><span class="nt">in</span><span class="p">:</span>
+<span class="w">            </span><span class="nt">message</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">message</span>
+<span class="w">          </span><span class="nt">out</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="nv">echo_out</span><span class="p p-Indicator">]</span>
+<span class="w">        </span><span class="nt">wc</span><span class="p">:</span>
+<span class="w">          </span><span class="nt">run</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">wc-tool.cwl</span>
+<span class="w">          </span><span class="nt">in</span><span class="p">:</span>
+<span class="w">            </span><span class="nt">input_file</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">echo/echo_out</span>
+<span class="w">          </span><span class="nt">out</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[]</span>
+<span class="w">    </span><span class="nt">scatter</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">message</span>
+<span class="w">    </span><span class="nt">in</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">message</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">message_array</span>
+<span class="w">    </span><span class="nt">out</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[]</span>
+<span class="nt">outputs</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[]</span>
 </pre></div>
 </div>
 </div>
@@ -1049,58 +1132,58 @@ in parallel.</p>
 This allows workflows to skip additional steps based on input parameters given at the start of the program or by previous steps.</p>
 <div class="literal-block-wrapper docutils container" id="conditional-workflow-cwl">
 <div class="code-block-caption"><span class="caption-text"><code class="docutils literal notranslate"><span class="pre">conditional-workflow.cwl</span></code></span><a class="headerlink" href="#conditional-workflow-cwl" title="Permalink to this code">#</a></div>
-<div class="highlight-cwl notranslate"><div class="highlight"><pre><span></span><span class="nt">class</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Workflow</span><span class="w"></span>
-<span class="nt">cwlVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">v1.2</span><span class="w"></span>
-<span class="nt">inputs</span><span class="p">:</span><span class="w"></span>
-<span class="w">  </span><span class="nt">val</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">int</span><span class="w"></span>
+<div class="highlight-cwl notranslate"><div class="highlight"><pre><span></span><span class="nt">class</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Workflow</span>
+<span class="nt">cwlVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">v1.2</span>
+<span class="nt">inputs</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">val</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">int</span>
 
-<span class="nt">steps</span><span class="p">:</span><span class="w"></span>
+<span class="nt">steps</span><span class="p">:</span>
 
-<span class="w">  </span><span class="nt">step1</span><span class="p">:</span><span class="w"></span>
-<span class="w">    </span><span class="nt">in</span><span class="p">:</span><span class="w"></span>
-<span class="w">      </span><span class="nt">in1</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">val</span><span class="w"></span>
-<span class="w">      </span><span class="nt">a_new_var</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">val</span><span class="w"></span>
-<span class="w">    </span><span class="nt">run</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">foo.cwl</span><span class="w"></span>
-<span class="w">    </span><span class="nt">when</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">$(inputs.in1 &lt; 1)</span><span class="w"></span>
-<span class="w">    </span><span class="nt">out</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="nv">out1</span><span class="p p-Indicator">]</span><span class="w"></span>
+<span class="w">  </span><span class="nt">step1</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">in</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">in1</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">val</span>
+<span class="w">      </span><span class="nt">a_new_var</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">val</span>
+<span class="w">    </span><span class="nt">run</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">foo.cwl</span>
+<span class="w">    </span><span class="nt">when</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">$(inputs.in1 &lt; 1)</span>
+<span class="w">    </span><span class="nt">out</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="nv">out1</span><span class="p p-Indicator">]</span>
 
-<span class="w">  </span><span class="nt">step2</span><span class="p">:</span><span class="w"></span>
-<span class="w">    </span><span class="nt">in</span><span class="p">:</span><span class="w"></span>
-<span class="w">      </span><span class="nt">in1</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">val</span><span class="w"></span>
-<span class="w">      </span><span class="nt">a_new_var</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">val</span><span class="w"></span>
-<span class="w">    </span><span class="nt">run</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">foo.cwl</span><span class="w"></span>
-<span class="w">    </span><span class="nt">when</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">$(inputs.a_new_var &gt; 2)</span><span class="w"></span>
-<span class="w">    </span><span class="nt">out</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="nv">out1</span><span class="p p-Indicator">]</span><span class="w"></span>
+<span class="w">  </span><span class="nt">step2</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">in</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">in1</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">val</span>
+<span class="w">      </span><span class="nt">a_new_var</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">val</span>
+<span class="w">    </span><span class="nt">run</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">foo.cwl</span>
+<span class="w">    </span><span class="nt">when</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">$(inputs.a_new_var &gt; 2)</span>
+<span class="w">    </span><span class="nt">out</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="nv">out1</span><span class="p p-Indicator">]</span>
 
-<span class="nt">outputs</span><span class="p">:</span><span class="w"></span>
-<span class="w">  </span><span class="nt">out1</span><span class="p">:</span><span class="w"></span>
-<span class="w">    </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">string</span><span class="w"></span>
-<span class="w">    </span><span class="nt">outputSource</span><span class="p">:</span><span class="w"></span>
-<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">step1/out1</span><span class="w"></span>
-<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">step2/out1</span><span class="w"></span>
-<span class="w">    </span><span class="nt">pickValue</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">first_non_null</span><span class="w"></span>
+<span class="nt">outputs</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">out1</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">string</span>
+<span class="w">    </span><span class="nt">outputSource</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">step1/out1</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">step2/out1</span>
+<span class="w">    </span><span class="nt">pickValue</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">first_non_null</span>
 
-<span class="nt">requirements</span><span class="p">:</span><span class="w"></span>
-<span class="w">  </span><span class="nt">InlineJavascriptRequirement</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">{}</span><span class="w"></span>
-<span class="w">  </span><span class="nt">MultipleInputFeatureRequirement</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">{}</span><span class="w"></span>
+<span class="nt">requirements</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">InlineJavascriptRequirement</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">{}</span>
+<span class="w">  </span><span class="nt">MultipleInputFeatureRequirement</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">{}</span>
 </pre></div>
 </div>
 </div>
 <p>The first thing you’ll notice is that this workflow is only compatible for version 1.2 or greater of the CWL standards.</p>
-<div class="highlight-cwl notranslate"><div class="highlight"><pre><span></span><span class="nt">class</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Workflow</span><span class="w"></span>
-<span class="nt">cwlVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">v1.2</span><span class="w"></span>
+<div class="highlight-cwl notranslate"><div class="highlight"><pre><span></span><span class="nt">class</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Workflow</span>
+<span class="nt">cwlVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">v1.2</span>
 </pre></div>
 </div>
 <p>The first step of the workflow (step1) contains two input properties and will execute foo.cwl when the conditions are met. The new property <code class="docutils literal notranslate"><span class="pre">when</span></code> is where the condition validation takes place. In this case only when <code class="docutils literal notranslate"><span class="pre">in1</span></code>  from the workflow contains a value <code class="docutils literal notranslate"><span class="pre">&lt;</span> <span class="pre">1</span></code> this step will be executed.</p>
-<div class="highlight-cwl notranslate"><div class="highlight"><pre><span></span><span class="nt">steps</span><span class="p">:</span><span class="w"></span>
+<div class="highlight-cwl notranslate"><div class="highlight"><pre><span></span><span class="nt">steps</span><span class="p">:</span>
 
-<span class="w">  </span><span class="nt">step1</span><span class="p">:</span><span class="w"></span>
-<span class="w">    </span><span class="nt">in</span><span class="p">:</span><span class="w"></span>
-<span class="w">      </span><span class="nt">in1</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">val</span><span class="w"></span>
-<span class="w">      </span><span class="nt">a_new_var</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">val</span><span class="w"></span>
-<span class="w">    </span><span class="nt">run</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">foo.cwl</span><span class="w"></span>
-<span class="w">    </span><span class="nt">when</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">$(inputs.in1 &lt; 1)</span><span class="w"></span>
-<span class="w">    </span><span class="nt">out</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="nv">out1</span><span class="p p-Indicator">]</span><span class="w"></span>
+<span class="w">  </span><span class="nt">step1</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">in</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">in1</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">val</span>
+<span class="w">      </span><span class="nt">a_new_var</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">val</span>
+<span class="w">    </span><span class="nt">run</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">foo.cwl</span>
+<span class="w">    </span><span class="nt">when</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">$(inputs.in1 &lt; 1)</span>
+<span class="w">    </span><span class="nt">out</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="nv">out1</span><span class="p p-Indicator">]</span>
 </pre></div>
 </div>
 <p>Using the following command <code class="docutils literal notranslate"><span class="pre">cwltool</span> <span class="pre">cond-wf-003.1.cwl</span> <span class="pre">--val</span> <span class="pre">0</span></code> the value will pass the first conditional step and will therefore be executed and is shown in the log by <code class="docutils literal notranslate"><span class="pre">INFO</span> <span class="pre">[step</span> <span class="pre">step1]</span> <span class="pre">start</span></code> whereas the second step is skipped as indicated by <code class="docutils literal notranslate"><span class="pre">INFO</span> <span class="pre">[step</span> <span class="pre">step2]</span> <span class="pre">will</span> <span class="pre">be</span> <span class="pre">skipped</span></code>.</p>
@@ -1140,7 +1223,7 @@ This allows workflows to skip additional steps based on input parameters given a
 </pre></div>
 </div>
 <p>If no conditions are met for example when using <code class="docutils literal notranslate"><span class="pre">--val</span> <span class="pre">2</span></code> the workflow will raise a permanentFail.</p>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>cwltool cond-wf-003.1.cwl --val <span class="m">2</span>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>cwltool<span class="w"> </span>cond-wf-003.1.cwl<span class="w"> </span>--val<span class="w"> </span><span class="m">2</span>
 
 <span class="go">INFO [workflow ] start</span>
 <span class="go">INFO [workflow ] starting step step1</span>
@@ -1158,112 +1241,93 @@ This allows workflows to skip additional steps based on input parameters given a
 </section>
 
 
-            </article>
-            
-            
-            
-            <footer class="bd-footer-article">
-                <!-- Previous / next buttons -->
-<div class='prev-next-area'>
-  <a class='left-prev' id="prev-link" href="expression-tool.html" title="previous page">
+                </article>
+              
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  <!-- Previous / next buttons -->
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="expression-tool.html"
+       title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
-          <p class="prev-next-subtitle">previous</p>
-          <p class="prev-next-title"><span class="section-number">2.9. </span>Expression Tool</p>
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title"><span class="section-number">2.9. </span>Expression Tool</p>
       </div>
-  </a>
-  <a class='right-next' id="next-link" href="operations.html" title="next page">
-  <div class="prev-next-info">
-      <p class="prev-next-subtitle">next</p>
-      <p class="prev-next-title"><span class="section-number">2.11. </span>Operations</p>
-  </div>
-  <i class="fa-solid fa-angle-right"></i>
-  </a>
+    </a>
+    <a class="right-next"
+       href="operations.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title"><span class="section-number">2.11. </span>Operations</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
 </div>
-            </footer>
-            
-          </div>
-          
-          
-          
-            <div class="bd-sidebar-secondary bd-toc">
+                </footer>
               
-<div class="toc-item">
-  
-<div class="tocsection onthispage">
-    <i class="fa-solid fa-list"></i> On this page
-</div>
-<nav id="bd-toc-nav" class="page-toc">
-    <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#writing-workflows">
-   2.10.1. Writing Workflows
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#nested-workflows">
-   2.10.2. Nested Workflows
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#scattering-steps">
-   2.10.3. Scattering Steps
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#conditional-workflows">
-   2.10.4. Conditional Workflows
-  </a>
- </li>
-</ul>
-
-</nav>
-</div>
-
-<div class="toc-item">
-  
-<div id="searchbox"></div>
-</div>
-
-<div class="toc-item">
-  
-
-<div class="tocsection editthispage">
-    <a href="https://github.com/common-workflow-language/user_guide/edit/main/src/topics/workflows.md">
-        <i class="fa-solid fa-pencil"></i> Edit this page
-    </a>
-</div>
-
-</div>
-
-<div class="toc-item">
-  
-<div class="tocsection sourcelink">
-    <a href="../_sources/topics/workflows.md.txt">
-        <i class="fa-solid fa-file-lines"></i> Show Source
-    </a>
-</div>
-
-</div>
-
             </div>
-          
-          
-        </div>
-        <footer class="bd-footer-content">
-          <div class="bd-footer-content__inner">
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> On this page
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#writing-workflows">2.10.1. Writing Workflows</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#nested-workflows">2.10.2. Nested Workflows</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#scattering-steps">2.10.3. Scattering Steps</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#conditional-workflows">2.10.4. Conditional Workflows</a></li>
+</ul>
+  </nav></div>
+
+  <div class="sidebar-secondary-item">
+  
+  <div class="tocsection editthispage">
+    <a href="https://github.com/common-workflow-language/user_guide/edit/main/src/topics/workflows.md">
+      <i class="fa-solid fa-pencil"></i>
+      
+      
+        
+          Edit on GitHub
+        
+      
+    </a>
+  </div>
+</div>
+
+  <div class="sidebar-secondary-item">
+  <div class="tocsection sourcelink">
+    <a href="../_sources/topics/workflows.md.txt">
+      <i class="fa-solid fa-file-lines"></i> Show Source
+    </a>
+  </div>
+</div>
+
+</div></div>
+              
             
           </div>
-        </footer>
+          <footer class="bd-footer-content">
+            
+          </footer>
         
       </main>
     </div>
   </div>
-
   
-    
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../_static/scripts/pydata-sphinx-theme.js?digest=1e1de1a1873e13ef5536"></script>
+  <script src="../_static/scripts/bootstrap.js?digest=365ca57ee442770a23c6"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=365ca57ee442770a23c6"></script>
 
 <div class="container">
   <div class="row">
@@ -1287,19 +1351,41 @@ This allows workflows to skip additional steps based on input parameters given a
 </div>
 
 
-  <footer class="bd-footer"><div class="bd-footer__inner container">
+  <footer class="bd-footer">
+<div class="bd-footer__inner bd-page-width">
   
-  <div class="footer-item">
+    <div class="footer-items__start">
+      
+        <div class="footer-item">
+  <p class="copyright">
     
-<p class="copyright">
-
-    &copy; Copyright 2013, CWL Project Team.<br>
-
-</p>
-
-  </div>
+      © Copyright 2013, CWL Project Team.
+      <br/>
+    
+  </p>
+</div>
+      
+        <div class="footer-item">
+  <p class="sphinx-version">
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 5.3.0.
+    <br/>
+  </p>
+</div>
+      
+    </div>
+  
+  
+  
+    <div class="footer-items__end">
+      
+        <div class="footer-item"><p class="theme-version">
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.14.3.
+</p></div>
+      
+    </div>
   
 </div>
+
   </footer>
 
   </body>

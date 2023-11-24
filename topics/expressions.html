@@ -1,41 +1,46 @@
 
+
 <!DOCTYPE html>
 
-<html lang="en">
+
+<html lang="en" data-theme="light">
+
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
-
+    <link rel="icon" sizes="16x16" href="../_static/images/favicons/cwl/favicon-16x16.png" type="image/png">
+    <link rel="icon" sizes="32x32" href="../_static/images/favicons/cwl/favicon-32x32.png" type="image/png">
+    <link rel="icon" sizes="96x96" href="../_static/images/favicons/cwl/favicon-96x96.png" type="image/png">
+    <link rel="icon" sizes="128x128" href="../_static/images/favicons/cwl/favicon-128.png" type="image/png">
+    <link rel="icon" sizes="196x196" href="../_static/images/favicons/cwl/favicon-196x196.png" type="image/png">
     <title>2.3. Expressions &#8212; Common Workflow Language User Guide 0.1 documentation</title>
-  <script>
+  
+  
+  
+  <script data-cfasync="false">
     document.documentElement.dataset.mode = localStorage.getItem("mode") || "light";
     document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
   </script>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../_static/styles/theme.css?digest=1e1de1a1873e13ef5536" rel="stylesheet">
-<link href="../_static/styles/pydata-sphinx-theme.css?digest=1e1de1a1873e13ef5536" rel="stylesheet">
+  <link href="../_static/styles/theme.css?digest=365ca57ee442770a23c6" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=365ca57ee442770a23c6" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=365ca57ee442770a23c6" rel="stylesheet" />
 
   
-  <link rel="stylesheet"
-    href="../_static/vendor/fontawesome/6.1.2/css/all.min.css">
-  <link rel="preload" as="font" type="font/woff2" crossorigin
-    href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2">
-  <link rel="preload" as="font" type="font/woff2" crossorigin
-    href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2">
-  <link rel="preload" as="font" type="font/woff2" crossorigin
-    href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2">
+  <link href="../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=365ca57ee442770a23c6" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
 
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../_static/graphviz.css" />
-    <link rel="icon" sizes="16x16" type="image/png" href="../_static/images/favicons/cwl/favicon-16x16.png" />
-    <link rel="icon" sizes="32x32" type="image/png" href="../_static/images/favicons/cwl/favicon-32x32.png" />
-    <link rel="icon" sizes="96x96" type="image/png" href="../_static/images/favicons/cwl/favicon-96x96.png" />
-    <link rel="icon" sizes="128x128" type="image/png" href="../_static/images/favicons/cwl/favicon-128.png" />
-    <link rel="icon" sizes="196x196" type="image/png" href="../_static/images/favicons/cwl/favicon-196x196.png" />
+    <link rel="stylesheet" type="text/css" href="../_static/css/custom.css" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=1e1de1a1873e13ef5536">
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=365ca57ee442770a23c6" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=365ca57ee442770a23c6" />
+  <script src="../_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=365ca57ee442770a23c6"></script>
 
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
@@ -49,133 +54,177 @@
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="2.4. Inputs" href="inputs.html" />
     <link rel="prev" title="2.2. Command Line Tool" href="command-line-tool.html" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="docsearch:language" content="en">
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
   </head>
   
   
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="180" data-default-mode="light">
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="light">
 
   
-  <input type="checkbox" class="sidebar-toggle" name="__primary" id="__primary">
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
   <label class="overlay overlay-primary" for="__primary"></label>
-
   
-  <input type="checkbox" class="sidebar-toggle" name="__secondary" id="__secondary">
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
   <label class="overlay overlay-secondary" for="__secondary"></label>
-
   
   <div class="search-button__wrapper">
     <div class="search-button__overlay"></div>
     <div class="search-button__search-container">
-      
-<form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
   <i class="fa-solid fa-magnifying-glass"></i>
-  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search the docs ..."
+         aria-label="Search the docs ..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
   <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
-</form>
-    </div>
+</form></div>
   </div>
-
   
-  <nav class="bd-header navbar navbar-expand-lg bd-navbar" id="navbar-main"><div class="bd-header__inner bd-page-width">
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+<div class="bd-header__inner bd-page-width">
   <label class="sidebar-toggle primary-toggle" for="__primary">
-      <span class="fa-solid fa-bars"></span>
+    <span class="fa-solid fa-bars"></span>
   </label>
-  <div id="navbar-start">
-    
-    
   
-
+  
+  <div class="col-lg-3 navbar-header-items__start">
+    
+      <div class="navbar-item">
+  
 
 <a class="navbar-brand logo" href="../index.html">
-
   
   
   
   
   
+    
+    
+    
+    <img src="../_static/CWL-Logo-HD-cropped2.png" class="logo__image only-light" alt="Common Workflow Language User Guide 0.1 documentation - Home"/>
+    <script>document.write(`<img src="../_static/CWL-Logo-HD-cropped2.png" class="logo__image only-dark" alt="Common Workflow Language User Guide 0.1 documentation - Home"/>`);</script>
   
   
-
-  
-    <img src="../_static/CWL-Logo-HD-cropped2.png" class="logo__image only-light" alt="Logo image">
-    <img src="../_static/CWL-Logo-HD-cropped2.png" class="logo__image only-dark" alt="Logo image">
-  
-  
-</a>
+</a></div>
     
   </div>
-
   
   <div class="col-lg-9 navbar-header-items">
-    <div id="navbar-center" class="mr-auto">
+    
+    <div class="me-auto navbar-header-items__center">
       
-      <div class="navbar-center-item">
-        <nav class="navbar-nav">
-    <p class="sidebar-header-items__title" role="heading" aria-level="1" aria-label="Site Navigation">
-        Site Navigation
-    </p>
-    <ul id="navbar-main-elements" class="navbar-nav">
-        
-                <li class="nav-item">
-                    <a class="nav-link" href="../introduction/index.html">
+        <div class="navbar-item"><nav class="navbar-nav">
+  <p class="sidebar-header-items__title"
+     role="heading"
+     aria-level="1"
+     aria-label="Site Navigation">
+    Site Navigation
+  </p>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../introduction/index.html">
                         Introduction
-                    </a>
-                </li>
+                      </a>
+                    </li>
                 
 
-                <li class="nav-item current active">
-                    <a class="nav-link" href="index.html">
+                    <li class="nav-item current active">
+                      <a class="nav-link nav-internal" href="index.html">
                         Topics
-                    </a>
-                </li>
+                      </a>
+                    </li>
                 
 
-                <li class="nav-item">
-                    <a class="nav-link" href="../tutorials.html">
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../tutorials.html">
                         Tutorials
-                    </a>
-                </li>
+                      </a>
+                    </li>
                 
 
-                <li class="nav-item">
-                    <a class="nav-link" href="../faq.html">
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../faq.html">
                         FAQ
-                    </a>
-                </li>
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../LICENSE.html">
+                        Licenses
+                      </a>
+                    </li>
                 
 
                 <li class="nav-item">
-                    <a class="nav-link" href="../LICENSE.html">
-                        Licenses
-                    </a>
+                  <a class="nav-link nav-external" href="https://www.commonwl.org/community/">
+                    Community
+                  </a>
                 </li>
                 
-    </ul>
-</nav>
-      </div>
+  </ul>
+</nav></div>
       
     </div>
-
-    <div id="navbar-end">
-      <div class="navbar-end-item navbar-end__search-button-container">
-        
-<button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" data-toggle="tooltip">
-  <i class="fa-solid fa-magnifying-glass"></i>
-</button>
-      </div>
+    
+    
+    <div class="navbar-header-items__end">
       
-      <div class="navbar-end-item">
-        <span class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" data-toggle="tooltip">
-    <a class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></a>
-    <a class="theme-switch" data-mode="dark"><i class="fa-regular fa-moon"></i></a>
-    <a class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></a>
-</span>
-      </div>
+        <div class="navbar-item navbar-persistent--container">
+          
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script>
+        </div>
       
-      <div class="navbar-end-item">
-        <ul id="navbar-icon-links" class="navbar-nav" aria-label="Icon Links">
+      
+        <div class="navbar-item">
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script></div>
+      
+        <div class="navbar-item"><ul class="navbar-icon-links navbar-nav"
+    aria-label="Icon Links">
         <li class="nav-item">
           
           
@@ -184,106 +233,123 @@
           
           
           
-          <a href="https://github.com/common-workflow-language/user_guide/" title="GitHub" class="nav-link" rel="noopener" target="_blank" data-toggle="tooltip"><span><i class="fab fa-github-square"></i></span>
-            <label class="sr-only">GitHub</label></a>
+          
+          <a href="https://github.com/common-workflow-language/user_guide/" title="GitHub" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fab fa-github-square fa-lg" aria-hidden="true"></i></span>
+            <span class="sr-only">GitHub</span></a>
         </li>
-      </ul>
-      </div>
+</ul></div>
       
     </div>
+    
   </div>
-
+  
+  
+    <div class="navbar-persistent--mobile">
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script>
+    </div>
+  
 
   
-  <div class="search-button-container--mobile">
-<button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" data-toggle="tooltip">
-  <i class="fa-solid fa-magnifying-glass"></i>
-</button>
-  </div>
-
-  
-  <label class="sidebar-toggle secondary-toggle" for="__secondary">
+    <label class="sidebar-toggle secondary-toggle" for="__secondary" tabindex="0">
       <span class="fa-solid fa-outdent"></span>
-  </label>
+    </label>
   
-
 </div>
-  </nav>
-  
 
+    </nav>
+  
   <div class="bd-container">
     <div class="bd-container__inner bd-page-width">
       
       <div class="bd-sidebar-primary bd-sidebar">
         
+
   
   <div class="sidebar-header-items sidebar-primary__section">
     
     
       <div class="sidebar-header-items__center">
-      
-      <div class="navbar-center-item">
-        <nav class="navbar-nav">
-    <p class="sidebar-header-items__title" role="heading" aria-level="1" aria-label="Site Navigation">
-        Site Navigation
-    </p>
-    <ul id="navbar-main-elements" class="navbar-nav">
         
-                <li class="nav-item">
-                    <a class="nav-link" href="../introduction/index.html">
+          <div class="navbar-item"><nav class="navbar-nav">
+  <p class="sidebar-header-items__title"
+     role="heading"
+     aria-level="1"
+     aria-label="Site Navigation">
+    Site Navigation
+  </p>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../introduction/index.html">
                         Introduction
-                    </a>
-                </li>
+                      </a>
+                    </li>
                 
 
-                <li class="nav-item current active">
-                    <a class="nav-link" href="index.html">
+                    <li class="nav-item current active">
+                      <a class="nav-link nav-internal" href="index.html">
                         Topics
-                    </a>
-                </li>
+                      </a>
+                    </li>
                 
 
-                <li class="nav-item">
-                    <a class="nav-link" href="../tutorials.html">
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../tutorials.html">
                         Tutorials
-                    </a>
-                </li>
+                      </a>
+                    </li>
                 
 
-                <li class="nav-item">
-                    <a class="nav-link" href="../faq.html">
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../faq.html">
                         FAQ
-                    </a>
-                </li>
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../LICENSE.html">
+                        Licenses
+                      </a>
+                    </li>
                 
 
                 <li class="nav-item">
-                    <a class="nav-link" href="../LICENSE.html">
-                        Licenses
-                    </a>
+                  <a class="nav-link nav-external" href="https://www.commonwl.org/community/">
+                    Community
+                  </a>
                 </li>
                 
-    </ul>
-</nav>
-      </div>
-      
+  </ul>
+</nav></div>
+        
       </div>
     
-
     
     
-    <div class="sidebar-header-items__end">
-      
-      <div class="navbar-end-item">
-        <span class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" data-toggle="tooltip">
-    <a class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></a>
-    <a class="theme-switch" data-mode="dark"><i class="fa-regular fa-moon"></i></a>
-    <a class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></a>
-</span>
-      </div>
-      
-      <div class="navbar-end-item">
-        <ul id="navbar-icon-links" class="navbar-nav" aria-label="Icon Links">
+      <div class="sidebar-header-items__end">
+        
+          <div class="navbar-item">
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script></div>
+        
+          <div class="navbar-item"><ul class="navbar-icon-links navbar-nav"
+    aria-label="Icon Links">
         <li class="nav-item">
           
           
@@ -292,80 +358,105 @@
           
           
           
-          <a href="https://github.com/common-workflow-language/user_guide/" title="GitHub" class="nav-link" rel="noopener" target="_blank" data-toggle="tooltip"><span><i class="fab fa-github-square"></i></span>
-            <label class="sr-only">GitHub</label></a>
+          
+          <a href="https://github.com/common-workflow-language/user_guide/" title="GitHub" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fab fa-github-square fa-lg" aria-hidden="true"></i></span>
+            <span class="sr-only">GitHub</span></a>
         </li>
-      </ul>
+</ul></div>
+        
       </div>
-      
-    </div>
     
   </div>
-
   
-  <div class="sidebar-start-items sidebar-primary__section">
-    <div class="sidebar-start-items__item"><nav class="bd-links d-none d-md-block" id="bd-docs-nav" aria-label="Main navigation">
-  <div class="bd-toc-item active">
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item"><nav class="bd-links d-none d-md-block" id="bd-docs-nav" aria-label="Main navigation">
+  <p class="bd-links__title" role="heading" aria-level="1">
+    Section Navigation
+  </p>
+  <div class="bd-toc-item navbar-nav">
     <ul class="current nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../introduction/index.html">1. Introduction</a></li>
-<li class="toctree-l1 current active has-children"><a class="reference internal" href="index.html">2. Topics</a><input checked class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="yaml-guide.html">2.1. YAML Guide</a></li>
-<li class="toctree-l2"><a class="reference internal" href="command-line-tool.html">2.2. Command Line Tool</a></li>
-<li class="toctree-l2 current active"><a class="current reference internal" href="#">2.3. Expressions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="inputs.html">2.4. Inputs</a></li>
-<li class="toctree-l2"><a class="reference internal" href="additional-arguments-and-parameters.html">2.5. Additional Arguments and Parameters</a></li>
-<li class="toctree-l2"><a class="reference internal" href="parameter-references.html">2.6. Parameter References</a></li>
-<li class="toctree-l2"><a class="reference internal" href="outputs.html">2.7. Outputs</a></li>
-<li class="toctree-l2"><a class="reference internal" href="custom-types.html">2.8. Custom Types</a></li>
-<li class="toctree-l2"><a class="reference internal" href="expression-tool.html">2.9. Expression Tool</a></li>
-<li class="toctree-l2"><a class="reference internal" href="workflows.html">2.10. Workflows</a></li>
-<li class="toctree-l2"><a class="reference internal" href="operations.html">2.11. Operations</a></li>
-<li class="toctree-l2"><a class="reference internal" href="environment-variables.html">2.12. Environment Variables</a></li>
-<li class="toctree-l2"><a class="reference internal" href="using-containers.html">2.13. Using Containers</a></li>
-<li class="toctree-l2"><a class="reference internal" href="creating-files-at-runtime.html">2.14. Creating Files at Runtime</a></li>
-<li class="toctree-l2"><a class="reference internal" href="staging-input-files.html">2.15. Staging Input Files</a></li>
-<li class="toctree-l2"><a class="reference internal" href="best-practices.html">2.16. Best Practices</a></li>
-<li class="toctree-l2"><a class="reference internal" href="file-formats.html">2.17. File Formats</a></li>
-<li class="toctree-l2"><a class="reference internal" href="metadata-and-authorship.html">2.18. Metadata and Authorship</a></li>
-<li class="toctree-l2"><a class="reference internal" href="specifying-software-requirements.html">2.19. Specifying Software Requirements</a></li>
-<li class="toctree-l2"><a class="reference internal" href="troubleshooting.html">2.20. Troubleshooting</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="../tutorials.html">3. Tutorials</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../faq.html">4. FAQ</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../LICENSE.html">5. Licenses</a></li>
+<li class="toctree-l1"><a class="reference internal" href="yaml-guide.html">2.1. YAML Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="command-line-tool.html">2.2. Command Line Tool</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">2.3. Expressions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="inputs.html">2.4. Inputs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="additional-arguments-and-parameters.html">2.5. Additional Arguments and Parameters</a></li>
+<li class="toctree-l1"><a class="reference internal" href="parameter-references.html">2.6. Parameter References</a></li>
+<li class="toctree-l1"><a class="reference internal" href="outputs.html">2.7. Outputs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="custom-types.html">2.8. Custom Types</a></li>
+<li class="toctree-l1"><a class="reference internal" href="expression-tool.html">2.9. Expression Tool</a></li>
+<li class="toctree-l1"><a class="reference internal" href="workflows.html">2.10. Workflows</a></li>
+<li class="toctree-l1"><a class="reference internal" href="operations.html">2.11. Operations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="environment-variables.html">2.12. Environment Variables</a></li>
+<li class="toctree-l1"><a class="reference internal" href="using-containers.html">2.13. Using Containers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="creating-files-at-runtime.html">2.14. Creating Files at Runtime</a></li>
+<li class="toctree-l1"><a class="reference internal" href="staging-input-files.html">2.15. Staging Input Files</a></li>
+<li class="toctree-l1"><a class="reference internal" href="best-practices.html">2.16. Best Practices</a></li>
+<li class="toctree-l1"><a class="reference internal" href="file-formats.html">2.17. File Formats</a></li>
+<li class="toctree-l1"><a class="reference internal" href="metadata-and-authorship.html">2.18. Metadata and Authorship</a></li>
+<li class="toctree-l1"><a class="reference internal" href="specifying-software-requirements.html">2.19. Specifying Software Requirements</a></li>
+<li class="toctree-l1"><a class="reference internal" href="troubleshooting.html">2.20. Troubleshooting</a></li>
 </ul>
 
   </div>
-</nav>
+</nav></div>
     </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
   </div>
   
+  <div id="rtd-footer-container"></div>
 
-  
-  <div class="sidebar-end-items sidebar-primary__section">
-    <div class="sidebar-end-items__item">
-    </div>
-  </div>
 
       </div>
-      <main class="bd-main">
+      
+      <main id="main-content" class="bd-main">
         
         
-        <div class="bd-content">
-          <div class="bd-article-container">
-            
-            <div class="bd-header-article">
-                
-            </div>
-            
-            
-            <article class="bd-article" role="main">
+          <div class="bd-content">
+            <div class="bd-article-container">
               
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item">
+
+
+
+<nav aria-label="Breadcrumb">
+  <ul class="bd-breadcrumbs">
+    
+    <li class="breadcrumb-item breadcrumb-home">
+      <a href="../index.html" class="nav-link" aria-label="Home">
+        <i class="fa-solid fa-home"></i>
+      </a>
+    </li>
+    
+    <li class="breadcrumb-item"><a href="index.html" class="nav-link"><span class="section-number">2. </span>Topics</a></li>
+    
+    <li class="breadcrumb-item active" aria-current="page"><span...</li>
+  </ul>
+</nav>
+</div>
+      
+    </div>
+  
+  
+</div>
+</div>
+              
+              
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
   <section id="expressions">
 <h1><span class="section-number">2.3. </span>Expressions<a class="headerlink" href="#expressions" title="Permalink to this heading">#</a></h1>
 <p>If you need to manipulate input parameters, include the requirement
-<code class="docutils literal notranslate"><span class="pre">InlineJavascriptRequirement</span></code> and then anywhere a parameter reference is
+<a class="reference external" href="https://w3id.org/cwl/CommandLineTool.html#InlineJavascriptRequirement"><code class="docutils literal notranslate"><span class="pre">InlineJavascriptRequirement</span></code></a> and then anywhere a parameter reference is
 legal you can provide a fragment of Javascript that will be evaluated by
 the CWL runner.</p>
 <div class="admonition important">
@@ -374,38 +465,37 @@ the CWL runner.</p>
 When manipulating file names, extensions, paths etc, consider whether one of the
 <a class="reference external" href="https://www.commonwl.org/v1.0/CommandLineTool.html#File">built in <code class="docutils literal notranslate"><span class="pre">File</span></code> properties</a> like <code class="docutils literal notranslate"><span class="pre">basename</span></code>, <code class="docutils literal notranslate"><span class="pre">nameroot</span></code>, <code class="docutils literal notranslate"><span class="pre">nameext</span></code>,
 etc, could be used instead.
-See the <a class="reference internal" href="best-practices.html"><span class="doc std std-doc">list of best practices</span></a>.</p>
+See the <a class="reference internal" href="best-practices.html"><span class="std std-doc">list of best practices</span></a>.</p>
 </div>
 <div class="literal-block-wrapper docutils container" id="expression-cwl">
 <div class="code-block-caption"><span class="caption-text"><code class="docutils literal notranslate"><span class="pre">expression.cwl</span></code></span><a class="headerlink" href="#expression-cwl" title="Permalink to this code">#</a></div>
-<div class="highlight-cwl notranslate"><div class="highlight"><pre><span></span><span class="c1">#!/usr/bin/env cwl-runner</span><span class="w"></span>
+<div class="highlight-cwl notranslate"><div class="highlight"><pre><span></span><span class="c1">#!/usr/bin/env cwl-runner</span>
+<span class="nt">cwlVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">v1.2</span>
+<span class="nt">class</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">CommandLineTool</span>
+<span class="nt">baseCommand</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">echo</span>
 
-<span class="nt">cwlVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">v1.0</span><span class="w"></span>
-<span class="nt">class</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">CommandLineTool</span><span class="w"></span>
-<span class="nt">baseCommand</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">echo</span><span class="w"></span>
+<span class="nt">requirements</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">InlineJavascriptRequirement</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">{}</span>
 
-<span class="nt">requirements</span><span class="p">:</span><span class="w"></span>
-<span class="w">  </span><span class="nt">InlineJavascriptRequirement</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">{}</span><span class="w"></span>
-
-<span class="nt">inputs</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[]</span><span class="w"></span>
-<span class="nt">outputs</span><span class="p">:</span><span class="w"></span>
-<span class="w">  </span><span class="nt">example_out</span><span class="p">:</span><span class="w"></span>
-<span class="w">    </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">stdout</span><span class="w"></span>
-<span class="nt">stdout</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">output.txt</span><span class="w"></span>
-<span class="nt">arguments</span><span class="p">:</span><span class="w"></span>
-<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">prefix</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">-A</span><span class="w"></span>
-<span class="w">    </span><span class="nt">valueFrom</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">$(1+1)</span><span class="w"></span>
-<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">prefix</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">-B</span><span class="w"></span>
-<span class="w">    </span><span class="nt">valueFrom</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">$(&quot;/foo/bar/baz&quot;.split(&#39;/&#39;).slice(-1)[0])</span><span class="w"></span>
-<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">prefix</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">-C</span><span class="w"></span>
-<span class="w">    </span><span class="nt">valueFrom</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">|</span><span class="w"></span>
-<span class="w">      </span><span class="no">${</span><span class="w"></span>
-<span class="w">        </span><span class="no">var r = [];</span><span class="w"></span>
-<span class="w">        </span><span class="no">for (var i = 10; i &gt;= 1; i--) {</span><span class="w"></span>
-<span class="w">          </span><span class="no">r.push(i);</span><span class="w"></span>
-<span class="w">        </span><span class="no">}</span><span class="w"></span>
-<span class="w">        </span><span class="no">return r;</span><span class="w"></span>
-<span class="w">      </span><span class="no">}</span><span class="w"></span>
+<span class="nt">inputs</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[]</span>
+<span class="nt">outputs</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">example_out</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">stdout</span>
+<span class="nt">stdout</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">output.txt</span>
+<span class="nt">arguments</span><span class="p">:</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">prefix</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">-A</span>
+<span class="w">    </span><span class="nt">valueFrom</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">$(1+1)</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">prefix</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">-B</span>
+<span class="w">    </span><span class="nt">valueFrom</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">$(&quot;/foo/bar/baz&quot;.split(&#39;/&#39;).slice(-1)[0])</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">prefix</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">-C</span>
+<span class="w">    </span><span class="nt">valueFrom</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">|</span>
+<span class="w">      </span><span class="no">${</span>
+<span class="w">        </span><span class="no">var r = [];</span>
+<span class="w">        </span><span class="no">for (var i = 10; i &gt;= 1; i--) {</span>
+<span class="w">          </span><span class="no">r.push(i);</span>
+<span class="w">        </span><span class="no">}</span>
+<span class="w">        </span><span class="no">return r;</span>
+<span class="w">      </span><span class="no">}</span>
 </pre></div>
 </div>
 </div>
@@ -413,7 +503,7 @@ See the <a class="reference internal" href="best-practices.html"><span class="do
 job file:</p>
 <div class="literal-block-wrapper docutils container" id="empty-cwl">
 <div class="code-block-caption"><span class="caption-text"><code class="docutils literal notranslate"><span class="pre">empty.yml</span></code></span><a class="headerlink" href="#empty-cwl" title="Permalink to this code">#</a></div>
-<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="p p-Indicator">{}</span><span class="w"></span>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="p p-Indicator">{}</span>
 </pre></div>
 </div>
 </div>
@@ -423,58 +513,57 @@ represented simply by a set of empty brackets.</p>
 <p>We can then run <code class="docutils literal notranslate"><span class="pre">expression.cwl</span></code>:</p>
 <div class="literal-block-wrapper docutils container" id="running-expression-cwl">
 <div class="code-block-caption"><span class="caption-text">Running <code class="docutils literal notranslate"><span class="pre">expression.cwl</span></code></span><a class="headerlink" href="#running-expression-cwl" title="Permalink to this code">#</a></div>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ cwltool expression.cwl empty.yml
-INFO /opt/hostedtoolcache/Python/3.9.14/x64/bin/cwltool <span class="m">3</span>.1.20221008225030
-INFO Resolved <span class="s1">&#39;expression.cwl&#39;</span> to <span class="s1">&#39;file:///home/runner/work/user_guide/user_guide/src/_includes/cwl/expressions/expression.cwl&#39;</span>
-INFO <span class="o">[</span>job expression.cwl<span class="o">]</span> /tmp/dtgyuwer$ <span class="nb">echo</span> <span class="se">\</span>
-    -A <span class="se">\</span>
-    <span class="m">2</span> <span class="se">\</span>
-    -B <span class="se">\</span>
-    baz <span class="se">\</span>
-    -C <span class="se">\</span>
-    <span class="m">10</span> <span class="se">\</span>
-    <span class="m">9</span> <span class="se">\</span>
-    <span class="m">8</span> <span class="se">\</span>
-    <span class="m">7</span> <span class="se">\</span>
-    <span class="m">6</span> <span class="se">\</span>
-    <span class="m">5</span> <span class="se">\</span>
-    <span class="m">4</span> <span class="se">\</span>
-    <span class="m">3</span> <span class="se">\</span>
-    <span class="m">2</span> <span class="se">\</span>
-    <span class="m">1</span> &gt; /tmp/dtgyuwer/output.txt
-INFO <span class="o">[</span>job expression.cwl<span class="o">]</span> completed success
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>cwltool<span class="w"> </span>expression.cwl<span class="w"> </span>empty.yml
+INFO<span class="w"> </span>/opt/hostedtoolcache/Python/3.9.18/x64/bin/cwltool<span class="w"> </span><span class="m">3</span>.1.20231114134824
+INFO<span class="w"> </span>Resolved<span class="w"> </span><span class="s1">&#39;expression.cwl&#39;</span><span class="w"> </span>to<span class="w"> </span><span class="s1">&#39;file:///home/runner/work/user_guide/user_guide/src/_includes/cwl/expressions/expression.cwl&#39;</span>
+INFO<span class="w"> </span><span class="o">[</span>job<span class="w"> </span>expression.cwl<span class="o">]</span><span class="w"> </span>/tmp/m8kc77o_$<span class="w"> </span><span class="nb">echo</span><span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>-A<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span><span class="m">2</span><span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>-B<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>baz<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>-C<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span><span class="m">10</span><span class="w"> </span><span class="se">\</span>
+<span class="w">    </span><span class="m">9</span><span class="w"> </span><span class="se">\</span>
+<span class="w">    </span><span class="m">8</span><span class="w"> </span><span class="se">\</span>
+<span class="w">    </span><span class="m">7</span><span class="w"> </span><span class="se">\</span>
+<span class="w">    </span><span class="m">6</span><span class="w"> </span><span class="se">\</span>
+<span class="w">    </span><span class="m">5</span><span class="w"> </span><span class="se">\</span>
+<span class="w">    </span><span class="m">4</span><span class="w"> </span><span class="se">\</span>
+<span class="w">    </span><span class="m">3</span><span class="w"> </span><span class="se">\</span>
+<span class="w">    </span><span class="m">2</span><span class="w"> </span><span class="se">\</span>
+<span class="w">    </span><span class="m">1</span><span class="w"> </span>&gt;<span class="w"> </span>/tmp/m8kc77o_/output.txt
+INFO<span class="w"> </span><span class="o">[</span>job<span class="w"> </span>expression.cwl<span class="o">]</span><span class="w"> </span>completed<span class="w"> </span>success
 <span class="o">{</span>
-    <span class="s2">&quot;example_out&quot;</span>: <span class="o">{</span>
-        <span class="s2">&quot;location&quot;</span>: <span class="s2">&quot;file:///home/runner/work/user_guide/user_guide/src/_includes/cwl/expressions/output.txt&quot;</span>,
-        <span class="s2">&quot;basename&quot;</span>: <span class="s2">&quot;output.txt&quot;</span>,
-        <span class="s2">&quot;class&quot;</span>: <span class="s2">&quot;File&quot;</span>,
-        <span class="s2">&quot;checksum&quot;</span>: <span class="s2">&quot;sha1</span><span class="nv">$a739a6ff72d660d32111265e508ed2fc91f01a7c</span><span class="s2">&quot;</span>,
-        <span class="s2">&quot;size&quot;</span>: <span class="m">36</span>,
-        <span class="s2">&quot;path&quot;</span>: <span class="s2">&quot;/home/runner/work/user_guide/user_guide/src/_includes/cwl/expressions/output.txt&quot;</span>
-    <span class="o">}</span>
-<span class="o">}</span>
-INFO Final process status is success
+<span class="w">    </span><span class="s2">&quot;example_out&quot;</span>:<span class="w"> </span><span class="o">{</span>
+<span class="w">        </span><span class="s2">&quot;location&quot;</span>:<span class="w"> </span><span class="s2">&quot;file:///home/runner/work/user_guide/user_guide/src/_includes/cwl/expressions/output.txt&quot;</span>,
+<span class="w">        </span><span class="s2">&quot;basename&quot;</span>:<span class="w"> </span><span class="s2">&quot;output.txt&quot;</span>,
+<span class="w">        </span><span class="s2">&quot;class&quot;</span>:<span class="w"> </span><span class="s2">&quot;File&quot;</span>,
+<span class="w">        </span><span class="s2">&quot;checksum&quot;</span>:<span class="w"> </span><span class="s2">&quot;sha1</span><span class="nv">$a739a6ff72d660d32111265e508ed2fc91f01a7c</span><span class="s2">&quot;</span>,
+<span class="w">        </span><span class="s2">&quot;size&quot;</span>:<span class="w"> </span><span class="m">36</span>,
+<span class="w">        </span><span class="s2">&quot;path&quot;</span>:<span class="w"> </span><span class="s2">&quot;/home/runner/work/user_guide/user_guide/src/_includes/cwl/expressions/output.txt&quot;</span>
+<span class="w">    </span><span class="o">}</span>
+<span class="o">}</span>INFO<span class="w"> </span>Final<span class="w"> </span>process<span class="w"> </span>status<span class="w"> </span>is<span class="w"> </span>success
 </pre></div>
 </div>
 </div>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ cat output.txt
-Message is: Hello world!
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>cat<span class="w"> </span>output.txt
+-A<span class="w"> </span><span class="m">2</span><span class="w"> </span>-B<span class="w"> </span>baz<span class="w"> </span>-C<span class="w"> </span><span class="m">10</span><span class="w"> </span><span class="m">9</span><span class="w"> </span><span class="m">8</span><span class="w"> </span><span class="m">7</span><span class="w"> </span><span class="m">6</span><span class="w"> </span><span class="m">5</span><span class="w"> </span><span class="m">4</span><span class="w"> </span><span class="m">3</span><span class="w"> </span><span class="m">2</span><span class="w"> </span><span class="m">1</span>
 </pre></div>
 </div>
 <p>Note that requirements can be provided with the map syntax, as in the example above:</p>
-<div class="highlight-cwl notranslate"><div class="highlight"><pre><span></span><span class="nt">requirements</span><span class="p">:</span><span class="w"></span>
-<span class="w">  </span><span class="nt">InlineJavascriptRequirement</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">{}</span><span class="w"></span>
+<div class="highlight-cwl notranslate"><div class="highlight"><pre><span></span><span class="nt">requirements</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">InlineJavascriptRequirement</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">{}</span>
 </pre></div>
 </div>
 <p>Or as an array, with each entry (in this case, only <code class="docutils literal notranslate"><span class="pre">class:</span> <span class="pre">InlineJavascriptRequirement</span></code>) marked by a <code class="docutils literal notranslate"><span class="pre">-</span></code>.
 The same syntax is used to describe the additional command line arguments.</p>
-<div class="highlight-cwl notranslate"><div class="highlight"><pre><span></span><span class="nt">requirements</span><span class="p">:</span><span class="w"></span>
-<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">class</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">InlineJavascriptRequirement</span><span class="w"></span>
+<div class="highlight-cwl notranslate"><div class="highlight"><pre><span></span><span class="nt">requirements</span><span class="p">:</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">class</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">InlineJavascriptRequirement</span>
 </pre></div>
 </div>
 <div class="admonition-where-are-javascript-expressions-allowed admonition">
 <p class="admonition-title">Where are JavaScript expressions allowed?</p>
-<p>Just like <a class="reference internal" href="parameter-references.html"><span class="doc std std-doc">parameter references</span></a>, you can use JavaScript Expressions
+<p>Just like <a class="reference internal" href="parameter-references.html"><span class="std std-doc">parameter references</span></a>, you can use JavaScript Expressions
 only in certain fields.  These are:</p>
 <ul class="simple">
 <li><p>From <a class="reference external" href="https://www.commonwl.org/v1.0/CommandLineTool.html#CommandLineTool"><code class="docutils literal notranslate"><span class="pre">CommandLineTool</span></code></a></p>
@@ -512,7 +601,7 @@ only in certain fields.  These are:</p>
 </li>
 </ul>
 </li>
-<li><p>From <code class="docutils literal notranslate"><span class="pre">Workflow</span></code></p>
+<li><p>From <a class="reference external" href="https://w3id.org/cwl/Workflow.html"><code class="docutils literal notranslate"><span class="pre">Workflow</span></code></a></p>
 <ul>
 <li><p>From <a class="reference external" href="https://www.commonwl.org/v1.0/Workflow.html#InputParameter">InputParameter</a> and <a class="reference external" href="https://www.commonwl.org/v1.0/Workflow.html#WorkflowOutputParameter">WorkflowOutputParameter</a></p>
 <ul>
@@ -577,8 +666,8 @@ only in certain fields.  These are:</p>
 </ul>
 </div>
 <section id="using-external-libraries-and-inline-javascript-code-with-expressionlib">
-<h2><span class="section-number">2.3.1. </span>Using external libraries and inline JavaScript code with <code class="docutils literal notranslate"><span class="pre">expressionLib</span></code><a class="headerlink" href="#using-external-libraries-and-inline-javascript-code-with-expressionlib" title="Permalink to this heading">#</a></h2>
-<p>The requirement <code class="docutils literal notranslate"><span class="pre">InlineJavascriptRequirement</span></code> supports an <code class="docutils literal notranslate"><span class="pre">expressionLib</span></code> attribute
+<h2><span class="section-number">2.3.1. </span>Using External Libraries and Inline JavaScript Code with <code class="docutils literal notranslate"><span class="pre">expressionLib</span></code><a class="headerlink" href="#using-external-libraries-and-inline-javascript-code-with-expressionlib" title="Permalink to this heading">#</a></h2>
+<p>The requirement <a class="reference external" href="https://w3id.org/cwl/CommandLineTool.html#InlineJavascriptRequirement"><code class="docutils literal notranslate"><span class="pre">InlineJavascriptRequirement</span></code></a> supports an <code class="docutils literal notranslate"><span class="pre">expressionLib</span></code> attribute
 that allows users to load external JavaScript files, or to provide inline JavaScript
 code.</p>
 <p>Entries added to the <code class="docutils literal notranslate"><span class="pre">expressionLib</span></code> attribute are parsed with the JavaScript engine
@@ -597,40 +686,40 @@ inline in <code class="docutils literal notranslate"><span class="pre">expressio
 CWL document:</p>
 <div class="literal-block-wrapper docutils container" id="hello-world-expressionlib-inline-cwl">
 <div class="code-block-caption"><span class="caption-text"><code class="docutils literal notranslate"><span class="pre">hello-world-expressionlib-inline.cwl</span></code></span><a class="headerlink" href="#hello-world-expressionlib-inline-cwl" title="Permalink to this code">#</a></div>
-<div class="highlight-cwl notranslate"><div class="highlight"><pre><span></span><span class="nt">cwlVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">v1.2</span><span class="w"></span>
-<span class="nt">class</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">CommandLineTool</span><span class="w"></span>
-<span class="nt">requirements</span><span class="p">:</span><span class="w"></span>
-<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">class</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">InlineJavascriptRequirement</span><span class="w"></span>
-<span class="hll"><span class="w">    </span><span class="nt">expressionLib</span><span class="p">:</span><span class="w"></span>
-</span><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="p p-Indicator">|</span><span class="w"></span>
-<span class="w">        </span><span class="no">/**</span><span class="w"></span>
-<span class="w">         </span><span class="no">* Capitalize each word passed. Will split the text by spaces.</span><span class="w"></span>
-<span class="w">         </span><span class="no">* For instance, given &quot;hello world&quot;, it returns &quot;Hello World&quot;.</span><span class="w"></span>
-<span class="w">         </span><span class="no">*</span><span class="w"></span>
-<span class="w">         </span><span class="no">* @param {String} message - The input message.</span><span class="w"></span>
-<span class="w">         </span><span class="no">* @return {String} the message with each word with its initial letter capitalized.</span><span class="w"></span>
-<span class="w">         </span><span class="no">*/</span><span class="w"></span>
-<span class="hll"><span class="w">        </span><span class="no">function capitalizeWords (message) {</span><span class="w"></span>
-</span><span class="w">          </span><span class="no">if (message === undefined || message === null || typeof message !== &#39;string&#39; || message.trim().length === 0) {</span><span class="w"></span>
-<span class="w">            </span><span class="no">return &#39;&#39;;</span><span class="w"></span>
-<span class="w">          </span><span class="no">}</span><span class="w"></span>
-<span class="w">          </span><span class="no">return message</span><span class="w"></span>
-<span class="w">            </span><span class="no">.split(&#39; &#39;)</span><span class="w"></span>
-<span class="w">            </span><span class="no">.map(function (token) {</span><span class="w"></span>
-<span class="w">              </span><span class="no">return token.charAt(0).toUpperCase() + token.slice(1);</span><span class="w"></span>
-<span class="w">            </span><span class="no">})</span><span class="w"></span>
-<span class="w">            </span><span class="no">.join(&#39; &#39;);</span><span class="w"></span>
-<span class="w">        </span><span class="no">}</span><span class="w"></span>
+<div class="highlight-cwl notranslate"><div class="highlight"><pre><span></span><span class="nt">cwlVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">v1.2</span>
+<span class="nt">class</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">CommandLineTool</span>
+<span class="nt">requirements</span><span class="p">:</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">class</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">InlineJavascriptRequirement</span>
+<span class="hll"><span class="w">    </span><span class="nt">expressionLib</span><span class="p">:</span>
+</span><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="p p-Indicator">|</span>
+<span class="w">        </span><span class="no">/**</span>
+<span class="w">         </span><span class="no">* Capitalize each word passed. Will split the text by spaces.</span>
+<span class="w">         </span><span class="no">* For instance, given &quot;hello world&quot;, it returns &quot;Hello World&quot;.</span>
+<span class="w">         </span><span class="no">*</span>
+<span class="w">         </span><span class="no">* @param {String} message - The input message.</span>
+<span class="w">         </span><span class="no">* @return {String} the message with each word with its initial letter capitalized.</span>
+<span class="w">         </span><span class="no">*/</span>
+<span class="hll"><span class="w">        </span><span class="no">function capitalizeWords (message) {</span>
+</span><span class="w">          </span><span class="no">if (message === undefined || message === null || typeof message !== &#39;string&#39; || message.trim().length === 0) {</span>
+<span class="w">            </span><span class="no">return &#39;&#39;;</span>
+<span class="w">          </span><span class="no">}</span>
+<span class="w">          </span><span class="no">return message</span>
+<span class="w">            </span><span class="no">.split(&#39; &#39;)</span>
+<span class="w">            </span><span class="no">.map(function (token) {</span>
+<span class="w">              </span><span class="no">return token.charAt(0).toUpperCase() + token.slice(1);</span>
+<span class="w">            </span><span class="no">})</span>
+<span class="w">            </span><span class="no">.join(&#39; &#39;);</span>
+<span class="w">        </span><span class="no">}</span>
 
-<span class="nt">baseCommand</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">echo</span><span class="w"></span>
+<span class="nt">baseCommand</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">echo</span>
 
-<span class="nt">inputs</span><span class="p">:</span><span class="w"></span>
-<span class="w">  </span><span class="nt">message</span><span class="p">:</span><span class="w"></span>
-<span class="w">    </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">string</span><span class="w"></span>
+<span class="nt">inputs</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">message</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">string</span>
 
-<span class="hll"><span class="nt">arguments</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="nv">$( capitalizeWords(inputs.message) )</span><span class="p p-Indicator">]</span><span class="w"></span>
+<span class="hll"><span class="nt">arguments</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="nv">$( capitalizeWords(inputs.message) )</span><span class="p p-Indicator">]</span>
 </span>
-<span class="nt">outputs</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[]</span><span class="w"></span>
+<span class="nt">outputs</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[]</span>
 </pre></div>
 </div>
 </div>
@@ -638,15 +727,14 @@ CWL document:</p>
 the <code class="docutils literal notranslate"><span class="pre">echo</span></code> command printing the input message with capital initial letters:</p>
 <div class="literal-block-wrapper docutils container" id="running-hell-world-expressionlib-inline-cwl">
 <div class="code-block-caption"><span class="caption-text">Running <code class="docutils literal notranslate"><span class="pre">hello-world-expressionlib-inline.cwl</span></code>.</span><a class="headerlink" href="#running-hell-world-expressionlib-inline-cwl" title="Permalink to this code">#</a></div>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ cwltool hello-world-expressionlib-inline.cwl --message <span class="s2">&quot;hello world&quot;</span>
-INFO /opt/hostedtoolcache/Python/3.9.14/x64/bin/cwltool <span class="m">3</span>.1.20221008225030
-INFO Resolved <span class="s1">&#39;hello-world-expressionlib-inline.cwl&#39;</span> to <span class="s1">&#39;file:///home/runner/work/user_guide/user_guide/src/_includes/cwl/expressions/hello-world-expressionlib-inline.cwl&#39;</span>
-INFO <span class="o">[</span>job hello-world-expressionlib-inline.cwl<span class="o">]</span> /tmp/pi726m41$ <span class="nb">echo</span> <span class="se">\</span>
-    <span class="s1">&#39;Hello World&#39;</span>
-Hello World
-INFO <span class="o">[</span>job hello-world-expressionlib-inline.cwl<span class="o">]</span> completed success
-<span class="o">{}</span>
-INFO Final process status is success
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>cwltool<span class="w"> </span>hello-world-expressionlib-inline.cwl<span class="w"> </span>--message<span class="w"> </span><span class="s2">&quot;hello world&quot;</span>
+INFO<span class="w"> </span>/opt/hostedtoolcache/Python/3.9.18/x64/bin/cwltool<span class="w"> </span><span class="m">3</span>.1.20231114134824
+INFO<span class="w"> </span>Resolved<span class="w"> </span><span class="s1">&#39;hello-world-expressionlib-inline.cwl&#39;</span><span class="w"> </span>to<span class="w"> </span><span class="s1">&#39;file:///home/runner/work/user_guide/user_guide/src/_includes/cwl/expressions/hello-world-expressionlib-inline.cwl&#39;</span>
+INFO<span class="w"> </span><span class="o">[</span>job<span class="w"> </span>hello-world-expressionlib-inline.cwl<span class="o">]</span><span class="w"> </span>/tmp/2qh6y5fi$<span class="w"> </span><span class="nb">echo</span><span class="w"> </span><span class="se">\</span>
+<span class="w">    </span><span class="s1">&#39;Hello World&#39;</span>
+Hello<span class="w"> </span>World
+INFO<span class="w"> </span><span class="o">[</span>job<span class="w"> </span>hello-world-expressionlib-inline.cwl<span class="o">]</span><span class="w"> </span>completed<span class="w"> </span>success
+<span class="o">{}</span>INFO<span class="w"> </span>Final<span class="w"> </span>process<span class="w"> </span>status<span class="w"> </span>is<span class="w"> </span>success
 </pre></div>
 </div>
 </div>
@@ -660,39 +748,39 @@ import it in our CWL document:</p>
 <span class="cm"> *</span>
 <span class="cm"> * @param {String} message - The input message.</span>
 <span class="cm"> * @return {String} the message with each word with its initial letter capitalized.</span>
-<span class="cm"> */</span><span class="w"></span>
-<span class="kd">function</span><span class="w"> </span><span class="nx">capitalizeWords</span><span class="w"> </span><span class="p">(</span><span class="nx">message</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">message</span><span class="w"> </span><span class="o">===</span><span class="w"> </span><span class="kc">undefined</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="nx">message</span><span class="w"> </span><span class="o">===</span><span class="w"> </span><span class="kc">null</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="ow">typeof</span><span class="w"> </span><span class="nx">message</span><span class="w"> </span><span class="o">!==</span><span class="w"> </span><span class="s1">&#39;string&#39;</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="nx">message</span><span class="p">.</span><span class="nx">trim</span><span class="p">().</span><span class="nx">length</span><span class="w"> </span><span class="o">===</span><span class="w"> </span><span class="mf">0</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="s1">&#39;&#39;</span><span class="p">;</span><span class="w"></span>
-<span class="w">  </span><span class="p">}</span><span class="w"></span>
-<span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="nx">message</span><span class="w"></span>
-<span class="w">    </span><span class="p">.</span><span class="nx">split</span><span class="p">(</span><span class="s1">&#39; &#39;</span><span class="p">)</span><span class="w"></span>
-<span class="w">    </span><span class="p">.</span><span class="nx">map</span><span class="p">(</span><span class="kd">function</span><span class="w"> </span><span class="p">(</span><span class="nx">token</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">      </span><span class="k">return</span><span class="w"> </span><span class="nx">token</span><span class="p">.</span><span class="nx">charAt</span><span class="p">(</span><span class="mf">0</span><span class="p">).</span><span class="nx">toUpperCase</span><span class="p">()</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">token</span><span class="p">.</span><span class="nx">slice</span><span class="p">(</span><span class="mf">1</span><span class="p">);</span><span class="w"></span>
-<span class="w">    </span><span class="p">})</span><span class="w"></span>
-<span class="w">    </span><span class="p">.</span><span class="nx">join</span><span class="p">(</span><span class="s1">&#39; &#39;</span><span class="p">);</span><span class="w"></span>
-<span class="p">}</span><span class="w"></span>
+<span class="cm"> */</span>
+<span class="kd">function</span><span class="w"> </span><span class="nx">capitalizeWords</span><span class="w"> </span><span class="p">(</span><span class="nx">message</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">message</span><span class="w"> </span><span class="o">===</span><span class="w"> </span><span class="kc">undefined</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="nx">message</span><span class="w"> </span><span class="o">===</span><span class="w"> </span><span class="kc">null</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="ow">typeof</span><span class="w"> </span><span class="nx">message</span><span class="w"> </span><span class="o">!==</span><span class="w"> </span><span class="s1">&#39;string&#39;</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="nx">message</span><span class="p">.</span><span class="nx">trim</span><span class="p">().</span><span class="nx">length</span><span class="w"> </span><span class="o">===</span><span class="w"> </span><span class="mf">0</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="s1">&#39;&#39;</span><span class="p">;</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="nx">message</span>
+<span class="w">    </span><span class="p">.</span><span class="nx">split</span><span class="p">(</span><span class="s1">&#39; &#39;</span><span class="p">)</span>
+<span class="w">    </span><span class="p">.</span><span class="nx">map</span><span class="p">(</span><span class="kd">function</span><span class="w"> </span><span class="p">(</span><span class="nx">token</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="k">return</span><span class="w"> </span><span class="nx">token</span><span class="p">.</span><span class="nx">charAt</span><span class="p">(</span><span class="mf">0</span><span class="p">).</span><span class="nx">toUpperCase</span><span class="p">()</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">token</span><span class="p">.</span><span class="nx">slice</span><span class="p">(</span><span class="mf">1</span><span class="p">);</span>
+<span class="w">    </span><span class="p">})</span>
+<span class="w">    </span><span class="p">.</span><span class="nx">join</span><span class="p">(</span><span class="s1">&#39; &#39;</span><span class="p">);</span>
+<span class="p">}</span>
 </pre></div>
 </div>
 </div>
 <div class="literal-block-wrapper docutils container" id="hello-world-expressionlib-external-cwl">
 <div class="code-block-caption"><span class="caption-text"><code class="docutils literal notranslate"><span class="pre">hello-world-expressionlib-external.cwl</span></code></span><a class="headerlink" href="#hello-world-expressionlib-external-cwl" title="Permalink to this code">#</a></div>
-<div class="highlight-cwl notranslate"><div class="highlight"><pre><span></span><span class="nt">cwlVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">v1.2</span><span class="w"></span>
-<span class="nt">class</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">CommandLineTool</span><span class="w"></span>
-<span class="nt">requirements</span><span class="p">:</span><span class="w"></span>
-<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">class</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">InlineJavascriptRequirement</span><span class="w"></span>
-<span class="hll"><span class="w">    </span><span class="nt">expressionLib</span><span class="p">:</span><span class="w"></span>
-</span><span class="hll"><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="p p-Indicator">{</span><span class="nt"> $include</span><span class="p">:</span><span class="w"> </span><span class="nv">custom-functions.js</span><span class="w"> </span><span class="p p-Indicator">}</span><span class="w"></span>
+<div class="highlight-cwl notranslate"><div class="highlight"><pre><span></span><span class="nt">cwlVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">v1.2</span>
+<span class="nt">class</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">CommandLineTool</span>
+<span class="nt">requirements</span><span class="p">:</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">class</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">InlineJavascriptRequirement</span>
+<span class="hll"><span class="w">    </span><span class="nt">expressionLib</span><span class="p">:</span>
+</span><span class="hll"><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="p p-Indicator">{</span><span class="nt"> $include</span><span class="p">:</span><span class="w"> </span><span class="nv">custom-functions.js</span><span class="w"> </span><span class="p p-Indicator">}</span>
 </span>
-<span class="nt">baseCommand</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">echo</span><span class="w"></span>
+<span class="nt">baseCommand</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">echo</span>
 
-<span class="nt">inputs</span><span class="p">:</span><span class="w"></span>
-<span class="w">  </span><span class="nt">message</span><span class="p">:</span><span class="w"></span>
-<span class="w">    </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">string</span><span class="w"></span>
+<span class="nt">inputs</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">message</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">string</span>
 
-<span class="hll"><span class="nt">arguments</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="nv">$( capitalizeWords(inputs.message) )</span><span class="p p-Indicator">]</span><span class="w"></span>
+<span class="hll"><span class="nt">arguments</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="nv">$( capitalizeWords(inputs.message) )</span><span class="p p-Indicator">]</span>
 </span>
-<span class="nt">outputs</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[]</span><span class="w"></span>
+<span class="nt">outputs</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[]</span>
 </pre></div>
 </div>
 </div>
@@ -701,15 +789,14 @@ statement. That makes the functions and variables available to be used in other 
 the CWL document.</p>
 <div class="literal-block-wrapper docutils container" id="running-hell-world-expressionlib-external-cwl">
 <div class="code-block-caption"><span class="caption-text">Running <code class="docutils literal notranslate"><span class="pre">hello-world-expressionlib-external.cwl</span></code>.</span><a class="headerlink" href="#running-hell-world-expressionlib-external-cwl" title="Permalink to this code">#</a></div>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ cwltool hello-world-expressionlib-external.cwl --message <span class="s2">&quot;hello world&quot;</span>
-INFO /opt/hostedtoolcache/Python/3.9.14/x64/bin/cwltool <span class="m">3</span>.1.20221008225030
-INFO Resolved <span class="s1">&#39;hello-world-expressionlib-external.cwl&#39;</span> to <span class="s1">&#39;file:///home/runner/work/user_guide/user_guide/src/_includes/cwl/expressions/hello-world-expressionlib-external.cwl&#39;</span>
-INFO <span class="o">[</span>job hello-world-expressionlib-external.cwl<span class="o">]</span> /tmp/lcp04kne$ <span class="nb">echo</span> <span class="se">\</span>
-    <span class="s1">&#39;Hello World&#39;</span>
-Hello World
-INFO <span class="o">[</span>job hello-world-expressionlib-external.cwl<span class="o">]</span> completed success
-<span class="o">{}</span>
-INFO Final process status is success
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>cwltool<span class="w"> </span>hello-world-expressionlib-external.cwl<span class="w"> </span>--message<span class="w"> </span><span class="s2">&quot;hello world&quot;</span>
+INFO<span class="w"> </span>/opt/hostedtoolcache/Python/3.9.18/x64/bin/cwltool<span class="w"> </span><span class="m">3</span>.1.20231114134824
+INFO<span class="w"> </span>Resolved<span class="w"> </span><span class="s1">&#39;hello-world-expressionlib-external.cwl&#39;</span><span class="w"> </span>to<span class="w"> </span><span class="s1">&#39;file:///home/runner/work/user_guide/user_guide/src/_includes/cwl/expressions/hello-world-expressionlib-external.cwl&#39;</span>
+INFO<span class="w"> </span><span class="o">[</span>job<span class="w"> </span>hello-world-expressionlib-external.cwl<span class="o">]</span><span class="w"> </span>/tmp/kengmvlt$<span class="w"> </span><span class="nb">echo</span><span class="w"> </span><span class="se">\</span>
+<span class="w">    </span><span class="s1">&#39;Hello World&#39;</span>
+Hello<span class="w"> </span>World
+INFO<span class="w"> </span><span class="o">[</span>job<span class="w"> </span>hello-world-expressionlib-external.cwl<span class="o">]</span><span class="w"> </span>completed<span class="w"> </span>success
+<span class="o">{}</span>INFO<span class="w"> </span>Final<span class="w"> </span>process<span class="w"> </span>status<span class="w"> </span>is<span class="w"> </span>success
 </pre></div>
 </div>
 </div>
@@ -719,47 +806,46 @@ attribute with the new function <code class="docutils literal notranslate"><span
 function from the external file <code class="docutils literal notranslate"><span class="pre">custom-functions.js</span></code>.</p>
 <div class="literal-block-wrapper docutils container" id="hello-world-expressionlib-cwl">
 <div class="code-block-caption"><span class="caption-text"><code class="docutils literal notranslate"><span class="pre">hello-world-expressionlib.cwl</span></code></span><a class="headerlink" href="#hello-world-expressionlib-cwl" title="Permalink to this code">#</a></div>
-<div class="highlight-cwl notranslate"><div class="highlight"><pre><span></span><span class="nt">cwlVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">v1.2</span><span class="w"></span>
-<span class="nt">class</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">CommandLineTool</span><span class="w"></span>
-<span class="nt">requirements</span><span class="p">:</span><span class="w"></span>
-<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">class</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">InlineJavascriptRequirement</span><span class="w"></span>
-<span class="hll"><span class="w">    </span><span class="nt">expressionLib</span><span class="p">:</span><span class="w"></span>
-</span><span class="hll"><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="p p-Indicator">{</span><span class="nt"> $include</span><span class="p">:</span><span class="w"> </span><span class="nv">custom-functions.js</span><span class="w"> </span><span class="p p-Indicator">}</span><span class="w"></span>
-</span><span class="hll"><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="p p-Indicator">|</span><span class="w"></span>
-</span><span class="hll"><span class="w">        </span><span class="no">/**</span><span class="w"></span>
-</span><span class="hll"><span class="w">         </span><span class="no">* A merely illustrative example function that uses a function</span><span class="w"></span>
-</span><span class="hll"><span class="w">         </span><span class="no">* from the included custom-functions.js file to create a</span><span class="w"></span>
-</span><span class="hll"><span class="w">         </span><span class="no">* Hello World message.</span><span class="w"></span>
-</span><span class="hll"><span class="w">         </span><span class="no">*</span><span class="w"></span>
-</span><span class="hll"><span class="w">         </span><span class="no">* @param {Object} message - CWL document input message</span><span class="w"></span>
-</span><span class="hll"><span class="w">         </span><span class="no">*/</span><span class="w"></span>
-</span><span class="hll"><span class="w">        </span><span class="no">var createHelloWorldMessage = function (message) {</span><span class="w"></span>
-</span><span class="hll"><span class="w">          </span><span class="no">return capitalizeWords(message);</span><span class="w"></span>
-</span><span class="hll"><span class="w">        </span><span class="no">};</span><span class="w"></span>
+<div class="highlight-cwl notranslate"><div class="highlight"><pre><span></span><span class="nt">cwlVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">v1.2</span>
+<span class="nt">class</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">CommandLineTool</span>
+<span class="nt">requirements</span><span class="p">:</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">class</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">InlineJavascriptRequirement</span>
+<span class="hll"><span class="w">    </span><span class="nt">expressionLib</span><span class="p">:</span>
+</span><span class="hll"><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="p p-Indicator">{</span><span class="nt"> $include</span><span class="p">:</span><span class="w"> </span><span class="nv">custom-functions.js</span><span class="w"> </span><span class="p p-Indicator">}</span>
+</span><span class="hll"><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="p p-Indicator">|</span>
+</span><span class="hll"><span class="w">        </span><span class="no">/**</span>
+</span><span class="hll"><span class="w">         </span><span class="no">* A merely illustrative example function that uses a function</span>
+</span><span class="hll"><span class="w">         </span><span class="no">* from the included custom-functions.js file to create a</span>
+</span><span class="hll"><span class="w">         </span><span class="no">* Hello World message.</span>
+</span><span class="hll"><span class="w">         </span><span class="no">*</span>
+</span><span class="hll"><span class="w">         </span><span class="no">* @param {Object} message - CWL document input message</span>
+</span><span class="hll"><span class="w">         </span><span class="no">*/</span>
+</span><span class="hll"><span class="w">        </span><span class="no">var createHelloWorldMessage = function (message) {</span>
+</span><span class="hll"><span class="w">          </span><span class="no">return capitalizeWords(message);</span>
+</span><span class="hll"><span class="w">        </span><span class="no">};</span>
 </span>
-<span class="nt">baseCommand</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">echo</span><span class="w"></span>
+<span class="nt">baseCommand</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">echo</span>
 
-<span class="nt">inputs</span><span class="p">:</span><span class="w"></span>
-<span class="w">  </span><span class="nt">message</span><span class="p">:</span><span class="w"></span>
-<span class="w">    </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">string</span><span class="w"></span>
+<span class="nt">inputs</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">message</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">string</span>
 
-<span class="hll"><span class="nt">arguments</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="nv">$( createHelloWorldMessage(inputs.message) )</span><span class="p p-Indicator">]</span><span class="w"></span>
+<span class="hll"><span class="nt">arguments</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="nv">$( createHelloWorldMessage(inputs.message) )</span><span class="p p-Indicator">]</span>
 </span>
-<span class="nt">outputs</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[]</span><span class="w"></span>
+<span class="nt">outputs</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[]</span>
 </pre></div>
 </div>
 </div>
 <div class="literal-block-wrapper docutils container" id="running-hell-world-expressionlib-cwl">
 <div class="code-block-caption"><span class="caption-text">Running <code class="docutils literal notranslate"><span class="pre">hello-world-expressionlib.cwl</span></code>.</span><a class="headerlink" href="#running-hell-world-expressionlib-cwl" title="Permalink to this code">#</a></div>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ cwltool hello-world-expressionlib.cwl --message <span class="s2">&quot;hello world&quot;</span>
-INFO /opt/hostedtoolcache/Python/3.9.14/x64/bin/cwltool <span class="m">3</span>.1.20221008225030
-INFO Resolved <span class="s1">&#39;hello-world-expressionlib.cwl&#39;</span> to <span class="s1">&#39;file:///home/runner/work/user_guide/user_guide/src/_includes/cwl/expressions/hello-world-expressionlib.cwl&#39;</span>
-INFO <span class="o">[</span>job hello-world-expressionlib.cwl<span class="o">]</span> /tmp/irnuun93$ <span class="nb">echo</span> <span class="se">\</span>
-    <span class="s1">&#39;Hello World&#39;</span>
-Hello World
-INFO <span class="o">[</span>job hello-world-expressionlib.cwl<span class="o">]</span> completed success
-<span class="o">{}</span>
-INFO Final process status is success
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>cwltool<span class="w"> </span>hello-world-expressionlib.cwl<span class="w"> </span>--message<span class="w"> </span><span class="s2">&quot;hello world&quot;</span>
+INFO<span class="w"> </span>/opt/hostedtoolcache/Python/3.9.18/x64/bin/cwltool<span class="w"> </span><span class="m">3</span>.1.20231114134824
+INFO<span class="w"> </span>Resolved<span class="w"> </span><span class="s1">&#39;hello-world-expressionlib.cwl&#39;</span><span class="w"> </span>to<span class="w"> </span><span class="s1">&#39;file:///home/runner/work/user_guide/user_guide/src/_includes/cwl/expressions/hello-world-expressionlib.cwl&#39;</span>
+INFO<span class="w"> </span><span class="o">[</span>job<span class="w"> </span>hello-world-expressionlib.cwl<span class="o">]</span><span class="w"> </span>/tmp/o5r_vy06$<span class="w"> </span><span class="nb">echo</span><span class="w"> </span><span class="se">\</span>
+<span class="w">    </span><span class="s1">&#39;Hello World&#39;</span>
+Hello<span class="w"> </span>World
+INFO<span class="w"> </span><span class="o">[</span>job<span class="w"> </span>hello-world-expressionlib.cwl<span class="o">]</span><span class="w"> </span>completed<span class="w"> </span>success
+<span class="o">{}</span>INFO<span class="w"> </span>Final<span class="w"> </span>process<span class="w"> </span>status<span class="w"> </span>is<span class="w"> </span>success
 </pre></div>
 </div>
 </div>
@@ -773,102 +859,90 @@ from the CWL specification to learn more about it.</p>
 </section>
 
 
-            </article>
-            
-            
-            
-            <footer class="bd-footer-article">
-                <!-- Previous / next buttons -->
-<div class='prev-next-area'>
-  <a class='left-prev' id="prev-link" href="command-line-tool.html" title="previous page">
+                </article>
+              
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  <!-- Previous / next buttons -->
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="command-line-tool.html"
+       title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
-          <p class="prev-next-subtitle">previous</p>
-          <p class="prev-next-title"><span class="section-number">2.2. </span>Command Line Tool</p>
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title"><span class="section-number">2.2. </span>Command Line Tool</p>
       </div>
-  </a>
-  <a class='right-next' id="next-link" href="inputs.html" title="next page">
-  <div class="prev-next-info">
-      <p class="prev-next-subtitle">next</p>
-      <p class="prev-next-title"><span class="section-number">2.4. </span>Inputs</p>
-  </div>
-  <i class="fa-solid fa-angle-right"></i>
-  </a>
+    </a>
+    <a class="right-next"
+       href="inputs.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title"><span class="section-number">2.4. </span>Inputs</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
 </div>
-            </footer>
-            
-          </div>
-          
-          
-          
-            <div class="bd-sidebar-secondary bd-toc">
+                </footer>
               
-<div class="toc-item">
-  
-<div class="tocsection onthispage">
-    <i class="fa-solid fa-list"></i> On this page
-</div>
-<nav id="bd-toc-nav" class="page-toc">
-    <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#using-external-libraries-and-inline-javascript-code-with-expressionlib">
-   2.3.1. Using external libraries and inline JavaScript code with
-   <code class="docutils literal notranslate">
-    <span class="pre">
-     expressionLib
-    </span>
-   </code>
-  </a>
- </li>
-</ul>
-
-</nav>
-</div>
-
-<div class="toc-item">
-  
-<div id="searchbox"></div>
-</div>
-
-<div class="toc-item">
-  
-
-<div class="tocsection editthispage">
-    <a href="https://github.com/common-workflow-language/user_guide/edit/main/src/topics/expressions.md">
-        <i class="fa-solid fa-pencil"></i> Edit this page
-    </a>
-</div>
-
-</div>
-
-<div class="toc-item">
-  
-<div class="tocsection sourcelink">
-    <a href="../_sources/topics/expressions.md.txt">
-        <i class="fa-solid fa-file-lines"></i> Show Source
-    </a>
-</div>
-
-</div>
-
             </div>
-          
-          
-        </div>
-        <footer class="bd-footer-content">
-          <div class="bd-footer-content__inner">
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> On this page
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#using-external-libraries-and-inline-javascript-code-with-expressionlib">2.3.1. Using External Libraries and Inline JavaScript Code with <code class="docutils literal notranslate"><span class="pre">expressionLib</span></code></a></li>
+</ul>
+  </nav></div>
+
+  <div class="sidebar-secondary-item">
+  
+  <div class="tocsection editthispage">
+    <a href="https://github.com/common-workflow-language/user_guide/edit/main/src/topics/expressions.md">
+      <i class="fa-solid fa-pencil"></i>
+      
+      
+        
+          Edit on GitHub
+        
+      
+    </a>
+  </div>
+</div>
+
+  <div class="sidebar-secondary-item">
+  <div class="tocsection sourcelink">
+    <a href="../_sources/topics/expressions.md.txt">
+      <i class="fa-solid fa-file-lines"></i> Show Source
+    </a>
+  </div>
+</div>
+
+</div></div>
+              
             
           </div>
-        </footer>
+          <footer class="bd-footer-content">
+            
+          </footer>
         
       </main>
     </div>
   </div>
-
   
-    
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../_static/scripts/pydata-sphinx-theme.js?digest=1e1de1a1873e13ef5536"></script>
+  <script src="../_static/scripts/bootstrap.js?digest=365ca57ee442770a23c6"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=365ca57ee442770a23c6"></script>
 
 <div class="container">
   <div class="row">
@@ -892,19 +966,41 @@ from the CWL specification to learn more about it.</p>
 </div>
 
 
-  <footer class="bd-footer"><div class="bd-footer__inner container">
+  <footer class="bd-footer">
+<div class="bd-footer__inner bd-page-width">
   
-  <div class="footer-item">
+    <div class="footer-items__start">
+      
+        <div class="footer-item">
+  <p class="copyright">
     
-<p class="copyright">
-
-    &copy; Copyright 2013, CWL Project Team.<br>
-
-</p>
-
-  </div>
+      © Copyright 2013, CWL Project Team.
+      <br/>
+    
+  </p>
+</div>
+      
+        <div class="footer-item">
+  <p class="sphinx-version">
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 5.3.0.
+    <br/>
+  </p>
+</div>
+      
+    </div>
+  
+  
+  
+    <div class="footer-items__end">
+      
+        <div class="footer-item"><p class="theme-version">
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.14.3.
+</p></div>
+      
+    </div>
   
 </div>
+
   </footer>
 
   </body>

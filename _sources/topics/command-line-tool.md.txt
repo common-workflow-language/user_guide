@@ -63,3 +63,24 @@ and in the [Outputs](../topics/outputs.md) sections.
 %
 % - Spaces in commands https://github.com/common-workflow-language/user_guide/issues/39
 % - Arguments (tell the reader the different use cases for arguments and inputs, tell them there is a section about inputs)
+
+
+## Network Access
+This indicates whether a process requires outgoing IPv4/IPv6 network
+access.  Starting with CWL v1.1, programs are not granted network
+access by default, so you must include the requirement for network
+access in the specification of your tool.
+
+```cwl
+cwlVersion: v1.2
+class: CommandLineTool
+
+requirements:
+  NetworkAccess:
+     networkAccess: true
+```
+
+```{note}
+CWL v1.0 command-line tools that are upgraded to v1.1
+or v1.2 or v1.2 will have `networkAccess: true` set automatically.
+```
