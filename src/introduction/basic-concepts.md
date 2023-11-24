@@ -159,8 +159,8 @@ in detail in the [Requirements](../topics/requirements-and-hints.md) section.
 > machine accessibility and that all digital assets should be Findable,
 > Accessible, Interoperable, and Reusable. Workflows encode the methods
 > by which the scientific process is conducted and via which data are
-> created. It is thus important that workflows support the creation
-> of FAIR data and adhere to the FAIR principles.
+> created. It is thus important that workflows both support the creation
+> of FAIR data and themselves adhere to the FAIR principles.
 > — [FAIR Computational Workflows](https://workflows.community/groups/fair/),
 > Workflows Community Initiative.
 

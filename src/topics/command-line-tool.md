@@ -66,9 +66,10 @@ and in the [Outputs](../topics/outputs.md) sections.
 
 
 ## Network Access
-This indicates whether a process requires outgoing IPv4/IPv6 network access.
-If a command-line tool is written manually in CWL v1.1+, there is a need to 
-specify when network access is required.
+This indicates whether a process requires outgoing IPv4/IPv6 network
+access.  Starting with CWL v1.1, programs are not granted network
+access by default, so you must include the requirement for network
+access in the specification of your tool.
 
 ```cwl
 cwlVersion: v1.2
@@ -80,6 +81,6 @@ requirements:
 ```
 
 ```{note}
-CWL v1.0 command-line tools that are upgraded to v1.1 
-or v1.2 get Network Access automatically.
+CWL v1.0 command-line tools that are upgraded to v1.1
+or v1.2 or v1.2 will have `networkAccess: true` set automatically.
 ```

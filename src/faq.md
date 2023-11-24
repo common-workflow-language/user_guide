@@ -87,8 +87,8 @@ the file using the new name for subsequent steps or as a workflow-level output.
 
 There are two ways to reference a local script:
 
-The first method involves adding the folder containing your scripts to the `PATH` environment variable.
-This allows you to run the shell script directly without using `sh` or `bash` commands.
+The first method involves adding the path to a folder containing your scripts to the `PATH` environment variable. This
+allows you to execute the shell script directly (without explicitly using the `sh` or `bash` commands).
 
 Start with adding a _shebang_ at the top of your file:
 
@@ -133,10 +133,6 @@ inputs:
 baseCommand: sh
 
 outputs: []
-```
-
-```{note}
-In CWL, everything must be directly stated.
 ```
 
 ## How can I set `self`-based input bindings for optional inputs?

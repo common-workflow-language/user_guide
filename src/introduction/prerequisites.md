@@ -26,9 +26,8 @@ of the following options for your operating system:
 - Windows
 
 ```{note}
-If you are using Windows, you will have to install the [Windows Subsystem for Linux 2](https://learn.microsoft.com/en-us/windows/wsl/install) (WSL2).
-Visit the `cwltool` [documentation](https://cwltool.readthedocs.io/en/latest/#ms-windows-users)
-for details on installing WSL2.
+If you are using Windows, you will have to install the Windows Subsystem for Linux 2 as documented in the
+[`cwltool` documentation for Microsoft Windows users](https://github.com/common-workflow-language/cwltool/blob/main/README.rst#ms-windows-users).
 Your operating system also needs internet access and a recent version of Python (3.6+).
 ```
 
@@ -76,7 +75,7 @@ You can run the CWL tool description by omitting the `--validate` option:
 :caption: Running `true.cwl` with `cwltool`.
 ```
 
-### Cwl-runner Python Module
+### Generic ``cwl-runner`` alias
 
 `cwl-runner` is an implementation-agnostic alias for any CWL compliant runner. This simply means
 that the `cwl-runner` alias command can be invoked independently, and is not reliant on a particular
