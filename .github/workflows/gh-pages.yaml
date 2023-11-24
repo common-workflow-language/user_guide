@@ -35,9 +35,11 @@ jobs:
 
       - name: Build documentation
         run: |
+          mkdir -p _build/html
           make html
           for lang in en es pt_BR pt_PT ja zh_Hans; do
-            make html BUILDDIR=_build/${lang} SPHINXOPTS="-D language=${lang}"
+            make html BUILDDIR=_build/${lang} SPHINXOPTS="-D language=${lang} -j auto"
+            mv _build/${lang}/html _build/html/${lang}
           done
 
       - name: Deploy
