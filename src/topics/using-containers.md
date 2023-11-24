@@ -31,7 +31,7 @@ then print "Hello World" to the standard output.
 ```
 
 Before we run this, let's just break it down and see what some bits do.  Most of this
-has been explained in previous sections, the only part that is really new is the `dockerRequirement`
+has been explained in previous sections, the only part that is really new is the [`dockerRequirement`](https://w3id.org/cwl/CommandLineTool.html#DockerRequirement)
 section.
 
 ```cwl

@@ -36,6 +36,7 @@ requirements in order to use the tool, and a few more metadata fields.
 :language: cwl
 :caption: "`metadata_example3.cwl`"
 :name: metadata_example3.cwl
+:emphasize-lines: 8-10, 47-48
 ```
 
 [schema-salad]: https://www.commonwl.org/v1.0/SchemaSalad.html#Explicit_context

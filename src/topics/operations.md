@@ -13,16 +13,17 @@ you are ready to submit the workflow to a CWL runner:
 :caption: "`operations.cwl`"
 ```
 
-The `uppercase` step of the workflow is an operation. It can be used like
-a command line tool or an expression. You can also plot it with the
+The `uppercase` step of the workflow is an operation. It can appear where a
+command line tool or an expression is expected. You can also plot it with the
 CWL Viewer or `cwltool`:
 
 ```{runcmd} cwltool --print-dot operations.cwl
 :working-directory: src/_includes/cwl/operations/
 ```
 
-The output of the command above can be rendered with a Graphviz renderer. The following
-image is rendered with the Sphinx Graphviz directive (this user guide is built with Sphinx):
+The output of the command above can be rendered with a Graphviz renderer. The
+following image is rendered with the Sphinx `{graphviz}` directive (this user
+guide is built with Sphinx):
 
 ```{graphviz}
 

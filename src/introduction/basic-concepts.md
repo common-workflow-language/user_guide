@@ -138,9 +138,9 @@ The CWL specification allows for implementations to provide extra
 functionality and specify prerequisites to workflows through *requirements*.
 There are many requirements defined in the CWL specification, for instance:
 
-- `InlineJavascriptWorkflow` - enables JavaScript in expressions.
-- `SubworkflowFeatureRequirement` - enables nested workflows.
-- `InitialWorkDirRequirement` - controls staging files in the input directory.
+- [`InlineJavascriptWorkflow`](https://w3id.org/cwl/Workflow.html#InlineJavascriptRequirement) - enables JavaScript in expressions.
+- [`SubworkflowFeatureRequirement`](https://w3id.org/cwl/Workflow.html#SubworkflowFeatureRequirement) - enables nested workflows.
+- [`InitialWorkDirRequirement`](https://w3id.org/cwl/Workflow.html#InitialWorkDirRequirement) - controls staging files in the input directory.
 
 Some CWL runners may provide requirements that are not in the specification.
 For example, GPU requirements are supported in `cwltool` through the
@@ -179,6 +179,7 @@ vendors.
 
 - Semantic Versioning - <https://semver.org/>
 - The CWL Specification page in the CWL website: <https://www.commonwl.org/specification/>
+- The Command Line Tool Description Standard: <[https://www.commonwl.org/v1.2/CommandLineTool.html](https://w3id.org/cwl/CommandLineTool.html)>
 - The current CWL specification on GitHub: {{ '<https://github.com/common-workflow-language/cwl-{}>'.format(cwl_version_text) }}
 - The list of Implementations in the CWL website: <https://www.commonwl.org/implementations/>
 - PROV-O: The PROV Ontology - <https://www.w3.org/TR/prov-o/>

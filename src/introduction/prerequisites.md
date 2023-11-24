@@ -34,7 +34,6 @@ Your operating system also needs internet access and a recent version of Python 
 ## CWL Runner
 
 % https://github.com/common-workflow-language/user_guide/issues/166
-% https://github.com/common-workflow-language/user_guide/issues/64
 % https://www.synapse.org/#!Synapse:syn2813589/wiki/401462
 
 The first thing you will need for running CWL workflows is a CWL runner.
@@ -42,25 +41,14 @@ The first thing you will need for running CWL workflows is a CWL runner.
 is also the CWL reference runner, which means it must support everything in the
 current CWL specification, {{ cwl_version }}.
 
-`cwltool` can be installed with `pip`. We recommend using a virtual environment
-like `venv` or `conda`. The following commands will create and activate a Python
-virtual environment using the `venv` module, and install `cwltool` in that
-environment:
-
-```{code-block} console
-:name: installing-cwltool-with-pip-and-venv
-:caption: Installing `cwltool` with `pip` and `venv`.
-
-$ python3 -m venv venv
-$ source venv/bin/activate
-$ (venv) pip install -U pip setuptools wheel
-$ (venv) pip install cwltool
-```
+`cwltool` can be installed with `pip`, `apt`, or `conda`. We recommend using a virtual environment
+like `venv` or `conda`.
 
 ```{note}
-Visit the `cwltool` [documentation](https://github.com/common-workflow-language/cwltool#install)
-for other ways to install `cwltool` with `apt` and `conda`.
+Visit the `cwltool` [documentation](https://cwltool.readthedocs.io/en/latest/#install)
+for details on installing `cwltool`.
 ```
+
 Let's use a simple CWL tool description `true.cwl` with `cwltool`.
 
 ```{literalinclude} /_includes/cwl/true.cwl
@@ -98,7 +86,7 @@ CWL implementation.
 This is convenient for environments with multiple CWL runners.
 
 The CWL community publishes a Python package with the name `cwlref-runner` that installs
-an alias for `cwltool` under the name `cwl-runner`
+an alias for `cwltool` under the name `cwl-runner`.
 
 ```{code-block} console
 :name: installing-cwlrunner-with-pip
