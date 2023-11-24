@@ -51,7 +51,7 @@ of software and libraries used for following the rest of this user guide.
 ## Running "Hello World"
 
 The usage of the `cwltool` command-line executable is basically
-`cwltool [OPTIONS] <CWL_DOCUMENT> [INPUTS_OBJECT]`. You can run the
+`cwltool [OPTIONS] [CWL_DOCUMENT] [INPUTS_OBJECT]`. You can run the
 `hello_world.cwl` workflow without specifying any option:
 
 ```{runcmd} cwltool hello_world.cwl

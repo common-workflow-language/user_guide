@@ -141,8 +141,8 @@ rest of the file.
 The *shebang* is the two-character sequence `#!` at the beginning of a
 script. When the script is executable, the operating system will execute
 the script using the executable specified after the shebang. It is
-considered a good practice to use `/usr/bin/env <executable>` rather than using a hard-coded location, since `/usr/bin/env <executable>`
-looks for the `<executable>` program in the system `PATH`,
+considered a good practice to use `/usr/bin/env [executable]` rather than using a hard-coded location, since `/usr/bin/env [executable]`
+looks for the `[executable]` program in the system `PATH`,
 ```
 
 ## Text Editor

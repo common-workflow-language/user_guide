@@ -3,7 +3,7 @@
 
 # You can set these variables from the command line, and also
 # from the environment for the first two.
-#SPHINXOPTS		=   # was "-W" (turn warnings into errors)
+SPHINXOPTS		=   # was "-W" (turn warnings into errors)
 SPHINXBUILD		= sphinx-build
 SOURCEDIR		= src
 BUILDDIR		= _build
