@@ -1,0 +1,1099 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="ja" data-theme="light">
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+    <link rel="icon" sizes="16x16" href="../_static/images/favicons/cwl/favicon-16x16.png" type="image/png">
+    <link rel="icon" sizes="32x32" href="../_static/images/favicons/cwl/favicon-32x32.png" type="image/png">
+    <link rel="icon" sizes="96x96" href="../_static/images/favicons/cwl/favicon-96x96.png" type="image/png">
+    <link rel="icon" sizes="128x128" href="../_static/images/favicons/cwl/favicon-128.png" type="image/png">
+    <link rel="icon" sizes="196x196" href="../_static/images/favicons/cwl/favicon-196x196.png" type="image/png">
+    <title>2.4. Inputs &#8212; Common Workflow Language User Guide 0.1 ドキュメント</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "light";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=365ca57ee442770a23c6" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=365ca57ee442770a23c6" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=365ca57ee442770a23c6" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=365ca57ee442770a23c6" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/graphviz.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/css/custom.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=365ca57ee442770a23c6" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=365ca57ee442770a23c6" />
+  <script src="../_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=365ca57ee442770a23c6"></script>
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/sphinx_highlight.js"></script>
+    <script src="../_static/translations.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'topics/inputs';</script>
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+    <link rel="index" title="索引" href="../genindex.html" />
+    <link rel="search" title="検索" href="../search.html" />
+    <link rel="next" title="2.5. Additional Arguments and Parameters" href="additional-arguments-and-parameters.html" />
+    <link rel="prev" title="2.3. Expressions" href="expressions.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="ja"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="light">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search the docs ..."
+         aria-label="Search the docs ..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+<div class="bd-header__inner bd-page-width">
+  <label class="sidebar-toggle primary-toggle" for="__primary">
+    <span class="fa-solid fa-bars"></span>
+  </label>
+  
+  
+  <div class="col-lg-3 navbar-header-items__start">
+    
+      <div class="navbar-item">
+  
+
+<a class="navbar-brand logo" href="../index.html">
+  
+  
+  
+  
+  
+    
+    
+    
+    <img src="../_static/CWL-Logo-HD-cropped2.png" class="logo__image only-light" alt="Common Workflow Language User Guide 0.1 ドキュメント - Home"/>
+    <script>document.write(`<img src="../_static/CWL-Logo-HD-cropped2.png" class="logo__image only-dark" alt="Common Workflow Language User Guide 0.1 ドキュメント - Home"/>`);</script>
+  
+  
+</a></div>
+    
+  </div>
+  
+  <div class="col-lg-9 navbar-header-items">
+    
+    <div class="me-auto navbar-header-items__center">
+      
+        <div class="navbar-item"><nav class="navbar-nav">
+  <p class="sidebar-header-items__title"
+     role="heading"
+     aria-level="1"
+     aria-label="Site Navigation">
+    Site Navigation
+  </p>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../introduction/index.html">
+                        はじめに
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item current active">
+                      <a class="nav-link nav-internal" href="index.html">
+                        トピックス
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../tutorials.html">
+                        チュートリアル
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../faq.html">
+                        よくある質問
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../LICENSE.html">
+                        ライセンス
+                      </a>
+                    </li>
+                
+
+                <li class="nav-item">
+                  <a class="nav-link nav-external" href="https://www.commonwl.org/community/">
+                    Community
+                  </a>
+                </li>
+                
+  </ul>
+</nav></div>
+      
+    </div>
+    
+    
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="検索" aria-label="検索" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">検索</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script>
+        </div>
+      
+      
+        <div class="navbar-item">
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script></div>
+      
+        <div class="navbar-item"><ul class="navbar-icon-links navbar-nav"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/common-workflow-language/user_guide/" title="GitHub" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fab fa-github-square fa-lg" aria-hidden="true"></i></span>
+            <span class="sr-only">GitHub</span></a>
+        </li>
+</ul></div>
+      
+    </div>
+    
+  </div>
+  
+  
+    <div class="navbar-persistent--mobile">
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="検索" aria-label="検索" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">検索</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script>
+    </div>
+  
+
+  
+    <label class="sidebar-toggle secondary-toggle" for="__secondary" tabindex="0">
+      <span class="fa-solid fa-outdent"></span>
+    </label>
+  
+</div>
+
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+        
+          <div class="navbar-item"><nav class="navbar-nav">
+  <p class="sidebar-header-items__title"
+     role="heading"
+     aria-level="1"
+     aria-label="Site Navigation">
+    Site Navigation
+  </p>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../introduction/index.html">
+                        はじめに
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item current active">
+                      <a class="nav-link nav-internal" href="index.html">
+                        トピックス
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../tutorials.html">
+                        チュートリアル
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../faq.html">
+                        よくある質問
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../LICENSE.html">
+                        ライセンス
+                      </a>
+                    </li>
+                
+
+                <li class="nav-item">
+                  <a class="nav-link nav-external" href="https://www.commonwl.org/community/">
+                    Community
+                  </a>
+                </li>
+                
+  </ul>
+</nav></div>
+        
+      </div>
+    
+    
+    
+      <div class="sidebar-header-items__end">
+        
+          <div class="navbar-item">
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script></div>
+        
+          <div class="navbar-item"><ul class="navbar-icon-links navbar-nav"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/common-workflow-language/user_guide/" title="GitHub" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fab fa-github-square fa-lg" aria-hidden="true"></i></span>
+            <span class="sr-only">GitHub</span></a>
+        </li>
+</ul></div>
+        
+      </div>
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item"><nav class="bd-links d-none d-md-block" id="bd-docs-nav" aria-label="Main navigation">
+  <p class="bd-links__title" role="heading" aria-level="1">
+    Section Navigation
+  </p>
+  <div class="bd-toc-item navbar-nav">
+    <ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="yaml-guide.html">2.1. YAMLガイド</a></li>
+<li class="toctree-l1"><a class="reference internal" href="command-line-tool.html">2.2. コマンドラインツール</a></li>
+<li class="toctree-l1"><a class="reference internal" href="expressions.html">2.3. Expressions</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">2.4. Inputs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="additional-arguments-and-parameters.html">2.5. Additional Arguments and Parameters</a></li>
+<li class="toctree-l1"><a class="reference internal" href="parameter-references.html">2.6. パラメータリファレンス</a></li>
+<li class="toctree-l1"><a class="reference internal" href="outputs.html">2.7. Outputs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="custom-types.html">2.8. カスタムタイプ</a></li>
+<li class="toctree-l1"><a class="reference internal" href="expression-tool.html">2.9. Expression Tool</a></li>
+<li class="toctree-l1"><a class="reference internal" href="workflows.html">2.10. ワークフロー</a></li>
+<li class="toctree-l1"><a class="reference internal" href="operations.html">2.11. Operations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="environment-variables.html">2.12. 環境変数</a></li>
+<li class="toctree-l1"><a class="reference internal" href="using-containers.html">2.13. コンテナの使用</a></li>
+<li class="toctree-l1"><a class="reference internal" href="creating-files-at-runtime.html">2.14. Creating Files at Runtime</a></li>
+<li class="toctree-l1"><a class="reference internal" href="staging-input-files.html">2.15. 入力ファイルのステージング</a></li>
+<li class="toctree-l1"><a class="reference internal" href="best-practices.html">2.16. ベストプラクティス</a></li>
+<li class="toctree-l1"><a class="reference internal" href="file-formats.html">2.17. File Formats</a></li>
+<li class="toctree-l1"><a class="reference internal" href="metadata-and-authorship.html">2.18. メタデータと著者</a></li>
+<li class="toctree-l1"><a class="reference internal" href="specifying-software-requirements.html">2.19. ソフトウェア要求事項の指定</a></li>
+<li class="toctree-l1"><a class="reference internal" href="troubleshooting.html">2.20. トラブルシューティング</a></li>
+</ul>
+
+  </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item">
+
+
+
+<nav aria-label="Breadcrumb">
+  <ul class="bd-breadcrumbs">
+    
+    <li class="breadcrumb-item breadcrumb-home">
+      <a href="../index.html" class="nav-link" aria-label="Home">
+        <i class="fa-solid fa-home"></i>
+      </a>
+    </li>
+    
+    <li class="breadcrumb-item"><a href="index.html" class="nav-link"><span class="section-number">2. </span>トピックス</a></li>
+    
+    <li class="breadcrumb-item active" aria-current="page"><span...</li>
+  </ul>
+</nav>
+</div>
+      
+    </div>
+  
+  
+</div>
+</div>
+              
+              
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <section id="inputs">
+<h1><span class="section-number">2.4. </span>Inputs<a class="headerlink" href="#inputs" title="この見出しへのパーマリンク">#</a></h1>
+<section id="essential-input-parameters">
+<h2><span class="section-number">2.4.1. </span>必須入力パラメータ<a class="headerlink" href="#essential-input-parameters" title="この見出しへのパーマリンク">#</a></h2>
+<p>The <code class="docutils literal notranslate"><span class="pre">inputs</span></code> of a tool is a list of input parameters that control how to
+run the tool.  Each parameter has an <code class="docutils literal notranslate"><span class="pre">id</span></code> for the name of parameter, and
+<code class="docutils literal notranslate"><span class="pre">type</span></code> describing what types of values are valid for that parameter.</p>
+<p>Available primitive types are <em>string</em>, <em>boolean</em>, <em>int</em>, <em>long</em>, <em>float</em>, <em>double</em>,
+and <em>null</em>; complex types are <em>array</em> and <em>record</em>; in addition there are
+special types <em>File</em>, <em>Directory</em> and <em>Any</em>.</p>
+<p>次の例では、異なる型の入力パラメーターが、異なる方法でコマンドライン上に表示されることを示します。</p>
+<p>まず、以下の内容を含む<code class="docutils literal notranslate"><span class="pre">inp.cwl</span></code> というファイルを作成します：</p>
+<div class="literal-block-wrapper docutils container" id="inp-cwl">
+<div class="code-block-caption"><span class="caption-text"><code class="docutils literal notranslate"><span class="pre">inp.cwl</span></code></span><a class="headerlink" href="#inp-cwl" title="このコードへのパーマリンク">#</a></div>
+<div class="highlight-cwl notranslate"><div class="highlight"><pre><span></span><span class="c1">#!/usr/bin/env cwl-runner</span>
+<span class="nt">cwlVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">v1.2</span>
+<span class="nt">class</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">CommandLineTool</span>
+<span class="nt">baseCommand</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">echo</span>
+<span class="nt">inputs</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">example_flag</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">boolean</span>
+<span class="w">    </span><span class="nt">inputBinding</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">position</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1</span>
+<span class="w">      </span><span class="nt">prefix</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">-f</span>
+<span class="w">  </span><span class="nt">example_string</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">string</span>
+<span class="w">    </span><span class="nt">inputBinding</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">position</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">3</span>
+<span class="w">      </span><span class="nt">prefix</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">--example-string</span>
+<span class="w">  </span><span class="nt">example_int</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">int</span>
+<span class="w">    </span><span class="nt">inputBinding</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">position</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">2</span>
+<span class="w">      </span><span class="nt">prefix</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">-i</span>
+<span class="w">      </span><span class="nt">separate</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
+<span class="w">  </span><span class="nt">example_file</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">File?</span>
+<span class="w">    </span><span class="nt">inputBinding</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">prefix</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">--file=</span>
+<span class="w">      </span><span class="nt">separate</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
+<span class="w">      </span><span class="nt">position</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">4</span>
+
+<span class="nt">outputs</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[]</span>
+</pre></div>
+</div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">inp-job.yml</span></code> というファイルを作成します：</p>
+<div class="literal-block-wrapper docutils container" id="inp-job-yml">
+<div class="code-block-caption"><span class="caption-text"><code class="docutils literal notranslate"><span class="pre">inp-job.yml</span></code></span><a class="headerlink" href="#inp-job-yml" title="このコードへのパーマリンク">#</a></div>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">example_flag</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="nt">example_string</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">hello</span>
+<span class="nt">example_int</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">42</span>
+<span class="nt">example_file</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">class</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">File</span>
+<span class="w">  </span><span class="nt">path</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">whale.txt</span>
+</pre></div>
+</div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">注釈</p>
+<p>You can use <code class="docutils literal notranslate"><span class="pre">cwltool</span></code> to create a template input object. That saves you from having
+to type all the input parameters in an input object file:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>cwltool<span class="w"> </span>--make-template<span class="w"> </span>inp.cwl
+INFO<span class="w"> </span>/opt/hostedtoolcache/Python/3.9.18/x64/bin/cwltool<span class="w"> </span><span class="m">3</span>.1.20231114134824
+INFO<span class="w"> </span>Resolved<span class="w"> </span><span class="s1">&#39;inp.cwl&#39;</span><span class="w"> </span>to<span class="w"> </span><span class="s1">&#39;file:///home/runner/work/user_guide/user_guide/src/_includes/cwl/inputs/inp.cwl&#39;</span>
+example_string:<span class="w"> </span>a_string<span class="w">  </span><span class="c1"># type &#39;string&#39;</span>
+example_int:<span class="w"> </span><span class="m">0</span><span class="w">  </span><span class="c1"># type &#39;int&#39;</span>
+example_flag:<span class="w"> </span><span class="nb">false</span><span class="w">  </span><span class="c1"># type &#39;boolean&#39;</span>
+example_file:<span class="w">  </span><span class="c1"># type &#39;File&#39; (optional)</span>
+<span class="w">    </span>class:<span class="w"> </span>File
+<span class="w">    </span>path:<span class="w"> </span>a/file/path
+</pre></div>
+</div>
+<p>You can redirect the output to a file, i.e. <code class="docutils literal notranslate"><span class="pre">cwltool</span> <span class="pre">--make-template</span> <span class="pre">inp.cwl</span> <span class="pre">&gt;</span> <span class="pre">inp-job.yml</span></code>,
+and then modify the default values with your desired input values.</p>
+</div>
+<p>Notice that &quot;example_file&quot;, as a <code class="docutils literal notranslate"><span class="pre">File</span></code> type, must be provided as an
+object with the fields <code class="docutils literal notranslate"><span class="pre">class:</span> <span class="pre">File</span></code> and <code class="docutils literal notranslate"><span class="pre">path</span></code>.</p>
+<p>次に、コマンドラインで<code class="docutils literal notranslate"><span class="pre">touch</span> <span class="pre">whale.txt</span></code> と入力し、<a class="reference external" href="http://www.linfo.org/touch.html">touch</a>をコマンドを使用して whale.txt を作成します。</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>touch<span class="w"> </span>whale.txt
+</pre></div>
+</div>
+<p>Now invoke <code class="docutils literal notranslate"><span class="pre">cwltool</span></code> with the tool description and the input object on the command line,
+using the command <code class="docutils literal notranslate"><span class="pre">cwltool</span> <span class="pre">inp.cwl</span> <span class="pre">inp-job.yml</span></code>. The following boxed text describes these
+two commands and the expected output from the command line:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>cwltool<span class="w"> </span>inp.cwl<span class="w"> </span>inp-job.yml
+INFO<span class="w"> </span>/opt/hostedtoolcache/Python/3.9.18/x64/bin/cwltool<span class="w"> </span><span class="m">3</span>.1.20231114134824
+INFO<span class="w"> </span>Resolved<span class="w"> </span><span class="s1">&#39;inp.cwl&#39;</span><span class="w"> </span>to<span class="w"> </span><span class="s1">&#39;file:///home/runner/work/user_guide/user_guide/src/_includes/cwl/inputs/inp.cwl&#39;</span>
+INFO<span class="w"> </span><span class="o">[</span>job<span class="w"> </span>inp.cwl<span class="o">]</span><span class="w"> </span>/tmp/c8enoz1n$<span class="w"> </span><span class="nb">echo</span><span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>-f<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>-i42<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>--example-string<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>hello<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>--file<span class="o">=</span>/tmp/atjzppap/stg7018abbf-7b4c-4fa2-812a-0c5c6b6314b4/whale.txt
+-f<span class="w"> </span>-i42<span class="w"> </span>--example-string<span class="w"> </span>hello<span class="w"> </span>--file<span class="o">=</span>/tmp/atjzppap/stg7018abbf-7b4c-4fa2-812a-0c5c6b6314b4/whale.txt
+INFO<span class="w"> </span><span class="o">[</span>job<span class="w"> </span>inp.cwl<span class="o">]</span><span class="w"> </span>completed<span class="w"> </span>success
+<span class="o">{}</span>INFO<span class="w"> </span>Final<span class="w"> </span>process<span class="w"> </span>status<span class="w"> </span>is<span class="w"> </span>success
+</pre></div>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p class="rubric">Where did those `/tmp` paths come from?</p>
+<p>The CWL reference runner (cwltool) and other runners create temporary
+directories with symbolic (&quot;soft&quot;) links to your input files to ensure that
+the tools aren't accidentally accessing files that were not explicitly
+specified</p>
+</div>
+<p>The field <a class="reference external" href="https://w3id.org/cwl/CommandLineTool.html#Input_binding"><code class="docutils literal notranslate"><span class="pre">inputBinding</span></code></a> is optional and indicates whether and how the
+input parameter should appear on the tool's command line.  If
+<code class="docutils literal notranslate"><span class="pre">inputBinding</span></code> is missing, the parameter does not appear on the command
+line.  Let's look at each example in detail.</p>
+<div class="highlight-cwl notranslate"><div class="highlight"><pre><span></span><span class="nt">example_flag</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">boolean</span>
+<span class="w">  </span><span class="nt">inputBinding</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">position</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1</span>
+<span class="w">    </span><span class="nt">prefix</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">-f</span>
+</pre></div>
+</div>
+<p>ブール型はフラグとして扱われます。  入力パラメータ &quot;example_flag &quot;が &quot;true &quot;の場合、コマンドラインに<code class="docutils literal notranslate"><span class="pre">prefix</span></code> が追加されます。  falseの場合、フラグは付加されません。</p>
+<div class="highlight-cwl notranslate"><div class="highlight"><pre><span></span><span class="nt">example_string</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">string</span>
+<span class="w">  </span><span class="nt">inputBinding</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">position</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">3</span>
+<span class="w">    </span><span class="nt">prefix</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">--example-string</span>
+</pre></div>
+</div>
+<p>文字列型は、コマンドライン上ではリテラル値として与えられます。  <code class="docutils literal notranslate"> <span class="pre">prefix</span></code> はオプションです。与えられた場合、コマンドライン上のパラメータの前に別の引数として与えられます。  上の例では、<code class="docutils literal notranslate"><span class="pre">--example-string</span> <span class="pre">hello</span></code> と与えられます。</p>
+<div class="highlight-cwl notranslate"><div class="highlight"><pre><span></span><span class="nt">example_int</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">int</span>
+<span class="w">  </span><span class="nt">inputBinding</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">position</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">2</span>
+<span class="w">    </span><span class="nt">prefix</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">-i</span>
+<span class="w">    </span><span class="nt">separate</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
+</pre></div>
+</div>
+<p>Integer (and floating point) types appear on the command line with
+decimal text representation.  When the option <code class="docutils literal notranslate"><span class="pre">separate</span></code> is false (the
+default value is true), the prefix and value are combined into a single
+argument.  In the example above, this is rendered as <code class="docutils literal notranslate"><span class="pre">-i42</span></code>.</p>
+<div class="highlight-cwl notranslate"><div class="highlight"><pre><span></span><span class="nt">example_file</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">File?</span>
+<span class="w">  </span><span class="nt">inputBinding</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">prefix</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">--file=</span>
+<span class="w">    </span><span class="nt">separate</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
+<span class="w">    </span><span class="nt">position</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">4</span>
+</pre></div>
+</div>
+<p>File types appear on the command line as the path to the file.  When the
+parameter type ends with a question mark <code class="docutils literal notranslate"><span class="pre">?</span></code> it indicates that the
+parameter is optional.  In the example above, this is rendered as
+<code class="docutils literal notranslate"><span class="pre">--file=/tmp/random/path/whale.txt</span></code>.  However, if the &quot;example_file&quot;
+parameter were not provided in the input, nothing would appear on the
+command line.</p>
+<p>入力ファイルは読み取り専用です。  入力ファイルを更新したい場合は、<a class="reference internal" href="staging-input-files.html"><span class="std std-doc">まず出力ディレクトリにコピーする</span></a>必要があります。</p>
+<p>The value of <code class="docutils literal notranslate"><span class="pre">position</span></code> is used to determine where parameter should
+appear on the command line.  Positions are relative to one another, not
+absolute.  As a result, positions do not have to be sequential, three
+parameters with positions 1, 3, 5 will result in the same command
+line as 1, 2, 3.  More than one parameter can have the same position
+(ties are broken using the parameter name), and the position field itself
+is optional.  The default position is 0.</p>
+<p><code class="docutils literal notranslate"><span class="pre">baseCommand</span></code> フィールドは、常にパラメータの前の最終コマンド行に表示されます。</p>
+</section>
+<section id="array-inputs">
+<h2><span class="section-number">2.4.2. </span>配列入力<a class="headerlink" href="#array-inputs" title="この見出しへのパーマリンク">#</a></h2>
+<p>It is easy to add arrays of input parameters represented to the command
+line. There are two ways to specify an array parameter. First is to provide
+<code class="docutils literal notranslate"><span class="pre">type</span></code> field with <code class="docutils literal notranslate"><span class="pre">type:</span> <span class="pre">array</span></code> and <code class="docutils literal notranslate"><span class="pre">items</span></code> defining the valid data types
+that may appear in the array. Alternatively, brackets <code class="docutils literal notranslate"><span class="pre">[]</span></code> may be added after
+the type name to indicate that input parameter is array of that type.</p>
+<div class="literal-block-wrapper docutils container" id="array-inputs-cwl">
+<div class="code-block-caption"><span class="caption-text"><code class="docutils literal notranslate"><span class="pre">array-inputs.cwl</span></code></span><a class="headerlink" href="#array-inputs-cwl" title="このコードへのパーマリンク">#</a></div>
+<div class="highlight-cwl notranslate"><div class="highlight"><pre><span></span><span class="c1">#!/usr/bin/env cwl-runner</span>
+<span class="nt">cwlVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">v1.2</span>
+<span class="nt">class</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">CommandLineTool</span>
+<span class="nt">inputs</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">filesA</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">string[]</span>
+<span class="w">    </span><span class="nt">inputBinding</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">prefix</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">-A</span>
+<span class="w">      </span><span class="nt">position</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1</span>
+
+<span class="w">  </span><span class="nt">filesB</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">type</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">array</span>
+<span class="w">      </span><span class="nt">items</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">string</span>
+<span class="w">      </span><span class="nt">inputBinding</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">prefix</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">-B=</span>
+<span class="w">        </span><span class="nt">separate</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
+<span class="w">    </span><span class="nt">inputBinding</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">position</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">2</span>
+
+<span class="w">  </span><span class="nt">filesC</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">string[]</span>
+<span class="w">    </span><span class="nt">inputBinding</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">prefix</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">-C=</span>
+<span class="w">      </span><span class="nt">itemSeparator</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;,&quot;</span>
+<span class="w">      </span><span class="nt">separate</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
+<span class="w">      </span><span class="nt">position</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">4</span>
+
+<span class="nt">outputs</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">example_out</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">stdout</span>
+<span class="nt">stdout</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">output.txt</span>
+<span class="nt">baseCommand</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">echo</span>
+</pre></div>
+</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="array-inputs-job-yml">
+<div class="code-block-caption"><span class="caption-text"><code class="docutils literal notranslate"><span class="pre">array-inputs-job.yml</span></code></span><a class="headerlink" href="#array-inputs-job-yml" title="このコードへのパーマリンク">#</a></div>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">filesA</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="nv">one</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">two</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">three</span><span class="p p-Indicator">]</span>
+<span class="nt">filesB</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="nv">four</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">five</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">six</span><span class="p p-Indicator">]</span>
+<span class="nt">filesC</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="nv">seven</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">eight</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">nine</span><span class="p p-Indicator">]</span>
+</pre></div>
+</div>
+</div>
+<p>Now invoke <code class="docutils literal notranslate"><span class="pre">cwltool</span></code> providing the tool description and the input object
+on the command line:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>cwltool<span class="w"> </span>array-inputs.cwl<span class="w"> </span>array-inputs-job.yml
+INFO<span class="w"> </span>/opt/hostedtoolcache/Python/3.9.18/x64/bin/cwltool<span class="w"> </span><span class="m">3</span>.1.20231114134824
+INFO<span class="w"> </span>Resolved<span class="w"> </span><span class="s1">&#39;array-inputs.cwl&#39;</span><span class="w"> </span>to<span class="w"> </span><span class="s1">&#39;file:///home/runner/work/user_guide/user_guide/src/_includes/cwl/inputs/array-inputs.cwl&#39;</span>
+INFO<span class="w"> </span><span class="o">[</span>job<span class="w"> </span>array-inputs.cwl<span class="o">]</span><span class="w"> </span>/tmp/5qnqyz8e$<span class="w"> </span><span class="nb">echo</span><span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>-A<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>one<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>two<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>three<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>-B<span class="o">=</span>four<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>-B<span class="o">=</span>five<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>-B<span class="o">=</span>six<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>-C<span class="o">=</span>seven,eight,nine<span class="w"> </span>&gt;<span class="w"> </span>/tmp/5qnqyz8e/output.txt
+INFO<span class="w"> </span><span class="o">[</span>job<span class="w"> </span>array-inputs.cwl<span class="o">]</span><span class="w"> </span>completed<span class="w"> </span>success
+<span class="o">{</span>
+<span class="w">    </span><span class="s2">&quot;example_out&quot;</span>:<span class="w"> </span><span class="o">{</span>
+<span class="w">        </span><span class="s2">&quot;location&quot;</span>:<span class="w"> </span><span class="s2">&quot;file:///home/runner/work/user_guide/user_guide/src/_includes/cwl/inputs/output.txt&quot;</span>,
+<span class="w">        </span><span class="s2">&quot;basename&quot;</span>:<span class="w"> </span><span class="s2">&quot;output.txt&quot;</span>,
+<span class="w">        </span><span class="s2">&quot;class&quot;</span>:<span class="w"> </span><span class="s2">&quot;File&quot;</span>,
+<span class="w">        </span><span class="s2">&quot;checksum&quot;</span>:<span class="w"> </span><span class="s2">&quot;sha1</span><span class="nv">$91038</span><span class="s2">e29452bc77dcd21edef90a15075f3071540&quot;</span>,
+<span class="w">        </span><span class="s2">&quot;size&quot;</span>:<span class="w"> </span><span class="m">60</span>,
+<span class="w">        </span><span class="s2">&quot;path&quot;</span>:<span class="w"> </span><span class="s2">&quot;/home/runner/work/user_guide/user_guide/src/_includes/cwl/inputs/output.txt&quot;</span>
+<span class="w">    </span><span class="o">}</span>
+<span class="o">}</span>INFO<span class="w"> </span>Final<span class="w"> </span>process<span class="w"> </span>status<span class="w"> </span>is<span class="w"> </span>success
+</pre></div>
+</div>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>cat<span class="w"> </span>output.txt
+<span class="go">-A one two three -B=four -B=five -B=six -C=seven,eight,nine</span>
+</pre></div>
+</div>
+<p>The <code class="docutils literal notranslate"><span class="pre">inputBinding</span></code> can appear either on the outer array parameter definition
+or the inner array element definition, and these produce different behavior when
+constructing the command line, as shown above.
+In addition, the <code class="docutils literal notranslate"><span class="pre">itemSeparator</span></code> field, if provided, specifies that array
+values should be concatenated into a single argument separated by the item
+separator string.</p>
+<p>Note that the arrays of inputs are specified inside square brackets <code class="docutils literal notranslate"><span class="pre">[]</span></code> in <code class="docutils literal notranslate"><span class="pre">array-inputs-job.yml</span></code>. Arrays can also be expressed over multiple lines, where
+array values that are not defined with an associated key are marked by a leading <code class="docutils literal notranslate"><span class="pre">-</span></code>.
+This will be demonstrated in the next lesson
+and is discussed in more detail in the <a class="reference internal" href="yaml-guide.html#arrays"><span class="std std-ref">YAML Guide</span></a>.
+You can specify arrays of arrays, arrays of records, and other complex types.</p>
+</section>
+<section id="inclusive-and-exclusive-inputs">
+<h2><span class="section-number">2.4.3. </span>Inclusive and Exclusive Inputs<a class="headerlink" href="#inclusive-and-exclusive-inputs" title="この見出しへのパーマリンク">#</a></h2>
+<p>Sometimes an underlying tool has several arguments that must be provided
+together (they are dependent) or several arguments that cannot be provided
+together (they are exclusive).  You can use records and type unions to group
+parameters together to describe these two conditions.</p>
+<div class="literal-block-wrapper docutils container" id="record-cwl">
+<div class="code-block-caption"><span class="caption-text"><code class="docutils literal notranslate"><span class="pre">record.cwl</span></code></span><a class="headerlink" href="#record-cwl" title="このコードへのパーマリンク">#</a></div>
+<div class="highlight-cwl notranslate"><div class="highlight"><pre><span></span><span class="c1">#!/usr/bin/env cwl-runner</span>
+<span class="nt">cwlVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">v1.2</span>
+<span class="nt">class</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">CommandLineTool</span>
+<span class="nt">inputs</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">dependent_parameters</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">type</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">record</span>
+<span class="w">      </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">dependent_parameters</span>
+<span class="w">      </span><span class="nt">fields</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">itemA</span><span class="p">:</span>
+<span class="w">          </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">string</span>
+<span class="w">          </span><span class="nt">inputBinding</span><span class="p">:</span>
+<span class="w">            </span><span class="nt">prefix</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">-A</span>
+<span class="w">        </span><span class="nt">itemB</span><span class="p">:</span>
+<span class="w">          </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">string</span>
+<span class="w">          </span><span class="nt">inputBinding</span><span class="p">:</span>
+<span class="w">            </span><span class="nt">prefix</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">-B</span>
+<span class="w">  </span><span class="nt">exclusive_parameters</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">type</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">record</span>
+<span class="w">        </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">itemC</span>
+<span class="w">        </span><span class="nt">fields</span><span class="p">:</span>
+<span class="w">          </span><span class="nt">itemC</span><span class="p">:</span>
+<span class="w">            </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">string</span>
+<span class="w">            </span><span class="nt">inputBinding</span><span class="p">:</span>
+<span class="w">              </span><span class="nt">prefix</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">-C</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">record</span>
+<span class="w">        </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">itemD</span>
+<span class="w">        </span><span class="nt">fields</span><span class="p">:</span>
+<span class="w">          </span><span class="nt">itemD</span><span class="p">:</span>
+<span class="w">            </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">string</span>
+<span class="w">            </span><span class="nt">inputBinding</span><span class="p">:</span>
+<span class="w">              </span><span class="nt">prefix</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">-D</span>
+<span class="nt">outputs</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">example_out</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">stdout</span>
+<span class="nt">stdout</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">output.txt</span>
+<span class="nt">baseCommand</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">echo</span>
+</pre></div>
+</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="record-job1-yml">
+<div class="code-block-caption"><span class="caption-text"><code class="docutils literal notranslate"><span class="pre">record-job1.yml</span></code></span><a class="headerlink" href="#record-job1-yml" title="このコードへのパーマリンク">#</a></div>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">dependent_parameters</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">itemA</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">one</span>
+<span class="nt">exclusive_parameters</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">itemC</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">three</span>
+</pre></div>
+</div>
+</div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>cwltool<span class="w"> </span>record.cwl<span class="w"> </span>record-job1.yml
+INFO<span class="w"> </span>/opt/hostedtoolcache/Python/3.9.18/x64/bin/cwltool<span class="w"> </span><span class="m">3</span>.1.20231114134824
+INFO<span class="w"> </span>Resolved<span class="w"> </span><span class="s1">&#39;record.cwl&#39;</span><span class="w"> </span>to<span class="w"> </span><span class="s1">&#39;file:///home/runner/work/user_guide/user_guide/src/_includes/cwl/inputs/record.cwl&#39;</span>
+ERROR<span class="w"> </span>Workflow<span class="w"> </span>error,<span class="w"> </span>try<span class="w"> </span>again<span class="w"> </span>with<span class="w"> </span>--debug<span class="w"> </span><span class="k">for</span><span class="w"> </span>more<span class="w"> </span>information:
+Invalid<span class="w"> </span>job<span class="w"> </span>input<span class="w"> </span>record:
+<span class="hll">record-job1.yml:1:1:<span class="w"> </span>the<span class="w"> </span><span class="s1">&#39;dependent_parameters&#39;</span><span class="w"> </span>field<span class="w"> </span>is<span class="w"> </span>not<span class="w"> </span>valid<span class="w"> </span>because
+</span><span class="hll"><span class="w">                       </span>missing<span class="w"> </span>required<span class="w"> </span>field<span class="w"> </span><span class="s1">&#39;itemB&#39;</span>
+</span></pre></div>
+</div>
+<p>最初の例では、<code class="docutils literal notranslate"><span class="pre">itemB</span></code> も与えずに、<code class="docutils literal notranslate"><span class="pre">itemA</span></code> を与えることはできません。</p>
+<div class="literal-block-wrapper docutils container" id="record-job2-yml">
+<div class="code-block-caption"><span class="caption-text"><code class="docutils literal notranslate"><span class="pre">record-job2.yml</span></code></span><a class="headerlink" href="#record-job2-yml" title="このコードへのパーマリンク">#</a></div>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">dependent_parameters</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">itemA</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">one</span>
+<span class="w">  </span><span class="nt">itemB</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">two</span>
+<span class="nt">exclusive_parameters</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">itemC</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">three</span>
+<span class="w">  </span><span class="nt">itemD</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">four</span>
+</pre></div>
+</div>
+</div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>cwltool<span class="w"> </span>record.cwl<span class="w"> </span>record-job2.yml
+INFO<span class="w"> </span>/opt/hostedtoolcache/Python/3.9.18/x64/bin/cwltool<span class="w"> </span><span class="m">3</span>.1.20231114134824
+INFO<span class="w"> </span>Resolved<span class="w"> </span><span class="s1">&#39;record.cwl&#39;</span><span class="w"> </span>to<span class="w"> </span><span class="s1">&#39;file:///home/runner/work/user_guide/user_guide/src/_includes/cwl/inputs/record.cwl&#39;</span>
+<span class="hll">record-job2.yml:6:3:<span class="w"> </span>Warning:<span class="w"> </span>invalid<span class="w"> </span>field<span class="w"> </span><span class="s1">&#39;itemD&#39;</span>,<span class="w"> </span>expected<span class="w"> </span>one<span class="w"> </span>of:<span class="w"> </span><span class="s1">&#39;itemC&#39;</span>
+</span>WARNING<span class="w"> </span>record-job2.yml:6:3:<span class="w"> </span>Warning:<span class="w"> </span>invalid<span class="w"> </span>field<span class="w"> </span><span class="s1">&#39;itemD&#39;</span>,<span class="w"> </span>expected<span class="w"> </span>one<span class="w"> </span>of:<span class="w"> </span><span class="s1">&#39;itemC&#39;</span>
+INFO<span class="w"> </span><span class="o">[</span>job<span class="w"> </span>record.cwl<span class="o">]</span><span class="w"> </span>/tmp/agb3kmru$<span class="w"> </span><span class="nb">echo</span><span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>-A<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>one<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>-B<span class="w"> </span><span class="se">\</span>
+<span class="hll"><span class="w">    </span>two<span class="w"> </span><span class="se">\</span>
+</span><span class="hll"><span class="w">    </span>-C<span class="w"> </span><span class="se">\</span>
+</span><span class="w">    </span>three<span class="w"> </span>&gt;<span class="w"> </span>/tmp/agb3kmru/output.txt
+INFO<span class="w"> </span><span class="o">[</span>job<span class="w"> </span>record.cwl<span class="o">]</span><span class="w"> </span>completed<span class="w"> </span>success
+<span class="o">{</span>
+<span class="w">    </span><span class="s2">&quot;example_out&quot;</span>:<span class="w"> </span><span class="o">{</span>
+<span class="w">        </span><span class="s2">&quot;location&quot;</span>:<span class="w"> </span><span class="s2">&quot;file:///home/runner/work/user_guide/user_guide/src/_includes/cwl/inputs/output.txt&quot;</span>,
+<span class="w">        </span><span class="s2">&quot;basename&quot;</span>:<span class="w"> </span><span class="s2">&quot;output.txt&quot;</span>,
+<span class="w">        </span><span class="s2">&quot;class&quot;</span>:<span class="w"> </span><span class="s2">&quot;File&quot;</span>,
+<span class="w">        </span><span class="s2">&quot;checksum&quot;</span>:<span class="w"> </span><span class="s2">&quot;sha1</span><span class="nv">$329</span><span class="s2">fe3b598fed0dfd40f511522eaf386edb2d077&quot;</span>,
+<span class="w">        </span><span class="s2">&quot;size&quot;</span>:<span class="w"> </span><span class="m">23</span>,
+<span class="w">        </span><span class="s2">&quot;path&quot;</span>:<span class="w"> </span><span class="s2">&quot;/home/runner/work/user_guide/user_guide/src/_includes/cwl/inputs/output.txt&quot;</span>
+<span class="w">    </span><span class="o">}</span>
+<span class="hll"><span class="o">}</span>INFO<span class="w"> </span>Final<span class="w"> </span>process<span class="w"> </span>status<span class="w"> </span>is<span class="w"> </span>success
+</span></pre></div>
+</div>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>cat<span class="w"> </span>output.txt
+<span class="go">-A one -B two -C three</span>
+</pre></div>
+</div>
+<p>2番目の例では、<code class="docutils literal notranslate"><span class="pre">itemC</span></code> と<code class="docutils literal notranslate"><span class="pre">itemD</span></code> が排他的であるため、最初に一致した項目 (<code class="docutils literal notranslate"><span class="pre">itemC</span></code>) のみがコマンドラインに追加され、残りの項目 (<code class="docutils literal notranslate"><span class="pre">itemD</span></code>) は無視されます。</p>
+<div class="literal-block-wrapper docutils container" id="record-job3-yml">
+<div class="code-block-caption"><span class="caption-text"><code class="docutils literal notranslate"><span class="pre">record-job3.yml</span></code></span><a class="headerlink" href="#record-job3-yml" title="このコードへのパーマリンク">#</a></div>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">dependent_parameters</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">itemA</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">one</span>
+<span class="w">  </span><span class="nt">itemB</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">two</span>
+<span class="nt">exclusive_parameters</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">itemD</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">four</span>
+</pre></div>
+</div>
+</div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>cwltool<span class="w"> </span>record.cwl<span class="w"> </span>record-job3.yml
+INFO<span class="w"> </span>/opt/hostedtoolcache/Python/3.9.18/x64/bin/cwltool<span class="w"> </span><span class="m">3</span>.1.20231114134824
+INFO<span class="w"> </span>Resolved<span class="w"> </span><span class="s1">&#39;record.cwl&#39;</span><span class="w"> </span>to<span class="w"> </span><span class="s1">&#39;file:///home/runner/work/user_guide/user_guide/src/_includes/cwl/inputs/record.cwl&#39;</span>
+INFO<span class="w"> </span><span class="o">[</span>job<span class="w"> </span>record.cwl<span class="o">]</span><span class="w"> </span>/tmp/u9iq8je2$<span class="w"> </span><span class="nb">echo</span><span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>-A<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>one<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>-B<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>two<span class="w"> </span><span class="se">\</span>
+<span class="hll"><span class="w">    </span>-D<span class="w"> </span><span class="se">\</span>
+</span><span class="hll"><span class="w">    </span>four<span class="w"> </span>&gt;<span class="w"> </span>/tmp/u9iq8je2/output.txt
+</span>INFO<span class="w"> </span><span class="o">[</span>job<span class="w"> </span>record.cwl<span class="o">]</span><span class="w"> </span>completed<span class="w"> </span>success
+<span class="o">{</span>
+<span class="w">    </span><span class="s2">&quot;example_out&quot;</span>:<span class="w"> </span><span class="o">{</span>
+<span class="w">        </span><span class="s2">&quot;location&quot;</span>:<span class="w"> </span><span class="s2">&quot;file:///home/runner/work/user_guide/user_guide/src/_includes/cwl/inputs/output.txt&quot;</span>,
+<span class="w">        </span><span class="s2">&quot;basename&quot;</span>:<span class="w"> </span><span class="s2">&quot;output.txt&quot;</span>,
+<span class="w">        </span><span class="s2">&quot;class&quot;</span>:<span class="w"> </span><span class="s2">&quot;File&quot;</span>,
+<span class="w">        </span><span class="s2">&quot;checksum&quot;</span>:<span class="w"> </span><span class="s2">&quot;sha1</span><span class="nv">$77</span><span class="s2">f572b28e441240a5e30eb14f1d300bcc13a3b4&quot;</span>,
+<span class="w">        </span><span class="s2">&quot;size&quot;</span>:<span class="w"> </span><span class="m">22</span>,
+<span class="w">        </span><span class="s2">&quot;path&quot;</span>:<span class="w"> </span><span class="s2">&quot;/home/runner/work/user_guide/user_guide/src/_includes/cwl/inputs/output.txt&quot;</span>
+<span class="w">    </span><span class="o">}</span>
+<span class="o">}</span>INFO<span class="w"> </span>Final<span class="w"> </span>process<span class="w"> </span>status<span class="w"> </span>is<span class="w"> </span>success
+</pre></div>
+</div>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>cat<span class="w"> </span>output.txt
+<span class="go">-A one -B two -D four</span>
+</pre></div>
+</div>
+<p>3番目の例では、<code class="docutils literal notranslate"><span class="pre">itemD</span></code> のみが提供されているので、コマンドラインに表示されます。</p>
+<section id="exclusive-input-parameters-with-expressions">
+<h3><span class="section-number">2.4.3.1. </span>Exclusive Input Parameters with Expressions<a class="headerlink" href="#exclusive-input-parameters-with-expressions" title="この見出しへのパーマリンク">#</a></h3>
+<p>If you use exclusive input parameters and reference them in expressions, you
+need to be aware that the <code class="docutils literal notranslate"><span class="pre">inputs</span></code> JavaScript object will contain one of the
+possible, mutually-exclusive input values. Because the types of these exclusive
+values may differ, you may need to check which type is in use when you
+reference the properties of the <code class="docutils literal notranslate"><span class="pre">input</span></code> object.</p>
+<p>Let's use an example that contains an exclusive <code class="docutils literal notranslate"><span class="pre">file_format</span></code> input parameter
+that accepts <code class="docutils literal notranslate"><span class="pre">null</span></code> (i.e. no value provided), or any value from an enum.</p>
+<div class="literal-block-wrapper docutils container" id="exclusive-parameter-expressions-cwl">
+<div class="code-block-caption"><span class="caption-text"><code class="docutils literal notranslate"><span class="pre">exclusive-parameter-expressions.cwl</span></code></span><a class="headerlink" href="#exclusive-parameter-expressions-cwl" title="このコードへのパーマリンク">#</a></div>
+<div class="highlight-cwl notranslate"><div class="highlight"><pre><span></span><span class="nt">cwlVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">v1.2</span>
+<span class="nt">class</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">CommandLineTool</span>
+
+<span class="nt">inputs</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">file_format</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">type</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&#39;null&#39;</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">format_choices</span>
+<span class="w">        </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">enum</span>
+<span class="w">        </span><span class="nt">symbols</span><span class="p">:</span>
+<span class="w">          </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">auto</span>
+<span class="w">          </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">fasta</span>
+<span class="w">          </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">fastq</span>
+<span class="w">          </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">fasta.gz</span>
+<span class="w">          </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">fastq.gz</span>
+<span class="w">        </span><span class="nt">inputBinding</span><span class="p">:</span>
+<span class="w">          </span><span class="nt">position</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0</span>
+<span class="w">          </span><span class="nt">prefix</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;--format&#39;</span>
+<span class="nt">outputs</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">text_output</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">string</span>
+<span class="w">    </span><span class="nt">outputBinding</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">outputEval</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">$(inputs.file_format)</span>
+
+<span class="nt">baseCommand</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;true&#39;</span>
+</pre></div>
+</div>
+</div>
+<p>Note how the JavaScript expression uses the value of the exclusive input
+parameter without taking into consideration a <code class="docutils literal notranslate"><span class="pre">null</span></code> value. If you provide a
+valid value, such as <code class="docutils literal notranslate"><span class="pre">fasta</span></code> (one of the possible values of the enum), your
+command should execute successfully:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>cwltool<span class="w"> </span>exclusive-parameter-expressions.cwl<span class="w"> </span>--file_format<span class="w"> </span>fasta
+INFO<span class="w"> </span>/opt/hostedtoolcache/Python/3.9.18/x64/bin/cwltool<span class="w"> </span><span class="m">3</span>.1.20231114134824
+INFO<span class="w"> </span>Resolved<span class="w"> </span><span class="s1">&#39;exclusive-parameter-expressions.cwl&#39;</span><span class="w"> </span>to<span class="w"> </span><span class="s1">&#39;file:///home/runner/work/user_guide/user_guide/src/_includes/cwl/inputs/exclusive-parameter-expressions.cwl&#39;</span>
+INFO<span class="w"> </span><span class="o">[</span>job<span class="w"> </span>exclusive-parameter-expressions.cwl<span class="o">]</span><span class="w"> </span>/tmp/oi7i68b0$<span class="w"> </span><span class="nb">true</span><span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>--format<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>fasta
+INFO<span class="w"> </span><span class="o">[</span>job<span class="w"> </span>exclusive-parameter-expressions.cwl<span class="o">]</span><span class="w"> </span>completed<span class="w"> </span>success
+<span class="o">{</span>
+<span class="w">    </span><span class="s2">&quot;text_output&quot;</span>:<span class="w"> </span><span class="s2">&quot;fasta&quot;</span>
+<span class="o">}</span>INFO<span class="w"> </span>Final<span class="w"> </span>process<span class="w"> </span>status<span class="w"> </span>is<span class="w"> </span>success
+</pre></div>
+</div>
+<p>However, if you do not provide any input value, then <code class="docutils literal notranslate"><span class="pre">file_format</span></code> will be
+evaluated to <code class="docutils literal notranslate"><span class="pre">null</span></code>, which does not match the expected type for the
+output field (a <code class="docutils literal notranslate"><span class="pre">string</span></code>), resulting in failure when running your workflow.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>cwltool<span class="w"> </span>exclusive-parameter-expressions.cwl
+INFO<span class="w"> </span>/opt/hostedtoolcache/Python/3.9.18/x64/bin/cwltool<span class="w"> </span><span class="m">3</span>.1.20231114134824
+INFO<span class="w"> </span>Resolved<span class="w"> </span><span class="s1">&#39;exclusive-parameter-expressions.cwl&#39;</span><span class="w"> </span>to<span class="w"> </span><span class="s1">&#39;file:///home/runner/work/user_guide/user_guide/src/_includes/cwl/inputs/exclusive-parameter-expressions.cwl&#39;</span>
+INFO<span class="w"> </span><span class="o">[</span>job<span class="w"> </span>exclusive-parameter-expressions.cwl<span class="o">]</span><span class="w"> </span>/tmp/3qqk6bhn$<span class="w"> </span><span class="nb">true</span>
+<span class="hll">ERROR<span class="w"> </span><span class="o">[</span>job<span class="w"> </span>exclusive-parameter-expressions.cwl<span class="o">]</span><span class="w"> </span>Job<span class="w"> </span>error:
+</span><span class="hll">Error<span class="w"> </span>validating<span class="w"> </span>output<span class="w"> </span>record.<span class="w"> </span>the<span class="w"> </span><span class="s1">&#39;text_output&#39;</span><span class="w"> </span>field<span class="w"> </span>is<span class="w"> </span>not<span class="w"> </span>valid<span class="w"> </span>because
+</span><span class="hll"><span class="w">  </span>the<span class="w"> </span>value<span class="w"> </span>is<span class="w"> </span>not<span class="w"> </span>string
+</span><span class="hll"><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="o">{</span>
+</span><span class="hll"><span class="w">    </span><span class="s2">&quot;text_output&quot;</span>:<span class="w"> </span>null
+</span><span class="hll"><span class="o">}</span>
+</span>WARNING<span class="w"> </span><span class="o">[</span>job<span class="w"> </span>exclusive-parameter-expressions.cwl<span class="o">]</span><span class="w"> </span>completed<span class="w"> </span>permanentFail
+<span class="o">{}</span>WARNING<span class="w"> </span>Final<span class="w"> </span>process<span class="w"> </span>status<span class="w"> </span>is<span class="w"> </span>permanentFail
+</pre></div>
+</div>
+<p>To correct it, you should explicitly handle the possibility of a <code class="docutils literal notranslate"><span class="pre">null</span></code> value.
+For example, the expression could be changed to <code class="docutils literal notranslate"><span class="pre">$(inputs.file_format</span> <span class="pre">||</span> <span class="pre">'auto')</span></code>, to have a default value <code class="docutils literal notranslate"><span class="pre">&quot;auto&quot;</span></code> if none was provided in the command
+line or job input file.</p>
+<p>Here, the boolean “or” operator <code class="docutils literal notranslate"><span class="pre">||</span></code> in JavaScript is used for its
+<em>short-circuiting</em> property. If <code class="docutils literal notranslate"><span class="pre">inputs.file_format</span></code> is “true” in a boolean
+context (e.g. a valid non-empty string from the enum), the evaluation of the
+expression stops at the first operand of <code class="docutils literal notranslate"><span class="pre">||</span></code>; it “short-circuits”. If however
+<code class="docutils literal notranslate"><span class="pre">inputs.file_format</span></code> is <code class="docutils literal notranslate"><span class="pre">null</span></code>, the whole expression’s value becomes that of
+the second operand, which is why a reasonable default can be provided there.</p>
+</section>
+</section>
+</section>
+
+
+                </article>
+              
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  <!-- Previous / next buttons -->
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="expressions.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">前へ</p>
+        <p class="prev-next-title"><span class="section-number">2.3. </span>Expressions</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="additional-arguments-and-parameters.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">次へ</p>
+        <p class="prev-next-title"><span class="section-number">2.5. </span>Additional Arguments and Parameters</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> On this page
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#essential-input-parameters">2.4.1. 必須入力パラメータ</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#array-inputs">2.4.2. 配列入力</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#inclusive-and-exclusive-inputs">2.4.3. Inclusive and Exclusive Inputs</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exclusive-input-parameters-with-expressions">2.4.3.1. Exclusive Input Parameters with Expressions</a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+  <div class="sidebar-secondary-item">
+  
+  <div class="tocsection editthispage">
+    <a href="https://github.com/common-workflow-language/user_guide/edit/main/src/topics/inputs.md">
+      <i class="fa-solid fa-pencil"></i>
+      
+      
+        
+          Edit on GitHub
+        
+      
+    </a>
+  </div>
+</div>
+
+  <div class="sidebar-secondary-item">
+  <div class="tocsection sourcelink">
+    <a href="../_sources/topics/inputs.md.txt">
+      <i class="fa-solid fa-file-lines"></i> ソースコードを表示
+    </a>
+  </div>
+</div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+          </footer>
+        
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=365ca57ee442770a23c6"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=365ca57ee442770a23c6"></script>
+
+<div class="container">
+  <div class="row">
+    <div class="col d-flex flex-row-reverse">
+      <ul class="nav">
+        <li class="nav-item">
+          <a class="nav-link" href="https://github.com/common-workflow-language/user_guide/blob/main/CODE_OF_CONDUCT.md">Code of Conduct</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="https://github.com/common-workflow-language/user_guide/blob/main/CONTRIBUTING.md">Contributing</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="https://github.com/common-workflow-language/user_guide/">Source</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="https://github.com/common-workflow-language/user_guide/blob/main/CITATION.md">Cite</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+
+  <footer class="bd-footer">
+<div class="bd-footer__inner bd-page-width">
+  
+    <div class="footer-items__start">
+      
+        <div class="footer-item">
+  <p class="copyright">
+    
+      © Copyright 2013, CWL Project Team.
+      <br/>
+    
+  </p>
+</div>
+      
+        <div class="footer-item">
+  <p class="sphinx-version">
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 5.3.0.
+    <br/>
+  </p>
+</div>
+      
+    </div>
+  
+  
+  
+    <div class="footer-items__end">
+      
+        <div class="footer-item"><p class="theme-version">
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.14.3.
+</p></div>
+      
+    </div>
+  
+</div>
+
+  </footer>
+
+  </body>
+</html>

@@ -655,34 +655,34 @@ INFO<span class="w"> </span>Resolved<span class="w"> </span><span class="s1">&#3
 INFO<span class="w"> </span><span class="o">[</span>workflow<span class="w"> </span><span class="o">]</span><span class="w"> </span>start
 INFO<span class="w"> </span><span class="o">[</span>workflow<span class="w"> </span><span class="o">]</span><span class="w"> </span>starting<span class="w"> </span>step<span class="w"> </span>untar
 INFO<span class="w"> </span><span class="o">[</span>step<span class="w"> </span>untar<span class="o">]</span><span class="w"> </span>start
-INFO<span class="w"> </span><span class="o">[</span>job<span class="w"> </span>untar<span class="o">]</span><span class="w"> </span>/tmp/qqmxewrl$<span class="w"> </span>tar<span class="w"> </span><span class="se">\</span>
+INFO<span class="w"> </span><span class="o">[</span>job<span class="w"> </span>untar<span class="o">]</span><span class="w"> </span>/tmp/ikovjq4w$<span class="w"> </span>tar<span class="w"> </span><span class="se">\</span>
 <span class="w">    </span>--extract<span class="w"> </span><span class="se">\</span>
 <span class="w">    </span>--file<span class="w"> </span><span class="se">\</span>
-<span class="w">    </span>/tmp/vasfayit/stg19dcbd0b-93ce-4138-a564-0d33168d54ed/hello.tar<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>/tmp/f9jncn9k/stg49dd65ec-9ca7-43e3-aebd-9f1590c24f74/hello.tar<span class="w"> </span><span class="se">\</span>
 <span class="w">    </span>Hello.java
 INFO<span class="w"> </span><span class="o">[</span>job<span class="w"> </span>untar<span class="o">]</span><span class="w"> </span>completed<span class="w"> </span>success
 INFO<span class="w"> </span><span class="o">[</span>step<span class="w"> </span>untar<span class="o">]</span><span class="w"> </span>completed<span class="w"> </span>success
 INFO<span class="w"> </span><span class="o">[</span>workflow<span class="w"> </span><span class="o">]</span><span class="w"> </span>starting<span class="w"> </span>step<span class="w"> </span>compile
 INFO<span class="w"> </span><span class="o">[</span>step<span class="w"> </span>compile<span class="o">]</span><span class="w"> </span>start
-INFO<span class="w"> </span><span class="o">[</span>job<span class="w"> </span>compile<span class="o">]</span><span class="w"> </span>/tmp/ks6yt84o$<span class="w"> </span>docker<span class="w"> </span><span class="se">\</span>
+INFO<span class="w"> </span><span class="o">[</span>job<span class="w"> </span>compile<span class="o">]</span><span class="w"> </span>/tmp/v7138h2g$<span class="w"> </span>docker<span class="w"> </span><span class="se">\</span>
 <span class="w">    </span>run<span class="w"> </span><span class="se">\</span>
 <span class="w">    </span>-i<span class="w"> </span><span class="se">\</span>
-<span class="w">    </span>--mount<span class="o">=</span><span class="nv">type</span><span class="o">=</span>bind,source<span class="o">=</span>/tmp/ks6yt84o,target<span class="o">=</span>/pLpxhZ<span class="w"> </span><span class="se">\</span>
-<span class="w">    </span>--mount<span class="o">=</span><span class="nv">type</span><span class="o">=</span>bind,source<span class="o">=</span>/tmp/sr_p0k_t,target<span class="o">=</span>/tmp<span class="w"> </span><span class="se">\</span>
-<span class="w">    </span>--mount<span class="o">=</span><span class="nv">type</span><span class="o">=</span>bind,source<span class="o">=</span>/tmp/qqmxewrl/Hello.java,target<span class="o">=</span>/var/lib/cwl/stg4c664112-5a2c-4f63-8ec9-5932b91b3776/Hello.java,readonly<span class="w"> </span><span class="se">\</span>
-<span class="w">    </span>--workdir<span class="o">=</span>/pLpxhZ<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>--mount<span class="o">=</span><span class="nv">type</span><span class="o">=</span>bind,source<span class="o">=</span>/tmp/v7138h2g,target<span class="o">=</span>/zKTTJT<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>--mount<span class="o">=</span><span class="nv">type</span><span class="o">=</span>bind,source<span class="o">=</span>/tmp/3omke59z,target<span class="o">=</span>/tmp<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>--mount<span class="o">=</span><span class="nv">type</span><span class="o">=</span>bind,source<span class="o">=</span>/tmp/ikovjq4w/Hello.java,target<span class="o">=</span>/var/lib/cwl/stg9d81a2c0-17b6-4cc4-8021-d46b86559909/Hello.java,readonly<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>--workdir<span class="o">=</span>/zKTTJT<span class="w"> </span><span class="se">\</span>
 <span class="w">    </span>--read-only<span class="o">=</span><span class="nb">true</span><span class="w"> </span><span class="se">\</span>
 <span class="w">    </span>--net<span class="o">=</span>none<span class="w"> </span><span class="se">\</span>
 <span class="w">    </span>--user<span class="o">=</span><span class="m">1001</span>:127<span class="w"> </span><span class="se">\</span>
 <span class="w">    </span>--rm<span class="w"> </span><span class="se">\</span>
-<span class="w">    </span>--cidfile<span class="o">=</span>/tmp/o4lz_d_9/20231124104440-302170.cid<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>--cidfile<span class="o">=</span>/tmp/gdok26_7/20231124110109-284568.cid<span class="w"> </span><span class="se">\</span>
 <span class="w">    </span>--env<span class="o">=</span><span class="nv">TMPDIR</span><span class="o">=</span>/tmp<span class="w"> </span><span class="se">\</span>
-<span class="w">    </span>--env<span class="o">=</span><span class="nv">HOME</span><span class="o">=</span>/pLpxhZ<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>--env<span class="o">=</span><span class="nv">HOME</span><span class="o">=</span>/zKTTJT<span class="w"> </span><span class="se">\</span>
 <span class="w">    </span>openjdk:9.0.1-11-slim<span class="w"> </span><span class="se">\</span>
 <span class="w">    </span>javac<span class="w"> </span><span class="se">\</span>
 <span class="w">    </span>-d<span class="w"> </span><span class="se">\</span>
-<span class="w">    </span>/pLpxhZ<span class="w"> </span><span class="se">\</span>
-<span class="w">    </span>/var/lib/cwl/stg4c664112-5a2c-4f63-8ec9-5932b91b3776/Hello.java
+<span class="w">    </span>/zKTTJT<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>/var/lib/cwl/stg9d81a2c0-17b6-4cc4-8021-d46b86559909/Hello.java
 INFO<span class="w"> </span><span class="o">[</span>job<span class="w"> </span>compile<span class="o">]</span><span class="w"> </span>completed<span class="w"> </span>success
 INFO<span class="w"> </span><span class="o">[</span>step<span class="w"> </span>compile<span class="o">]</span><span class="w"> </span>completed<span class="w"> </span>success
 INFO<span class="w"> </span><span class="o">[</span>workflow<span class="w"> </span><span class="o">]</span><span class="w"> </span>completed<span class="w"> </span>success
@@ -989,20 +989,20 @@ INFO<span class="w"> </span>Resolved<span class="w"> </span><span class="s1">&#3
 INFO<span class="w"> </span><span class="o">[</span>workflow<span class="w"> </span><span class="o">]</span><span class="w"> </span>start
 INFO<span class="w"> </span><span class="o">[</span>workflow<span class="w"> </span><span class="o">]</span><span class="w"> </span>starting<span class="w"> </span>step<span class="w"> </span><span class="nb">echo</span>
 INFO<span class="w"> </span><span class="o">[</span>step<span class="w"> </span>echo<span class="o">]</span><span class="w"> </span>start
-INFO<span class="w"> </span><span class="o">[</span>job<span class="w"> </span>echo<span class="o">]</span><span class="w"> </span>/tmp/qpj8pgbj$<span class="w"> </span><span class="nb">echo</span><span class="w"> </span><span class="se">\</span>
-<span class="w">    </span><span class="s1">&#39;Hello world!&#39;</span><span class="w"> </span>&gt;<span class="w"> </span>/tmp/qpj8pgbj/4e58fa7cfe8505476c857c252be2f391ddbf1187
+INFO<span class="w"> </span><span class="o">[</span>job<span class="w"> </span>echo<span class="o">]</span><span class="w"> </span>/tmp/6hrm2wz3$<span class="w"> </span><span class="nb">echo</span><span class="w"> </span><span class="se">\</span>
+<span class="w">    </span><span class="s1">&#39;Hello world!&#39;</span><span class="w"> </span>&gt;<span class="w"> </span>/tmp/6hrm2wz3/4e58fa7cfe8505476c857c252be2f391ddbf1187
 INFO<span class="w"> </span><span class="o">[</span>job<span class="w"> </span>echo<span class="o">]</span><span class="w"> </span>completed<span class="w"> </span>success
 INFO<span class="w"> </span><span class="o">[</span>step<span class="w"> </span>echo<span class="o">]</span><span class="w"> </span>start
-INFO<span class="w"> </span><span class="o">[</span>job<span class="w"> </span>echo_2<span class="o">]</span><span class="w"> </span>/tmp/ksmzsr8h$<span class="w"> </span><span class="nb">echo</span><span class="w"> </span><span class="se">\</span>
-<span class="w">    </span><span class="s1">&#39;Hola mundo!&#39;</span><span class="w"> </span>&gt;<span class="w"> </span>/tmp/ksmzsr8h/4e58fa7cfe8505476c857c252be2f391ddbf1187
+INFO<span class="w"> </span><span class="o">[</span>job<span class="w"> </span>echo_2<span class="o">]</span><span class="w"> </span>/tmp/6q7ekcgn$<span class="w"> </span><span class="nb">echo</span><span class="w"> </span><span class="se">\</span>
+<span class="w">    </span><span class="s1">&#39;Hola mundo!&#39;</span><span class="w"> </span>&gt;<span class="w"> </span>/tmp/6q7ekcgn/4e58fa7cfe8505476c857c252be2f391ddbf1187
 INFO<span class="w"> </span><span class="o">[</span>job<span class="w"> </span>echo_2<span class="o">]</span><span class="w"> </span>completed<span class="w"> </span>success
 INFO<span class="w"> </span><span class="o">[</span>step<span class="w"> </span>echo<span class="o">]</span><span class="w"> </span>start
-INFO<span class="w"> </span><span class="o">[</span>job<span class="w"> </span>echo_3<span class="o">]</span><span class="w"> </span>/tmp/y60f5_tn$<span class="w"> </span><span class="nb">echo</span><span class="w"> </span><span class="se">\</span>
-<span class="w">    </span><span class="s1">&#39;Bonjour le monde!&#39;</span><span class="w"> </span>&gt;<span class="w"> </span>/tmp/y60f5_tn/4e58fa7cfe8505476c857c252be2f391ddbf1187
+INFO<span class="w"> </span><span class="o">[</span>job<span class="w"> </span>echo_3<span class="o">]</span><span class="w"> </span>/tmp/smw_0t38$<span class="w"> </span><span class="nb">echo</span><span class="w"> </span><span class="se">\</span>
+<span class="w">    </span><span class="s1">&#39;Bonjour le monde!&#39;</span><span class="w"> </span>&gt;<span class="w"> </span>/tmp/smw_0t38/4e58fa7cfe8505476c857c252be2f391ddbf1187
 INFO<span class="w"> </span><span class="o">[</span>job<span class="w"> </span>echo_3<span class="o">]</span><span class="w"> </span>completed<span class="w"> </span>success
 INFO<span class="w"> </span><span class="o">[</span>step<span class="w"> </span>echo<span class="o">]</span><span class="w"> </span>start
-INFO<span class="w"> </span><span class="o">[</span>job<span class="w"> </span>echo_4<span class="o">]</span><span class="w"> </span>/tmp/1uq71g8c$<span class="w"> </span><span class="nb">echo</span><span class="w"> </span><span class="se">\</span>
-<span class="w">    </span><span class="s1">&#39;Hallo welt!&#39;</span><span class="w"> </span>&gt;<span class="w"> </span>/tmp/1uq71g8c/4e58fa7cfe8505476c857c252be2f391ddbf1187
+INFO<span class="w"> </span><span class="o">[</span>job<span class="w"> </span>echo_4<span class="o">]</span><span class="w"> </span>/tmp/2p7d6mrk$<span class="w"> </span><span class="nb">echo</span><span class="w"> </span><span class="se">\</span>
+<span class="w">    </span><span class="s1">&#39;Hallo welt!&#39;</span><span class="w"> </span>&gt;<span class="w"> </span>/tmp/2p7d6mrk/4e58fa7cfe8505476c857c252be2f391ddbf1187
 INFO<span class="w"> </span><span class="o">[</span>job<span class="w"> </span>echo_4<span class="o">]</span><span class="w"> </span>completed<span class="w"> </span>success
 INFO<span class="w"> </span><span class="o">[</span>step<span class="w"> </span>echo<span class="o">]</span><span class="w"> </span>completed<span class="w"> </span>success
 INFO<span class="w"> </span><span class="o">[</span>workflow<span class="w"> </span><span class="o">]</span><span class="w"> </span>completed<span class="w"> </span>success

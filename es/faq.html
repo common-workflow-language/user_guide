@@ -1,0 +1,1020 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="es" data-theme="light">
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+    <link rel="icon" sizes="16x16" href="_static/images/favicons/cwl/favicon-16x16.png" type="image/png">
+    <link rel="icon" sizes="32x32" href="_static/images/favicons/cwl/favicon-32x32.png" type="image/png">
+    <link rel="icon" sizes="96x96" href="_static/images/favicons/cwl/favicon-96x96.png" type="image/png">
+    <link rel="icon" sizes="128x128" href="_static/images/favicons/cwl/favicon-128.png" type="image/png">
+    <link rel="icon" sizes="196x196" href="_static/images/favicons/cwl/favicon-196x196.png" type="image/png">
+    <title>4. FAQ &#8212; documentación de Common Workflow Language User Guide - 0.1</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "light";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=365ca57ee442770a23c6" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=365ca57ee442770a23c6" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=365ca57ee442770a23c6" rel="stylesheet" />
+
+  
+  <link href="_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=365ca57ee442770a23c6" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/graphviz.css" />
+    <link rel="stylesheet" type="text/css" href="_static/css/custom.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=365ca57ee442770a23c6" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=365ca57ee442770a23c6" />
+  <script src="_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=365ca57ee442770a23c6"></script>
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/sphinx_highlight.js"></script>
+    <script src="_static/translations.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'faq';</script>
+    <link rel="shortcut icon" href="_static/favicon.ico"/>
+    <link rel="index" title="Índice" href="genindex.html" />
+    <link rel="search" title="Búsqueda" href="search.html" />
+    <link rel="next" title="5. Licencias" href="LICENSE.html" />
+    <link rel="prev" title="3. Tutorials" href="tutorials.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="es"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="light">
+
+  
+  
+  <a class="skip-link" href="#main-content">Saltar al contenido principal</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search the docs ..."
+         aria-label="Search the docs ..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+<div class="bd-header__inner bd-page-width">
+  <label class="sidebar-toggle primary-toggle" for="__primary">
+    <span class="fa-solid fa-bars"></span>
+  </label>
+  
+  
+  <div class="col-lg-3 navbar-header-items__start">
+    
+      <div class="navbar-item">
+  
+
+<a class="navbar-brand logo" href="index.html">
+  
+  
+  
+  
+  
+    
+    
+    
+    <img src="_static/CWL-Logo-HD-cropped2.png" class="logo__image only-light" alt="documentación de Common Workflow Language User Guide - 0.1 - Home"/>
+    <script>document.write(`<img src="_static/CWL-Logo-HD-cropped2.png" class="logo__image only-dark" alt="documentación de Common Workflow Language User Guide - 0.1 - Home"/>`);</script>
+  
+  
+</a></div>
+    
+  </div>
+  
+  <div class="col-lg-9 navbar-header-items">
+    
+    <div class="me-auto navbar-header-items__center">
+      
+        <div class="navbar-item"><nav class="navbar-nav">
+  <p class="sidebar-header-items__title"
+     role="heading"
+     aria-level="1"
+     aria-label="Navegación del sitio">
+    Navegación del sitio
+  </p>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="introduction/index.html">
+                        Introduction
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="topics/index.html">
+                        Topics
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="tutorials.html">
+                        Tutorials
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item current active">
+                      <a class="nav-link nav-internal" href="#">
+                        FAQ
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="LICENSE.html">
+                        Licencias
+                      </a>
+                    </li>
+                
+
+                <li class="nav-item">
+                  <a class="nav-link nav-external" href="https://www.commonwl.org/community/">
+                    Community
+                  </a>
+                </li>
+                
+  </ul>
+</nav></div>
+      
+    </div>
+    
+    
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Búsqueda" aria-label="Búsqueda" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Búsqueda</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script>
+        </div>
+      
+      
+        <div class="navbar-item">
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="claro/oscuro" aria-label="claro/oscuro" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script></div>
+      
+        <div class="navbar-item"><ul class="navbar-icon-links navbar-nav"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/common-workflow-language/user_guide/" title="GitHub" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fab fa-github-square fa-lg" aria-hidden="true"></i></span>
+            <span class="sr-only">GitHub</span></a>
+        </li>
+</ul></div>
+      
+    </div>
+    
+  </div>
+  
+  
+    <div class="navbar-persistent--mobile">
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Búsqueda" aria-label="Búsqueda" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Búsqueda</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script>
+    </div>
+  
+
+  
+    <label class="sidebar-toggle secondary-toggle" for="__secondary" tabindex="0">
+      <span class="fa-solid fa-outdent"></span>
+    </label>
+  
+</div>
+
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar hide-on-wide">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+        
+          <div class="navbar-item"><nav class="navbar-nav">
+  <p class="sidebar-header-items__title"
+     role="heading"
+     aria-level="1"
+     aria-label="Navegación del sitio">
+    Navegación del sitio
+  </p>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="introduction/index.html">
+                        Introduction
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="topics/index.html">
+                        Topics
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="tutorials.html">
+                        Tutorials
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item current active">
+                      <a class="nav-link nav-internal" href="#">
+                        FAQ
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="LICENSE.html">
+                        Licencias
+                      </a>
+                    </li>
+                
+
+                <li class="nav-item">
+                  <a class="nav-link nav-external" href="https://www.commonwl.org/community/">
+                    Community
+                  </a>
+                </li>
+                
+  </ul>
+</nav></div>
+        
+      </div>
+    
+    
+    
+      <div class="sidebar-header-items__end">
+        
+          <div class="navbar-item">
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="claro/oscuro" aria-label="claro/oscuro" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script></div>
+        
+          <div class="navbar-item"><ul class="navbar-icon-links navbar-nav"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/common-workflow-language/user_guide/" title="GitHub" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fab fa-github-square fa-lg" aria-hidden="true"></i></span>
+            <span class="sr-only">GitHub</span></a>
+        </li>
+</ul></div>
+        
+      </div>
+    
+  </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item">
+
+
+
+<nav aria-label="Miga de pan">
+  <ul class="bd-breadcrumbs">
+    
+    <li class="breadcrumb-item breadcrumb-home">
+      <a href="index.html" class="nav-link" aria-label="Inicio">
+        <i class="fa-solid fa-home"></i>
+      </a>
+    </li>
+    <li class="breadcrumb-item active" aria-current="page"><span...</li>
+  </ul>
+</nav>
+</div>
+      
+    </div>
+  
+  
+</div>
+</div>
+              
+              
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <section id="faq">
+<h1><span class="section-number">4. </span>FAQ<a class="headerlink" href="#faq" title="Enlace permanente a este encabezado">#</a></h1>
+<nav class="contents local" id="contenido">
+<ul class="simple">
+<li><p><a class="reference internal" href="#how-do-i-create-non-file-types-using-evalfrom" id="id1">How do I create non «<code class="docutils literal notranslate"><span class="pre">File</span></code>» types using <code class="docutils literal notranslate"><span class="pre">evalFrom</span></code>?</a></p></li>
+<li><p><a class="reference internal" href="#how-do-i-rename-an-input-file" id="id2">How do I rename an input file?</a></p></li>
+<li><p><a class="reference internal" href="#how-do-i-rename-an-output-file" id="id3">How do I rename an output file?</a></p></li>
+<li><p><a class="reference internal" href="#how-do-i-reference-a-local-script" id="id4">How do I reference a local script?</a></p></li>
+<li><p><a class="reference internal" href="#how-can-i-set-self-based-input-bindings-for-optional-inputs" id="id5">How can I set <code class="docutils literal notranslate"><span class="pre">self</span></code>-based input bindings for optional inputs?</a></p></li>
+<li><p><a class="reference internal" href="#how-can-i-model-a-one-or-the-other-parameter" id="id6">How can I model a «one-or-the-other» parameter?</a></p></li>
+<li><p><a class="reference internal" href="#how-do-i-connect-a-solo-value-to-an-input-that-expects-an-array-of-that-type" id="id7">How do I connect a solo value to an input that expects an array of that type?</a></p></li>
+<li><p><a class="reference internal" href="#how-do-make-an-input-optional" id="id8">How do make an input optional? 💯</a></p></li>
+<li><p><a class="reference internal" href="#how-do-i-specify-an-input-that-must-come-from-a-list-of-predefined-values-i-e-how-do-i-use-enum-inputs" id="id9">How do I specify an input that must come from a list of predefined values (i.e. How do I use enum inputs) ?</a></p></li>
+<li><p><a class="reference internal" href="#how-do-i-describe-dependent-or-exclusive-input-parameters-e-g-how-do-i-use-record-inputs" id="id10">How do I describe dependent or exclusive input parameters(e.g. How do I use record inputs)?</a></p></li>
+<li><p><a class="reference internal" href="#how-do-i-set-mutually-exclusive-parameters" id="id11">How do I set mutually exclusive parameters?</a></p></li>
+<li><p><a class="reference internal" href="#how-can-i-set-booleans" id="id12">How can I set Booleans?</a></p></li>
+<li><p><a class="reference internal" href="#what-should-i-do-when-concatenating-strings-in-inputs" id="id13">What should I do when concatenating strings in inputs?</a></p></li>
+<li><p><a class="reference internal" href="#i-get-cwltool-errors-due-to-filenames-with-space-characters-inside-what-should-i-do" id="id14">I get <code class="docutils literal notranslate"><span class="pre">cwltool</span></code> errors due to filenames with space characters inside. What should I do?</a></p></li>
+<li><p><a class="reference internal" href="#what-should-i-do-when-i-get-cwl-parameter-reference-error-due-to-hyphen-in-an-input-identifier" id="id15">What should I do when I get CWL Parameter Reference error due to hyphen in an input identifier?</a></p></li>
+<li><p><a class="reference internal" href="#how-do-i-use-cwl-and-cwltool-with-singularity" id="id16">How do I use CWL and cwltool with Singularity?</a></p></li>
+<li><p><a class="reference internal" href="#how-do-i-debug-the-javascript-in-my-cwl-tool" id="id17">How do I debug the JavaScript in my CWL tool?</a></p></li>
+</ul>
+</nav>
+<section id="how-do-i-create-non-file-types-using-evalfrom">
+<h2><a class="toc-backref" href="#contenido" role="doc-backlink"><span class="section-number">4.1. </span>How do I create non «<code class="docutils literal notranslate"><span class="pre">File</span></code>» types using <code class="docutils literal notranslate"><span class="pre">evalFrom</span></code>?</a><a class="headerlink" href="#how-do-i-create-non-file-types-using-evalfrom" title="Enlace permanente a este encabezado">#</a></h2>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">cwlVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">v1.0</span><span class="w">  </span><span class="c1"># or v1.1</span>
+<span class="nt">class</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">CommandLineTool</span>
+<span class="nt">requirements</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">InlineJavascriptRequirement</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">{}</span>
+
+<span class="nt">baseCommand</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="w"> </span><span class="nv">echo</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="s">&quot;42&quot;</span><span class="w"> </span><span class="p p-Indicator">]</span>
+
+<span class="nt">inputs</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[]</span>
+
+<span class="nt">stdout</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">my_number.txt</span>
+
+<span class="nt">outputs</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">my_number</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">int</span>
+<span class="w">    </span><span class="nt">outputBinding</span><span class="p">:</span>
+<span class="w">       </span><span class="nt">glob</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">my_number.txt</span>
+<span class="w">       </span><span class="nt">loadContents</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">True</span>
+<span class="w">       </span><span class="nt">outputEval</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">$(parselnt(self[0].contents))</span>
+
+<span class="w">  </span><span class="nt">my_number_as_string</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">string</span>
+<span class="w">    </span><span class="nt">outputBinding</span><span class="p">:</span>
+<span class="w">       </span><span class="nt">glob</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">my_number.txt</span>
+<span class="w">       </span><span class="nt">loadContents</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">True</span>
+<span class="w">       </span><span class="nt">outputEval</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">$(self[0].contents)</span>
+</pre></div>
+</div>
+</section>
+<section id="how-do-i-rename-an-input-file">
+<h2><a class="toc-backref" href="#contenido" role="doc-backlink"><span class="section-number">4.2. </span>How do I rename an input file?</a><a class="headerlink" href="#how-do-i-rename-an-input-file" title="Enlace permanente a este encabezado">#</a></h2>
+<p>This example demonstrates how to change the name of an input file
+as part of a tool description.
+This could be useful when you are taking files produced from another
+step in a workflow, and don’t want to work with the default names that these
+files were given when they were created.</p>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">requirements</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">InitialWorkDirRequirement</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">listing</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">entry</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">$(inputs.src1)</span>
+<span class="w">        </span><span class="nt">entryName</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">newName</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">entry</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">$(inputs.src2)</span>
+<span class="w">        </span><span class="nt">entryName</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">$(inputs.src1.basename)_custom_extension</span>
+</pre></div>
+</div>
+</section>
+<section id="how-do-i-rename-an-output-file">
+<h2><a class="toc-backref" href="#contenido" role="doc-backlink"><span class="section-number">4.3. </span>How do I rename an output file?</a><a class="headerlink" href="#how-do-i-rename-an-output-file" title="Enlace permanente a este encabezado">#</a></h2>
+<p>This example demonstrates how to change the name of an output file
+from the default name given to it by a tool:</p>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">cwlVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">v1.0</span>
+<span class="nt">class</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">CommandLineTool</span>
+<span class="nt">requirements</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">InlineJavascriptRequirement</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">{}</span>
+
+<span class="nt">baseCommand</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="w"> </span><span class="nv">touch</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">otu_table.txt</span><span class="w"> </span><span class="p p-Indicator">]</span>
+
+<span class="nt">inputs</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">otu_table_name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">string</span>
+
+<span class="nt">outputs</span><span class="p">:</span>
+<span class="w"> </span><span class="nt">otu_table</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">File</span>
+<span class="w">    </span><span class="nt">outputBinding</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">glob</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">otu_table.txt</span>
+<span class="w">      </span><span class="nt">outputEval</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">${self[0].basename=inputs.otu_table_name; return self;}</span>
+</pre></div>
+</div>
+<p>By modifying the <code class="docutils literal notranslate"><span class="pre">basename</span></code> field in the <code class="docutils literal notranslate"><span class="pre">outputEval</span></code> field, CWL workflow engines will rename
+the file using the new name for subsequent steps or as a workflow-level output.</p>
+</section>
+<section id="how-do-i-reference-a-local-script">
+<h2><a class="toc-backref" href="#contenido" role="doc-backlink"><span class="section-number">4.4. </span>How do I reference a local script?</a><a class="headerlink" href="#how-do-i-reference-a-local-script" title="Enlace permanente a este encabezado">#</a></h2>
+<p>There are two ways to reference a local script:</p>
+<p>The first method involves adding the path to a folder containing your scripts to the <code class="docutils literal notranslate"><span class="pre">PATH</span></code> environment variable. This
+allows you to execute the shell script directly (without explicitly using the <code class="docutils literal notranslate"><span class="pre">sh</span></code> or <code class="docutils literal notranslate"><span class="pre">bash</span></code> commands).</p>
+<p>Start with adding a <em>shebang</em> at the top of your file:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="ch">#!/bin/bash</span>
+</pre></div>
+</div>
+<p>After that, make the script executable with the command <code class="docutils literal notranslate"><span class="pre">chmod</span> <span class="pre">+x</span> <span class="pre">scriptname.sh</span></code></p>
+<p>Finally, modify your <code class="docutils literal notranslate"><span class="pre">PATH</span></code> to add the directory where your script is located.
+(It is good practice to use <code class="docutils literal notranslate"><span class="pre">$HOME/bin</span></code> for storing your own scripts).</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">export</span><span class="w"> </span><span class="nv">PATH</span><span class="o">=</span><span class="nv">$PATH</span>:<span class="nv">$HOME</span>/bin
+</pre></div>
+</div>
+<p>Now you can use <code class="docutils literal notranslate"><span class="pre">baseCommand:</span> <span class="pre">scriptname.sh</span></code> to run the script directly.</p>
+<div class="highlight-cwl notranslate"><div class="highlight"><pre><span></span><span class="c1">#!/bin/bash</span>
+<span class="nt">cwlVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">v1.0</span>
+<span class="nt">class</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">CommandLineTool</span>
+<span class="nt">baseCommand</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">scriptname.sh</span>
+</pre></div>
+</div>
+<p>When you wish to share your work later, you can place your script in a software container in the Docker format.</p>
+<p>The second method involves including an input of <code class="docutils literal notranslate"><span class="pre">type:</span> <span class="pre">File</span></code> in the script itself:</p>
+<div class="highlight-cwl notranslate"><div class="highlight"><pre><span></span><span class="nt">class</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">CommandLineTool</span>
+
+<span class="nt">inputs</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">my_script</span><span class="p">:</span>
+<span class="w">     </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">File</span>
+<span class="w">     </span><span class="nt">inputBinding</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">position</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0</span>
+
+
+<span class="w">  </span><span class="c1"># other inputs go here</span>
+
+<span class="nt">baseCommand</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">sh</span>
+
+<span class="nt">outputs</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[]</span>
+</pre></div>
+</div>
+</section>
+<section id="how-can-i-set-self-based-input-bindings-for-optional-inputs">
+<h2><a class="toc-backref" href="#contenido" role="doc-backlink"><span class="section-number">4.5. </span>How can I set <code class="docutils literal notranslate"><span class="pre">self</span></code>-based input bindings for optional inputs?</a><a class="headerlink" href="#how-can-i-set-self-based-input-bindings-for-optional-inputs" title="Enlace permanente a este encabezado">#</a></h2>
+<p>Currently, <code class="docutils literal notranslate"><span class="pre">cwltool</span></code> can’t cope with missing optional inputs if their
+input binding makes use of <code class="docutils literal notranslate"><span class="pre">self</span></code>.
+Below is an example workaround for this,
+pending a more sophisticated fix.</p>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="c1">#!/usr/bin/env cwl-runner</span>
+<span class="nt">cwlVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">v1.0</span>
+<span class="nt">class</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">CommandLineTool</span>
+
+<span class="nt">requirements</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">{</span><span class="nt"> InlineJavascriptRequirement</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">{}</span><span class="w"> </span><span class="p p-Indicator">}</span>
+
+<span class="nt">inputs</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">cfg</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">File?</span>
+<span class="w">    </span><span class="nt">inputBinding</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">prefix</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">-cfg</span>
+<span class="w">      </span><span class="nt">valueFrom</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">|</span>
+<span class="w">        </span><span class="no">${ if(self === null) { return null;} else { return self.basename; } }</span>
+
+<span class="nt">baseCommand</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">echo</span>
+
+<span class="nt">outputs</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[]</span>
+</pre></div>
+</div>
+</section>
+<section id="how-can-i-model-a-one-or-the-other-parameter">
+<h2><a class="toc-backref" href="#contenido" role="doc-backlink"><span class="section-number">4.6. </span>How can I model a «one-or-the-other» parameter?</a><a class="headerlink" href="#how-can-i-model-a-one-or-the-other-parameter" title="Enlace permanente a este encabezado">#</a></h2>
+<p>Below is an example showing how
+to specify different strings to be added to a command line,
+based on the value given to a Boolean parameter.</p>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">cwlVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">v1.0</span>
+<span class="nt">class</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">CommandLineTool</span>
+<span class="nt">requirements</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">InlineJavascriptRequirement</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">{}</span>
+<span class="nt">inputs</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">fancy_bool</span><span class="p">:</span>
+<span class="w">     </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">boolean</span>
+<span class="w">     </span><span class="nt">default</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span><span class="w">  </span><span class="c1"># or true</span>
+<span class="w">     </span><span class="nt">inputBinding</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">valueFrom</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">${if (self) { return &quot;foo&quot;;} else { return &quot;bar&quot;;}}</span>
+
+<span class="nt">baseCommand</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">echo</span>
+
+<span class="nt">outputs</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[]</span>
+</pre></div>
+</div>
+</section>
+<section id="how-do-i-connect-a-solo-value-to-an-input-that-expects-an-array-of-that-type">
+<h2><a class="toc-backref" href="#contenido" role="doc-backlink"><span class="section-number">4.7. </span>How do I connect a solo value to an input that expects an array of that type?</a><a class="headerlink" href="#how-do-i-connect-a-solo-value-to-an-input-that-expects-an-array-of-that-type" title="Enlace permanente a este encabezado">#</a></h2>
+<p>Add a <a class="reference external" href="https://www.commonwl.org/v1.0/Workflow.html#MultipleInputFeatureRequirement"><code class="docutils literal notranslate"><span class="pre">MultipleInputFeatureRequirement</span></code></a>
+along with
+<a class="reference external" href="https://www.commonwl.org/v1.0/Workflow.html#WorkflowStepInput"><code class="docutils literal notranslate"><span class="pre">linkMerge:</span> <span class="pre">merge_nested</span></code></a>:</p>
+<blockquote>
+<div><p>merge_nested</p>
+<p>The input must be an array consisting of exactly one entry for each input link.
+If «merge_nested» is specified with a single link, the value from the link must be wrapped in a single-item list.</p>
+</div></blockquote>
+<p>Which means «create a list with exactly these sources as elements».</p>
+<p>Or in other words: if the destination is of type <code class="docutils literal notranslate"><span class="pre">File[]</span></code> (an array of <code class="docutils literal notranslate"><span class="pre">File</span></code>s)
+and the source is a single <code class="docutils literal notranslate"><span class="pre">File</span></code> then add <code class="docutils literal notranslate"><span class="pre">MultipleInputFeatureRequirement</span></code> to the Workflow level <code class="docutils literal notranslate"><span class="pre">requirements</span></code>
+and add <code class="docutils literal notranslate"><span class="pre">linkMerge:</span> <span class="pre">merge_nested</span></code> under the appropriate <code class="docutils literal notranslate"><span class="pre">in</span></code> entry of the destination step.</p>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">cwlVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">v1.0</span>
+<span class="nt">class</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Workflow</span>
+
+<span class="nt">requirements</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">MultipleInputFeatureRequirement</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">{}</span>
+
+<span class="nt">inputs</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">readme</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">File</span>
+
+<span class="nt">steps</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">first</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">run</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">tests/checker_wf/cat.cwl</span>
+<span class="w">    </span><span class="nt">in</span><span class="p">:</span>
+<span class="w">     </span><span class="nt">cat_in</span><span class="p">:</span><span class="w">  </span><span class="c1"># type is File[]</span>
+<span class="w">       </span><span class="nt">source</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="w"> </span><span class="nv">readme</span><span class="w"> </span><span class="p p-Indicator">]</span><span class="w">  </span><span class="c1"># but the source is of type File</span>
+<span class="w">       </span><span class="nt">linkMerge</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">merge_nested</span>
+<span class="w">    </span><span class="nt">out</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="nv">txt</span><span class="p p-Indicator">]</span>
+
+<span class="nt">outputs</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">result</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">File</span>
+<span class="w">    </span><span class="nt">outputSource</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">first/txt</span>
+</pre></div>
+</div>
+</section>
+<section id="how-do-make-an-input-optional">
+<h2><a class="toc-backref" href="#contenido" role="doc-backlink"><span class="section-number">4.8. </span>How do make an input optional? 💯</a><a class="headerlink" href="#how-do-make-an-input-optional" title="Enlace permanente a este encabezado">#</a></h2>
+<p>To make an input parameter optional, add a question mark to the type declaration.</p>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">inputs</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">InputRead1</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">File</span>
+<span class="w">    </span><span class="nt">inputBinding</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">position</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">100</span>
+
+<span class="w">  </span><span class="c1">#Optional Inputs</span>
+<span class="w">  </span><span class="nt">isCasava</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">boolean?</span>
+<span class="w">    </span><span class="nt">inputBinding</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">position</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1</span>
+<span class="w">      </span><span class="nt">prefix</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;--casava&quot;</span>
+</pre></div>
+</div>
+<p><a name="enuminputs"></a></p>
+</section>
+<section id="how-do-i-specify-an-input-that-must-come-from-a-list-of-predefined-values-i-e-how-do-i-use-enum-inputs">
+<h2><a class="toc-backref" href="#contenido" role="doc-backlink"><span class="section-number">4.9. </span>How do I specify an input that must come from a list of predefined values (i.e. How do I use enum inputs) ?</a><a class="headerlink" href="#how-do-i-specify-an-input-that-must-come-from-a-list-of-predefined-values-i-e-how-do-i-use-enum-inputs" title="Enlace permanente a este encabezado">#</a></h2>
+<p>For command line flags that require a specific input as the argument an enum type can be declared in CWL. <strong>Specifying null here is known as long form style. It does the same thing as the question mark on the other inputs.</strong></p>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">Format</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">type</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&quot;null&quot;</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">enum</span>
+<span class="w">      </span><span class="nt">symbols</span><span class="p">:</span>
+<span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">bam</span>
+<span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">sam</span>
+<span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">bam_mapped</span>
+<span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">sam_mapped</span>
+<span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">fastq</span>
+<span class="w">  </span><span class="nt">inputBinding</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">position</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">2</span>
+<span class="w">    </span><span class="nt">prefix</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;--format&quot;</span>
+</pre></div>
+</div>
+<p><a name="recordinputs"></a></p>
+</section>
+<section id="how-do-i-describe-dependent-or-exclusive-input-parameters-e-g-how-do-i-use-record-inputs">
+<h2><a class="toc-backref" href="#contenido" role="doc-backlink"><span class="section-number">4.10. </span>How do I describe dependent or exclusive input parameters(e.g. How do I use record inputs)?</a><a class="headerlink" href="#how-do-i-describe-dependent-or-exclusive-input-parameters-e-g-how-do-i-use-record-inputs" title="Enlace permanente a este encabezado">#</a></h2>
+<p>For commandline flags that are either <strong>mutually exclusive</strong> or <strong>dependent</strong> a special record type can be defined. You can also specify null here to create optional inputs.</p>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="c1">#Using record inputs to create mutually exclusive inputs</span>
+
+<span class="w">  </span><span class="nt">Strand</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">type</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&quot;null&quot;</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">record</span>
+<span class="w">        </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">forward</span>
+<span class="w">        </span><span class="nt">fields</span><span class="p">:</span>
+<span class="w">          </span><span class="nt">forward</span><span class="p">:</span>
+<span class="w">              </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">boolean</span>
+<span class="w">              </span><span class="nt">inputBinding</span><span class="p">:</span>
+<span class="w">                </span><span class="nt">prefix</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;--fr-stranded&quot;</span>
+
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">record</span>
+<span class="w">        </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">reverse</span>
+<span class="w">        </span><span class="nt">fields</span><span class="p">:</span>
+<span class="w">          </span><span class="nt">reverse</span><span class="p">:</span>
+<span class="w">            </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">boolean</span>
+<span class="w">            </span><span class="nt">inputBinding</span><span class="p">:</span>
+<span class="w">              </span><span class="nt">prefix</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;--rf-stranded&quot;</span>
+
+<span class="w">  </span><span class="nt">PseudoBam</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">boolean?</span>
+<span class="w">    </span><span class="nt">inputBinding</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">prefix</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;--pseudobam&quot;</span>
+
+<span class="c1">#Using record inputs to create dependent inputs</span>
+
+<span class="w">  </span><span class="nt">GenomeBam</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">type</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&quot;null&quot;</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">record</span>
+<span class="w">        </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">genome_bam</span>
+<span class="w">        </span><span class="nt">fields</span><span class="p">:</span>
+<span class="w">          </span><span class="nt">genomebam</span><span class="p">:</span>
+<span class="w">            </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">boolean</span>
+<span class="w">            </span><span class="nt">inputBinding</span><span class="p">:</span>
+<span class="w">              </span><span class="nt">prefix</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;--genomebam&quot;</span>
+
+<span class="w">          </span><span class="nt">gtf</span><span class="p">:</span>
+<span class="w">            </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">File</span>
+<span class="w">            </span><span class="nt">inputBinding</span><span class="p">:</span>
+<span class="w">              </span><span class="nt">prefix</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;--gtf&quot;</span>
+
+<span class="w">          </span><span class="nt">chromosomes</span><span class="p">:</span>
+<span class="w">            </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">File</span>
+<span class="w">            </span><span class="nt">inputBinding</span><span class="p">:</span>
+<span class="w">              </span><span class="nt">prefix</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;--chromosomes&quot;</span>
+</pre></div>
+</div>
+</section>
+<section id="how-do-i-set-mutually-exclusive-parameters">
+<h2><a class="toc-backref" href="#contenido" role="doc-backlink"><span class="section-number">4.11. </span>How do I set mutually exclusive parameters?</a><a class="headerlink" href="#how-do-i-set-mutually-exclusive-parameters" title="Enlace permanente a este encabezado">#</a></h2>
+<p>To properly set fields in a record input type, you need to pass a dictionary to the input to properly set the parameters. This is done by using inline JavaScript and returning the dictionary with the key of the field you want to set. The source field is set to indicate the input from the workflow to be used as the value.</p>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">steps</span><span class="p">:</span>
+
+<span class="w">  </span><span class="nt">build_hisat2_index</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">run</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">../Tools/Hisat2-Index.cwl</span>
+<span class="w">    </span><span class="nt">in</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">InputFiles</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">source</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">FastaFiles</span>
+<span class="w">        </span><span class="nt">valueFrom </span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">|</span>
+<span class="w">          </span><span class="no">${return {&quot;fasta&quot;: self};}</span>
+
+<span class="w">      </span><span class="nt">IndexName</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">IndexName</span>
+
+<span class="w">    </span><span class="nt">out</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="nv">indexes</span><span class="p p-Indicator">]</span>
+</pre></div>
+</div>
+</section>
+<section id="how-can-i-set-booleans">
+<h2><a class="toc-backref" href="#contenido" role="doc-backlink"><span class="section-number">4.12. </span>How can I set Booleans?</a><a class="headerlink" href="#how-can-i-set-booleans" title="Enlace permanente a este encabezado">#</a></h2>
+<p>These can be set by using the default field</p>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">input</span><span class="p">:</span>
+<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">default:true</span>
+</pre></div>
+</div>
+</section>
+<section id="what-should-i-do-when-concatenating-strings-in-inputs">
+<h2><a class="toc-backref" href="#contenido" role="doc-backlink"><span class="section-number">4.13. </span>What should I do when concatenating strings in inputs?</a><a class="headerlink" href="#what-should-i-do-when-concatenating-strings-in-inputs" title="Enlace permanente a este encabezado">#</a></h2>
+<p>The valueFrom field must be used instead of default.</p>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">input</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">valueFrom</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">|</span>
+<span class="w">     </span><span class="no">My String: $(input.stringvalue)</span>
+</pre></div>
+</div>
+</section>
+<section id="i-get-cwltool-errors-due-to-filenames-with-space-characters-inside-what-should-i-do">
+<h2><a class="toc-backref" href="#contenido" role="doc-backlink"><span class="section-number">4.14. </span>I get <code class="docutils literal notranslate"><span class="pre">cwltool</span></code> errors due to filenames with space characters inside. What should I do?</a><a class="headerlink" href="#i-get-cwltool-errors-due-to-filenames-with-space-characters-inside-what-should-i-do" title="Enlace permanente a este encabezado">#</a></h2>
+<p><code class="docutils literal notranslate"><span class="pre">cwltool</span></code> does not allow some characters in filenames by default.</p>
+<p>For example, the filename <code class="docutils literal notranslate"><span class="pre">a</span> <span class="pre">space</span> <span class="pre">is</span> <span class="pre">here.txt</span></code> includes 3 space characters.</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">ERROR Workflow error, try again with --debug for more information:</span>
+
+<span class="go">Invalid filename: &#39;a space is here.txt&#39; contains illegal characters</span>
+</pre></div>
+</div>
+<p>If you can not avoid these dangerous characters, then pass <code class="docutils literal notranslate"><span class="pre">--relax-path-checks</span></code> to <code class="docutils literal notranslate"><span class="pre">cwltool</span></code>.</p>
+</section>
+<section id="what-should-i-do-when-i-get-cwl-parameter-reference-error-due-to-hyphen-in-an-input-identifier">
+<h2><a class="toc-backref" href="#contenido" role="doc-backlink"><span class="section-number">4.15. </span>What should I do when I get CWL Parameter Reference error due to hyphen in an input identifier?</a><a class="headerlink" href="#what-should-i-do-when-i-get-cwl-parameter-reference-error-due-to-hyphen-in-an-input-identifier" title="Enlace permanente a este encabezado">#</a></h2>
+<p>If <code class="docutils literal notranslate"><span class="pre">cwltool</span> <span class="pre">--validate</span></code> returns valid</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>cwltool<span class="w"> </span>--validate<span class="w"> </span>cwl/qiime.cwl
+<span class="go">INFO /usr/local/bin/cwltool 1.0.20190831161204</span>
+<span class="go">INFO Resolved &#39;cwl/qiime.cwl&#39; to &#39;file:///workspace/cwl/qiime.cwl&#39;</span>
+<span class="go">cwl/qiime.cwl is valid CWL.</span>
+</pre></div>
+</div>
+<p>But executing it causes an error like:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>cwltool<span class="w"> </span>cwl/qiime.cwl<span class="w"> </span>--sample-input<span class="w"> </span>metadata.tsv
+<span class="go">INFO /usr/local/bin/cwltool 1.0.20190831161204</span>
+<span class="go">INFO Resolved &#39;cwl/qiime.cwl&#39; to &#39;file:///workspace/cwl/qiime.cwl&#39;</span>
+<span class="go">ERROR Workflow error, try again with --debug for more information:</span>
+<span class="go">cwl/qiime.cwl:14:5: Expression evaluation error:</span>
+<span class="go">                    Syntax error in parameter reference &#39;(inputs.sample-input)&#39;. This could be due</span>
+<span class="go">                    to using Javascript code without specifying InlineJavascriptRequirement.</span>
+</pre></div>
+</div>
+<p>The file is here</p>
+<div class="highlight-cwl notranslate"><div class="highlight"><pre><span></span><span class="nt">cwlVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">v1.0</span>
+<span class="nt">class</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">CommandLineTool</span>
+<span class="nt">baseCommand</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="nv">qiime</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">metadata</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">tabulate</span><span class="p p-Indicator">]</span>
+<span class="nt">arguments</span><span class="p">:</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">prefix</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">--m-input-file</span>
+<span class="w">    </span><span class="nt">valueFrom</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">$(inputs.sample-input)</span>
+<span class="nt">inputs</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">sample-input</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">File</span>
+<span class="nt">outputs</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[]</span>
+</pre></div>
+</div>
+<p>Problem caused by <code class="docutils literal notranslate"><span class="pre">-</span></code> (hyphen character).</p>
+<div class="highlight-cwl notranslate"><div class="highlight"><pre><span></span><span class="nt">valueFrom</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">$(inputs.sample-input)</span>
+<span class="w">                        </span><span class="l l-Scalar l-Scalar-Plain"># ^ this is problem</span>
+<span class="nn">...</span>
+
+<span class="nt">inputs</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">sample-input</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">File</span>
+<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain"># ^ this is problem</span>
+</pre></div>
+</div>
+<p>To fix this error, change <code class="docutils literal notranslate"><span class="pre">-</span></code> (hyphen) to <code class="docutils literal notranslate"><span class="pre">_</span></code> (underscore):</p>
+<div class="highlight-cwl notranslate"><div class="highlight"><pre><span></span><span class="nt">valueFrom</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">$(inputs.sample_input)</span>
+<span class="w">                        </span><span class="l l-Scalar l-Scalar-Plain"># ^ changed here</span>
+
+<span class="nn">...</span>
+
+<span class="nt">inputs</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">sample_input</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">File</span>
+<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain"># ^ changed here</span>
+</pre></div>
+</div>
+<p>If it is not possible to change the input identifier, then you can use an alternative CWL Parameter Reference syntax:</p>
+<div class="highlight-cwl notranslate"><div class="highlight"><pre><span></span><span class="nt">valueFrom</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">$(inputs[&quot;sample-input&quot;])</span>
+</pre></div>
+</div>
+</section>
+<section id="how-do-i-use-cwl-and-cwltool-with-singularity">
+<h2><a class="toc-backref" href="#contenido" role="doc-backlink"><span class="section-number">4.16. </span>How do I use CWL and cwltool with Singularity?</a><a class="headerlink" href="#how-do-i-use-cwl-and-cwltool-with-singularity" title="Enlace permanente a este encabezado">#</a></h2>
+<!-- https://matrix.to/#/!RQMxrGNGkeDmWHOaEs:gitter.im/$f1B-ytoep4PX3_tTgxaADRQFHGgisGiUL1nUHVQPBnY?via=gitter.im&via=matrix.org&via=gottliebtfreitag.de -->
+<p>The CWL standards are built around (optional) Docker format containers.
+The reference runner and several other CWL implementations support running
+those Docker format containers using the Singularity engine. Directly
+specifying a Singularity format container is not part of the CWL standards.</p>
+</section>
+<section id="how-do-i-debug-the-javascript-in-my-cwl-tool">
+<h2><a class="toc-backref" href="#contenido" role="doc-backlink"><span class="section-number">4.17. </span>How do I debug the JavaScript in my CWL tool?</a><a class="headerlink" href="#how-do-i-debug-the-javascript-in-my-cwl-tool" title="Enlace permanente a este encabezado">#</a></h2>
+<p>You can use the <code>–js-console</code> option of <code>cwltool</code>, or you can try
+creating a JavaScript or TypeScript project for your code, and load it
+using <code>expressionLib</code>, e.g.: <a href="https://github.com/common-workflow-language/common-workflow-language/blob/master/v1.0/v1.0/template-tool.cwl#L6-L8">
+https://github.com/common-workflow-language/common-workflow-language/blob/master/v1.0/v1.0/template-tool.cwl#L6-L8</a></dd></p>
+</section>
+</section>
+
+
+                </article>
+              
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  <!-- Previous / next buttons -->
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="tutorials.html"
+       title="página anterior">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">anterior</p>
+        <p class="prev-next-title"><span class="section-number">3. </span>Tutorials</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="LICENSE.html"
+       title="siguiente página">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">siguiente</p>
+        <p class="prev-next-title"><span class="section-number">5. </span>Licencias</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> En esta página
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#how-do-i-create-non-file-types-using-evalfrom">4.1. How do I create non «<code class="docutils literal notranslate"><span class="pre">File</span></code>» types using <code class="docutils literal notranslate"><span class="pre">evalFrom</span></code>?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#how-do-i-rename-an-input-file">4.2. How do I rename an input file?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#how-do-i-rename-an-output-file">4.3. How do I rename an output file?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#how-do-i-reference-a-local-script">4.4. How do I reference a local script?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#how-can-i-set-self-based-input-bindings-for-optional-inputs">4.5. How can I set <code class="docutils literal notranslate"><span class="pre">self</span></code>-based input bindings for optional inputs?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#how-can-i-model-a-one-or-the-other-parameter">4.6. How can I model a «one-or-the-other» parameter?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#how-do-i-connect-a-solo-value-to-an-input-that-expects-an-array-of-that-type">4.7. How do I connect a solo value to an input that expects an array of that type?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#how-do-make-an-input-optional">4.8. How do make an input optional? 💯</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#how-do-i-specify-an-input-that-must-come-from-a-list-of-predefined-values-i-e-how-do-i-use-enum-inputs">4.9. How do I specify an input that must come from a list of predefined values (i.e. How do I use enum inputs) ?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#how-do-i-describe-dependent-or-exclusive-input-parameters-e-g-how-do-i-use-record-inputs">4.10. How do I describe dependent or exclusive input parameters(e.g. How do I use record inputs)?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#how-do-i-set-mutually-exclusive-parameters">4.11. How do I set mutually exclusive parameters?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#how-can-i-set-booleans">4.12. How can I set Booleans?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-should-i-do-when-concatenating-strings-in-inputs">4.13. What should I do when concatenating strings in inputs?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#i-get-cwltool-errors-due-to-filenames-with-space-characters-inside-what-should-i-do">4.14. I get <code class="docutils literal notranslate"><span class="pre">cwltool</span></code> errors due to filenames with space characters inside. What should I do?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-should-i-do-when-i-get-cwl-parameter-reference-error-due-to-hyphen-in-an-input-identifier">4.15. What should I do when I get CWL Parameter Reference error due to hyphen in an input identifier?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#how-do-i-use-cwl-and-cwltool-with-singularity">4.16. How do I use CWL and cwltool with Singularity?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#how-do-i-debug-the-javascript-in-my-cwl-tool">4.17. How do I debug the JavaScript in my CWL tool?</a></li>
+</ul>
+  </nav></div>
+
+  <div class="sidebar-secondary-item">
+  
+  <div class="tocsection editthispage">
+    <a href="https://github.com/common-workflow-language/user_guide/edit/main/src/faq.md">
+      <i class="fa-solid fa-pencil"></i>
+      
+      
+        
+          Editar en GitHub
+        
+      
+    </a>
+  </div>
+</div>
+
+  <div class="sidebar-secondary-item">
+  <div class="tocsection sourcelink">
+    <a href="_sources/faq.md.txt">
+      <i class="fa-solid fa-file-lines"></i> Mostrar el código
+    </a>
+  </div>
+</div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+          </footer>
+        
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/bootstrap.js?digest=365ca57ee442770a23c6"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=365ca57ee442770a23c6"></script>
+
+<div class="container">
+  <div class="row">
+    <div class="col d-flex flex-row-reverse">
+      <ul class="nav">
+        <li class="nav-item">
+          <a class="nav-link" href="https://github.com/common-workflow-language/user_guide/blob/main/CODE_OF_CONDUCT.md">Code of Conduct</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="https://github.com/common-workflow-language/user_guide/blob/main/CONTRIBUTING.md">Contributing</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="https://github.com/common-workflow-language/user_guide/">Source</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="https://github.com/common-workflow-language/user_guide/blob/main/CITATION.md">Cite</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+
+  <footer class="bd-footer">
+<div class="bd-footer__inner bd-page-width">
+  
+    <div class="footer-items__start">
+      
+        <div class="footer-item">
+  <p class="copyright">
+    
+      © Copyright 2013, CWL Project Team.
+      <br/>
+    
+  </p>
+</div>
+      
+        <div class="footer-item">
+  <p class="sphinx-version">
+    Creado usando <a href="https://www.sphinx-doc.org/">Sphinx</a> 5.3.0.
+    <br/>
+  </p>
+</div>
+      
+    </div>
+  
+  
+  
+    <div class="footer-items__end">
+      
+        <div class="footer-item"><p class="theme-version">
+  Construido con el <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">Tema PyData Sphinx</a> 0.14.3.
+</p></div>
+      
+    </div>
+  
+</div>
+
+  </footer>
+
+  </body>
+</html>

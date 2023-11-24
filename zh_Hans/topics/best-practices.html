@@ -1,0 +1,633 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="zh-Hans" data-theme="light">
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+    <link rel="icon" sizes="16x16" href="../_static/images/favicons/cwl/favicon-16x16.png" type="image/png">
+    <link rel="icon" sizes="32x32" href="../_static/images/favicons/cwl/favicon-32x32.png" type="image/png">
+    <link rel="icon" sizes="96x96" href="../_static/images/favicons/cwl/favicon-96x96.png" type="image/png">
+    <link rel="icon" sizes="128x128" href="../_static/images/favicons/cwl/favicon-128.png" type="image/png">
+    <link rel="icon" sizes="196x196" href="../_static/images/favicons/cwl/favicon-196x196.png" type="image/png">
+    <title>2.16. 优良习惯 &#8212; Common Workflow Language User Guide 0.1 文档</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "light";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=365ca57ee442770a23c6" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=365ca57ee442770a23c6" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=365ca57ee442770a23c6" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=365ca57ee442770a23c6" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/graphviz.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/css/custom.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=365ca57ee442770a23c6" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=365ca57ee442770a23c6" />
+  <script src="../_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=365ca57ee442770a23c6"></script>
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/sphinx_highlight.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'topics/best-practices';</script>
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+    <link rel="index" title="索引" href="../genindex.html" />
+    <link rel="search" title="搜索" href="../search.html" />
+    <link rel="next" title="2.17. 文件格式" href="file-formats.html" />
+    <link rel="prev" title="2.15. 暂存输入文件" href="staging-input-files.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="zh-Hans"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="light">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search the docs ..."
+         aria-label="Search the docs ..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+<div class="bd-header__inner bd-page-width">
+  <label class="sidebar-toggle primary-toggle" for="__primary">
+    <span class="fa-solid fa-bars"></span>
+  </label>
+  
+  
+  <div class="col-lg-3 navbar-header-items__start">
+    
+      <div class="navbar-item">
+  
+
+<a class="navbar-brand logo" href="../index.html">
+  
+  
+  
+  
+  
+    
+    
+    
+    <img src="../_static/CWL-Logo-HD-cropped2.png" class="logo__image only-light" alt="Common Workflow Language User Guide 0.1 文档 - Home"/>
+    <script>document.write(`<img src="../_static/CWL-Logo-HD-cropped2.png" class="logo__image only-dark" alt="Common Workflow Language User Guide 0.1 文档 - Home"/>`);</script>
+  
+  
+</a></div>
+    
+  </div>
+  
+  <div class="col-lg-9 navbar-header-items">
+    
+    <div class="me-auto navbar-header-items__center">
+      
+        <div class="navbar-item"><nav class="navbar-nav">
+  <p class="sidebar-header-items__title"
+     role="heading"
+     aria-level="1"
+     aria-label="Site Navigation">
+    Site Navigation
+  </p>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../introduction/index.html">
+                        概述
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item current active">
+                      <a class="nav-link nav-internal" href="index.html">
+                        主题
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../tutorials.html">
+                        Tutorials
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../faq.html">
+                        常见问题
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../LICENSE.html">
+                        许可协议
+                      </a>
+                    </li>
+                
+
+                <li class="nav-item">
+                  <a class="nav-link nav-external" href="https://www.commonwl.org/community/">
+                    Community
+                  </a>
+                </li>
+                
+  </ul>
+</nav></div>
+      
+    </div>
+    
+    
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="搜索" aria-label="搜索" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">搜索</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script>
+        </div>
+      
+      
+        <div class="navbar-item">
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script></div>
+      
+        <div class="navbar-item"><ul class="navbar-icon-links navbar-nav"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/common-workflow-language/user_guide/" title="GitHub" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fab fa-github-square fa-lg" aria-hidden="true"></i></span>
+            <span class="sr-only">GitHub</span></a>
+        </li>
+</ul></div>
+      
+    </div>
+    
+  </div>
+  
+  
+    <div class="navbar-persistent--mobile">
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="搜索" aria-label="搜索" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">搜索</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script>
+    </div>
+  
+
+  
+    <label class="sidebar-toggle secondary-toggle" for="__secondary" tabindex="0">
+      <span class="fa-solid fa-outdent"></span>
+    </label>
+  
+</div>
+
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+        
+          <div class="navbar-item"><nav class="navbar-nav">
+  <p class="sidebar-header-items__title"
+     role="heading"
+     aria-level="1"
+     aria-label="Site Navigation">
+    Site Navigation
+  </p>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../introduction/index.html">
+                        概述
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item current active">
+                      <a class="nav-link nav-internal" href="index.html">
+                        主题
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../tutorials.html">
+                        Tutorials
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../faq.html">
+                        常见问题
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../LICENSE.html">
+                        许可协议
+                      </a>
+                    </li>
+                
+
+                <li class="nav-item">
+                  <a class="nav-link nav-external" href="https://www.commonwl.org/community/">
+                    Community
+                  </a>
+                </li>
+                
+  </ul>
+</nav></div>
+        
+      </div>
+    
+    
+    
+      <div class="sidebar-header-items__end">
+        
+          <div class="navbar-item">
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script></div>
+        
+          <div class="navbar-item"><ul class="navbar-icon-links navbar-nav"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/common-workflow-language/user_guide/" title="GitHub" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fab fa-github-square fa-lg" aria-hidden="true"></i></span>
+            <span class="sr-only">GitHub</span></a>
+        </li>
+</ul></div>
+        
+      </div>
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item"><nav class="bd-links d-none d-md-block" id="bd-docs-nav" aria-label="主导航">
+  <p class="bd-links__title" role="heading" aria-level="1">
+    章节导航
+  </p>
+  <div class="bd-toc-item navbar-nav">
+    <ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="yaml-guide.html">2.1. YAML Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="command-line-tool.html">2.2. 命令行工具</a></li>
+<li class="toctree-l1"><a class="reference internal" href="expressions.html">2.3. 表达式</a></li>
+<li class="toctree-l1"><a class="reference internal" href="inputs.html">2.4. 输入 (inputs)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="additional-arguments-and-parameters.html">2.5. 附加参数</a></li>
+<li class="toctree-l1"><a class="reference internal" href="parameter-references.html">2.6. 参数引用</a></li>
+<li class="toctree-l1"><a class="reference internal" href="outputs.html">2.7. 输出</a></li>
+<li class="toctree-l1"><a class="reference internal" href="custom-types.html">2.8. 自定义类型</a></li>
+<li class="toctree-l1"><a class="reference internal" href="expression-tool.html">2.9. 表达式工具</a></li>
+<li class="toctree-l1"><a class="reference internal" href="workflows.html">2.10. Workflows</a></li>
+<li class="toctree-l1"><a class="reference internal" href="operations.html">2.11. 抽象操作</a></li>
+<li class="toctree-l1"><a class="reference internal" href="environment-variables.html">2.12. 环境变量</a></li>
+<li class="toctree-l1"><a class="reference internal" href="using-containers.html">2.13. Using Containers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="creating-files-at-runtime.html">2.14. 在运行时创建文件</a></li>
+<li class="toctree-l1"><a class="reference internal" href="staging-input-files.html">2.15. 暂存输入文件</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">2.16. 优良习惯</a></li>
+<li class="toctree-l1"><a class="reference internal" href="file-formats.html">2.17. 文件格式</a></li>
+<li class="toctree-l1"><a class="reference internal" href="metadata-and-authorship.html">2.18. 元数据和著作人信息</a></li>
+<li class="toctree-l1"><a class="reference internal" href="specifying-software-requirements.html">2.19. 指定软件需求</a></li>
+<li class="toctree-l1"><a class="reference internal" href="troubleshooting.html">2.20. 疑难解答</a></li>
+</ul>
+
+  </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item">
+
+
+
+<nav aria-label="Breadcrumb">
+  <ul class="bd-breadcrumbs">
+    
+    <li class="breadcrumb-item breadcrumb-home">
+      <a href="../index.html" class="nav-link" aria-label="Home">
+        <i class="fa-solid fa-home"></i>
+      </a>
+    </li>
+    
+    <li class="breadcrumb-item"><a href="index.html" class="nav-link"><span class="section-number">2. </span>主题</a></li>
+    
+    <li class="breadcrumb-item active" aria-current="page"><span...</li>
+  </ul>
+</nav>
+</div>
+      
+    </div>
+  
+  
+</div>
+</div>
+              
+              
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <section id="best-practices">
+<h1><span class="section-number">2.16. </span>优良习惯<a class="headerlink" href="#best-practices" title="此标题的永久链接">#</a></h1>
+<p>本节列举一组值得留心的好习惯，推荐您在用 CWL 编写工具或工作流描述时参考。您只需结合实际尽量做到，无需求全。</p>
+<ul>
+<li><p>不要将 <code class="docutils literal notranslate"><span class="pre">type:</span> <span class="pre">string</span></code> 参数用于输入或引用文件、目录的名称；请根据实际情况选用 <code class="docutils literal notranslate"><span class="pre">type:</span> <span class="pre">File</span></code> 或 <code class="docutils literal notranslate"><span class="pre">type:</span> <span class="pre">Directory</span></code>.</p></li>
+<li><p>CWL 文件（连同 <code class="docutils literal notranslate"><span class="pre">Dockerfile</span></code> 等外部组件）是一种软件代码。工作流开发人员应明白的是，关于软件许可的通用规则也同样适用于您编写的 CWL 文件。例如，如果您的工作流是公开共享的，则许可条款一定要明确，以便将来的用户了解在什么条件下可以将它运行、修改、或并入其他工作流。因此，请考虑在 CWL 文件中加入 license（许可协议）字段。笔者敦促您选用现成的许可协议，不要独辟蹊径（关于挑选许可协议请参见下文链接）。同时，建议您选取允许任何人重复使用的许可证，如 <a class="reference external" href="https://spdx.org/licenses/Apache-2.0.html">Apache 2.0</a>.</p>
+<p>请尽可能使用 <a class="reference external" href="https://spdx.org/licenses/">SPDX 标识符</a> 指定许可协议。许可协议的元数据字段由形如 <code class="docutils literal notranslate"><span class="pre">https://spdx.org/licenses/[SPDX-ID]</span></code> 的 URL 构成，其中 <code class="docutils literal notranslate"><span class="pre">SPDX-ID</span></code> 取自前面链接提到的标识符列表，参见下例这段代码。对于没有 SPDX 标识符的非标准许可协议，请提供许可协议的 URL。</p>
+<p>相关阅读：《<a class="reference external" href="https://doi.org/10.1371/journal.pcbi.1002598">给科学界程序员的软件许可简明指南</a>》</p>
+<p><em>用 SPDX 标识符指定许可协议的元数据字段示例：</em></p>
+<div class="highlight-cwl notranslate"><div class="highlight"><pre><span></span><span class="nt">$namespaces</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">s</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://schema.org/</span>
+<span class="nt">s:license</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://spdx.org/licenses/Apache-2.0</span>
+<span class="c1"># other s: declarations</span>
+</pre></div>
+</div>
+<p>For more examples of providing metadata within CWL descriptions, see
+<a class="reference internal" href="metadata-and-authorship.html"><span class="std std-doc">the Metadata and Authorship section of this User Guide</span></a>.</p>
+</li>
+<li><p>为 CWL 工具或工作流描述的作者添加<a class="reference external" href="https://github.com/ProteinsWebTeam/ebi-metagenomics-cwl/blob/master/workflows/emg-assembly.cwl#L200">署名信息</a>。请使用明确、独一无二的标识符，如<a class="reference external" href="https://orcid.org">ORCID</a>.</p></li>
+<li><p>In tool descriptions, list dependencies using short name(s) under
+<a class="reference external" href="https://w3id.org/cwl/CommandLineTool.html#SoftwareRequirement"><code class="docutils literal notranslate"><span class="pre">SoftwareRequirement</span></code></a>.</p></li>
+<li><p>为依赖关系添加 <a class="reference external" href="https://scicrunch.org">SciCrunch</a> 标识符。其格式形如 <code class="docutils literal notranslate"><span class="pre">https://identifiers.org/rrid/RRID:SCR_NNNNNN</span></code>.</p></li>
+<li><p>一切 <code class="docutils literal notranslate"><span class="pre">input</span></code>（输入）和 <code class="docutils literal notranslate"><span class="pre">output</span></code>（输出）标识符均应体现其概念上的特质。请使用类似 <code class="docutils literal notranslate"><span class="pre">unaligned_sequences</span></code>、<code class="docutils literal notranslate"><span class="pre">reference_genome</span></code>、 <code class="docutils literal notranslate"><span class="pre">phylogeny</span></code>、或 <code class="docutils literal notranslate"><span class="pre">aligned_sequences</span></code> 这样望文知义的变量名，而非 <code class="docutils literal notranslate"><span class="pre">foo_input</span></code>、<code class="docutils literal notranslate"><span class="pre">foo_file</span></code>、<code class="docutils literal notranslate"><span class="pre">result</span></code>、<code class="docutils literal notranslate"><span class="pre">input</span></code>、<code class="docutils literal notranslate"><span class="pre">output</span></code> 等缺乏明确内涵的名称。</p></li>
+<li><p>In tool descriptions, include a list of version(s) of the tool that are
+known to work with this description under <a class="reference external" href="https://w3id.org/cwl/CommandLineTool.html#SoftwareRequirement"><code class="docutils literal notranslate"><span class="pre">SoftwareRequirement</span></code></a>.</p></li>
+<li><p>所有输入和输出 <code class="docutils literal notranslate"><span class="pre">File</span></code>（文件）都需要指明 <code class="docutils literal notranslate"><span class="pre">format</span></code>（格式）。生物信息学工具应使用来自 <a class="reference external" href="http://edamontology.org/format_1915">EDAM</a> 的格式标识符。另请参考 <code class="docutils literal notranslate"><span class="pre">iana:text/plain</span></code>、<code class="docutils literal notranslate"><span class="pre">iana:text/tab-separated-values</span></code> 等在 `$namespaces: { iana: &quot;https://www.iana.org/assignments/media-types/&quot; } 下使用的格式名，以及<a class="reference external" href="https://www.iana.org/assignments/media-types/media-types.xhtml">IANA 媒体类型</a>（又称 MIME 类型）的完整列表。对于非生物信息学工具，请同样运用或创建合适的本体或受控词表 (controlled vocabulary). 如果您对此有经验，请编辑此页面，以告知我们。</p></li>
+<li><p>将所有能作为流读写（即单次、非随机访问）的输入和输出 <code class="docutils literal notranslate"><span class="pre">File</span></code>（文件）标记为 <code class="docutils literal notranslate"><span class="pre">streamable:</span> <span class="pre">true</span></code>.</p></li>
+<li><p>Each <a class="reference external" href="https://w3id.org/cwl/CommandLineTool.html#CommandLineTool"><code class="docutils literal notranslate"><span class="pre">CommandLineTool</span></code></a> description should focus on a single operation
+only, even if the (sub)command is capable of more. Don't overcomplicate your
+tool descriptions with options that you don't need or use.</p></li>
+<li><p>关于自定义类型，每个外部 YAML 文件应与单个类型定义一一对应，以便重复使用。</p></li>
+<li><p>请使用位于顶级的简短 <code class="docutils literal notranslate"><span class="pre">label</span></code>（标签）对工具或工作流加以概括。</p></li>
+<li><p>在用得到的时候，还应添加顶级 <code class="docutils literal notranslate"><span class="pre">doc</span></code>. 相比上述顶级 <code class="docutils literal notranslate"><span class="pre">label</span></code>, 此处应提供更长、更详细的描述。</p></li>
+<li><p>对于有效取值为若干固定值的元素，应使用 <code class="docutils literal notranslate"><span class="pre">type:</span> <span class="pre">enum</span></code> 而非 <code class="docutils literal notranslate"><span class="pre">type:</span> <span class="pre">string</span></code>.</p></li>
+<li><p>所有用到 JavaScript 之处都应进行评估，考虑是否能将它去除或替代。经常遇到的一例，是处理 <code class="docutils literal notranslate"><span class="pre">File</span></code> （文件）名称和路径。这时应考虑是否能用 <a class="reference external" href="https://www.commonwl.org/v1.0/CommandLineTool.html#File"><code class="docutils literal notranslate"><span class="pre">File</span></code> 的内置属性</a>（如<code class="docutils literal notranslate"><span class="pre">basename</span></code>、<code class="docutils literal notranslate"><span class="pre">nameroot</span></code> 和 <code class="docutils literal notranslate"><span class="pre">nameext</span></code> 等）取代 JavaScript.</p></li>
+<li><p>写好工具描述后， 把它交给同行（最好来自其他机构）进行测试并获取反馈。</p></li>
+<li><p>若复杂的工作流中包含可以抽象出来的单独组件，应利用 <a class="reference external" href="https://www.commonwl.org/v1.0/Workflow.html#SubworkflowFeatureRequirement"><code class="docutils literal notranslate"><span class="pre">SubworkflowFeatureRequirement</span></code></a> 将工作流模块化，以便重复使用其组成部分。</p></li>
+<li><p>应使软件容器 (container) 符合 <a class="reference external" href="https://doi.org/10.12688/f1000research.15140.1">Recommendations for the packaging and containerizing of bioinformatics software</a>（《生物信息学软件封装与容器化建议》）一文提出的标准。该文对其他学科也有参考价值。</p></li>
+</ul>
+</section>
+
+
+                </article>
+              
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  <!-- Previous / next buttons -->
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="staging-input-files.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">上一页</p>
+        <p class="prev-next-title"><span class="section-number">2.15. </span>暂存输入文件</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="file-formats.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">下一页</p>
+        <p class="prev-next-title"><span class="section-number">2.17. </span>文件格式</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  
+  <div class="tocsection editthispage">
+    <a href="https://github.com/common-workflow-language/user_guide/edit/main/src/topics/best-practices.md">
+      <i class="fa-solid fa-pencil"></i>
+      
+      
+        
+          Edit on GitHub
+        
+      
+    </a>
+  </div>
+</div>
+
+  <div class="sidebar-secondary-item">
+  <div class="tocsection sourcelink">
+    <a href="../_sources/topics/best-practices.md.txt">
+      <i class="fa-solid fa-file-lines"></i> 显示源代码
+    </a>
+  </div>
+</div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+          </footer>
+        
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=365ca57ee442770a23c6"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=365ca57ee442770a23c6"></script>
+
+<div class="container">
+  <div class="row">
+    <div class="col d-flex flex-row-reverse">
+      <ul class="nav">
+        <li class="nav-item">
+          <a class="nav-link" href="https://github.com/common-workflow-language/user_guide/blob/main/CODE_OF_CONDUCT.md">Code of Conduct</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="https://github.com/common-workflow-language/user_guide/blob/main/CONTRIBUTING.md">Contributing</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="https://github.com/common-workflow-language/user_guide/">Source</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="https://github.com/common-workflow-language/user_guide/blob/main/CITATION.md">Cite</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+
+  <footer class="bd-footer">
+<div class="bd-footer__inner bd-page-width">
+  
+    <div class="footer-items__start">
+      
+        <div class="footer-item">
+  <p class="copyright">
+    
+      © Copyright 2013, CWL Project Team.
+      <br/>
+    
+  </p>
+</div>
+      
+        <div class="footer-item">
+  <p class="sphinx-version">
+    由 <a href="https://www.sphinx-doc.org/">Sphinx</a> 5.3.0创建。
+    <br/>
+  </p>
+</div>
+      
+    </div>
+  
+  
+  
+    <div class="footer-items__end">
+      
+        <div class="footer-item"><p class="theme-version">
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.14.3.
+</p></div>
+      
+    </div>
+  
+</div>
+
+  </footer>
+
+  </body>
+</html>

@@ -1,0 +1,735 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="zh-Hans" data-theme="light">
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+    <link rel="icon" sizes="16x16" href="../_static/images/favicons/cwl/favicon-16x16.png" type="image/png">
+    <link rel="icon" sizes="32x32" href="../_static/images/favicons/cwl/favicon-32x32.png" type="image/png">
+    <link rel="icon" sizes="96x96" href="../_static/images/favicons/cwl/favicon-96x96.png" type="image/png">
+    <link rel="icon" sizes="128x128" href="../_static/images/favicons/cwl/favicon-128.png" type="image/png">
+    <link rel="icon" sizes="196x196" href="../_static/images/favicons/cwl/favicon-196x196.png" type="image/png">
+    <title>1.3. 基本概念 &#8212; Common Workflow Language User Guide 0.1 文档</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "light";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=365ca57ee442770a23c6" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=365ca57ee442770a23c6" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=365ca57ee442770a23c6" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=365ca57ee442770a23c6" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/graphviz.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/css/custom.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=365ca57ee442770a23c6" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=365ca57ee442770a23c6" />
+  <script src="../_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=365ca57ee442770a23c6"></script>
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/sphinx_highlight.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'introduction/basic-concepts';</script>
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+    <link rel="index" title="索引" href="../genindex.html" />
+    <link rel="search" title="搜索" href="../search.html" />
+    <link rel="next" title="2. 主题" href="../topics/index.html" />
+    <link rel="prev" title="1.2. 学习前的准备" href="prerequisites.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="zh-Hans"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="light">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search the docs ..."
+         aria-label="Search the docs ..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+<div class="bd-header__inner bd-page-width">
+  <label class="sidebar-toggle primary-toggle" for="__primary">
+    <span class="fa-solid fa-bars"></span>
+  </label>
+  
+  
+  <div class="col-lg-3 navbar-header-items__start">
+    
+      <div class="navbar-item">
+  
+
+<a class="navbar-brand logo" href="../index.html">
+  
+  
+  
+  
+  
+    
+    
+    
+    <img src="../_static/CWL-Logo-HD-cropped2.png" class="logo__image only-light" alt="Common Workflow Language User Guide 0.1 文档 - Home"/>
+    <script>document.write(`<img src="../_static/CWL-Logo-HD-cropped2.png" class="logo__image only-dark" alt="Common Workflow Language User Guide 0.1 文档 - Home"/>`);</script>
+  
+  
+</a></div>
+    
+  </div>
+  
+  <div class="col-lg-9 navbar-header-items">
+    
+    <div class="me-auto navbar-header-items__center">
+      
+        <div class="navbar-item"><nav class="navbar-nav">
+  <p class="sidebar-header-items__title"
+     role="heading"
+     aria-level="1"
+     aria-label="Site Navigation">
+    Site Navigation
+  </p>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+                    <li class="nav-item current active">
+                      <a class="nav-link nav-internal" href="index.html">
+                        概述
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../topics/index.html">
+                        主题
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../tutorials.html">
+                        Tutorials
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../faq.html">
+                        常见问题
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../LICENSE.html">
+                        许可协议
+                      </a>
+                    </li>
+                
+
+                <li class="nav-item">
+                  <a class="nav-link nav-external" href="https://www.commonwl.org/community/">
+                    Community
+                  </a>
+                </li>
+                
+  </ul>
+</nav></div>
+      
+    </div>
+    
+    
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="搜索" aria-label="搜索" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">搜索</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script>
+        </div>
+      
+      
+        <div class="navbar-item">
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script></div>
+      
+        <div class="navbar-item"><ul class="navbar-icon-links navbar-nav"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/common-workflow-language/user_guide/" title="GitHub" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fab fa-github-square fa-lg" aria-hidden="true"></i></span>
+            <span class="sr-only">GitHub</span></a>
+        </li>
+</ul></div>
+      
+    </div>
+    
+  </div>
+  
+  
+    <div class="navbar-persistent--mobile">
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="搜索" aria-label="搜索" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">搜索</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script>
+    </div>
+  
+
+  
+    <label class="sidebar-toggle secondary-toggle" for="__secondary" tabindex="0">
+      <span class="fa-solid fa-outdent"></span>
+    </label>
+  
+</div>
+
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+        
+          <div class="navbar-item"><nav class="navbar-nav">
+  <p class="sidebar-header-items__title"
+     role="heading"
+     aria-level="1"
+     aria-label="Site Navigation">
+    Site Navigation
+  </p>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+                    <li class="nav-item current active">
+                      <a class="nav-link nav-internal" href="index.html">
+                        概述
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../topics/index.html">
+                        主题
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../tutorials.html">
+                        Tutorials
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../faq.html">
+                        常见问题
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../LICENSE.html">
+                        许可协议
+                      </a>
+                    </li>
+                
+
+                <li class="nav-item">
+                  <a class="nav-link nav-external" href="https://www.commonwl.org/community/">
+                    Community
+                  </a>
+                </li>
+                
+  </ul>
+</nav></div>
+        
+      </div>
+    
+    
+    
+      <div class="sidebar-header-items__end">
+        
+          <div class="navbar-item">
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script></div>
+        
+          <div class="navbar-item"><ul class="navbar-icon-links navbar-nav"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/common-workflow-language/user_guide/" title="GitHub" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fab fa-github-square fa-lg" aria-hidden="true"></i></span>
+            <span class="sr-only">GitHub</span></a>
+        </li>
+</ul></div>
+        
+      </div>
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item"><nav class="bd-links d-none d-md-block" id="bd-docs-nav" aria-label="主导航">
+  <p class="bd-links__title" role="heading" aria-level="1">
+    章节导航
+  </p>
+  <div class="bd-toc-item navbar-nav">
+    <ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="quick-start.html">1.1. 快速入门</a></li>
+<li class="toctree-l1"><a class="reference internal" href="prerequisites.html">1.2. 学习前的准备</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">1.3. 基本概念</a></li>
+</ul>
+
+  </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item">
+
+
+
+<nav aria-label="Breadcrumb">
+  <ul class="bd-breadcrumbs">
+    
+    <li class="breadcrumb-item breadcrumb-home">
+      <a href="../index.html" class="nav-link" aria-label="Home">
+        <i class="fa-solid fa-home"></i>
+      </a>
+    </li>
+    
+    <li class="breadcrumb-item"><a href="index.html" class="nav-link"><span class="section-number">1. </span>概述</a></li>
+    
+    <li class="breadcrumb-item active" aria-current="page"><span...</li>
+  </ul>
+</nav>
+</div>
+      
+    </div>
+  
+  
+</div>
+</div>
+              
+              
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <section id="basic-concepts">
+<h1><span class="section-number">1.3. </span>基本概念<a class="headerlink" href="#basic-concepts" title="此标题的永久链接">#</a></h1>
+<p>本章节介绍用户开始运用通用工作流语言（CWL）所需的基本概念。读者应了解工作流管理工具和 YAML, 且能较为自如地按照文中指示操作命令行。这些概念在《用户指南》其他部分有更详尽的说明。如果您已了解 CWL, 或想查阅进阶内容，可以考虑跳过本章节。</p>
+<section id="the-cwl-specification">
+<h2><span class="section-number">1.3.1. </span>CWL 规约<a class="headerlink" href="#the-cwl-specification" title="此标题的永久链接">#</a></h2>
+<p>CWL 的作用在于描述各种命令行工具，并且将它们连接起来，以创建工作流 (workflow)。CWL 是一种规范，而非某种特定的软件。因此，由 CWL 描述的工具和工作流能够移植到支持 CWL 标准的多种平台。</p>
+<a class="reference internal image-reference" href="../_images/CWL-Logo-HD-cropped2.png" id="cwl-logo"><img alt="../_images/CWL-Logo-HD-cropped2.png" class="align-center" id="cwl-logo" src="../_images/CWL-Logo-HD-cropped2.png" style="width: 300px;" /></a>
+<p>CWL 规约由 CWL 社群撰写并维护，此规约现有多个版本，本《用户指南》所涵盖的是版本 <code class="docutils literal notranslate"><span class="pre">v1.2</span></code>.</p>
+<p>规约的版本号码由至多三个数字构成，以 <code class="docutils literal notranslate"><span class="pre">.</span></code>（圆点）分隔。第一个数字为主发布版本，用于向后不可兼容的更改，例如删除过时的功能。第二个数字是次级发布版本，用于新增功能或向后兼容的小幅调整。最后一个数字用于错误修复，例如打字错误或其他更正。</p>
+<div class="admonition note">
+<p class="admonition-title">备注</p>
+<p>规约所使用的版本标号模型称为“语义型版本”，请参阅本章结尾以<a class="reference external" href="#learn-more">了解更多</a>相关信息。</p>
+</div>
+</section>
+<section id="implementations">
+<h2><span class="section-number">1.3.2. </span>实现<a class="headerlink" href="#implementations" title="此标题的永久链接">#</a></h2>
+<p>所谓 CWL 规约的某种“实现” (implementation), 指的是任何一种依照某版本的规约内容而编写的软件。然而，诸实现未必能将规约的每个方面都转化为软件实体。目前，CWL 各种实现的许可协议包括开源和商业许可。</p>
+<p>CWL非常适用于描述集群、云计算和高性能计算 (HPC) 等多节点、任务并行调度环境中的大规模工作流。</p>
+<figure class="align-center" id="specification-and-implementations-graph">
+<div class="graphviz"><object data="../_images/graphviz-b2e161069f145124e4da46557a8340e408a06117.svg" type="image/svg+xml" class="graphviz">
+<p class="warning">digraph G {
+    compound=true;
+    rankdir=&quot;LR&quot;;
+    ranksep=0.75;
+    fontname=&quot;Verdana&quot;;
+    fontsize=&quot;10&quot;;
+    graph [splines=ortho];
+    node [fontname=&quot;Verdana&quot;, fontsize=&quot;10&quot;, shape=box];
+    edge [fontname=&quot;Verdana&quot;, fontsize=&quot;10&quot;];
+    subgraph cluster_0 {
+        label=&quot;Implementations&quot;;
+        ranksep=0.25;
+
+        cwltool;
+        toil;
+        Arvados;
+        runner_others[label=&quot;...&quot;];
+        label=&quot;CWL Runners&quot;;
+    }
+
+    subgraph cluster_1 {
+        label=&quot;Tools&quot;;
+        ranksep=0.25;
+
+        subgraph cluster_2 {
+            &quot;vscode-cwl&quot;;
+            &quot;vim-cwl&quot;;
+            benten;
+            editor_others[label=&quot;...&quot;];
+            label=&quot;Editors&quot;;
+        }
+
+        subgraph cluster_3 {
+            &quot;CWL Viewer&quot;;
+            &quot;vue-cwl&quot;;
+            viewer_others[label=&quot;...&quot;];
+            label=&quot;Viewers&quot;;
+        }
+
+        &quot;And more&quot;;
+    }
+    cwltool -&gt; &quot;CWL Specification&quot; [ltail=cluster_0, dir=back];
+    &quot;CWL Specification&quot; -&gt; &quot;vscode-cwl&quot; [lhead=cluster_1];
+    &quot;vscode-cwl&quot; -&gt; &quot;CWL Viewer&quot; [style=invis];
+    &quot;CWL Viewer&quot; -&gt; &quot;And more&quot; [style=invis];
+}</p></object></div>
+<figcaption>
+<p><span class="caption-text">CWL 规约、实现及其他工具。</span><a class="headerlink" href="#specification-and-implementations-graph" title="此图像的永久链接">#</a></p>
+</figcaption>
+</figure>
+</section>
+<section id="processes-and-requirements">
+<h2><span class="section-number">1.3.3. </span>流程和要求<a class="headerlink" href="#processes-and-requirements" title="此标题的永久链接">#</a></h2>
+<p>流程 (process) 是指接收输入并生成输出的计算单元，影响其行为的包括输入 (input)、要求 (requirement) 及提示 (hint)。CWL 规约 <code class="docutils literal notranslate"><span class="pre">v1.2</span></code> 版定义了如下四种流程：</p>
+<ul class="simple">
+<li><p>命令行工具。</p></li>
+<li><p>表达式工具。</p></li>
+<li><p>操作。</p></li>
+<li><p>工作流。</p></li>
+</ul>
+<figure class="align-center" id="processing-units-graph">
+<div class="graphviz"><object data="../_images/graphviz-4d746944e4b361d70c103c350377e92490136b86.svg" type="image/svg+xml" class="graphviz">
+<p class="warning">digraph &quot;A GraphViz graph with the CWL processing units, e.g. Process, Workflow, CommandLineTool, etc.&quot; {
+    rankdir=&quot;TB&quot;;
+    graph [splines=false];
+
+    node [fontname=&quot;Verdana&quot;, fontsize=&quot;10&quot;, shape=box];
+    edge [fontname=&quot;Verdana&quot;, fontsize=&quot;10&quot;];
+    Process; CommandLineTool; ExpressionTool; Operation; Workflow;
+
+    node[label=&quot;&quot;, width=0, height=0];
+    edge[arrowhead=none];
+    n1;
+
+    {rank=same; CommandLineTool; ExpressionTool; Operation; Workflow;}
+    Process -&gt; n1 [arrowhead=normal, dir=back];
+    n1 -&gt; CommandLineTool; n1 -&gt; ExpressionTool; n1 -&gt; Operation; n1 -&gt; Workflow;
+}</p></object></div>
+<figcaption>
+<p><span class="caption-text">可用在 CWL 对象模型中的处理单元。</span><a class="headerlink" href="#processing-units-graph" title="此图像的永久链接">#</a></p>
+</figcaption>
+</figure>
+<p>“命令行工具”指的是 <code class="docutils literal notranslate"><span class="pre">echo</span></code>、<code class="docutils literal notranslate"><span class="pre">ls</span></code> 及 <code class="docutils literal notranslate"><span class="pre">tar</span></code> 等命令行程序的包装器 (wrapper)。从工作流中可以调用命令行工具。</p>
+<p>“表达式工具”是 JavaScript 表达式的包装器。通过将工作流执行过程中的相同部分整理为可重用的 JavaScript 代码，像命令行工具一样接受输入并生成输出，工作流和命令行工具可以得到简化。</p>
+<p>“操作”是一种抽象的过程，它同样可接受输入、生成输出，并用于工作流中。但是，这一类特殊操作并不十分常用。用户指南的 <a class="reference internal" href="../topics/operations.html"><span class="std std-doc">《操作》</span></a>一节将进行讨论。</p>
+<p>“工作流”指的是可分为步骤的流程。“步骤”可以是其他工作流（嵌套工作流），也可以是命令行工具或表达式工具。工作流的输入可以传递给它的任一步骤，而其步骤生成的输出可用作工作流的最终输出。</p>
+<p>CWL 规约允许其实现提供额外功能，或通过 <em>requirements</em> （要求）指定工作流的先决条件。CWL 规约定义了诸种要求，如：</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://w3id.org/cwl/Workflow.html#InlineJavascriptRequirement"><code class="docutils literal notranslate"><span class="pre">InlineJavascriptWorkflow</span></code></a> - enables JavaScript in expressions.</p></li>
+<li><p><a class="reference external" href="https://w3id.org/cwl/Workflow.html#SubworkflowFeatureRequirement"><code class="docutils literal notranslate"><span class="pre">SubworkflowFeatureRequirement</span></code></a> - enables nested workflows.</p></li>
+<li><p><a class="reference external" href="https://w3id.org/cwl/Workflow.html#InitialWorkDirRequirement"><code class="docutils literal notranslate"><span class="pre">InitialWorkDirRequirement</span></code></a> - controls staging files in the input directory.</p></li>
+</ul>
+<p>某些 CWL 运行程序可能提供规约之外的需求。例如 <code class="docutils literal notranslate"><span class="pre">cwltool</span></code> 提供 <code class="docutils literal notranslate"><span class="pre">cwltool:CUDARequirement</span></code> 以支持GPU需求，但这不在 <code class="docutils literal notranslate"><span class="pre">v1.2</span></code> 版本规约之内，可能不受其他 CWL 运行程序支持。</p>
+<p>“提示”与需求类似。其区别是，列为“需求”的功能是不可缺少的，而提示仅列出可选功能。更详细介绍请见 <a class="reference internal" href="../topics/requirements-and-hints.html"><span class="std std-doc">《需求》</span></a>一章。</p>
+</section>
+<section id="fair-workflows">
+<h2><span class="section-number">1.3.4. </span>FAIR 工作流<a class="headerlink" href="#fair-workflows" title="此标题的永久链接">#</a></h2>
+<blockquote>
+<div><p>The FAIR principles have laid a foundation for sharing and publishing
+digital assets, and in particular, data. The FAIR principles emphasize
+machine accessibility and that all digital assets should be Findable,
+Accessible, Interoperable, and Reusable. Workflows encode the methods
+by which the scientific process is conducted and via which data are
+created. It is thus important that workflows both support the creation
+of FAIR data and themselves adhere to the FAIR principles.
+— <a class="reference external" href="https://workflows.community/groups/fair/">FAIR Computational Workflows</a>,
+Workflows Community Initiative.</p>
+</div></blockquote>
+<p>CWL 滥觞于“make”一类推定任务间依赖关系，并据此决定其执行次序的工具。但与“make”的不同在于，CWL 任务是存在于独立环境中的，其输入和输出需要明确指定。</p>
+<p>明确而独立，其益处在于灵活、可移植及可扩缩。CWL 所描述的工具和工作流，既能无缝对接 Docker 等技术以发挥其优势，又能通用于不同供应方的 CWL 实现环境中。</p>
+<p>同时，<code class="docutils literal notranslate"><span class="pre">cwltool</span></code> 将 PROV-O 标准本体 (standard ontology) 运用于数据来源的保证。</p>
+</section>
+<section id="learn-more">
+<h2><span class="section-number">1.3.5. </span>了解更多信息<a class="headerlink" href="#learn-more" title="此标题的永久链接">#</a></h2>
+<ul class="simple">
+<li><p>语义型版本 —— <a class="reference external" href="https://semver.org/">https://semver.org/</a></p></li>
+<li><p>CWL网站上的规约页面： <a class="reference external" href="https://www.commonwl.org/specification/">https://www.commonwl.org/specification/</a></p></li>
+<li><p>The Command Line Tool Description Standard: &lt;<a class="reference external" href="https://w3id.org/cwl/CommandLineTool.html">https://www.commonwl.org/v1.2/CommandLineTool.html</a>&gt;</p></li>
+<li><p>GitHub 上的 CWL 规约当前版本： <a class="github reference external" href="https://github.com/common-workflow-language/cwl-v1.2">common-workflow-language/cwl-v1.2</a></p></li>
+<li><p>CWL 网站所列的诸种实现：<a class="reference external" href="https://www.commonwl.org/implementations/">https://www.commonwl.org/implementations/</a></p></li>
+<li><p>PROV-O：PROV 本体 —— <a class="reference external" href="https://www.w3.org/TR/prov-o/">https://www.w3.org/TR/prov-o/</a></p></li>
+<li><p>CWL 操作 (operations) 见于本《用户指南》中<a class="reference internal" href="../topics/operations.html"><span class="std std-doc">《操作》</span></a>一章。</p></li>
+</ul>
+</section>
+</section>
+
+
+                </article>
+              
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  <!-- Previous / next buttons -->
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="prerequisites.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">上一页</p>
+        <p class="prev-next-title"><span class="section-number">1.2. </span>学习前的准备</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="../topics/index.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">下一页</p>
+        <p class="prev-next-title"><span class="section-number">2. </span>主题</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> On this page
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-cwl-specification">1.3.1. CWL 规约</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#implementations">1.3.2. 实现</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#processes-and-requirements">1.3.3. 流程和要求</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#fair-workflows">1.3.4. FAIR 工作流</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#learn-more">1.3.5. 了解更多信息</a></li>
+</ul>
+  </nav></div>
+
+  <div class="sidebar-secondary-item">
+  
+  <div class="tocsection editthispage">
+    <a href="https://github.com/common-workflow-language/user_guide/edit/main/src/introduction/basic-concepts.md">
+      <i class="fa-solid fa-pencil"></i>
+      
+      
+        
+          Edit on GitHub
+        
+      
+    </a>
+  </div>
+</div>
+
+  <div class="sidebar-secondary-item">
+  <div class="tocsection sourcelink">
+    <a href="../_sources/introduction/basic-concepts.md.txt">
+      <i class="fa-solid fa-file-lines"></i> 显示源代码
+    </a>
+  </div>
+</div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+          </footer>
+        
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=365ca57ee442770a23c6"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=365ca57ee442770a23c6"></script>
+
+<div class="container">
+  <div class="row">
+    <div class="col d-flex flex-row-reverse">
+      <ul class="nav">
+        <li class="nav-item">
+          <a class="nav-link" href="https://github.com/common-workflow-language/user_guide/blob/main/CODE_OF_CONDUCT.md">Code of Conduct</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="https://github.com/common-workflow-language/user_guide/blob/main/CONTRIBUTING.md">Contributing</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="https://github.com/common-workflow-language/user_guide/">Source</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="https://github.com/common-workflow-language/user_guide/blob/main/CITATION.md">Cite</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+
+  <footer class="bd-footer">
+<div class="bd-footer__inner bd-page-width">
+  
+    <div class="footer-items__start">
+      
+        <div class="footer-item">
+  <p class="copyright">
+    
+      © Copyright 2013, CWL Project Team.
+      <br/>
+    
+  </p>
+</div>
+      
+        <div class="footer-item">
+  <p class="sphinx-version">
+    由 <a href="https://www.sphinx-doc.org/">Sphinx</a> 5.3.0创建。
+    <br/>
+  </p>
+</div>
+      
+    </div>
+  
+  
+  
+    <div class="footer-items__end">
+      
+        <div class="footer-item"><p class="theme-version">
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.14.3.
+</p></div>
+      
+    </div>
+  
+</div>
+
+  </footer>
+
+  </body>
+</html>

@@ -1,0 +1,687 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-theme="light">
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+    <link rel="icon" sizes="16x16" href="_static/images/favicons/cwl/favicon-16x16.png" type="image/png">
+    <link rel="icon" sizes="32x32" href="_static/images/favicons/cwl/favicon-32x32.png" type="image/png">
+    <link rel="icon" sizes="96x96" href="_static/images/favicons/cwl/favicon-96x96.png" type="image/png">
+    <link rel="icon" sizes="128x128" href="_static/images/favicons/cwl/favicon-128.png" type="image/png">
+    <link rel="icon" sizes="196x196" href="_static/images/favicons/cwl/favicon-196x196.png" type="image/png">
+    <title>Common Workflow Language User Guide &#8212; Common Workflow Language User Guide 0.1 documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "light";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=365ca57ee442770a23c6" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=365ca57ee442770a23c6" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=365ca57ee442770a23c6" rel="stylesheet" />
+
+  
+  <link href="_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=365ca57ee442770a23c6" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/graphviz.css" />
+    <link rel="stylesheet" type="text/css" href="_static/css/custom.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=365ca57ee442770a23c6" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=365ca57ee442770a23c6" />
+  <script src="_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=365ca57ee442770a23c6"></script>
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/sphinx_highlight.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'index';</script>
+    <link rel="shortcut icon" href="_static/favicon.ico"/>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="1. Introduction" href="introduction/index.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="light">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search the docs ..."
+         aria-label="Search the docs ..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+<div class="bd-header__inner bd-page-width">
+  <label class="sidebar-toggle primary-toggle" for="__primary">
+    <span class="fa-solid fa-bars"></span>
+  </label>
+  
+  
+  <div class="col-lg-3 navbar-header-items__start">
+    
+      <div class="navbar-item">
+  
+
+<a class="navbar-brand logo" href="#">
+  
+  
+  
+  
+  
+    
+    
+    
+    <img src="_static/CWL-Logo-HD-cropped2.png" class="logo__image only-light" alt="Common Workflow Language User Guide 0.1 documentation - Home"/>
+    <script>document.write(`<img src="_static/CWL-Logo-HD-cropped2.png" class="logo__image only-dark" alt="Common Workflow Language User Guide 0.1 documentation - Home"/>`);</script>
+  
+  
+</a></div>
+    
+  </div>
+  
+  <div class="col-lg-9 navbar-header-items">
+    
+    <div class="me-auto navbar-header-items__center">
+      
+        <div class="navbar-item"><nav class="navbar-nav">
+  <p class="sidebar-header-items__title"
+     role="heading"
+     aria-level="1"
+     aria-label="Site Navigation">
+    Site Navigation
+  </p>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="introduction/index.html">
+                        Introduction
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="topics/index.html">
+                        Topics
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="tutorials.html">
+                        Tutorials
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="faq.html">
+                        FAQ
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="LICENSE.html">
+                        Licenses
+                      </a>
+                    </li>
+                
+
+                <li class="nav-item">
+                  <a class="nav-link nav-external" href="https://www.commonwl.org/community/">
+                    Community
+                  </a>
+                </li>
+                
+  </ul>
+</nav></div>
+      
+    </div>
+    
+    
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script>
+        </div>
+      
+      
+        <div class="navbar-item">
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script></div>
+      
+        <div class="navbar-item"><ul class="navbar-icon-links navbar-nav"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/common-workflow-language/user_guide/" title="GitHub" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fab fa-github-square fa-lg" aria-hidden="true"></i></span>
+            <span class="sr-only">GitHub</span></a>
+        </li>
+</ul></div>
+      
+    </div>
+    
+  </div>
+  
+  
+    <div class="navbar-persistent--mobile">
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script>
+    </div>
+  
+
+  
+    <label class="sidebar-toggle secondary-toggle" for="__secondary" tabindex="0">
+      <span class="fa-solid fa-outdent"></span>
+    </label>
+  
+</div>
+
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar hide-on-wide">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+        
+          <div class="navbar-item"><nav class="navbar-nav">
+  <p class="sidebar-header-items__title"
+     role="heading"
+     aria-level="1"
+     aria-label="Site Navigation">
+    Site Navigation
+  </p>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="introduction/index.html">
+                        Introduction
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="topics/index.html">
+                        Topics
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="tutorials.html">
+                        Tutorials
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="faq.html">
+                        FAQ
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="LICENSE.html">
+                        Licenses
+                      </a>
+                    </li>
+                
+
+                <li class="nav-item">
+                  <a class="nav-link nav-external" href="https://www.commonwl.org/community/">
+                    Community
+                  </a>
+                </li>
+                
+  </ul>
+</nav></div>
+        
+      </div>
+    
+    
+    
+      <div class="sidebar-header-items__end">
+        
+          <div class="navbar-item">
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script></div>
+        
+          <div class="navbar-item"><ul class="navbar-icon-links navbar-nav"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/common-workflow-language/user_guide/" title="GitHub" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fab fa-github-square fa-lg" aria-hidden="true"></i></span>
+            <span class="sr-only">GitHub</span></a>
+        </li>
+</ul></div>
+        
+      </div>
+    
+  </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article"></div>
+              
+              
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <section id="common-workflow-language-user-guide">
+<h1>Common Workflow Language User Guide<a class="headerlink" href="#common-workflow-language-user-guide" title="Permalink to this heading">#</a></h1>
+<p>This guide will introduce you to writing workflows using the
+<a class="reference external" href="https://www.commonwl.org/">Common Workflow Language</a> (CWL)
+open standards. This guide describes the latest specification <code class="docutils literal notranslate"><span class="pre">v1.2</span></code>.</p>
+<div class="admonition-contributions-and-feedback-are-welcome admonition">
+<p class="admonition-title">Contributions and Feedback are Welcome!</p>
+<p>If you find that something is missing from this guide, or if you would
+like to provide other feedback, file an Issue on the <a class="reference external" href="https://github.com/common-workflow-language/user_guide/issues">project repository
+for this guide</a>. You can also suggest changes directly in a Pull
+Request by clicking the “Edit this page” button at the right sidebar of
+each page.</p>
+</div>
+<section id="navigating-the-user-guide">
+<h2>Navigating the User Guide<a class="headerlink" href="#navigating-the-user-guide" title="Permalink to this heading">#</a></h2>
+<p>If you are a beginner user get started with the <a class="reference internal" href="introduction/index.html"><span class="std std-doc">Introduction</span></a>
+section. For advanced users the subsections of the
+<a class="reference internal" href="topics/index.html"><span class="std std-doc">Topics</span></a> have detailed information about the
+most common topics for CWL.</p>
+<p>The Table of Contents is displayed at the top menu and also on the left sidebar.
+It also appears further down this page but with links to subsections. The right
+sidebar contains links to the sections of each page, and the Search form is on
+the left sidebar.</p>
+</section>
+<section id="table-of-contents">
+<h2>Table of Contents<a class="headerlink" href="#table-of-contents" title="Permalink to this heading">#</a></h2>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="introduction/index.html">1. Introduction</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="introduction/quick-start.html">1.1. Quick Start</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="introduction/quick-start.html#hello-world">1.1.1. “Hello World”</a></li>
+<li class="toctree-l3"><a class="reference internal" href="introduction/quick-start.html#installing-a-cwl-runner">1.1.2. Installing a CWL Runner</a></li>
+<li class="toctree-l3"><a class="reference internal" href="introduction/quick-start.html#running-hello-world">1.1.3. Running “Hello World”</a></li>
+<li class="toctree-l3"><a class="reference internal" href="introduction/quick-start.html#learn-more">1.1.4. Learn More</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="introduction/prerequisites.html">1.2. Prerequisites</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="introduction/prerequisites.html#operating-system">1.2.1. Operating System</a></li>
+<li class="toctree-l3"><a class="reference internal" href="introduction/prerequisites.html#cwl-runner">1.2.2. CWL Runner</a></li>
+<li class="toctree-l3"><a class="reference internal" href="introduction/prerequisites.html#text-editor">1.2.3. Text Editor</a></li>
+<li class="toctree-l3"><a class="reference internal" href="introduction/prerequisites.html#docker">1.2.4. Docker</a></li>
+<li class="toctree-l3"><a class="reference internal" href="introduction/prerequisites.html#learn-more">1.2.5. Learn More</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="introduction/basic-concepts.html">1.3. Basic Concepts</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="introduction/basic-concepts.html#the-cwl-specification">1.3.1. The CWL Specification</a></li>
+<li class="toctree-l3"><a class="reference internal" href="introduction/basic-concepts.html#implementations">1.3.2. Implementations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="introduction/basic-concepts.html#processes-and-requirements">1.3.3. Processes and Requirements</a></li>
+<li class="toctree-l3"><a class="reference internal" href="introduction/basic-concepts.html#fair-workflows">1.3.4. FAIR Workflows</a></li>
+<li class="toctree-l3"><a class="reference internal" href="introduction/basic-concepts.html#learn-more">1.3.5. Learn More</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="topics/index.html">2. Topics</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="topics/yaml-guide.html">2.1. YAML Guide</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="topics/yaml-guide.html#contents">2.1.1. Contents</a></li>
+<li class="toctree-l3"><a class="reference internal" href="topics/yaml-guide.html#key-value-pairs">2.1.2. Key-Value Pairs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="topics/yaml-guide.html#comments">2.1.3. Comments</a></li>
+<li class="toctree-l3"><a class="reference internal" href="topics/yaml-guide.html#maps">2.1.4. Maps</a></li>
+<li class="toctree-l3"><a class="reference internal" href="topics/yaml-guide.html#arrays">2.1.5. Arrays</a></li>
+<li class="toctree-l3"><a class="reference internal" href="topics/yaml-guide.html#json-style">2.1.6. JSON Style</a></li>
+<li class="toctree-l3"><a class="reference internal" href="topics/yaml-guide.html#reference">2.1.7. Reference</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="topics/command-line-tool.html">2.2. Command Line Tool</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="topics/command-line-tool.html#network-access">2.2.1. Network Access</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="topics/expressions.html">2.3. Expressions</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="topics/expressions.html#using-external-libraries-and-inline-javascript-code-with-expressionlib">2.3.1. Using External Libraries and Inline JavaScript Code with <code class="docutils literal notranslate"><span class="pre">expressionLib</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="topics/inputs.html">2.4. Inputs</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="topics/inputs.html#essential-input-parameters">2.4.1. Essential Input Parameters</a></li>
+<li class="toctree-l3"><a class="reference internal" href="topics/inputs.html#array-inputs">2.4.2. Array Inputs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="topics/inputs.html#inclusive-and-exclusive-inputs">2.4.3. Inclusive and Exclusive Inputs</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="topics/additional-arguments-and-parameters.html">2.5. Additional Arguments and Parameters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="topics/parameter-references.html">2.6. Parameter References</a></li>
+<li class="toctree-l2"><a class="reference internal" href="topics/outputs.html">2.7. Outputs</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="topics/outputs.html#returning-output-files">2.7.1. Returning Output Files</a></li>
+<li class="toctree-l3"><a class="reference internal" href="topics/outputs.html#capturing-standard-output">2.7.2. Capturing Standard Output</a></li>
+<li class="toctree-l3"><a class="reference internal" href="topics/outputs.html#array-outputs">2.7.3. Array Outputs</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="topics/custom-types.html">2.8. Custom Types</a></li>
+<li class="toctree-l2"><a class="reference internal" href="topics/expression-tool.html">2.9. Expression Tool</a></li>
+<li class="toctree-l2"><a class="reference internal" href="topics/workflows.html">2.10. Workflows</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="topics/workflows.html#writing-workflows">2.10.1. Writing Workflows</a></li>
+<li class="toctree-l3"><a class="reference internal" href="topics/workflows.html#nested-workflows">2.10.2. Nested Workflows</a></li>
+<li class="toctree-l3"><a class="reference internal" href="topics/workflows.html#scattering-steps">2.10.3. Scattering Steps</a></li>
+<li class="toctree-l3"><a class="reference internal" href="topics/workflows.html#conditional-workflows">2.10.4. Conditional Workflows</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="topics/operations.html">2.11. Operations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="topics/environment-variables.html">2.12. Environment Variables</a></li>
+<li class="toctree-l2"><a class="reference internal" href="topics/using-containers.html">2.13. Using Containers</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="topics/using-containers.html#running-tools-inside-docker">2.13.1. Running Tools Inside Docker</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="topics/creating-files-at-runtime.html">2.14. Creating Files at Runtime</a></li>
+<li class="toctree-l2"><a class="reference internal" href="topics/staging-input-files.html">2.15. Staging Input Files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="topics/best-practices.html">2.16. Best Practices</a></li>
+<li class="toctree-l2"><a class="reference internal" href="topics/file-formats.html">2.17. File Formats</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="topics/file-formats.html#sample-parameter-files">2.17.1. Sample Parameter Files</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="topics/metadata-and-authorship.html">2.18. Metadata and Authorship</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="topics/metadata-and-authorship.html#extended-example">2.18.1. Extended Example</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="topics/specifying-software-requirements.html">2.19. Specifying Software Requirements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="topics/troubleshooting.html">2.20. Troubleshooting</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="topics/troubleshooting.html#run-cwltool-with-cachedir">2.20.1. Run <code class="docutils literal notranslate"><span class="pre">cwltool</span></code> with <code class="docutils literal notranslate"><span class="pre">cachedir</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="tutorials.html">3. Tutorials</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="tutorials.html#beginner-tutorials">3.1. Beginner Tutorials</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tutorials.html#advanced-tutorials">3.2. Advanced Tutorials</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tutorials.html#bioinformatics-tutorials">3.3. Bioinformatics Tutorials</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="faq.html">4. FAQ</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="faq.html#how-do-i-create-non-file-types-using-evalfrom">4.1. How do I create non “<code class="docutils literal notranslate"><span class="pre">File</span></code>” types using <code class="docutils literal notranslate"><span class="pre">evalFrom</span></code>?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="faq.html#how-do-i-rename-an-input-file">4.2. How do I rename an input file?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="faq.html#how-do-i-rename-an-output-file">4.3. How do I rename an output file?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="faq.html#how-do-i-reference-a-local-script">4.4. How do I reference a local script?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="faq.html#how-can-i-set-self-based-input-bindings-for-optional-inputs">4.5. How can I set <code class="docutils literal notranslate"><span class="pre">self</span></code>-based input bindings for optional inputs?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="faq.html#how-can-i-model-a-one-or-the-other-parameter">4.6. How can I model a “one-or-the-other” parameter?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="faq.html#how-do-i-connect-a-solo-value-to-an-input-that-expects-an-array-of-that-type">4.7. How do I connect a solo value to an input that expects an array of that type?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="faq.html#how-do-make-an-input-optional">4.8. How do make an input optional? 💯</a></li>
+<li class="toctree-l2"><a class="reference internal" href="faq.html#how-do-i-specify-an-input-that-must-come-from-a-list-of-predefined-values-i-e-how-do-i-use-enum-inputs">4.9. How do I specify an input that must come from a list of predefined values (i.e. How do I use enum inputs) ?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="faq.html#how-do-i-describe-dependent-or-exclusive-input-parameters-e-g-how-do-i-use-record-inputs">4.10. How do I describe dependent or exclusive input parameters(e.g. How do I use record inputs)?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="faq.html#how-do-i-set-mutually-exclusive-parameters">4.11. How do I set mutually exclusive parameters?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="faq.html#how-can-i-set-booleans">4.12. How can I set Booleans?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="faq.html#what-should-i-do-when-concatenating-strings-in-inputs">4.13. What should I do when concatenating strings in inputs?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="faq.html#i-get-cwltool-errors-due-to-filenames-with-space-characters-inside-what-should-i-do">4.14. I get <code class="docutils literal notranslate"><span class="pre">cwltool</span></code> errors due to filenames with space characters inside. What should I do?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="faq.html#what-should-i-do-when-i-get-cwl-parameter-reference-error-due-to-hyphen-in-an-input-identifier">4.15. What should I do when I get CWL Parameter Reference error due to hyphen in an input identifier?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="faq.html#how-do-i-use-cwl-and-cwltool-with-singularity">4.16. How do I use CWL and cwltool with Singularity?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="faq.html#how-do-i-debug-the-javascript-in-my-cwl-tool">4.17. How do I debug the JavaScript in my CWL tool?</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="LICENSE.html">5. Licenses</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="LICENSE.html#instructional-material">5.1. Instructional Material</a></li>
+<li class="toctree-l2"><a class="reference internal" href="LICENSE.html#software">5.2. Software</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</section>
+</section>
+
+
+                </article>
+              
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  <!-- Previous / next buttons -->
+<div class="prev-next-area">
+    <a class="right-next"
+       href="introduction/index.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title"><span class="section-number">1. </span>Introduction</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> On this page
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#navigating-the-user-guide">Navigating the User Guide</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#table-of-contents">Table of Contents</a></li>
+</ul>
+  </nav></div>
+
+  <div class="sidebar-secondary-item">
+  
+  <div class="tocsection editthispage">
+    <a href="https://github.com/common-workflow-language/user_guide/edit/main/src/index.md">
+      <i class="fa-solid fa-pencil"></i>
+      
+      
+        
+          Edit on GitHub
+        
+      
+    </a>
+  </div>
+</div>
+
+  <div class="sidebar-secondary-item">
+  <div class="tocsection sourcelink">
+    <a href="_sources/index.md.txt">
+      <i class="fa-solid fa-file-lines"></i> Show Source
+    </a>
+  </div>
+</div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+          </footer>
+        
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/bootstrap.js?digest=365ca57ee442770a23c6"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=365ca57ee442770a23c6"></script>
+
+<div class="container">
+  <div class="row">
+    <div class="col d-flex flex-row-reverse">
+      <ul class="nav">
+        <li class="nav-item">
+          <a class="nav-link" href="https://github.com/common-workflow-language/user_guide/blob/main/CODE_OF_CONDUCT.md">Code of Conduct</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="https://github.com/common-workflow-language/user_guide/blob/main/CONTRIBUTING.md">Contributing</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="https://github.com/common-workflow-language/user_guide/">Source</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="https://github.com/common-workflow-language/user_guide/blob/main/CITATION.md">Cite</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+
+  <footer class="bd-footer">
+<div class="bd-footer__inner bd-page-width">
+  
+    <div class="footer-items__start">
+      
+        <div class="footer-item">
+  <p class="copyright">
+    
+      © Copyright 2013, CWL Project Team.
+      <br/>
+    
+  </p>
+</div>
+      
+        <div class="footer-item">
+  <p class="sphinx-version">
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 5.3.0.
+    <br/>
+  </p>
+</div>
+      
+    </div>
+  
+  
+  
+    <div class="footer-items__end">
+      
+        <div class="footer-item"><p class="theme-version">
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.14.3.
+</p></div>
+      
+    </div>
+  
+</div>
+
+  </footer>
+
+  </body>
+</html>

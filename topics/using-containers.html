@@ -526,24 +526,24 @@ input object on the command line:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>cwltool<span class="w"> </span>docker.cwl<span class="w"> </span>docker-job.yml
 INFO<span class="w"> </span>/opt/hostedtoolcache/Python/3.9.18/x64/bin/cwltool<span class="w"> </span><span class="m">3</span>.1.20231114134824
 INFO<span class="w"> </span>Resolved<span class="w"> </span><span class="s1">&#39;docker.cwl&#39;</span><span class="w"> </span>to<span class="w"> </span><span class="s1">&#39;file:///home/runner/work/user_guide/user_guide/src/_includes/cwl/using-containers/docker.cwl&#39;</span>
-INFO<span class="w"> </span><span class="o">[</span>job<span class="w"> </span>docker.cwl<span class="o">]</span><span class="w"> </span>/tmp/ekzaieou$<span class="w"> </span>docker<span class="w"> </span><span class="se">\</span>
+INFO<span class="w"> </span><span class="o">[</span>job<span class="w"> </span>docker.cwl<span class="o">]</span><span class="w"> </span>/tmp/n9qsbg5n$<span class="w"> </span>docker<span class="w"> </span><span class="se">\</span>
 <span class="w">    </span>run<span class="w"> </span><span class="se">\</span>
 <span class="w">    </span>-i<span class="w"> </span><span class="se">\</span>
-<span class="w">    </span>--mount<span class="o">=</span><span class="nv">type</span><span class="o">=</span>bind,source<span class="o">=</span>/tmp/ekzaieou,target<span class="o">=</span>/WDJBIH<span class="w"> </span><span class="se">\</span>
-<span class="w">    </span>--mount<span class="o">=</span><span class="nv">type</span><span class="o">=</span>bind,source<span class="o">=</span>/tmp/e9sngn6h,target<span class="o">=</span>/tmp<span class="w"> </span><span class="se">\</span>
-<span class="w">    </span>--mount<span class="o">=</span><span class="nv">type</span><span class="o">=</span>bind,source<span class="o">=</span>/home/runner/work/user_guide/user_guide/src/_includes/cwl/using-containers/hello.js,target<span class="o">=</span>/var/lib/cwl/stg77c0b564-2fcd-4f0a-86b7-99897fe63da5/hello.js,readonly<span class="w"> </span><span class="se">\</span>
-<span class="w">    </span>--workdir<span class="o">=</span>/WDJBIH<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>--mount<span class="o">=</span><span class="nv">type</span><span class="o">=</span>bind,source<span class="o">=</span>/tmp/n9qsbg5n,target<span class="o">=</span>/fuVvTe<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>--mount<span class="o">=</span><span class="nv">type</span><span class="o">=</span>bind,source<span class="o">=</span>/tmp/pvbplgyz,target<span class="o">=</span>/tmp<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>--mount<span class="o">=</span><span class="nv">type</span><span class="o">=</span>bind,source<span class="o">=</span>/home/runner/work/user_guide/user_guide/src/_includes/cwl/using-containers/hello.js,target<span class="o">=</span>/var/lib/cwl/stg1b891986-6ece-4162-a295-cbc8f73f799b/hello.js,readonly<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>--workdir<span class="o">=</span>/fuVvTe<span class="w"> </span><span class="se">\</span>
 <span class="w">    </span>--read-only<span class="o">=</span><span class="nb">true</span><span class="w"> </span><span class="se">\</span>
 <span class="w">    </span>--net<span class="o">=</span>none<span class="w"> </span><span class="se">\</span>
 <span class="w">    </span>--log-driver<span class="o">=</span>none<span class="w"> </span><span class="se">\</span>
 <span class="w">    </span>--user<span class="o">=</span><span class="m">1001</span>:127<span class="w"> </span><span class="se">\</span>
 <span class="w">    </span>--rm<span class="w"> </span><span class="se">\</span>
-<span class="w">    </span>--cidfile<span class="o">=</span>/tmp/r3ankeqm/20231124104437-828117.cid<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>--cidfile<span class="o">=</span>/tmp/dzcn42ay/20231124110106-775440.cid<span class="w"> </span><span class="se">\</span>
 <span class="w">    </span>--env<span class="o">=</span><span class="nv">TMPDIR</span><span class="o">=</span>/tmp<span class="w"> </span><span class="se">\</span>
-<span class="w">    </span>--env<span class="o">=</span><span class="nv">HOME</span><span class="o">=</span>/WDJBIH<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>--env<span class="o">=</span><span class="nv">HOME</span><span class="o">=</span>/fuVvTe<span class="w"> </span><span class="se">\</span>
 <span class="w">    </span>node:slim<span class="w"> </span><span class="se">\</span>
 <span class="w">    </span>node<span class="w"> </span><span class="se">\</span>
-<span class="w">    </span>/var/lib/cwl/stg77c0b564-2fcd-4f0a-86b7-99897fe63da5/hello.js<span class="w"> </span>&gt;<span class="w"> </span>/tmp/ekzaieou/output.txt
+<span class="w">    </span>/var/lib/cwl/stg1b891986-6ece-4162-a295-cbc8f73f799b/hello.js<span class="w"> </span>&gt;<span class="w"> </span>/tmp/n9qsbg5n/output.txt
 INFO<span class="w"> </span><span class="o">[</span>job<span class="w"> </span>docker.cwl<span class="o">]</span><span class="w"> </span>completed<span class="w"> </span>success
 <span class="o">{</span>
 <span class="w">    </span><span class="s2">&quot;example_out&quot;</span>:<span class="w"> </span><span class="o">{</span>
