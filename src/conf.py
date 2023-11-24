@@ -218,7 +218,8 @@ html_theme_options = {
     "navigation_depth": 2,
     "collapse_navigation": True,
     "show_prev_next": True,
-    "footer_items": ["copyright"],
+    "footer_start": ["copyright", "sphinx-version"],
+    "footer_end": ["theme-version"],
 }
 
 html_context = {
