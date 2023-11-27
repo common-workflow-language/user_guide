@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: Common Workflow Language User Guide\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-01-25 14:33+0100\n"
-"PO-Revision-Date: 2023-11-24 10:19+0000\n"
-"Last-Translator: Michael Crusoe <mrc@commonwl.org>\n"
+"PO-Revision-Date: 2023-11-28 01:02+0000\n"
+"Last-Translator: Manabu ISHII <manabu.ishii.rb@gmail.com>\n"
 "Language-Team: Japanese <https://hosted.weblate.org/projects/commonwl/"
 "user-guide/ja/>\n"
 "Language: ja\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 5.2.1-rc\n"
+"X-Generator: Weblate 5.3-dev\n"
 
 #: ../../LICENSE.md:2 4e203044f0464fd5a3256430391dde12
 msgid "Licenses"
@@ -1278,19 +1278,27 @@ msgid "`hello_world.cwl`"
 msgstr "`hello_world.cwl`"
 
 #: ../../src/introduction/quick-start.md:22 7e475e3f3c4a4404bb0236124c0f7ce7
+#, fuzzy
 msgid ""
 "The example above is just a wrapper for the `echo` command-line tool. "
 "Running the workflow above with the default input values will produce the "
 "same result as the command-line `echo \"Hello World\"`."
 msgstr ""
+"上記の例は、`echo` のコマンドラインツールのラッパーに過ぎません。デフォルトの"
+"入力値で上記のワークフローを実行すると、コマンドラインと同じ結果が得られます`"
+"echo \"Hello World\"`."
 
 #: ../../src/introduction/quick-start.md:27 82613ca4e32b4ccab1b7735f5ba2d5a1
+#, fuzzy
 msgid ""
 "In CWL, there is a distinction between a command-line tool and a workflow. "
 "But for the sake of simplicity, we are using the term “workflow” here. You "
 "will learn more about this in the [basic concepts](basic-concepts.md) "
 "section."
 msgstr ""
+"CWLでは、CommandLineToolとWorkflowは区別されています。しかし、ここでは簡略化"
+"のため、「ワークフロー」という用語を使用しています。これについては、[基本概念"
+"](basic-concepts.md)のセクションで詳しく説明します。"
 
 #: ../../src/introduction/quick-start.md:32 498a43362a4749f3b8b433709d34a1d5
 msgid "Installing a CWL Runner"
@@ -1319,10 +1327,14 @@ msgid ""
 "`cwltool` and a more detailed list of software and libraries used for "
 "following the rest of this user guide."
 msgstr ""
+"pipコマンドを使用してcwltoolをインストールしてもうまくいかない場合は、[前提条"
+"件](prerequisites.md)セクションに、`cwltool` をインストールする他の方法と、こ"
+"のユーザーガイドの残りの部分を追うために使用するソフトウェアとライブラリのよ"
+"り詳細なリストがあります。"
 
 #: ../../src/introduction/quick-start.md:51 c12cf89f8b9a421ebd05330326e219b3
 msgid "Running \"Hello World\""
-msgstr ""
+msgstr "\"Hello World\"を実行する"
 
 #: ../../src/introduction/quick-start.md:53 9b68bcb1a41849dc9601ab47c5bbb0fe
 msgid ""
@@ -1330,6 +1342,9 @@ msgid ""
 "[OPTIONS] <CWL_DOCUMENT> [INPUTS_OBJECT]`. You can run the `hello_world.cwl` "
 "workflow without specifying any option:"
 msgstr ""
+"`cwltool` コマンドライン実行ファイルの使い方は、基本的に`cwltool [OPTIONS] "
+"<cwl_document> [INPUTS_OBJECT]`です。`hello_world.cwl` "
+"Workflowは、オプションを指定せずに実行することができます：</cwl_document>"
 
 #: ../../src/introduction/quick-start.md:57 ce04027dfcfe4b7b91ea3c2136b18b23
 msgid "Running `hello_world.cwl` with `cwltool`."
