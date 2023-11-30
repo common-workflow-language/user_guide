@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: Common Workflow Language User Guide\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-01-25 14:33+0100\n"
-"PO-Revision-Date: 2023-11-28 01:02+0000\n"
+"PO-Revision-Date: 2023-12-01 01:10+0000\n"
 "Last-Translator: Manabu ISHII <manabu.ishii.rb@gmail.com>\n"
 "Language-Team: Japanese <https://hosted.weblate.org/projects/commonwl/"
 "user-guide/ja/>\n"
@@ -160,6 +160,10 @@ msgid ""
 "from another step in a workflow, and don't want to work with the default "
 "names that these files were given when they were created."
 msgstr ""
+"この例では、ツール定義の一部として、入力ファイルの名前を変更する方法を説明し"
+"ます。これは、ワークフローの別のステップで作成されたファイルを使用する場合に"
+"、これらのファイルが作成されたときに与えられたデフォルトの名前を使用して作業"
+"したくない場合に便利です。"
 
 #: ../../src/faq.md:59 1c6b8a4194a14611b4061b1540c3807f
 msgid "Rename an Output File"
@@ -1482,6 +1486,7 @@ msgstr ""
 
 #: ../../src/topics/additional-arguments-and-parameters.md:6
 #: d8110ed19da94ad8a9f56e7006c4a2cf
+#, fuzzy
 msgid ""
 "In this example, we will wrap the Java compiler to compile a java source "
 "file to a class file.  By default, \"javac\" will create the class files in "
@@ -1489,6 +1494,12 @@ msgid ""
 "directories in which they appear) may be read-only, so we need to instruct "
 "\"javac\" to write the class file to the designated output directory instead."
 msgstr ""
+"この例では、Javaコンパイラを使用して、javaソースファイルをクラスファイルにコ"
+"ンパイルするようにラップします。  デフォルトでは、\"javac \"はソース"
+"・ファイルと同じディレクトリにクラス・ファイルを作成します。  しかし、CWLの入"
+"力ファイル（およびそのディレクトリ）は読み取り専用である場合があるので、代わ"
+"りに指定された出力ディレクトリにクラスファイルを書き込むように「javac」に指示"
+"する必要があります。"
 
 #: ../../src/topics/additional-arguments-and-parameters.md:13
 #: a74935dc31664e979ca8f90a6a4ba53c
@@ -1595,7 +1606,7 @@ msgstr ""
 
 #: ../../src/topics/best-practices.md:28 263a127a77cf4c41af76854f22f1f260
 msgid "_Example of metadata field for license with SPDX identifier:_"
-msgstr ""
+msgstr "_SPDX 識別子を持つライセンスのメタデータフィールドの例：_"
 
 #: ../../src/topics/best-practices.md:37 3a87a0fb2a364e3da5aaa4017e430b19
 msgid ""
@@ -1825,11 +1836,15 @@ msgstr "実行時にファイルを作成する"
 
 #: ../../src/topics/creating-files-at-runtime.md:3
 #: 0cf51b6da6884065ae42032abc20eb0d
+#, fuzzy
 msgid ""
 "Sometimes you need to create a file on the fly from input parameters, such "
 "as tools that expect to read their input configuration from a file rather "
 "than the command line parameters, or need a small wrapper shell script."
 msgstr ""
+"コマンドラインパラメーターではなく、ファイルから入力設定を読み込むことを期待"
+"するツールや、小さなラッパーシェルスクリプトが必要な場合など、入力パラメータ"
+"ーからその場でファイルを作成する必要があることがあります。"
 
 #: ../../src/topics/creating-files-at-runtime.md:7
 #: 2df3a3a9094d4b79b1d5dd99195f3bff
@@ -1845,11 +1860,15 @@ msgstr "`createfile.cwl`"
 
 #: ../../src/topics/creating-files-at-runtime.md:15
 #: cfffc518ba6e4ed1a80762ed6f7d25df
+#, fuzzy
 msgid ""
 "Any [expressions](../topics/expressions.md) like `$(inputs.message)` are "
 "expanded by the CWL engine before creating the file. Here, insert the value "
 "at the input `message`."
 msgstr ""
+"`$(inputs.message)` のような [Expressions](../topics/expressions.md)は、ファ"
+"イルを作成する前にCWLエンジンによって展開されます。ここでは、入力パラメータ`m"
+"essage` に値を挿入します。"
 
 #: ../../src/topics/creating-files-at-runtime.md:20
 #: 9454a330b9324744b89448f2694b1b03
@@ -1962,6 +1981,8 @@ msgid ""
 "On line 29, in `inputs:table_type`, a list of allowable table options to be "
 "used in the table conversion are imported as a custom object:"
 msgstr ""
+"29行目の`inputs:table_type` で、テーブル変換で使用できるテーブルオプションの"
+"リストがカスタムオブジェクトとしてインポートされます："
 
 #: ../../src/topics/custom-types.md:46 f25a63e0926d4932bbe64b2e4bdabf9e
 msgid ""
@@ -1989,6 +2010,9 @@ msgid ""
 "imported. Imports are described in `requirements:SchemaDefRequirement`, as "
 "below in the example `custom-types.cwl` description:"
 msgstr ""
+"カスタム型をCWL定義で使用するためには、インポートする必要があります。インポー"
+"トについては、`requirements:SchemaDefRequirement` で定義されており、例として"
+"`custom-types.cwl` の定義にあるように、インポートされます："
 
 #: ../../src/topics/custom-types.md:76 9a97acd430064710bcdf76edbd9f711c
 msgid ""
@@ -2083,6 +2107,7 @@ msgstr ""
 "Javascriptを使用できます。"
 
 #: ../../src/topics/expressions.md:9 2edbd398eadb458b8eacd5fa5496f0a2
+#, fuzzy
 msgid ""
 "JavaScript expressions should only be used when absolutely necessary. When "
 "manipulating file names, extensions, paths etc, consider whether one of the "
@@ -2090,6 +2115,11 @@ msgid ""
 "`nameext`, etc, could be used instead. See the [list of best practices](best-"
 "practices.md)."
 msgstr ""
+"JavaScript の式は、絶対に必要な場合のみ使用するようにしてください。ファイル名"
+"、拡張子、パスなどを操作する場合は、`basename`,`nameroot`,`nameext`, などの "
+"[`File` のビルトインプロパティ][file-prop] のいずれかを代わりに使用できるかど"
+"うかを検討してください。[ベストプラクティスのリスト](best-practices."
+"md)を参照してください。"
 
 #: ../../src/topics/expressions.md:16 7fdbfd1c937b4991bf4a2fa26ea310e4
 #, fuzzy
@@ -2458,6 +2488,9 @@ msgid ""
 "attribute that allows users to load external JavaScript files, or to provide "
 "inline JavaScript code."
 msgstr ""
+"`InlineJavascriptRequirement` は、`expressionLib` 属性をサポートし、"
+"ユーザーが外部 JavaScript ファイルを読み込んだり、インライン JavaScript "
+"コードを提供したりできるようにします。"
 
 #: ../../src/topics/expressions.md:122 38a2afaf4a6c4d04909af22c93f2808d
 msgid ""
@@ -2466,6 +2499,9 @@ msgid ""
 "files or to create JavaScript functions that can be called in other parts of "
 "the CWL document."
 msgstr ""
+"`expressionLib` 属性に追加されたエントリーは、CWLランナーのJavaScriptエンジン"
+"で解析されます。これは、外部ファイルをインクルードしたり、CWL定義の他の部分で"
+"呼び出すことができるJavaScript関数を作成するために使用することができます。"
 
 #: ../../src/topics/expressions.md:128 cd74f34b21af4de9be96fd897efc469b
 msgid ""
@@ -2482,6 +2518,9 @@ msgid ""
 "function inline in `expressionLib`. That function can then be used in other "
 "parts of the CWL document:"
 msgstr ""
+"例えば、`InlineJavascriptRequirement` を使って、`expressionLib` に "
+"JavaScript 関数をインラインで記述することができます。その関数は、CWL定義の他"
+"の部分で使用することができます："
 
 #: ../../src/topics/expressions.md:139 49d0fda2fc144e0b8b7c92afc1d8945e
 msgid "`hello-world-expressionlib-inline.cwl`"
@@ -2506,6 +2545,8 @@ msgid ""
 "Let's move the `capitalizeWords` function to an external file, `custom-"
 "functions.js`, and import it in our CWL document:"
 msgstr ""
+"`capitalizeWords` 関数を外部ファイル`custom-functions.js` に移動し、CWL "
+"定義でインポートしてみましょう："
 
 #: ../../src/topics/expressions.md:158 ed590f9e6f4f425da886b110295c45db
 #, fuzzy
@@ -2544,11 +2585,11 @@ msgstr ""
 
 #: ../../src/topics/expressions.md:186 c4098489fbb049789f022cd3e5c3d49b
 msgid "`hello-world-expressionlib.cwl`"
-msgstr ""
+msgstr "`hello-world-expressionlib.cwl`"
 
 #: ../../src/topics/expressions.md:193 5979e4ae5c424276bdbc47f69b379d0f
 msgid "Running `hello-world-expressionlib.cwl`."
-msgstr ""
+msgstr "`hello-world-expressionlib.cwl`を実行する。"
 
 #: ../../src/topics/expressions.md:200 fd4579a3c9844492b314b5c3c1775fc7
 msgid ""
@@ -2560,7 +2601,7 @@ msgstr ""
 
 #: ../../src/topics/file-formats.md:1 3f038e7371f84ed9b4547358dfb55a11
 msgid "File Formats"
-msgstr ""
+msgstr "ファイルフォーマット"
 
 #: ../../src/topics/file-formats.md:3 e024bcb70e04412e90e1838426d1b69a
 msgid ""
@@ -2721,6 +2762,8 @@ msgid ""
 "Notice that \"example_file\", as a `File` type, must be provided as an "
 "object with the fields `class: File` and `path`."
 msgstr ""
+"\"example_file\" は `File` 型として、フィールド `class： File` と `path` "
+"フィールドを持つオブジェクトとして提供されなければなりません。"
 
 #: ../../src/topics/inputs.md:47 651e032007ea4a119d20c820bb61f86b
 msgid ""
