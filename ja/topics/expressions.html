@@ -3,7 +3,7 @@
 <!DOCTYPE html>
 
 
-<html lang="ja" data-theme="light">
+<html lang="ja" data-content_root="" data-theme="light">
 
   <head>
     <meta charset="utf-8" />
@@ -23,12 +23,12 @@
   </script>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../_static/styles/theme.css?digest=365ca57ee442770a23c6" rel="stylesheet" />
-<link href="../_static/styles/bootstrap.css?digest=365ca57ee442770a23c6" rel="stylesheet" />
-<link href="../_static/styles/pydata-sphinx-theme.css?digest=365ca57ee442770a23c6" rel="stylesheet" />
+  <link href="../_static/styles/theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=5b4479735964841361fd" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
 
   
-  <link href="../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=365ca57ee442770a23c6" rel="stylesheet" />
+  <link href="../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=5b4479735964841361fd" rel="stylesheet" />
   <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
@@ -38,9 +38,9 @@
     <link rel="stylesheet" type="text/css" href="../_static/css/custom.css" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=365ca57ee442770a23c6" />
-<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=365ca57ee442770a23c6" />
-  <script src="../_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=365ca57ee442770a23c6"></script>
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=5b4479735964841361fd" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd" />
+  <script src="../_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=5b4479735964841361fd"></script>
 
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
@@ -118,6 +118,7 @@
   <div class="col-lg-3 navbar-header-items__start">
     
       <div class="navbar-item">
+
   
 
 <a class="navbar-brand logo" href="../index.html">
@@ -141,7 +142,8 @@
     
     <div class="me-auto navbar-header-items__center">
       
-        <div class="navbar-item"><nav class="navbar-nav">
+        <div class="navbar-item">
+<nav class="navbar-nav">
   <p class="sidebar-header-items__title"
      role="heading"
      aria-level="1"
@@ -201,6 +203,7 @@
       
         <div class="navbar-item navbar-persistent--container">
           
+
  <script>
  document.write(`
    <button class="btn navbar-btn search-button-field search-button__button" title="検索" aria-label="検索" data-bs-placement="bottom" data-bs-toggle="tooltip">
@@ -214,6 +217,7 @@
       
       
         <div class="navbar-item">
+
 <script>
 document.write(`
   <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
@@ -246,6 +250,7 @@ document.write(`
   
   
     <div class="navbar-persistent--mobile">
+
  <script>
  document.write(`
    <button class="btn navbar-btn search-button-field search-button__button" title="検索" aria-label="検索" data-bs-placement="bottom" data-bs-toggle="tooltip">
@@ -279,7 +284,8 @@ document.write(`
     
       <div class="sidebar-header-items__center">
         
-          <div class="navbar-item"><nav class="navbar-nav">
+          <div class="navbar-item">
+<nav class="navbar-nav">
   <p class="sidebar-header-items__title"
      role="heading"
      aria-level="1"
@@ -339,6 +345,7 @@ document.write(`
       <div class="sidebar-header-items__end">
         
           <div class="navbar-item">
+
 <script>
 document.write(`
   <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
@@ -392,7 +399,7 @@ document.write(`
 <li class="toctree-l1"><a class="reference internal" href="creating-files-at-runtime.html">2.14. Creating Files at Runtime</a></li>
 <li class="toctree-l1"><a class="reference internal" href="staging-input-files.html">2.15. 入力ファイルのステージング</a></li>
 <li class="toctree-l1"><a class="reference internal" href="best-practices.html">2.16. ベストプラクティス</a></li>
-<li class="toctree-l1"><a class="reference internal" href="file-formats.html">2.17. File Formats</a></li>
+<li class="toctree-l1"><a class="reference internal" href="file-formats.html">2.17. ファイルフォーマット</a></li>
 <li class="toctree-l1"><a class="reference internal" href="metadata-and-authorship.html">2.18. メタデータと著者</a></li>
 <li class="toctree-l1"><a class="reference internal" href="specifying-software-requirements.html">2.19. ソフトウェア要求事項の指定</a></li>
 <li class="toctree-l1"><a class="reference internal" href="troubleshooting.html">2.20. トラブルシューティング</a></li>
@@ -515,7 +522,7 @@ job file:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>cwltool<span class="w"> </span>expression.cwl<span class="w"> </span>empty.yml
 INFO<span class="w"> </span>/opt/hostedtoolcache/Python/3.9.18/x64/bin/cwltool<span class="w"> </span><span class="m">3</span>.1.20231114134824
 INFO<span class="w"> </span>Resolved<span class="w"> </span><span class="s1">&#39;expression.cwl&#39;</span><span class="w"> </span>to<span class="w"> </span><span class="s1">&#39;file:///home/runner/work/user_guide/user_guide/src/_includes/cwl/expressions/expression.cwl&#39;</span>
-INFO<span class="w"> </span><span class="o">[</span>job<span class="w"> </span>expression.cwl<span class="o">]</span><span class="w"> </span>/tmp/1nqy8pdo$<span class="w"> </span><span class="nb">echo</span><span class="w"> </span><span class="se">\</span>
+INFO<span class="w"> </span><span class="o">[</span>job<span class="w"> </span>expression.cwl<span class="o">]</span><span class="w"> </span>/tmp/fywzm9xy$<span class="w"> </span><span class="nb">echo</span><span class="w"> </span><span class="se">\</span>
 <span class="w">    </span>-A<span class="w"> </span><span class="se">\</span>
 <span class="w">    </span><span class="m">2</span><span class="w"> </span><span class="se">\</span>
 <span class="w">    </span>-B<span class="w"> </span><span class="se">\</span>
@@ -530,7 +537,7 @@ INFO<span class="w"> </span><span class="o">[</span>job<span class="w"> </span>e
 <span class="w">    </span><span class="m">4</span><span class="w"> </span><span class="se">\</span>
 <span class="w">    </span><span class="m">3</span><span class="w"> </span><span class="se">\</span>
 <span class="w">    </span><span class="m">2</span><span class="w"> </span><span class="se">\</span>
-<span class="w">    </span><span class="m">1</span><span class="w"> </span>&gt;<span class="w"> </span>/tmp/1nqy8pdo/output.txt
+<span class="w">    </span><span class="m">1</span><span class="w"> </span>&gt;<span class="w"> </span>/tmp/fywzm9xy/output.txt
 INFO<span class="w"> </span><span class="o">[</span>job<span class="w"> </span>expression.cwl<span class="o">]</span><span class="w"> </span>completed<span class="w"> </span>success
 <span class="o">{</span>
 <span class="w">    </span><span class="s2">&quot;example_out&quot;</span>:<span class="w"> </span><span class="o">{</span>
@@ -669,9 +676,7 @@ only in certain fields.  These are:</p>
 <p>The requirement <a class="reference external" href="https://w3id.org/cwl/CommandLineTool.html#InlineJavascriptRequirement"><code class="docutils literal notranslate"><span class="pre">InlineJavascriptRequirement</span></code></a> supports an <code class="docutils literal notranslate"><span class="pre">expressionLib</span></code> attribute
 that allows users to load external JavaScript files, or to provide inline JavaScript
 code.</p>
-<p>Entries added to the <code class="docutils literal notranslate"><span class="pre">expressionLib</span></code> attribute are parsed with the JavaScript engine
-of a CWL runner. This can be used to include external files or to create JavaScript
-functions that can be called in other parts of the CWL document.</p>
+<p><code class="docutils literal notranslate"><span class="pre">expressionLib</span></code> 属性に追加されたエントリーは、CWLランナーのJavaScriptエンジンで解析されます。これは、外部ファイルをインクルードしたり、CWL定義の他の部分で呼び出すことができるJavaScript関数を作成するために使用することができます。</p>
 <div class="admonition note">
 <p class="admonition-title">注釈</p>
 <p>The CWL standards (versions 1.0 through 1.2) <a class="reference external" href="https://www.commonwl.org/v1.0/CommandLineTool.html#Expressions">states</a>
@@ -680,9 +685,7 @@ that the only version of JavaScript valid in CWL expressions is
 code that you include or write in your CWL Document must be compliant with
 ECMAScript 5.1.</p>
 </div>
-<p>For example, we can use <code class="docutils literal notranslate"><span class="pre">InlineJavascriptRequirement</span></code> and write a JavaScript function
-inline in <code class="docutils literal notranslate"><span class="pre">expressionLib</span></code>. That function can then be used in other parts of the
-CWL document:</p>
+<p>例えば、<code class="docutils literal notranslate"><span class="pre">InlineJavascriptRequirement</span></code> を使って、<code class="docutils literal notranslate"><span class="pre">expressionLib</span></code> に JavaScript 関数をインラインで記述することができます。その関数は、CWL定義の他の部分で使用することができます：</p>
 <div class="literal-block-wrapper docutils container" id="hello-world-expressionlib-inline-cwl">
 <div class="code-block-caption"><span class="caption-text"><code class="docutils literal notranslate"><span class="pre">hello-world-expressionlib-inline.cwl</span></code></span><a class="headerlink" href="#hello-world-expressionlib-inline-cwl" title="このコードへのパーマリンク">#</a></div>
 <div class="highlight-cwl notranslate"><div class="highlight"><pre><span></span><span class="nt">cwlVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">v1.2</span>
@@ -729,7 +732,7 @@ the <code class="docutils literal notranslate"><span class="pre">echo</span></co
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>cwltool<span class="w"> </span>hello-world-expressionlib-inline.cwl<span class="w"> </span>--message<span class="w"> </span><span class="s2">&quot;hello world&quot;</span>
 INFO<span class="w"> </span>/opt/hostedtoolcache/Python/3.9.18/x64/bin/cwltool<span class="w"> </span><span class="m">3</span>.1.20231114134824
 INFO<span class="w"> </span>Resolved<span class="w"> </span><span class="s1">&#39;hello-world-expressionlib-inline.cwl&#39;</span><span class="w"> </span>to<span class="w"> </span><span class="s1">&#39;file:///home/runner/work/user_guide/user_guide/src/_includes/cwl/expressions/hello-world-expressionlib-inline.cwl&#39;</span>
-INFO<span class="w"> </span><span class="o">[</span>job<span class="w"> </span>hello-world-expressionlib-inline.cwl<span class="o">]</span><span class="w"> </span>/tmp/8y_sekc6$<span class="w"> </span><span class="nb">echo</span><span class="w"> </span><span class="se">\</span>
+INFO<span class="w"> </span><span class="o">[</span>job<span class="w"> </span>hello-world-expressionlib-inline.cwl<span class="o">]</span><span class="w"> </span>/tmp/x4li8rpf$<span class="w"> </span><span class="nb">echo</span><span class="w"> </span><span class="se">\</span>
 <span class="w">    </span><span class="s1">&#39;Hello World&#39;</span>
 Hello<span class="w"> </span>World
 INFO<span class="w"> </span><span class="o">[</span>job<span class="w"> </span>hello-world-expressionlib-inline.cwl<span class="o">]</span><span class="w"> </span>completed<span class="w"> </span>success
@@ -737,8 +740,7 @@ INFO<span class="w"> </span><span class="o">[</span>job<span class="w"> </span>h
 </pre></div>
 </div>
 </div>
-<p>Let's move the <code class="docutils literal notranslate"><span class="pre">capitalizeWords</span></code> function to an external file, <code class="docutils literal notranslate"><span class="pre">custom-functions.js</span></code>, and
-import it in our CWL document:</p>
+<p><code class="docutils literal notranslate"><span class="pre">capitalizeWords</span></code> 関数を外部ファイル<code class="docutils literal notranslate"><span class="pre">custom-functions.js</span></code> に移動し、CWL 定義でインポートしてみましょう：</p>
 <div class="literal-block-wrapper docutils container" id="custom-functions-js">
 <div class="code-block-caption"><span class="caption-text"><code class="docutils literal notranslate"><span class="pre">custom-functions.js</span></code></span><a class="headerlink" href="#custom-functions-js" title="このコードへのパーマリンク">#</a></div>
 <div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="cm">/**</span>
@@ -791,7 +793,7 @@ the CWL document.</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>cwltool<span class="w"> </span>hello-world-expressionlib-external.cwl<span class="w"> </span>--message<span class="w"> </span><span class="s2">&quot;hello world&quot;</span>
 INFO<span class="w"> </span>/opt/hostedtoolcache/Python/3.9.18/x64/bin/cwltool<span class="w"> </span><span class="m">3</span>.1.20231114134824
 INFO<span class="w"> </span>Resolved<span class="w"> </span><span class="s1">&#39;hello-world-expressionlib-external.cwl&#39;</span><span class="w"> </span>to<span class="w"> </span><span class="s1">&#39;file:///home/runner/work/user_guide/user_guide/src/_includes/cwl/expressions/hello-world-expressionlib-external.cwl&#39;</span>
-INFO<span class="w"> </span><span class="o">[</span>job<span class="w"> </span>hello-world-expressionlib-external.cwl<span class="o">]</span><span class="w"> </span>/tmp/iwxjig2a$<span class="w"> </span><span class="nb">echo</span><span class="w"> </span><span class="se">\</span>
+INFO<span class="w"> </span><span class="o">[</span>job<span class="w"> </span>hello-world-expressionlib-external.cwl<span class="o">]</span><span class="w"> </span>/tmp/_0rrpo3w$<span class="w"> </span><span class="nb">echo</span><span class="w"> </span><span class="se">\</span>
 <span class="w">    </span><span class="s1">&#39;Hello World&#39;</span>
 Hello<span class="w"> </span>World
 INFO<span class="w"> </span><span class="o">[</span>job<span class="w"> </span>hello-world-expressionlib-external.cwl<span class="o">]</span><span class="w"> </span>completed<span class="w"> </span>success
@@ -836,11 +838,11 @@ function from the external file <code class="docutils literal notranslate"><span
 </div>
 </div>
 <div class="literal-block-wrapper docutils container" id="running-hell-world-expressionlib-cwl">
-<div class="code-block-caption"><span class="caption-text">Running <code class="docutils literal notranslate"><span class="pre">hello-world-expressionlib.cwl</span></code>.</span><a class="headerlink" href="#running-hell-world-expressionlib-cwl" title="このコードへのパーマリンク">#</a></div>
+<div class="code-block-caption"><span class="caption-text"><code class="docutils literal notranslate"><span class="pre">hello-world-expressionlib.cwl</span></code>を実行する。</span><a class="headerlink" href="#running-hell-world-expressionlib-cwl" title="このコードへのパーマリンク">#</a></div>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>cwltool<span class="w"> </span>hello-world-expressionlib.cwl<span class="w"> </span>--message<span class="w"> </span><span class="s2">&quot;hello world&quot;</span>
 INFO<span class="w"> </span>/opt/hostedtoolcache/Python/3.9.18/x64/bin/cwltool<span class="w"> </span><span class="m">3</span>.1.20231114134824
 INFO<span class="w"> </span>Resolved<span class="w"> </span><span class="s1">&#39;hello-world-expressionlib.cwl&#39;</span><span class="w"> </span>to<span class="w"> </span><span class="s1">&#39;file:///home/runner/work/user_guide/user_guide/src/_includes/cwl/expressions/hello-world-expressionlib.cwl&#39;</span>
-INFO<span class="w"> </span><span class="o">[</span>job<span class="w"> </span>hello-world-expressionlib.cwl<span class="o">]</span><span class="w"> </span>/tmp/7cklpiti$<span class="w"> </span><span class="nb">echo</span><span class="w"> </span><span class="se">\</span>
+INFO<span class="w"> </span><span class="o">[</span>job<span class="w"> </span>hello-world-expressionlib.cwl<span class="o">]</span><span class="w"> </span>/tmp/jaainyue$<span class="w"> </span><span class="nb">echo</span><span class="w"> </span><span class="se">\</span>
 <span class="w">    </span><span class="s1">&#39;Hello World&#39;</span>
 Hello<span class="w"> </span>World
 INFO<span class="w"> </span><span class="o">[</span>job<span class="w"> </span>hello-world-expressionlib.cwl<span class="o">]</span><span class="w"> </span>completed<span class="w"> </span>success
@@ -865,7 +867,7 @@ from the CWL specification to learn more about it.</p>
               
               
                 <footer class="prev-next-footer">
-                  <!-- Previous / next buttons -->
+                  
 <div class="prev-next-area">
     <a class="left-prev"
        href="command-line-tool.html"
@@ -895,6 +897,7 @@ from the CWL specification to learn more about it.</p>
                 <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
 
   <div class="sidebar-secondary-item">
+
   <div class="page-toc tocsection onthispage">
     <i class="fa-solid fa-list"></i> On this page
   </div>
@@ -905,6 +908,7 @@ from the CWL specification to learn more about it.</p>
   </nav></div>
 
   <div class="sidebar-secondary-item">
+
   
   <div class="tocsection editthispage">
     <a href="https://github.com/common-workflow-language/user_guide/edit/main/src/topics/expressions.md">
@@ -920,6 +924,7 @@ from the CWL specification to learn more about it.</p>
 </div>
 
   <div class="sidebar-secondary-item">
+
   <div class="tocsection sourcelink">
     <a href="../_sources/topics/expressions.md.txt">
       <i class="fa-solid fa-file-lines"></i> ソースコードを表示
@@ -940,8 +945,8 @@ from the CWL specification to learn more about it.</p>
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../_static/scripts/bootstrap.js?digest=365ca57ee442770a23c6"></script>
-<script src="../_static/scripts/pydata-sphinx-theme.js?digest=365ca57ee442770a23c6"></script>
+  <script src="../_static/scripts/bootstrap.js?digest=5b4479735964841361fd"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd"></script>
 
 <div class="container">
   <div class="row">
@@ -971,6 +976,7 @@ from the CWL specification to learn more about it.</p>
     <div class="footer-items__start">
       
         <div class="footer-item">
+
   <p class="copyright">
     
       © Copyright 2013, CWL Project Team.
@@ -980,6 +986,7 @@ from the CWL specification to learn more about it.</p>
 </div>
       
         <div class="footer-item">
+
   <p class="sphinx-version">
     Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 5.3.0.
     <br/>
@@ -992,8 +999,9 @@ from the CWL specification to learn more about it.</p>
   
     <div class="footer-items__end">
       
-        <div class="footer-item"><p class="theme-version">
-  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.14.3.
+        <div class="footer-item">
+<p class="theme-version">
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.14.4.
 </p></div>
       
     </div>

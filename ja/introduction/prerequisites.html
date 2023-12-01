@@ -3,7 +3,7 @@
 <!DOCTYPE html>
 
 
-<html lang="ja" data-theme="light">
+<html lang="ja" data-content_root="" data-theme="light">
 
   <head>
     <meta charset="utf-8" />
@@ -23,12 +23,12 @@
   </script>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../_static/styles/theme.css?digest=365ca57ee442770a23c6" rel="stylesheet" />
-<link href="../_static/styles/bootstrap.css?digest=365ca57ee442770a23c6" rel="stylesheet" />
-<link href="../_static/styles/pydata-sphinx-theme.css?digest=365ca57ee442770a23c6" rel="stylesheet" />
+  <link href="../_static/styles/theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=5b4479735964841361fd" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
 
   
-  <link href="../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=365ca57ee442770a23c6" rel="stylesheet" />
+  <link href="../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=5b4479735964841361fd" rel="stylesheet" />
   <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
@@ -38,9 +38,9 @@
     <link rel="stylesheet" type="text/css" href="../_static/css/custom.css" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=365ca57ee442770a23c6" />
-<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=365ca57ee442770a23c6" />
-  <script src="../_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=365ca57ee442770a23c6"></script>
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=5b4479735964841361fd" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd" />
+  <script src="../_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=5b4479735964841361fd"></script>
 
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
@@ -118,6 +118,7 @@
   <div class="col-lg-3 navbar-header-items__start">
     
       <div class="navbar-item">
+
   
 
 <a class="navbar-brand logo" href="../index.html">
@@ -141,7 +142,8 @@
     
     <div class="me-auto navbar-header-items__center">
       
-        <div class="navbar-item"><nav class="navbar-nav">
+        <div class="navbar-item">
+<nav class="navbar-nav">
   <p class="sidebar-header-items__title"
      role="heading"
      aria-level="1"
@@ -201,6 +203,7 @@
       
         <div class="navbar-item navbar-persistent--container">
           
+
  <script>
  document.write(`
    <button class="btn navbar-btn search-button-field search-button__button" title="検索" aria-label="検索" data-bs-placement="bottom" data-bs-toggle="tooltip">
@@ -214,6 +217,7 @@
       
       
         <div class="navbar-item">
+
 <script>
 document.write(`
   <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
@@ -246,6 +250,7 @@ document.write(`
   
   
     <div class="navbar-persistent--mobile">
+
  <script>
  document.write(`
    <button class="btn navbar-btn search-button-field search-button__button" title="検索" aria-label="検索" data-bs-placement="bottom" data-bs-toggle="tooltip">
@@ -279,7 +284,8 @@ document.write(`
     
       <div class="sidebar-header-items__center">
         
-          <div class="navbar-item"><nav class="navbar-nav">
+          <div class="navbar-item">
+<nav class="navbar-nav">
   <p class="sidebar-header-items__title"
      role="heading"
      aria-level="1"
@@ -339,6 +345,7 @@ document.write(`
       <div class="sidebar-header-items__end">
         
           <div class="navbar-item">
+
 <script>
 document.write(`
   <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
@@ -490,11 +497,7 @@ for details on installing <code class="docutils literal notranslate"><span class
 </pre></div>
 </div>
 </div>
-<p>The <code class="docutils literal notranslate"><span class="pre">cwltool</span></code> command has an option to validate CWL tool and workflow descriptions. This option will parse the
-CWL document, look for syntax errors, and verify that the workflow descriptions are compliant
-with the CWL standards. However, these actions will be performed without running the document. To validate CWL workflows (or even a
-standalone command line tool description like the above) pass the <code class="docutils literal notranslate"><span class="pre">--validate</span></code> option
-to the <code class="docutils literal notranslate"><span class="pre">cwltool</span></code> command:</p>
+<p><code class="docutils literal notranslate"><span class="pre">cwltool</span></code> コマンドには、CWL ツールおよびワークフロー定義を検証するオプションがあります。このオプションは、CWL文書を解析し、構文エラーを探し、ワークフロー記述がCWL標準に準拠しているかどうかを検証します。ただし、これらの操作は、ドキュメントを実行せずに行われます。CWLワークフロー（または上記のようなスタンドアロンコマンドラインツールの記述も）を検証するには、<code class="docutils literal notranslate"><span class="pre">cwltool</span></code> コマンドに<code class="docutils literal notranslate"><span class="pre">--validate</span></code> オプションを渡します：</p>
 <div class="literal-block-wrapper docutils container" id="validating-truecwl-with-cwltool">
 <div class="code-block-caption"><span class="caption-text"><code class="docutils literal notranslate"><span class="pre">cwltool</span></code> を使って <code class="docutils literal notranslate"><span class="pre">true.cwl</span></code> を検証します。</span><a class="headerlink" href="#validating-truecwl-with-cwltool" title="このコードへのパーマリンク">#</a></div>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>cwltool<span class="w"> </span>--validate<span class="w"> </span>true.cwl
@@ -510,7 +513,7 @@ true.cwl<span class="w"> </span>is<span class="w"> </span>valid<span class="w"> 
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>cwltool<span class="w"> </span>true.cwl
 INFO<span class="w"> </span>/opt/hostedtoolcache/Python/3.9.18/x64/bin/cwltool<span class="w"> </span><span class="m">3</span>.1.20231114134824
 INFO<span class="w"> </span>Resolved<span class="w"> </span><span class="s1">&#39;true.cwl&#39;</span><span class="w"> </span>to<span class="w"> </span><span class="s1">&#39;file:///home/runner/work/user_guide/user_guide/src/_includes/cwl/true.cwl&#39;</span>
-INFO<span class="w"> </span><span class="o">[</span>job<span class="w"> </span>true.cwl<span class="o">]</span><span class="w"> </span>/tmp/s2x1szff$<span class="w"> </span><span class="nb">true</span>
+INFO<span class="w"> </span><span class="o">[</span>job<span class="w"> </span>true.cwl<span class="o">]</span><span class="w"> </span>/tmp/w8mxt0wg$<span class="w"> </span><span class="nb">true</span>
 INFO<span class="w"> </span><span class="o">[</span>job<span class="w"> </span>true.cwl<span class="o">]</span><span class="w"> </span>completed<span class="w"> </span>success
 <span class="o">{}</span>INFO<span class="w"> </span>Final<span class="w"> </span>process<span class="w"> </span>status<span class="w"> </span>is<span class="w"> </span>success
 </pre></div>
@@ -518,13 +521,7 @@ INFO<span class="w"> </span><span class="o">[</span>job<span class="w"> </span>t
 </div>
 <section id="generic-cwl-runner-alias">
 <h3><span class="section-number">1.2.2.1. </span>Generic <code class="docutils literal notranslate"><span class="pre">cwl-runner</span></code> alias<a class="headerlink" href="#generic-cwl-runner-alias" title="この見出しへのパーマリンク">#</a></h3>
-<p><code class="docutils literal notranslate"><span class="pre">cwl-runner</span></code> is an implementation-agnostic alias for any CWL compliant runner. This simply means
-that the <code class="docutils literal notranslate"><span class="pre">cwl-runner</span></code> alias command can be invoked independently, and is not reliant on a particular
-CWL runner program name.
-Users can invoke <code class="docutils literal notranslate"><span class="pre">cwl-runner</span></code> instead of invoking a CWL runner like <code class="docutils literal notranslate"><span class="pre">cwltool</span></code>
-directly. The <code class="docutils literal notranslate"><span class="pre">cwl-runner</span></code> is installed by a system administrator or user to point to the preferred
-CWL implementation.
-This is convenient for environments with multiple CWL runners.</p>
+<p><code class="docutils literal notranslate"><span class="pre">cwl-runner</span></code> は、CWL準拠のランナーに対する、実装にとらわれないエイリアスです。これは、<code class="docutils literal notranslate"><span class="pre">cwl-runner</span></code> エイリアスコマンドを独立して呼び出すことができ、特定のCWLランナープログラム名に依存しないことを意味します。ユーザーは、<code class="docutils literal notranslate"><span class="pre">cwltool</span></code> のようなCWLランナーを直接呼び出す代わりに、<code class="docutils literal notranslate"><span class="pre">cwl-runner</span></code> を呼び出すことができます。<code class="docutils literal notranslate"><span class="pre">cwl-runner</span></code> は、システム管理者またはユーザーによってインストールされ、好みのCWL実装を指し示す。これは、複数のCWLランナーがある環境では便利です。</p>
 <p>The CWL community publishes a Python package with the name <code class="docutils literal notranslate"><span class="pre">cwlref-runner</span></code> that installs
 an alias for <code class="docutils literal notranslate"><span class="pre">cwltool</span></code> under the name <code class="docutils literal notranslate"><span class="pre">cwl-runner</span></code>.</p>
 <div class="literal-block-wrapper docutils container" id="installing-cwlrunner-with-pip">
@@ -548,7 +545,7 @@ true.cwl<span class="w"> </span>is<span class="w"> </span>valid<span class="w"> 
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>cwl-runner<span class="w"> </span>true.cwl
 INFO<span class="w"> </span>/opt/hostedtoolcache/Python/3.9.18/x64/bin/cwl-runner<span class="w"> </span><span class="m">3</span>.1.20231114134824
 INFO<span class="w"> </span>Resolved<span class="w"> </span><span class="s1">&#39;true.cwl&#39;</span><span class="w"> </span>to<span class="w"> </span><span class="s1">&#39;file:///home/runner/work/user_guide/user_guide/src/_includes/cwl/true.cwl&#39;</span>
-INFO<span class="w"> </span><span class="o">[</span>job<span class="w"> </span>true.cwl<span class="o">]</span><span class="w"> </span>/tmp/rk4q4wcw$<span class="w"> </span><span class="nb">true</span>
+INFO<span class="w"> </span><span class="o">[</span>job<span class="w"> </span>true.cwl<span class="o">]</span><span class="w"> </span>/tmp/si21vyl3$<span class="w"> </span><span class="nb">true</span>
 INFO<span class="w"> </span><span class="o">[</span>job<span class="w"> </span>true.cwl<span class="o">]</span><span class="w"> </span>completed<span class="w"> </span>success
 <span class="o">{}</span>INFO<span class="w"> </span>Final<span class="w"> </span>process<span class="w"> </span>status<span class="w"> </span>is<span class="w"> </span>success
 </pre></div>
@@ -581,7 +578,7 @@ INFO<span class="w"> </span><span class="o">[</span>job<span class="w"> </span>t
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>./true_shebang.cwl
 INFO<span class="w"> </span>/opt/hostedtoolcache/Python/3.9.18/x64/bin/cwl-runner<span class="w"> </span><span class="m">3</span>.1.20231114134824
 INFO<span class="w"> </span>Resolved<span class="w"> </span><span class="s1">&#39;./true_shebang.cwl&#39;</span><span class="w"> </span>to<span class="w"> </span><span class="s1">&#39;file:///home/runner/work/user_guide/user_guide/src/_includes/cwl/true_shebang.cwl&#39;</span>
-INFO<span class="w"> </span><span class="o">[</span>job<span class="w"> </span>true_shebang.cwl<span class="o">]</span><span class="w"> </span>/tmp/qzx1trwl$<span class="w"> </span><span class="nb">true</span>
+INFO<span class="w"> </span><span class="o">[</span>job<span class="w"> </span>true_shebang.cwl<span class="o">]</span><span class="w"> </span>/tmp/zvjg6gng$<span class="w"> </span><span class="nb">true</span>
 INFO<span class="w"> </span><span class="o">[</span>job<span class="w"> </span>true_shebang.cwl<span class="o">]</span><span class="w"> </span>completed<span class="w"> </span>success
 <span class="o">{}</span>INFO<span class="w"> </span>Final<span class="w"> </span>process<span class="w"> </span>status<span class="w"> </span>is<span class="w"> </span>success
 </pre></div>
@@ -599,12 +596,8 @@ looks for the <code class="docutils literal notranslate"><span class="pre">[exec
 </section>
 <section id="text-editor">
 <h2><span class="section-number">1.2.3. </span>テキストエディタ<a class="headerlink" href="#text-editor" title="この見出しへのパーマリンク">#</a></h2>
-<p>You can use any text editor with CWL, but for syntax highlighting we recommend
-an editor with YAML support. Popular editors are Visual Studio Code, Sublime,
-WebStorm, vim/neovim, and Emacs.</p>
-<p>There are extensions for Visual Studio Code and WebStorm that provide
-integration with CWL, and features such as customized syntax highlighting and better
-auto-complete:</p>
+<p>CWLではどんなテキストエディタでも使えますが、シンタックスハイライトのために、YAMLをサポートするエディタをお勧めします。人気のあるエディタは、Visual Studio Code、Sublime、WebStorm、vim/neovim、そしてEmacsです。</p>
+<p>Visual Studio CodeとWebStormには、CWLとの統合を実現する拡張機能があり、カスタマイズされたシンタックスハイライトやより優れた自動補完などの機能が用意されています：</p>
 <ul class="simple">
 <li><p>Visual Studio Code with the Benten (CWL) plugin - <a class="github reference external" href="https://github.com/rabix/benten#install-vs-code-extension">rabix/benten</a></p></li>
 <li><p>IntelliJ 用 cwl-plugin -<a class="reference external" href="https://plugins.jetbrains.com/plugin/10040-cwl-plugin">https://plugins.jetbrains.com/plugin/10040-cwl-plugin</a></p></li>
@@ -644,7 +637,7 @@ images.</p>
               
               
                 <footer class="prev-next-footer">
-                  <!-- Previous / next buttons -->
+                  
 <div class="prev-next-area">
     <a class="left-prev"
        href="quick-start.html"
@@ -674,6 +667,7 @@ images.</p>
                 <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
 
   <div class="sidebar-secondary-item">
+
   <div class="page-toc tocsection onthispage">
     <i class="fa-solid fa-list"></i> On this page
   </div>
@@ -691,6 +685,7 @@ images.</p>
   </nav></div>
 
   <div class="sidebar-secondary-item">
+
   
   <div class="tocsection editthispage">
     <a href="https://github.com/common-workflow-language/user_guide/edit/main/src/introduction/prerequisites.md">
@@ -706,6 +701,7 @@ images.</p>
 </div>
 
   <div class="sidebar-secondary-item">
+
   <div class="tocsection sourcelink">
     <a href="../_sources/introduction/prerequisites.md.txt">
       <i class="fa-solid fa-file-lines"></i> ソースコードを表示
@@ -726,8 +722,8 @@ images.</p>
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../_static/scripts/bootstrap.js?digest=365ca57ee442770a23c6"></script>
-<script src="../_static/scripts/pydata-sphinx-theme.js?digest=365ca57ee442770a23c6"></script>
+  <script src="../_static/scripts/bootstrap.js?digest=5b4479735964841361fd"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd"></script>
 
 <div class="container">
   <div class="row">
@@ -757,6 +753,7 @@ images.</p>
     <div class="footer-items__start">
       
         <div class="footer-item">
+
   <p class="copyright">
     
       © Copyright 2013, CWL Project Team.
@@ -766,6 +763,7 @@ images.</p>
 </div>
       
         <div class="footer-item">
+
   <p class="sphinx-version">
     Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 5.3.0.
     <br/>
@@ -778,8 +776,9 @@ images.</p>
   
     <div class="footer-items__end">
       
-        <div class="footer-item"><p class="theme-version">
-  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.14.3.
+        <div class="footer-item">
+<p class="theme-version">
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.14.4.
 </p></div>
       
     </div>

@@ -3,7 +3,7 @@
 <!DOCTYPE html>
 
 
-<html lang="ja" data-theme="light">
+<html lang="ja" data-content_root="" data-theme="light">
 
   <head>
     <meta charset="utf-8" />
@@ -23,12 +23,12 @@
   </script>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../_static/styles/theme.css?digest=365ca57ee442770a23c6" rel="stylesheet" />
-<link href="../_static/styles/bootstrap.css?digest=365ca57ee442770a23c6" rel="stylesheet" />
-<link href="../_static/styles/pydata-sphinx-theme.css?digest=365ca57ee442770a23c6" rel="stylesheet" />
+  <link href="../_static/styles/theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=5b4479735964841361fd" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
 
   
-  <link href="../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=365ca57ee442770a23c6" rel="stylesheet" />
+  <link href="../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=5b4479735964841361fd" rel="stylesheet" />
   <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
@@ -38,9 +38,9 @@
     <link rel="stylesheet" type="text/css" href="../_static/css/custom.css" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=365ca57ee442770a23c6" />
-<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=365ca57ee442770a23c6" />
-  <script src="../_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=365ca57ee442770a23c6"></script>
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=5b4479735964841361fd" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd" />
+  <script src="../_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=5b4479735964841361fd"></script>
 
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
@@ -118,6 +118,7 @@
   <div class="col-lg-3 navbar-header-items__start">
     
       <div class="navbar-item">
+
   
 
 <a class="navbar-brand logo" href="../index.html">
@@ -141,7 +142,8 @@
     
     <div class="me-auto navbar-header-items__center">
       
-        <div class="navbar-item"><nav class="navbar-nav">
+        <div class="navbar-item">
+<nav class="navbar-nav">
   <p class="sidebar-header-items__title"
      role="heading"
      aria-level="1"
@@ -201,6 +203,7 @@
       
         <div class="navbar-item navbar-persistent--container">
           
+
  <script>
  document.write(`
    <button class="btn navbar-btn search-button-field search-button__button" title="検索" aria-label="検索" data-bs-placement="bottom" data-bs-toggle="tooltip">
@@ -214,6 +217,7 @@
       
       
         <div class="navbar-item">
+
 <script>
 document.write(`
   <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
@@ -246,6 +250,7 @@ document.write(`
   
   
     <div class="navbar-persistent--mobile">
+
  <script>
  document.write(`
    <button class="btn navbar-btn search-button-field search-button__button" title="検索" aria-label="検索" data-bs-placement="bottom" data-bs-toggle="tooltip">
@@ -279,7 +284,8 @@ document.write(`
     
       <div class="sidebar-header-items__center">
         
-          <div class="navbar-item"><nav class="navbar-nav">
+          <div class="navbar-item">
+<nav class="navbar-nav">
   <p class="sidebar-header-items__title"
      role="heading"
      aria-level="1"
@@ -339,6 +345,7 @@ document.write(`
       <div class="sidebar-header-items__end">
         
           <div class="navbar-item">
+
 <script>
 document.write(`
   <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
@@ -392,7 +399,7 @@ document.write(`
 <li class="toctree-l1"><a class="reference internal" href="creating-files-at-runtime.html">2.14. Creating Files at Runtime</a></li>
 <li class="toctree-l1"><a class="reference internal" href="staging-input-files.html">2.15. 入力ファイルのステージング</a></li>
 <li class="toctree-l1"><a class="reference internal" href="best-practices.html">2.16. ベストプラクティス</a></li>
-<li class="toctree-l1"><a class="reference internal" href="file-formats.html">2.17. File Formats</a></li>
+<li class="toctree-l1"><a class="reference internal" href="file-formats.html">2.17. ファイルフォーマット</a></li>
 <li class="toctree-l1"><a class="reference internal" href="metadata-and-authorship.html">2.18. メタデータと著者</a></li>
 <li class="toctree-l1"><a class="reference internal" href="specifying-software-requirements.html">2.19. ソフトウェア要求事項の指定</a></li>
 <li class="toctree-l1"><a class="reference internal" href="troubleshooting.html">2.20. トラブルシューティング</a></li>
@@ -530,8 +537,7 @@ example_file:<span class="w">  </span><span class="c1"># type &#39;File&#39; (op
 <p>You can redirect the output to a file, i.e. <code class="docutils literal notranslate"><span class="pre">cwltool</span> <span class="pre">--make-template</span> <span class="pre">inp.cwl</span> <span class="pre">&gt;</span> <span class="pre">inp-job.yml</span></code>,
 and then modify the default values with your desired input values.</p>
 </div>
-<p>Notice that &quot;example_file&quot;, as a <code class="docutils literal notranslate"><span class="pre">File</span></code> type, must be provided as an
-object with the fields <code class="docutils literal notranslate"><span class="pre">class:</span> <span class="pre">File</span></code> and <code class="docutils literal notranslate"><span class="pre">path</span></code>.</p>
+<p>&quot;example_file&quot; は <code class="docutils literal notranslate"><span class="pre">File</span></code> 型として、フィールド <code class="docutils literal notranslate"><span class="pre">class：</span> <span class="pre">File</span></code> と <code class="docutils literal notranslate"><span class="pre">path</span></code> フィールドを持つオブジェクトとして提供されなければなりません。</p>
 <p>次に、コマンドラインで<code class="docutils literal notranslate"><span class="pre">touch</span> <span class="pre">whale.txt</span></code> と入力し、<a class="reference external" href="http://www.linfo.org/touch.html">touch</a>をコマンドを使用して whale.txt を作成します。</p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>touch<span class="w"> </span>whale.txt
 </pre></div>
@@ -542,13 +548,13 @@ two commands and the expected output from the command line:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>cwltool<span class="w"> </span>inp.cwl<span class="w"> </span>inp-job.yml
 INFO<span class="w"> </span>/opt/hostedtoolcache/Python/3.9.18/x64/bin/cwltool<span class="w"> </span><span class="m">3</span>.1.20231114134824
 INFO<span class="w"> </span>Resolved<span class="w"> </span><span class="s1">&#39;inp.cwl&#39;</span><span class="w"> </span>to<span class="w"> </span><span class="s1">&#39;file:///home/runner/work/user_guide/user_guide/src/_includes/cwl/inputs/inp.cwl&#39;</span>
-INFO<span class="w"> </span><span class="o">[</span>job<span class="w"> </span>inp.cwl<span class="o">]</span><span class="w"> </span>/tmp/c8enoz1n$<span class="w"> </span><span class="nb">echo</span><span class="w"> </span><span class="se">\</span>
+INFO<span class="w"> </span><span class="o">[</span>job<span class="w"> </span>inp.cwl<span class="o">]</span><span class="w"> </span>/tmp/1hb0fhno$<span class="w"> </span><span class="nb">echo</span><span class="w"> </span><span class="se">\</span>
 <span class="w">    </span>-f<span class="w"> </span><span class="se">\</span>
 <span class="w">    </span>-i42<span class="w"> </span><span class="se">\</span>
 <span class="w">    </span>--example-string<span class="w"> </span><span class="se">\</span>
 <span class="w">    </span>hello<span class="w"> </span><span class="se">\</span>
-<span class="w">    </span>--file<span class="o">=</span>/tmp/atjzppap/stg7018abbf-7b4c-4fa2-812a-0c5c6b6314b4/whale.txt
--f<span class="w"> </span>-i42<span class="w"> </span>--example-string<span class="w"> </span>hello<span class="w"> </span>--file<span class="o">=</span>/tmp/atjzppap/stg7018abbf-7b4c-4fa2-812a-0c5c6b6314b4/whale.txt
+<span class="w">    </span>--file<span class="o">=</span>/tmp/onzym0dx/stg8b0a362f-26a5-49f7-b382-6fe160303d65/whale.txt
+-f<span class="w"> </span>-i42<span class="w"> </span>--example-string<span class="w"> </span>hello<span class="w"> </span>--file<span class="o">=</span>/tmp/onzym0dx/stg8b0a362f-26a5-49f7-b382-6fe160303d65/whale.txt
 INFO<span class="w"> </span><span class="o">[</span>job<span class="w"> </span>inp.cwl<span class="o">]</span><span class="w"> </span>completed<span class="w"> </span>success
 <span class="o">{}</span>INFO<span class="w"> </span>Final<span class="w"> </span>process<span class="w"> </span>status<span class="w"> </span>is<span class="w"> </span>success
 </pre></div>
@@ -675,7 +681,7 @@ on the command line:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>cwltool<span class="w"> </span>array-inputs.cwl<span class="w"> </span>array-inputs-job.yml
 INFO<span class="w"> </span>/opt/hostedtoolcache/Python/3.9.18/x64/bin/cwltool<span class="w"> </span><span class="m">3</span>.1.20231114134824
 INFO<span class="w"> </span>Resolved<span class="w"> </span><span class="s1">&#39;array-inputs.cwl&#39;</span><span class="w"> </span>to<span class="w"> </span><span class="s1">&#39;file:///home/runner/work/user_guide/user_guide/src/_includes/cwl/inputs/array-inputs.cwl&#39;</span>
-INFO<span class="w"> </span><span class="o">[</span>job<span class="w"> </span>array-inputs.cwl<span class="o">]</span><span class="w"> </span>/tmp/5qnqyz8e$<span class="w"> </span><span class="nb">echo</span><span class="w"> </span><span class="se">\</span>
+INFO<span class="w"> </span><span class="o">[</span>job<span class="w"> </span>array-inputs.cwl<span class="o">]</span><span class="w"> </span>/tmp/2ysejeeo$<span class="w"> </span><span class="nb">echo</span><span class="w"> </span><span class="se">\</span>
 <span class="w">    </span>-A<span class="w"> </span><span class="se">\</span>
 <span class="w">    </span>one<span class="w"> </span><span class="se">\</span>
 <span class="w">    </span>two<span class="w"> </span><span class="se">\</span>
@@ -683,7 +689,7 @@ INFO<span class="w"> </span><span class="o">[</span>job<span class="w"> </span>a
 <span class="w">    </span>-B<span class="o">=</span>four<span class="w"> </span><span class="se">\</span>
 <span class="w">    </span>-B<span class="o">=</span>five<span class="w"> </span><span class="se">\</span>
 <span class="w">    </span>-B<span class="o">=</span>six<span class="w"> </span><span class="se">\</span>
-<span class="w">    </span>-C<span class="o">=</span>seven,eight,nine<span class="w"> </span>&gt;<span class="w"> </span>/tmp/5qnqyz8e/output.txt
+<span class="w">    </span>-C<span class="o">=</span>seven,eight,nine<span class="w"> </span>&gt;<span class="w"> </span>/tmp/2ysejeeo/output.txt
 INFO<span class="w"> </span><span class="o">[</span>job<span class="w"> </span>array-inputs.cwl<span class="o">]</span><span class="w"> </span>completed<span class="w"> </span>success
 <span class="o">{</span>
 <span class="w">    </span><span class="s2">&quot;example_out&quot;</span>:<span class="w"> </span><span class="o">{</span>
@@ -797,13 +803,13 @@ INFO<span class="w"> </span>/opt/hostedtoolcache/Python/3.9.18/x64/bin/cwltool<s
 INFO<span class="w"> </span>Resolved<span class="w"> </span><span class="s1">&#39;record.cwl&#39;</span><span class="w"> </span>to<span class="w"> </span><span class="s1">&#39;file:///home/runner/work/user_guide/user_guide/src/_includes/cwl/inputs/record.cwl&#39;</span>
 <span class="hll">record-job2.yml:6:3:<span class="w"> </span>Warning:<span class="w"> </span>invalid<span class="w"> </span>field<span class="w"> </span><span class="s1">&#39;itemD&#39;</span>,<span class="w"> </span>expected<span class="w"> </span>one<span class="w"> </span>of:<span class="w"> </span><span class="s1">&#39;itemC&#39;</span>
 </span>WARNING<span class="w"> </span>record-job2.yml:6:3:<span class="w"> </span>Warning:<span class="w"> </span>invalid<span class="w"> </span>field<span class="w"> </span><span class="s1">&#39;itemD&#39;</span>,<span class="w"> </span>expected<span class="w"> </span>one<span class="w"> </span>of:<span class="w"> </span><span class="s1">&#39;itemC&#39;</span>
-INFO<span class="w"> </span><span class="o">[</span>job<span class="w"> </span>record.cwl<span class="o">]</span><span class="w"> </span>/tmp/agb3kmru$<span class="w"> </span><span class="nb">echo</span><span class="w"> </span><span class="se">\</span>
+INFO<span class="w"> </span><span class="o">[</span>job<span class="w"> </span>record.cwl<span class="o">]</span><span class="w"> </span>/tmp/w0za2g3y$<span class="w"> </span><span class="nb">echo</span><span class="w"> </span><span class="se">\</span>
 <span class="w">    </span>-A<span class="w"> </span><span class="se">\</span>
 <span class="w">    </span>one<span class="w"> </span><span class="se">\</span>
 <span class="w">    </span>-B<span class="w"> </span><span class="se">\</span>
 <span class="hll"><span class="w">    </span>two<span class="w"> </span><span class="se">\</span>
 </span><span class="hll"><span class="w">    </span>-C<span class="w"> </span><span class="se">\</span>
-</span><span class="w">    </span>three<span class="w"> </span>&gt;<span class="w"> </span>/tmp/agb3kmru/output.txt
+</span><span class="w">    </span>three<span class="w"> </span>&gt;<span class="w"> </span>/tmp/w0za2g3y/output.txt
 INFO<span class="w"> </span><span class="o">[</span>job<span class="w"> </span>record.cwl<span class="o">]</span><span class="w"> </span>completed<span class="w"> </span>success
 <span class="o">{</span>
 <span class="w">    </span><span class="s2">&quot;example_out&quot;</span>:<span class="w"> </span><span class="o">{</span>
@@ -835,13 +841,13 @@ INFO<span class="w"> </span><span class="o">[</span>job<span class="w"> </span>r
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>cwltool<span class="w"> </span>record.cwl<span class="w"> </span>record-job3.yml
 INFO<span class="w"> </span>/opt/hostedtoolcache/Python/3.9.18/x64/bin/cwltool<span class="w"> </span><span class="m">3</span>.1.20231114134824
 INFO<span class="w"> </span>Resolved<span class="w"> </span><span class="s1">&#39;record.cwl&#39;</span><span class="w"> </span>to<span class="w"> </span><span class="s1">&#39;file:///home/runner/work/user_guide/user_guide/src/_includes/cwl/inputs/record.cwl&#39;</span>
-INFO<span class="w"> </span><span class="o">[</span>job<span class="w"> </span>record.cwl<span class="o">]</span><span class="w"> </span>/tmp/u9iq8je2$<span class="w"> </span><span class="nb">echo</span><span class="w"> </span><span class="se">\</span>
+INFO<span class="w"> </span><span class="o">[</span>job<span class="w"> </span>record.cwl<span class="o">]</span><span class="w"> </span>/tmp/86cvr8gg$<span class="w"> </span><span class="nb">echo</span><span class="w"> </span><span class="se">\</span>
 <span class="w">    </span>-A<span class="w"> </span><span class="se">\</span>
 <span class="w">    </span>one<span class="w"> </span><span class="se">\</span>
 <span class="w">    </span>-B<span class="w"> </span><span class="se">\</span>
 <span class="w">    </span>two<span class="w"> </span><span class="se">\</span>
 <span class="hll"><span class="w">    </span>-D<span class="w"> </span><span class="se">\</span>
-</span><span class="hll"><span class="w">    </span>four<span class="w"> </span>&gt;<span class="w"> </span>/tmp/u9iq8je2/output.txt
+</span><span class="hll"><span class="w">    </span>four<span class="w"> </span>&gt;<span class="w"> </span>/tmp/86cvr8gg/output.txt
 </span>INFO<span class="w"> </span><span class="o">[</span>job<span class="w"> </span>record.cwl<span class="o">]</span><span class="w"> </span>completed<span class="w"> </span>success
 <span class="o">{</span>
 <span class="w">    </span><span class="s2">&quot;example_out&quot;</span>:<span class="w"> </span><span class="o">{</span>
@@ -906,7 +912,7 @@ command should execute successfully:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>cwltool<span class="w"> </span>exclusive-parameter-expressions.cwl<span class="w"> </span>--file_format<span class="w"> </span>fasta
 INFO<span class="w"> </span>/opt/hostedtoolcache/Python/3.9.18/x64/bin/cwltool<span class="w"> </span><span class="m">3</span>.1.20231114134824
 INFO<span class="w"> </span>Resolved<span class="w"> </span><span class="s1">&#39;exclusive-parameter-expressions.cwl&#39;</span><span class="w"> </span>to<span class="w"> </span><span class="s1">&#39;file:///home/runner/work/user_guide/user_guide/src/_includes/cwl/inputs/exclusive-parameter-expressions.cwl&#39;</span>
-INFO<span class="w"> </span><span class="o">[</span>job<span class="w"> </span>exclusive-parameter-expressions.cwl<span class="o">]</span><span class="w"> </span>/tmp/oi7i68b0$<span class="w"> </span><span class="nb">true</span><span class="w"> </span><span class="se">\</span>
+INFO<span class="w"> </span><span class="o">[</span>job<span class="w"> </span>exclusive-parameter-expressions.cwl<span class="o">]</span><span class="w"> </span>/tmp/e23avfz3$<span class="w"> </span><span class="nb">true</span><span class="w"> </span><span class="se">\</span>
 <span class="w">    </span>--format<span class="w"> </span><span class="se">\</span>
 <span class="w">    </span>fasta
 INFO<span class="w"> </span><span class="o">[</span>job<span class="w"> </span>exclusive-parameter-expressions.cwl<span class="o">]</span><span class="w"> </span>completed<span class="w"> </span>success
@@ -921,7 +927,7 @@ output field (a <code class="docutils literal notranslate"><span class="pre">str
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>cwltool<span class="w"> </span>exclusive-parameter-expressions.cwl
 INFO<span class="w"> </span>/opt/hostedtoolcache/Python/3.9.18/x64/bin/cwltool<span class="w"> </span><span class="m">3</span>.1.20231114134824
 INFO<span class="w"> </span>Resolved<span class="w"> </span><span class="s1">&#39;exclusive-parameter-expressions.cwl&#39;</span><span class="w"> </span>to<span class="w"> </span><span class="s1">&#39;file:///home/runner/work/user_guide/user_guide/src/_includes/cwl/inputs/exclusive-parameter-expressions.cwl&#39;</span>
-INFO<span class="w"> </span><span class="o">[</span>job<span class="w"> </span>exclusive-parameter-expressions.cwl<span class="o">]</span><span class="w"> </span>/tmp/3qqk6bhn$<span class="w"> </span><span class="nb">true</span>
+INFO<span class="w"> </span><span class="o">[</span>job<span class="w"> </span>exclusive-parameter-expressions.cwl<span class="o">]</span><span class="w"> </span>/tmp/eq0grcvt$<span class="w"> </span><span class="nb">true</span>
 <span class="hll">ERROR<span class="w"> </span><span class="o">[</span>job<span class="w"> </span>exclusive-parameter-expressions.cwl<span class="o">]</span><span class="w"> </span>Job<span class="w"> </span>error:
 </span><span class="hll">Error<span class="w"> </span>validating<span class="w"> </span>output<span class="w"> </span>record.<span class="w"> </span>the<span class="w"> </span><span class="s1">&#39;text_output&#39;</span><span class="w"> </span>field<span class="w"> </span>is<span class="w"> </span>not<span class="w"> </span>valid<span class="w"> </span>because
 </span><span class="hll"><span class="w">  </span>the<span class="w"> </span>value<span class="w"> </span>is<span class="w"> </span>not<span class="w"> </span>string
@@ -953,7 +959,7 @@ the second operand, which is why a reasonable default can be provided there.</p>
               
               
                 <footer class="prev-next-footer">
-                  <!-- Previous / next buttons -->
+                  
 <div class="prev-next-area">
     <a class="left-prev"
        href="expressions.html"
@@ -983,6 +989,7 @@ the second operand, which is why a reasonable default can be provided there.</p>
                 <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
 
   <div class="sidebar-secondary-item">
+
   <div class="page-toc tocsection onthispage">
     <i class="fa-solid fa-list"></i> On this page
   </div>
@@ -998,6 +1005,7 @@ the second operand, which is why a reasonable default can be provided there.</p>
   </nav></div>
 
   <div class="sidebar-secondary-item">
+
   
   <div class="tocsection editthispage">
     <a href="https://github.com/common-workflow-language/user_guide/edit/main/src/topics/inputs.md">
@@ -1013,6 +1021,7 @@ the second operand, which is why a reasonable default can be provided there.</p>
 </div>
 
   <div class="sidebar-secondary-item">
+
   <div class="tocsection sourcelink">
     <a href="../_sources/topics/inputs.md.txt">
       <i class="fa-solid fa-file-lines"></i> ソースコードを表示
@@ -1033,8 +1042,8 @@ the second operand, which is why a reasonable default can be provided there.</p>
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../_static/scripts/bootstrap.js?digest=365ca57ee442770a23c6"></script>
-<script src="../_static/scripts/pydata-sphinx-theme.js?digest=365ca57ee442770a23c6"></script>
+  <script src="../_static/scripts/bootstrap.js?digest=5b4479735964841361fd"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd"></script>
 
 <div class="container">
   <div class="row">
@@ -1064,6 +1073,7 @@ the second operand, which is why a reasonable default can be provided there.</p>
     <div class="footer-items__start">
       
         <div class="footer-item">
+
   <p class="copyright">
     
       © Copyright 2013, CWL Project Team.
@@ -1073,6 +1083,7 @@ the second operand, which is why a reasonable default can be provided there.</p>
 </div>
       
         <div class="footer-item">
+
   <p class="sphinx-version">
     Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 5.3.0.
     <br/>
@@ -1085,8 +1096,9 @@ the second operand, which is why a reasonable default can be provided there.</p>
   
     <div class="footer-items__end">
       
-        <div class="footer-item"><p class="theme-version">
-  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.14.3.
+        <div class="footer-item">
+<p class="theme-version">
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.14.4.
 </p></div>
       
     </div>

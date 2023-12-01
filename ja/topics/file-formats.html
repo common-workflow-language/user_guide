@@ -3,7 +3,7 @@
 <!DOCTYPE html>
 
 
-<html lang="ja" data-theme="light">
+<html lang="ja" data-content_root="" data-theme="light">
 
   <head>
     <meta charset="utf-8" />
@@ -13,7 +13,7 @@
     <link rel="icon" sizes="96x96" href="../_static/images/favicons/cwl/favicon-96x96.png" type="image/png">
     <link rel="icon" sizes="128x128" href="../_static/images/favicons/cwl/favicon-128.png" type="image/png">
     <link rel="icon" sizes="196x196" href="../_static/images/favicons/cwl/favicon-196x196.png" type="image/png">
-    <title>2.17. File Formats &#8212; Common Workflow Language User Guide 0.1 ドキュメント</title>
+    <title>2.17. ファイルフォーマット &#8212; Common Workflow Language User Guide 0.1 ドキュメント</title>
   
   
   
@@ -23,12 +23,12 @@
   </script>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../_static/styles/theme.css?digest=365ca57ee442770a23c6" rel="stylesheet" />
-<link href="../_static/styles/bootstrap.css?digest=365ca57ee442770a23c6" rel="stylesheet" />
-<link href="../_static/styles/pydata-sphinx-theme.css?digest=365ca57ee442770a23c6" rel="stylesheet" />
+  <link href="../_static/styles/theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=5b4479735964841361fd" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
 
   
-  <link href="../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=365ca57ee442770a23c6" rel="stylesheet" />
+  <link href="../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=5b4479735964841361fd" rel="stylesheet" />
   <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
@@ -38,9 +38,9 @@
     <link rel="stylesheet" type="text/css" href="../_static/css/custom.css" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=365ca57ee442770a23c6" />
-<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=365ca57ee442770a23c6" />
-  <script src="../_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=365ca57ee442770a23c6"></script>
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=5b4479735964841361fd" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd" />
+  <script src="../_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=5b4479735964841361fd"></script>
 
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
@@ -118,6 +118,7 @@
   <div class="col-lg-3 navbar-header-items__start">
     
       <div class="navbar-item">
+
   
 
 <a class="navbar-brand logo" href="../index.html">
@@ -141,7 +142,8 @@
     
     <div class="me-auto navbar-header-items__center">
       
-        <div class="navbar-item"><nav class="navbar-nav">
+        <div class="navbar-item">
+<nav class="navbar-nav">
   <p class="sidebar-header-items__title"
      role="heading"
      aria-level="1"
@@ -201,6 +203,7 @@
       
         <div class="navbar-item navbar-persistent--container">
           
+
  <script>
  document.write(`
    <button class="btn navbar-btn search-button-field search-button__button" title="検索" aria-label="検索" data-bs-placement="bottom" data-bs-toggle="tooltip">
@@ -214,6 +217,7 @@
       
       
         <div class="navbar-item">
+
 <script>
 document.write(`
   <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
@@ -246,6 +250,7 @@ document.write(`
   
   
     <div class="navbar-persistent--mobile">
+
  <script>
  document.write(`
    <button class="btn navbar-btn search-button-field search-button__button" title="検索" aria-label="検索" data-bs-placement="bottom" data-bs-toggle="tooltip">
@@ -279,7 +284,8 @@ document.write(`
     
       <div class="sidebar-header-items__center">
         
-          <div class="navbar-item"><nav class="navbar-nav">
+          <div class="navbar-item">
+<nav class="navbar-nav">
   <p class="sidebar-header-items__title"
      role="heading"
      aria-level="1"
@@ -339,6 +345,7 @@ document.write(`
       <div class="sidebar-header-items__end">
         
           <div class="navbar-item">
+
 <script>
 document.write(`
   <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
@@ -392,7 +399,7 @@ document.write(`
 <li class="toctree-l1"><a class="reference internal" href="creating-files-at-runtime.html">2.14. Creating Files at Runtime</a></li>
 <li class="toctree-l1"><a class="reference internal" href="staging-input-files.html">2.15. 入力ファイルのステージング</a></li>
 <li class="toctree-l1"><a class="reference internal" href="best-practices.html">2.16. ベストプラクティス</a></li>
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">2.17. File Formats</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">2.17. ファイルフォーマット</a></li>
 <li class="toctree-l1"><a class="reference internal" href="metadata-and-authorship.html">2.18. メタデータと著者</a></li>
 <li class="toctree-l1"><a class="reference internal" href="specifying-software-requirements.html">2.19. ソフトウェア要求事項の指定</a></li>
 <li class="toctree-l1"><a class="reference internal" href="troubleshooting.html">2.20. トラブルシューティング</a></li>
@@ -455,7 +462,7 @@ document.write(`
                 <article class="bd-article" role="main">
                   
   <section id="file-formats">
-<h1><span class="section-number">2.17. </span>File Formats<a class="headerlink" href="#file-formats" title="この見出しへのパーマリンク">#</a></h1>
+<h1><span class="section-number">2.17. </span>ファイルフォーマット<a class="headerlink" href="#file-formats" title="この見出しへのパーマリンク">#</a></h1>
 <p>Tools and workflows can take <a class="reference external" href="https://w3id.org/cwl/CommandLineTool.html#File"><code class="docutils literal notranslate"><span class="pre">File</span></code></a> types as input and produce them as output.
 We also recommend indicating the format for <a class="reference external" href="https://w3id.org/cwl/CommandLineTool.html#File"><code class="docutils literal notranslate"><span class="pre">File</span></code></a> types. This helps document
 for others how to use your tool while allowing you to do some simple
@@ -529,16 +536,16 @@ and can be downloaded e.g. via <code class="docutils literal notranslate"><span 
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>cwltool<span class="w"> </span>metadata_example.cwl<span class="w"> </span>sample.yml
 INFO<span class="w"> </span>/opt/hostedtoolcache/Python/3.9.18/x64/bin/cwltool<span class="w"> </span><span class="m">3</span>.1.20231114134824
 INFO<span class="w"> </span>Resolved<span class="w"> </span><span class="s1">&#39;metadata_example.cwl&#39;</span><span class="w"> </span>to<span class="w"> </span><span class="s1">&#39;file:///home/runner/work/user_guide/user_guide/src/_includes/cwl/file-formats/metadata_example.cwl&#39;</span>
-INFO<span class="w"> </span><span class="o">[</span>job<span class="w"> </span>metadata_example.cwl<span class="o">]</span><span class="w"> </span>/tmp/bh5cuuji$<span class="w"> </span>wc<span class="w"> </span><span class="se">\</span>
+INFO<span class="w"> </span><span class="o">[</span>job<span class="w"> </span>metadata_example.cwl<span class="o">]</span><span class="w"> </span>/tmp/ij8m5rdu$<span class="w"> </span>wc<span class="w"> </span><span class="se">\</span>
 <span class="w">    </span>-l<span class="w"> </span><span class="se">\</span>
-<span class="w">    </span>/tmp/x0g5d97r/stg3e536fca-9284-49a1-a7e2-ae15cdd2f179/file-formats.bam<span class="w"> </span>&gt;<span class="w"> </span>/tmp/bh5cuuji/output.txt
+<span class="w">    </span>/tmp/hl1msowg/stgdde17b6b-8676-40f0-b98d-c0139699a85b/file-formats.bam<span class="w"> </span>&gt;<span class="w"> </span>/tmp/ij8m5rdu/output.txt
 INFO<span class="w"> </span><span class="o">[</span>job<span class="w"> </span>metadata_example.cwl<span class="o">]</span><span class="w"> </span>completed<span class="w"> </span>success
 <span class="o">{</span>
 <span class="w">    </span><span class="s2">&quot;report&quot;</span>:<span class="w"> </span><span class="o">{</span>
 <span class="w">        </span><span class="s2">&quot;location&quot;</span>:<span class="w"> </span><span class="s2">&quot;file:///home/runner/work/user_guide/user_guide/src/_includes/cwl/file-formats/output.txt&quot;</span>,
 <span class="w">        </span><span class="s2">&quot;basename&quot;</span>:<span class="w"> </span><span class="s2">&quot;output.txt&quot;</span>,
 <span class="w">        </span><span class="s2">&quot;class&quot;</span>:<span class="w"> </span><span class="s2">&quot;File&quot;</span>,
-<span class="w">        </span><span class="s2">&quot;checksum&quot;</span>:<span class="w"> </span><span class="s2">&quot;sha1</span><span class="nv">$399</span><span class="s2">d99e2e458a41cbf2f1748d48bd236a53415b7&quot;</span>,
+<span class="w">        </span><span class="s2">&quot;checksum&quot;</span>:<span class="w"> </span><span class="s2">&quot;sha1</span><span class="nv">$1</span><span class="s2">d9cd07c1f05bd26cb7164384cb44011a63c7430&quot;</span>,
 <span class="w">        </span><span class="s2">&quot;size&quot;</span>:<span class="w"> </span><span class="m">77</span>,
 <span class="w">        </span><span class="s2">&quot;format&quot;</span>:<span class="w"> </span><span class="s2">&quot;http://edamontology.org/format_1964&quot;</span>,
 <span class="w">        </span><span class="s2">&quot;path&quot;</span>:<span class="w"> </span><span class="s2">&quot;/home/runner/work/user_guide/user_guide/src/_includes/cwl/file-formats/output.txt&quot;</span>
@@ -557,7 +564,7 @@ INFO<span class="w"> </span><span class="o">[</span>job<span class="w"> </span>m
               
               
                 <footer class="prev-next-footer">
-                  <!-- Previous / next buttons -->
+                  
 <div class="prev-next-area">
     <a class="left-prev"
        href="best-practices.html"
@@ -587,6 +594,7 @@ INFO<span class="w"> </span><span class="o">[</span>job<span class="w"> </span>m
                 <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
 
   <div class="sidebar-secondary-item">
+
   <div class="page-toc tocsection onthispage">
     <i class="fa-solid fa-list"></i> On this page
   </div>
@@ -597,6 +605,7 @@ INFO<span class="w"> </span><span class="o">[</span>job<span class="w"> </span>m
   </nav></div>
 
   <div class="sidebar-secondary-item">
+
   
   <div class="tocsection editthispage">
     <a href="https://github.com/common-workflow-language/user_guide/edit/main/src/topics/file-formats.md">
@@ -612,6 +621,7 @@ INFO<span class="w"> </span><span class="o">[</span>job<span class="w"> </span>m
 </div>
 
   <div class="sidebar-secondary-item">
+
   <div class="tocsection sourcelink">
     <a href="../_sources/topics/file-formats.md.txt">
       <i class="fa-solid fa-file-lines"></i> ソースコードを表示
@@ -632,8 +642,8 @@ INFO<span class="w"> </span><span class="o">[</span>job<span class="w"> </span>m
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../_static/scripts/bootstrap.js?digest=365ca57ee442770a23c6"></script>
-<script src="../_static/scripts/pydata-sphinx-theme.js?digest=365ca57ee442770a23c6"></script>
+  <script src="../_static/scripts/bootstrap.js?digest=5b4479735964841361fd"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd"></script>
 
 <div class="container">
   <div class="row">
@@ -663,6 +673,7 @@ INFO<span class="w"> </span><span class="o">[</span>job<span class="w"> </span>m
     <div class="footer-items__start">
       
         <div class="footer-item">
+
   <p class="copyright">
     
       © Copyright 2013, CWL Project Team.
@@ -672,6 +683,7 @@ INFO<span class="w"> </span><span class="o">[</span>job<span class="w"> </span>m
 </div>
       
         <div class="footer-item">
+
   <p class="sphinx-version">
     Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 5.3.0.
     <br/>
@@ -684,8 +696,9 @@ INFO<span class="w"> </span><span class="o">[</span>job<span class="w"> </span>m
   
     <div class="footer-items__end">
       
-        <div class="footer-item"><p class="theme-version">
-  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.14.3.
+        <div class="footer-item">
+<p class="theme-version">
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.14.4.
 </p></div>
       
     </div>
