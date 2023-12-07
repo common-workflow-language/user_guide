@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: Common Workflow Language User Guide\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-01-25 14:33+0100\n"
-"PO-Revision-Date: 2023-12-01 01:10+0000\n"
+"PO-Revision-Date: 2023-12-07 05:06+0000\n"
 "Last-Translator: Manabu ISHII <manabu.ishii.rb@gmail.com>\n"
 "Language-Team: Japanese <https://hosted.weblate.org/projects/commonwl/"
 "user-guide/ja/>\n"
@@ -161,9 +161,9 @@ msgid ""
 "names that these files were given when they were created."
 msgstr ""
 "この例では、ツール定義の一部として、入力ファイルの名前を変更する方法を説明し"
-"ます。これは、ワークフローの別のステップで作成されたファイルを使用する場合に"
-"、これらのファイルが作成されたときに与えられたデフォルトの名前を使用して作業"
-"したくない場合に便利です。"
+"ます。これは、ワークフローの別のステップで作成されたファイルを使用する場合"
+"に、これらのファイルが作成されたときに与えられたデフォルトの名前を使用して作"
+"業したくない場合に便利です。"
 
 #: ../../src/faq.md:59 1c6b8a4194a14611b4061b1540c3807f
 msgid "Rename an Output File"
@@ -476,6 +476,7 @@ msgid "Debug JavaScript Expressions"
 msgstr "JavaScriptの式をデバッグする"
 
 #: ../../src/faq.md:452 d7b044f5224a48eda09bc949cf645193
+#, fuzzy
 msgid ""
 "You can use the <code>--js-console</code> option of <code>cwltool</code>, or "
 "you can try creating a JavaScript or TypeScript project for your code, and "
@@ -485,6 +486,13 @@ msgid ""
 "common-workflow-language/blob/master/v1.0/v1.0/template-tool.cwl#L6-L8</a></"
 "dd>"
 msgstr ""
+"<code>cwltool</code> の <code>--js-console</code> "
+"オプションを使用するか、または、あなたのコードのためのJavaScript または "
+"TypeScript プロジェクトを作成し、<code>expressionLib</code> "
+"を使用して読み込んでみてください（例：<a href=\"https://github.com/"
+"common-workflow-language/common-workflow-language/blob/master/v1.0/v1.0/"
+"template-tool.cwl#L6-L8\"> https://github.com/common-workflow-language/"
+"common-workflow-language/blob/master/v1.0/v1.0/template-tool.cwl#L6-L8</a>"
 
 #: ../../src/index.md:1 2754519265eb426b940bbbd2b8d64e1e
 msgid "Common Workflow Language User Guide"
@@ -1142,10 +1150,10 @@ msgid ""
 msgstr ""
 "*shebang* は、スクリプトの冒頭の2文字列`#!` のことです。スクリプトが実行可能"
 "な場合、オペレーティングシステムは、shebangの後に指定された実行可能ファイルを"
-"使用してスクリプトを実行します。`/usr/bin/env <executable>` は` <executable>`"
-" プログラムをシステムの`PATH` "
-"で探すので、ハードコードされた場所を使うよりも`/usr/bin/env <executable>` を"
-"使うことが良い習慣と考えられています、</executable></executable></executable>"
+"使用してスクリプトを実行します。`/usr/bin/env <executable>` は` "
+"<executable>` プログラムをシステムの`PATH` で探すので、ハードコードされた場所"
+"を使うよりも`/usr/bin/env <executable>` を使うことが良い習慣と考えられていま"
+"す、</executable></executable></executable>"
 
 #: ../../src/introduction/prerequisites.md:161 eec6c07455384630809ff1c532bfe7d4
 msgid "Text Editor"
@@ -1289,8 +1297,8 @@ msgid ""
 "same result as the command-line `echo \"Hello World\"`."
 msgstr ""
 "上記の例は、`echo` のコマンドラインツールのラッパーに過ぎません。デフォルトの"
-"入力値で上記のワークフローを実行すると、コマンドラインと同じ結果が得られます`"
-"echo \"Hello World\"`."
+"入力値で上記のワークフローを実行すると、コマンドラインと同じ結果が得られます"
+"`echo \"Hello World\"`."
 
 #: ../../src/introduction/quick-start.md:27 82613ca4e32b4ccab1b7735f5ba2d5a1
 #, fuzzy
@@ -1301,8 +1309,8 @@ msgid ""
 "section."
 msgstr ""
 "CWLでは、CommandLineToolとWorkflowは区別されています。しかし、ここでは簡略化"
-"のため、「ワークフロー」という用語を使用しています。これについては、[基本概念"
-"](basic-concepts.md)のセクションで詳しく説明します。"
+"のため、「ワークフロー」という用語を使用しています。これについては、[基本概"
+"念](basic-concepts.md)のセクションで詳しく説明します。"
 
 #: ../../src/introduction/quick-start.md:32 498a43362a4749f3b8b433709d34a1d5
 msgid "Installing a CWL Runner"
@@ -1347,8 +1355,8 @@ msgid ""
 "workflow without specifying any option:"
 msgstr ""
 "`cwltool` コマンドライン実行ファイルの使い方は、基本的に`cwltool [OPTIONS] "
-"<cwl_document> [INPUTS_OBJECT]`です。`hello_world.cwl` "
-"Workflowは、オプションを指定せずに実行することができます：</cwl_document>"
+"<cwl_document> [INPUTS_OBJECT]`です。`hello_world.cwl` Workflowは、オプション"
+"を指定せずに実行することができます：</cwl_document>"
 
 #: ../../src/introduction/quick-start.md:57 ce04027dfcfe4b7b91ea3c2136b18b23
 msgid "Running `hello_world.cwl` with `cwltool`."
@@ -1495,11 +1503,11 @@ msgid ""
 "\"javac\" to write the class file to the designated output directory instead."
 msgstr ""
 "この例では、Javaコンパイラを使用して、javaソースファイルをクラスファイルにコ"
-"ンパイルするようにラップします。  デフォルトでは、\"javac \"はソース"
-"・ファイルと同じディレクトリにクラス・ファイルを作成します。  しかし、CWLの入"
-"力ファイル（およびそのディレクトリ）は読み取り専用である場合があるので、代わ"
-"りに指定された出力ディレクトリにクラスファイルを書き込むように「javac」に指示"
-"する必要があります。"
+"ンパイルするようにラップします。  デフォルトでは、\"javac \"はソース・ファイ"
+"ルと同じディレクトリにクラス・ファイルを作成します。  しかし、CWLの入力ファイ"
+"ル（およびそのディレクトリ）は読み取り専用である場合があるので、代わりに指定"
+"された出力ディレクトリにクラスファイルを書き込むように「javac」に指示する必要"
+"があります。"
 
 #: ../../src/topics/additional-arguments-and-parameters.md:13
 #: a74935dc31664e979ca8f90a6a4ba53c
@@ -1843,8 +1851,8 @@ msgid ""
 "than the command line parameters, or need a small wrapper shell script."
 msgstr ""
 "コマンドラインパラメーターではなく、ファイルから入力設定を読み込むことを期待"
-"するツールや、小さなラッパーシェルスクリプトが必要な場合など、入力パラメータ"
-"ーからその場でファイルを作成する必要があることがあります。"
+"するツールや、小さなラッパーシェルスクリプトが必要な場合など、入力パラメー"
+"ターからその場でファイルを作成する必要があることがあります。"
 
 #: ../../src/topics/creating-files-at-runtime.md:7
 #: 2df3a3a9094d4b79b1d5dd99195f3bff
@@ -1867,8 +1875,8 @@ msgid ""
 "at the input `message`."
 msgstr ""
 "`$(inputs.message)` のような [Expressions](../topics/expressions.md)は、ファ"
-"イルを作成する前にCWLエンジンによって展開されます。ここでは、入力パラメータ`m"
-"essage` に値を挿入します。"
+"イルを作成する前にCWLエンジンによって展開されます。ここでは、入力パラメータ"
+"`message` に値を挿入します。"
 
 #: ../../src/topics/creating-files-at-runtime.md:20
 #: 9454a330b9324744b89448f2694b1b03
@@ -2115,11 +2123,11 @@ msgid ""
 "`nameext`, etc, could be used instead. See the [list of best practices](best-"
 "practices.md)."
 msgstr ""
-"JavaScript の式は、絶対に必要な場合のみ使用するようにしてください。ファイル名"
-"、拡張子、パスなどを操作する場合は、`basename`,`nameroot`,`nameext`, などの "
-"[`File` のビルトインプロパティ][file-prop] のいずれかを代わりに使用できるかど"
-"うかを検討してください。[ベストプラクティスのリスト](best-practices."
-"md)を参照してください。"
+"JavaScript の式は、絶対に必要な場合のみ使用するようにしてください。ファイル"
+"名、拡張子、パスなどを操作する場合は、`basename`,`nameroot`,`nameext`, など"
+"の [`File` のビルトインプロパティ][file-prop] のいずれかを代わりに使用できる"
+"かどうかを検討してください。[ベストプラクティスのリスト](best-practices.md)を"
+"参照してください。"
 
 #: ../../src/topics/expressions.md:16 7fdbfd1c937b4991bf4a2fa26ea310e4
 #, fuzzy
@@ -2488,9 +2496,9 @@ msgid ""
 "attribute that allows users to load external JavaScript files, or to provide "
 "inline JavaScript code."
 msgstr ""
-"`InlineJavascriptRequirement` は、`expressionLib` 属性をサポートし、"
-"ユーザーが外部 JavaScript ファイルを読み込んだり、インライン JavaScript "
-"コードを提供したりできるようにします。"
+"`InlineJavascriptRequirement` は、`expressionLib` 属性をサポートし、ユーザー"
+"が外部 JavaScript ファイルを読み込んだり、インライン JavaScript コードを提供"
+"したりできるようにします。"
 
 #: ../../src/topics/expressions.md:122 38a2afaf4a6c4d04909af22c93f2808d
 msgid ""
@@ -2545,8 +2553,8 @@ msgid ""
 "Let's move the `capitalizeWords` function to an external file, `custom-"
 "functions.js`, and import it in our CWL document:"
 msgstr ""
-"`capitalizeWords` 関数を外部ファイル`custom-functions.js` に移動し、CWL "
-"定義でインポートしてみましょう："
+"`capitalizeWords` 関数を外部ファイル`custom-functions.js` に移動し、CWL 定義"
+"でインポートしてみましょう："
 
 #: ../../src/topics/expressions.md:158 ed590f9e6f4f425da886b110295c45db
 #, fuzzy
@@ -3062,16 +3070,20 @@ msgid ""
 "tool and workflows. This example includes metadata allowing others to cite "
 "your tool."
 msgstr ""
+"すべての開発者に対し、ツールおよびワークフローに関する以下の最小限のメタデー"
+"タを推奨します。この例では、他の人があなたのツールを引用するためのメタデータ"
+"を含んでいます。"
 
 #: ../../src/topics/metadata-and-authorship.md:16
 #: 0d5200bbbfdc43e6a78b4e4c3096ebd7
 msgid "`metadata_example2.cwl`"
-msgstr ""
+msgstr "`metadata_example2.cwl`"
 
 #: ../../src/topics/metadata-and-authorship.md:28
 #: d402bf528c7f4eb69aaaa275be2bf1d4
+#, fuzzy
 msgid "Extended Example"
-msgstr ""
+msgstr "拡張された例"
 
 #: ../../src/topics/metadata-and-authorship.md:30
 #: cb9980db4e5f4c74b01c2dec6d5e92d0
@@ -3188,6 +3200,7 @@ msgstr ""
 "な値の型を示す`type` があります。"
 
 #: ../../src/topics/outputs.md:10 a11585474d3849cca5467512ed964743
+#, fuzzy
 msgid ""
 "When a tool runs under CWL, the starting working directory is the designated "
 "output directory.  The underlying tool or script must record its results in "
@@ -3195,6 +3208,11 @@ msgid ""
 "returned by the CWL tool are either the output files themselves, or come "
 "from examining the content of those files."
 msgstr ""
+"CWLでツールを実行する場合、開始時の作業ディレクトリは指定された出力ディレクト"
+"リになります。  基礎となるツールやスクリプトは、出力ディレクトリに作成される"
+"ファイルの形でその結果を記録しなければなりません。  CWLツールによって返される"
+"出力パラメータは、出力ファイルそのものであるか、またはそれらのファイルの内容"
+"を調べることによって得られるものです。"
 
 #: ../../src/topics/outputs.md:16 2682f9ca8e604a0c9986f7746fdec960
 msgid ""
@@ -3297,12 +3315,18 @@ msgid "`array-outputs-job.yml`"
 msgstr "`array-outputs-job.yml`"
 
 #: ../../src/topics/outputs.md:112 cc067051f22f433bbece08f60933e002
+#, fuzzy
 msgid ""
 "As described in the [YAML Guide](yaml-guide.md#arrays), the array of "
 "expected outputs is specified in `array-outputs-job.yml` with each entry "
 "marked by a leading `-`. This format can also be used in CWL descriptions to "
 "mark entries in arrays, as demonstrated in several of the upcoming sections."
 msgstr ""
+"[YAML Guide](yaml-guide.md#arrays) "
+"で説明されているように、期待される出力の配列は`array-outputs-job.yml` "
+"で指定され、それぞれのエントリーは先頭の`-` でマークされています。このフォー"
+"マットは、CWL定義で配列のエントリーをマークするために使用することもでき、今後"
+"のいくつかのセクションでデモがあります。"
 
 #: ../../src/topics/parameter-references.md:1 a190a6440ec34898990cdac05d809f22
 msgid "Parameter References"
@@ -3366,20 +3390,26 @@ msgstr ""
 "変数 \"inputs \"の値は、CWLツールの起動時に提供された入力オブジェクトです。"
 
 #: ../../src/topics/parameter-references.md:54 eea20f89c45f424a888178df53713b28
+#, fuzzy
 msgid ""
 "Note that because `File` parameters are objects, to get the path to an input "
 "file you must reference the path field on a file object; to reference the "
 "path to the tar file in the above example you would write `$(inputs.tarfile."
 "path)`."
 msgstr ""
+"`File` パラメータはオブジェクトであるため、入力ファイルのパスを取得するには、"
+"ファイルオブジェクトのpathフィールドを参照する必要があります。上記の例でtarフ"
+"ァイルのパスを参照するには、`$(inputs.tarfile.path)`となります。"
 
 #: ../../src/topics/parameter-references.md:59 cb4ea13f5db84c0da43df3f7f2478d78
 msgid "Where are parameter references allowed?"
 msgstr "パラメータ参照はどこで許されるのですか？"
 
 #: ../../src/topics/parameter-references.md:61 6d3fb423e6c4434697cd113fb27e28ad
+#, fuzzy
 msgid "You can only use parameter references in certain fields.  These are:"
-msgstr ""
+msgstr "パラメータ参照は、特定のフィールドにのみ使用することができます。  "
+"以下はその例です："
 
 #: ../../src/topics/parameter-references.md:63 7647e0229a924f988cf02b7812a55c06
 #, fuzzy
@@ -3512,10 +3542,11 @@ msgstr ""
 
 #: ../../src/topics/specifying-software-requirements.md:13
 #: 82e48b3e3c3f451480cc0b6a529271f6
+#, fuzzy
 msgid ""
 "In this example, the software requirement being described is InterProScan "
 "version 5.21-60."
-msgstr ""
+msgstr "この例では、定義されるソフトウェア要件はInterProScanバージョン5.21-60です。"
 
 #: ../../src/topics/specifying-software-requirements.md:25
 #: 02e40154eac74ecc98d0447d03475b44
@@ -3752,11 +3783,15 @@ msgid "Workflows"
 msgstr "ワークフロー"
 
 #: ../../src/topics/workflows.md:3 b9ae9e9a896048caad7e6c38a5bc1bd1
+#, fuzzy
 msgid ""
 "A workflow is a CWL processing unit that executes command-line tools, "
 "expression tools, or workflows (sub-workflows) as steps. It must have "
 "`inputs`, `outputs`, and `steps` defined in the CWL document."
 msgstr ""
+"Workflowは、CommandLineTool、ExpressionTool、またはWorkflow（サブワークフロー"
+"）をステップ として実行する CWL 処理ユニットです。CWLドキュメントには`inputs`"
+" 、`outputs` 、`steps` を定義する必要があります。"
 
 #: ../../src/topics/workflows.md:13 f228fb7953ea48ed99d89880205f4620
 #, fuzzy
