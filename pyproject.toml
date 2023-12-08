@@ -27,7 +27,7 @@ dependencies = [
     "cwltool",
     "cwlref-runner",
     "cwl-utils==0.*",
-    "myst-parser==0.*",
+    "myst-parser==2.*",
     "pydata-sphinx-theme==0.*",
     "sphinx==5.*",
     "sphinx-reredirects==0.1.*",
