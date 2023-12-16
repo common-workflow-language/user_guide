@@ -1158,7 +1158,7 @@ msgstr ""
 "使用してスクリプトを実行します。`/usr/bin/env <executable>` は` "
 "<executable>` プログラムをシステムの`PATH` で探すので、ハードコードされた場所"
 "を使うよりも`/usr/bin/env <executable>` を使うことが良い習慣と考えられていま"
-"す</executable></executable></executable>"
+"す"
 
 #: ../../src/introduction/prerequisites.md:161 eec6c07455384630809ff1c532bfe7d4
 msgid "Text Editor"
@@ -1361,7 +1361,7 @@ msgid ""
 msgstr ""
 "`cwltool` コマンドライン実行ファイルの使い方は、基本的に`cwltool [OPTIONS] "
 "<cwl_document> [INPUTS_OBJECT]`です。`hello_world.cwl` Workflowは、オプション"
-"を指定せずに実行することができます：</cwl_document>"
+"を指定せずに実行することができます："
 
 #: ../../src/introduction/quick-start.md:57 ce04027dfcfe4b7b91ea3c2136b18b23
 msgid "Running `hello_world.cwl` with `cwltool`."
