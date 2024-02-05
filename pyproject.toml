@@ -53,7 +53,7 @@ test = [
     "cwltest==2.*",
     "cwltool==3.1.*",
 ]
-watch = ["sphinx-autobuild==2021.3.*"]
+watch = ["sphinx-autobuild==2024.2.*"]
 rtd = ["udocker"]
 all = ["cwl-user-guide[test,watch,rtd]"]
 
