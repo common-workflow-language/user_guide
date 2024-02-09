@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: Common Workflow Language User Guide\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-12-16 11:48+0100\n"
-"PO-Revision-Date: 2024-01-31 06:01+0000\n"
+"PO-Revision-Date: 2024-02-09 14:02+0000\n"
 "Last-Translator: Manabu ISHII <manabu.ishii.rb@gmail.com>\n"
 "Language-Team: Japanese <https://hosted.weblate.org/projects/commonwl/"
 "user-guide/ja/>\n"
@@ -117,13 +117,16 @@ msgstr ""
 #: ../../src/_includes/what-is-cwl.md:1 ../../src/_includes/what-is-cwl.md:2
 #: 08aa9181d5304e0fa96b28db15718559 d37fc100eb6948bba8b5e757574b2aaf
 #: ecdd0f28d5b048d69dd1ffae2fa1f6c0
-#, fuzzy
 msgid ""
 "CWL is a way to describe command-line tools and connect them together to "
 "create workflows. Because CWL is a specification and not a specific piece"
 " of software, tools and workflows described using CWL are portable across"
 " a variety of platforms that support the CWL standard."
-msgstr "CWLは、コマンドラインツールを定義し、それらを結びつけてワークフローを作成するための方法です。CWLは仕様であり、特定のソフトウェアではないため、CWLを使用して記述されたツールやワークフローは、CWL標準をサポートするさまざまなプラットフォームで利用可能です。"
+msgstr ""
+"CWLは、コマンドラインツールを定義し、それらのツールを繋げてワークフローを作成"
+"するための方法です。CWLは仕様であり、特定のソフトウェアではないため、CWLを使"
+"用して定義されたツールやワークフローは、CWL標準をサポートするさまざまなプラッ"
+"トフォームで利用可能です。"
 
 #: ../../src/episodes.md:5 ../../src/setup.md:5
 #: 1361ff6bf4924efc9ce9a85785a6b381 eb254514301c491e81f72ae19c407261
@@ -144,14 +147,12 @@ msgid "FAQ"
 msgstr "よくある質問"
 
 #: ../../src/faq.md:11 370a9659c7904ef6b5e1ae7480f82ef6
-#, fuzzy
 msgid "How do I create non \"`File`\" types using `evalFrom`?"
 msgstr "\"`File`\" 型をつかわず `evalFrom`を使う方法"
 
 #: ../../src/faq.md:41 8333f51e3f5945fe8963adfc6685bcb1
-#, fuzzy
 msgid "How do I rename an input file?"
-msgstr "入力ファイルの名前を変更する"
+msgstr "入力ファイルの名前を変更するにはどうしたらよいですか？"
 
 #: ../../src/faq.md:43 f6b88d9154d049d7807afa9bb0f1ac98
 msgid ""
@@ -162,9 +163,8 @@ msgid ""
 msgstr "この例では、ツール定義の一部として、入力ファイルの名前を変更する方法を説明します。これは、ワークフローの別のステップで作成されたファイルを使用する場合に、これらのファイルが作成されたときに与えられたデフォルトの名前を使用して作業したくない場合に便利です。"
 
 #: ../../src/faq.md:59 833510f5896b4a6eb5875d25eca5b047
-#, fuzzy
 msgid "How do I rename an output file?"
-msgstr "出力ファイルの名前を変更する"
+msgstr "出力ファイルの名前を変更するにはどうしたらよいですか？"
 
 #: ../../src/faq.md:61 207e2f97d1c44233ae3f109c5a6ec944
 msgid ""
@@ -178,25 +178,27 @@ msgid ""
 " engines will rename the file using the new name for subsequent steps or "
 "as a workflow-level output."
 msgstr ""
+"`outputEval`フィールドの`basename`フィールドを変更することで、CWLワークフロー"
+"エンジンは、後続のステップまたはワークフローレベルの出力として、新しい名前を"
+"使用してファイル名を変更します。"
 
 #: ../../src/faq.md:86 8641f105131b4ac1bca7e0a46756ef79
-#, fuzzy
 msgid "How do I reference a local script?"
-msgstr "ローカルスクリプトを参照する"
+msgstr "ローカルスクリプトを参照するにはどうしたらよいですか？"
 
 #: ../../src/faq.md:88 d3e43b40d6994b32bc37067ee116418e
 msgid "There are two ways to reference a local script:"
 msgstr "ローカルスクリプトを参照するには、2つの方法があります："
 
 #: ../../src/faq.md:90 64b140a321ca4087945339c523cc24dd
-#, fuzzy
 msgid ""
 "The first method involves adding the path to a folder containing your "
 "scripts to the `PATH` environment variable. This allows you to execute "
 "the shell script directly (without explicitly using the `sh` or `bash` "
 "commands)."
 msgstr ""
-"最初の方法は、スクリプトの入ったフォルダを`PATH` 環境変数に追加する方法です。これにより、`sh` や`bash` "
+"最初の方法は、スクリプトの入ったフォルダを "
+"環境変数`PATH`に追加する方法です。これにより、`sh` や`bash` "
 "コマンドを使用せずに、シェルスクリプトを直接実行することができます。"
 
 #: ../../src/faq.md:93 34ebca4487a54ceab5d087105820e945
@@ -223,11 +225,11 @@ msgid "Now you can use `baseCommand: scriptname.sh` to run the script directly."
 msgstr "これで、`baseCommand: scriptname.sh` を使って、スクリプトを直接実行できるようになりました。"
 
 #: ../../src/faq.md:117 844938d5d2304c6cb03184b4b4b0b024
-#, fuzzy
 msgid ""
 "When you wish to share your work later, you can place your script in a "
 "software container in the Docker format."
-msgstr "後で作ったものを共有したいときは、スクリプトをDockerコンテナに入れることができます。"
+msgstr "後で作ったものを共有したいときは、スクリプトをDockerコンテナに入れることがで"
+"きます。"
 
 #: ../../src/faq.md:119 796ce8155e32486d9651f8f13bfa3148
 #, fuzzy
@@ -1614,6 +1616,7 @@ msgstr ""
 "の下に、このツール定義で動作することが確認されているツールのバージョンのリストを含めるます。"
 
 #: ../../src/topics/best-practices.md:58 88806cb0462f4359801c1fa0ff0ebcc0
+#, fuzzy
 msgid ""
 "`format` should be specified for all input and output `File`s. "
 "Bioinformatics tools should use format identifiers from [EDAM][edam-"
@@ -1624,6 +1627,14 @@ msgid ""
 "ontology/controlled vocabulary in the same way. Please edit this page to "
 "let us know about it."
 msgstr ""
+"`format` は、すべての入力および出力`File`に指定する必要があります。バイオイン"
+"フォマティクスツールは、[EDAM][edam-"
+"example]のフォーマット識別子を使用するのが良いです。`iana:text/plain`,`iana:"
+"text/tab-separated-values`、`$namespaces：{ iana: \"https://www.iana.org/"
+"assignments/media-types/\" }もご参照ください`.[IANA メディアタイプ一覧][iana-"
+"types]（MIME タイプとしても知られています）。バイオインフォマティクス以外のツ"
+"ールについては、同様に適切なオントロジー/統制語彙を使用または構築してください"
+"。このページを編集して私たちに知らせてください。"
 
 #: ../../src/topics/best-practices.md:66 b178c7296ed5491782a4180c76883c14
 #, fuzzy
@@ -1947,6 +1958,7 @@ msgstr ""
 "で、テーブル変換で使用できるテーブルオプションのリストがカスタムオブジェクトとしてインポートされます："
 
 #: ../../src/topics/custom-types.md:46 c791096f537141e8bd7cc941d711d108
+#, fuzzy
 msgid ""
 "The reference to a custom type is a combination of the name of the file "
 "in which the object is defined (`biom-convert-table.yaml`) and the name "
@@ -1956,6 +1968,14 @@ msgid ""
 "`custom-types.yml`, we pass `OTU table` as an `input` that tells the tool"
 " to create an OTU table in hdf5 format."
 msgstr ""
+"カスタムタイプの参照は、そのオブジェクトが定義されているファイル名（`biom-"
+"convert-table.yaml` "
+"）と、カスタムタイプを定義するそのファイル内のオブジェクト名（`table_type` "
+"）を組み合わせたものです。この場合、インポートされた`biom-convert-table.yaml`"
+" ファイルからの`symbols` "
+"配列が、許容されるテーブルオプションを定義します。例えば、`custom-types.yml` "
+"では、`OTU table` を`input` として渡し、hdf5 形式の OTU table "
+"を作成するようツールに指示しています。"
 
 #: ../../src/topics/custom-types.md:53 5f6bc6ed72334a74b9a4c46c29ddda46
 msgid "The contents of the YAML file describing the custom type are given below:"
@@ -2827,6 +2847,13 @@ msgid ""
 "broken using the parameter name), and the position field itself is "
 "optional.  The default position is 0."
 msgstr ""
+"`position` の値は、パラメータがコマンドライン上のどこに表示されるかを決定する"
+"ために使用されます。  "
+"Positionは、絶対的なものではなく、互いに相対的なものです。  そのため、位置は"
+"連続である必要はなく、1、3、5の位置にある3つのパラメータは、1、2、3と同じコマ"
+"ンドラインになります。  複数のパラメータが同じ位置を持つことも可能です（パラ"
+"メータ名で紐付けを行います）。また、位置フィールドは任意です。  "
+"デフォルトの位置は0です。"
 
 #: ../../src/topics/inputs.md:142 7513adabd3ae4701b17f578ac9f321d7
 msgid ""
@@ -3024,6 +3051,7 @@ msgstr ""
 "に変更すると、コマンドラインやジョブ入力ファイルで何も指定されていない場合にデフォルト値を持つようになります。"
 
 #: ../../src/topics/inputs.md:295 b5055c77f85e43609fe3e9b9839778e3
+#, fuzzy
 msgid ""
 "Here, the boolean “or” operator `||` in JavaScript is used for its "
 "_short-circuiting_ property. If `inputs.file_format` is “true” in a "
@@ -3033,6 +3061,12 @@ msgid ""
 "expression’s value becomes that of the second operand, which is why a "
 "reasonable default can be provided there."
 msgstr ""
+"ここでは、JavaScriptのブール値 \"or\"、 \"演算子 `||` は、その_short-"
+"circuiting_プロパティに使用されます。`inputs.file_format`がブール値の \"true "
+"\"である場合（例えば、列挙された有効な空でない文字列）、式の評価は`||`の最初"
+"のオペランドで停止します。しかし、`inputs.file_format`が`null`の場合、式全体"
+"の値は2番目のオペランドの値になります。これにより合理的なデフォルト値を提供し"
+"ます。"
 
 #: ../../src/topics/metadata-and-authorship.md:1
 #: 723c2232310c4276aeac2bd6728d2912
@@ -3053,6 +3087,15 @@ msgid ""
 "anywhere in the document as shown below. Otherwise, one must use full "
 "URLs: `format: http://edamontology.org/format_2572`."
 msgstr ""
+"正しい実行に必須でない実装拡張（例えば、GUI表示に関するフィールド）およびツー"
+"ルまたはワークフロー自体に関するメタデータ（例えば、引用で使用するための著者"
+"名）は、任意のオブジェクトの追加フィールドとして提供できます。このような拡張"
+"フィールド（例：`format: edam:format_2572` ）は、[Schema Salad仕様][schema-"
+"salad]で説明されているように、文書の`$namespaces` セクション（例： edam: "
+"http://edamontology.org/ ）に記載されている名前空間プレフィックスを使用できま"
+"す。一度名前空間プレフィックスを追加すれば、以下のように定義内のどこにでもア"
+"クセスできるようになります。それ以外の場合は、完全なURLを使用しなければなりま"
+"せん。`format: http://edamontology.org/format_2572`."
 
 #: ../../src/topics/metadata-and-authorship.md:13
 #: 368f8993ae9d401488081d74ae5acd49
@@ -3738,6 +3781,14 @@ msgid ""
 " management while avoiding the complexity of invoking and managing Docker"
 " containers."
 msgstr ""
+"[Docker][docker]コンテナは、ソフトウェアとその依存関係のための完全な既知の良"
+"いランタイムを提供することによって、ソフトウェアのインストールを簡素化します"
+"。  しかし、コンテナはホストシステムから意図的に隔離されているため、Dockerコ"
+"ンテナ内でツールを実行するには、入力ファイルがコンテナ内で利用可能で、出力フ"
+"ァイルがコンテナから回収できることを確認するための追加作業が必要です。  CWLラ"
+"ンナーはこの作業を自動的に行うことができるため、Dockerコンテナの呼び出しや管"
+"理の複雑さを回避しながら、Dockerを使用してソフトウェア管理を簡素化することが"
+"できます。"
 
 #: ../../src/topics/using-containers.md:15 4b0f6cfc8a774c77bfbc99e568af2ece
 #, fuzzy
@@ -3774,6 +3825,7 @@ msgstr ""
 "この大部分は以前のセクションで説明したもので、本当に新しいのは`dockerRequirement` の部分だけです。"
 
 #: ../../src/topics/using-containers.md:44 1f02618ab6254459ae71f72844e3cc18
+#, fuzzy
 msgid ""
 "`baseCommand: node` tells CWL that we will be running this command using "
 "the Node Js runtime that is meant for Javascript files. We then need to "
@@ -3785,6 +3837,15 @@ msgid ""
 "best practices when using containers for reproducible research). In this "
 "case we have used a container called `node:slim`."
 msgstr ""
+"`baseCommand: node` は、Javascript ファイル用の Node Js "
+"ランタイムを使用してこのコマンドを実行することを CWL "
+"に指示します。次に、必要なコンテナを見つける方法について、`hints` "
+"をいくつか指定する必要があります。  この場合、`DockerRequirements` に docker "
+"コンテナに関する要件だけを列挙します。  ` dockerPull:` パラメータは、`docker "
+"pull` コマンドに渡すのと同じ値を取ります。つまり、コンテナイメージの名前です"
+"（タグを指定することも可能で、再現可能な研究にコンテナを使用する際のベストプ"
+"ラクティスに適しています）。この場合、`node:slim` "
+"というコンテナを使用しました。"
 
 #: ../../src/topics/using-containers.md:52 54cade4978ec463bbb5c0d8c08e27adb
 msgid ""
@@ -3987,6 +4048,7 @@ msgstr ""
 "ステップの出力パラメータ`classfile` を、ワークフロー出力パラメータ`compiled_class` に接続します。"
 
 #: ../../src/topics/workflows.md:248 e0429688fce445da8083e69323e5b020
+#, fuzzy
 msgid ""
 "The `steps` section describes the actual steps of the workflow.  In this "
 "example, the first step extracts a file from a tar file, and the second "
@@ -3996,6 +4058,13 @@ msgid ""
 "`source`).  In addition, workflow steps which do not depend on one "
 "another may run in parallel."
 msgstr ""
+"`steps` セクションでは、ワークフローの実際のステップを説明しています。  "
+"この例では、最初のステップで tar ファイルからファイルを抽出し、2 "
+"番目のステップで java コンパイラを使用して最初のステップで抽出されたファイル"
+"をコンパイルしています。ワークフローのステップは、必ずしもリストされた順序で"
+"実行されるわけではなく、ステップ間の依存関係によって順序が決定されます（`sour"
+"ce` を使用）。  また、互いに依存しないワークフロー・ステップは、並行して実行"
+"されることがあります。"
 
 #: ../../src/topics/workflows.md:256 980f5eada57c4fadbb783838ded1fa0b
 #, fuzzy
@@ -4010,6 +4079,7 @@ msgstr ""
 "と1つの出力パラメータ`extracted_file` を持ちます。"
 
 #: ../../src/topics/workflows.md:261 3532e165842f4ebb8db0c78208071555
+#, fuzzy
 msgid ""
 "The ``in`` section of the workflow step connects these two input "
 "parameters to the inputs of the workflow, `tarball` and "
@@ -4018,6 +4088,13 @@ msgid ""
 "`name_of_file_to_extract` will be used for the parameters `tarfile` and "
 "`extractfile` in order to run the tool."
 msgstr ""
+"ワークフローステップの``in`` "
+"セクションは、これらの2つの入力パラメータを、`source` "
+"を使用してワークフローの入力である`tarball` および`name_of_file_to_extract` "
+"に接続しています。  つまり、ワークフローステップが実行されると、`tarball` "
+"と`name_of_file_to_extract` "
+"に割り当てられた値が、ツールを実行するために`tarfile` と`extractfile` "
+"のパラメータに使用されることになり ます。"
 
 #: ../../src/topics/workflows.md:267 04a4db2f3da94ce29e7999039ee13fde
 #, fuzzy
@@ -4027,6 +4104,7 @@ msgid ""
 msgstr "ワークフローステップの`out` セクションには、ツールから期待される出力パラメータが記載されています。"
 
 #: ../../src/topics/workflows.md:278 2651ee113a3d4b79b138854ebe729f48
+#, fuzzy
 msgid ""
 "The second step `compile` depends on the results from the first step by "
 "connecting the input parameter `src` to the output parameter of `untar` "
@@ -4035,6 +4113,12 @@ msgid ""
 "and-parameters.md)). The output of this step `classfile` is connected to "
 "the `outputs` section for the Workflow, described above."
 msgstr ""
+"第2ステップ `compile` は、第1ステップの結果に依存し、入力パラメータ`src` "
+"を`untar` の出力パラメータに接続し、`untar/extracted_file` を使用します。  "
+"これは、`arguments.cwl` (以前に [追加の引数とパラメータ](additional-"
+"arguments-and-parameters.md)で説明) "
+"を実行します。このステップの出力`classfile` は、前述のワークフローの`outputs`"
+" セクションに接続されています。"
 
 #: ../../src/topics/workflows.md:285 177040bf9c0045f2878f42bcdd8cbd2d
 msgid "Nested Workflows"
@@ -4084,6 +4168,16 @@ msgid ""
 "/common-workflow-language/user_guide/blob/main/_includes/cwl/workflows"
 "/1st-workflow.cwl\" alt=\"Visualization of 1st-workflow.cwl\" /></a>"
 msgstr ""
+"<a href=\"https://view.commonwl.org/workflows/github.com/"
+"common-workflow-language/user_guide/blob/main/_includes/cwl/workflows/"
+"nestedworkflows.cwl\"><img src=\"https://view.commonwl.org/graph/svg/github."
+"com/common-workflow-language/user_guide/blob/main/_includes/cwl/workflows/"
+"nestedworkflows.cwl\" alt=\"Visualization of nestedworkflows.cwl\" /></a> <a "
+"href=\"https://view.commonwl.org/workflows/github.com/"
+"common-workflow-language/user_guide/blob/main/_includes/cwl/workflows/1st-"
+"workflow.cwl\"><img src=\"https://view.commonwl.org/graph/svg/github.com/"
+"common-workflow-language/user_guide/blob/main/_includes/cwl/workflows/1st-"
+"workflow.cwl\" alt=\"Visualization of 1st-workflow.cwl\" /></a>"
 
 #: ../../src/topics/workflows.md:322 7ce847ab54224452b6425de2a55ec893
 #, fuzzy
@@ -4185,6 +4279,7 @@ msgid "Scattering Steps"
 msgstr "Scatter ステップ"
 
 #: ../../src/topics/workflows.md:400 eab4437bf9994b649954221375e3dd6d
+#, fuzzy
 msgid ""
 "Now that we know how to write workflows, we can start utilizing the "
 "`ScatterFeatureRequirement`. This feature tells the runner that you wish "
@@ -4194,6 +4289,12 @@ msgid ""
 "allows you to run the same workflow on multiple inputs without having to "
 "generate many different commands or input yaml files."
 msgstr ""
+"ワークフローの書き方がわかったので、`ScatterFeatureRequirement` を利用し始め"
+"ることができます。この機能は、ツールやワークフローを入力のリストに対して複数"
+"回実行したいことをランナーに伝えます。ワークフローは、入力を配列として受け取"
+"り、配列の各要素に対して、あたかも1つの入力であるかのように、指定されたステッ"
+"プを実行します。これにより、多くの異なるコマンドや入力 yaml ファイルを生成す"
+"ることなく、複数の入力に対して同じワークフローを実行することができます。"
 
 #: ../../src/topics/workflows.md:411 c245ba0ae2074fa388ad6c35695033c8
 msgid ""
@@ -4307,6 +4408,7 @@ msgid "`scatter-two-steps.cwl`"
 msgstr "`scatter-two-steps.cwl`"
 
 #: ../../src/topics/workflows.md:497 122452b7d7114c3fa53cbea286703023
+#, fuzzy
 msgid ""
 "Here we have placed the scatter field under each step. This is fine for "
 "this example since it runs quickly, but if you're running many samples "
@@ -4323,6 +4425,18 @@ msgid ""
 "the first step must wait on `echo Hallo welt!`. You can see how this "
 "might not scale well."
 msgstr ""
+"ここでは、各ステップの下にscatterフィールドを配置しました。この例では素早く実"
+"行されるので問題ありませんが、より複雑なワークフローのために多くのサンプルを"
+"実行する場合は、別の方法を検討することをお勧めします。ここでは、各ステップで"
+"独立してscatterを実行していますが、2番目のステップはすべての言語を完了する最"
+"初のステップに依存していないため、scatter機能を効率的に使用することはできませ"
+"ん。第2ステップは第1ステップからの入力として配列を期待するので、何かをする前"
+"に第1ステップのすべてが終了するまで待つことになります。`echo Hello World!` "
+"の実行に1分、出力の`wc -c` に3分、`echo Hallo welt!` の実行に5分、出力の`wc` "
+"に3分かかると仮定してください。`echo Hello World!` "
+"が4分で終了しても、最初のステップは`echo Hallo welt!` を待つ必要があるので、"
+"実際には8分で終了することになります。このように、うまくスケールしないことがお"
+"わかりいただけると思います。"
 
 #: ../../src/topics/workflows.md:509 85dd63daf04546b78bdcb68c1d985fa9
 msgid ""
@@ -4524,6 +4638,7 @@ msgid "Maps"
 msgstr "マップ"
 
 #: ../../src/topics/yaml-guide.md:81 aedf8c4f615845ad91a7947217005d6e
+#, fuzzy
 msgid ""
 "When describing a tool or workflow with CWL, it is usually necessary to "
 "construct more complex, nested representations. Referred to as _maps_, "
@@ -4533,8 +4648,15 @@ msgid ""
 "the key to which they belong (the \"parent\"), and should be indented "
 "with two spaces (⇥tab characters are not allowed). For example:"
 msgstr ""
+"CWLでツールやワークフローを定義する場合、通常、より複雑で入れ子の表現を構築す"
+"る必要があります。_maps_ と呼ばれるこれらの階層構造は、キーの値として追加のキ"
+"ーと値のペアを提供することでYAMLで記述されます。これらのペア（「子」と呼ばれ"
+"ることもあります）は、属するキー（「親」）の下の新しい行に書かれ、2つのスペー"
+"スでインデントされます（⇥タブ文字は許可されていません）。例えば、次のようにな"
+"ります："
 
 #: ../../src/topics/yaml-guide.md:104 f0f1f414f74342a89065ba5ded8668e5
+#, fuzzy
 msgid ""
 "The YAML above illustrates how to build up complex nested object "
 "descriptions relatively quickly. The `inputs` map contains a single key, "
@@ -4546,6 +4668,14 @@ msgid ""
 " example YAML above, here is a graphical representation of the `inputs` "
 "object it describes."
 msgstr ""
+"上記のYAMLは、複雑なネストされたオブジェクトの記述を比較的素早く構築する方法"
+"を示しています。`inputs` マップは単一のキー、`example_flag` "
+"を含み、それ自体が2つのキー、`type` と`inputBinding` "
+"を含み、これらの子の1つ、`inputBinding` はさらに2つのキーと値のペア "
+"(`position` と`prefix`) を含みます。1つのキーに対して複数の値/キーバリューペ"
+"アを提供することについての詳細は、以下の[配列](#arrays)のセクションを参照して"
+"ください。上記のYAMLの例と比較するために、`inputs` "
+"オブジェクトを図式化したものを示します。"
 
 #: ../../src/topics/yaml-guide.md:127 965405e2a45a4cbb8f227bc8ceeb05df
 #, fuzzy
