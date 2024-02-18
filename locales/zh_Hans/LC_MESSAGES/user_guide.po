@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: Common Workflow Language User Guide\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-12-16 11:48+0100\n"
-"PO-Revision-Date: 2024-01-27 01:01+0000\n"
+"PO-Revision-Date: 2024-02-18 03:01+0000\n"
 "Last-Translator: Zoë Ma <zoe.ma@curii.com>\n"
 "Language-Team: Chinese (Simplified) <https://hosted.weblate.org/projects/"
 "commonwl/user-guide/zh_Hans/>\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 5.4-dev\n"
+"X-Generator: Weblate 5.4\n"
 "Generated-By: Babel 2.12.1\n"
 
 #: ../../LICENSE.md:2 a48279b2231348eea3f7a3b74a6362ac
@@ -3423,18 +3423,17 @@ msgstr ""
 "[SciCrunch][scicrunch] "
 "注册表。该信息门户网站可供查询、跟踪和一致引用科学资源。如果要将工具指定为 "
 "[`SoftwareRequirement`](https://w3id.org/cwl/CommandLineTool."
-"html#SoftwareRequirement)，请在 SciCrunch 上搜索该工具并使用在注册表中分配的 "
-"RRID。 （按照 [添加资源教程][scicrunch-add-tool] 将工具添加到 SciCrunch）。"
-"您可以使用此 RRID 在需求描述的 `specs` 字段中引用该工具（通过 [identifiers."
-"org][identifiers]）。其他不错的选择（按优先顺序）包括主要工具引用的 DOI "
-"和工具的 URL。"
+"html#SoftwareRequirement)，请在 SciCrunch "
+"上找到该工具并使用该注册表中为其分配的 RRID（如需将工具添加到 SciCrunch "
+"请参考 [添加资源教程][scicrunch-add-tool] ）。您可以使用此 RRID, 通过 "
+"[identifiers.org][identifiers] 在需求描述的 `specs` 字段中引用该工具。此外，"
+"加入主要工具参考文献的 DOI 以及工具的 URL, 也是合适的选择。"
 
 #: ../../src/topics/staging-input-files.md:1 d10c792550e8498c8ee384d3093da306
 msgid "Staging Input Files"
 msgstr "暂存输入文件"
 
 #: ../../src/topics/staging-input-files.md:3 ac2ef1fced5f4044861761a11c35e78a
-#, fuzzy
 msgid ""
 "Normally, input files are located in a read-only directory separate from "
 "the output directory.  This causes problems if the underlying tool "
@@ -3445,9 +3444,12 @@ msgid ""
 "a JavaScript expression to extract the base name of the input file from "
 "its leading directory path."
 msgstr ""
-"通常，输入文件位于独立于输出目录的只读目录中。 如果基础工具希望将其输出文件与输入文件一起写入同一目录中，则会导致问题。 使用 "
-"`InitialWorkDirRequirement` 将输入文件暂存到输出目录中。在此示例中，我们使用 JavaScript "
-"表达式从输入文件的前导目录路径中提取该文件的基本名称。"
+"通常，输入文件存放于只读目录中，而且位于输出目录之外。 然而，如果基础工具工作"
+"的惯例是将输出文件写到输入文件所在的同一目录，则会导致问题。 使用 "
+"[`InitialWorkDirRequirement`](https://w3id.org/cwl/CommandLineTool."
+"html#InitialWorkDirRequirement) "
+"可以实现在输出目录中暂存输入文件。在此示例中，我们使用 JavaScript 表达式，"
+"提取输入文件去除前导目录路径后的基本文件名 (base name)."
 
 #: ../../src/topics/staging-input-files.md:9 d8ca16f5321e486ebe8ea9f9752b3737
 msgid "`linkfile.cwl`"
@@ -3455,7 +3457,7 @@ msgstr "`linkfile.cwl`"
 
 #: ../../src/topics/troubleshooting.md:1 aa3eddcaa0684f86ba67aafcd57872e7
 msgid "Troubleshooting"
-msgstr "疑难解答"
+msgstr "故障排除"
 
 #: ../../src/topics/troubleshooting.md:3 3207f476afa04158bd26db39a16a2df5
 msgid ""
@@ -3463,10 +3465,12 @@ msgid ""
 " executing CWL. We focus on `cwltool` here but some of these techniques "
 "may apply to other CWL Runners."
 msgstr ""
+"本节将介绍执行 CWL 程序遇到问题时的排查、解决方法。此处我们重点介绍 `cwltool`"
+", 不过同样的技巧也可能适用于其他 CWL 运行程序。"
 
 #: ../../src/topics/troubleshooting.md:6 1d47f4ce04554cabb1ccf40a13ee42ec
 msgid "Run `cwltool` with `cachedir`"
-msgstr ""
+msgstr "制定 `cachedir`（缓存目录）运行 `cwltool`"
 
 #: ../../src/topics/troubleshooting.md:8 0c25602a83e441b48b536eb49568f2b6
 msgid ""
@@ -3476,6 +3480,9 @@ msgid ""
 "these files are created in a temporary directory but writing them to a "
 "separate directory makes accessing them easier."
 msgstr ""
+"运行工作流时，您可使用 `--cachedir` 选项令 `cwltool` 缓存中间文件（不属于输入"
+"输出文件，而是工作流运行过程中创建）。默认情况下这些文件创建于一个临时目录下"
+"，不过将其写入指定的独立目录可以更方便地访问。"
 
 #: ../../src/topics/troubleshooting.md:14 36ec60b80c714357a4274217274136ff
 msgid ""
@@ -3486,10 +3493,14 @@ msgid ""
 " where instead of executing the `rev` command it tries to execute `revv`,"
 " which fails."
 msgstr ""
+"以下示例 `troubleshooting-wf1.cwl` 中设有两个步骤 `step_a` 和 `step_b`. "
+"该工作流相当于执行命令 `echo \"Hello World\" | rev`, 将 \"Hello World\" "
+"反向输出为 \"dlroW olleH\". 但是第二个步骤 `step_b` **有一处错误**：本该执行 "
+"`rev` 命令，却成了 `revv`, 于是失败。"
 
 #: ../../src/topics/troubleshooting.md:20 6f34038054ac4f4fa0b0ad9cbc3ecdc7
 msgid "`troubleshooting-wf1.cwl`"
-msgstr ""
+msgstr "`troubleshooting-wf1.cwl`"
 
 #: ../../src/topics/troubleshooting.md:27 b777877c88024c9fb06a6614029ef8d6
 msgid ""
@@ -3497,6 +3508,8 @@ msgid ""
 "value (`cwltool` will create the directory for you if it does not exist "
 "already):"
 msgstr ""
+"我们来以 `/tmp/cachedir/` 为 `--cachedir` "
+"选项的值重新执行这个工作流（如果这个目录不存在，`cwltool` 会为你创建之）："
 
 #: ../../src/topics/troubleshooting.md:35 8654b7f2f4464d13be4b47729e1f07e5
 msgid ""
@@ -3505,6 +3518,9 @@ msgid ""
 "successfully and its output has been cached in your `cachedir` location. "
 "You can inspect the intermediate files created:"
 msgstr ""
+"该工作流处于 `permanentFail` 状态，因为 `step_b` 中执行不存在的命令 `revv` "
+"失败。`step_a` 得到了成功执行，其输出换存在了你通过 `cachedir` "
+"选项指定的位置。你可以检查它创建的中间文件："
 
 #: ../../src/topics/troubleshooting.md:44 04e80f7ce14d4d73bc5d290dcf01bcdb
 msgid ""
