@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: Common Workflow Language User Guide\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-12-16 11:48+0100\n"
-"PO-Revision-Date: 2024-02-18 03:01+0000\n"
+"PO-Revision-Date: 2024-02-24 01:02+0000\n"
 "Last-Translator: Manabu ISHII <manabu.ishii.rb@gmail.com>\n"
 "Language-Team: Japanese <https://hosted.weblate.org/projects/commonwl/"
 "user-guide/ja/>\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 5.4\n"
+"X-Generator: Weblate 5.5-dev\n"
 "Generated-By: Babel 2.12.1\n"
 
 #: ../../LICENSE.md:2 a48279b2231348eea3f7a3b74a6362ac
@@ -356,7 +356,8 @@ msgstr "<a name=\"recordinputs\"></a>"
 msgid ""
 "How do I describe dependent or exclusive input parameters(e.g. How do I "
 "use record inputs)?"
-msgstr ""
+msgstr "依存的または排他的な入力パラメータはどのように記述すればよいですか（例えば、"
+"レコード入力をどのように使用すればよいですか）？"
 
 #: ../../src/faq.md:270 949ce95c082f4a05891a55fee25d4873
 #, fuzzy
@@ -374,6 +375,7 @@ msgid "How do I set mutually exclusive parameters?"
 msgstr "相互に排他的なパラメータを設定する"
 
 #: ../../src/faq.md:324 a0687ce5c1f940538abc977cad83138f
+#, fuzzy
 msgid ""
 "To properly set fields in a record input type, you need to pass a "
 "dictionary to the input to properly set the parameters. This is done by "
@@ -381,6 +383,10 @@ msgid ""
 "field you want to set. The source field is set to indicate the input from"
 " the workflow to be used as the value."
 msgstr ""
+"レコード入力タイプのフィールドを適切に設定するには、入力に辞書を渡してパラメ"
+"ータを適切に設定する必要があります。これは、インラインJavaScriptを使用し、設"
+"定したいフィールドのキーを持つ辞書を返すことで実現します。ソースフィールドに"
+"は、値として使用するワークフローからの入力を示すものが設定されます。"
 
 #: ../../src/faq.md:342 12869ce2cdab4c858f3232c6158514f1
 #, fuzzy
@@ -460,9 +466,8 @@ msgid ""
 msgstr "入力識別子を変更することができない場合は、別のCWLパラメータリファレンス構文を使用することができます："
 
 #: ../../src/faq.md:442 fc407a9e8d8c4b699d9cd14b369343b5
-#, fuzzy
 msgid "How do I use CWL and cwltool with Singularity?"
-msgstr "CWLとcwltoolをSingularityで使う"
+msgstr "SingularityをCWLとcwltoolで使うにはどうしたらよいでしょうか？"
 
 #: ../../src/faq.md:445 239f5f81cef042b08fb8015c36b3ecad
 msgid ""
@@ -472,6 +477,10 @@ msgid ""
 "Directly specifying a Singularity format container is not part of the CWL"
 " standards."
 msgstr ""
+"CWL標準は、（オプションの）Docker形式のコンテナを中心に構築されています。リフ"
+"ァレンスランナーや他のいくつかのCWL実装は、Singularityエンジンを使用してそれ"
+"らのDockerフォーマットコンテナを実行することをサポートしています。Singularity"
+"フォーマットコンテナを直接指定することは、CWL標準ではありません。"
 
 #: ../../src/faq.md:450 61641314d82b43e982e54c64c73232c5
 msgid "How do I debug the JavaScript in my CWL tool?"
@@ -601,13 +610,13 @@ msgstr ""
 "ックスに使用される番号です。"
 
 #: ../../src/introduction/basic-concepts.md:33 72ae1fb763a34c41b1b06adcbe1522c3
-#, fuzzy
 msgid ""
 "The model used for the specification version is called Semantic "
 "Versioning. See the end of this section to [learn more](#learn-more) "
 "about it."
 msgstr ""
-"仕様のバージョンアップに使われるモデルは、セマンティックバージョニングを利用しています。それについて[もっと知りたい](#learn-"
+"仕様のバージョンアップに使われるモデルは、セマンティックバージョニングです。"
+"それについて[もっと知りたい](#learn-"
 "more)方は、このセクションの最後をご覧ください。"
 
 #: ../../src/introduction/basic-concepts.md:37 5aa7d3ee6cb048d888f1e1f49d0e08be
@@ -625,12 +634,14 @@ msgid ""
 msgstr "CWL仕様の実装とは、あるバージョンの仕様書で定義された内容に従って書かれたソフトウェアのことです。ただし、実装は仕様のすべての側面を実装するわけではありません。CWLの実装は、オープンソース・ライセンスと商用ライセンスの両方でライセンスされています。"
 
 #: ../../src/introduction/basic-concepts.md:44 c995e699ae2949219af252f9d802a43d
-#, fuzzy
 msgid ""
 "CWL is well suited for describing large-scale workflows in cluster, cloud"
 " and high performance computing environments where tasks are scheduled in"
 " parallel across many nodes."
-msgstr "CWLは、多くのノードでタスクが並列にスケジューリングされるクラスタ、クラウド、ハイパフォーマンスコンピューティング環境における大規模なワークフローを記述するのに適しています。"
+msgstr ""
+"CWLは、多くのノードでタスクが並列にスケジューリングされるクラスタ、クラウド、"
+"ハイパフォーマンスコンピューティング環境における大規模なワークフローを記述す"
+"るのに適しています。"
 
 #: ../../src/introduction/basic-concepts.md:51 09171f48a3d841b2acb6d803b2340c8e
 msgid "CWL specification, implementations, and other tools."
@@ -638,21 +649,20 @@ msgstr "CWL仕様、実装、その他ツール。"
 
 #: ../../src/introduction/basic-concepts.md:105
 #: 1c1647a3496c4251a3193f94ee4e78c8
-#, fuzzy
 msgid "Processes and Requirements"
 msgstr "Processes 及び Requirements"
 
 #: ../../src/introduction/basic-concepts.md:107
 #: 854633336f4d4fc394e62c53ce022c6b
-#, fuzzy
 msgid ""
 "A process is a computing unit that takes inputs and produces outputs. The"
 " behavior of a process can be affected by the inputs, requirements, and "
 "hints. There are four types of processes defined in the CWL specification"
 " {{ cwl_version }}:"
 msgstr ""
-"Processとは、入力を受けて出力を生成する計算のユニットです。Processの動作は、inputs、requirements、hintsに影響されることがあります。CWL仕様{{"
-" cwl_version }}では、4種類のProcessが定義されています："
+"Processとは、入力を受けて出力を生成する計算のユニットです。Processの動作は、i"
+"nputs、requirements、hintsに影響されることがあります。CWL仕様{{ cwl_version "
+"}}では、4種類のProcessが定義されています："
 
 #: ../../src/introduction/basic-concepts.md:112
 #: 142a847f11d7462f8bf77bfe789410ca
@@ -2940,7 +2950,6 @@ msgstr ""
 "切って1つの引数に連結することを指定することができます。"
 
 #: ../../src/topics/inputs.md:185 bb31c6784ea843ec88f185523cfa25df
-#, fuzzy
 msgid ""
 "Note that the arrays of inputs are specified inside square brackets `[]` "
 "in `array-inputs-job.yml`. Arrays can also be expressed over multiple "
@@ -2950,19 +2959,17 @@ msgid ""
 "guide.md#arrays). You can specify arrays of arrays, arrays of records, "
 "and other complex types."
 msgstr ""
-"なお、入力の配列は角括弧の中で指定します `array-inputs-job.yml`の`[]`です.配"
+"なお、入力の配列は大括弧の中で指定します `array-inputs-job.yml`の`[]`です.配"
 "列は複数行に渡って表現することも可能で、関連するキーで定義されていない配列の"
-"値は、先頭の`-` でマークされます。これは次のレッスンで実演され、[YAML Guide"
-"](yaml-guide.md#arrays) でより詳細に説明されています。配列の配列、レコードの"
-"配列、その他の複雑な型を指定することができます。"
+"値は、先頭の`-` でマークされます。これは次のレッスンで実際に確認し、[YAML "
+"Guide](yaml-guide.md#arrays) でより詳細に説明されています。配列の配列、レコー"
+"ドの配列、その他の複雑な型を指定することができます。"
 
 #: ../../src/topics/inputs.md:191 53817379078548b2aeb6195cae9cbab7
-#, fuzzy
 msgid "Inclusive and Exclusive Inputs"
 msgstr "包括的入力と排他的入力"
 
 #: ../../src/topics/inputs.md:193 e163c0cfe9694a85b2e42682f42970a5
-#, fuzzy
 msgid ""
 "Sometimes an underlying tool has several arguments that must be provided "
 "together (they are dependent) or several arguments that cannot be "
@@ -3012,7 +3019,6 @@ msgid ""
 msgstr "3番目の例では、`itemD` のみが提供されているので、コマンドラインに表示されます。"
 
 #: ../../src/topics/inputs.md:255 ffddeeda8f04408ba73f7a59a4618da5
-#, fuzzy
 msgid "Exclusive Input Parameters with Expressions"
 msgstr "式で入力パラメータを排他的に指定する"
 
@@ -3754,7 +3760,6 @@ msgstr ""
 "は、上記のコマンドの出力で確認できます。"
 
 #: ../../src/topics/troubleshooting.md:48 719917cb0fd849f5a328671df8726189
-#, fuzzy
 msgid ""
 "Now fix the typo so `step_b` executes `rev` (i.e. replace `revv` by `rev`"
 " in the `step_b`). After fixing the typo, when you execute `cwltool` with"
@@ -3769,10 +3774,9 @@ msgstr ""
 "を実行すると、`cwltool` の出力に、`step_a` "
 "の出力が事前にキャッシュされていることと、`step_b` "
 "の出力の新しいキャッシュ・エントリーがあることがわかります。また、`step_b` "
-"のステータスは、現在、成功であることに注目してください。"
+"のステータスは、今度は、成功であることに注目してください。"
 
 #: ../../src/topics/troubleshooting.md:59 2a9dbb3ad7564f5aa103349c45ee7925
-#, fuzzy
 msgid ""
 "In this example the workflow step `step_a` was not re-evaluated as it had"
 " been cached, and there was no change in its execution or output. "
@@ -3783,9 +3787,9 @@ msgid ""
 msgstr ""
 "この例では、ワークフローのステップ`step_a` はキャッシュされていたため再実行さ"
 "れず、その実行や出力に変化はありませんでした。さらに、`cwltool` "
-"は、実行ファイル名を修正した後、`step_b` を再実行する必要があることがわかりま"
-"した。このテクニックは、CWL文書のトラブルシューティングに役立つだけでなく、`c"
-"wltool` が不必要にステップを再実行するのを防ぐ方法としても有効です。"
+"は、実行したいコマンド名を修正した後、`step_b` を再実行する必要があることがわ"
+"かりました。このテクニックは、CWL文書のトラブルシューティングに役立つだけでな"
+"く、`cwltool` が不必要にステップを再実行するのを防ぐ方法としても有効です。"
 
 #: ../../src/topics/using-containers.md:1 7439fe097aa4459ba1e4c0e28fc59b9a
 msgid "Using Containers"
@@ -3817,12 +3821,12 @@ msgstr ""
 "できます。"
 
 #: ../../src/topics/using-containers.md:15 4b0f6cfc8a774c77bfbc99e568af2ece
-#, fuzzy
 msgid ""
 "One of the responsibilities of the CWL runner is to adjust the paths of "
 "input files to reflect the location where they appear inside the "
 "container."
-msgstr "CWLランナーの役割のひとつに、入力ファイルのパスをコンテナ内のでの配置位置に合わせて調整することがあります。"
+msgstr "CWLランナーの役割のひとつに、入力ファイルのパスをコンテナ内のでの配置位置に合"
+"わせることがあります。"
 
 #: ../../src/topics/using-containers.md:18 27c02a5d479a420eab7d14888d9fb288
 msgid ""
