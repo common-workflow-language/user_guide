@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: Common Workflow Language User Guide\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-12-16 11:48+0100\n"
-"PO-Revision-Date: 2024-02-24 01:02+0000\n"
+"PO-Revision-Date: 2024-02-29 05:02+0000\n"
 "Last-Translator: Manabu ISHII <manabu.ishii.rb@gmail.com>\n"
 "Language-Team: Japanese <https://hosted.weblate.org/projects/commonwl/"
 "user-guide/ja/>\n"
@@ -337,7 +337,8 @@ msgstr "<a name=\"enuminputs\"></a>"
 msgid ""
 "How do I specify an input that must come from a list of predefined values"
 " (i.e. How do I use enum inputs) ?"
-msgstr ""
+msgstr "どうやってあらかじめ定義された値のリストから入力を指定できますか(つまり、入力"
+"でenumを使うにはどうしたらよいですか)?"
 
 #: ../../src/faq.md:250 b1934a82553b4da3b7f981e576245dd8
 #, fuzzy
@@ -720,14 +721,17 @@ msgstr "Operationは、入力を受け、出力を出す抽象的なプロセス
 
 #: ../../src/introduction/basic-concepts.md:131
 #: 44aac23f302c4178accf7e431cfbb96c
-#, fuzzy
 msgid ""
 "The workflow is a process that contains steps. Steps can be other "
 "workflows (nested workflows), command-line tools, or expression tools. "
 "The inputs of a workflow can be passed to any of its steps, while the "
 "outputs produced by its steps can be used in the final output of the "
 "workflow."
-msgstr "Workflowは、ステップを含むプロセスである。ステップには、他のWorkflow（ネストされたWorkflow）、CommandLineTool、またはExpressionToolを使用することができます。Workflowの入力は、そのステップのいずれかに渡すことができ、ステップによって生成された出力は、Workflowの最終出力に使用することができます。"
+msgstr ""
+"Workflowは、ステップを含むプロセスです。ステップには、他のWorkflow（ネストさ"
+"れたWorkflow）、CommandLineTool、ExpressionToolを使用することができます。Work"
+"flowの入力は、そのステップのいずれかに渡すことができ、ステップによって生成さ"
+"れた出力は、Workflowの最終出力に使用することができます。"
 
 #: ../../src/introduction/basic-concepts.md:137
 #: 5afdb7aaf0bf4c1abf4c22cdbdd58be9
@@ -742,27 +746,31 @@ msgstr ""
 
 #: ../../src/introduction/basic-concepts.md:141
 #: 07c5789c59224ed78a3ecd03cfe872e9
-#, fuzzy
 msgid ""
 "[`InlineJavascriptWorkflow`](https://w3id.org/cwl/Workflow.html#InlineJavascriptRequirement)"
 " - enables JavaScript in expressions."
-msgstr "`InlineJavascriptWorkflow` - でJavaScriptを有効にします。"
+msgstr ""
+"[`InlineJavascriptWorkflow`](https://w3id.org/cwl/Workflow."
+"html#InlineJavascriptRequirement)  - でJavaScriptを有効にします。"
 
 #: ../../src/introduction/basic-concepts.md:142
 #: 6f9854ae1b884ad39f88d2f39d66cb98
-#, fuzzy
 msgid ""
 "[`SubworkflowFeatureRequirement`](https://w3id.org/cwl/Workflow.html#SubworkflowFeatureRequirement)"
 " - enables nested workflows."
-msgstr "`SubworkflowFeatureRequirement` - ネストしたワークフローを有効にします。"
+msgstr ""
+"[`SubworkflowFeatureRequirement`](https://w3id.org/cwl/Workflow."
+"html#SubworkflowFeatureRequirement)  - ネストしたワークフローを有効にします。"
 
 #: ../../src/introduction/basic-concepts.md:143
 #: 23fef6de073f4da18118e4d0512670fe
-#, fuzzy
 msgid ""
 "[`InitialWorkDirRequirement`](https://w3id.org/cwl/Workflow.html#InitialWorkDirRequirement)"
 " - controls staging files in the input directory."
-msgstr "`InitialWorkDirRequirement` - 入力ディレクトリのステージングファイルを制御します。"
+msgstr ""
+"[`InitialWorkDirRequirement`](https://w3id.org/cwl/Workflow."
+"html#InitialWorkDirRequirement)  - "
+"入力ディレクトリのステージングファイルを制御します。"
 
 #: ../../src/introduction/basic-concepts.md:145
 #: fb3762f91177401ea624d1e716d67ae6
@@ -1170,13 +1178,12 @@ msgstr ""
 "CodeとWebStormには、CWLとの統合を実現する拡張機能があり、カスタマイズされたシンタックスハイライトやより優れた自動補完などの機能が用意されています："
 
 #: ../../src/introduction/prerequisites.md:158 73c08e11e90d4c7f952307a1cdaa360b
-#, fuzzy
 msgid ""
 "Visual Studio Code with the Benten (CWL) plugin - "
 "<https://github.com/rabix/benten#install-vs-code-extension>"
 msgstr ""
-"Benten(弁天)（CWL）プラグインを使ったVisual Studio Code "
-"-<https://github.com/rabix/benten#install-vs-code-extension>"
+"Benten(弁天)（CWL）プラグインを使ったVisual Studio Code -<https://github.com/"
+"rabix/benten#install-vs-code-extension>"
 
 #: ../../src/introduction/prerequisites.md:159 a5b788252a924338963f0ed198fc22ca
 msgid ""
@@ -1197,7 +1204,6 @@ msgid "Docker"
 msgstr "Docker"
 
 #: ../../src/introduction/prerequisites.md:168 eff13997c1ce43d1ad2d7a4d927394fe
-#, fuzzy
 msgid ""
 "`cwltool` uses Docker to run tools, workflows, and workflow steps that "
 "specify a software container. Follow the instructions in the Docker "
@@ -1206,26 +1212,29 @@ msgid ""
 msgstr ""
 "`cwltool` は、ツール、ワークフロー、およびワークフロー "
 "ステップで指定されたソフトウェアコンテナをDockerを使用して実行します。Docker "
-"ドキュメントの指示に従って、お使いのオペレーティングシステム用にインストールしてください：<https://docs.docker.com/>."
+"ドキュメントの指示に従って、お使いのオペレーティングシステム用にインストール"
+"してください：<https://docs.docker.com/>."
 
 #: ../../src/introduction/prerequisites.md:172 2872503638624b7e904ae407375ac165
-#, fuzzy
 msgid ""
 "You do not need to know how to write and build Docker containers. In the "
 "rest of the user guide, we will use existing Docker images for running "
 "examples, and to clarify the differences between the execution models "
 "with and without containers."
-msgstr "Dockerコンテナの書き方や構築方法を知っておく必要はありません。このユーザーガイドの残りの部分では、実行例として既存のDockerイメージを使用し、コンテナのある実行モデルとない実行モデルの違いを明確にすることにします。"
+msgstr ""
+"Dockerコンテナの書き方や構築方法を知っておく必要はありません。このユーザーガ"
+"イドの残りの部分では、実行例として既存のDockerイメージを使用し、コンテナのあ"
+"る実行モデルとない実行モデルの違いを明確にすることにします。"
 
 #: ../../src/introduction/prerequisites.md:178 52ddcc9bc1554d809371fc0a503c40bc
-#, fuzzy
 msgid ""
 "`cwltool` supports running containers with Docker, Podman, udocker, and "
 "Singularity. You can also use alternative container registries for "
 "pulling images."
 msgstr ""
-"`cwltool` "
-"Docker、Podman、udocker、Singularityによるコンテナの実行をサポートしています。また、コンテナイメージを取得するために代替のコンテナレジストリを使用することもできます。"
+"`cwltool` は、Docker、Podman、udocker、Singularityによるコンテナの実行をサポ"
+"ートしています。また、コンテナイメージを取得するために代替のコンテナレジスト"
+"リを使用することもできます。"
 
 #: ../../src/introduction/prerequisites.md:185 f3bbfa17f31a459386461951de157dd2
 msgid ""
@@ -1973,7 +1982,6 @@ msgid "`custom-types.yml`"
 msgstr "`custom-types.yml`"
 
 #: ../../src/topics/custom-types.md:24 56b8912a1ea84f28adeb8beaf92ab563
-#, fuzzy
 msgid ""
 "___Note:___ To follow the example below, you need to [download the "
 "example input file](https://github.com/common-workflow-"
@@ -1982,7 +1990,7 @@ msgid ""
 "`wget`:"
 msgstr ""
 "___注意:___ 以下の例に行うには、`wget`などで*rich_sparse_otu_table."
-"biom*という入力ファイルを[ダウンロード](https://github.com/"
+"biom*という[入力ファイルをダウンロード](https://github.com/"
 "common-workflow-language/user_guide/blob/main/src/_includes/cwl/custom-types/"
 "rich_sparse_otu_table.biom)する必要があります："
 
@@ -2033,7 +2041,6 @@ msgstr ""
 " で定義されており、例として`custom-types.cwl` の定義にあるように、インポートされます："
 
 #: ../../src/topics/custom-types.md:76 dce43b138ba24b22bfa9fa5692a17009
-#, fuzzy
 msgid ""
 "Note also that the author of this CWL description has also included "
 "[`ResourceRequirement`](https://w3id.org/cwl/CommandLineTool.html#ResourceRequirement)s,"
@@ -2048,8 +2055,8 @@ msgstr ""
 "html#ResourceRequirement)も含まれていることに注意してください。これは、"
 "ツールが正常に動作するために必要な最小限の RAM の量とコアの数、さらにその定義"
 "に書かれたソフトウェアのバージョンの詳細やその他の有用なメタデータを指定する"
-"ものです。これらの機能については、このユーザーガイドの他の章で詳しく説明する"
-"。"
+"ものです。これらの機能については、このユーザーガイドの他の章で詳しく説明しま"
+"す。"
 
 #: ../../src/topics/environment-variables.md:1 19737f89f2994815969fa4a88346f49a
 msgid "Environment Variables"
@@ -2073,40 +2080,37 @@ msgid "Expression Tool"
 msgstr "Expression Tool"
 
 #: ../../src/topics/expression-tool.md:3 b267056eae704737af5aaada3ea7e6e2
-#, fuzzy
 msgid ""
 "An expression tool is a type of Process that can be run by itself or as a"
 " Workflow step. It executes a pure JavaScript expression. It is meant to "
 "be used as a way to isolate complex JavaScript expressions that need to "
 "operate on input data and produce some result as output."
 msgstr ""
-"ExpressionToolは、それ自体またはワークフローのステップとして実行することができるProcessの一種です。純粋な "
-"JavaScript 式を実行します。入力データを操作し、出力として結果を生成する必要がある複雑な JavaScript "
+"ExpressionToolは、それ自体またはワークフローのステップとして実行することがで"
+"きるProcessの一種です。純粋な JavaScript 式を実行します。入力データを操作し、"
+"出力として結果を生成する必要がある複雑な JavaScript "
 "式を分離する方法として使用されることを意図しています。"
 
 #: ../../src/topics/expression-tool.md:8 7e930144163e4d6e9f0bcaa764497ccf
-#, fuzzy
 msgid ""
 "Similar to the command-line tool it requires `inputs` and `outputs`. But "
 "instead of `baseCommand`, it requires an "
 "[`expression`](https://w3id.org/cwl/CommandLineTool.html#Expressions_(Optional))"
 " attribute."
 msgstr ""
-"CommandLinetToolと同様に、`inputs` と`outputs` が必要です。しかし、`baseCommand` "
-"の代わりに、`expression` 属性を必要とします。"
+"CommandLinetToolと同様に、`inputs` と`outputs` "
+"が必要です。しかし、`baseCommand` の代わりに、[`expression`](https://w3id."
+"org/cwl/CommandLineTool.html#Expressions_(Optional))  属性を必要とします。"
 
 #: ../../src/topics/expression-tool.md:17 f172488c19a94d688036197117d30b38
-#, fuzzy
 msgid "CWL expression tool."
 msgstr "CWL expression tool."
 
 #: ../../src/topics/expression-tool.md:48 ef978c951f1a4b7d9280d31367e5bae7
-#, fuzzy
 msgid "`uppercase.cwl`"
 msgstr "`uppercase.cwl`"
 
 #: ../../src/topics/expression-tool.md:67 0b63da31bc274b3cad798b07149592ab
-#, fuzzy
 msgid ""
 "We had to use an "
 "[`InlineJavascriptRequirement`](https://w3id.org/cwl/CommandLineTool.html#InlineJavascriptRequirement)"
@@ -2114,12 +2118,12 @@ msgid ""
 "means to tools using the expression tool that JavaScript is a "
 "requirement."
 msgstr ""
-"`InlineJavascriptRequirement` を使用する必要がありました。この式には`.toUpperCase()` で "
-"JavaScript "
-"の呼び出しが含まれているからです。これは、ExpressionToolを使用するツールにとって、JavaScriptが必要であることを意味します。"
+"この式には`.toUpperCase()` で JavaScript の呼び出しが含まれているため、 "
+"[`InlineJavascriptRequirement`](https://w3id.org/cwl/CommandLineTool."
+"html#InlineJavascriptRequirement) を使用する必要があります。これは、Expressio"
+"nToolを使用するツールにとって、JavaScriptが必要であることを意味します。"
 
 #: ../../src/topics/expressions.md:1 b0e567a985f748538552bdb486a47998
-#, fuzzy
 msgid "Expressions"
 msgstr "Expressions"
 
@@ -3203,12 +3207,14 @@ msgstr ""
 "を使ってプロットすることもできます："
 
 #: ../../src/topics/operations.md:24 61e4ae6ed18e41708270eb358cd55277
-#, fuzzy
 msgid ""
 "The output of the command above can be rendered with a Graphviz renderer."
 " The following image is rendered with the Sphinx `{graphviz}` directive "
 "(this user guide is built with Sphinx):"
-msgstr "上記のコマンドの出力は、Graphvizレンダラーでレンダリングすることができます。以下の画像は、SphinxのGraphvizディレクティブでレンダリングしたものです（このユーザーガイドはSphinxで構築されています）："
+msgstr ""
+"上記のコマンドの出力は、Graphvizを使ってレンダリングすることができます。以下"
+"の画像は、SphinxのGraphvizディレクティブでレンダリングしたものです（このユー"
+"ザーガイドはSphinxで構築されています）："
 
 #: ../../src/topics/operations.md:56 c07e3ff02ac14ffb89bcbd1b30f3f3fd
 #, fuzzy
@@ -3229,27 +3235,29 @@ msgid ""
 " CWL runner could, for instance, use abstract operations with ID's that "
 "correspond to steps executed by a different workflow engine."
 msgstr ""
-"CWL runnerは、操作を具体的なステップにバインドする方法を思いつくかもしれません。例えば、CWL "
-"runnerは、異なるワークフローエンジンで実行されるステップに対応するIDを持つ抽象的な operation を使用することができます。"
+"CWL runnerは、operations "
+"を具体的なステップにバインドする見出すかもしれません。例えば、CWL runnerは、"
+"ワークフローエンジンで実行される異なるステップに対応するIDを持つ抽象的な "
+"operation を使用することができます。"
 
 #: ../../src/topics/outputs.md:1 35e7bad6fdc04bcf9bbfbb2d8d42cfa5
 msgid "Outputs"
 msgstr "Outputs"
 
 #: ../../src/topics/outputs.md:3 6d912d40359c4d33a4f08abca83c00be
-#, fuzzy
 msgid "Returning Output Files"
 msgstr "出力ファイルの回収"
 
 #: ../../src/topics/outputs.md:5 a6bd3f9e23de488394958fe7b59a61e0
-#, fuzzy
 msgid ""
 "The `outputs` of a tool is a list of output parameters that should be "
 "returned after running the tool.  Each parameter has an `id` for the name"
 " of parameter, and `type` describing what types of values are valid for "
 "that parameter."
 msgstr ""
-"ツールの`outputs` は、ツールの実行後に返されるべき出力パラメータのリストです。  各パラメーターには、パラメーター名を示す`id` "
+"ツールの`outputs` "
+"は、ツールの実行後に返されるべき出力パラメータのリストです。  "
+"各パラメーターには、パラメーター名を示す`id` "
 "と、そのパラメーターに有効な値の型を示す`type` があります。"
 
 #: ../../src/topics/outputs.md:10 a229d8d983344e51a231edb5f667d84b
@@ -3343,7 +3351,6 @@ msgstr ""
 "次に、対応する出力パラメータに`type: stdout` を追加します。"
 
 #: ../../src/topics/outputs.md:75 cf2ef8dc7fda49308c09efe4f4ef5d7b
-#, fuzzy
 msgid "`stdout.cwl`"
 msgstr "`stdout.cwl`"
 
@@ -3358,7 +3365,6 @@ msgid ""
 msgstr "また、`glob` を使って、複数の出力ファイルを配列に取り込むことができます。"
 
 #: ../../src/topics/outputs.md:97 b34e30481fbd489d95fb7f8d5b5ab50c
-#, fuzzy
 msgid "`array-outputs.cwl`"
 msgstr "`array-outputs.cwl`"
 
@@ -3384,7 +3390,6 @@ msgid "Parameter References"
 msgstr "パラメータリファレンス"
 
 #: ../../src/topics/parameter-references.md:3 f5c0592ca28c46c2a89943f4f6f69a27
-#, fuzzy
 msgid ""
 "In a previous example, we extracted a file using the \"tar\" program. "
 "However, that example was very limited because it assumed that the file "
@@ -3399,12 +3404,12 @@ msgstr ""
 "前の例では、\"tar \"プログラムを使用してファイルを抽出しました"
 "。しかし、その例は非常に限定的なものでした。というのも、"
 "私たちが興味を持っているファイルは\"hello.txt\"と呼ばれ、これが`.cwl` ファイ"
-"ルに書き込まれていると仮定していたからです。これは最良の方法ではありません。"
-"なぜなら、\"hello.txt \"というファイル名は"
+"ルに直接書き込まれていると仮定していたからです。これは最良の方法ではありませ"
+"ん。なぜなら、\"hello.txt \"というファイル名は"
 "、使用する入力ファイルによって異なるか、または依存する可能性があるからです。"
 "  これを避けるために、ジョブパラメーターファイル(`.yml`)で必要なファイル名を"
 "指定することができます。この例では、入力パラメーターの値を他のフィールドから"
-"動的に参照し、抽出するファイル名を指定する方法を説明します。"
+"動的に参照して、抽出するファイル名を指定する方法を説明します。"
 
 #: ../../src/topics/parameter-references.md:13 50db8add9b1942d986e581b8d21c2ee4
 msgid "`tar-param.cwl`"
@@ -3415,11 +3420,11 @@ msgid "`tar-param-job.yml`"
 msgstr "`tar-param-job.yml`"
 
 #: ../../src/topics/parameter-references.md:25 9b1e2f1a23ea4fe2af97ef5108f33376
-#, fuzzy
 msgid ""
 "Create your input files and invoke `cwltool` with the tool description "
 "and the input object on the command line:"
-msgstr "入力ファイル(入力オブジェクト)を作成し、コマンドラインでツール定義と入力オブジェクトを指定して`cwltool` を呼び出します："
+msgstr "入力ファイル(入力オブジェクト)を作成し、コマンドラインでツール定義と入力オブ"
+"ジェクトを指定して`cwltool` を呼び出します："
 
 #: ../../src/topics/parameter-references.md:36 06926a516ae6432d96e3eaa62202cd86
 #, fuzzy
