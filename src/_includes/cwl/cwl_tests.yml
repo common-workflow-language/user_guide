@@ -1,5 +1,6 @@
 # Expressions
 - doc: Test for Expressions section
+  id: expressions
   job: expressions/empty.yml
   tool: expressions/expression.cwl
   output:
@@ -12,12 +13,14 @@
 
 # Inputs
 - doc: Test for Essential Inputs section
+  id: essential-inputs
   job: inputs/inp-job.yml
   tool: inputs/inp.cwl
   should_fail: false
   output: {}
 
 - doc: Test for Array Inputs section
+  id: array-inputs
   job: inputs/array-inputs-job.yml
   tool: inputs/array-inputs.cwl
   output:
@@ -29,11 +32,13 @@
       size: 60
 
 - doc: Test for Include and Exclusive Inputs section (1st example)
+  id: include-exclusive-inputs1
   job: inputs/record-job1.yml
   tool: inputs/record.cwl
   should_fail: true
 
 - doc: Test for Include and Exclusive Inputs section (2nd example)
+  id: include-exclusive-inputs2
   job: inputs/record-job2.yml
   tool: inputs/record.cwl
   output:
@@ -45,6 +50,7 @@
       size: 23
 
 - doc: Test for Include and Exclusive Inputs section (3rd example)
+  id: include-exclusive-inputs3
   job: inputs/record-job3.yml
   tool: inputs/record.cwl
   output:
@@ -57,6 +63,7 @@
 
 # Additional Arguments and Parameters
 - doc: Test for Additional Arguments and Parameters section
+  id: additional-arguments-and-parameters
   job: additional-arguments-and-parameters/arguments-job.yml
   tool: additional-arguments-and-parameters/arguments.cwl
   output:
@@ -69,6 +76,7 @@
 
 # Parameter References
 - doc: Test for Parameter References section
+  id: parameter-references
   job: parameter-references/tar-param-job.yml
   tool: parameter-references/tar-param.cwl
   output:
@@ -81,6 +89,7 @@
 
 # Outputs
 - doc: Test for Outputs section
+  id: outputs-section
   job: outputs/tar-job.yml
   tool: outputs/tar.cwl
   output:
@@ -92,6 +101,7 @@
       size: 0
 
 - doc: Test for Outputs, Capturing Standard Output section
+  id: outputs-capturing-stdout
   job: outputs/echo-job.yml
   tool: outputs/stdout.cwl
   output:
@@ -103,6 +113,7 @@
       size: 13
 
 - doc: Test for Outputs, Array Outputs section
+  id: outputs-array-outputs
   job: outputs/array-outputs-job.yml
   tool: outputs/array-outputs.cwl
   output:
@@ -121,6 +132,7 @@
 # Custom Types
 # NOTE: The checksum is always changed for every execution
 - doc: Test for Custom Types section
+  id: custom-types
   job: custom-types/custom-types.yml
   tool: custom-types/custom-types.cwl
   output:
@@ -128,10 +140,11 @@
       class: File
       basename: rich_sparse_otu_table.hdf5
       location: Any
-      size: 46992
+      size: 46936
 
 # Workflows
 - doc: Test for Workflows section
+  id: workflows-1st-workflow
   job: workflows/1st-workflow-job.yml
   tool: workflows/1st-workflow.cwl
   output:
@@ -144,6 +157,7 @@
 
 - doc: Test for Workflows, Nested Workflows section
   tool: workflows/nestedworkflows.cwl
+  id: workflows-nestedworkflows
   output:
     classout:
       class: File
@@ -164,6 +178,7 @@
 
 # Environment Variables
 - doc: Test for Environment Variables section
+  id: environment-variables
   job: environment-variables/echo-job.yml
   tool: environment-variables/env.cwl
   output:
@@ -174,6 +189,7 @@
 
 # Using Containers
 - doc: Test for Using Containers section
+  id: using-containers
   job: using-containers/docker-job.yml
   tool: using-containers/docker.cwl
   output:
@@ -186,6 +202,7 @@
 
 # Creating files at runtime
 - doc: Test for Creating files at runtime section
+  id: creating-files-at-runtime
   job: creating-files-at-runtime/echo-job.yml
   tool: creating-files-at-runtime/createfile.cwl
   output:
@@ -198,6 +215,7 @@
 
 # Staging input files
 - doc: Test for Staging input files section
+  id: staging-input-files
   job: staging-input-files/arguments-job.yml
   tool: staging-input-files/linkfile.cwl
   output:
@@ -211,6 +229,7 @@
 # File formats
 # NOTE: The checksum and size is always changed for every execution
 - doc: Test for File formats section
+  id: file-formats
   job: file-formats/sample.yml
   tool: file-formats/metadata_example.cwl
   output:
@@ -222,6 +241,7 @@
 # Metadata and authorship
 # NOTE: The checksum and size is always changed for every executions
 - doc: Test for Metadata and authorship section (1st example)
+  id: metadata-and-authorship
   job: metadata-and-authorship/sample.yml
   tool: metadata-and-authorship/metadata_example2.cwl
   output:
@@ -231,6 +251,7 @@
       location: Any
 
 - doc: Test for Metadata and authorship section (extended example)
+  id: metadata-and-authorship-extended
   job: metadata-and-authorship/sample.yml
   tool: metadata-and-authorship/metadata_example3.cwl
   output:
