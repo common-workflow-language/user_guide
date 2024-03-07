@@ -140,7 +140,7 @@
       class: File
       basename: rich_sparse_otu_table.hdf5
       location: Any
-      size: 46992
+      size: 46936
 
 # Workflows
 - doc: Test for Workflows section
