@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: Common Workflow Language User Guide\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-12-16 11:48+0100\n"
-"PO-Revision-Date: 2024-02-29 05:02+0000\n"
+"PO-Revision-Date: 2024-03-07 01:01+0000\n"
 "Last-Translator: Manabu ISHII <manabu.ishii.rb@gmail.com>\n"
 "Language-Team: Japanese <https://hosted.weblate.org/projects/commonwl/"
 "user-guide/ja/>\n"
@@ -938,15 +938,15 @@ msgid "CWL Implementations"
 msgstr "CWL実装"
 
 #: ../../src/introduction/prerequisites.md:14 ff74d48407464c4b9d451fa419137144
-#, fuzzy
 msgid ""
 "There are many implementations of the CWL standards. Some are complete "
 "CWL runners, while others could be plug-ins or extensions to workflow "
 "engines. We have a better explanation in the [Implementations](basic-"
 "concepts.md#implementations) section."
 msgstr ""
-"CWL規格の実装は数多く存在します。あるものは完全なCWL実装であり、他のものはワークフローエンジンのプラグインや拡張になり得ます。[実装"
-"](basic-concepts.md#implementations)のセクションでより詳しいをしています。"
+"CWL標準規格の実装は数多く存在します。あるものは完全なCWL実装であり、他のもの"
+"はワークフローエンジンのプラグインや拡を含むことがあります。[実装](basic-"
+"concepts.md#implementations)のセクションでより詳しい説明をしています。"
 
 #: ../../src/introduction/prerequisites.md:19 eb98aa9c71d746a69e9610996ffc5b47
 msgid "Operating System"
@@ -971,7 +971,6 @@ msgid "Windows"
 msgstr "Windows"
 
 #: ../../src/introduction/prerequisites.md:29 aeeb990abbbd42cca122c342054be29c
-#, fuzzy
 msgid ""
 "If you are using Windows, you will have to install the Windows Subsystem "
 "for Linux 2 as documented in the [`cwltool` documentation for Microsoft "
@@ -979,14 +978,13 @@ msgid ""
 "language/cwltool/blob/main/README.rst#ms-windows-users). Your operating "
 "system also needs internet access and a recent version of Python (3.6+)."
 msgstr ""
-"Windowsを使用している場合は、[`cwltool` documentation for Microsoft Windows "
-"users](https://github.com/common-workflow-language/cwltool/blob/main/README."
+"Windowsを使用している場合は、[Microsoft Windows ユーザのための`cwltool` "
+"文書](https://github.com/common-workflow-language/cwltool/blob/main/README."
 "rst#ms-windows-users)に記載されているように、Windows Subsystem for Linux 2を"
 "インストールする必要があります。インターネットアクセスとPythonの最新バージョ"
 "ン(3.6+)も必要です。"
 
 #: ../../src/introduction/prerequisites.md:34 21d1f29fb15745c480194eae6acdd031
-#, fuzzy
 msgid "CWL Runner"
 msgstr "CWL Runner"
 
@@ -3170,20 +3168,19 @@ msgid "`metadata_example3.cwl`"
 msgstr "`metadata_example3.cwl`"
 
 #: ../../src/topics/operations.md:1 a79974b2f4534fcd8c7a04401e8a5556
-#, fuzzy
 msgid "Operations"
 msgstr "Operations"
 
 #: ../../src/topics/operations.md:3 b6507c8e1625476b97708423acb4fd0e
-#, fuzzy
 msgid ""
 "An Operation is a type of CWL process, just like a workflow, a command-"
 "line tool, or an expression tool. It is a step of a workflow that "
 "specifies inputs and outputs, but it does not provide enough information "
 "to be executed."
 msgstr ""
-"Operationは、Workflow、CommandLineTool、ExpressionToolと同様に、CWL "
-"Processの一種です。Workflowのステップで、入力と出力を指定しますが、実行するのに十分な情報を提供しません。"
+"Operationは、Workflow、CommandLineTool、ExpressionToolと同様に、CWL Processの"
+"一種です。Workflowのステップで、入力と出力を指定しますが、実行するのに十分な"
+"情報を提供しません。"
 
 #: ../../src/topics/operations.md:7 047b09455db64524a71c47ab5192039f
 msgid ""
@@ -3196,15 +3193,14 @@ msgid "`operations.cwl`"
 msgstr "`operations.cwl`"
 
 #: ../../src/topics/operations.md:16 d21e9444182d4e27bae934db4573ae99
-#, fuzzy
 msgid ""
 "The `uppercase` step of the workflow is an operation. It can appear where"
 " a command line tool or an expression is expected. You can also plot it "
 "with the CWL Viewer or `cwltool`:"
 msgstr ""
 "ワークフローの`uppercase` ステップは Operation "
-"です。CommandLineToolやExpressionToolのように使用することができます。また、CWL Viewerや`cwltool` "
-"を使ってプロットすることもできます："
+"です。CommandLineToolやExpressionToolのように使用することができます。また、"
+"CWL Viewerや`cwltool` を使って可視化することもできます："
 
 #: ../../src/topics/operations.md:24 61e4ae6ed18e41708270eb358cd55277
 msgid ""
@@ -3217,11 +3213,11 @@ msgstr ""
 "ザーガイドはSphinxで構築されています）："
 
 #: ../../src/topics/operations.md:56 c07e3ff02ac14ffb89bcbd1b30f3f3fd
-#, fuzzy
 msgid ""
 "The operation file will fail to run with `cwltool` because `cwltool` "
 "lacks the necessary information to execute it:"
-msgstr "操作ファイルを `cwltool` で実行しようとすると、`cwltool` "
+msgstr ""
+"operation ファイルを `cwltool` で実行しようとすると、`cwltool` "
 "が実行に必要な情報を持っていないため、失敗します："
 
 #: ../../src/topics/operations.md:59 e184470550e645f6b9ce658af7e65ecf
@@ -4484,7 +4480,6 @@ msgstr ""
 "workflows)で、ワークフロー全体を別のワークフローの1ステップにすることができることを思い出しましょう！2ステップのワークフローを1ステップのサブワークフローに変換してみましょう："
 
 #: ../../src/topics/workflows.md:513 fac138ba275745898b763a7d719a8235
-#, fuzzy
 msgid "`scatter-nested-workflow.cwl`"
 msgstr "`scatter-nested-workflow.cwl`"
 
@@ -4496,28 +4491,29 @@ msgid ""
 msgstr "今、scatter は1つのステップに作用しますが、そのステップは2つのステップで構成されているので、各ステップは並行して実行されます。"
 
 #: ../../src/topics/workflows.md:522 b0bf01dad1234a1db3c87b10953e42ef
-#, fuzzy
 msgid "Conditional Workflows"
 msgstr "条件分岐ワークフロー"
 
 #: ../../src/topics/workflows.md:524 8d933ed1ec6e408589f781e3a425b869
-#, fuzzy
 msgid ""
 "This workflow contains a conditional step and is executed based on the "
 "input. This allows workflows to skip additional steps based on input "
 "parameters given at the start of the program or by previous steps."
-msgstr "このワークフローは、条件付きステップを含み、入力に基づき実行されます。これにより、ワークフローは、プログラムの開始時に与えられた入力パラメータや以前のステップによって、追加のステップをスキップすることができます。"
+msgstr ""
+"このワークフローは、条件付きステップを含み、入力に基づき実行されます。これに"
+"より、ワークフローは、プログラムの開始時に与えられた入力パラメータや以前のス"
+"テップによって、追加のステップをスキップすることができます。"
 
 #: ../../src/topics/workflows.md:527 9ac7b4f71621411da9a4ca3bc277dcb0
 msgid "`conditional-workflow.cwl`"
 msgstr "`conditional-workflow.cwl`"
 
 #: ../../src/topics/workflows.md:566 4a4a2b2b99b44d449adb246cebce0a26
-#, fuzzy
 msgid ""
 "The first thing you'll notice is that this workflow is only compatible "
 "for version 1.2 or greater of the CWL standards."
-msgstr "まず、このワークフローはCWL仕様のバージョン1.2以降でしか対応していないことがわかります。"
+msgstr "まず、このワークフローはCWL仕様のバージョン1."
+"2以降から対応しているがわかります。"
 
 #: ../../src/topics/workflows.md:573 4742fe09a4264fb8be6f092519de5d72
 #, fuzzy

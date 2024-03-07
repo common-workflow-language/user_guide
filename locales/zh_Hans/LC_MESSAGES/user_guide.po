@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: Common Workflow Language User Guide\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-12-16 11:48+0100\n"
-"PO-Revision-Date: 2024-02-18 03:01+0000\n"
+"PO-Revision-Date: 2024-03-07 01:01+0000\n"
 "Last-Translator: Zoë Ma <zoe.ma@curii.com>\n"
 "Language-Team: Chinese (Simplified) <https://hosted.weblate.org/projects/"
 "commonwl/user-guide/zh_Hans/>\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 5.4\n"
+"X-Generator: Weblate 5.5-dev\n"
 "Generated-By: Babel 2.12.1\n"
 
 #: ../../LICENSE.md:2 a48279b2231348eea3f7a3b74a6362ac
@@ -3529,6 +3529,9 @@ msgid ""
 "executed by the workflow. And the `step_a` output file `stdout.txt` is "
 "visible in the output of the command above."
 msgstr ""
+"工作流中的每一步骤均有唯一的 ID（即形如散列/哈希值的一长串字符）。文件 "
+"`${HASH}.status` 包含工作流各步骤的执行状态。在上例命令的输出结果中可以看到 "
+"`step_a` 这一步骤的输出文件 `stdout.txt`."
 
 #: ../../src/topics/troubleshooting.md:48 719917cb0fd849f5a328671df8726189
 msgid ""
@@ -3539,6 +3542,10 @@ msgid ""
 "new cache entry for the output of `step_b`. Also note that the status of "
 "`step_b` is now of success."
 msgstr ""
+"现在，将 `step_b` 中的错误（即 `revv`）改正过来，使之执行 `rev` 命令。然后，"
+"用与之前相同的命令行选项执行 `cwltool`. 注意这时 `cwltool` 的输出包含 "
+"`step_a` 经缓存的输出，而 `step_b` 的输出有了新的缓存项。同时，可以注意到 "
+"`step_b` 的状态已经是“成功”。"
 
 #: ../../src/topics/troubleshooting.md:59 2a9dbb3ad7564f5aa103349c45ee7925
 msgid ""
@@ -3549,14 +3556,18 @@ msgid ""
 " troubleshooting your CWL documents and also as a way to prevent "
 "`cwltool` to re-evaluate steps unnecessarily."
 msgstr ""
+"此例子中，工作流步骤 `step_a` 并没有得到重新计算，因为它仍在缓存中，而且其执"
+"行或输出都没有改变。另外，`cwltool` 能够认识到我们修改了 `step_b` "
+"中可执行文件的名称后，它必须重新计算这一步骤。这一技巧十分适用于排查 CWL "
+"程序中的错误时，而且可以避免 `cwltool` 无谓地重复运算每一步骤。"
 
 #: ../../src/topics/using-containers.md:1 7439fe097aa4459ba1e4c0e28fc59b9a
 msgid "Using Containers"
-msgstr ""
+msgstr "使用容器"
 
 #: ../../src/topics/using-containers.md:3 eff5c6ac1cad44f9862585daf0a91298
 msgid "Running Tools Inside Docker"
-msgstr ""
+msgstr "在 Docker 中运行工具"
 
 #: ../../src/topics/using-containers.md:5 50d1a644bc8c49f78c453e4e0f3c07c8
 msgid ""
@@ -3570,19 +3581,25 @@ msgid ""
 " management while avoiding the complexity of invoking and managing Docker"
 " containers."
 msgstr ""
+"[Docker][docker] 容器可以为软件及其依赖的组件提供确知可正常使用的完整运行环境"
+"，进而简化软件的安装。不过，容器与宿主系统是刻意隔离开来的。因此，要在 "
+"Docker 容器中运行某个工具，需进行额外操作，以使输入文件在容器内可用，而输出文"
+"件可从容器中提取。CWL 运行程序可以自动完成这个任务，从而帮助您使用 Docker "
+"简化对软件的管理，同时避免调用和管理 Docker 容器等复杂操作。"
 
 #: ../../src/topics/using-containers.md:15 4b0f6cfc8a774c77bfbc99e568af2ece
 msgid ""
 "One of the responsibilities of the CWL runner is to adjust the paths of "
 "input files to reflect the location where they appear inside the "
 "container."
-msgstr ""
+msgstr "CWL 运行程序的任务之一，就是调整输入文件的路径，以反映它们在容器内的位置。"
 
 #: ../../src/topics/using-containers.md:18 27c02a5d479a420eab7d14888d9fb288
 msgid ""
 "This example runs a simple Node.js script inside a Docker container which"
 " will then print \"Hello World\" to the standard output."
-msgstr ""
+msgstr "本示例在 Docker 容器中运行一个简单的 Node.js 脚本，将 \"Hello World\" "
+"写入标准输出。"
 
 #: ../../src/topics/using-containers.md:21 1a62a93ab20b4f2ca1e13ded3a767dc5
 msgid "`docker.cwl`"
@@ -3600,6 +3617,9 @@ msgid ""
 "[`dockerRequirement`](https://w3id.org/cwl/CommandLineTool.html#DockerRequirement)"
 " section."
 msgstr ""
+"运行这个例子前，我们先来看看代码各部分都是为了做什么。这里，多数内容已在此前"
+"的章节中讲授，而算得上新内容的就是 [`dockerRequirement`](https://w3id.org/"
+"cwl/CommandLineTool.html#DockerRequirement) 这一段代码。"
 
 #: ../../src/topics/using-containers.md:44 1f02618ab6254459ae71f72844e3cc18
 msgid ""
@@ -3613,6 +3633,14 @@ msgid ""
 "best practices when using containers for reproducible research). In this "
 "case we have used a container called `node:slim`."
 msgstr ""
+"`baseCommand: node` 告诉 CWL, 我们打算为了这个命令使用 Node.js 运行环境，"
+"意在运行 JavaScript 程序。然后，我们需要给出一点“提示” (`hints`), "
+"以便找到我们想要的容器。这个例子里，我们只需要在 `DockerRequirements` "
+"下列出我们 Docker 容器的需求。`dockerPull:` 参数应赋予的值，就是您假如使用 `"
+"docker pull` 命令的话应该给出的参数，也就是容器映像 (image) 的名称（"
+"您可进一步标明容器的标签即 tag, "
+"用容器从事可复现研究工作时这是个好习惯）。这里，我们使用的容器名为 "
+"`node:slim`."
 
 #: ../../src/topics/using-containers.md:52 54cade4978ec463bbb5c0d8c08e27adb
 msgid ""
