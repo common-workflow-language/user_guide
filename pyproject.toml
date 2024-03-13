@@ -1,0 +1,69 @@
+[build-system]
+requires = ["setuptools>=61.2"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "cwl-user-guide"
+description = "CWL User Guide"
+license = {text = "GPL"}
+classifiers = [
+    "Environment :: Console",
+    "Environment :: Web Environment",
+    "Intended Audience :: Developers",
+    "Intended Audience :: System Administrators",
+    "Intended Audience :: Science/Research",
+    "License :: OSI Approved :: GNU General Public License v3 (GPLv3)",
+    "Operating System :: POSIX :: Linux",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3.6",
+    "Programming Language :: Python :: 3.7",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3 :: Only",
+    "Programming Language :: Python :: Implementation :: CPython",
+]
+requires-python = ">=3.6"
+dependencies = [
+    "cwltool",
+    "cwlref-runner",
+    "cwl-utils==0.*",
+    "myst-parser==2.*",
+    "pydata-sphinx-theme==0.*",
+    "sphinx==7.*",
+    "sphinx-reredirects==0.1.*",
+    "sphinxcontrib-runcmd==0.2.*",
+    "sphinx-favicon",
+    "python-Levenshtein",
+    "sphinx-intl",
+]
+dynamic = ["version"]
+
+[project.readme]
+file = "README.md"
+content-type = "text/markdown"
+
+[project.urls]
+Homepage = "https://www.commonwl.org/user_guide/"
+Documentation = "https://www.commonwl.org/user_guide/"
+Source = "https://github.com/common-workflow-language/user_guide"
+Tracker = "https://github.com/common-workflow-language/user_guide/issues"
+
+[project.optional-dependencies]
+test = [
+    "cwltest==2.*",
+    "cwltool==3.1.*",
+]
+watch = ["sphinx-autobuild==2024.2.*"]
+rtd = ["udocker"]
+all = ["cwl-user-guide[test,watch,rtd]"]
+
+[tool.setuptools]
+include-package-data = true
+platforms = ["any"]
+
+[tool.setuptools.packages.find]
+include = ["cwl*"]
+namespaces = true
+
+[tool.setuptools.dynamic]
+version = {attr = "cwl.doc.__version__"}
