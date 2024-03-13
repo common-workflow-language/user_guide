@@ -6,7 +6,7 @@ This is a list of tutorials provided by the CWL community. Use the `Edit this pa
 
 ## Beginner Tutorials
 
-- [Introduction to Workflows with Common Workflow Language: For Contributors.](https://carpentries-incubator.github.io/cwl-novice-tutorial/)
+- [Introduction to Workflows with Common Workflow Language: For novices.](https://carpentries-incubator.github.io/cwl-novice-tutorial/)
 
 ## Advanced Tutorials
 
