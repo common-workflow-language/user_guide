@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: Common Workflow Language User Guide\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-12-16 11:48+0100\n"
-"PO-Revision-Date: 2024-03-07 01:01+0000\n"
+"PO-Revision-Date: 2024-03-13 02:01+0000\n"
 "Last-Translator: Manabu ISHII <manabu.ishii.rb@gmail.com>\n"
 "Language-Team: Japanese <https://hosted.weblate.org/projects/commonwl/"
 "user-guide/ja/>\n"
@@ -989,16 +989,17 @@ msgid "CWL Runner"
 msgstr "CWL Runner"
 
 #: ../../src/introduction/prerequisites.md:39 89f0bf6ff8544a6d87114085be8e0bb6
-#, fuzzy
 msgid ""
 "The first thing you will need for running CWL workflows is a CWL runner. "
 "`cwltool` is a Python Open Source project maintained by the CWL "
 "community. It is also the CWL reference runner, which means it must "
 "support everything in the current CWL specification, {{ cwl_version }}."
 msgstr ""
-"CWL ワークフローを実行するために最初に必要なものは、CWL runnerです。`cwltool` は、CWL "
-"コミュニティによって維持されている Python オープンソース・プロジェクトです。これはCWL reference runner(訳注: "
-"CWLの参照実装)でもあり、現在のCWL仕様{{ cwl_version }}のすべてをサポートしなければならないことを意味します。"
+"CWL ワークフローを実行するために最初に必要なものは、CWL runnerです。`cwltool`"
+" は、CWL コミュニティによって維持されている Python "
+"オープンソース・プロジェクトです。これはCWL reference runner(訳注: "
+"CWLの参照実装)でもあり、`cwltool`は現在のCWL仕様{{ cwl_version "
+"}}のすべてをサポートしなければならないことを意味します。"
 
 #: ../../src/introduction/prerequisites.md:44 068f09d4d66547448693f7b9dadef497
 msgid ""
@@ -1009,15 +1010,15 @@ msgstr ""
 "`conda` のような仮想環境を使用することを推奨します。"
 
 #: ../../src/introduction/prerequisites.md:48 1edf8b8438334ae29dc406dbfd711228
-#, fuzzy
 msgid ""
 "Visit the `cwltool` "
 "[documentation](https://cwltool.readthedocs.io/en/latest/#install) for "
 "details on installing `cwltool`."
 msgstr ""
-"`cwltool` を`apt` と`conda` とともにインストールする他の方法については、`cwltool` "
-"[documentation](https://github.com/common-workflow-"
-"language/cwltool#install) を参照してください。"
+"`cwltool` を`apt` と`conda` "
+"とともにインストールする他の方法については、`cwltool` "
+"[ドキュメント](https://github.com/common-workflow-language/cwltool#install) "
+"を参照してください。"
 
 #: ../../src/introduction/prerequisites.md:52 5e300141ce43435f9437507374987213
 msgid "Let's use a simple CWL tool description `true.cwl` with `cwltool`."
@@ -1054,7 +1055,6 @@ msgid "Running `true.cwl` with `cwltool`."
 msgstr "`cwltool` を使って `true.cwl` を実行します。"
 
 #: ../../src/introduction/prerequisites.md:78 d2dc809318be49cc996d892e93ad84ac
-#, fuzzy
 msgid "Generic ``cwl-runner`` alias"
 msgstr "一般的な ``cwl-runner`` エイリアス"
 
@@ -1074,13 +1074,13 @@ msgstr ""
 "は、システム管理者またはユーザーによってインストールされ、好みのCWL実装を指し示す。これは、複数のCWLランナーがある環境では便利です。"
 
 #: ../../src/introduction/prerequisites.md:88 6dd6aa836099469381fb564d63b84f3d
-#, fuzzy
 msgid ""
 "The CWL community publishes a Python package with the name `cwlref-"
 "runner` that installs an alias for `cwltool` under the name `cwl-runner`."
 msgstr ""
-"CWLコミュニティは、`cwlref-runner` という名前のPythonパッケージを公開しており、`cwltool` のエイリアスを"
-"`cwl-runner` という名前でインストールします"
+"CWLコミュニティは、`cwlref-runner` "
+"という名前のPythonパッケージを公開しており、`cwltool` のエイリアスを`cwl-"
+"runner` という名前でインストールします"
 
 #: ../../src/introduction/prerequisites.md:91 cc1a9b95508e44a1bf08ae75d990c301
 msgid "Installing `cwl-runner` alias for cwltool with `pip`."
@@ -1148,10 +1148,12 @@ msgid ""
 " using a hard-coded location, since `/usr/bin/env [executable]` looks for"
 " the `[executable]` program in the system `PATH`,"
 msgstr ""
-"*shebang* は、スクリプトの冒頭の2文字列`#!` "
-"のことです。スクリプトが実行可能な場合、オペレーティングシステムは、shebangの後に指定された実行可能ファイルを使用してスクリプトを実行します。`/usr/bin/env"
-" <executable>` は` <executable>` プログラムをシステムの`PATH` "
-"で探すので、ハードコードされた場所を使うよりも`/usr/bin/env <executable>` を使うことが良い習慣と考えられています"
+"*shebang* は、スクリプトの冒頭の2文字列`#!` のことです。スクリプトが実行可能"
+"な場合、オペレーティングシステムは、shebangの後に指定された実行可能ファイルを"
+"使用してスクリプトを実行します。`/usr/bin/env <executable>` は` <executable>`"
+" プログラムを設定されている環境変数`PATH` "
+"の中で探すので、ハードコードされた場所を使うよりも`/usr/bin/env <executable>`"
+" を使うことが良い習慣と考えられています"
 
 #: ../../src/introduction/prerequisites.md:148 854736eef2ac4b63b187a4cea9660ae4
 msgid "Text Editor"
@@ -1249,12 +1251,14 @@ msgid "Quick Start"
 msgstr "クイックスタート"
 
 #: ../../src/introduction/quick-start.md:3 733db5702c774f32b8c91d13f74f3720
-#, fuzzy
 msgid ""
 "This section will show you a brief overview of what CWL is, and where you"
 " can learn more about it. No previous knowledge of CWL is required, but "
 "you must be comfortable following instructions for the command-line."
-msgstr "このセクションでは、CWLとは何か、またCWLについてもっと詳しく知ることができる場所について、簡単に紹介します。CWLに関する予備知識は必要ありませんが、コマンドラインを使用することに慣れていると良いです。"
+msgstr ""
+"このセクションでは、CWLとは何か、またCWLについてもっと詳しく知ることができる"
+"場所について、簡単に紹介します。CWLに関する予備知識は必要ありませんが、コマン"
+"ドラインを使用することに慣れていると良いです。"
 
 #: ../../src/introduction/quick-start.md:7 0b164074dd0849c3b2c8d2f78ea99e95
 msgid "“Hello World”"
@@ -1860,15 +1864,14 @@ msgstr "`createfile.cwl`"
 
 #: ../../src/topics/creating-files-at-runtime.md:15
 #: 252f8e897b0942a8be098481890005f3
-#, fuzzy
 msgid ""
 "Any [expressions](../topics/expressions.md) like `$(inputs.message)` are "
 "expanded by the CWL engine before creating the file. Here, insert the "
 "value at the input `message`."
 msgstr ""
-"`$(inputs.message)` のような "
-"[Expressions](../topics/expressions.md)は、ファイルを作成する前にCWLエンジンによって展開されます。ここでは、入力パラメータ`message`"
-" に値を挿入します。"
+"`$(inputs.message)` のような [Expressions](../topics/expressions.md)は、ファ"
+"イルを作成する前にCWL実行エンジンによって展開されます。ここでは、入力パラメー"
+"タ`message` に値を挿入します。"
 
 #: ../../src/topics/creating-files-at-runtime.md:20
 #: aca24b72687c4d4d84bf9de8b71413f7
@@ -1952,7 +1955,6 @@ msgid "Custom Types"
 msgstr "カスタムタイプ"
 
 #: ../../src/topics/custom-types.md:3 e0275ddda8f84207a58d10c17ca99a45
-#, fuzzy
 msgid ""
 "Sometimes you may want to write your own custom types for use and reuse "
 "in CWL descriptions. Use of such custom types can reduce redundancy "
@@ -1962,7 +1964,7 @@ msgid ""
 msgstr ""
 "CWL定義で使用・再利用するために、独自のカスタム型を書きたい場合があります。こ"
 "のようなカスタムタイプを使用することで、同じタイプを使用する複数の記述の間の"
-"冗長性を減らし、また、CWL記述を直接いじらずに、ツールや分析のカスタマイズや設"
+"冗長性を減らし、また、CWL定義を直接いじらずに、ツールや分析のカスタマイズや設"
 "定を追加できるようになります。"
 
 #: ../../src/topics/custom-types.md:9 8367e38e5e7c4a298d1d87b9001aaddc
@@ -4561,12 +4563,14 @@ msgid "YAML Guide"
 msgstr "YAMLガイド"
 
 #: ../../src/topics/yaml-guide.md:6 705765787eb84ecaae004194225924cb
-#, fuzzy
 msgid ""
 "[YAML][yaml] is a file format designed to be readable by both computers "
 "and humans. This guide introduces the features of YAML that are relevant "
 "when writing CWL descriptions and input parameter files."
-msgstr "[YAML][yaml]は、コンピュータと人間の両方が読むことができるように設計されたファイル形式です。本ガイドでは、CWL定義や入力パラメータファイルを書く際に関連するYAMLの機能を紹介します。"
+msgstr ""
+"[YAML][yaml]は、コンピュータと人間の両方が読むことができるように設計されたフ"
+"ァイル形式です。本ガイドでは、CWL定義や入力パラメータファイルを書く際に関連す"
+"るYAMLの機能を紹介します。"
 
 #: ../../src/topics/yaml-guide.md:13 cb243f6ab11f48ffb5c91945c4e0d101
 msgid "You can skip this section if you are already comfortable with YAML."
@@ -4614,7 +4618,6 @@ msgstr ""
 "は、CWL仕様で特別な意味を持つ複数語のキー名、それ以外はアンダースコアのキー名として使用します。例えば："
 
 #: ../../src/topics/yaml-guide.md:42 514365e59d9648deb896e2068d967a64
-#, fuzzy
 msgid ""
 "The YAML above defines four keys - `first_name`, `last_name`, "
 "`age_years`, and `home` - with their four respective values. Values can "
@@ -4622,12 +4625,12 @@ msgid ""
 "representation), Boolean (`true` or `false`), or more complex nested "
 "types (see below)."
 msgstr ""
-"上記のYAMLは4つのキー -`first_name`,`last_name`,`age_years`, `home` - "
-"と4つのそれぞれの値を定義しています。値は、文字列、数値（整数、浮動小数点、科学的表現）、ブール値（`true` または`false` "
+"上記のYAMLは4つのキー -`first_name`,`last_name`,`age_years`, `home` - 及びそ"
+"れぞれの値を定義しています。値は、文字列、数値（整数、浮動小数点、科学的表現"
+"）、ブール値（`true` または`false` "
 "）、またはより複雑な入れ子型（下記参照）にすることができます。"
 
 #: ../../src/topics/yaml-guide.md:51 6939eb7e783744d7bcf75ea0a7cae129
-#, fuzzy
 msgid ""
 "Values may be wrapped in quotation marks, but be aware that this may "
 "change the way that they are interpreted i.e. `\"1234\"` will be treated "
@@ -4637,34 +4640,33 @@ msgid ""
 "want to specify a fixed numeric value to a command, make sure that you "
 "wrap that numeric value in quotes: `baseCommand: [echo, \"42\"]`."
 msgstr ""
-"値は引用符で括ることができますが、意味が変わってきます。例えば、`\"1234\"` は文字列として扱われ、`1234` "
-"は整数値として扱われます。CWLでは、`baseCommand` "
-"のすべての部分が文字列でなければならないので、コマンドに固定した数値を指定する場合は、その数値を引用符で囲むようにしてください：[echo, "
-"\"42\"]`."
+"値は引用符で括ることができますが、意味が変わってきます。例えば、`\"1234\"` "
+"は文字列として扱われ、`1234` は整数値として扱われます。CWLでは、`baseCommand`"
+" のすべての部分が文字列でなければならないので、コマンドに固定した数値を指定す"
+"る場合は、その数値を引用符で囲むようにしてください：[echo, \"42\"]`."
 
 #: ../../src/topics/yaml-guide.md:61 96e1776b09e840ebbc9b4b7e01da0e43
 msgid "Comments"
 msgstr "コメント"
 
 #: ../../src/topics/yaml-guide.md:63 8b17f7557c3540b2b0d0beca0fe4ebc7
-#, fuzzy
 msgid ""
 "You may use `#` to add comments to your CWL and parameter files. Any "
 "characters to the right of ` #` will be ignored by the program "
 "interpreting the YAML. For example:"
 msgstr ""
-"`#` を使って、CWL定義と入力パラメータファイルにコメントを追加することができます。` #` の右側にある文字は、YAML "
+"`#` を使うと、CWL定義や入力パラメータファイルにコメントを追加することができま"
+"す。` #` の右側にある文字は、YAML "
 "を解釈するプログラムによって無視されます。たとえば、次のようになります："
 
 #: ../../src/topics/yaml-guide.md:76 13da997c82c04023a4b7bb36b76e969d
-#, fuzzy
 msgid ""
 "If there is anything on the line before the comment, be sure to add at "
 "least one space before the `#`!"
-msgstr "同じ行内のコメントの前に何かある場合は、必ず`#` の前に少なくとも1つのスペースを追加してください！"
+msgstr "同じ行の中でコメントの前に何かある場合は、必ず`#` "
+"の前に少なくとも1つのスペースを追加してください！"
 
 #: ../../src/topics/yaml-guide.md:79 b9fc191166a64450b64a8182adabad75
-#, fuzzy
 msgid "Maps"
 msgstr "マップ"
 
