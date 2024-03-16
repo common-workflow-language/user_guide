@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: Common Workflow Language User Guide\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-12-16 11:48+0100\n"
-"PO-Revision-Date: 2024-03-13 02:01+0000\n"
+"PO-Revision-Date: 2024-03-16 02:01+0000\n"
 "Last-Translator: Manabu ISHII <manabu.ishii.rb@gmail.com>\n"
 "Language-Team: Japanese <https://hosted.weblate.org/projects/commonwl/"
 "user-guide/ja/>\n"
@@ -1468,7 +1468,6 @@ msgstr "ツールには、入力パラメータに正確に対応しない追加
 
 #: ../../src/topics/additional-arguments-and-parameters.md:6
 #: dfed0747ed544547afd364086d828c9b
-#, fuzzy
 msgid ""
 "In this example, we will wrap the Java compiler to compile a java source "
 "file to a class file.  By default, \"javac\" will create the class files "
@@ -1477,9 +1476,12 @@ msgid ""
 "instruct \"javac\" to write the class file to the designated output "
 "directory instead."
 msgstr ""
-"この例では、Javaコンパイラを使用して、javaソースファイルをクラスファイルにコンパイルするようにラップします。  "
-"デフォルトでは、\"javac \"はソース・ファイルと同じディレクトリにクラス・ファイルを作成します。  "
-"しかし、CWLの入力ファイル（およびそのディレクトリ）は読み取り専用である場合があるので、代わりに指定された出力ディレクトリにクラスファイルを書き込むように「javac」に指示する必要があります。"
+"この例では、Javaコンパイラを使用して、javaソースファイルをclassファイルにコン"
+"パイルするようにラップします。  デフォルトでは、\"javac "
+"\"はjavaファイルと同じディレクトリにclassファイルを作成します。  しかし、CWL"
+"の入力ファイル（およびそのディレクトリ）は読み取り専用である場合があるので、"
+"代わりに指定された出力ディレクトリにclassファイルを書き込むように「javac」に"
+"指示する必要があります。"
 
 #: ../../src/topics/additional-arguments-and-parameters.md:13
 #: e690b567eae34f3f8dbdd7760e51449a
@@ -1513,7 +1515,6 @@ msgstr "ここでは、`arguments` フィールドを使用して、特定の入
 
 #: ../../src/topics/additional-arguments-and-parameters.md:43
 #: dc9fa5f2cbb147b1853c4042c54010f3
-#, fuzzy
 msgid ""
 "This example references a runtime parameter.  Runtime parameters provide "
 "information about the hardware or software environment when the tool is "
@@ -1523,9 +1524,9 @@ msgid ""
 "`$(runtime.outdirSize)`, and `$(runtime.tmpdirSize)`.  See the [Runtime "
 "Environment][runtime] section of the CWL specification for details."
 msgstr ""
-"この例では、ランタイムパラメータを参照しています。  ランタイムパラメータは、"
-"ツールが実際に実行されたときのハードウェアまたはソフトウェア環境に関する情報"
-"を提供します。  ` $(runtime.outdir)` "
+"この例では、runtimeパラメータを参照しています。  runtimeパラメータは、ツール"
+"が実際に実行されたときのハードウェアまたはソフトウェア環境に関する情報を提供"
+"します。  ` $(runtime.outdir)` "
 "パラメータは、指定された出力ディレクトリへのパスです。  その他、`$(runtime."
 "tmpdir)`,`$(runtime.ram)`,`$(runtime.cores)`,`$(runtime."
 "outdirSize)`,`$(runtime.tmpdirSize)` などがあります。  詳細はCWL仕様書の["
@@ -1536,13 +1537,15 @@ msgid "Best Practices"
 msgstr "ベストプラクティス"
 
 #: ../../src/topics/best-practices.md:3 7b59377bd56c47b8a71c18acfba4d3bb
-#, fuzzy
 msgid ""
 "The following are a set of recommended good practices to keep in mind "
 "when writing a Common Workflow Language description for a tool or "
 "workflow. These guidelines are presented for consideration on a scale of "
 "usefulness: although more is better, not all are required."
-msgstr "以下は、ツールやワークフローのCWL定義を書く際に留意すべき推奨グッドプラクティスのセットです。これらのガイドラインは、有用性の尺度で検討するために提示されています：多ければ多いほど良いが、すべてが必要なわけではありません。"
+msgstr ""
+"以下は、ツールやワークフローのCWL定義を書く際に留意すべき推奨グッドプラクティ"
+"スのセットです。これらのガイドラインは、有用性の尺度で検討するために提示され"
+"ています：多ければ多いほど良いが、すべてが必要なわけではありません。"
 
 #: ../../src/topics/best-practices.md:8 2292670347cd4549bc6a51e972de0ef4
 msgid ""
@@ -1607,13 +1610,13 @@ msgid "_Example of metadata field for license with SPDX identifier:_"
 msgstr "_SPDX 識別子を持つライセンスのメタデータフィールドの例：_"
 
 #: ../../src/topics/best-practices.md:37 924b8df24deb4c82b32732f491c9a246
-#, fuzzy
 msgid ""
 "For more examples of providing metadata within CWL descriptions, see [the"
 " Metadata and Authorship section of this User Guide](../topics/metadata-"
 "and-authorship.md)."
 msgstr ""
-"CW定義にメタデータを与える例については、 [このユーザーガイドのメタデータと著者名のセクション](../topics/metadata-and-"
+"CW定義にメタデータを与える例については、 "
+"[このユーザーガイドのメタデータと著者名のセクション](../topics/metadata-and-"
 "authorship.md)を参照してください。"
 
 #: ../../src/topics/best-practices.md:40 9e64a9fc89cb45cfbff0e925cc91b1be
@@ -1626,20 +1629,21 @@ msgstr ""
 "example]を含みます。[ORCID][orcid]のような曖昧でない識別子を使用してください。"
 
 #: ../../src/topics/best-practices.md:44 87030aef02044b8283c76debab4772bf
-#, fuzzy
 msgid ""
 "In tool descriptions, list dependencies using short name(s) under "
 "[`SoftwareRequirement`](https://w3id.org/cwl/CommandLineTool.html#SoftwareRequirement)."
-msgstr "ツール定義では、`SoftwareRequirement` の下に、短い名前を使用して依存関係をリストアップします。"
+msgstr ""
+"ツール定義では、[`SoftwareRequirement`] (https://w3id.org/cwl/CommandLineTool"
+".html#SoftwareRequirement)."
+"の下に、短い名前を使用して依存関係をリストアップします。"
 
 #: ../../src/topics/best-practices.md:47 6c9eaae099fa4ca4b0986b1c4146df50
-#, fuzzy
 msgid ""
 "Include [SciCrunch][scicrunch] identifiers for dependencies in "
 "`https://identifiers.org/rrid/RRID:SCR_NNNNNN` format."
 msgstr ""
-"`https://identifiers.org/rrid/RRID:SCR_NNNNNN` フォーマットで依存関係のための "
-"[SciCrunch][scicrunch] 識別子を含みます。"
+"`https://identifiers.org/rrid/RRID:SCR_NNNNNN` 形式で依存関係のための "
+"[SciCrunch][scicrunch] 識別子を書きます。"
 
 #: ../../src/topics/best-practices.md:50 5ae8950fd31541399c2fe59096581dbc
 msgid ""
@@ -1654,14 +1658,14 @@ msgstr ""
 "または`aligned_sequences` などの情報量の多い名称を使ってください。"
 
 #: ../../src/topics/best-practices.md:55 b0493895105e43849bff2026763e472a
-#, fuzzy
 msgid ""
 "In tool descriptions, include a list of version(s) of the tool that are "
 "known to work with this description under "
 "[`SoftwareRequirement`](https://w3id.org/cwl/CommandLineTool.html#SoftwareRequirement)."
 msgstr ""
-"ツール定義では、`SoftwareRequirement` "
-"の下に、このツール定義で動作することが確認されているツールのバージョンのリストを含めるます。"
+"ツール定義では、[`SoftwareRequirement`] (https://w3id.org/cwl/CommandLineTool"
+".html#SoftwareRequirement)の下に、このツール定義で動作することが確認されてい"
+"るツールのバージョンのリストを書きます。"
 
 #: ../../src/topics/best-practices.md:58 88806cb0462f4359801c1fa0ff0ebcc0
 #, fuzzy
@@ -3027,7 +3031,6 @@ msgid "Exclusive Input Parameters with Expressions"
 msgstr "式で入力パラメータを排他的に指定する"
 
 #: ../../src/topics/inputs.md:257 cf22f21ec44c483986979316544a7c3b
-#, fuzzy
 msgid ""
 "If you use exclusive input parameters and reference them in expressions, "
 "you need to be aware that the `inputs` JavaScript object will contain one"
@@ -3035,18 +3038,18 @@ msgid ""
 "these exclusive values may differ, you may need to check which type is in"
 " use when you reference the properties of the `input` object."
 msgstr ""
-"排他的入力パラメータを式と組み合わせて使用する場合、`inputs` JavaScript "
-"オブジェクトに排他的入力値のいずれかが含まれることを意識する必要があります。つまり、**or** "
-"のブーリアン演算子を使用して、どの値が存在するかをチェックする必要がある場合があります。"
+"排他的入力パラメータを式と組み合わせて使用する場合、JavaScript "
+"オブジェクトの`inputs` に排他的入力値のいずれかが含まれることを意識する必要が"
+"あります。つまり、**or** のブーリアン演算子を使用して、`inputs`にどの値が存在"
+"するかをチェックする必要がある場合があります。"
 
 #: ../../src/topics/inputs.md:263 0fecb128b19b44d796b6c1b6de4f7166
-#, fuzzy
 msgid ""
 "Let's use an example that contains an exclusive `file_format` input "
 "parameter that accepts `null` (i.e. no value provided), or any value from"
 " an enum."
 msgstr ""
-"`file_format` 入力パラメータに、`null` (つまり、値が提供されていない)、または enum "
+"`file_format` 入力パラメータに、`null` (つまり、値がない)、または enum "
 "の任意の値を受け入れる排他的なものを含む例を使ってみましょう。"
 
 #: ../../src/topics/inputs.md:266 7f1941698a6046e9b9e8a53736af949a
@@ -3054,15 +3057,15 @@ msgid "`exclusive-parameter-expressions.cwl`"
 msgstr "`exclusive-parameter-expressions.cwl`"
 
 #: ../../src/topics/inputs.md:272 60b585142f06489d9f48090b664b6d32
-#, fuzzy
 msgid ""
 "Note how the JavaScript expression uses the value of the exclusive input "
 "parameter without taking into consideration a `null` value. If you "
 "provide a valid value, such as `fasta` (one of the possible values of the"
 " enum), your command should execute successfully:"
 msgstr ""
-"JavaScriptの式では、`null` "
-"の値を考慮せずに、排他的入力パラメータの値を使用していることに注意してください。\"fasta\"（enumの値の1つ）のような有効な値を指定すると、コマンドは正常に実行されるはずです："
+"JavaScriptの式では、`null` の値を考慮せずに、排他的入力パラメータの値を使用し"
+"ていることに注意してください。`fasta`（enumの値の1つ）のような有効な値を指定"
+"すると、コマンドは正常に実行されるはずです："
 
 #: ../../src/topics/inputs.md:281 11fdeb057d674f118830f431ff019c15
 #, fuzzy
@@ -3282,7 +3285,6 @@ msgid "Passing mandatory arguments to the `baseCommand`"
 msgstr "`baseCommand` に必須引数を渡します。"
 
 #: ../../src/topics/outputs.md:21 553d535b023e4d69a888fe5b24bb8c5b
-#, fuzzy
 msgid ""
 "In previous examples, the `baseCommand` was just a string, with any "
 "arguments passed as CWL inputs. Instead of a single string, we can use an"
@@ -3290,8 +3292,10 @@ msgid ""
 "the array is the command to run, and any subsequent elements are "
 "mandatory command line arguments"
 msgstr ""
-"これまでの例では、`baseCommand` は単なる文字列で、引数はCWL入力として渡していました。単一の文字列の代わりに、文字列の配列__ "
-"を使用することができます。  最初の要素は実行するコマンドで、それ以降の要素は必須のコマンドライン引数です"
+"これまでの例では、`baseCommand` "
+"は単なる文字列で、引数はCWL入力として渡していました。単一の文字列の代わりに、"
+"_文字列の配列_ を使用することができます。  配列の最初の要素は実行するコマンド"
+"で、それ以降の要素は必須のコマンドライン引数です"
 
 #: ../../src/topics/outputs.md:28 9b65071222c94951bed12ac53e964ee3
 msgid "`tar.cwl`"
@@ -3302,7 +3306,6 @@ msgid "`tar-job.yml`"
 msgstr "`tar-job.yml`"
 
 #: ../../src/topics/outputs.md:40 f9752ec303ab419c8db8adef3fa2466f
-#, fuzzy
 msgid "Next, create a tar file for the example."
 msgstr "次に、サンプルとなるtarファイルを作成します。"
 
@@ -3313,15 +3316,16 @@ msgid ""
 msgstr "そして、今度はコマンドラインにツール定義と入力オブジェクトを指定して`cwltool` を呼び出します："
 
 #: ../../src/topics/outputs.md:53 707803bec0cb42919905c7c321bd9d30
-#, fuzzy
 msgid ""
 "The field "
 "[`outputBinding`](https://w3id.org/cwl/CommandLineTool.html#CommandOutputBinding)"
 " describes how to set the value of each output parameter."
-msgstr "`outputBinding` フィールドには、各出力パラメータの値の設定方法が記述されています。"
+msgstr ""
+"[`outputBinding`](https://w3id.org/cwl/CommandLineTool."
+"html#CommandOutputBinding) "
+"フィールドには、各出力パラメータの値の設定方法が記述されています。"
 
 #: ../../src/topics/outputs.md:64 cbaec50871e04718883c8c91ff475d20
-#, fuzzy
 msgid ""
 "The "
 "[`glob`](https://w3id.org/cwl/CommandLineTool.html#CommandOutputBinding) "
@@ -3330,7 +3334,9 @@ msgid ""
 "know the name of the file in advance, you can use a wildcard pattern like"
 " `glob: '*.txt'`."
 msgstr ""
-"`glob` フィールドは、出力ディレクトリ内のファイル名で構成されます。ファイル名が予め分からない場合は、`glob: '*.txt'` "
+"[`glob`](https://w3id.org/cwl/CommandLineTool.html#CommandOutputBinding) フィ"
+"ールドは、出力ディレクトリ内のファイル名で構成されます。前もって出力ファイル"
+"名が分からない場合は、`glob: '*.txt'` "
 "のようにワイルドカードパターンを使用することができます。"
 
 #: ../../src/topics/outputs.md:69 8a6e9173198241429effd911c3a7c4d7
@@ -3345,7 +3351,9 @@ msgid ""
 "the name of the file where the output stream should go.  Then add `type: "
 "stdout` on the corresponding output parameter."
 msgstr ""
-"ツールの標準出力をキャプチャするには、`stdout` フィールドに、標準出力を保存したいファイル名を追加します。  "
+"ツールの標準出力をキャプチャするには、[`stdout`](https://w3id.org/cwl/"
+"CommandLineTool.html#stdout) "
+"フィールドに、標準出力を保存したいファイル名を追加します。   "
 "次に、対応する出力パラメータに`type: stdout` を追加します。"
 
 #: ../../src/topics/outputs.md:75 cf2ef8dc7fda49308c09efe4f4ef5d7b
