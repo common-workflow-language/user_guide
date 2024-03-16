@@ -190,10 +190,20 @@ You can specify arrays of arrays, arrays of records, and other complex types.
 
 ## Inclusive and Exclusive Inputs
 
-Sometimes an underlying tool has several arguments that must be provided
-together (they are dependent) or several arguments that cannot be provided
-together (they are exclusive).  You can use records and type unions to group
+Sometimes an underlying tool has several arguments that must all be provided
+together (they are inclusive/dependent) or several arguments that cannot be provided
+together, only one of the arguments can be provided (they are exclusive).  You can use records and type unions to group
 parameters together to describe these two conditions.
+
+```{image} /_static/images/diagrams/inclusive_v_exclusive.png
+:name: inclusive_v_exclusive-diagram
+:width: 600px
+:align: center
+```
+
+
+With cwltool, if not all inclusive arguments are provided, an error is thrown. 
+If multiple exclusive arguments are provided, the first one is used and the rest are ignored.
 
 ```{literalinclude} /_includes/cwl/inputs/record.cwl
 :language: cwl
@@ -212,7 +222,7 @@ parameters together to describe these two conditions.
 :emphasize-lines: 6-7
 ```
 
-In the first example, you can't provide `itemA` without also providing `itemB`.
+In the first example, you can't provide `itemA` without also providing `itemB`, or an error is thrown. This is because they are inclusive (dependent) parameters. If you provide one, you must provide the other.
 
 ```{literalinclude} /_includes/cwl/inputs/record-job2.yml
 :language: yaml
@@ -230,8 +240,8 @@ $ cat output.txt
 -A one -B two -C three
 ```
 
-In the second example, `itemC` and `itemD` are exclusive, so only the first
-matching item (`itemC`) is added to the command line and remaining item (`itemD`) is ignored.
+In the second example, `itemC` and `itemD` are exclusive, but `record-job2.yml` provides both arguments, so only the first
+matching item provided (`itemC`) is added to the command line and remaining item (`itemD`) is ignored.
 
 ```{literalinclude} /_includes/cwl/inputs/record-job3.yml
 :language: yaml
@@ -249,8 +259,8 @@ $ cat output.txt
 -A one -B two -D four
 ```
 
-In the third example, only `itemD` is provided, so it appears on the
-command line.
+In the third example, `record-job3.yml` only provides `itemD`, so `itemD` is what appears on the
+command line. 
 
 ### Exclusive Input Parameters with Expressions
 
