@@ -456,3 +456,32 @@ https://github.com/common-workflow-language/common-workflow-language/blob/master
 
 % - https://github.com/common-workflow-language/user_guide/issues/6
 % - Maybe adapt some of these (or move to a workaround?) https://www.synapse.org/#!Synapse:syn2813589/wiki/401464
+
+## Pulling Out a Specific Member of an Array
+
+This example demonstrates how you can get a specific file in an array. This could be useful when you are taking files produced from another step in a workflow and need to capture a specific one.
+
+```yaml
+cwlVersion: v1.0
+class: Workflow
+
+inputs: []
+
+steps: 
+  generates_an_array:
+     run: array_of_files.cwl
+     in: {}
+     out: [ an_array_of_files ]
+  single_file_processor:
+    run: only_one_file_input_tool.cwl
+    in:
+      raw_file:  # this is type: File
+        source: generates_an_array/an_array_of_files
+        valueFrom: $(self[0])
+    out: [ result ]
+
+outputs:
+  result:
+    type: File
+    outputSource: single_file_processor/result
+```
