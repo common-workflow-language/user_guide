@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: Common Workflow Language User Guide\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-12-16 11:48+0100\n"
-"PO-Revision-Date: 2024-03-08 11:01+0000\n"
+"PO-Revision-Date: 2024-03-20 01:01+0000\n"
 "Last-Translator: Zoë Ma <zoe.ma@curii.com>\n"
 "Language-Team: Chinese (Simplified) <https://hosted.weblate.org/projects/"
 "commonwl/user-guide/zh_Hans/>\n"
@@ -3693,7 +3693,8 @@ msgid ""
 "The CWL document `echo-uppercase.cwl` defines a workflow that runs the "
 "command-line tool, and the expression tool showed in the earlier "
 "examples."
-msgstr ""
+msgstr "CWL 文件 `echo-uppercase.cwl` "
+"定义了之前的例子中运行命令行工具的工作流以及表达式工具。"
 
 #: ../../src/topics/workflows.md:51 3be900594bb743399854b95baa9ae2f9
 msgid "`echo-uppercase.cwl`"
@@ -3705,6 +3706,8 @@ msgid ""
 "the same CWL document as the workflow. For example, we can rewrite the "
 "`echo-uppercase.cwl` workflow as a single file:"
 msgstr ""
+"命令行工具或表达式工具亦可直接写在定义工作流的单一 CWL 文件里。例如，"
+"我们可以将 `echo-uppercase.cwl` 改写成一个单独的文件如下："
 
 #: ../../src/topics/workflows.md:91 83bc2796889f4dccb713764ac1b3c3ad
 msgid "`echo-uppercase-single-file.cwl`"
@@ -3717,6 +3720,9 @@ msgid ""
 "There are other ways to combine multiple files into a single file (e.g. "
 "`cwltool --pack`) discussed further in other sections of this user guide."
 msgstr ""
+"将代码分为多个独立的文件有助于模块化和代码的组织条理。不过，把全部代码集中在"
+"一个文件，可能对开发更有利。将多个文件整合为一个，还有其他手段（如 `cwltool "
+"--pack`），将在本《指南》的其他章节进一步讨论。"
 
 #: ../../src/topics/workflows.md:160 277ed30d4b3a4156a4523e8d10e6ce60
 msgid ""
@@ -3724,16 +3730,18 @@ msgid ""
 "`SubworkflowFeatureRequirement`. It is covered in another section of this"
 " user guide in more detail."
 msgstr ""
+"子工作流 (sub-workflow) 需要启用 `SubworkflowFeatureRequirement` "
+"这一要求，这在另一章节中将有更详细的教程。"
 
 #: ../../src/topics/workflows.md:165 82818ab17aa4403eb982fd81a14a5865
 msgid "Writing Workflows"
-msgstr ""
+msgstr "编写工作流"
 
 #: ../../src/topics/workflows.md:167 3d8b98e8d03548699fadb22198de9b20
 msgid ""
 "This workflow extracts a java source file from a tar file and then "
 "compiles it."
-msgstr ""
+msgstr "这个工作流从 tar 文件中提取一个 Java 源文件，然后编译。"
 
 #: ../../src/topics/workflows.md:170 c61097c695424f7195e8205a23b6ecff
 msgid "`1st-workflow.cwl`"
@@ -3742,7 +3750,7 @@ msgstr "`1st-workflow.cwl`"
 #: ../../src/topics/workflows.md:179 ../../src/topics/workflows.md:180
 #: 6660c48f51d94d4fbcc05656e154059e bd2bab6c11614fa983ca8dab1408e1d8
 msgid "Visualization of 1st-workflow.cwl"
-msgstr ""
+msgstr "1st-workflow.cwl 的图示"
 
 #: ../../src/topics/workflows.md:180 f0831481a43548039fbc4fd17555af57
 msgid ""
@@ -3756,12 +3764,19 @@ msgid ""
 "language/user_guide/blob/a29e7eae0006660946fc705a310b37a21a7e1edc/_includes/cwl/21"
 "-1st-workflow/1st-workflow.cwl)"
 msgstr ""
+"[![1st-workflow.cwl 的图示](https://view.commonwl.org/graph/png/github.com/"
+"common-workflow-language/user_guide/blob/"
+"a29e7eae0006660946fc705a310b37a21a7e1edc/_includes/cwl/21-1st-workflow/1st-"
+"workflow.cwl)](https://view.commonwl.org/graph/png/github.com/"
+"common-workflow-language/user_guide/blob/"
+"a29e7eae0006660946fc705a310b37a21a7e1edc/_includes/cwl/21-1st-workflow/1st-"
+"workflow.cwl)"
 
 #: ../../src/topics/workflows.md:183 5ff059fc8ae6471c8ea86dab7e5a93f5
 msgid ""
 "Use a YAML or a JSON object in a separate file to describe the input of a"
 " run:"
-msgstr ""
+msgstr "在分立的文件中通过 YAML 或 JSON 对象来描述一次运行的输入："
 
 #: ../../src/topics/workflows.md:185 822e5d0a097b4109960d621a72a3c009
 msgid "`1st-workflow-job.yml`"
@@ -3771,11 +3786,12 @@ msgstr "`1st-workflow-job.yml`"
 msgid ""
 "Next, create a sample Java file and add it to a tar file to use with the "
 "command-line tool."
-msgstr ""
+msgstr "接下来，创建一个 Java 文件样本，将其打包到一个 tar "
+"文件，以供运行命令行工具时使用。"
 
 #: ../../src/topics/workflows.md:205 ed16b30eaa4747f79b6dd10a19188d8c
 msgid "What's going on here?  Let's break it down:"
-msgstr ""
+msgstr "这是怎么一回事呢？我们一一道来："
 
 #: ../../src/topics/workflows.md:212 6428bd7bd3be4393bfe5675f8e45ff94
 msgid ""

@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: Common Workflow Language User Guide\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-12-16 11:48+0100\n"
-"PO-Revision-Date: 2024-03-16 02:01+0000\n"
+"PO-Revision-Date: 2024-03-20 01:01+0000\n"
 "Last-Translator: Manabu ISHII <manabu.ishii.rb@gmail.com>\n"
 "Language-Team: Japanese <https://hosted.weblate.org/projects/commonwl/"
 "user-guide/ja/>\n"
@@ -625,14 +625,17 @@ msgid "Implementations"
 msgstr "実装"
 
 #: ../../src/introduction/basic-concepts.md:39 c87e6daefda74579a39924777b2e6809
-#, fuzzy
 msgid ""
 "An implementation of the CWL specification is any software written "
 "following what is defined in a version of the specification document. "
 "However, implementations may not implement every aspect of the "
 "specification. CWL implementations are licensed under both Open Source "
 "and commercial licenses."
-msgstr "CWL仕様の実装とは、あるバージョンの仕様書で定義された内容に従って書かれたソフトウェアのことです。ただし、実装は仕様のすべての側面を実装するわけではありません。CWLの実装は、オープンソース・ライセンスと商用ライセンスの両方でライセンスされています。"
+msgstr ""
+"CWL仕様の実装とは、あるバージョンの仕様書で定義された内容に従って書かれたソフ"
+"トウェアのことです。ただし、実装は仕様にあるすべてを実装するわけではありませ"
+"ん。CWLの実装は、オープンソース・ライセンスと商用ライセンスの両方でライセンス"
+"されています。"
 
 #: ../../src/introduction/basic-concepts.md:44 c995e699ae2949219af252f9d802a43d
 msgid ""
@@ -701,23 +704,27 @@ msgstr ""
 
 #: ../../src/introduction/basic-concepts.md:122
 #: c88ad26efa794cbeb6f0690aa0cad5ea
-#, fuzzy
 msgid ""
 "An expression tool is a wrapper for a JavaScript expression. It can be "
 "used to simplify workflows and command-line tools, moving common parts of"
 " a workflow execution into reusable JavaScript code that takes inputs and"
 " produces outputs like a command-line tool."
-msgstr "ExpressionToolは、JavaScriptの式のラッパーです。WorkflowやCommandLineToolの簡略化に使用でき、ワークフロー実行の共通部分を、CommandLineToolのように入力を受けて出力を生成する再利用可能なJavaScriptコードに移動させることができます。"
+msgstr ""
+"ExpressionToolは、JavaScriptの式のラッパーです。WorkflowやCommandLineToolの簡"
+"略化に使用でき、ワークフロー実行の共通部分を、CommandLineToolのように入力を受"
+"けて出力を生成する再利用可能なJavaScriptコードに移動させることができます。"
 
 #: ../../src/introduction/basic-concepts.md:127
 #: 946825a7ea2c450eb3e41b5548670fb7
-#, fuzzy
 msgid ""
 "Operation is an abstract process that also takes inputs, produces "
 "outputs, and can be used in a workflow. But it is a special operation not"
 " so commonly used. It is discussed in the [Operations "
 "section](../topics/operations.md) of this user guide."
-msgstr "Operationは、入力を受け、出力を出す抽象的なプロセスでもあり、ワークフローで使用することができます。しかし、あまり一般的に使われていない特別な処理です。このユーザーガイドの[Operation編](../topics/operations.md)で説明します。"
+msgstr ""
+"Operationは、入力を受け、出力を出す抽象的なプロセスでもあり、ワークフローで使"
+"用することができます。しかし、あまり一般的に使われていない特別な処理です。こ"
+"のユーザーガイドの[Operation編](../topics/operations.md)で説明します。"
 
 #: ../../src/introduction/basic-concepts.md:131
 #: 44aac23f302c4178accf7e431cfbb96c
@@ -774,7 +781,6 @@ msgstr ""
 
 #: ../../src/introduction/basic-concepts.md:145
 #: fb3762f91177401ea624d1e716d67ae6
-#, fuzzy
 msgid ""
 "Some CWL runners may provide requirements that are not in the "
 "specification. For example, GPU requirements are supported in `cwltool` "
@@ -782,9 +788,10 @@ msgid ""
 "the {{ cwl_version }} specification and may not be supported by other CWL"
 " runners."
 msgstr ""
-"いくつかのCWLランナーは、仕様にないrequirementsを提供することがあります。例えば、GPUに関するrequirementsは`cwltool`"
-" で`cwltool:CUDARequirement` を通してサポートされていますが、{{ cwl_version "
-"}}仕様の一部ではないので、他のCWLランナーではサポートされていないかもしれません。"
+"いくつかのCWLランナーは、仕様にないrequirementsを提供することがあります。例え"
+"ば、GPUに関するrequirementsは`cwltool` で`cwltool:CUDARequirement` "
+"を通してサポートされていますが、{{ cwl_version }}仕様の一部ではないので、他の"
+"CWLランナーではサポートされていないかもしれません。"
 
 #: ../../src/introduction/basic-concepts.md:151
 #: b6a5cd431c324078a9a4e1513a14ee28
@@ -1304,7 +1311,6 @@ msgid "Installing a CWL Runner"
 msgstr "CWL Runnerのインストール"
 
 #: ../../src/introduction/quick-start.md:34 73a42cd9e0e54296985088b7221a8a93
-#, fuzzy
 msgid ""
 "`cwltool` is an implementation of the CWL specification. It is also the "
 "CWL *Reference Runner* for the specification, and it is compliant with "
@@ -1312,8 +1318,8 @@ msgid ""
 "install `cwltool` using `pip`:"
 msgstr ""
 "`cwltool` は、CWL仕様の実装の１つです。また、同仕様のCWL*Reference Runner* "
-"でもあり、同仕様の最新バージョンに準拠しています：{cwl_version }}に準拠しています。`cwltool` は、`pip` "
-"を使ってインストールできます："
+"でもあり、同仕様の最新バージョンに準拠しています：{{cwl_version "
+"}}に準拠しています。`cwltool` は、`pip` を使ってインストールできます："
 
 #: ../../src/introduction/quick-start.md:39 57aea587ade24610be62f5d993b0b755
 msgid "Installing `cwltool` with `pip`."
@@ -1334,14 +1340,14 @@ msgid "Running \"Hello World\""
 msgstr "\"Hello World\"を実行する"
 
 #: ../../src/introduction/quick-start.md:53 0595e96912dc40e5a09f2ced2d2b7bcd
-#, fuzzy
 msgid ""
 "The usage of the `cwltool` command-line executable is basically `cwltool "
 "[OPTIONS] [CWL_DOCUMENT] [INPUTS_OBJECT]`. You can run the "
 "`hello_world.cwl` workflow without specifying any option:"
 msgstr ""
-"`cwltool` コマンドライン実行ファイルの使い方は、基本的に`cwltool [OPTIONS] <cwl_document> "
-"[INPUTS_OBJECT]`です。`hello_world.cwl` Workflowは、オプションを指定せずに実行することができます："
+"基本的に `cwltool` の使い方は、`cwltool [OPTIONS] [cwl_document] "
+"[INPUTS_OBJECT]`です。`hello_world.cwl` "
+"Workflowは、オプションを指定せずに実行することができます："
 
 #: ../../src/introduction/quick-start.md:57 5b393c69816549b084516dda4d4274f5
 msgid "Running `hello_world.cwl` with `cwltool`."
@@ -1383,15 +1389,16 @@ msgid "Passing an Inputs Object file to `cwltool`."
 msgstr "`cwltool` に Inputs Object ファイルをします。"
 
 #: ../../src/introduction/quick-start.md:88 52b1602b5c8d48db88d0b16f788e7703
-#, fuzzy
 msgid ""
 "We used a similar file name for the workflow and for the Inputs Object "
 "files. The *-job.json* suffix is very common in Inputs Object files, but "
 "it is not a requirement. You can choose any name for your workflows and "
 "Inputs Object files."
 msgstr ""
-"ワークフローとInputs Objectファイルには、同様のファイル名を使用しました。*-job.json* という接尾辞は、Inputs "
-"Object ファイルでは非常に一般的ですが必須ではありません。ワークフローとInputs "
+"ワークフローとInputs "
+"Objectファイルには、同様のファイル名を使用しました。*-job.json* "
+"という接尾辞は、Inputs Object "
+"ファイルでは非常に一般的ですが必須ではありません。ワークフローとInputs "
 "Objectファイルには、任意の名前を付けることができます。"
 
 #: ../../src/introduction/quick-start.md:96 3b06faf5f3194bd8a96118d9f050f61e
@@ -1427,14 +1434,13 @@ msgstr ""
 "[WikipediaにあるYAML](https://en.wikipedia.org/wiki/YAML) です。"
 
 #: ../../src/introduction/quick-start.md:101 2bf7b924182f4f2bab88edef5ef85baa
-#, fuzzy
 msgid ""
 "The {{'[CWL Specification "
 "VERSION](https://www.commonwl.org/VERSION)'.replace('VERSION', "
 "cwl_version_text) }}."
 msgstr ""
-"{{'[CWL 仕様 VERSION](https://www.commonwl.org/VERSION)'.replace('VERSION',"
-" cwl_version_text) }} のことです。"
+"{{'[CWL 仕様 VERSION](https://www.commonwl.org/VERSION)'.replace('VERSION', "
+"cwl_version_text) }} のことです。"
 
 #: ../../src/introduction/quick-start.md:102 936a7dfab11a4f2c82c0b59964e3ea28
 msgid ""
@@ -1443,28 +1449,27 @@ msgid ""
 msgstr "[Wikipediaの項目としてのワークフロー管理システム](https://en.wikipedia.org/wiki/Workflow_management_system)。"
 
 #: ../../src/setup.md:9 24ea9c5144664d9599d7aca767b4730a
-#, fuzzy
 msgid ""
 "This page is out-of-date and was kept here to preserve the links of the "
 "old User Guide. The information on this page has been migrated to the "
 "[FAQ](/faq.md) section of the new user guide."
 msgstr ""
-"このページは古いもので、旧ユーザーガイドのリンクを保存するためにここに残されていました。このページの情報は、新しいユーザーガイドの "
-"[FAQ](/faq.md) セクションに移行されました。"
+"このページは古いもので、旧ユーザーガイドのリンクを保存するためにここに残され"
+"ていました。このページの情報は、新しいユーザーガイドの [FAQ](/faq.md) "
+"セクションに移行されました。"
 
 #: ../../src/topics/additional-arguments-and-parameters.md:1
 #: 3843684b039a40dea163de951ca56738
-#, fuzzy
 msgid "Additional Arguments and Parameters"
 msgstr "追加の引数とパラメータ"
 
 #: ../../src/topics/additional-arguments-and-parameters.md:3
 #: a6fd1842b938435aa2a3c889019eec71
-#, fuzzy
 msgid ""
 "Sometimes tools require additional command line options that don't "
 "correspond exactly to input parameters."
-msgstr "ツールには、入力パラメータに正確に対応しない追加のコマンドラインオプションが必要な場合があります。"
+msgstr "ツールには、入力パラメータに正確に対応しない追加のコマンドラインオプションが"
+"必要な場合があります。"
 
 #: ../../src/topics/additional-arguments-and-parameters.md:6
 #: dfed0747ed544547afd364086d828c9b
@@ -1689,17 +1694,16 @@ msgstr ""
 "。このページを編集して私たちに知らせてください。"
 
 #: ../../src/topics/best-practices.md:66 b178c7296ed5491782a4180c76883c14
-#, fuzzy
 msgid ""
 "Mark all input and output `File`s that are read from or written to in a "
 "streaming compatible way (only once, no random-access), as `streamable: "
 "true`."
 msgstr ""
-"`File`の入出力のうち、ストリーミング互換の方法（一度だけ、ランダムアクセスなし）で読み書きされるものを、`streamable: true`"
-" としてマークします。"
+"`File`の入出力のうち、ストリーミング互換の方法（一度だけ利用されて、ランダム"
+"アクセスなし、訳注標準入出力のイメージ）で読み書きされるものを、`streamable: "
+"true` としてマークします。"
 
 #: ../../src/topics/best-practices.md:69 886d15c1972243acadccff5760f842f1
-#, fuzzy
 msgid ""
 "Each "
 "[`CommandLineTool`](https://w3id.org/cwl/CommandLineTool.html#CommandLineTool)"
@@ -1707,18 +1711,19 @@ msgid ""
 "(sub)command is capable of more. Don't overcomplicate your tool "
 "descriptions with options that you don't need or use."
 msgstr ""
-"各`CommandLineTool` "
-"の定義は、たとえ（サブ）コマンドがそれ以上の機能を備えていたとしても、単一の操作のみに焦点を当てるべきです。必要でない、または使用しないオプションでツールの定義を複雑にし過ぎないようにしましょう。"
+"各`CommandLineTool` の定義は、たとえ（サブ）コマンドがそれ以上の機能を備えて"
+"いたとしても、一つの使用方法のみに焦点を当てるべきです。必要ないまたは、使用"
+"しないオプションでツールの定義を複雑にし過ぎないようにしましょう。"
 
 #: ../../src/topics/best-practices.md:73 ef5a5f9b253c4ca3916802a695fb7c6d
 #, fuzzy
 msgid ""
 "Custom types should be defined with one external YAML per type definition"
 " for re-use."
-msgstr "カスタム型は、再利用のため、タイプ定義ごとに1つの外部YAMLで定義する必要があります。"
+msgstr "カスタム型は、再利用のため、タイプ定義ごとに1つの外部YAMLで定義した方が良いで"
+"す。"
 
 #: ../../src/topics/best-practices.md:76 ff59f40e84004523904e3094be07cc80
-#, fuzzy
 msgid "Include a top-level short `label` summarising the tool/workflow."
 msgstr "ツール/ワークフローを要約したトップレベルの短い`label` を含めます。"
 
