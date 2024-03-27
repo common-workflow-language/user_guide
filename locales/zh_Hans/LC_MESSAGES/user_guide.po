@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: Common Workflow Language User Guide\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-12-16 11:48+0100\n"
-"PO-Revision-Date: 2024-03-20 01:01+0000\n"
+"PO-Revision-Date: 2024-03-27 02:01+0000\n"
 "Last-Translator: Zoë Ma <zoe.ma@curii.com>\n"
 "Language-Team: Chinese (Simplified) <https://hosted.weblate.org/projects/"
 "commonwl/user-guide/zh_Hans/>\n"
@@ -3798,7 +3798,8 @@ msgid ""
 "The `cwlVersion` field indicates the version of the CWL spec used by the "
 "document.  The `class` field indicates this document describes a "
 "workflow."
-msgstr ""
+msgstr "`cwlVersion` 字段指明该文件使用的 CWL 规约版本。`class` "
+"字段表明该文件描述的是一个工作流。"
 
 #: ../../src/topics/workflows.md:221 d6abec8805f649fca668292412263f78
 msgid ""
@@ -3807,6 +3808,8 @@ msgid ""
 "and a data type.  These parameters can be used as sources for input to "
 "specific workflows steps."
 msgstr ""
+"`inputs` 代码段描述的是工作流的输入，即一组输入参数。这里面的每个参数都由标识"
+"符和数据类型构成，它们可以用作工作流中某个指定步骤的输入源。"
 
 #: ../../src/topics/workflows.md:233 22bf3e4910ef4f86a2e8f6d5a6cf0d42
 msgid ""
@@ -3816,6 +3819,9 @@ msgid ""
 "`classfile` of the `compile` step to the workflow output parameter "
 "`compiled_class`."
 msgstr ""
+"`outputs` 代码段描述的是工作流的输出。这同样是一组由标识符和数据类型构成的参"
+"数。`outputSource` 将 `compile`（编译）步骤的输出参数 `classfile` "
+"同工作流的输出参数 `compiled_class` 建立联系。"
 
 #: ../../src/topics/workflows.md:248 e0429688fce445da8083e69323e5b020
 msgid ""
@@ -3827,6 +3833,11 @@ msgid ""
 "`source`).  In addition, workflow steps which do not depend on one "
 "another may run in parallel."
 msgstr ""
+"`steps` 代码段描述的是工作流的实际步骤。这个例子中，第一个步骤是从 tar "
+"归档文件中提取一个文件，而第二步是使用 Java 编译器编译来自第一步的文件。工作"
+"流的各个步骤不是必须按照在代码中列出的顺序运行，而是由各个步骤之间（由 "
+"`source` 决定）的依赖关系确定其先后次序。此外，工作流中没有依赖关系的多个步骤"
+"允许并行运行。"
 
 #: ../../src/topics/workflows.md:256 980f5eada57c4fadbb783838ded1fa0b
 msgid ""
@@ -3835,6 +3846,9 @@ msgid ""
 " parameters, `tarfile` and `extractfile` and one output parameter "
 "`extracted_file`."
 msgstr ""
+"第一个步骤 `untar` 运行 `tar-param.cwl`（此前见于[《参数引用》](parameter-"
+"references.md)一节）。该工具有两个输入参数 `tarfile` 和 `extractfile`, "
+"以及一个输出参数 `extracted_file`."
 
 #: ../../src/topics/workflows.md:261 3532e165842f4ebb8db0c78208071555
 msgid ""
@@ -3845,12 +3859,16 @@ msgid ""
 "`name_of_file_to_extract` will be used for the parameters `tarfile` and "
 "`extractfile` in order to run the tool."
 msgstr ""
+"该工作流步骤下的 ``in`` 这段代码将上述两个输入参数同工作流的输入 `tarball` "
+"和 `name_of_file_to_extract` 通过`source` "
+"关联起来。这意味着当这个工作流步骤执行时，为了运行其指定的工具，`tarball` 和 "
+"`name_of_file_to_extract` 所赋予的值将用于 `tarfile` 和 `extractfile` 参数。"
 
 #: ../../src/topics/workflows.md:267 04a4db2f3da94ce29e7999039ee13fde
 msgid ""
 "The `out` section of the workflow step lists the output parameters that "
 "are expected from the tool."
-msgstr ""
+msgstr "工作流步骤下的 `out` 代码段列出了预期中从工具应获得的参数。"
 
 #: ../../src/topics/workflows.md:278 2651ee113a3d4b79b138854ebe729f48
 msgid ""
@@ -3861,10 +3879,14 @@ msgid ""
 "and-parameters.md)). The output of this step `classfile` is connected to "
 "the `outputs` section for the Workflow, described above."
 msgstr ""
+"第二个步骤 `compile`（编译）依赖于第一步的结果，具体而言它的输入参数 `src` "
+"与 `untar` 步骤的输出参数 `untar/extracted_file` 相关联。这一步骤运行 "
+"`arguments.cwl`（此前见于[《附加参数》](additional-arguments-and-parameters."
+"md)一节）。此步骤的输出 `classfile` 关联的是工作流的 `outputs` 部分（见上）。"
 
 #: ../../src/topics/workflows.md:285 177040bf9c0045f2878f42bcdd8cbd2d
 msgid "Nested Workflows"
-msgstr ""
+msgstr "嵌套的工作流"
 
 #: ../../src/topics/workflows.md:287 e8adc2f7c5ac4464b0711712617b8bbe
 msgid ""
@@ -3873,16 +3895,19 @@ msgid ""
 " workflow can be used as a step in another CWL workflow, if the workflow "
 "engine supports the `SubworkflowFeatureRequirement`:"
 msgstr ""
+"工作流的作用在于将多种工具组合起来，进行更大规模的操作。我们还可以将一个工作"
+"流整体视为一个工具；如果工作流引擎支持 `SubworkflowFeatureRequirement`, 则 "
+"CWL 工作流可以用作另一 CWL 工作流中的单个步骤："
 
 #: ../../src/topics/workflows.md:297 44d281d99cd944478db98446a984c001
 msgid ""
 "Here's an example workflow that uses our `1st-workflow.cwl` as a nested "
 "workflow:"
-msgstr ""
+msgstr "下面这个例子里的工作流嵌入了我们的 `1st-workflow.cwl` 工作流："
 
 #: ../../src/topics/workflows.md:300 d7b60ce81ea741ffa08f2c2d9d7cca69
 msgid "`nestedworkflows.cwl`"
-msgstr ""
+msgstr "`nestedworkflows.cwl`"
 
 #: ../../src/topics/workflows.md:309 a5b7a1ab16e34bda8744ffadacdda3e8
 msgid ""
