@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: Common Workflow Language User Guide\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-12-16 11:48+0100\n"
-"PO-Revision-Date: 2024-03-20 01:01+0000\n"
+"PO-Revision-Date: 2024-03-27 02:01+0000\n"
 "Last-Translator: Manabu ISHII <manabu.ishii.rb@gmail.com>\n"
 "Language-Team: Japanese <https://hosted.weblate.org/projects/commonwl/"
 "user-guide/ja/>\n"
@@ -2565,27 +2565,24 @@ msgid ""
 msgstr "`capitalizeWords` 関数を外部ファイル`custom-functions.js` に移動し、CWL 定義でインポートしてみましょう："
 
 #: ../../src/topics/expressions.md:158 71ac99c65d15451cbbf58d1e81934010
-#, fuzzy
 msgid "`custom-functions.js`"
 msgstr "`custom-functions.js`"
 
 #: ../../src/topics/expressions.md:164 60918e53189243d3872e61c7a4de20fc
-#, fuzzy
 msgid "`hello-world-expressionlib-external.cwl`"
 msgstr "`hello-world-expressionlib-external.cwl`"
 
 #: ../../src/topics/expressions.md:171 ad2a74bd983b47869dc78b2eb7b6fce1
-#, fuzzy
 msgid ""
 "The `custom-functions.js` file is included in the CWL document with the "
 "`$include: custom-functions.js` statement. That makes the functions and "
 "variables available to be used in other parts of the CWL document."
 msgstr ""
-"`custom-functions.js` ファイルは、`$include: custom-functions.js` "
-"という記述でCWL定義に含まれます。これにより、関数と変数がCWL定義の他の部分で使用できるようになります。"
+"`custom-functions.js` ファイルは、`$include: custom-functions.js` という記述"
+"でCWL定義に含まれます。これにより、関数と変数がCWL定義の他の部分で使用できる"
+"ようになります。"
 
 #: ../../src/topics/expressions.md:175 82c02dd2446b4de9a4c4b87736107b30
-#, fuzzy
 msgid "Running `hello-world-expressionlib-external.cwl`."
 msgstr "`hello-world-expressionlib-external.cwl`実行しています。"
 
@@ -2610,7 +2607,6 @@ msgid "Running `hello-world-expressionlib.cwl`."
 msgstr "`hello-world-expressionlib.cwl`を実行する。"
 
 #: ../../src/topics/expressions.md:200 8b797cfb232f4e5da51f6c21e9a8e7e3
-#, fuzzy
 msgid ""
 "The `$include` statement can be used to include a file from the local "
 "disk or from a remote location. It works with both relative and absolute "
@@ -2618,10 +2614,10 @@ msgid ""
 "`$include`](https://www.commonwl.org/v1.0/SchemaSalad.html#Include) from "
 "the CWL specification to learn more about it."
 msgstr ""
-"`$include` "
-"ステートメントを使用すると、ローカルディスクまたはリモートロケーションからファイルをインクルードすることができます。相対パスと絶対パスの両方で動作します。CWL仕様の[text"
-" "
-"about`$include`](https://www.commonwl.org/v1.0/SchemaSalad.html#Include)を読むと、より詳しく知ることができます。"
+"`$include` ステートメントを使用すると、ローカルディスクまたはリモートロケーシ"
+"ョンからファイルをインクルードすることができます。相対パスと絶対パスの両方で"
+"動作します。CWL仕様の[`$include`について](https://www.commonwl.org/v1.0/"
+"SchemaSalad.html#Include)を読むと、より詳しく知ることができます。"
 
 #: ../../src/topics/file-formats.md:1 ac906f26116c45d882e1afa42ae38e34
 msgid "File Formats"
@@ -2662,11 +2658,11 @@ msgid ""
 msgstr "次のチュートリアルで、`$namespaces` と`$schemas` の部分をより詳しく説明しますので、今は気にしないでください。"
 
 #: ../../src/topics/file-formats.md:17 c04841dbf4be4cf8a22cceca8b08bd14
-#, fuzzy
 msgid ""
 "Note that for added value `cwltool` can do some basic reasoning based on "
 "file formats and warn you if there seem to be some obvious mismatches."
-msgstr "なお、さらなる利点として`cwltool` は、ファイル形式に基づく基本的な推論を行い、明らかな不一致があるようであれば警告を発します。"
+msgstr "なお、さらなる利点として`cwltool` は、ファイル形式に基づく基本的な推論を行い"
+"、明らかな不一致があるようであれば警告を発します。"
 
 #: ../../src/topics/file-formats.md:20 c5f6f6e4c23e4bf19dee69acb8ebed8e
 msgid "`metadata_example.cwl`"
@@ -4059,29 +4055,26 @@ msgid "What's going on here?  Let's break it down:"
 msgstr "どうなっているのでしょう？  分解してみましょう："
 
 #: ../../src/topics/workflows.md:212 6428bd7bd3be4393bfe5675f8e45ff94
-#, fuzzy
 msgid ""
 "The `cwlVersion` field indicates the version of the CWL spec used by the "
 "document.  The `class` field indicates this document describes a "
 "workflow."
 msgstr ""
-"`cwlVersion` フィールドは、この文書が使用するCWL仕様のバージョンを示します。  ` class` "
-"フィールドは、この文書がワークフローを記述していることを示します。"
+"`cwlVersion` フィールドは、この文書が使用するCWL仕様のバージョンを示します。"
+"  ` class` フィールドは、この文書がワークフローを記述していることを示します。"
 
 #: ../../src/topics/workflows.md:221 d6abec8805f649fca668292412263f78
-#, fuzzy
 msgid ""
 "The `inputs` section describes the inputs of the workflow.  This is a "
 "list of input parameters where each parameter consists of an identifier "
 "and a data type.  These parameters can be used as sources for input to "
 "specific workflows steps."
 msgstr ""
-"`inputs` セクションでは、ワークフローの入力について記述します。  "
-"これは入力パラメータのリストであり、各パラメータは識別子とデータ型から構成されます。  "
-"これらのパラメータは、特定のワークフロー・ステップへの入力ソースとして使用できます。"
+"`inputs` セクションでは、ワークフローの入力について記述します。  これは入力パ"
+"ラメータのリストであり、各パラメータは識別子とデータ型から構成されます。  こ"
+"れらのパラメータは、特定のワークフロー・ステップへの入力として使用できます。"
 
 #: ../../src/topics/workflows.md:233 22bf3e4910ef4f86a2e8f6d5a6cf0d42
-#, fuzzy
 msgid ""
 "The `outputs` section describes the outputs of the workflow.  This is a "
 "list of output parameters where each parameter consists of an identifier "
@@ -4089,9 +4082,10 @@ msgid ""
 "`classfile` of the `compile` step to the workflow output parameter "
 "`compiled_class`."
 msgstr ""
-"`outputs` セクションでは、ワークフローの出力について記述します。  "
-"これは出力パラメータのリストであり、各パラメータは識別子とデータ型から構成されます。  ` outputSource` は、`compile` "
-"ステップの出力パラメータ`classfile` を、ワークフロー出力パラメータ`compiled_class` に接続します。"
+"`outputs` セクションでは、ワークフローの出力について記述します。  これは出力"
+"パラメータのリストであり、各パラメータは識別子とデータ型から構成されます。  `"
+" outputSource` は、`compile` ステップの出力パラメータ`classfile` "
+"を、ワークフロー出力パラメータ`compiled_class` とします。"
 
 #: ../../src/topics/workflows.md:248 e0429688fce445da8083e69323e5b020
 #, fuzzy
@@ -4301,26 +4295,31 @@ msgstr ""
 "定義の中に埋め込んだことにお気づきでしょうか。これは一般的にベストプラクティスではありません。なぜなら、そのツールを再利用できないからです。このケースでそれを行う理由は、コマンドラインに、このワークフロー定義内でしか意味をなさないファイル名がハードコーディングされているためです。"
 
 #: ../../src/topics/workflows.md:389 afe43b9e92e949a589f493293eff2903
-#, fuzzy
 msgid ""
 "In this example we had to prepare a tar file outside, but only because "
 "our inner workflow was designed to take that as an input. A better "
 "refactoring of the inner workflow would be to take a list of Java files "
 "to compile, which would simplify its usage as a tool step in other "
 "workflows."
-msgstr "この例では、外部にtarファイルを用意する必要がありましたが、これは内部のワークフローがそれを入力として受け取るように設計されているためです。内部ワークフローのリファクタリングとしては、コンパイルするJavaファイルのリストを受け取るようにすれば、他のワークフローにおけるツールステップとしての使い方が簡単になります。"
+msgstr ""
+"この例では、外部にtarファイルを用意する必要がありました。これは内部ワークフロ"
+"ーがそれを入力として受け取るように設計されているためです。内部ワークフローの"
+"リファクタリングとしては、コンパイルするjavaファイルのリストを受け取るように"
+"すれば、他のワークフローにおいてもツールステップとしての使い方が簡単になりま"
+"す。"
 
 #: ../../src/topics/workflows.md:394 239eef3a740d42a69208a8f4e716d2b3
-#, fuzzy
 msgid ""
 "Nested workflows can be a powerful feature to generate higher-level "
 "functional and reusable workflow units - but just like for creating a CWL"
 " Tool description, care must be taken to improve its usability in "
 "multiple workflows."
-msgstr "ネストされたワークフローは、より高機能で再利用可能なワークフローユニットを生成する強力な機能ですが、CWLツール定義の作成と同様に、複数のワークフローでの使い勝手を向上させるための配慮が必要です。"
+msgstr ""
+"ネストされたワークフローは、より高機能で再利用可能なワークフローユニットを生"
+"成する強力な機能ですが、CWLツール定義の作成と同様に、複数のワークフローでの使"
+"い勝手を向上させるための配慮が必要です。"
 
 #: ../../src/topics/workflows.md:398 96d1ca78cc324f40b61c4b7330447db2
-#, fuzzy
 msgid "Scattering Steps"
 msgstr "Scatter ステップ"
 
