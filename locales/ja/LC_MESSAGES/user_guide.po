@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: Common Workflow Language User Guide\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-12-16 11:48+0100\n"
-"PO-Revision-Date: 2024-03-20 01:01+0000\n"
+"PO-Revision-Date: 2024-04-06 01:01+0000\n"
 "Last-Translator: Manabu ISHII <manabu.ishii.rb@gmail.com>\n"
 "Language-Team: Japanese <https://hosted.weblate.org/projects/commonwl/"
 "user-guide/ja/>\n"
@@ -795,15 +795,15 @@ msgstr ""
 
 #: ../../src/introduction/basic-concepts.md:151
 #: b6a5cd431c324078a9a4e1513a14ee28
-#, fuzzy
 msgid ""
 "Hints are similar to requirements, but while requirements list features "
 "that are required, hints list optional features. Requirements are "
 "explained in detail in the [Requirements](../topics/requirements-and-"
 "hints.md) section."
 msgstr ""
-"Hintsはrequirementsと似ていますが、requirementsが必須の機能を列挙するのに対し、hintsはオプションの機能を列挙します。requirementsについては、[requirements](../topics"
-"/requirements-and-hints.md) セクションで詳しく説明しています。"
+"HintsはRequirementsと似ていますが、Requirementsが必須機能を列挙するのに対し、"
+"Hintsはオプションの機能を列挙します。Requirementsについては、[Requirements](."
+"./topics/requirements-and-hints.md) セクションで詳しく説明しています。"
 
 #: ../../src/introduction/basic-concepts.md:155
 #: 88d7bad84dd341d2abb33673b8b8f250
@@ -826,14 +826,14 @@ msgstr ""
 
 #: ../../src/introduction/basic-concepts.md:167
 #: 4ea1d3bf04dc42f0bc6735a45b9e0dc0
-#, fuzzy
 msgid ""
 "CWL has roots in \"make\" and many similar tools that determine order of "
 "execution, based on dependencies between tasks. However, unlike \"make\","
 " CWL tasks are isolated, and you must be explicit about your inputs and "
 "outputs."
 msgstr ""
-"CWLのルーツは、タスク間の依存関係に基づき、実行順序を決定する \"make\" や多くの類似ツールにあります。しかし、\"make\" "
+"CWLのルーツは、タスク間の依存関係に基づき、実行順序を決定する \"make\" "
+"や多くの類似ツールにあります。しかし、\"make\" "
 "とは異なり、CWLのタスクは分離されており、入力と出力を明示する必要があります。"
 
 #: ../../src/introduction/basic-concepts.md:171
@@ -911,12 +911,14 @@ msgid "Introduction"
 msgstr "はじめに"
 
 #: ../../src/introduction/index.md:3 08db628a949b4513b824ee334e70a7df
-#, fuzzy
 msgid ""
 "This section will guide you through a short introduction to CWL, the "
 "prerequisites for following this user guide, and some basic concepts that"
 " are useful to know before reading the rest of the user guide."
-msgstr "このセクションでは、CWLの簡単な紹介、このユーザーガイドに従うための前提条件、そしてユーザーガイドの他の部分を読む前に知っておくと便利な基本概念について案内します。"
+msgstr ""
+"このセクションでは、CWLの簡単な紹介、このユーザーガイドに従うための前提条件、"
+"そしてユーザーガイドの他の部分を読む前に知っておくと便利な基本概念について案"
+"内します。"
 
 #: ../../src/introduction/prerequisites.md:1 d3f5749a76c14fdf8052f5f683d11b9e
 msgid "Prerequisites"
@@ -1285,15 +1287,14 @@ msgid "`hello_world.cwl`"
 msgstr "`hello_world.cwl`"
 
 #: ../../src/introduction/quick-start.md:22 6a13fb9112ab41acb60dc65b3656f63e
-#, fuzzy
 msgid ""
 "The example above is just a wrapper for the `echo` command-line tool. "
 "Running the workflow above with the default input values will produce the"
 " same result as the command-line `echo \"Hello World\"`."
 msgstr ""
-"上記の例は、`echo` "
-"のコマンドラインツールのラッパーに過ぎません。デフォルトの入力値で上記のワークフローを実行すると、コマンドラインと同じ結果が得られます`echo "
-"\"Hello World\"`."
+"上記の例は、`echo` のCommandLineToolのラッパーに過ぎません。デフォルトの入力"
+"値で上記のワークフローを実行すると、コマンドラインと同じ結果が得られます`"
+"echo \"Hello World\"`."
 
 #: ../../src/introduction/quick-start.md:27 7b2ae93353184faea0ae4f4acdfc3350
 #, fuzzy
@@ -1716,12 +1717,10 @@ msgstr ""
 "しないオプションでツールの定義を複雑にし過ぎないようにしましょう。"
 
 #: ../../src/topics/best-practices.md:73 ef5a5f9b253c4ca3916802a695fb7c6d
-#, fuzzy
 msgid ""
 "Custom types should be defined with one external YAML per type definition"
 " for re-use."
-msgstr "カスタム型は、再利用のため、タイプ定義ごとに1つの外部YAMLで定義した方が良いで"
-"す。"
+msgstr "カスタム型は、型定義ごとに1つの外部YAMLで定義すると再利用しやすくなります。"
 
 #: ../../src/topics/best-practices.md:76 ff59f40e84004523904e3094be07cc80
 msgid "Include a top-level short `label` summarising the tool/workflow."
@@ -2565,27 +2564,24 @@ msgid ""
 msgstr "`capitalizeWords` 関数を外部ファイル`custom-functions.js` に移動し、CWL 定義でインポートしてみましょう："
 
 #: ../../src/topics/expressions.md:158 71ac99c65d15451cbbf58d1e81934010
-#, fuzzy
 msgid "`custom-functions.js`"
 msgstr "`custom-functions.js`"
 
 #: ../../src/topics/expressions.md:164 60918e53189243d3872e61c7a4de20fc
-#, fuzzy
 msgid "`hello-world-expressionlib-external.cwl`"
 msgstr "`hello-world-expressionlib-external.cwl`"
 
 #: ../../src/topics/expressions.md:171 ad2a74bd983b47869dc78b2eb7b6fce1
-#, fuzzy
 msgid ""
 "The `custom-functions.js` file is included in the CWL document with the "
 "`$include: custom-functions.js` statement. That makes the functions and "
 "variables available to be used in other parts of the CWL document."
 msgstr ""
-"`custom-functions.js` ファイルは、`$include: custom-functions.js` "
-"という記述でCWL定義に含まれます。これにより、関数と変数がCWL定義の他の部分で使用できるようになります。"
+"`custom-functions.js` ファイルは、`$include: custom-functions.js` という記述"
+"でCWL定義に含まれます。これにより、関数と変数がCWL定義の他の部分で使用できる"
+"ようになります。"
 
 #: ../../src/topics/expressions.md:175 82c02dd2446b4de9a4c4b87736107b30
-#, fuzzy
 msgid "Running `hello-world-expressionlib-external.cwl`."
 msgstr "`hello-world-expressionlib-external.cwl`実行しています。"
 
@@ -2610,7 +2606,6 @@ msgid "Running `hello-world-expressionlib.cwl`."
 msgstr "`hello-world-expressionlib.cwl`を実行する。"
 
 #: ../../src/topics/expressions.md:200 8b797cfb232f4e5da51f6c21e9a8e7e3
-#, fuzzy
 msgid ""
 "The `$include` statement can be used to include a file from the local "
 "disk or from a remote location. It works with both relative and absolute "
@@ -2618,10 +2613,10 @@ msgid ""
 "`$include`](https://www.commonwl.org/v1.0/SchemaSalad.html#Include) from "
 "the CWL specification to learn more about it."
 msgstr ""
-"`$include` "
-"ステートメントを使用すると、ローカルディスクまたはリモートロケーションからファイルをインクルードすることができます。相対パスと絶対パスの両方で動作します。CWL仕様の[text"
-" "
-"about`$include`](https://www.commonwl.org/v1.0/SchemaSalad.html#Include)を読むと、より詳しく知ることができます。"
+"`$include` ステートメントを使用すると、ローカルディスクまたはリモートロケーシ"
+"ョンからファイルをインクルードすることができます。相対パスと絶対パスの両方で"
+"動作します。CWL仕様の[`$include`について](https://www.commonwl.org/v1.0/"
+"SchemaSalad.html#Include)を読むと、より詳しく知ることができます。"
 
 #: ../../src/topics/file-formats.md:1 ac906f26116c45d882e1afa42ae38e34
 msgid "File Formats"
@@ -2662,11 +2657,11 @@ msgid ""
 msgstr "次のチュートリアルで、`$namespaces` と`$schemas` の部分をより詳しく説明しますので、今は気にしないでください。"
 
 #: ../../src/topics/file-formats.md:17 c04841dbf4be4cf8a22cceca8b08bd14
-#, fuzzy
 msgid ""
 "Note that for added value `cwltool` can do some basic reasoning based on "
 "file formats and warn you if there seem to be some obvious mismatches."
-msgstr "なお、さらなる利点として`cwltool` は、ファイル形式に基づく基本的な推論を行い、明らかな不一致があるようであれば警告を発します。"
+msgstr "なお、さらなる利点として`cwltool` は、ファイル形式に基づく基本的な推論を行い"
+"、明らかな不一致があるようであれば警告を発します。"
 
 #: ../../src/topics/file-formats.md:20 c5f6f6e4c23e4bf19dee69acb8ebed8e
 msgid "`metadata_example.cwl`"
@@ -4059,29 +4054,26 @@ msgid "What's going on here?  Let's break it down:"
 msgstr "どうなっているのでしょう？  分解してみましょう："
 
 #: ../../src/topics/workflows.md:212 6428bd7bd3be4393bfe5675f8e45ff94
-#, fuzzy
 msgid ""
 "The `cwlVersion` field indicates the version of the CWL spec used by the "
 "document.  The `class` field indicates this document describes a "
 "workflow."
 msgstr ""
-"`cwlVersion` フィールドは、この文書が使用するCWL仕様のバージョンを示します。  ` class` "
-"フィールドは、この文書がワークフローを記述していることを示します。"
+"`cwlVersion` フィールドは、この文書が使用するCWL仕様のバージョンを示します。"
+"  ` class` フィールドは、この文書がワークフローを記述していることを示します。"
 
 #: ../../src/topics/workflows.md:221 d6abec8805f649fca668292412263f78
-#, fuzzy
 msgid ""
 "The `inputs` section describes the inputs of the workflow.  This is a "
 "list of input parameters where each parameter consists of an identifier "
 "and a data type.  These parameters can be used as sources for input to "
 "specific workflows steps."
 msgstr ""
-"`inputs` セクションでは、ワークフローの入力について記述します。  "
-"これは入力パラメータのリストであり、各パラメータは識別子とデータ型から構成されます。  "
-"これらのパラメータは、特定のワークフロー・ステップへの入力ソースとして使用できます。"
+"`inputs` セクションでは、ワークフローの入力について記述します。  これは入力パ"
+"ラメータのリストであり、各パラメータは識別子とデータ型から構成されます。  こ"
+"れらのパラメータは、特定のワークフロー・ステップへの入力として使用できます。"
 
 #: ../../src/topics/workflows.md:233 22bf3e4910ef4f86a2e8f6d5a6cf0d42
-#, fuzzy
 msgid ""
 "The `outputs` section describes the outputs of the workflow.  This is a "
 "list of output parameters where each parameter consists of an identifier "
@@ -4089,9 +4081,10 @@ msgid ""
 "`classfile` of the `compile` step to the workflow output parameter "
 "`compiled_class`."
 msgstr ""
-"`outputs` セクションでは、ワークフローの出力について記述します。  "
-"これは出力パラメータのリストであり、各パラメータは識別子とデータ型から構成されます。  ` outputSource` は、`compile` "
-"ステップの出力パラメータ`classfile` を、ワークフロー出力パラメータ`compiled_class` に接続します。"
+"`outputs` セクションでは、ワークフローの出力について記述します。  これは出力"
+"パラメータのリストであり、各パラメータは識別子とデータ型から構成されます。  `"
+" outputSource` は、`compile` ステップの出力パラメータ`classfile` "
+"を、ワークフロー出力パラメータ`compiled_class` とします。"
 
 #: ../../src/topics/workflows.md:248 e0429688fce445da8083e69323e5b020
 #, fuzzy
@@ -4301,26 +4294,31 @@ msgstr ""
 "定義の中に埋め込んだことにお気づきでしょうか。これは一般的にベストプラクティスではありません。なぜなら、そのツールを再利用できないからです。このケースでそれを行う理由は、コマンドラインに、このワークフロー定義内でしか意味をなさないファイル名がハードコーディングされているためです。"
 
 #: ../../src/topics/workflows.md:389 afe43b9e92e949a589f493293eff2903
-#, fuzzy
 msgid ""
 "In this example we had to prepare a tar file outside, but only because "
 "our inner workflow was designed to take that as an input. A better "
 "refactoring of the inner workflow would be to take a list of Java files "
 "to compile, which would simplify its usage as a tool step in other "
 "workflows."
-msgstr "この例では、外部にtarファイルを用意する必要がありましたが、これは内部のワークフローがそれを入力として受け取るように設計されているためです。内部ワークフローのリファクタリングとしては、コンパイルするJavaファイルのリストを受け取るようにすれば、他のワークフローにおけるツールステップとしての使い方が簡単になります。"
+msgstr ""
+"この例では、外部にtarファイルを用意する必要がありました。これは内部ワークフロ"
+"ーがそれを入力として受け取るように設計されているためです。内部ワークフローの"
+"リファクタリングとしては、コンパイルするjavaファイルのリストを受け取るように"
+"すれば、他のワークフローにおいてもツールステップとしての使い方が簡単になりま"
+"す。"
 
 #: ../../src/topics/workflows.md:394 239eef3a740d42a69208a8f4e716d2b3
-#, fuzzy
 msgid ""
 "Nested workflows can be a powerful feature to generate higher-level "
 "functional and reusable workflow units - but just like for creating a CWL"
 " Tool description, care must be taken to improve its usability in "
 "multiple workflows."
-msgstr "ネストされたワークフローは、より高機能で再利用可能なワークフローユニットを生成する強力な機能ですが、CWLツール定義の作成と同様に、複数のワークフローでの使い勝手を向上させるための配慮が必要です。"
+msgstr ""
+"ネストされたワークフローは、より高機能で再利用可能なワークフローユニットを生"
+"成する強力な機能ですが、CWLツール定義の作成と同様に、複数のワークフローでの使"
+"い勝手を向上させるための配慮が必要です。"
 
 #: ../../src/topics/workflows.md:398 96d1ca78cc324f40b61c4b7330447db2
-#, fuzzy
 msgid "Scattering Steps"
 msgstr "Scatter ステップ"
 
@@ -4499,11 +4497,11 @@ msgid "`scatter-nested-workflow.cwl`"
 msgstr "`scatter-nested-workflow.cwl`"
 
 #: ../../src/topics/workflows.md:519 508ef2240879445594b0f262ed11a01d
-#, fuzzy
 msgid ""
 "Now the scatter acts on a single step, but that step consists of two "
 "steps so each step is performed in parallel."
-msgstr "今、scatter は1つのステップに作用しますが、そのステップは2つのステップで構成されているので、各ステップは並行して実行されます。"
+msgstr "今、scatter は1つのステップに作用しますが、そのステップは2つのステップで構成"
+"されているので、各ステップは並行して実行されます。"
 
 #: ../../src/topics/workflows.md:522 b0bf01dad1234a1db3c87b10953e42ef
 msgid "Conditional Workflows"
@@ -4543,33 +4541,31 @@ msgstr ""
 " は、条件の検証が行われる場所です。この場合、ワークフローから`in1` に値`&lt; 1` が含まれるときのみ、このステップが実行されます。"
 
 #: ../../src/topics/workflows.md:587 b33ecd2b8af042feb08687e32d4b6bbf
-#, fuzzy
 msgid ""
 "Using the following command `cwltool cond-wf-003.1.cwl --val 0` the value"
 " will pass the first conditional step and will therefore be executed and "
 "is shown in the log by `INFO [step step1] start` whereas the second step "
 "is skipped as indicated by `INFO [step step2] will be skipped`."
 msgstr ""
-"次のコマンドを実行します。`cwltool cond-wf-003.1.cwl --val 0` "
-"この値は最初の条件ステップを通過するため実行され、ログには`INFO [step step1] start` "
-"で示されています。一方、2番目のステップは`INFO [step step2] will be skipped` で示されているようにスキップされ"
-" ます。"
+"次のコマンド`cwltool cond-wf-003.1.cwl --val 0` を実行します。この値(val)は最"
+"初の条件ステップを通過するため実行され、ログには`INFO [step step1] start` "
+"で示されています。一方、2番目のステップは`INFO [step step2] will be skipped` "
+"で示されているようにスキップされ ます。"
 
 #: ../../src/topics/workflows.md:607 7cd80b31a94543358ece7a2d413adce9
-#, fuzzy
 msgid ""
 "When a value of 3 is given the first conditional step will not be "
 "executed but the second step will `cwltool cond-wf-003.1.cwl --val 3`."
 msgstr ""
-"値3が与えられた場合、最初の条件ステップは実行されませんが、2番目の条件ステップは実行されます`cwltool cond-wf-003.1.cwl"
-" --val 3`."
+"`cwltool cond-wf-003.1.cwl --val 3`のように値(val)として3が与えられた場合、最"
+"初の条件ステップは実行されませんが、2番目の条件ステップは実行されます."
 
 #: ../../src/topics/workflows.md:627 9679e32f65e0482a8b083387e4a18c1f
-#, fuzzy
 msgid ""
 "If no conditions are met for example when using `--val 2` the workflow "
 "will raise a permanentFail."
-msgstr "`--val 2` を使用した場合など、条件を満たさない場合は、ワークフローはpermanentFailを発生させ、失敗となります。"
+msgstr "`--val 2` を使用した場合など、条件を満たさない場合は、ワークフローはpermanent"
+"Failを発生させ、失敗となります。"
 
 #: ../../src/topics/yaml-guide.md:1 4fa76441f95d45fab76ab7eef8d7d4d2
 msgid "YAML Guide"
