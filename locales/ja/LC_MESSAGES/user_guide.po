@@ -9,8 +9,8 @@ msgstr ""
 "Project-Id-Version: Common Workflow Language User Guide\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-12-16 11:48+0100\n"
-"PO-Revision-Date: 2024-04-08 08:23+0000\n"
-"Last-Translator: Manabu ISHII <manabu.ishii.rb@gmail.com>\n"
+"PO-Revision-Date: 2024-04-08 08:39+0000\n"
+"Last-Translator: Michael Crusoe <mrc@commonwl.org>\n"
 "Language-Team: Japanese <https://hosted.weblate.org/projects/commonwl/"
 "user-guide/ja/>\n"
 "Language: ja\n"
@@ -758,7 +758,7 @@ msgid ""
 " - enables JavaScript in expressions."
 msgstr ""
 "[`InlineJavascriptWorkflow`](https://w3id.org/cwl/Workflow."
-"html#InlineJavascriptRequirement)  - でJavaScriptを有効にします。"
+"html#InlineJavascriptRequirement) - でJavaScriptを有効にします。"
 
 #: ../../src/introduction/basic-concepts.md:142
 #: 6f9854ae1b884ad39f88d2f39d66cb98
@@ -767,7 +767,7 @@ msgid ""
 " - enables nested workflows."
 msgstr ""
 "[`SubworkflowFeatureRequirement`](https://w3id.org/cwl/Workflow."
-"html#SubworkflowFeatureRequirement)  - ネストしたワークフローを有効にします。"
+"html#SubworkflowFeatureRequirement) - ネストしたワークフローを有効にします。"
 
 #: ../../src/introduction/basic-concepts.md:143
 #: 23fef6de073f4da18118e4d0512670fe
@@ -776,7 +776,7 @@ msgid ""
 " - controls staging files in the input directory."
 msgstr ""
 "[`InitialWorkDirRequirement`](https://w3id.org/cwl/Workflow."
-"html#InitialWorkDirRequirement)  - "
+"html#InitialWorkDirRequirement) - "
 "入力ディレクトリのステージングファイルを制御します。"
 
 #: ../../src/introduction/basic-concepts.md:145
@@ -876,8 +876,8 @@ msgid ""
 "The Command Line Tool Description Standard: "
 "<[https://www.commonwl.org/v1.2/CommandLineTool.html](https://w3id.org/cwl/CommandLineTool.html)>"
 msgstr ""
-"<[`CommandLineTool`](https://www.commonwl.org/v1.0/CommandLineTool."
-"html#CommandLineTool)>から"
+"<[https://www.commonwl.org/v1.2/CommandLineTool.html](https://w3id.org/cwl/"
+"CommandLineTool.html)>から"
 
 #: ../../src/introduction/basic-concepts.md:183
 #: 44af015fa36644b99f07338d241d29c1
@@ -3099,7 +3099,6 @@ msgstr ""
 "に変更すると、コマンドラインやジョブ入力ファイルで何も指定されていない場合にデフォルト値を持つようになります。"
 
 #: ../../src/topics/inputs.md:295 b5055c77f85e43609fe3e9b9839778e3
-#, fuzzy
 msgid ""
 "Here, the boolean “or” operator `||` in JavaScript is used for its "
 "_short-circuiting_ property. If `inputs.file_format` is “true” in a "
@@ -3110,11 +3109,11 @@ msgid ""
 "reasonable default can be provided there."
 msgstr ""
 "ここでは、JavaScriptのブール値 \"or\"、 \"演算子 `||` は、その_short-"
-"circuiting_プロパティに使用されます。`inputs.file_format`がブール値の \"true "
-"\"である場合（例えば、列挙された有効な空でない文字列）、式の評価は`||`の最初"
-"のオペランドで停止します。しかし、`inputs.file_format`が`null`の場合、式全体"
-"の値は2番目のオペランドの値になります。これにより合理的なデフォルト値を提供し"
-"ます。"
+"circuiting_プロパティに使用されます。`inputs.file_format`がブール値の \"true"
+"\"である場合（例えば、列挙された有効な空でない文字列）、式の評価は "
+"`||`の最初のオペランドで停止します。しかし、 `inputs.file_format`が`null`の場"
+"合、式全体の値は2番目のオペランドの値になります。これにより合理的なデフォルト"
+"値を提供します。"
 
 #: ../../src/topics/metadata-and-authorship.md:1
 #: 723c2232310c4276aeac2bd6728d2912
