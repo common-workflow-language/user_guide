@@ -21,9 +21,8 @@ CWL Viewer or `cwltool`:
 :working-directory: src/_includes/cwl/operations/
 ```
 
-The output of the command above can be rendered with a Graphviz renderer. The
-following image is rendered with the Sphinx `{graphviz}` directive (this user
-guide is built with Sphinx):
+The output of the command above can be rendered `cwltool --print-dot operations.cwl | dot -Tsvg >
+operations.svg ; open operations.svg`.
 
 ```{graphviz}
 
