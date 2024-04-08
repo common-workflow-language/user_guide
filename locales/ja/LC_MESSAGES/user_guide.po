@@ -10,7 +10,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-12-16 11:48+0100\n"
 "PO-Revision-Date: 2024-04-08 08:23+0000\n"
-"Last-Translator: Michael Crusoe <mrc@commonwl.org>\n"
+"Last-Translator: Manabu ISHII <manabu.ishii.rb@gmail.com>\n"
 "Language-Team: Japanese <https://hosted.weblate.org/projects/commonwl/"
 "user-guide/ja/>\n"
 "Language: ja\n"
@@ -872,11 +872,12 @@ msgstr "CWLサイト内の「CWL仕様」ページ：<https://www.commonwl.org/s
 
 #: ../../src/introduction/basic-concepts.md:182
 #: a5b37924c7d04ab984ff2542847afc4a
-#, fuzzy
 msgid ""
 "The Command Line Tool Description Standard: "
 "<[https://www.commonwl.org/v1.2/CommandLineTool.html](https://w3id.org/cwl/CommandLineTool.html)>"
-msgstr "[`CommandLineTool`](https://www.commonwl.org/v1.0/CommandLineTool.html#CommandLineTool)から"
+msgstr ""
+"<[`CommandLineTool`](https://www.commonwl.org/v1.0/CommandLineTool."
+"html#CommandLineTool)>から"
 
 #: ../../src/introduction/basic-concepts.md:183
 #: 44af015fa36644b99f07338d241d29c1
@@ -1148,7 +1149,6 @@ msgid "Running `true_shebang.cwl` with a shebang."
 msgstr "`true_shebang.cwl` をシェバングで実行する。"
 
 #: ../../src/introduction/prerequisites.md:141 11fea992c00940d29eb29ccf4b9370e9
-#, fuzzy
 msgid ""
 "The *shebang* is the two-character sequence `#!` at the beginning of a "
 "script. When the script is executable, the operating system will execute "
@@ -1157,10 +1157,10 @@ msgid ""
 " using a hard-coded location, since `/usr/bin/env [executable]` looks for"
 " the `[executable]` program in the system `PATH`,"
 msgstr ""
-"*shebang* は、スクリプトの冒頭の2文字列`#!` のことです。スクリプトが実行可能"
-"な場合、オペレーティングシステムは、shebangの後に指定された実行可能ファイルを"
-"使用してスクリプトを実行します。`/usr/bin/env <executable>` は` <executable>`"
-" プログラムを設定されている環境変数`PATH` "
+"*shebang* (訳注：発音、シバン、シェバン)は、スクリプトの冒頭の2文字列`#!` の"
+"ことです。スクリプトが実行可能な場合、オペレーティングシステムは、shebangの後"
+"に指定された実行可能ファイルを使用してスクリプトを実行します。`/usr/bin/env "
+"<executable>` は` <executable>` プログラムを設定されている環境変数`PATH` "
 "の中で探すので、ハードコードされた場所を使うよりも`/usr/bin/env <executable>`"
 " を使うことが良い習慣と考えられています"
 
@@ -1297,14 +1297,14 @@ msgstr ""
 "echo \"Hello World\"`."
 
 #: ../../src/introduction/quick-start.md:27 7b2ae93353184faea0ae4f4acdfc3350
-#, fuzzy
 msgid ""
 "In CWL, there is a distinction between a command-line tool and a "
 "workflow. But for the sake of simplicity, we are using the term "
 "“workflow” here. You will learn more about this in the [basic concepts"
 "](basic-concepts.md) section."
 msgstr ""
-"CWLでは、CommandLineToolとWorkflowは区別されています。しかし、ここでは簡略化のため、「ワークフロー」という用語を使用しています。これについては、[基本概念"
+"CWLでは、CommandLineToolとWorkflowは区別されています。しかし、ここでは簡略化"
+"のため、「ワークフロー」という用語を使用しています。これについては、[基本概念"
 "](basic-concepts.md)のセクションで詳しく説明します。"
 
 #: ../../src/introduction/quick-start.md:32 1ed30b04073d47a9893774746479fb5d
@@ -1782,16 +1782,16 @@ msgid "Command Line Tool"
 msgstr "コマンドラインツール"
 
 #: ../../src/topics/command-line-tool.md:3 cf0f1c00c0b34c94a8e2460a700c303e
-#, fuzzy
 msgid ""
 "A command-line tool is a type of Process object that can be run by itself"
 " or as a Workflow step. It is a wrapper for a command like `ls`, `echo`, "
 "`tar`, etc. The command-line tool is defined in the `baseCommand` "
 "attribute of the command-line tool CWL document."
 msgstr ""
-"コマンドラインツールは、Processオブジェクトの一種であり、それ自体またはワークフローのステップとし "
-"て実行することができます。`ls`,`echo`,`tar` "
-"などのコマンドのラッパーです。コマンドラインツールは、コマンドラインツールCWL文書の`baseCommand` 属性で定義されています。"
+"CommandLineToolは、Processオブジェクトの一種であり、それ自体またはワークフロ"
+"ーのステップとして実行することができます。`ls`,`echo`,`tar` などの実行したい"
+"コマンドのラッパーです。実行したいコマンドは、CommandLineToolについてのCWL定"
+"義の`baseCommand` 属性で定義されています。"
 
 #: ../../src/topics/command-line-tool.md:8 7a180ba1f2d746a78b79be7e899cbad6
 msgid ""
@@ -1811,12 +1811,14 @@ msgid "`echo.cwl`"
 msgstr "`echo.cwl`"
 
 #: ../../src/topics/command-line-tool.md:57 e3a06ebe51b64b0183673a8acc04969f
-#, fuzzy
 msgid ""
 "The example above uses a simplified form to define inputs and outputs. "
 "You will learn more about in the [Inputs](../topics/inputs.md) and in the"
 " [Outputs](../topics/outputs.md) sections."
-msgstr "上記の例では、簡略化した形で入力と出力を定義しています。[Inputs](../topics/inputs.md)と[Outputs](../topics/outputs.md)のセクションで、より詳しく説明する予定です。"
+msgstr ""
+"上記の例では、簡略化した形で入力と出力を定義しています。[Inputs](../topics/"
+"inputs.md)と[Outputs](../topics/outputs."
+"md)のセクションで、より詳しく説明する予定です。"
 
 #: ../../src/topics/command-line-tool.md:68 2bab464d19d14562a6501373aff13905
 msgid "Network Access"
@@ -2499,15 +2501,16 @@ msgid "Using External Libraries and Inline JavaScript Code with `expressionLib`"
 msgstr "`expressionLib` による外部ライブラリの利用とインラインJavaScriptコードの利用"
 
 #: ../../src/topics/expressions.md:118 ea6cbaa5dae647538c0bd9a4d5cad3f9
-#, fuzzy
 msgid ""
 "The requirement "
 "[`InlineJavascriptRequirement`](https://w3id.org/cwl/CommandLineTool.html#InlineJavascriptRequirement)"
 " supports an `expressionLib` attribute that allows users to load external"
 " JavaScript files, or to provide inline JavaScript code."
 msgstr ""
-"`InlineJavascriptRequirement` は、`expressionLib` 属性をサポートし、ユーザーが外部 "
-"JavaScript ファイルを読み込んだり、インライン JavaScript コードを提供したりできるようにします。"
+"[`InlineJavascriptRequirement`](https://w3id.org/cwl/CommandLineTool."
+"html#InlineJavascriptRequirement)は、`expressionLib` 属性をサポートし、"
+"ユーザーが外部 JavaScript ファイルを読み込んだり、インライン JavaScript "
+"コードを提供したりできるようにします。"
 
 #: ../../src/topics/expressions.md:122 484dc17440524cfda4dc486a7c5d5f63
 msgid ""
