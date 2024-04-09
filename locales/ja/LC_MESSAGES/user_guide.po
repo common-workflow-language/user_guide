@@ -10,7 +10,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-12-16 11:48+0100\n"
 "PO-Revision-Date: 2024-04-09 09:01+0000\n"
-"Last-Translator: Michael Crusoe <mrc@commonwl.org>\n"
+"Last-Translator: Manabu ISHII <manabu.ishii.rb@gmail.com>\n"
 "Language-Team: Japanese <https://hosted.weblate.org/projects/commonwl/"
 "user-guide/ja/>\n"
 "Language: ja\n"
@@ -838,13 +838,14 @@ msgstr ""
 
 #: ../../src/introduction/basic-concepts.md:171
 #: c0f53138bf084939a54b0a576b44199f
-#, fuzzy
 msgid ""
 "The benefit of explicitness and isolation are flexibility, portability, "
 "and scalability; tools and workflows described with CWL can transparently"
 " leverage technologies such as Docker and be used with CWL "
 "implementations from different vendors."
-msgstr "CWLで定義されたツールやワークフローは、Dockerなどの技術を透過的に活用し、異なるベンダーのCWL実装と組み合わせて使用することができるためです。"
+msgstr ""
+"CWLで定義されたツールやワークフローは、Dockerなどの技術を透過的に活用し、異な"
+"るベンダーのCWL実装と組み合わせて使用することができるためです。"
 
 #: ../../src/introduction/basic-concepts.md:176
 #: 91d6eb4984a6410ba99616b6617ba9af
@@ -1590,7 +1591,6 @@ msgstr ""
 "[Apache 2.0][apache-license]です。"
 
 #: ../../src/topics/best-practices.md:20 384eb620dc31468e8c3f5f33a3436200
-#, fuzzy
 msgid ""
 "If possible, the license should be specified with its corresponding [SPDX"
 " identifier][spdx]. Construct the metadata field for the license by "
@@ -1825,7 +1825,6 @@ msgid "Network Access"
 msgstr "ネットワークアクセス"
 
 #: ../../src/topics/command-line-tool.md:69 201712f3ceee4d4ea56ab96d3fef97b0
-#, fuzzy
 msgid ""
 "This indicates whether a process requires outgoing IPv4/IPv6 network "
 "access.  Starting with CWL v1.1, programs are not granted network access "
@@ -1842,11 +1841,13 @@ msgstr ""
 msgid ""
 "CWL v1.0 command-line tools that are upgraded to v1.1 or v1.2 or v1.2 "
 "will have `networkAccess: true` set automatically."
-msgstr "CWL v1.0のコマンドラインツールをv1.1またはv1.2にアップグレードすると、自動的にネットワークアクセスを取得します。"
+msgstr ""
+"CWL v1.0のコマンドラインツールをv1.1またはv1."
+"2にアップグレードすると、自動的に`networkAccess: "
+"true`が追加されネットワークアクセスを取得します。"
 
 #: ../../src/topics/creating-files-at-runtime.md:1
 #: 17c5b4ee43cc4a979676ad27e473d046
-#, fuzzy
 msgid "Creating Files at Runtime"
 msgstr "実行時にファイルを作成する"
 
