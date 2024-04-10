@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: Common Workflow Language User Guide\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-12-16 11:48+0100\n"
-"PO-Revision-Date: 2024-04-06 01:01+0000\n"
+"PO-Revision-Date: 2024-04-09 09:01+0000\n"
 "Last-Translator: Manabu ISHII <manabu.ishii.rb@gmail.com>\n"
 "Language-Team: Japanese <https://hosted.weblate.org/projects/commonwl/"
 "user-guide/ja/>\n"
@@ -758,7 +758,7 @@ msgid ""
 " - enables JavaScript in expressions."
 msgstr ""
 "[`InlineJavascriptWorkflow`](https://w3id.org/cwl/Workflow."
-"html#InlineJavascriptRequirement)  - でJavaScriptを有効にします。"
+"html#InlineJavascriptRequirement) - でJavaScriptを有効にします。"
 
 #: ../../src/introduction/basic-concepts.md:142
 #: 6f9854ae1b884ad39f88d2f39d66cb98
@@ -767,7 +767,7 @@ msgid ""
 " - enables nested workflows."
 msgstr ""
 "[`SubworkflowFeatureRequirement`](https://w3id.org/cwl/Workflow."
-"html#SubworkflowFeatureRequirement)  - ネストしたワークフローを有効にします。"
+"html#SubworkflowFeatureRequirement) - ネストしたワークフローを有効にします。"
 
 #: ../../src/introduction/basic-concepts.md:143
 #: 23fef6de073f4da18118e4d0512670fe
@@ -776,7 +776,7 @@ msgid ""
 " - controls staging files in the input directory."
 msgstr ""
 "[`InitialWorkDirRequirement`](https://w3id.org/cwl/Workflow."
-"html#InitialWorkDirRequirement)  - "
+"html#InitialWorkDirRequirement) - "
 "入力ディレクトリのステージングファイルを制御します。"
 
 #: ../../src/introduction/basic-concepts.md:145
@@ -838,13 +838,14 @@ msgstr ""
 
 #: ../../src/introduction/basic-concepts.md:171
 #: c0f53138bf084939a54b0a576b44199f
-#, fuzzy
 msgid ""
 "The benefit of explicitness and isolation are flexibility, portability, "
 "and scalability; tools and workflows described with CWL can transparently"
 " leverage technologies such as Docker and be used with CWL "
 "implementations from different vendors."
-msgstr "CWLで定義されたツールやワークフローは、Dockerなどの技術を透過的に活用し、異なるベンダーのCWL実装と組み合わせて使用することができるためです。"
+msgstr ""
+"CWLで定義されたツールやワークフローは、Dockerなどの技術を透過的に活用し、異な"
+"るベンダーのCWL実装と組み合わせて使用することができるためです。"
 
 #: ../../src/introduction/basic-concepts.md:176
 #: 91d6eb4984a6410ba99616b6617ba9af
@@ -872,11 +873,12 @@ msgstr "CWLサイト内の「CWL仕様」ページ：<https://www.commonwl.org/s
 
 #: ../../src/introduction/basic-concepts.md:182
 #: a5b37924c7d04ab984ff2542847afc4a
-#, fuzzy
 msgid ""
 "The Command Line Tool Description Standard: "
 "<[https://www.commonwl.org/v1.2/CommandLineTool.html](https://w3id.org/cwl/CommandLineTool.html)>"
-msgstr "[`CommandLineTool`](https://www.commonwl.org/v1.0/CommandLineTool.html#CommandLineTool)から"
+msgstr ""
+"<[https://www.commonwl.org/v1.2/CommandLineTool.html](https://w3id.org/cwl/"
+"CommandLineTool.html)>から"
 
 #: ../../src/introduction/basic-concepts.md:183
 #: 44af015fa36644b99f07338d241d29c1
@@ -1148,7 +1150,6 @@ msgid "Running `true_shebang.cwl` with a shebang."
 msgstr "`true_shebang.cwl` をシェバングで実行する。"
 
 #: ../../src/introduction/prerequisites.md:141 11fea992c00940d29eb29ccf4b9370e9
-#, fuzzy
 msgid ""
 "The *shebang* is the two-character sequence `#!` at the beginning of a "
 "script. When the script is executable, the operating system will execute "
@@ -1157,10 +1158,10 @@ msgid ""
 " using a hard-coded location, since `/usr/bin/env [executable]` looks for"
 " the `[executable]` program in the system `PATH`,"
 msgstr ""
-"*shebang* は、スクリプトの冒頭の2文字列`#!` のことです。スクリプトが実行可能"
-"な場合、オペレーティングシステムは、shebangの後に指定された実行可能ファイルを"
-"使用してスクリプトを実行します。`/usr/bin/env <executable>` は` <executable>`"
-" プログラムを設定されている環境変数`PATH` "
+"*shebang* (訳注：発音、シバン、シェバン)は、スクリプトの冒頭の2文字列`#!` の"
+"ことです。スクリプトが実行可能な場合、オペレーティングシステムは、shebangの後"
+"に指定された実行可能ファイルを使用してスクリプトを実行します。`/usr/bin/env "
+"<executable>` は` <executable>` プログラムを設定されている環境変数`PATH` "
 "の中で探すので、ハードコードされた場所を使うよりも`/usr/bin/env <executable>`"
 " を使うことが良い習慣と考えられています"
 
@@ -1297,14 +1298,14 @@ msgstr ""
 "echo \"Hello World\"`."
 
 #: ../../src/introduction/quick-start.md:27 7b2ae93353184faea0ae4f4acdfc3350
-#, fuzzy
 msgid ""
 "In CWL, there is a distinction between a command-line tool and a "
 "workflow. But for the sake of simplicity, we are using the term "
 "“workflow” here. You will learn more about this in the [basic concepts"
 "](basic-concepts.md) section."
 msgstr ""
-"CWLでは、CommandLineToolとWorkflowは区別されています。しかし、ここでは簡略化のため、「ワークフロー」という用語を使用しています。これについては、[基本概念"
+"CWLでは、CommandLineToolとWorkflowは区別されています。しかし、ここでは簡略化"
+"のため、「ワークフロー」という用語を使用しています。これについては、[基本概念"
 "](basic-concepts.md)のセクションで詳しく説明します。"
 
 #: ../../src/introduction/quick-start.md:32 1ed30b04073d47a9893774746479fb5d
@@ -1346,7 +1347,7 @@ msgid ""
 "[OPTIONS] [CWL_DOCUMENT] [INPUTS_OBJECT]`. You can run the "
 "`hello_world.cwl` workflow without specifying any option:"
 msgstr ""
-"基本的に `cwltool` の使い方は、`cwltool [OPTIONS] [cwl_document] "
+"基本的に `cwltool` の使い方は、`cwltool [OPTIONS] [CWL_DOCUMENT] "
 "[INPUTS_OBJECT]`です。`hello_world.cwl` "
 "Workflowは、オプションを指定せずに実行することができます："
 
@@ -1590,7 +1591,6 @@ msgstr ""
 "[Apache 2.0][apache-license]です。"
 
 #: ../../src/topics/best-practices.md:20 384eb620dc31468e8c3f5f33a3436200
-#, fuzzy
 msgid ""
 "If possible, the license should be specified with its corresponding [SPDX"
 " identifier][spdx]. Construct the metadata field for the license by "
@@ -1639,8 +1639,8 @@ msgid ""
 "In tool descriptions, list dependencies using short name(s) under "
 "[`SoftwareRequirement`](https://w3id.org/cwl/CommandLineTool.html#SoftwareRequirement)."
 msgstr ""
-"ツール定義では、[`SoftwareRequirement`] (https://w3id.org/cwl/CommandLineTool"
-".html#SoftwareRequirement)."
+"ツール定義では、[`SoftwareRequirement`](https://w3id.org/cwl/CommandLineTool."
+"html#SoftwareRequirement)."
 "の下に、短い名前を使用して依存関係をリストアップします。"
 
 #: ../../src/topics/best-practices.md:47 6c9eaae099fa4ca4b0986b1c4146df50
@@ -1669,9 +1669,9 @@ msgid ""
 "known to work with this description under "
 "[`SoftwareRequirement`](https://w3id.org/cwl/CommandLineTool.html#SoftwareRequirement)."
 msgstr ""
-"ツール定義では、[`SoftwareRequirement`] (https://w3id.org/cwl/CommandLineTool"
-".html#SoftwareRequirement)の下に、このツール定義で動作することが確認されてい"
-"るツールのバージョンのリストを書きます。"
+"ツール定義では、[`SoftwareRequirement`](https://w3id.org/cwl/CommandLineTool."
+"html#SoftwareRequirement)の下に、このツール定義で動作することが確認されている"
+"ツールのバージョンのリストを書きます。"
 
 #: ../../src/topics/best-practices.md:58 88806cb0462f4359801c1fa0ff0ebcc0
 #, fuzzy
@@ -1712,9 +1712,10 @@ msgid ""
 "(sub)command is capable of more. Don't overcomplicate your tool "
 "descriptions with options that you don't need or use."
 msgstr ""
-"各`CommandLineTool` の定義は、たとえ（サブ）コマンドがそれ以上の機能を備えて"
-"いたとしても、一つの使用方法のみに焦点を当てるべきです。必要ないまたは、使用"
-"しないオプションでツールの定義を複雑にし過ぎないようにしましょう。"
+"各[`CommandLineTool`](https://w3id.org/cwl/CommandLineTool."
+"html#CommandLineTool) の定義は、たとえ（サブ）コマンドがそれ以上の機能を備え"
+"ていたとしても、一つの使用方法のみに焦点を当てるべきです。必要ないまたは、使"
+"用しないオプションでツールの定義を複雑にし過ぎないようにしましょう。"
 
 #: ../../src/topics/best-practices.md:73 ef5a5f9b253c4ca3916802a695fb7c6d
 msgid ""
@@ -1781,16 +1782,16 @@ msgid "Command Line Tool"
 msgstr "コマンドラインツール"
 
 #: ../../src/topics/command-line-tool.md:3 cf0f1c00c0b34c94a8e2460a700c303e
-#, fuzzy
 msgid ""
 "A command-line tool is a type of Process object that can be run by itself"
 " or as a Workflow step. It is a wrapper for a command like `ls`, `echo`, "
 "`tar`, etc. The command-line tool is defined in the `baseCommand` "
 "attribute of the command-line tool CWL document."
 msgstr ""
-"コマンドラインツールは、Processオブジェクトの一種であり、それ自体またはワークフローのステップとし "
-"て実行することができます。`ls`,`echo`,`tar` "
-"などのコマンドのラッパーです。コマンドラインツールは、コマンドラインツールCWL文書の`baseCommand` 属性で定義されています。"
+"CommandLineToolは、Processオブジェクトの一種であり、それ自体またはワークフロ"
+"ーのステップとして実行することができます。`ls`,`echo`,`tar` などの実行したい"
+"コマンドのラッパーです。実行したいコマンドは、CommandLineToolについてのCWL定"
+"義の`baseCommand` 属性で定義されています。"
 
 #: ../../src/topics/command-line-tool.md:8 7a180ba1f2d746a78b79be7e899cbad6
 msgid ""
@@ -1810,19 +1811,20 @@ msgid "`echo.cwl`"
 msgstr "`echo.cwl`"
 
 #: ../../src/topics/command-line-tool.md:57 e3a06ebe51b64b0183673a8acc04969f
-#, fuzzy
 msgid ""
 "The example above uses a simplified form to define inputs and outputs. "
 "You will learn more about in the [Inputs](../topics/inputs.md) and in the"
 " [Outputs](../topics/outputs.md) sections."
-msgstr "上記の例では、簡略化した形で入力と出力を定義しています。[Inputs](../topics/inputs.md)と[Outputs](../topics/outputs.md)のセクションで、より詳しく説明する予定です。"
+msgstr ""
+"上記の例では、簡略化した形で入力と出力を定義しています。[Inputs](../topics/"
+"inputs.md)と[Outputs](../topics/outputs."
+"md)のセクションで、より詳しく説明する予定です。"
 
 #: ../../src/topics/command-line-tool.md:68 2bab464d19d14562a6501373aff13905
 msgid "Network Access"
 msgstr "ネットワークアクセス"
 
 #: ../../src/topics/command-line-tool.md:69 201712f3ceee4d4ea56ab96d3fef97b0
-#, fuzzy
 msgid ""
 "This indicates whether a process requires outgoing IPv4/IPv6 network "
 "access.  Starting with CWL v1.1, programs are not granted network access "
@@ -1839,11 +1841,13 @@ msgstr ""
 msgid ""
 "CWL v1.0 command-line tools that are upgraded to v1.1 or v1.2 or v1.2 "
 "will have `networkAccess: true` set automatically."
-msgstr "CWL v1.0のコマンドラインツールをv1.1またはv1.2にアップグレードすると、自動的にネットワークアクセスを取得します。"
+msgstr ""
+"CWL v1.0のコマンドラインツールをv1.1またはv1."
+"2にアップグレードすると、自動的に`networkAccess: "
+"true`が追加されネットワークアクセスを取得します。"
 
 #: ../../src/topics/creating-files-at-runtime.md:1
 #: 17c5b4ee43cc4a979676ad27e473d046
-#, fuzzy
 msgid "Creating Files at Runtime"
 msgstr "実行時にファイルを作成する"
 
@@ -2108,7 +2112,7 @@ msgid ""
 msgstr ""
 "CommandLinetToolと同様に、`inputs` と`outputs` "
 "が必要です。しかし、`baseCommand` の代わりに、[`expression`](https://w3id."
-"org/cwl/CommandLineTool.html#Expressions_(Optional))  属性を必要とします。"
+"org/cwl/CommandLineTool.html#Expressions_(Optional)) 属性を必要とします。"
 
 #: ../../src/topics/expression-tool.md:17 f172488c19a94d688036197117d30b38
 msgid "CWL expression tool."
@@ -2136,15 +2140,16 @@ msgid "Expressions"
 msgstr "Expressions"
 
 #: ../../src/topics/expressions.md:3 24d05cbbab8e460e99f2edc97ab0dcec
-#, fuzzy
 msgid ""
 "If you need to manipulate input parameters, include the requirement "
 "[`InlineJavascriptRequirement`](https://w3id.org/cwl/CommandLineTool.html#InlineJavascriptRequirement)"
 " and then anywhere a parameter reference is legal you can provide a "
 "fragment of Javascript that will be evaluated by the CWL runner."
 msgstr ""
-"入力パラメータを操作する必要がある場合は、`InlineJavascriptRequirement` "
-"を含めると、パラメータ参照が合法な場所であれば、CWL runnerによって評価されるJavascriptを使用できます。"
+"入力パラメータを操作する必要がある場合は、[`InlineJavascriptRequirement`](htt"
+"ps://w3id.org/cwl/CommandLineTool.html#InlineJavascriptRequirement) "
+"を含めると、パラメータ参照が合法な場所であれば、CWL "
+"runnerによって評価されるJavascriptを使用できます。"
 
 #: ../../src/topics/expressions.md:9 3d48d1a8f7f74bc1886e41653cb53a22
 #, fuzzy
@@ -2497,15 +2502,16 @@ msgid "Using External Libraries and Inline JavaScript Code with `expressionLib`"
 msgstr "`expressionLib` による外部ライブラリの利用とインラインJavaScriptコードの利用"
 
 #: ../../src/topics/expressions.md:118 ea6cbaa5dae647538c0bd9a4d5cad3f9
-#, fuzzy
 msgid ""
 "The requirement "
 "[`InlineJavascriptRequirement`](https://w3id.org/cwl/CommandLineTool.html#InlineJavascriptRequirement)"
 " supports an `expressionLib` attribute that allows users to load external"
 " JavaScript files, or to provide inline JavaScript code."
 msgstr ""
-"`InlineJavascriptRequirement` は、`expressionLib` 属性をサポートし、ユーザーが外部 "
-"JavaScript ファイルを読み込んだり、インライン JavaScript コードを提供したりできるようにします。"
+"[`InlineJavascriptRequirement`](https://w3id.org/cwl/CommandLineTool."
+"html#InlineJavascriptRequirement)は、`expressionLib` 属性をサポートし、"
+"ユーザーが外部 JavaScript ファイルを読み込んだり、インライン JavaScript "
+"コードを提供したりできるようにします。"
 
 #: ../../src/topics/expressions.md:122 484dc17440524cfda4dc486a7c5d5f63
 msgid ""
@@ -2623,7 +2629,6 @@ msgid "File Formats"
 msgstr "ファイルフォーマット"
 
 #: ../../src/topics/file-formats.md:3 d99dab4f2f264c68b839b59b80d570e0
-#, fuzzy
 msgid ""
 "Tools and workflows can take "
 "[`File`](https://w3id.org/cwl/CommandLineTool.html#File) types as input "
@@ -2632,8 +2637,12 @@ msgid ""
 "helps document for others how to use your tool while allowing you to do "
 "some simple type-checking when creating parameter files."
 msgstr ""
-"ToolsやWorkflowsは、`File` 型を入力として受け取り、出力として生成することができます。また、`File` "
-"タイプのフォーマットを示すことをお勧めします。これにより、ツールの使用方法を他の人に示すことができ、また、パラメータファイルを作成する際に簡単な型チェックを行うことができるようになります。"
+"ToolsやWorkflowsは、[`File`](https://w3id.org/cwl/CommandLineTool.html#File) "
+"型を入力として受け取り、出力として生成することができます。また、[`File`](http"
+"s://w3id.org/cwl/CommandLineTool.html#File) タイプのフォーマットを示すことを"
+"お勧めします。これにより、ツールの使用方法を他の人に示すことができ、また、パ"
+"ラメータファイルを作成する際に簡単な型チェックを行うことができるようになりま"
+"す。"
 
 #: ../../src/topics/file-formats.md:8 23ba3dd26f5543119e2c152105b58e98
 msgid ""
@@ -3091,7 +3100,6 @@ msgstr ""
 "に変更すると、コマンドラインやジョブ入力ファイルで何も指定されていない場合にデフォルト値を持つようになります。"
 
 #: ../../src/topics/inputs.md:295 b5055c77f85e43609fe3e9b9839778e3
-#, fuzzy
 msgid ""
 "Here, the boolean “or” operator `||` in JavaScript is used for its "
 "_short-circuiting_ property. If `inputs.file_format` is “true” in a "
@@ -3102,11 +3110,11 @@ msgid ""
 "reasonable default can be provided there."
 msgstr ""
 "ここでは、JavaScriptのブール値 \"or\"、 \"演算子 `||` は、その_short-"
-"circuiting_プロパティに使用されます。`inputs.file_format`がブール値の \"true "
-"\"である場合（例えば、列挙された有効な空でない文字列）、式の評価は`||`の最初"
-"のオペランドで停止します。しかし、`inputs.file_format`が`null`の場合、式全体"
-"の値は2番目のオペランドの値になります。これにより合理的なデフォルト値を提供し"
-"ます。"
+"circuiting_プロパティに使用されます。`inputs.file_format`がブール値の \"true"
+"\"である場合（例えば、列挙された有効な空でない文字列）、式の評価は "
+"`||`の最初のオペランドで停止します。しかし、 `inputs.file_format`が`null`の場"
+"合、式全体の値は2番目のオペランドの値になります。これにより合理的なデフォルト"
+"値を提供します。"
 
 #: ../../src/topics/metadata-and-authorship.md:1
 #: 723c2232310c4276aeac2bd6728d2912
@@ -3294,7 +3302,7 @@ msgid ""
 msgstr ""
 "これまでの例では、`baseCommand` "
 "は単なる文字列で、引数はCWL入力として渡していました。単一の文字列の代わりに、"
-"_文字列の配列_ を使用することができます。  配列の最初の要素は実行するコマンド"
+"_文字列の配列_ を使用することができます。 配列の最初の要素は実行するコマンド"
 "で、それ以降の要素は必須のコマンドライン引数です"
 
 #: ../../src/topics/outputs.md:28 9b65071222c94951bed12ac53e964ee3
@@ -3854,7 +3862,6 @@ msgid "`docker-job.yml`"
 msgstr "`docker-job.yml`"
 
 #: ../../src/topics/using-containers.md:33 d766b66de4714a5da0cd87ed886cc32f
-#, fuzzy
 msgid ""
 "Before we run this, let's just break it down and see what some bits do.  "
 "Most of this has been explained in previous sections, the only part that "
@@ -3862,8 +3869,10 @@ msgid ""
 "[`dockerRequirement`](https://w3id.org/cwl/CommandLineTool.html#DockerRequirement)"
 " section."
 msgstr ""
-"これを実行する前に、これを分解して、いくつか細かく何をするのかを見てみましょう。  "
-"この大部分は以前のセクションで説明したもので、本当に新しいのは`dockerRequirement` の部分だけです。"
+"これを実行する前に、これを分解して、いくつか細かく何をするのかを見てみましょ"
+"う。  この大部分は以前のセクションで説明したもので、本当に新しいのは[`dockerR"
+"equirement`](https://w3id.org/cwl/CommandLineTool.html#DockerRequirement) "
+"の部分だけです。"
 
 #: ../../src/topics/using-containers.md:44 1f02618ab6254459ae71f72844e3cc18
 #, fuzzy
