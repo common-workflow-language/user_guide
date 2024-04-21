@@ -207,6 +207,7 @@ html_theme_options = {
     #     "json_url": json_url,
     #     "version_match": version_match,
     # },
+    "sidebar_includehidden": False,
     "use_edit_page_button": True,
     "navbar_align": "content",
     "navbar_end": [
