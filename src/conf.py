@@ -220,6 +220,7 @@ html_theme_options = {
     "collapse_navigation": True,
     "show_prev_next": True,
     "footer_start": ["copyright", "sphinx-version"],
+    "footer_center": ["project-links"],
     "footer_end": ["theme-version"],
 }
 
