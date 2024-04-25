@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: Common Workflow Language User Guide\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-12-16 11:48+0100\n"
-"PO-Revision-Date: 2024-04-09 09:01+0000\n"
+"PO-Revision-Date: 2024-04-25 09:24+0000\n"
 "Last-Translator: Manabu ISHII <manabu.ishii.rb@gmail.com>\n"
 "Language-Team: Japanese <https://hosted.weblate.org/projects/commonwl/"
 "user-guide/ja/>\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 5.5-dev\n"
+"X-Generator: Weblate 5.5.1-dev\n"
 "Generated-By: Babel 2.12.1\n"
 
 #: ../../LICENSE.md:2 a48279b2231348eea3f7a3b74a6362ac
@@ -390,29 +390,27 @@ msgstr ""
 "は、値として使用するワークフローからの入力を示すものが設定されます。"
 
 #: ../../src/faq.md:342 12869ce2cdab4c858f3232c6158514f1
-#, fuzzy
 msgid "How can I set Booleans?"
-msgstr "ブール値の設定"
+msgstr "ブール値を設定するにはどうしたらよいでしょうか？"
 
 #: ../../src/faq.md:344 8dcb88744e5840029de0e1bbf1c4b967
 msgid "These can be set by using the default field"
 msgstr "デフォルトフィールドを使って、これらを設定します"
 
 #: ../../src/faq.md:349 972b7a5551bb43e6b9fa30e0cb713ff7
-#, fuzzy
 msgid "What should I do when concatenating strings in inputs?"
-msgstr "入力された文字列を連結する"
+msgstr "入力された文字列を連結するにはどうしたら良いでしょうか？"
 
 #: ../../src/faq.md:351 68f74afc21d846dd9070d45dec0cc1d8
 msgid "The valueFrom field must be used instead of default."
 msgstr "defaultフィールドの代わりにvalueFromフィールドを使用する必要があります。"
 
 #: ../../src/faq.md:359 53b633c6f8644106beb95ae567eb0708
-#, fuzzy
 msgid ""
 "I get `cwltool` errors due to filenames with space characters inside. "
 "What should I do?"
-msgstr "`cwltool` ファイル名の中に空白文字があるために起こるエラー"
+msgstr "`cwltool` ファイル名の中に空白文字があるために起こるエラーにはどのように対処"
+"したらよいでしょうか？"
 
 #: ../../src/faq.md:361 7101bb5cb69e4faca4e60eabb4eb258e
 msgid "`cwltool` does not allow some characters in filenames by default."
@@ -431,16 +429,15 @@ msgid ""
 msgstr "これらの危険な文字を避けられない場合は、`--relax-path-checks` を`cwltool` に渡してください。"
 
 #: ../../src/faq.md:373 b7ec33f38ce74ceb890f4379e4c41054
-#, fuzzy
 msgid ""
 "What should I do when I get CWL Parameter Reference error due to hyphen "
 "in an input identifier?"
-msgstr "入力識別子の中のハイフンに起因するCWLパラメータリファレンスエラー"
+msgstr "入力パラメータ名の中のハイフンがあるため、CWLパラメータリファレンスエラーが起"
+"こりました。どのようしたらよいでしょうか？"
 
 #: ../../src/faq.md:375 e39b65947b294b20a444f18d780246f4
-#, fuzzy
 msgid "If `cwltool --validate` returns valid"
-msgstr "`cwltool --validate` の結果が問題ない場合"
+msgstr "`cwltool --validate` の結果に問題ない場合"
 
 #: ../../src/faq.md:384 dcd42c65681b438bb541fb38ddebb536
 msgid "But executing it causes an error like:"
@@ -451,14 +448,13 @@ msgid "The file is here"
 msgstr "ファイルはこちらです"
 
 #: ../../src/faq.md:410 f59751d2f0014e59af7879a748062cec
-#, fuzzy
 msgid "Problem caused by `-` (hyphen character)."
 msgstr "`-` (ハイフン文字、引き算の記号)が原因で発生した問題です。"
 
 #: ../../src/faq.md:423 7780f461ca4c478b92fca893c0b0894a
-#, fuzzy
 msgid "To fix this error, change `-` (hyphen) to `_` (underscore):"
-msgstr "このエラーを修正するには、`-` (ハイフン) を`_` (アンダースコア) に変更してください"
+msgstr "このエラーを修正するには、`-` (ハイフン) を`_` (アンダースコア) "
+"に変更してください:"
 
 #: ../../src/faq.md:436 88df56dfff854fc68fb6ad3835a846e4
 msgid ""
@@ -2166,19 +2162,17 @@ msgstr ""
 "のいずれかを代わりに使用できるかどうかを検討してください。[ベストプラクティスのリスト](best-practices.md)を参照してください。"
 
 #: ../../src/topics/expressions.md:16 7d444aacd418466bbe588fa964b45179
-#, fuzzy
 msgid "`expression.cwl`"
 msgstr "`expression.cwl`"
 
 #: ../../src/topics/expressions.md:22 72a0558a83964796a8c1a0eb55fd78e8
-#, fuzzy
 msgid ""
 "As this tool does not require any `inputs` we can run it with an (almost)"
 " empty job file:"
-msgstr "このツールは`inputs` を必要としないので、（ほとんど）空のジョブファイルで実行することができます："
+msgstr "このツールは`inputs` "
+"を必要としないので、（ほとんど）空のジョブファイルで実行することができます："
 
 #: ../../src/topics/expressions.md:25 d679fd1363b24c81979c68e7342159cf
-#, fuzzy
 msgid "`empty.yml`"
 msgstr "`empty.yml`"
 
@@ -2206,13 +2200,13 @@ msgid ""
 msgstr "なお、上の例のように、map構文で requirements を指定することも可能です："
 
 #: ../../src/topics/expressions.md:54 052e24e2ad044cc28f04d7f39be871d6
-#, fuzzy
 msgid ""
 "Or as an array, with each entry (in this case, only `class: "
 "InlineJavascriptRequirement`) marked by a `-`. The same syntax is used to"
 " describe the additional command line arguments."
 msgstr ""
-"または配列として、各エントリ（この場合、`class: InlineJavascriptRequirement` だけです）に`-` "
+"または配列として、各エントリ（この場合、`class: InlineJavascriptRequirement` "
+"だけです）に`-` "
 "を付けます。同じ構文で、追加のコマンドライン引数を定義します。"
 
 #: ../../src/topics/expressions.md:62 84b31c076d4b4826aae35e8c23fe6a25
@@ -2229,11 +2223,12 @@ msgstr ""
 "以下はその例です："
 
 #: ../../src/topics/expressions.md:66 9bf5ca0e769147c6a9705bc40bd1febc
-#, fuzzy
 msgid ""
 "From "
 "[`CommandLineTool`](https://www.commonwl.org/v1.0/CommandLineTool.html#CommandLineTool)"
-msgstr "[`CommandLineTool`](https://www.commonwl.org/v1.0/CommandLineTool.html#CommandLineTool)から"
+msgstr ""
+"[`CommandLineTool`](https://www.commonwl.org/v1.0/CommandLineTool."
+"html#CommandLineTool)から"
 
 #: ../../src/topics/expressions.md:67
 #: ../../src/topics/parameter-references.md:64 7ab0dbd54c1441539673fa12ef96b89e
@@ -2271,11 +2266,12 @@ msgid "`stderr`"
 msgstr "`stderr`"
 
 #: ../../src/topics/expressions.md:72 7a2d74aa018f4cab8c68e8775d83dd01
-#, fuzzy
 msgid ""
 "From "
 "[CommandInputParameter](https://www.commonwl.org/v1.0/CommandLineTool.html#CommandInputParameter)"
-msgstr "[CommandInputParameter](https://www.commonwl.org/v1.0/CommandLineTool.html#CommandInputParameter)から"
+msgstr ""
+"[CommandInputParameter](https://www.commonwl.org/v1.0/CommandLineTool."
+"html#CommandInputParameter)から"
 
 #: ../../src/topics/expressions.md:73 ../../src/topics/expressions.md:78
 #: ../../src/topics/expressions.md:85 ../../src/topics/expressions.md:93
@@ -2336,44 +2332,43 @@ msgstr "`outputEval`"
 #: ../../src/topics/expressions.md:83
 #: ../../src/topics/parameter-references.md:80 9448462d104b4be5904623c85a9e16b7
 #: bf11a7a72147445c9b8e44b541e09f36
-#, fuzzy
 msgid "From [`Workflow`](https://w3id.org/cwl/Workflow.html)"
-msgstr "[WorkflowStepInput](https://www.commonwl.org/v1.0/Workflow.html#WorkflowStepInput)から"
+msgstr "[`Workflow`](https://w3id.org/cwl/Workflow.html)から"
 
 #: ../../src/topics/expressions.md:84 0d54a777a33d4f17a2f3390384a3c0c5
-#, fuzzy
 msgid ""
 "From "
 "[InputParameter](https://www.commonwl.org/v1.0/Workflow.html#InputParameter)"
 " and "
 "[WorkflowOutputParameter](https://www.commonwl.org/v1.0/Workflow.html#WorkflowOutputParameter)"
 msgstr ""
-"[InputParameter](https://www.commonwl.org/v1.0/Workflow.html#InputParameter)"
-" と "
-"[WorkflowOutputParameter](https://www.commonwl.org/v1.0/Workflow.html#WorkflowOutputParameter)から"
+"[InputParameter](https://www.commonwl.org/v1.0/Workflow.html#InputParameter) "
+"と [WorkflowOutputParameter](https://www.commonwl.org/v1.0/Workflow."
+"html#WorkflowOutputParameter)から"
 
 #: ../../src/topics/expressions.md:87
 #: ../../src/topics/parameter-references.md:84 7918d0661be746faaddf25ad49172f30
 #: b8439dbaa949427097e25ccb48fe15ee
-#, fuzzy
 msgid "From `steps`"
 msgstr "`steps`から"
 
 #: ../../src/topics/expressions.md:88 7b37eb600c9b4847a58a7e5077bef4c3
-#, fuzzy
 msgid ""
 "From "
 "[WorkflowStepInput](https://www.commonwl.org/v1.0/Workflow.html#WorkflowStepInput)"
-msgstr "[WorkflowStepInput](https://www.commonwl.org/v1.0/Workflow.html#WorkflowStepInput)から"
+msgstr ""
+"[WorkflowStepInput](https://www.commonwl.org/v1.0/Workflow."
+"html#WorkflowStepInput)から"
 
 #: ../../src/topics/expressions.md:90
 #: ../../src/topics/parameter-references.md:87 368ef005c2ca4b8599f76242f7178375
 #: ab1ba7626eae483a8b614ee4cd5bab6f
-#, fuzzy
 msgid ""
 "From "
 "[ExpressionTool](https://www.commonwl.org/v1.0/Workflow.html#ExpressionTool)"
-msgstr "[ExpressionTool](https://www.commonwl.org/v1.0/Workflow.html#ExpressionTool)から"
+msgstr ""
+"[ExpressionTool](https://www.commonwl.org/v1.0/Workflow."
+"html#ExpressionTool)から"
 
 #: ../../src/topics/expressions.md:91
 #: ../../src/topics/parameter-references.md:88 595b9ddcee734d6595c1b4b2d169dcb8
@@ -2393,11 +2388,12 @@ msgstr ""
 "[ExpressionToolOutputParameter](https://www.commonwl.org/v1.0/Workflow.html#ExpressionToolOutputParameter)から"
 
 #: ../../src/topics/expressions.md:95 32b1a39cca1a4402af9bdc0abc4d70c8
-#, fuzzy
 msgid ""
 "From "
 "[`ResourceRequirement`](https://www.commonwl.org/v1.0/CommandLineTool.html#ResourceRequirement)"
-msgstr "[`ResourceRequirement`](https://www.commonwl.org/v1.0/CommandLineTool.html#ResourceRequirement)から"
+msgstr ""
+"[`ResourceRequirement`](https://www.commonwl.org/v1.0/CommandLineTool."
+"html#ResourceRequirement)から"
 
 #: ../../src/topics/expressions.md:96
 #: ../../src/topics/parameter-references.md:93 2518d499801e4bcf82e9e4666280504d
@@ -2460,7 +2456,6 @@ msgid "`listing`"
 msgstr "`listing`"
 
 #: ../../src/topics/expressions.md:106 7d8755f05d6541439f72ec9d6806d3fc
-#, fuzzy
 msgid "in [Dirent](https://www.commonwl.org/v1.0/CommandLineTool.html#Dirent)"
 msgstr "[Dirent](https://www.commonwl.org/v1.0/CommandLineTool.html#Dirent)に"
 
@@ -2479,16 +2474,16 @@ msgstr "`entryname`"
 #: ../../src/topics/expressions.md:109
 #: ../../src/topics/parameter-references.md:106
 #: 408f69a2df1343a78f93ff2ac0a994ea d37c78309e8b427f835af4fbd367e643
-#, fuzzy
 msgid "From `EnvVarRequirement`"
 msgstr "`EnvVarRequirement`から"
 
 #: ../../src/topics/expressions.md:110 53752bdff0974e39b2a86e8f2d96455f
-#, fuzzy
 msgid ""
 "From "
 "[EnvironmentDef](https://www.commonwl.org/v1.0/CommandLineTool.html#EnvironmentDef)"
-msgstr "[EnvironmentDef](https://www.commonwl.org/v1.0/CommandLineTool.html#EnvironmentDef)から"
+msgstr ""
+"[EnvironmentDef](https://www.commonwl.org/v1.0/CommandLineTool."
+"html#EnvironmentDef)から"
 
 #: ../../src/topics/expressions.md:111
 #: ../../src/topics/parameter-references.md:108
@@ -2497,7 +2492,6 @@ msgid "`envValue`"
 msgstr "`envValue`"
 
 #: ../../src/topics/expressions.md:116 93d6c90b49d8424f9283c384062ce333
-#, fuzzy
 msgid "Using External Libraries and Inline JavaScript Code with `expressionLib`"
 msgstr "`expressionLib` による外部ライブラリの利用とインラインJavaScriptコードの利用"
 
@@ -2551,12 +2545,12 @@ msgid "`hello-world-expressionlib-inline.cwl`"
 msgstr "`hello-world-expressionlib-inline.cwl`"
 
 #: ../../src/topics/expressions.md:146 5b5e59fa1688499ea4560ee6f8023227
-#, fuzzy
 msgid ""
 "Running this CWL workflow will invoke the JavaScript function and result "
 "in the `echo` command printing the input message with capital initial "
 "letters:"
-msgstr "このCWLワークフローを実行すると、JavaScript関数が起動し、`echo` コマンドが入力メッセージを大文字の頭文字で表示します："
+msgstr "このCWLワークフローを実行すると、JavaScript関数が起動し、`echo` "
+"コマンドが入力メッセージの頭文字を大文字にして表示します："
 
 #: ../../src/topics/expressions.md:149 a1e57c6833c848d3974cf448493ab924
 #, fuzzy
@@ -2736,14 +2730,13 @@ msgstr ""
 "と、そのパラメーターに有効な値の種類を示す`type` があります。"
 
 #: ../../src/topics/inputs.md:9 521cb5dead5d4e9ab5ff037fb4b683cb
-#, fuzzy
 msgid ""
 "Available primitive types are *string*, *boolean*, *int*, *long*, "
 "*float*, *double*, and *null*; complex types are *array* and *record*; in"
 " addition there are special types *File*, *Directory* and *Any*."
 msgstr ""
-"利用可能なプリミティブ型は*string*,*int*,*long*,*float*,*double*, *null*; 複合型は*array* "
-"and*record*; さらに特殊型*File*,*Directory* ,*Any* があります。"
+"利用可能なプリミティブ型は*string*,*int*,*long*,*float*,*double*, *null*; "
+"複合型は*array*と*record*; さらに特殊型*File*,*Directory* ,*Any* があります。"
 
 #: ../../src/topics/inputs.md:13 fbdf2c1bed3e41d7a41ec6b14d134a98
 msgid ""
@@ -2768,23 +2761,22 @@ msgid "`inp-job.yml`"
 msgstr "`inp-job.yml`"
 
 #: ../../src/topics/inputs.md:33 9cc4a60d01f945aa9b4c43afcf20098b
-#, fuzzy
 msgid ""
 "You can use `cwltool` to create a template input object. That saves you "
 "from having to type all the input parameters in an input object file:"
 msgstr ""
-"`cwltool` "
-"を使って、テンプレートとなる入力オブジェクトを作成することができます。これにより、入力オブジェクトファイルにすべての入力パラメータを入力する手間を省くことができます："
+"`cwltool` を使って、テンプレートとなる入力オブジェクトを作成することができま"
+"す。これにより、入力オブジェクトファイルにすべての入力パラメータを入力する手"
+"間を省くことができます："
 
 #: ../../src/topics/inputs.md:40 5ac6da11d56446de97c251a37d997671
-#, fuzzy
 msgid ""
 "You can redirect the output to a file, i.e. `cwltool --make-template "
 "inp.cwl > inp-job.yml`, and then modify the default values with your "
 "desired input values."
 msgstr ""
-"`cwltool --make-template inp.cwl &gt; inp-job.yml` "
-"のように、出力をファイルにリダイレクトし、デフォルト値を希望の入力値で修正することができます。"
+"`cwltool --make-template inp.cwl > inp-job.yml` のように、出力をファイルにリ"
+"ダイレクトします。その後デフォルト値を希望の入力値で修正することができます。"
 
 #: ../../src/topics/inputs.md:44 6a3edb0d259d4d7c900dd9811f978d4e
 msgid ""
@@ -2812,13 +2804,15 @@ msgstr ""
 "を起動します。次のボックステキストは、これら2つのコマンドと、コマンドラインから期待される出力について説明しています："
 
 #: ../../src/topics/inputs.md:64 5c78d7824ef34636ae2ed68d524d79e8
-#, fuzzy
 msgid ""
 "The CWL reference runner (cwltool) and other runners create temporary "
 "directories with symbolic (\"soft\") links to your input files to ensure "
 "that the tools aren't accidentally accessing files that were not "
 "explicitly specified"
-msgstr "CWLリファレンスランナー（cwltool）と他のランナーは、ツールが明示的に指定されていないファイルに誤ってアクセスしないように、入力ファイルへの（\"ソフト\"）シンボリックリンクを持つ一時ディレクトリを作成します。"
+msgstr ""
+"CWLリファレンスランナー（cwltool）と他のランナーは、ツールが明示的に指定され"
+"ていないファイルに誤ってアクセスしないように、入力ファイルへの（\"ソフト\""
+"）シンボリックリンクを持つ一時ディレクトリを作成します"
 
 #: ../../src/topics/inputs.md:70 5bdf77c45346445d8f93353c1e73f768
 #, fuzzy
@@ -3510,35 +3504,31 @@ msgstr ""
 " から"
 
 #: ../../src/topics/parameter-references.md:74 ea0117748adc4324901024f21eed04ac
-#, fuzzy
 msgid ""
 "From "
 "[CommandOutputParamater](http://www.commonwl.org/v1.0/CommandLineTool.html#CommandOutputParameter)"
 msgstr ""
-"[CommandOutputParamater](http://www.commonwl.org/v1.0/CommandLineTool.html#CommandOutputParameter)"
-" から"
+"[CommandOutputParamater](http://www.commonwl.org/v1.0/CommandLineTool."
+"html#CommandOutputParameter) から"
 
 #: ../../src/topics/parameter-references.md:77 3a30e73176cf4e4eb9f26770a176b9c9
-#, fuzzy
 msgid ""
 "From "
 "[CommandOutputBinding](http://www.commonwl.org/v1.0/CommandLineTool.html#CommandOutputBinding)"
 msgstr ""
-"[CommandOutputBinding](http://www.commonwl.org/v1.0/CommandLineTool.html#CommandOutputBinding)"
-" から"
+"[CommandOutputBinding](http://www.commonwl.org/v1.0/CommandLineTool."
+"html#CommandOutputBinding) から"
 
 #: ../../src/topics/parameter-references.md:81 551c199c9a6344fca9bfacfb69fc4e53
-#, fuzzy
 msgid ""
 "From "
 "[InputParameter](http://www.commonwl.org/v1.0/Workflow.html#InputParameter)"
 " and "
 "[WorkflowOutputParameter](http://www.commonwl.org/v1.0/Workflow.html#WorkflowOutputParameter)"
 msgstr ""
-"[InputParameter](http://www.commonwl.org/v1.0/Workflow.html#InputParameter)"
-" と "
-"[WorkflowOutputParameter](http://www.commonwl.org/v1.0/Workflow.html#WorkflowOutputParameter)"
-" から"
+"[InputParameter](http://www.commonwl.org/v1.0/Workflow.html#InputParameter) "
+"と [WorkflowOutputParameter](http://www.commonwl.org/v1.0/Workflow."
+"html#WorkflowOutputParameter) から"
 
 #: ../../src/topics/parameter-references.md:85 7008a1ff1af54fda827637e787e5c7dd
 msgid ""
@@ -3549,52 +3539,46 @@ msgstr ""
 " から"
 
 #: ../../src/topics/parameter-references.md:89 45743e1b261c4195856de0c2e30ea72e
-#, fuzzy
 msgid ""
 "From "
 "[InputParameter](http://www.commonwl.org/v1.0/Workflow.html#InputParameter)"
 " and "
 "[ExpressionToolOutputParameter](http://www.commonwl.org/v1.0/Workflow.html#ExpressionToolOutputParameter)"
 msgstr ""
-"[InputParameter](http://www.commonwl.org/v1.0/Workflow.html#InputParameter)"
-" と "
-"[ExpressionToolOutputParameter](http://www.commonwl.org/v1.0/Workflow.html#ExpressionToolOutputParameter)"
-" から"
+"[InputParameter](http://www.commonwl.org/v1.0/Workflow.html#InputParameter) "
+"と [ExpressionToolOutputParameter](http://www.commonwl.org/v1.0/Workflow."
+"html#ExpressionToolOutputParameter) から"
 
 #: ../../src/topics/parameter-references.md:92 0ae32d1db5f9452bbfcbbc4719b0b9f1
-#, fuzzy
 msgid ""
 "From "
 "[`ResourceRequirement`](http://www.commonwl.org/v1.0/CommandLineTool.html#ResourceRequirement)"
 msgstr ""
-"[`ResourceRequirement`](http://www.commonwl.org/v1.0/CommandLineTool.html#ResourceRequirement)"
-" から"
+"[`ResourceRequirement`](http://www.commonwl.org/v1.0/CommandLineTool."
+"html#ResourceRequirement) から"
 
 #: ../../src/topics/parameter-references.md:101
 #: 7e1907ff15c74f488187531de336eccf
-#, fuzzy
 msgid ""
 "From "
 "[`InitialWorkDirRequirement`](http://www.commonwl.org/v1.0/CommandLineTool.html#InitialWorkDirRequirement)"
 msgstr ""
-"[`InitialWorkDirRequirement`](http://www.commonwl.org/v1.0/CommandLineTool.html#InitialWorkDirRequirement)"
-" から"
+"[`InitialWorkDirRequirement`](http://www.commonwl.org/v1.0/CommandLineTool."
+"html#InitialWorkDirRequirement) から"
 
 #: ../../src/topics/parameter-references.md:103
 #: 678874668fed4f4d80a1b0990e183e2f
-#, fuzzy
 msgid "in [Dirent](http://www.commonwl.org/v1.0/CommandLineTool.html#Dirent)"
 msgstr "[Dirent](http://www.commonwl.org/v1.0/CommandLineTool.html#Dirent) の中に"
 
 #: ../../src/topics/parameter-references.md:107
 #: e2882880886046ac88ae1c0d414366d1
-#, fuzzy
 msgid ""
 "From "
 "[EnvironmentDef](http://www.commonwl.org/v1.0/CommandLineTool.html#EnvironmentDef)"
 msgstr ""
-"[EnvironmentDef](http://www.commonwl.org/v1.0/CommandLineTool.html#EnvironmentDef)"
-" から"
+"[EnvironmentDef](http://www.commonwl.org/v1.0/CommandLineTool."
+"html#EnvironmentDef) から"
 
 #: ../../src/topics/requirements-and-hints.md:5
 #: 05324169d8ae48d4a1abe3a0ac07c891
@@ -3626,7 +3610,6 @@ msgstr ""
 
 #: ../../src/topics/specifying-software-requirements.md:13
 #: 6f722d6fd54f485fa964076c8d08938b
-#, fuzzy
 msgid ""
 "In this example, the software requirement being described is InterProScan"
 " version 5.21-60."
@@ -3931,47 +3914,43 @@ msgid "Workflows"
 msgstr "ワークフロー"
 
 #: ../../src/topics/workflows.md:3 325a656f9b8e4c1fa6f699cd8c447d00
-#, fuzzy
 msgid ""
 "A workflow is a CWL processing unit that executes command-line tools, "
 "expression tools, or workflows (sub-workflows) as steps. It must have "
 "`inputs`, `outputs`, and `steps` defined in the CWL document."
 msgstr ""
-"Workflowは、CommandLineTool、ExpressionTool、またはWorkflow（サブワークフロー）をステップ "
-"として実行する CWL 処理ユニットです。CWLドキュメントには`inputs` 、`outputs` 、`steps` "
-"を定義する必要があります。"
+"Workflowは、CommandLineTool、ExpressionTool、またはWorkflow（サブワークフロー"
+"）をステップ として実行する CWL 処理単位です。CWL定義には`inputs` 、`outputs`"
+" 、`steps` を定義する必要があります。"
 
 #: ../../src/topics/workflows.md:13 b92275181c9e480da64e660b7aca0745
-#, fuzzy
 msgid "CWL workflow."
-msgstr "CWLのワークフローです。"
+msgstr "CWLワークフローです。"
 
 #: ../../src/topics/workflows.md:41 be2540315f854b8e9a1d257bcabd78db
-#, fuzzy
 msgid ""
 "The CWL document `echo-uppercase.cwl` defines a workflow that runs the "
 "command-line tool, and the expression tool showed in the earlier "
 "examples."
 msgstr ""
-"CWL定義`echo-uppercase.cwl` "
-"は、コマンドラインツール、および先の例で示したExpressionToolを実行するワークフローを定義しています。"
+"CWL定義`echo-uppercase.cwl` は、CommandLineTool、および先の例で示したExpressi"
+"onToolを実行するワークフローを定義しています。"
 
 #: ../../src/topics/workflows.md:51 3be900594bb743399854b95baa9ae2f9
 msgid "`echo-uppercase.cwl`"
 msgstr "`echo-uppercase.cwl`"
 
 #: ../../src/topics/workflows.md:81 5133c4e062bc4e479ce1dc8abbb08107
-#, fuzzy
 msgid ""
 "A command-line tool or expression tool can also be written directly in "
 "the same CWL document as the workflow. For example, we can rewrite the "
 "`echo-uppercase.cwl` workflow as a single file:"
 msgstr ""
-"コマンドラインツールやExpressionToolは、ワークフローと同じCWLドキュメントに直接記述することも可能です。例えば、`echo-"
-"uppercase.cwl` ワークフローを1つのファイルとして書き換えることができます："
+"CommandLineToolやExpressionToolは、Workflowと同じCWL定義に直接記述することも"
+"可能です。例えば、`echo-uppercase.cwl` "
+"ワークフローを1つのファイルとして書き換えることができます："
 
 #: ../../src/topics/workflows.md:91 83bc2796889f4dccb713764ac1b3c3ad
-#, fuzzy
 msgid "`echo-uppercase-single-file.cwl`"
 msgstr "`echo-uppercase-single-file.cwl`"
 
@@ -4370,22 +4349,23 @@ msgid ""
 msgstr "`requirements` セクションの`ScatterFeatureRequirement` などを含めて、ここはどうなっているのでしょうか？"
 
 #: ../../src/topics/workflows.md:429 ccbbba3189404241a44736c970249b84
-#, fuzzy
 msgid ""
 "First of all, notice that the main workflow level input here requires an "
 "array of strings."
-msgstr "まず、ここでのメインワークフローの入力には、文字列の配列が必要であることに注目してください。"
+msgstr "まず、ここでのメインワークフローの入力には、文字列の配列が必要であることに注"
+"目してください。"
 
 #: ../../src/topics/workflows.md:441 31eff13bb8334fc7b6d48ef6c5b1ce33
-#, fuzzy
 msgid ""
 "Here we've added a new field to the step `echo` called `scatter`. This "
 "field tells the runner that we'd like to scatter over this input for this"
 " particular step. Note that the input name listed after scatter is the "
 "one of the step's input, not a workflow level input."
 msgstr ""
-"ここでは、ステップ`echo` に、`scatter` "
-"という新しいフィールドを追加しました。このフィールドは、CWLランナーに、この特定のステップのためにこの入力を分散したいことを伝えます。scatterの後に記載されている入力名は、ワークフローレベルの入力名ではなく、ステップの入力名であることに注意してください。"
+"ここでは、ステップ`echo` に、`scatter` という新しいフィールドを追加しました。"
+"このフィールドは、CWLランナーに、このステップの入力を分散して実行したいことを"
+"伝えます。scatterの後に記載されている入力名は、ワークフローレベルの入力名では"
+"なく、ステップの入力名であることに注意してください。"
 
 #: ../../src/topics/workflows.md:445 0d5cf8b82dbd47f2abd1ed16b9b3eb61
 #, fuzzy
@@ -4407,15 +4387,15 @@ msgid "`scatter-job.yml`"
 msgstr "`scatter-job.yml`"
 
 #: ../../src/topics/workflows.md:458 f9fa7046c89c417db51dc7c8a026fd5d
-#, fuzzy
 msgid ""
 "As a reminder, [`hello_world.cwl`](../introduction/quick-start.md) simply"
 " calls the command `echo` on a message. If we invoke `cwltool scatter-"
 "workflow.cwl scatter-job.yml` on the command line:"
 msgstr ""
 "注意点として、[`hello_world.cwl`](../introduction/quick-start.md) "
-"は単にメッセージに対して`echo` というコマンドを呼び出します。コマンドラインで `cwltool scatter-workflow.cwl "
-"scatter-job.yml` を呼び出すとします："
+"は単にメッセージに対して`echo` というコマンドを呼び出します。"
+"コマンドラインで `cwltool scatter-workflow.cwl scatter-job.yml` "
+"を呼び出します："
 
 #: ../../src/topics/workflows.md:466 b6a33410ee9a45d7bf7b2ba56f786f8f
 msgid ""
@@ -4433,7 +4413,6 @@ msgid ""
 msgstr "上記のような簡単なエコーを実行します、`outputs: []`の代わりに次の行を追加して`stdout` をキャプチャしてみましょう"
 
 #: ../../src/topics/workflows.md:472 97bf58937d3f4e98af702e3c1a418992
-#, fuzzy
 msgid "`hello_world_to_stdout.cwl`"
 msgstr "`hello_world_to_stdout.cwl`"
 
@@ -4444,7 +4423,6 @@ msgid ""
 msgstr "そして、`wc` を使って各ファイルの文字数をカウントする第2ステップを追加します。以下のツールを見てください："
 
 #: ../../src/topics/workflows.md:483 4afccfe982ff4be2be96cbe5889e5014
-#, fuzzy
 msgid "`wc-tool.cwl`"
 msgstr "`wc-tool.cwl`"
 
