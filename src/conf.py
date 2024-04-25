@@ -207,6 +207,7 @@ html_theme_options = {
     #     "json_url": json_url,
     #     "version_match": version_match,
     # },
+    "sidebar_includehidden": False,
     "use_edit_page_button": True,
     "navbar_align": "content",
     "navbar_end": [
@@ -219,6 +220,7 @@ html_theme_options = {
     "collapse_navigation": True,
     "show_prev_next": True,
     "footer_start": ["copyright", "sphinx-version"],
+    "footer_center": ["project-links"],
     "footer_end": ["theme-version"],
 }
 
