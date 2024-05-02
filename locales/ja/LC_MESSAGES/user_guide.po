@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: Common Workflow Language User Guide\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-12-16 11:48+0100\n"
-"PO-Revision-Date: 2024-04-25 09:24+0000\n"
+"PO-Revision-Date: 2024-05-02 08:07+0000\n"
 "Last-Translator: Manabu ISHII <manabu.ishii.rb@gmail.com>\n"
 "Language-Team: Japanese <https://hosted.weblate.org/projects/commonwl/"
 "user-guide/ja/>\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 5.5.1-dev\n"
+"X-Generator: Weblate 5.5.3-dev\n"
 "Generated-By: Babel 2.12.1\n"
 
 #: ../../LICENSE.md:2 a48279b2231348eea3f7a3b74a6362ac
@@ -1764,14 +1764,14 @@ msgid ""
 msgstr "抽象化できる個々のコンポーネントを持つ複雑なワークフローは、ワークフローをモジュール化し、その一部を容易に再利用できるようにするために、[`SubworkflowFeatureRequirement`][subworkflow]を利用します。"
 
 #: ../../src/topics/best-practices.md:97 93f6d6b544c24ce780184272f66bacab
-#, fuzzy
 msgid ""
 "Software containers should be made to be conformant to the "
 "[\"Recommendations for the packaging and containerizing of bioinformatics"
 " software\"][containers] (also useful to other disciplines)."
 msgstr ""
-"ソフトウェアのコンテナは、[\"Recommendations for packaging and containerizing of "
-"bioinformatics software\"][containers] に準拠するようにします（他の分野でも有用です）。"
+"ソフトウェアのコンテナは、[\"Recommendations for packaging and "
+"containerizing of bioinformatics software\"][containers] "
+"に準拠するようにします（他の分野でも有用です）。"
 
 #: ../../src/topics/command-line-tool.md:1 a378a2f7d268401abfbbbe6e5090a952
 msgid "Command Line Tool"
@@ -1833,14 +1833,13 @@ msgstr ""
 "にネットワーク・アクセスの要件を含める必要があります。"
 
 #: ../../src/topics/command-line-tool.md:84 3282a357799f4a72a6b8bace206144c4
-#, fuzzy
 msgid ""
 "CWL v1.0 command-line tools that are upgraded to v1.1 or v1.2 or v1.2 "
 "will have `networkAccess: true` set automatically."
 msgstr ""
 "CWL v1.0のコマンドラインツールをv1.1またはv1."
 "2にアップグレードすると、自動的に`networkAccess: "
-"true`が追加されネットワークアクセスを取得します。"
+"true`が追加されネットワークアクセスできるようになります。"
 
 #: ../../src/topics/creating-files-at-runtime.md:1
 #: 17c5b4ee43cc4a979676ad27e473d046
@@ -1859,11 +1858,12 @@ msgstr "コマンドラインパラメーターではなく、ファイルから
 
 #: ../../src/topics/creating-files-at-runtime.md:7
 #: bf4aea0a22334a1ca75cc20e937e6581
-#, fuzzy
 msgid ""
 "To generate such files, we can use the "
 "[`InitialWorkDirRequirement`](https://w3id.org/cwl/CommandLineTool.html#InitialWorkDirRequirement)."
-msgstr "[`InitialWorkDirRequirement`](https://www.commonwl.org/v1.0/CommandLineTool.html#InitialWorkDirRequirement)から"
+msgstr ""
+"[`InitialWorkDirRequirement`](https://w3id.org/cwl/CommandLineTool."
+"html#InitialWorkDirRequirement)から"
 
 #: ../../src/topics/creating-files-at-runtime.md:9
 #: 008f768d56b8465bb4e8f4fde15853a7
@@ -2553,7 +2553,6 @@ msgstr "このCWLワークフローを実行すると、JavaScript関数が起�
 "コマンドが入力メッセージの頭文字を大文字にして表示します："
 
 #: ../../src/topics/expressions.md:149 a1e57c6833c848d3974cf448493ab924
-#, fuzzy
 msgid "Running `hello-world-expressionlib-inline.cwl`."
 msgstr "`hello-world-expressionlib-inline.cwl` 実行しています。"
 
@@ -2940,11 +2939,11 @@ msgstr "`array-inputs-job.yml`"
 #: ../../src/topics/inputs.md:166 ../../src/topics/outputs.md:86
 #: ../../src/topics/outputs.md:109 015a0f00c2b245e2b0e87735926da736
 #: 390384208d7b4771888f164b587c7b9a edb3ae59c48945f29c3086b16a5265d3
-#, fuzzy
 msgid ""
 "Now invoke `cwltool` providing the tool description and the input object "
 "on the command line:"
-msgstr "ここで、コマンドラインにツール定義と入力オブジェクトを指定し `cwltool` を起動します："
+msgstr "ここで、コマンドラインにツール定義と入力オブジェクトを指定し `cwltool` "
+"を起動します："
 
 #: ../../src/topics/inputs.md:178 13e59751d43b49f0ac366538a14f9c84
 msgid ""
@@ -3272,9 +3271,11 @@ msgid ""
 "output parameters returned by the CWL tool are either the output files "
 "themselves, or the result of examining the content of those files."
 msgstr ""
-"CWLでツールを実行する場合、開始時の作業ディレクトリは指定された出力ディレクトリになります。  "
-"基礎となるツールやスクリプトは、出力ディレクトリに作成されるファイルの形でその結果を記録しなければなりません。  "
-"CWLツールによって返される出力パラメータは、出力ファイルそのものであるか、またはそれらのファイルの内容を調べることによって得られるものです。"
+"CWLでツールを実行する場合、開始時の作業ディレクトリが出力ディレクトリになりま"
+"す。  基礎となるツールやスクリプトは、出力ディレクトリに作成されるファイルの"
+"形でその結果を記録しなければなりません。  CWLツールによって返される出力パラメ"
+"ータは、出力ファイルそのものであるか、またはそれらのファイルの内容を調べるこ"
+"とによって得られるものです。"
 
 #: ../../src/topics/outputs.md:16 9845e517f7d848e5b59a97880ca6999f
 msgid ""
@@ -3346,14 +3347,13 @@ msgid "Capturing Standard Output"
 msgstr "標準出力をキャプチャする"
 
 #: ../../src/topics/outputs.md:71 a7c4fdaeda3e411fbeb802c5fa529ce9
-#, fuzzy
 msgid ""
 "To capture a tool's standard output stream, add the "
 "[`stdout`](https://w3id.org/cwl/CommandLineTool.html#stdout) field with "
 "the name of the file where the output stream should go.  Then add `type: "
 "stdout` on the corresponding output parameter."
 msgstr ""
-"ツールの標準出力をキャプチャするには、[`stdout`](https://w3id.org/cwl/"
+"ツールの標準出力を保存するには、[`stdout`](https://w3id.org/cwl/"
 "CommandLineTool.html#stdout) "
 "フィールドに、標準出力を保存したいファイル名を追加します。   "
 "次に、対応する出力パラメータに`type: stdout` を追加します。"
@@ -3381,7 +3381,6 @@ msgid "`array-outputs-job.yml`"
 msgstr "`array-outputs-job.yml`"
 
 #: ../../src/topics/outputs.md:116 9a14271c3180429988aaa14869f783a0
-#, fuzzy
 msgid ""
 "As described in the [YAML Guide](yaml-guide.md#arrays), the array of "
 "expected outputs is specified in `array-outputs-job.yml` with each entry "
@@ -3389,9 +3388,11 @@ msgid ""
 " to mark entries in arrays, as demonstrated in several of the upcoming "
 "sections."
 msgstr ""
-"[YAML Guide](yaml-guide.md#arrays) で説明されているように、期待される出力の配列は`array-outputs-"
-"job.yml` で指定され、それぞれのエントリーは先頭の`-` "
-"でマークされています。このフォーマットは、CWL定義で配列のエントリーをマークするために使用することもでき、今後のいくつかのセクションでデモがあります。"
+"[YAML Guide](yaml-guide.md#arrays) "
+"で説明されているように、期待される出力の配列は`array-outputs-job.yml` "
+"で指定され、配列のエントリーはそれぞれ先頭の`-` で示されています。この書き方"
+"は、CWL定義で配列のエントリーを示すために使用することもでき、今後のいくつかの"
+"セクションでデモがあります。"
 
 #: ../../src/topics/parameter-references.md:1 c8a6ea340e6a43398e97b68e03a8bb3b
 msgid "Parameter References"
@@ -3442,15 +3443,14 @@ msgid ""
 msgstr "`$(...)` で囲まれたパラメータ参照を許可するフィールドもあります。これらは評価され、参照されている値に置き換えられます。"
 
 #: ../../src/topics/parameter-references.md:47 384fe8188f414eafbbb8d6b81bdfd779
-#, fuzzy
 msgid ""
 "References are written using a subset of Javascript syntax.  In this "
 "example, `$(inputs.extractfile)`, `$(inputs[\"extractfile\"])`, and "
 "`$(inputs['extractfile'])` are equivalent."
 msgstr ""
-"パラメータリファレンスは、Javascriptの構文のサブセットを使用して記述します。  "
-"この例では、`$(inputs.extractfile)` 、`$(inputs[\"extractfile\"])` "
-"、`$(inputs['extractfile'])` は同等です。"
+"パラメータリファレンスは、Javascriptの構文のサブセットを使用して記述します。"
+"  この例では、`$(inputs.extractfile)` 、`$(inputs[\"extractfile\"])` "
+"、`$(inputs['extractfile'])` は同じです。"
 
 #: ../../src/topics/parameter-references.md:51 56ead1c8d45c43bdbcbc6f7cbb8e1e92
 msgid ""
@@ -3459,33 +3459,32 @@ msgid ""
 msgstr "変数 \"inputs \"の値は、CWLツールの起動時に提供された入力オブジェクトです。"
 
 #: ../../src/topics/parameter-references.md:54 56bca89e314c4223b33d7fe63c9b771d
-#, fuzzy
 msgid ""
 "Note that because `File` parameters are objects, to get the path to an "
 "input file you must reference the path field on a file object; to "
 "reference the path to the tar file in the above example you would write "
 "`$(inputs.tarfile.path)`."
 msgstr ""
-"`File` "
-"パラメータはオブジェクトであるため、入力ファイルのパスを取得するには、ファイルオブジェクトのpathフィールドを参照する必要があります。上記の例でtarファイルのパスを参照するには、`$(inputs.tarfile.path)`となります。"
+"`File` パラメータはオブジェクトであるため、入力ファイルのパスを取得するには、"
+"ファイルオブジェクトのpathフィールドを参照する必要があります。上記の例でtarフ"
+"ァイルのパスを参照するには、`$(inputs.tarfile.path)`となります。"
 
 #: ../../src/topics/parameter-references.md:59 1c1ab240c4114572bb4e42955baad361
 msgid "Where are parameter references allowed?"
 msgstr "パラメータ参照はどこで許されるのですか？"
 
 #: ../../src/topics/parameter-references.md:61 055d3268859c46c4b7db5005608bae05
-#, fuzzy
 msgid "You can only use parameter references in certain fields.  These are:"
-msgstr "パラメータ参照は、特定のフィールドにのみ使用することができます。  以下はその例です："
+msgstr "パラメータ参照は、特定のフィールドでのみ使用することができます。  "
+"以下はその例です："
 
 #: ../../src/topics/parameter-references.md:63 2ed66835bd9044adbfdd0b5097787f22
-#, fuzzy
 msgid ""
 "From "
 "[`CommandLineTool`](http://www.commonwl.org/v1.0/CommandLineTool.html#CommandLineTool)"
 msgstr ""
-"[`CommandLineTool`](http://www.commonwl.org/v1.0/CommandLineTool.html#CommandLineTool)"
-" から"
+"[`CommandLineTool`](http://www.commonwl.org/v1.0/CommandLineTool."
+"html#CommandLineTool) から"
 
 #: ../../src/topics/parameter-references.md:69 f592619e4b2c497e80cd75da0548cf07
 msgid ""
@@ -3651,7 +3650,6 @@ msgid "Staging Input Files"
 msgstr "入力ファイルのステージング"
 
 #: ../../src/topics/staging-input-files.md:3 ac2ef1fced5f4044861761a11c35e78a
-#, fuzzy
 msgid ""
 "Normally, input files are located in a read-only directory separate from "
 "the output directory.  This causes problems if the underlying tool "
@@ -3727,13 +3725,13 @@ msgid "`troubleshooting-wf1.cwl`"
 msgstr "`troubleshooting-wf1.cwl`"
 
 #: ../../src/topics/troubleshooting.md:27 b777877c88024c9fb06a6614029ef8d6
-#, fuzzy
 msgid ""
 "Let's execute this workflow with `/tmp/cachedir/` as the `--cachedir` "
 "value (`cwltool` will create the directory for you if it does not exist "
 "already):"
 msgstr ""
-"`--cachedir` に `/tmp/cachedir/` を指定して、このワークフローを実行してみましょう（`cwltool` "
+"`--cachedir` に `/tmp/cachedir/` "
+"を指定して、このワークフローを実行してみましょう（`cwltool` "
 "は、ディレクトリがまだ存在しない場合、新規作成します）："
 
 #: ../../src/topics/troubleshooting.md:35 8654b7f2f4464d13be4b47729e1f07e5
@@ -4434,7 +4432,6 @@ msgid ""
 msgstr "さて、スキャッターはどのように取り入れるのでしょうか？スキャッターフィールドは各ステップの下にあることを思い出してください："
 
 #: ../../src/topics/workflows.md:491 a7f96ec6e4f24c62ac0f5b6edcc9734b
-#, fuzzy
 msgid "`scatter-two-steps.cwl`"
 msgstr "`scatter-two-steps.cwl`"
 
@@ -4524,8 +4521,10 @@ msgid ""
 "`in1`  from the workflow contains a value `< 1` this step will be "
 "executed."
 msgstr ""
-"ワークフローの最初のステップ（step1）には2つの入力プロパティがあり、条件を満たしたときにfoo.cwlを実行します。新しいプロパティ`when`"
-" は、条件の検証が行われる場所です。この場合、ワークフローから`in1` に値`&lt; 1` が含まれるときのみ、このステップが実行されます。"
+"ワークフローの最初のステップ（step1）には2つの入力プロパティがあり、条件を満"
+"たしたときにfoo.cwlを実行します。新しいプロパティ`when` "
+"は、条件の検証が行われる場所です。この場合、ワークフローから`in1` に値`< 1` "
+"が含まれるときのみ、このステップが実行されます。"
 
 #: ../../src/topics/workflows.md:587 b33ecd2b8af042feb08687e32d4b6bbf
 msgid ""
@@ -4707,7 +4706,6 @@ msgstr ""
 "オブジェクトを図式化したものを示します。"
 
 #: ../../src/topics/yaml-guide.md:127 965405e2a45a4cbb8f227bc8ceeb05df
-#, fuzzy
 msgid "Arrays"
 msgstr "配列"
 
