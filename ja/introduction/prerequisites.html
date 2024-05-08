@@ -33,7 +33,7 @@
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
 
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=80d5e7a1" />
-    <link rel="stylesheet" type="text/css" href="../_static/graphviz.css?v=eafc0fe6" />
+    <link rel="stylesheet" type="text/css" href="../_static/graphviz.css?v=fd3f3429" />
     <link rel="stylesheet" type="text/css" href="../_static/css/custom.css?v=e0da1575" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
@@ -42,7 +42,7 @@
   <script src="../_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=8d27b9dea8ad943066ae"></script>
 
     <script src="../_static/documentation_options.js?v=be13464f"></script>
-    <script src="../_static/doctools.js?v=888ff710"></script>
+    <script src="../_static/doctools.js?v=9a2dae69"></script>
     <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../_static/translations.js?v=4dbe4bdc"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'introduction/prerequisites';</script>
@@ -363,13 +363,16 @@ document.write(`
   </div>
   
     <div class="sidebar-primary-items__start sidebar-primary__section">
-        <div class="sidebar-primary-item"><nav class="bd-links d-none d-md-block" id="bd-docs-nav" aria-label="メインナビゲーション">
-  <p class="bd-links__title" role="heading" aria-level="1">
-    セクションナビゲーション
-  </p>
-  <div class="bd-toc-item navbar-nav">
-    
-  </div>
+        <div class="sidebar-primary-item">
+<nav class="bd-docs-nav bd-links"
+     aria-label="セクションナビゲーション">
+  <p class="bd-links__title" role="heading" aria-level="1">セクションナビゲーション</p>
+  <div class="bd-toc-item navbar-nav"><ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="quick-start.html">1.1. クイックスタート</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">1.2. 前提条件</a></li>
+<li class="toctree-l1"><a class="reference internal" href="basic-concepts.html">1.3. 基本コンセプト</a></li>
+</ul>
+</div>
 </nav></div>
     </div>
   
@@ -473,7 +476,7 @@ interface may look different (though the exact workflow outputs should be identi
 <div class="literal-block-wrapper docutils container" id="validating-truecwl-with-cwltool">
 <div class="code-block-caption"><span class="caption-text"><code class="docutils literal notranslate"><span class="pre">cwltool</span></code> を使って <code class="docutils literal notranslate"><span class="pre">true.cwl</span></code> を検証します。</span><a class="headerlink" href="#validating-truecwl-with-cwltool" title="Link to this code">#</a></div>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>cwltool<span class="w"> </span>--validate<span class="w"> </span>true.cwl
-INFO<span class="w"> </span>/opt/hostedtoolcache/Python/3.9.18/x64/bin/cwltool<span class="w"> </span><span class="m">3</span>.1.20240112164112
+INFO<span class="w"> </span>/opt/hostedtoolcache/Python/3.9.19/x64/bin/cwltool<span class="w"> </span><span class="m">3</span>.1.20240404144621
 INFO<span class="w"> </span>Resolved<span class="w"> </span><span class="s1">&#39;true.cwl&#39;</span><span class="w"> </span>to<span class="w"> </span><span class="s1">&#39;file:///home/runner/work/user_guide/user_guide/src/_includes/cwl/true.cwl&#39;</span>
 true.cwl<span class="w"> </span>is<span class="w"> </span>valid<span class="w"> </span>CWL.
 </pre></div>
@@ -483,9 +486,9 @@ true.cwl<span class="w"> </span>is<span class="w"> </span>valid<span class="w"> 
 <div class="literal-block-wrapper docutils container" id="running-true-cwl-with-cwltool">
 <div class="code-block-caption"><span class="caption-text"><code class="docutils literal notranslate"><span class="pre">cwltool</span></code> を使って <code class="docutils literal notranslate"><span class="pre">true.cwl</span></code> を実行します。</span><a class="headerlink" href="#running-true-cwl-with-cwltool" title="Link to this code">#</a></div>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>cwltool<span class="w"> </span>true.cwl
-INFO<span class="w"> </span>/opt/hostedtoolcache/Python/3.9.18/x64/bin/cwltool<span class="w"> </span><span class="m">3</span>.1.20240112164112
+INFO<span class="w"> </span>/opt/hostedtoolcache/Python/3.9.19/x64/bin/cwltool<span class="w"> </span><span class="m">3</span>.1.20240404144621
 INFO<span class="w"> </span>Resolved<span class="w"> </span><span class="s1">&#39;true.cwl&#39;</span><span class="w"> </span>to<span class="w"> </span><span class="s1">&#39;file:///home/runner/work/user_guide/user_guide/src/_includes/cwl/true.cwl&#39;</span>
-INFO<span class="w"> </span><span class="o">[</span>job<span class="w"> </span>true.cwl<span class="o">]</span><span class="w"> </span>/tmp/zpn0t7it$<span class="w"> </span><span class="nb">true</span>
+INFO<span class="w"> </span><span class="o">[</span>job<span class="w"> </span>true.cwl<span class="o">]</span><span class="w"> </span>/tmp/65swjrxz$<span class="w"> </span><span class="nb">true</span>
 INFO<span class="w"> </span><span class="o">[</span>job<span class="w"> </span>true.cwl<span class="o">]</span><span class="w"> </span>completed<span class="w"> </span>success
 <span class="o">{}</span>INFO<span class="w"> </span>Final<span class="w"> </span>process<span class="w"> </span>status<span class="w"> </span>is<span class="w"> </span>success
 </pre></div>
@@ -494,7 +497,7 @@ INFO<span class="w"> </span><span class="o">[</span>job<span class="w"> </span>t
 <section id="generic-cwl-runner-alias">
 <h3><span class="section-number">1.2.2.1. </span>一般的な <code class="docutils literal notranslate"><span class="pre">cwl-runner</span></code> エイリアス<a class="headerlink" href="#generic-cwl-runner-alias" title="Link to this heading">#</a></h3>
 <p><code class="docutils literal notranslate"><span class="pre">cwl-runner</span></code> は、CWL準拠のランナーに対する、実装にとらわれないエイリアスです。これは、<code class="docutils literal notranslate"><span class="pre">cwl-runner</span></code> エイリアスコマンドを独立して呼び出すことができ、特定のCWLランナープログラム名に依存しないことを意味します。ユーザーは、<code class="docutils literal notranslate"><span class="pre">cwltool</span></code> のようなCWLランナーを直接呼び出す代わりに、<code class="docutils literal notranslate"><span class="pre">cwl-runner</span></code> を呼び出すことができます。<code class="docutils literal notranslate"><span class="pre">cwl-runner</span></code> は、システム管理者またはユーザーによってインストールされ、好みのCWL実装を指し示す。これは、複数のCWLランナーがある環境では便利です。</p>
-<p>CWLコミュニティは、<code class="docutils literal notranslate"><span class="pre">cwlref-runner</span></code> という名前のPythonパッケージを公開しており、<code class="docutils literal notranslate"><span class="pre">cwltool</span></code> のエイリアスを<code class="docutils literal notranslate"><span class="pre">cwl-runner</span></code> という名前でインストールします</p>
+<p>CWLコミュニティは、<code class="docutils literal notranslate"><span class="pre">cwlref-runner</span></code> という名前のPythonパッケージを公開しており、<code class="docutils literal notranslate"><span class="pre">cwltool</span></code> のエイリアスを<code class="docutils literal notranslate"><span class="pre">cwl-runner</span></code> という名前でインストールします。</p>
 <div class="literal-block-wrapper docutils container" id="installing-cwlrunner-with-pip">
 <div class="code-block-caption"><span class="caption-text">cwltool のエイリアス <code class="docutils literal notranslate"><span class="pre">cwl-runner</span></code> を <code class="docutils literal notranslate"><span class="pre">pip</span></code> でインストールします。</span><a class="headerlink" href="#installing-cwlrunner-with-pip" title="Link to this code">#</a></div>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>pip<span class="w"> </span>install<span class="w"> </span>cwlref-runner
@@ -505,7 +508,7 @@ INFO<span class="w"> </span><span class="o">[</span>job<span class="w"> </span>t
 <div class="literal-block-wrapper docutils container" id="validating-true-cwl-with-cwl-runner">
 <div class="code-block-caption"><span class="caption-text">検証<code class="docutils literal notranslate"><span class="pre">true.cwl</span></code> with<code class="docutils literal notranslate"><span class="pre">cwl-runner</span></code>.</span><a class="headerlink" href="#validating-true-cwl-with-cwl-runner" title="Link to this code">#</a></div>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>cwl-runner<span class="w"> </span>--validate<span class="w"> </span>true.cwl
-INFO<span class="w"> </span>/opt/hostedtoolcache/Python/3.9.18/x64/bin/cwl-runner<span class="w"> </span><span class="m">3</span>.1.20240112164112
+INFO<span class="w"> </span>/opt/hostedtoolcache/Python/3.9.19/x64/bin/cwl-runner<span class="w"> </span><span class="m">3</span>.1.20240404144621
 INFO<span class="w"> </span>Resolved<span class="w"> </span><span class="s1">&#39;true.cwl&#39;</span><span class="w"> </span>to<span class="w"> </span><span class="s1">&#39;file:///home/runner/work/user_guide/user_guide/src/_includes/cwl/true.cwl&#39;</span>
 true.cwl<span class="w"> </span>is<span class="w"> </span>valid<span class="w"> </span>CWL.
 </pre></div>
@@ -514,9 +517,9 @@ true.cwl<span class="w"> </span>is<span class="w"> </span>valid<span class="w"> 
 <div class="literal-block-wrapper docutils container" id="running-true-cwl-with-cwl-runner">
 <div class="code-block-caption"><span class="caption-text"><code class="docutils literal notranslate"><span class="pre">true.cwl</span></code> を <code class="docutils literal notranslate"><span class="pre">cwl-runner</span></code> で実行します。</span><a class="headerlink" href="#running-true-cwl-with-cwl-runner" title="Link to this code">#</a></div>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>cwl-runner<span class="w"> </span>true.cwl
-INFO<span class="w"> </span>/opt/hostedtoolcache/Python/3.9.18/x64/bin/cwl-runner<span class="w"> </span><span class="m">3</span>.1.20240112164112
+INFO<span class="w"> </span>/opt/hostedtoolcache/Python/3.9.19/x64/bin/cwl-runner<span class="w"> </span><span class="m">3</span>.1.20240404144621
 INFO<span class="w"> </span>Resolved<span class="w"> </span><span class="s1">&#39;true.cwl&#39;</span><span class="w"> </span>to<span class="w"> </span><span class="s1">&#39;file:///home/runner/work/user_guide/user_guide/src/_includes/cwl/true.cwl&#39;</span>
-INFO<span class="w"> </span><span class="o">[</span>job<span class="w"> </span>true.cwl<span class="o">]</span><span class="w"> </span>/tmp/pfnx4l07$<span class="w"> </span><span class="nb">true</span>
+INFO<span class="w"> </span><span class="o">[</span>job<span class="w"> </span>true.cwl<span class="o">]</span><span class="w"> </span>/tmp/tp539yzt$<span class="w"> </span><span class="nb">true</span>
 INFO<span class="w"> </span><span class="o">[</span>job<span class="w"> </span>true.cwl<span class="o">]</span><span class="w"> </span>completed<span class="w"> </span>success
 <span class="o">{}</span>INFO<span class="w"> </span>Final<span class="w"> </span>process<span class="w"> </span>status<span class="w"> </span>is<span class="w"> </span>success
 </pre></div>
@@ -547,9 +550,9 @@ INFO<span class="w"> </span><span class="o">[</span>job<span class="w"> </span>t
 <div class="literal-block-wrapper docutils container" id="running-true-shebang-cwl-with-a-shebang">
 <div class="code-block-caption"><span class="caption-text"><code class="docutils literal notranslate"><span class="pre">true_shebang.cwl</span></code> をシェバングで実行する。</span><a class="headerlink" href="#running-true-shebang-cwl-with-a-shebang" title="Link to this code">#</a></div>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>./true_shebang.cwl
-INFO<span class="w"> </span>/opt/hostedtoolcache/Python/3.9.18/x64/bin/cwl-runner<span class="w"> </span><span class="m">3</span>.1.20240112164112
+INFO<span class="w"> </span>/opt/hostedtoolcache/Python/3.9.19/x64/bin/cwl-runner<span class="w"> </span><span class="m">3</span>.1.20240404144621
 INFO<span class="w"> </span>Resolved<span class="w"> </span><span class="s1">&#39;./true_shebang.cwl&#39;</span><span class="w"> </span>to<span class="w"> </span><span class="s1">&#39;file:///home/runner/work/user_guide/user_guide/src/_includes/cwl/true_shebang.cwl&#39;</span>
-INFO<span class="w"> </span><span class="o">[</span>job<span class="w"> </span>true_shebang.cwl<span class="o">]</span><span class="w"> </span>/tmp/fczp3vjj$<span class="w"> </span><span class="nb">true</span>
+INFO<span class="w"> </span><span class="o">[</span>job<span class="w"> </span>true_shebang.cwl<span class="o">]</span><span class="w"> </span>/tmp/_zog9n8f$<span class="w"> </span><span class="nb">true</span>
 INFO<span class="w"> </span><span class="o">[</span>job<span class="w"> </span>true_shebang.cwl<span class="o">]</span><span class="w"> </span>completed<span class="w"> </span>success
 <span class="o">{}</span>INFO<span class="w"> </span>Final<span class="w"> </span>process<span class="w"> </span>status<span class="w"> </span>is<span class="w"> </span>success
 </pre></div>
@@ -557,11 +560,7 @@ INFO<span class="w"> </span><span class="o">[</span>job<span class="w"> </span>t
 </div>
 <div class="admonition note">
 <p class="admonition-title">注釈</p>
-<p>The <em>shebang</em> is the two-character sequence <code class="docutils literal notranslate"><span class="pre">#!</span></code> at the beginning of a
-script. When the script is executable, the operating system will execute
-the script using the executable specified after the shebang. It is
-considered a good practice to use <code class="docutils literal notranslate"><span class="pre">/usr/bin/env</span> <span class="pre">[executable]</span></code> rather than using a hard-coded location, since <code class="docutils literal notranslate"><span class="pre">/usr/bin/env</span> <span class="pre">[executable]</span></code>
-looks for the <code class="docutils literal notranslate"><span class="pre">[executable]</span></code> program in the system <code class="docutils literal notranslate"><span class="pre">PATH</span></code>,</p>
+<p><em>shebang</em> (訳注：発音、シバン、シェバン)は、スクリプトの冒頭の2文字列<code class="docutils literal notranslate"><span class="pre">#!</span></code> のことです。スクリプトが実行可能な場合、オペレーティングシステムは、shebangの後に指定された実行可能ファイルを使用してスクリプトを実行します。<code class="docutils literal notranslate"><span class="pre">/usr/bin/env</span> <span class="pre">&lt;executable&gt;</span></code> は<code class="docutils literal notranslate"> <span class="pre">&lt;executable&gt;</span></code> プログラムを設定されている環境変数<code class="docutils literal notranslate"><span class="pre">PATH</span></code> の中で探すので、ハードコードされた場所を使うよりも<code class="docutils literal notranslate"><span class="pre">/usr/bin/env</span> <span class="pre">&lt;executable&gt;</span></code> を使うことが良い習慣と考えられています</p>
 </div>
 </section>
 </section>
@@ -691,28 +690,6 @@ looks for the <code class="docutils literal notranslate"><span class="pre">[exec
   <script src="../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae"></script>
 <script src="../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae"></script>
 
-<div class="container">
-  <div class="row">
-    <div class="col d-flex flex-row-reverse">
-      <ul class="nav">
-        <li class="nav-item">
-          <a class="nav-link" href="https://github.com/common-workflow-language/user_guide/blob/main/CODE_OF_CONDUCT.md">Code of Conduct</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="https://github.com/common-workflow-language/user_guide/blob/main/CONTRIBUTING.md">Contributing</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="https://github.com/common-workflow-language/user_guide/">Source</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="https://github.com/common-workflow-language/user_guide/blob/main/CITATION.md">Cite</a>
-        </li>
-      </ul>
-    </div>
-  </div>
-</div>
-
-
   <footer class="bd-footer">
 <div class="bd-footer__inner bd-page-width">
   
@@ -731,13 +708,33 @@ looks for the <code class="docutils literal notranslate"><span class="pre">[exec
         <div class="footer-item">
 
   <p class="sphinx-version">
-    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.2.6.
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.3.7.
     <br/>
   </p>
 </div>
       
     </div>
   
+  
+    <div class="footer-items__center">
+      
+        <div class="footer-item">
+<ul class="nav justify-content-center">
+  <li class="nav-item">
+    <a class="nav-link" href="https://github.com/common-workflow-language/user_guide/blob/main/CODE_OF_CONDUCT.md">Code of Conduct</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="https://github.com/common-workflow-language/user_guide/blob/main/CONTRIBUTING.md">Contributing</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="https://github.com/common-workflow-language/user_guide/">Source</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="https://github.com/common-workflow-language/user_guide/blob/main/CITATION.md">Cite</a>
+  </li>
+</ul></div>
+      
+    </div>
   
   
     <div class="footer-items__end">
@@ -752,6 +749,5 @@ looks for the <code class="docutils literal notranslate"><span class="pre">[exec
 </div>
 
   </footer>
-
   </body>
 </html>

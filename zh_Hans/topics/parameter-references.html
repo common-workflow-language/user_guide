@@ -33,7 +33,7 @@
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
 
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=80d5e7a1" />
-    <link rel="stylesheet" type="text/css" href="../_static/graphviz.css?v=eafc0fe6" />
+    <link rel="stylesheet" type="text/css" href="../_static/graphviz.css?v=fd3f3429" />
     <link rel="stylesheet" type="text/css" href="../_static/css/custom.css?v=e0da1575" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
@@ -42,7 +42,7 @@
   <script src="../_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=8d27b9dea8ad943066ae"></script>
 
     <script src="../_static/documentation_options.js?v=ac4875c4"></script>
-    <script src="../_static/doctools.js?v=888ff710"></script>
+    <script src="../_static/doctools.js?v=9a2dae69"></script>
     <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'topics/parameter-references';</script>
     <link rel="icon" href="../_static/favicon.ico"/>
@@ -362,13 +362,33 @@ document.write(`
   </div>
   
     <div class="sidebar-primary-items__start sidebar-primary__section">
-        <div class="sidebar-primary-item"><nav class="bd-links d-none d-md-block" id="bd-docs-nav" aria-label="主导航">
-  <p class="bd-links__title" role="heading" aria-level="1">
-    章节导航
-  </p>
-  <div class="bd-toc-item navbar-nav">
-    
-  </div>
+        <div class="sidebar-primary-item">
+<nav class="bd-docs-nav bd-links"
+     aria-label="章节导航">
+  <p class="bd-links__title" role="heading" aria-level="1">章节导航</p>
+  <div class="bd-toc-item navbar-nav"><ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="yaml-guide.html">2.1. YAML Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="command-line-tool.html">2.2. 命令行工具</a></li>
+<li class="toctree-l1"><a class="reference internal" href="expressions.html">2.3. 表达式</a></li>
+<li class="toctree-l1"><a class="reference internal" href="inputs.html">2.4. 输入 (inputs)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="additional-arguments-and-parameters.html">2.5. 附加参数</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">2.6. 参数引用</a></li>
+<li class="toctree-l1"><a class="reference internal" href="outputs.html">2.7. 输出</a></li>
+<li class="toctree-l1"><a class="reference internal" href="custom-types.html">2.8. 自定义类型</a></li>
+<li class="toctree-l1"><a class="reference internal" href="expression-tool.html">2.9. 表达式工具</a></li>
+<li class="toctree-l1"><a class="reference internal" href="workflows.html">2.10. 工作流</a></li>
+<li class="toctree-l1"><a class="reference internal" href="operations.html">2.11. 抽象操作</a></li>
+<li class="toctree-l1"><a class="reference internal" href="environment-variables.html">2.12. 环境变量</a></li>
+<li class="toctree-l1"><a class="reference internal" href="using-containers.html">2.13. 使用容器</a></li>
+<li class="toctree-l1"><a class="reference internal" href="creating-files-at-runtime.html">2.14. 在运行时创建文件</a></li>
+<li class="toctree-l1"><a class="reference internal" href="staging-input-files.html">2.15. 暂存输入文件</a></li>
+<li class="toctree-l1"><a class="reference internal" href="best-practices.html">2.16. 优良习惯</a></li>
+<li class="toctree-l1"><a class="reference internal" href="file-formats.html">2.17. 文件格式</a></li>
+<li class="toctree-l1"><a class="reference internal" href="metadata-and-authorship.html">2.18. 元数据和著作人信息</a></li>
+<li class="toctree-l1"><a class="reference internal" href="specifying-software-requirements.html">2.19. 指定软件需求</a></li>
+<li class="toctree-l1"><a class="reference internal" href="troubleshooting.html">2.20. 故障排除</a></li>
+</ul>
+</div>
 </nav></div>
     </div>
   
@@ -464,12 +484,12 @@ document.write(`
 </pre></div>
 </div>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>cwltool<span class="w"> </span>tar-param.cwl<span class="w"> </span>tar-param-job.yml
-INFO<span class="w"> </span>/opt/hostedtoolcache/Python/3.9.18/x64/bin/cwltool<span class="w"> </span><span class="m">3</span>.1.20240112164112
+INFO<span class="w"> </span>/opt/hostedtoolcache/Python/3.9.19/x64/bin/cwltool<span class="w"> </span><span class="m">3</span>.1.20240404144621
 INFO<span class="w"> </span>Resolved<span class="w"> </span><span class="s1">&#39;tar-param.cwl&#39;</span><span class="w"> </span>to<span class="w"> </span><span class="s1">&#39;file:///home/runner/work/user_guide/user_guide/src/_includes/cwl/parameter-references/tar-param.cwl&#39;</span>
-INFO<span class="w"> </span><span class="o">[</span>job<span class="w"> </span>tar-param.cwl<span class="o">]</span><span class="w"> </span>/tmp/fx31jqba$<span class="w"> </span>tar<span class="w"> </span><span class="se">\</span>
+INFO<span class="w"> </span><span class="o">[</span>job<span class="w"> </span>tar-param.cwl<span class="o">]</span><span class="w"> </span>/tmp/pagbkwm5$<span class="w"> </span>tar<span class="w"> </span><span class="se">\</span>
 <span class="w">    </span>--extract<span class="w"> </span><span class="se">\</span>
 <span class="w">    </span>--file<span class="w"> </span><span class="se">\</span>
-<span class="w">    </span>/tmp/1prc_zms/stg9d310f2e-e970-4760-bff2-aadbc4ddabd9/hello.tar<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>/tmp/b01_js6m/stgbcf47530-06fd-41fb-b1ac-f4b54ecd502e/hello.tar<span class="w"> </span><span class="se">\</span>
 <span class="w">    </span>goodbye.txt
 INFO<span class="w"> </span><span class="o">[</span>job<span class="w"> </span>tar-param.cwl<span class="o">]</span><span class="w"> </span>completed<span class="w"> </span>success
 <span class="o">{</span>
@@ -679,28 +699,6 @@ INFO<span class="w"> </span><span class="o">[</span>job<span class="w"> </span>t
   <script src="../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae"></script>
 <script src="../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae"></script>
 
-<div class="container">
-  <div class="row">
-    <div class="col d-flex flex-row-reverse">
-      <ul class="nav">
-        <li class="nav-item">
-          <a class="nav-link" href="https://github.com/common-workflow-language/user_guide/blob/main/CODE_OF_CONDUCT.md">Code of Conduct</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="https://github.com/common-workflow-language/user_guide/blob/main/CONTRIBUTING.md">Contributing</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="https://github.com/common-workflow-language/user_guide/">Source</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="https://github.com/common-workflow-language/user_guide/blob/main/CITATION.md">Cite</a>
-        </li>
-      </ul>
-    </div>
-  </div>
-</div>
-
-
   <footer class="bd-footer">
 <div class="bd-footer__inner bd-page-width">
   
@@ -719,13 +717,33 @@ INFO<span class="w"> </span><span class="o">[</span>job<span class="w"> </span>t
         <div class="footer-item">
 
   <p class="sphinx-version">
-    由 <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.2.6创建。
+    由 <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.3.7创建。
     <br/>
   </p>
 </div>
       
     </div>
   
+  
+    <div class="footer-items__center">
+      
+        <div class="footer-item">
+<ul class="nav justify-content-center">
+  <li class="nav-item">
+    <a class="nav-link" href="https://github.com/common-workflow-language/user_guide/blob/main/CODE_OF_CONDUCT.md">Code of Conduct</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="https://github.com/common-workflow-language/user_guide/blob/main/CONTRIBUTING.md">Contributing</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="https://github.com/common-workflow-language/user_guide/">Source</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="https://github.com/common-workflow-language/user_guide/blob/main/CITATION.md">Cite</a>
+  </li>
+</ul></div>
+      
+    </div>
   
   
     <div class="footer-items__end">
@@ -740,6 +758,5 @@ INFO<span class="w"> </span><span class="o">[</span>job<span class="w"> </span>t
 </div>
 
   </footer>
-
   </body>
 </html>

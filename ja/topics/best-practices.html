@@ -33,7 +33,7 @@
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
 
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=80d5e7a1" />
-    <link rel="stylesheet" type="text/css" href="../_static/graphviz.css?v=eafc0fe6" />
+    <link rel="stylesheet" type="text/css" href="../_static/graphviz.css?v=fd3f3429" />
     <link rel="stylesheet" type="text/css" href="../_static/css/custom.css?v=e0da1575" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
@@ -42,7 +42,7 @@
   <script src="../_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=8d27b9dea8ad943066ae"></script>
 
     <script src="../_static/documentation_options.js?v=be13464f"></script>
-    <script src="../_static/doctools.js?v=888ff710"></script>
+    <script src="../_static/doctools.js?v=9a2dae69"></script>
     <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../_static/translations.js?v=4dbe4bdc"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'topics/best-practices';</script>
@@ -363,13 +363,33 @@ document.write(`
   </div>
   
     <div class="sidebar-primary-items__start sidebar-primary__section">
-        <div class="sidebar-primary-item"><nav class="bd-links d-none d-md-block" id="bd-docs-nav" aria-label="メインナビゲーション">
-  <p class="bd-links__title" role="heading" aria-level="1">
-    セクションナビゲーション
-  </p>
-  <div class="bd-toc-item navbar-nav">
-    
-  </div>
+        <div class="sidebar-primary-item">
+<nav class="bd-docs-nav bd-links"
+     aria-label="セクションナビゲーション">
+  <p class="bd-links__title" role="heading" aria-level="1">セクションナビゲーション</p>
+  <div class="bd-toc-item navbar-nav"><ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="yaml-guide.html">2.1. YAMLガイド</a></li>
+<li class="toctree-l1"><a class="reference internal" href="command-line-tool.html">2.2. コマンドラインツール</a></li>
+<li class="toctree-l1"><a class="reference internal" href="expressions.html">2.3. Expressions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="inputs.html">2.4. Inputs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="additional-arguments-and-parameters.html">2.5. 追加の引数とパラメータ</a></li>
+<li class="toctree-l1"><a class="reference internal" href="parameter-references.html">2.6. パラメータリファレンス</a></li>
+<li class="toctree-l1"><a class="reference internal" href="outputs.html">2.7. Outputs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="custom-types.html">2.8. カスタムタイプ</a></li>
+<li class="toctree-l1"><a class="reference internal" href="expression-tool.html">2.9. Expression Tool</a></li>
+<li class="toctree-l1"><a class="reference internal" href="workflows.html">2.10. ワークフロー</a></li>
+<li class="toctree-l1"><a class="reference internal" href="operations.html">2.11. Operations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="environment-variables.html">2.12. 環境変数</a></li>
+<li class="toctree-l1"><a class="reference internal" href="using-containers.html">2.13. コンテナの使用</a></li>
+<li class="toctree-l1"><a class="reference internal" href="creating-files-at-runtime.html">2.14. 実行時にファイルを作成する</a></li>
+<li class="toctree-l1"><a class="reference internal" href="staging-input-files.html">2.15. 入力ファイルのステージング</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">2.16. ベストプラクティス</a></li>
+<li class="toctree-l1"><a class="reference internal" href="file-formats.html">2.17. ファイルフォーマット</a></li>
+<li class="toctree-l1"><a class="reference internal" href="metadata-and-authorship.html">2.18. メタデータと著者</a></li>
+<li class="toctree-l1"><a class="reference internal" href="specifying-software-requirements.html">2.19. ソフトウェア要求事項の指定</a></li>
+<li class="toctree-l1"><a class="reference internal" href="troubleshooting.html">2.20. トラブルシューティング</a></li>
+</ul>
+</div>
 </nav></div>
     </div>
   
@@ -427,10 +447,7 @@ document.write(`
                   
   <section id="best-practices">
 <h1><span class="section-number">2.16. </span>ベストプラクティス<a class="headerlink" href="#best-practices" title="Link to this heading">#</a></h1>
-<p>The following are a set of recommended good practices to keep in mind when writing a
-Common Workflow Language description for a tool or workflow. These guidelines
-are presented for consideration on a scale of usefulness: although more is better, not
-all are required.</p>
+<p>以下は、ツールやワークフローのCWL定義を書く際に留意すべき推奨グッドプラクティスのセットです。これらのガイドラインは、有用性の尺度で検討するために提示されています：多ければ多いほど良いが、すべてが必要なわけではありません。</p>
 <ul>
 <li><p>入力または参照のファイルやディレクトリの名前に <code class="docutils literal notranslate"><span class="pre">type:</span> <span class="pre">string</span></code> を使用しません。 <code class="docutils literal notranslate"><span class="pre">type:File</span></code> または <code class="docutils literal notranslate"><span class="pre">type:</span> <span class="pre">Direcotry</span></code> を適宜使用します。</p></li>
 <li><p>A CWL document (in conjunction with any external components like <code class="docutils literal notranslate"><span class="pre">Dockerfile</span></code>s) is software code.
@@ -441,11 +458,7 @@ combine it with other workflows. For this reason, please consider including a li
 document. The authors of this guide urge you to choose a pre-existing license rather than trying
 to write your own (see the link below to learn more about choosing a license), and our recommended
 practice is to choose a license that allows for re-use by anyone, e.g. <a class="reference external" href="https://spdx.org/licenses/Apache-2.0.html">Apache 2.0</a>.</p>
-<p>If possible, the license should be specified with its corresponding <a class="reference external" href="https://spdx.org/licenses/">SPDX identifier</a>.
-Construct the metadata field for the license by providing a URL of the form
-<code class="docutils literal notranslate"><span class="pre">https://spdx.org/licenses/[SPDX-ID]</span></code> where <code class="docutils literal notranslate"><span class="pre">SPDX-ID</span></code> is taken from the list of identifiers
-linked above. See the example snippet below for guidance. For non-standard licenses without an SPDX
-identifier, provide a URL to the license.</p>
+<p>可能であれば、ライセンスは対応する <a class="reference external" href="https://spdx.org/licenses/">SPDX 識別子</a> と共に指定されるべきです。<code class="docutils literal notranslate"><span class="pre">https://spdx.org/licenses/[SPDX-ID]</span></code> (<code class="docutils literal notranslate"><span class="pre">SPDX-ID</span></code> は、上記のリンク先の識別子のリストから選択) という形式の URL を指定して、ライセンスのメタデータフィールドを構築します。以下の例を参照してください。SPDX識別子のない非標準ライセンスの場合は、そのライセンスへのURLを指定します。</p>
 <p>参考文献：&quot;<a class="reference external" href="https://doi.org/10.1371/journal.pcbi.1002598">科学者・プログラマーのためのソフトウェアライセンス クイックガイド</a>&quot;</p>
 <p><em>SPDX 識別子を持つライセンスのメタデータフィールドの例：</em></p>
 <div class="highlight-cwl notranslate"><div class="highlight"><pre><span></span><span class="nt">$namespaces</span><span class="p">:</span>
@@ -454,17 +467,13 @@ identifier, provide a URL to the license.</p>
 <span class="c1"># other s: declarations</span>
 </pre></div>
 </div>
-<p>For more examples of providing metadata within CWL descriptions, see
-<a class="reference internal" href="metadata-and-authorship.html"><span class="std std-doc">the Metadata and Authorship section of this User Guide</span></a>.</p>
+<p>CW定義にメタデータを与える例については、 <a class="reference internal" href="metadata-and-authorship.html"><span class="std std-doc">このユーザーガイドのメタデータと著者名のセクション</span></a>を参照してください。</p>
 </li>
 <li><p>CWLツールやワークフローの定義の著者の<a class="reference external" href="https://github.com/ProteinsWebTeam/ebi-metagenomics-cwl/blob/master/workflows/emg-assembly.cwl#L200">帰属情報</a>を含みます。<a class="reference external" href="https://orcid.org">ORCID</a>のような曖昧でない識別子を使用してください。</p></li>
-<li><p>In tool descriptions, list dependencies using short name(s) under
-<a class="reference external" href="https://w3id.org/cwl/CommandLineTool.html#SoftwareRequirement"><code class="docutils literal notranslate"><span class="pre">SoftwareRequirement</span></code></a>.</p></li>
-<li><p>Include <a class="reference external" href="https://scicrunch.org">SciCrunch</a> identifiers for dependencies in
-<code class="docutils literal notranslate"><span class="pre">https://identifiers.org/rrid/RRID:SCR_NNNNNN</span></code> format.</p></li>
+<li><p>ツール定義では、<a class="reference external" href="https://w3id.org/cwl/CommandLineTool.html#SoftwareRequirement"><code class="docutils literal notranslate"><span class="pre">SoftwareRequirement</span></code></a>.の下に、短い名前を使用して依存関係をリストアップします。</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">https://identifiers.org/rrid/RRID:SCR_NNNNNN</span></code> 形式で依存関係のための <a class="reference external" href="https://scicrunch.org">SciCrunch</a> 識別子を書きます。</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">input</span></code> および<code class="docutils literal notranslate"><span class="pre">output</span></code> の識別子はすべて、その概念的同一性を反映する必要があります。<code class="docutils literal notranslate"><span class="pre">foo_input</span></code>,<code class="docutils literal notranslate"><span class="pre">foo_file</span></code>,<code class="docutils literal notranslate"><span class="pre">result</span></code>,<code class="docutils literal notranslate"><span class="pre">input</span></code>,<code class="docutils literal notranslate"><span class="pre">output</span></code>, などの代わりに<code class="docutils literal notranslate"><span class="pre">unaligned_sequences</span></code>,<code class="docutils literal notranslate"><span class="pre">reference_genome</span></code>,<code class="docutils literal notranslate"><span class="pre">phylogeny</span></code>, または<code class="docutils literal notranslate"><span class="pre">aligned_sequences</span></code> などの情報量の多い名称を使ってください。</p></li>
-<li><p>In tool descriptions, include a list of version(s) of the tool that are
-known to work with this description under <a class="reference external" href="https://w3id.org/cwl/CommandLineTool.html#SoftwareRequirement"><code class="docutils literal notranslate"><span class="pre">SoftwareRequirement</span></code></a>.</p></li>
+<li><p>ツール定義では、<a class="reference external" href="https://w3id.org/cwl/CommandLineTool.html#SoftwareRequirement"><code class="docutils literal notranslate"><span class="pre">SoftwareRequirement</span></code></a>の下に、このツール定義で動作することが確認されているツールのバージョンのリストを書きます。</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">format</span></code> should be specified for all input and output <code class="docutils literal notranslate"><span class="pre">File</span></code>s.
 Bioinformatics tools should use format identifiers from <a class="reference external" href="http://edamontology.org/format_1915">EDAM</a>.
 See also <code class="docutils literal notranslate"><span class="pre">iana:text/plain</span></code>, <code class="docutils literal notranslate"><span class="pre">iana:text/tab-separated-values</span></code> with
@@ -472,14 +481,10 @@ See also <code class="docutils literal notranslate"><span class="pre">iana:text/
 <a class="reference external" href="https://www.iana.org/assignments/media-types/media-types.xhtml">Full IANA media type list</a> (also known as MIME types). For
 non-bioinformatics tools, use or build an appropriate ontology/controlled
 vocabulary in the same way. Please edit this page to let us know about it.</p></li>
-<li><p>Mark all input and output <code class="docutils literal notranslate"><span class="pre">File</span></code>s that are read from or written to in a
-streaming compatible way (only once, no random-access), as <code class="docutils literal notranslate"><span class="pre">streamable:</span> <span class="pre">true</span></code>.</p></li>
-<li><p>Each <a class="reference external" href="https://w3id.org/cwl/CommandLineTool.html#CommandLineTool"><code class="docutils literal notranslate"><span class="pre">CommandLineTool</span></code></a> description should focus on a single operation
-only, even if the (sub)command is capable of more. Don't overcomplicate your
-tool descriptions with options that you don't need or use.</p></li>
-<li><p>Custom types should be defined with one external YAML per type
-definition for re-use.</p></li>
-<li><p>Include a top-level short <code class="docutils literal notranslate"><span class="pre">label</span></code> summarising the tool/workflow.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">File</span></code>の入出力のうち、ストリーミング互換の方法（一度だけ利用されて、ランダムアクセスなし、訳注標準入出力のイメージ）で読み書きされるものを、<code class="docutils literal notranslate"><span class="pre">streamable:</span> <span class="pre">true</span></code> としてマークします。</p></li>
+<li><p>各<a class="reference external" href="https://w3id.org/cwl/CommandLineTool.html#CommandLineTool"><code class="docutils literal notranslate"><span class="pre">CommandLineTool</span></code></a> の定義は、たとえ（サブ）コマンドがそれ以上の機能を備えていたとしても、一つの使用方法のみに焦点を当てるべきです。必要ないまたは、使用しないオプションでツールの定義を複雑にし過ぎないようにしましょう。</p></li>
+<li><p>カスタム型は、型定義ごとに1つの外部YAMLで定義すると再利用しやすくなります。</p></li>
+<li><p>ツール/ワークフローを要約したトップレベルの短い<code class="docutils literal notranslate"><span class="pre">label</span></code> を含めます。</p></li>
 <li><p>有用であれば、トップレベル<code class="docutils literal notranslate"><span class="pre">doc</span></code> も含めてください。これは、トップレベル<code class="docutils literal notranslate"><span class="pre">label</span></code> （上記参照）で提供されたものより長く詳細な説明を記述します。</p></li>
 <li><p>有効な値のリストが決まっている要素には、<code class="docutils literal notranslate"><span class="pre">type:</span> <span class="pre">string</span></code> の代わりに、<code class="docutils literal notranslate"><span class="pre">type:</span> <span class="pre">enum</span></code> を使用してください。</p></li>
 <li><p>Evaluate all use of JavaScript for possible elimination or replacement.
@@ -488,7 +493,7 @@ of the <a class="reference external" href="https://www.commonwl.org/v1.0/Command
 <code class="docutils literal notranslate"><span class="pre">nameext</span></code>, etc., could be used instead.</p></li>
 <li><p>ツール定義を同僚（できれば別の機関の人）に渡し、テストしてもらい、フィードバックをもらいましょう。</p></li>
 <li><p>抽象化できる個々のコンポーネントを持つ複雑なワークフローは、ワークフローをモジュール化し、その一部を容易に再利用できるようにするために、<a class="reference external" href="https://www.commonwl.org/v1.0/Workflow.html#SubworkflowFeatureRequirement"><code class="docutils literal notranslate"><span class="pre">SubworkflowFeatureRequirement</span></code></a>を利用します。</p></li>
-<li><p>Software containers should be made to be conformant to the <a class="reference external" href="https://doi.org/10.12688/f1000research.15140.1">&quot;Recommendations for the packaging and containerizing of bioinformatics software&quot;</a> (also useful to other disciplines).</p></li>
+<li><p>ソフトウェアのコンテナは、<a class="reference external" href="https://doi.org/10.12688/f1000research.15140.1">&quot;Recommendations for packaging and containerizing of bioinformatics software&quot;</a> に準拠するようにします（他の分野でも有用です）。</p></li>
 </ul>
 </section>
 
@@ -571,28 +576,6 @@ of the <a class="reference external" href="https://www.commonwl.org/v1.0/Command
   <script src="../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae"></script>
 <script src="../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae"></script>
 
-<div class="container">
-  <div class="row">
-    <div class="col d-flex flex-row-reverse">
-      <ul class="nav">
-        <li class="nav-item">
-          <a class="nav-link" href="https://github.com/common-workflow-language/user_guide/blob/main/CODE_OF_CONDUCT.md">Code of Conduct</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="https://github.com/common-workflow-language/user_guide/blob/main/CONTRIBUTING.md">Contributing</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="https://github.com/common-workflow-language/user_guide/">Source</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="https://github.com/common-workflow-language/user_guide/blob/main/CITATION.md">Cite</a>
-        </li>
-      </ul>
-    </div>
-  </div>
-</div>
-
-
   <footer class="bd-footer">
 <div class="bd-footer__inner bd-page-width">
   
@@ -611,13 +594,33 @@ of the <a class="reference external" href="https://www.commonwl.org/v1.0/Command
         <div class="footer-item">
 
   <p class="sphinx-version">
-    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.2.6.
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.3.7.
     <br/>
   </p>
 </div>
       
     </div>
   
+  
+    <div class="footer-items__center">
+      
+        <div class="footer-item">
+<ul class="nav justify-content-center">
+  <li class="nav-item">
+    <a class="nav-link" href="https://github.com/common-workflow-language/user_guide/blob/main/CODE_OF_CONDUCT.md">Code of Conduct</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="https://github.com/common-workflow-language/user_guide/blob/main/CONTRIBUTING.md">Contributing</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="https://github.com/common-workflow-language/user_guide/">Source</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="https://github.com/common-workflow-language/user_guide/blob/main/CITATION.md">Cite</a>
+  </li>
+</ul></div>
+      
+    </div>
   
   
     <div class="footer-items__end">
@@ -632,6 +635,5 @@ of the <a class="reference external" href="https://www.commonwl.org/v1.0/Command
 </div>
 
   </footer>
-
   </body>
 </html>

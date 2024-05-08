@@ -33,7 +33,7 @@
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
 
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=80d5e7a1" />
-    <link rel="stylesheet" type="text/css" href="../_static/graphviz.css?v=eafc0fe6" />
+    <link rel="stylesheet" type="text/css" href="../_static/graphviz.css?v=fd3f3429" />
     <link rel="stylesheet" type="text/css" href="../_static/css/custom.css?v=e0da1575" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
@@ -42,7 +42,7 @@
   <script src="../_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=8d27b9dea8ad943066ae"></script>
 
     <script src="../_static/documentation_options.js?v=be13464f"></script>
-    <script src="../_static/doctools.js?v=888ff710"></script>
+    <script src="../_static/doctools.js?v=9a2dae69"></script>
     <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../_static/translations.js?v=4dbe4bdc"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'topics/command-line-tool';</script>
@@ -363,13 +363,33 @@ document.write(`
   </div>
   
     <div class="sidebar-primary-items__start sidebar-primary__section">
-        <div class="sidebar-primary-item"><nav class="bd-links d-none d-md-block" id="bd-docs-nav" aria-label="メインナビゲーション">
-  <p class="bd-links__title" role="heading" aria-level="1">
-    セクションナビゲーション
-  </p>
-  <div class="bd-toc-item navbar-nav">
-    
-  </div>
+        <div class="sidebar-primary-item">
+<nav class="bd-docs-nav bd-links"
+     aria-label="セクションナビゲーション">
+  <p class="bd-links__title" role="heading" aria-level="1">セクションナビゲーション</p>
+  <div class="bd-toc-item navbar-nav"><ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="yaml-guide.html">2.1. YAMLガイド</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">2.2. コマンドラインツール</a></li>
+<li class="toctree-l1"><a class="reference internal" href="expressions.html">2.3. Expressions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="inputs.html">2.4. Inputs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="additional-arguments-and-parameters.html">2.5. 追加の引数とパラメータ</a></li>
+<li class="toctree-l1"><a class="reference internal" href="parameter-references.html">2.6. パラメータリファレンス</a></li>
+<li class="toctree-l1"><a class="reference internal" href="outputs.html">2.7. Outputs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="custom-types.html">2.8. カスタムタイプ</a></li>
+<li class="toctree-l1"><a class="reference internal" href="expression-tool.html">2.9. Expression Tool</a></li>
+<li class="toctree-l1"><a class="reference internal" href="workflows.html">2.10. ワークフロー</a></li>
+<li class="toctree-l1"><a class="reference internal" href="operations.html">2.11. Operations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="environment-variables.html">2.12. 環境変数</a></li>
+<li class="toctree-l1"><a class="reference internal" href="using-containers.html">2.13. コンテナの使用</a></li>
+<li class="toctree-l1"><a class="reference internal" href="creating-files-at-runtime.html">2.14. 実行時にファイルを作成する</a></li>
+<li class="toctree-l1"><a class="reference internal" href="staging-input-files.html">2.15. 入力ファイルのステージング</a></li>
+<li class="toctree-l1"><a class="reference internal" href="best-practices.html">2.16. ベストプラクティス</a></li>
+<li class="toctree-l1"><a class="reference internal" href="file-formats.html">2.17. ファイルフォーマット</a></li>
+<li class="toctree-l1"><a class="reference internal" href="metadata-and-authorship.html">2.18. メタデータと著者</a></li>
+<li class="toctree-l1"><a class="reference internal" href="specifying-software-requirements.html">2.19. ソフトウェア要求事項の指定</a></li>
+<li class="toctree-l1"><a class="reference internal" href="troubleshooting.html">2.20. トラブルシューティング</a></li>
+</ul>
+</div>
 </nav></div>
     </div>
   
@@ -427,10 +447,7 @@ document.write(`
                   
   <section id="command-line-tool">
 <h1><span class="section-number">2.2. </span>コマンドラインツール<a class="headerlink" href="#command-line-tool" title="Link to this heading">#</a></h1>
-<p>A command-line tool is a type of Process object that can be run by
-itself or as a Workflow step. It is a wrapper for a command like
-<code class="docutils literal notranslate"><span class="pre">ls</span></code>, <code class="docutils literal notranslate"><span class="pre">echo</span></code>, <code class="docutils literal notranslate"><span class="pre">tar</span></code>, etc. The command-line tool is defined in the
-<code class="docutils literal notranslate"><span class="pre">baseCommand</span></code> attribute of the command-line tool CWL document.</p>
+<p>CommandLineToolは、Processオブジェクトの一種であり、それ自体またはワークフローのステップとして実行することができます。<code class="docutils literal notranslate"><span class="pre">ls</span></code>,<code class="docutils literal notranslate"><span class="pre">echo</span></code>,<code class="docutils literal notranslate"><span class="pre">tar</span></code> などの実行したいコマンドのラッパーです。実行したいコマンドは、CommandLineToolについてのCWL定義の<code class="docutils literal notranslate"><span class="pre">baseCommand</span></code> 属性で定義されています。</p>
 <p>CWLコマンドラインツールは、<code class="docutils literal notranslate"><span class="pre">inputs</span></code> と<code class="docutils literal notranslate"><span class="pre">outputs</span></code> も持っていなければなりません。次の例は、Linuxコマンド <code class="docutils literal notranslate"><span class="pre">echo</span></code> のためのCWLコマンドラインツールの最小限の例で、inputsとoutputsを使用します。</p>
 <figure class="align-center" id="id1">
 <div class="graphviz"><object data="../_images/graphviz-50f71480e1fde5bfe7ca5afa005f8614587f43e8.svg" type="image/svg+xml" class="graphviz">
@@ -482,16 +499,11 @@ itself or as a Workflow step. It is a wrapper for a command like
 </div>
 <div class="admonition note">
 <p class="admonition-title">注釈</p>
-<p>The example above uses a simplified form to define inputs and outputs.
-You will learn more about in the <a class="reference internal" href="inputs.html"><span class="std std-doc">Inputs</span></a>
-and in the <a class="reference internal" href="outputs.html"><span class="std std-doc">Outputs</span></a> sections.</p>
+<p>上記の例では、簡略化した形で入力と出力を定義しています。<a class="reference internal" href="inputs.html"><span class="std std-doc">Inputs</span></a>と<a class="reference internal" href="outputs.html"><span class="std std-doc">Outputs</span></a>のセクションで、より詳しく説明する予定です。</p>
 </div>
 <section id="network-access">
 <h2><span class="section-number">2.2.1. </span>ネットワークアクセス<a class="headerlink" href="#network-access" title="Link to this heading">#</a></h2>
-<p>This indicates whether a process requires outgoing IPv4/IPv6 network
-access.  Starting with CWL v1.1, programs are not granted network
-access by default, so you must include the requirement for network
-access in the specification of your tool.</p>
+<p>これは、プロセスが送信先としてIPv4/IPv6ネットワーク・アクセスを必要とするかどうかを示します。 CWL v1.1以降、プログラムにはデフォルトでネットワーク・アクセス権が付与されないため、ツール定義にネットワーク・アクセスの要件を含める必要があります。</p>
 <div class="highlight-cwl notranslate"><div class="highlight"><pre><span></span><span class="nt">cwlVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">v1.2</span>
 <span class="nt">class</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">CommandLineTool</span>
 
@@ -502,8 +514,7 @@ access in the specification of your tool.</p>
 </div>
 <div class="admonition note">
 <p class="admonition-title">注釈</p>
-<p>CWL v1.0 command-line tools that are upgraded to v1.1
-or v1.2 or v1.2 will have <code class="docutils literal notranslate"><span class="pre">networkAccess:</span> <span class="pre">true</span></code> set automatically.</p>
+<p>CWL v1.0のコマンドラインツールをv1.1またはv1.2にアップグレードすると、自動的に<code class="docutils literal notranslate"><span class="pre">networkAccess:</span> <span class="pre">true</span></code>が追加されネットワークアクセスできるようになります。</p>
 </div>
 </section>
 </section>
@@ -599,28 +610,6 @@ or v1.2 or v1.2 will have <code class="docutils literal notranslate"><span class
   <script src="../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae"></script>
 <script src="../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae"></script>
 
-<div class="container">
-  <div class="row">
-    <div class="col d-flex flex-row-reverse">
-      <ul class="nav">
-        <li class="nav-item">
-          <a class="nav-link" href="https://github.com/common-workflow-language/user_guide/blob/main/CODE_OF_CONDUCT.md">Code of Conduct</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="https://github.com/common-workflow-language/user_guide/blob/main/CONTRIBUTING.md">Contributing</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="https://github.com/common-workflow-language/user_guide/">Source</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="https://github.com/common-workflow-language/user_guide/blob/main/CITATION.md">Cite</a>
-        </li>
-      </ul>
-    </div>
-  </div>
-</div>
-
-
   <footer class="bd-footer">
 <div class="bd-footer__inner bd-page-width">
   
@@ -639,13 +628,33 @@ or v1.2 or v1.2 will have <code class="docutils literal notranslate"><span class
         <div class="footer-item">
 
   <p class="sphinx-version">
-    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.2.6.
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.3.7.
     <br/>
   </p>
 </div>
       
     </div>
   
+  
+    <div class="footer-items__center">
+      
+        <div class="footer-item">
+<ul class="nav justify-content-center">
+  <li class="nav-item">
+    <a class="nav-link" href="https://github.com/common-workflow-language/user_guide/blob/main/CODE_OF_CONDUCT.md">Code of Conduct</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="https://github.com/common-workflow-language/user_guide/blob/main/CONTRIBUTING.md">Contributing</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="https://github.com/common-workflow-language/user_guide/">Source</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="https://github.com/common-workflow-language/user_guide/blob/main/CITATION.md">Cite</a>
+  </li>
+</ul></div>
+      
+    </div>
   
   
     <div class="footer-items__end">
@@ -660,6 +669,5 @@ or v1.2 or v1.2 will have <code class="docutils literal notranslate"><span class
 </div>
 
   </footer>
-
   </body>
 </html>

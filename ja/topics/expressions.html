@@ -33,7 +33,7 @@
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
 
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=80d5e7a1" />
-    <link rel="stylesheet" type="text/css" href="../_static/graphviz.css?v=eafc0fe6" />
+    <link rel="stylesheet" type="text/css" href="../_static/graphviz.css?v=fd3f3429" />
     <link rel="stylesheet" type="text/css" href="../_static/css/custom.css?v=e0da1575" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
@@ -42,7 +42,7 @@
   <script src="../_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=8d27b9dea8ad943066ae"></script>
 
     <script src="../_static/documentation_options.js?v=be13464f"></script>
-    <script src="../_static/doctools.js?v=888ff710"></script>
+    <script src="../_static/doctools.js?v=9a2dae69"></script>
     <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../_static/translations.js?v=4dbe4bdc"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'topics/expressions';</script>
@@ -363,13 +363,33 @@ document.write(`
   </div>
   
     <div class="sidebar-primary-items__start sidebar-primary__section">
-        <div class="sidebar-primary-item"><nav class="bd-links d-none d-md-block" id="bd-docs-nav" aria-label="メインナビゲーション">
-  <p class="bd-links__title" role="heading" aria-level="1">
-    セクションナビゲーション
-  </p>
-  <div class="bd-toc-item navbar-nav">
-    
-  </div>
+        <div class="sidebar-primary-item">
+<nav class="bd-docs-nav bd-links"
+     aria-label="セクションナビゲーション">
+  <p class="bd-links__title" role="heading" aria-level="1">セクションナビゲーション</p>
+  <div class="bd-toc-item navbar-nav"><ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="yaml-guide.html">2.1. YAMLガイド</a></li>
+<li class="toctree-l1"><a class="reference internal" href="command-line-tool.html">2.2. コマンドラインツール</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">2.3. Expressions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="inputs.html">2.4. Inputs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="additional-arguments-and-parameters.html">2.5. 追加の引数とパラメータ</a></li>
+<li class="toctree-l1"><a class="reference internal" href="parameter-references.html">2.6. パラメータリファレンス</a></li>
+<li class="toctree-l1"><a class="reference internal" href="outputs.html">2.7. Outputs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="custom-types.html">2.8. カスタムタイプ</a></li>
+<li class="toctree-l1"><a class="reference internal" href="expression-tool.html">2.9. Expression Tool</a></li>
+<li class="toctree-l1"><a class="reference internal" href="workflows.html">2.10. ワークフロー</a></li>
+<li class="toctree-l1"><a class="reference internal" href="operations.html">2.11. Operations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="environment-variables.html">2.12. 環境変数</a></li>
+<li class="toctree-l1"><a class="reference internal" href="using-containers.html">2.13. コンテナの使用</a></li>
+<li class="toctree-l1"><a class="reference internal" href="creating-files-at-runtime.html">2.14. 実行時にファイルを作成する</a></li>
+<li class="toctree-l1"><a class="reference internal" href="staging-input-files.html">2.15. 入力ファイルのステージング</a></li>
+<li class="toctree-l1"><a class="reference internal" href="best-practices.html">2.16. ベストプラクティス</a></li>
+<li class="toctree-l1"><a class="reference internal" href="file-formats.html">2.17. ファイルフォーマット</a></li>
+<li class="toctree-l1"><a class="reference internal" href="metadata-and-authorship.html">2.18. メタデータと著者</a></li>
+<li class="toctree-l1"><a class="reference internal" href="specifying-software-requirements.html">2.19. ソフトウェア要求事項の指定</a></li>
+<li class="toctree-l1"><a class="reference internal" href="troubleshooting.html">2.20. トラブルシューティング</a></li>
+</ul>
+</div>
 </nav></div>
     </div>
   
@@ -427,10 +447,7 @@ document.write(`
                   
   <section id="expressions">
 <h1><span class="section-number">2.3. </span>Expressions<a class="headerlink" href="#expressions" title="Link to this heading">#</a></h1>
-<p>If you need to manipulate input parameters, include the requirement
-<a class="reference external" href="https://w3id.org/cwl/CommandLineTool.html#InlineJavascriptRequirement"><code class="docutils literal notranslate"><span class="pre">InlineJavascriptRequirement</span></code></a> and then anywhere a parameter reference is
-legal you can provide a fragment of Javascript that will be evaluated by
-the CWL runner.</p>
+<p>入力パラメータを操作する必要がある場合は、<a class="reference external" href="https://w3id.org/cwl/CommandLineTool.html#InlineJavascriptRequirement"><code class="docutils literal notranslate"><span class="pre">InlineJavascriptRequirement</span></code></a> を含めると、パラメータ参照が合法な場所であれば、CWL runnerによって評価されるJavascriptを使用できます。</p>
 <div class="admonition important">
 <p class="admonition-title">重要</p>
 <p>JavaScript expressions should only be used when absolutely necessary.
@@ -471,8 +488,7 @@ See the <a class="reference internal" href="best-practices.html"><span class="st
 </pre></div>
 </div>
 </div>
-<p>As this tool does not require any <code class="docutils literal notranslate"><span class="pre">inputs</span></code> we can run it with an (almost) empty
-job file:</p>
+<p>このツールは<code class="docutils literal notranslate"><span class="pre">inputs</span></code> を必要としないので、（ほとんど）空のジョブファイルで実行することができます：</p>
 <div class="literal-block-wrapper docutils container" id="empty-cwl">
 <div class="code-block-caption"><span class="caption-text"><code class="docutils literal notranslate"><span class="pre">empty.yml</span></code></span><a class="headerlink" href="#empty-cwl" title="Link to this code">#</a></div>
 <div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="p p-Indicator">{}</span>
@@ -484,9 +500,9 @@ job file:</p>
 <div class="literal-block-wrapper docutils container" id="running-expression-cwl">
 <div class="code-block-caption"><span class="caption-text"><code class="docutils literal notranslate"><span class="pre">expression.cwl</span></code> を実行する</span><a class="headerlink" href="#running-expression-cwl" title="Link to this code">#</a></div>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>cwltool<span class="w"> </span>expression.cwl<span class="w"> </span>empty.yml
-INFO<span class="w"> </span>/opt/hostedtoolcache/Python/3.9.18/x64/bin/cwltool<span class="w"> </span><span class="m">3</span>.1.20240112164112
+INFO<span class="w"> </span>/opt/hostedtoolcache/Python/3.9.19/x64/bin/cwltool<span class="w"> </span><span class="m">3</span>.1.20240404144621
 INFO<span class="w"> </span>Resolved<span class="w"> </span><span class="s1">&#39;expression.cwl&#39;</span><span class="w"> </span>to<span class="w"> </span><span class="s1">&#39;file:///home/runner/work/user_guide/user_guide/src/_includes/cwl/expressions/expression.cwl&#39;</span>
-INFO<span class="w"> </span><span class="o">[</span>job<span class="w"> </span>expression.cwl<span class="o">]</span><span class="w"> </span>/tmp/w5ew3gln$<span class="w"> </span><span class="nb">echo</span><span class="w"> </span><span class="se">\</span>
+INFO<span class="w"> </span><span class="o">[</span>job<span class="w"> </span>expression.cwl<span class="o">]</span><span class="w"> </span>/tmp/9pkdt5_h$<span class="w"> </span><span class="nb">echo</span><span class="w"> </span><span class="se">\</span>
 <span class="w">    </span>-A<span class="w"> </span><span class="se">\</span>
 <span class="w">    </span><span class="m">2</span><span class="w"> </span><span class="se">\</span>
 <span class="w">    </span>-B<span class="w"> </span><span class="se">\</span>
@@ -501,7 +517,7 @@ INFO<span class="w"> </span><span class="o">[</span>job<span class="w"> </span>e
 <span class="w">    </span><span class="m">4</span><span class="w"> </span><span class="se">\</span>
 <span class="w">    </span><span class="m">3</span><span class="w"> </span><span class="se">\</span>
 <span class="w">    </span><span class="m">2</span><span class="w"> </span><span class="se">\</span>
-<span class="w">    </span><span class="m">1</span><span class="w"> </span>&gt;<span class="w"> </span>/tmp/w5ew3gln/output.txt
+<span class="w">    </span><span class="m">1</span><span class="w"> </span>&gt;<span class="w"> </span>/tmp/9pkdt5_h/output.txt
 INFO<span class="w"> </span><span class="o">[</span>job<span class="w"> </span>expression.cwl<span class="o">]</span><span class="w"> </span>completed<span class="w"> </span>success
 <span class="o">{</span>
 <span class="w">    </span><span class="s2">&quot;example_out&quot;</span>:<span class="w"> </span><span class="o">{</span>
@@ -525,8 +541,7 @@ INFO<span class="w"> </span><span class="o">[</span>job<span class="w"> </span>e
 <span class="w">  </span><span class="nt">InlineJavascriptRequirement</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">{}</span>
 </pre></div>
 </div>
-<p>Or as an array, with each entry (in this case, only <code class="docutils literal notranslate"><span class="pre">class:</span> <span class="pre">InlineJavascriptRequirement</span></code>) marked by a <code class="docutils literal notranslate"><span class="pre">-</span></code>.
-The same syntax is used to describe the additional command line arguments.</p>
+<p>または配列として、各エントリ（この場合、<code class="docutils literal notranslate"><span class="pre">class:</span> <span class="pre">InlineJavascriptRequirement</span></code> だけです）に<code class="docutils literal notranslate"><span class="pre">-</span></code> を付けます。同じ構文で、追加のコマンドライン引数を定義します。</p>
 <div class="highlight-cwl notranslate"><div class="highlight"><pre><span></span><span class="nt">requirements</span><span class="p">:</span>
 <span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">class</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">InlineJavascriptRequirement</span>
 </pre></div>
@@ -536,7 +551,7 @@ The same syntax is used to describe the additional command line arguments.</p>
 <p>Just like <a class="reference internal" href="parameter-references.html"><span class="std std-doc">parameter references</span></a>, you can use JavaScript Expressions
 only in certain fields.  These are:</p>
 <ul class="simple">
-<li><p>From <a class="reference external" href="https://www.commonwl.org/v1.0/CommandLineTool.html#CommandLineTool"><code class="docutils literal notranslate"><span class="pre">CommandLineTool</span></code></a></p>
+<li><p><a class="reference external" href="https://www.commonwl.org/v1.0/CommandLineTool.html#CommandLineTool"><code class="docutils literal notranslate"><span class="pre">CommandLineTool</span></code></a>から</p>
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">arguments</span></code></p>
 <ul>
@@ -546,7 +561,7 @@ only in certain fields.  These are:</p>
 <li><p><code class="docutils literal notranslate"><span class="pre">stdin</span></code></p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">stdout</span></code></p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">stderr</span></code></p></li>
-<li><p>From <a class="reference external" href="https://www.commonwl.org/v1.0/CommandLineTool.html#CommandInputParameter">CommandInputParameter</a></p>
+<li><p><a class="reference external" href="https://www.commonwl.org/v1.0/CommandLineTool.html#CommandInputParameter">CommandInputParameter</a>から</p>
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">format</span></code></p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">secondaryFiles</span></code></p></li>
@@ -571,17 +586,17 @@ only in certain fields.  These are:</p>
 </li>
 </ul>
 </li>
-<li><p>From <a class="reference external" href="https://w3id.org/cwl/Workflow.html"><code class="docutils literal notranslate"><span class="pre">Workflow</span></code></a></p>
+<li><p><a class="reference external" href="https://w3id.org/cwl/Workflow.html"><code class="docutils literal notranslate"><span class="pre">Workflow</span></code></a>から</p>
 <ul>
-<li><p>From <a class="reference external" href="https://www.commonwl.org/v1.0/Workflow.html#InputParameter">InputParameter</a> and <a class="reference external" href="https://www.commonwl.org/v1.0/Workflow.html#WorkflowOutputParameter">WorkflowOutputParameter</a></p>
+<li><p><a class="reference external" href="https://www.commonwl.org/v1.0/Workflow.html#InputParameter">InputParameter</a> と <a class="reference external" href="https://www.commonwl.org/v1.0/Workflow.html#WorkflowOutputParameter">WorkflowOutputParameter</a>から</p>
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">format</span></code></p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">secondaryFiles</span></code></p></li>
 </ul>
 </li>
-<li><p>From <code class="docutils literal notranslate"><span class="pre">steps</span></code></p>
+<li><p><code class="docutils literal notranslate"><span class="pre">steps</span></code>から</p>
 <ul>
-<li><p>From <a class="reference external" href="https://www.commonwl.org/v1.0/Workflow.html#WorkflowStepInput">WorkflowStepInput</a></p>
+<li><p><a class="reference external" href="https://www.commonwl.org/v1.0/Workflow.html#WorkflowStepInput">WorkflowStepInput</a>から</p>
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">valueFrom</span></code></p></li>
 </ul>
@@ -590,7 +605,7 @@ only in certain fields.  These are:</p>
 </li>
 </ul>
 </li>
-<li><p>From <a class="reference external" href="https://www.commonwl.org/v1.0/Workflow.html#ExpressionTool">ExpressionTool</a></p>
+<li><p><a class="reference external" href="https://www.commonwl.org/v1.0/Workflow.html#ExpressionTool">ExpressionTool</a>から</p>
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">expression</span></code></p></li>
 <li><p><a class="reference external" href="https://www.commonwl.org/v1.0/Workflow.html#InputParameter">InputParameter</a> と <a class="reference external" href="https://www.commonwl.org/v1.0/Workflow.html#ExpressionToolOutputParameter">ExpressionToolOutputParameter</a>から</p>
@@ -601,7 +616,7 @@ only in certain fields.  These are:</p>
 </li>
 </ul>
 </li>
-<li><p>From <a class="reference external" href="https://www.commonwl.org/v1.0/CommandLineTool.html#ResourceRequirement"><code class="docutils literal notranslate"><span class="pre">ResourceRequirement</span></code></a></p>
+<li><p><a class="reference external" href="https://www.commonwl.org/v1.0/CommandLineTool.html#ResourceRequirement"><code class="docutils literal notranslate"><span class="pre">ResourceRequirement</span></code></a>から</p>
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">coresMin</span></code></p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">coresMax</span></code></p></li>
@@ -616,7 +631,7 @@ only in certain fields.  These are:</p>
 <li><p><a class="reference external" href="https://www.commonwl.org/v1.0/CommandLineTool.html#InitialWorkDirRequirement"><code class="docutils literal notranslate"><span class="pre">InitialWorkDirRequirement</span></code></a>から</p>
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">listing</span></code></p></li>
-<li><p>in <a class="reference external" href="https://www.commonwl.org/v1.0/CommandLineTool.html#Dirent">Dirent</a></p>
+<li><p><a class="reference external" href="https://www.commonwl.org/v1.0/CommandLineTool.html#Dirent">Dirent</a>に</p>
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">entry</span></code></p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">entryname</span></code></p></li>
@@ -624,9 +639,9 @@ only in certain fields.  These are:</p>
 </li>
 </ul>
 </li>
-<li><p>From <code class="docutils literal notranslate"><span class="pre">EnvVarRequirement</span></code></p>
+<li><p><code class="docutils literal notranslate"><span class="pre">EnvVarRequirement</span></code>から</p>
 <ul>
-<li><p>From <a class="reference external" href="https://www.commonwl.org/v1.0/CommandLineTool.html#EnvironmentDef">EnvironmentDef</a></p>
+<li><p><a class="reference external" href="https://www.commonwl.org/v1.0/CommandLineTool.html#EnvironmentDef">EnvironmentDef</a>から</p>
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">envValue</span></code></p></li>
 </ul>
@@ -636,10 +651,8 @@ only in certain fields.  These are:</p>
 </ul>
 </div>
 <section id="using-external-libraries-and-inline-javascript-code-with-expressionlib">
-<h2><span class="section-number">2.3.1. </span>Using External Libraries and Inline JavaScript Code with <code class="docutils literal notranslate"><span class="pre">expressionLib</span></code><a class="headerlink" href="#using-external-libraries-and-inline-javascript-code-with-expressionlib" title="Link to this heading">#</a></h2>
-<p>The requirement <a class="reference external" href="https://w3id.org/cwl/CommandLineTool.html#InlineJavascriptRequirement"><code class="docutils literal notranslate"><span class="pre">InlineJavascriptRequirement</span></code></a> supports an <code class="docutils literal notranslate"><span class="pre">expressionLib</span></code> attribute
-that allows users to load external JavaScript files, or to provide inline JavaScript
-code.</p>
+<h2><span class="section-number">2.3.1. </span><code class="docutils literal notranslate"><span class="pre">expressionLib</span></code> による外部ライブラリの利用とインラインJavaScriptコードの利用<a class="headerlink" href="#using-external-libraries-and-inline-javascript-code-with-expressionlib" title="Link to this heading">#</a></h2>
+<p><a class="reference external" href="https://w3id.org/cwl/CommandLineTool.html#InlineJavascriptRequirement"><code class="docutils literal notranslate"><span class="pre">InlineJavascriptRequirement</span></code></a>は、<code class="docutils literal notranslate"><span class="pre">expressionLib</span></code> 属性をサポートし、ユーザーが外部 JavaScript ファイルを読み込んだり、インライン JavaScript コードを提供したりできるようにします。</p>
 <p><code class="docutils literal notranslate"><span class="pre">expressionLib</span></code> 属性に追加されたエントリーは、CWLランナーのJavaScriptエンジンで解析されます。これは、外部ファイルをインクルードしたり、CWL定義の他の部分で呼び出すことができるJavaScript関数を作成するために使用することができます。</p>
 <div class="admonition note">
 <p class="admonition-title">注釈</p>
@@ -685,14 +698,13 @@ code.</p>
 </pre></div>
 </div>
 </div>
-<p>Running this CWL workflow will invoke the JavaScript function and result in
-the <code class="docutils literal notranslate"><span class="pre">echo</span></code> command printing the input message with capital initial letters:</p>
+<p>このCWLワークフローを実行すると、JavaScript関数が起動し、<code class="docutils literal notranslate"><span class="pre">echo</span></code> コマンドが入力メッセージの頭文字を大文字にして表示します：</p>
 <div class="literal-block-wrapper docutils container" id="running-hell-world-expressionlib-inline-cwl">
-<div class="code-block-caption"><span class="caption-text">Running <code class="docutils literal notranslate"><span class="pre">hello-world-expressionlib-inline.cwl</span></code>.</span><a class="headerlink" href="#running-hell-world-expressionlib-inline-cwl" title="Link to this code">#</a></div>
+<div class="code-block-caption"><span class="caption-text"><code class="docutils literal notranslate"><span class="pre">hello-world-expressionlib-inline.cwl</span></code> 実行しています。</span><a class="headerlink" href="#running-hell-world-expressionlib-inline-cwl" title="Link to this code">#</a></div>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>cwltool<span class="w"> </span>hello-world-expressionlib-inline.cwl<span class="w"> </span>--message<span class="w"> </span><span class="s2">&quot;hello world&quot;</span>
-INFO<span class="w"> </span>/opt/hostedtoolcache/Python/3.9.18/x64/bin/cwltool<span class="w"> </span><span class="m">3</span>.1.20240112164112
+INFO<span class="w"> </span>/opt/hostedtoolcache/Python/3.9.19/x64/bin/cwltool<span class="w"> </span><span class="m">3</span>.1.20240404144621
 INFO<span class="w"> </span>Resolved<span class="w"> </span><span class="s1">&#39;hello-world-expressionlib-inline.cwl&#39;</span><span class="w"> </span>to<span class="w"> </span><span class="s1">&#39;file:///home/runner/work/user_guide/user_guide/src/_includes/cwl/expressions/hello-world-expressionlib-inline.cwl&#39;</span>
-INFO<span class="w"> </span><span class="o">[</span>job<span class="w"> </span>hello-world-expressionlib-inline.cwl<span class="o">]</span><span class="w"> </span>/tmp/gpsecqk0$<span class="w"> </span><span class="nb">echo</span><span class="w"> </span><span class="se">\</span>
+INFO<span class="w"> </span><span class="o">[</span>job<span class="w"> </span>hello-world-expressionlib-inline.cwl<span class="o">]</span><span class="w"> </span>/tmp/2u5ty0xc$<span class="w"> </span><span class="nb">echo</span><span class="w"> </span><span class="se">\</span>
 <span class="w">    </span><span class="s1">&#39;Hello World&#39;</span>
 Hello<span class="w"> </span>World
 INFO<span class="w"> </span><span class="o">[</span>job<span class="w"> </span>hello-world-expressionlib-inline.cwl<span class="o">]</span><span class="w"> </span>completed<span class="w"> </span>success
@@ -745,15 +757,13 @@ INFO<span class="w"> </span><span class="o">[</span>job<span class="w"> </span>h
 </pre></div>
 </div>
 </div>
-<p>The <code class="docutils literal notranslate"><span class="pre">custom-functions.js</span></code> file is included in the CWL document with the <code class="docutils literal notranslate"><span class="pre">$include:</span> <span class="pre">custom-functions.js</span></code>
-statement. That makes the functions and variables available to be used in other parts of
-the CWL document.</p>
+<p><code class="docutils literal notranslate"><span class="pre">custom-functions.js</span></code> ファイルは、<code class="docutils literal notranslate"><span class="pre">$include:</span> <span class="pre">custom-functions.js</span></code> という記述でCWL定義に含まれます。これにより、関数と変数がCWL定義の他の部分で使用できるようになります。</p>
 <div class="literal-block-wrapper docutils container" id="running-hell-world-expressionlib-external-cwl">
-<div class="code-block-caption"><span class="caption-text">Running <code class="docutils literal notranslate"><span class="pre">hello-world-expressionlib-external.cwl</span></code>.</span><a class="headerlink" href="#running-hell-world-expressionlib-external-cwl" title="Link to this code">#</a></div>
+<div class="code-block-caption"><span class="caption-text"><code class="docutils literal notranslate"><span class="pre">hello-world-expressionlib-external.cwl</span></code>実行しています。</span><a class="headerlink" href="#running-hell-world-expressionlib-external-cwl" title="Link to this code">#</a></div>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>cwltool<span class="w"> </span>hello-world-expressionlib-external.cwl<span class="w"> </span>--message<span class="w"> </span><span class="s2">&quot;hello world&quot;</span>
-INFO<span class="w"> </span>/opt/hostedtoolcache/Python/3.9.18/x64/bin/cwltool<span class="w"> </span><span class="m">3</span>.1.20240112164112
+INFO<span class="w"> </span>/opt/hostedtoolcache/Python/3.9.19/x64/bin/cwltool<span class="w"> </span><span class="m">3</span>.1.20240404144621
 INFO<span class="w"> </span>Resolved<span class="w"> </span><span class="s1">&#39;hello-world-expressionlib-external.cwl&#39;</span><span class="w"> </span>to<span class="w"> </span><span class="s1">&#39;file:///home/runner/work/user_guide/user_guide/src/_includes/cwl/expressions/hello-world-expressionlib-external.cwl&#39;</span>
-INFO<span class="w"> </span><span class="o">[</span>job<span class="w"> </span>hello-world-expressionlib-external.cwl<span class="o">]</span><span class="w"> </span>/tmp/bo22u78y$<span class="w"> </span><span class="nb">echo</span><span class="w"> </span><span class="se">\</span>
+INFO<span class="w"> </span><span class="o">[</span>job<span class="w"> </span>hello-world-expressionlib-external.cwl<span class="o">]</span><span class="w"> </span>/tmp/969eajm8$<span class="w"> </span><span class="nb">echo</span><span class="w"> </span><span class="se">\</span>
 <span class="w">    </span><span class="s1">&#39;Hello World&#39;</span>
 Hello<span class="w"> </span>World
 INFO<span class="w"> </span><span class="o">[</span>job<span class="w"> </span>hello-world-expressionlib-external.cwl<span class="o">]</span><span class="w"> </span>completed<span class="w"> </span>success
@@ -797,9 +807,9 @@ INFO<span class="w"> </span><span class="o">[</span>job<span class="w"> </span>h
 <div class="literal-block-wrapper docutils container" id="running-hell-world-expressionlib-cwl">
 <div class="code-block-caption"><span class="caption-text"><code class="docutils literal notranslate"><span class="pre">hello-world-expressionlib.cwl</span></code>を実行する。</span><a class="headerlink" href="#running-hell-world-expressionlib-cwl" title="Link to this code">#</a></div>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>cwltool<span class="w"> </span>hello-world-expressionlib.cwl<span class="w"> </span>--message<span class="w"> </span><span class="s2">&quot;hello world&quot;</span>
-INFO<span class="w"> </span>/opt/hostedtoolcache/Python/3.9.18/x64/bin/cwltool<span class="w"> </span><span class="m">3</span>.1.20240112164112
+INFO<span class="w"> </span>/opt/hostedtoolcache/Python/3.9.19/x64/bin/cwltool<span class="w"> </span><span class="m">3</span>.1.20240404144621
 INFO<span class="w"> </span>Resolved<span class="w"> </span><span class="s1">&#39;hello-world-expressionlib.cwl&#39;</span><span class="w"> </span>to<span class="w"> </span><span class="s1">&#39;file:///home/runner/work/user_guide/user_guide/src/_includes/cwl/expressions/hello-world-expressionlib.cwl&#39;</span>
-INFO<span class="w"> </span><span class="o">[</span>job<span class="w"> </span>hello-world-expressionlib.cwl<span class="o">]</span><span class="w"> </span>/tmp/_fl0ny5r$<span class="w"> </span><span class="nb">echo</span><span class="w"> </span><span class="se">\</span>
+INFO<span class="w"> </span><span class="o">[</span>job<span class="w"> </span>hello-world-expressionlib.cwl<span class="o">]</span><span class="w"> </span>/tmp/4qtn6094$<span class="w"> </span><span class="nb">echo</span><span class="w"> </span><span class="se">\</span>
 <span class="w">    </span><span class="s1">&#39;Hello World&#39;</span>
 Hello<span class="w"> </span>World
 INFO<span class="w"> </span><span class="o">[</span>job<span class="w"> </span>hello-world-expressionlib.cwl<span class="o">]</span><span class="w"> </span>completed<span class="w"> </span>success
@@ -809,9 +819,7 @@ INFO<span class="w"> </span><span class="o">[</span>job<span class="w"> </span>h
 </div>
 <div class="admonition note">
 <p class="admonition-title">注釈</p>
-<p>The <code class="docutils literal notranslate"><span class="pre">$include</span></code> statement can be used to include a file from the local disk or from a remote location.
-It works with both relative and absolute paths. Read the <a class="reference external" href="https://www.commonwl.org/v1.0/SchemaSalad.html#Include">text about <code class="docutils literal notranslate"><span class="pre">$include</span></code></a>
-from the CWL specification to learn more about it.</p>
+<p><code class="docutils literal notranslate"><span class="pre">$include</span></code> ステートメントを使用すると、ローカルディスクまたはリモートロケーションからファイルをインクルードすることができます。相対パスと絶対パスの両方で動作します。CWL仕様の<a class="reference external" href="https://www.commonwl.org/v1.0/SchemaSalad.html#Include"><code class="docutils literal notranslate"><span class="pre">$include</span></code>について</a>を読むと、より詳しく知ることができます。</p>
 </div>
 </section>
 </section>
@@ -862,7 +870,7 @@ from the CWL specification to learn more about it.</p>
   </div>
   <nav class="bd-toc-nav page-toc" aria-labelledby="pst-page-navigation-heading-2">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#using-external-libraries-and-inline-javascript-code-with-expressionlib">2.3.1. Using External Libraries and Inline JavaScript Code with <code class="docutils literal notranslate"><span class="pre">expressionLib</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#using-external-libraries-and-inline-javascript-code-with-expressionlib">2.3.1. <code class="docutils literal notranslate"><span class="pre">expressionLib</span></code> による外部ライブラリの利用とインラインJavaScriptコードの利用</a></li>
 </ul>
   </nav></div>
 
@@ -907,28 +915,6 @@ from the CWL specification to learn more about it.</p>
   <script src="../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae"></script>
 <script src="../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae"></script>
 
-<div class="container">
-  <div class="row">
-    <div class="col d-flex flex-row-reverse">
-      <ul class="nav">
-        <li class="nav-item">
-          <a class="nav-link" href="https://github.com/common-workflow-language/user_guide/blob/main/CODE_OF_CONDUCT.md">Code of Conduct</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="https://github.com/common-workflow-language/user_guide/blob/main/CONTRIBUTING.md">Contributing</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="https://github.com/common-workflow-language/user_guide/">Source</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="https://github.com/common-workflow-language/user_guide/blob/main/CITATION.md">Cite</a>
-        </li>
-      </ul>
-    </div>
-  </div>
-</div>
-
-
   <footer class="bd-footer">
 <div class="bd-footer__inner bd-page-width">
   
@@ -947,13 +933,33 @@ from the CWL specification to learn more about it.</p>
         <div class="footer-item">
 
   <p class="sphinx-version">
-    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.2.6.
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.3.7.
     <br/>
   </p>
 </div>
       
     </div>
   
+  
+    <div class="footer-items__center">
+      
+        <div class="footer-item">
+<ul class="nav justify-content-center">
+  <li class="nav-item">
+    <a class="nav-link" href="https://github.com/common-workflow-language/user_guide/blob/main/CODE_OF_CONDUCT.md">Code of Conduct</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="https://github.com/common-workflow-language/user_guide/blob/main/CONTRIBUTING.md">Contributing</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="https://github.com/common-workflow-language/user_guide/">Source</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="https://github.com/common-workflow-language/user_guide/blob/main/CITATION.md">Cite</a>
+  </li>
+</ul></div>
+      
+    </div>
   
   
     <div class="footer-items__end">
@@ -968,6 +974,5 @@ from the CWL specification to learn more about it.</p>
 </div>
 
   </footer>
-
   </body>
 </html>

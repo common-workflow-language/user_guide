@@ -241,7 +241,7 @@ matching item (`itemC`) is added to the command line and remaining item (`itemD`
 
 ```{runcmd} cwltool record.cwl record-job3.yml
 :working-directory: src/_includes/cwl/inputs
-:emphasize-lines: 9-10, 22
+:emphasize-lines: 9-10, 21
 ```
 
 ```{code-block} console

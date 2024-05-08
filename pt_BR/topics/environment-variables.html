@@ -12,7 +12,7 @@
     <link rel="icon" sizes="96x96" href="../_static/images/favicons/cwl/favicon-96x96.png" type="image/png">
     <link rel="icon" sizes="128x128" href="../_static/images/favicons/cwl/favicon-128.png" type="image/png">
     <link rel="icon" sizes="196x196" href="../_static/images/favicons/cwl/favicon-196x196.png" type="image/png">
-    <title>2.12. Environment Variables &#8212; documentação Common Workflow Language User Guide 0.1</title>
+    <title>2.12. Environment Variables &#8212; Documentação Common Workflow Language User Guide 0.1</title>
   
   
   
@@ -33,7 +33,7 @@
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
 
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=80d5e7a1" />
-    <link rel="stylesheet" type="text/css" href="../_static/graphviz.css?v=eafc0fe6" />
+    <link rel="stylesheet" type="text/css" href="../_static/graphviz.css?v=fd3f3429" />
     <link rel="stylesheet" type="text/css" href="../_static/css/custom.css?v=e0da1575" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
@@ -42,7 +42,7 @@
   <script src="../_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=8d27b9dea8ad943066ae"></script>
 
     <script src="../_static/documentation_options.js?v=88519e4e"></script>
-    <script src="../_static/doctools.js?v=888ff710"></script>
+    <script src="../_static/doctools.js?v=9a2dae69"></script>
     <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../_static/translations.js?v=000972dd"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'topics/environment-variables';</script>
@@ -125,8 +125,8 @@
     
     
     
-    <img src="../_static/CWL-Logo-HD-cropped2.png" class="logo__image only-light" alt="documentação Common Workflow Language User Guide 0.1 - Home"/>
-    <script>document.write(`<img src="../_static/CWL-Logo-HD-cropped2.png" class="logo__image only-dark" alt="documentação Common Workflow Language User Guide 0.1 - Home"/>`);</script>
+    <img src="../_static/CWL-Logo-HD-cropped2.png" class="logo__image only-light" alt="Documentação Common Workflow Language User Guide 0.1 - Home"/>
+    <script>document.write(`<img src="../_static/CWL-Logo-HD-cropped2.png" class="logo__image only-dark" alt="Documentação Common Workflow Language User Guide 0.1 - Home"/>`);</script>
   
   
 </a></div>
@@ -363,13 +363,33 @@ document.write(`
   </div>
   
     <div class="sidebar-primary-items__start sidebar-primary__section">
-        <div class="sidebar-primary-item"><nav class="bd-links d-none d-md-block" id="bd-docs-nav" aria-label="Navegação principal">
-  <p class="bd-links__title" role="heading" aria-level="1">
-    Seção Navegação
-  </p>
-  <div class="bd-toc-item navbar-nav">
-    
-  </div>
+        <div class="sidebar-primary-item">
+<nav class="bd-docs-nav bd-links"
+     aria-label="Seção Navegação">
+  <p class="bd-links__title" role="heading" aria-level="1">Seção Navegação</p>
+  <div class="bd-toc-item navbar-nav"><ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="yaml-guide.html">2.1. Guia de YAML</a></li>
+<li class="toctree-l1"><a class="reference internal" href="command-line-tool.html">2.2. Command Line Tool</a></li>
+<li class="toctree-l1"><a class="reference internal" href="expressions.html">2.3. Expressions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="inputs.html">2.4. Inputs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="additional-arguments-and-parameters.html">2.5. Argumentos e Parâmetros Adicionais</a></li>
+<li class="toctree-l1"><a class="reference internal" href="parameter-references.html">2.6. Parameter References</a></li>
+<li class="toctree-l1"><a class="reference internal" href="outputs.html">2.7. Outputs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="custom-types.html">2.8. Custom Types</a></li>
+<li class="toctree-l1"><a class="reference internal" href="expression-tool.html">2.9. Expression Tool</a></li>
+<li class="toctree-l1"><a class="reference internal" href="workflows.html">2.10. Workflows</a></li>
+<li class="toctree-l1"><a class="reference internal" href="operations.html">2.11. Operations</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">2.12. Environment Variables</a></li>
+<li class="toctree-l1"><a class="reference internal" href="using-containers.html">2.13. Utilizando Containers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="creating-files-at-runtime.html">2.14. Creating Files at Runtime</a></li>
+<li class="toctree-l1"><a class="reference internal" href="staging-input-files.html">2.15. Staging Input Files</a></li>
+<li class="toctree-l1"><a class="reference internal" href="best-practices.html">2.16. Melhores Práticas</a></li>
+<li class="toctree-l1"><a class="reference internal" href="file-formats.html">2.17. File Formats</a></li>
+<li class="toctree-l1"><a class="reference internal" href="metadata-and-authorship.html">2.18. Metadata and Authorship</a></li>
+<li class="toctree-l1"><a class="reference internal" href="specifying-software-requirements.html">2.19. Specifying Software Requirements</a></li>
+<li class="toctree-l1"><a class="reference internal" href="troubleshooting.html">2.20. Solucionando Problemas</a></li>
+</ul>
+</div>
 </nav></div>
     </div>
   
@@ -426,12 +446,12 @@ document.write(`
                 <article class="bd-article">
                   
   <section id="environment-variables">
-<h1><span class="section-number">2.12. </span>Environment Variables<a class="headerlink" href="#environment-variables" title="Link to this heading">#</a></h1>
+<h1><span class="section-number">2.12. </span>Environment Variables<a class="headerlink" href="#environment-variables" title="Link para este cabeçalho">#</a></h1>
 <p>Tools run in a restricted environment and do not inherit most environment
 variables from the parent process.  You can set environment variables for
 the tool using <code class="docutils literal notranslate"><span class="pre">EnvVarRequirement</span></code>.</p>
 <div class="literal-block-wrapper docutils container" id="env-cwl">
-<div class="code-block-caption"><span class="caption-text"><code class="docutils literal notranslate"><span class="pre">env.cwl</span></code></span><a class="headerlink" href="#env-cwl" title="Link to this code">#</a></div>
+<div class="code-block-caption"><span class="caption-text"><code class="docutils literal notranslate"><span class="pre">env.cwl</span></code></span><a class="headerlink" href="#env-cwl" title="Link para este código">#</a></div>
 <div class="highlight-cwl notranslate"><div class="highlight"><pre><span></span><span class="c1">#!/usr/bin/env cwl-runner</span>
 <span class="nt">cwlVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">v1.2</span>
 <span class="nt">class</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">CommandLineTool</span>
@@ -450,7 +470,7 @@ the tool using <code class="docutils literal notranslate"><span class="pre">EnvV
 </div>
 </div>
 <div class="literal-block-wrapper docutils container" id="id1">
-<div class="code-block-caption"><span class="caption-text"><code class="docutils literal notranslate"><span class="pre">echo-job.yml</span></code></span><a class="headerlink" href="#id1" title="Link to this code">#</a></div>
+<div class="code-block-caption"><span class="caption-text"><code class="docutils literal notranslate"><span class="pre">echo-job.yml</span></code></span><a class="headerlink" href="#id1" title="Link para este código">#</a></div>
 <div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">message</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Hello world!</span>
 </pre></div>
 </div>
@@ -458,16 +478,16 @@ the tool using <code class="docutils literal notranslate"><span class="pre">EnvV
 <p>Now invoke <code class="docutils literal notranslate"><span class="pre">cwltool</span></code> with the tool description and the input object on the
 command line:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>cwltool<span class="w"> </span>env.cwl<span class="w"> </span>echo-job.yml
-INFO<span class="w"> </span>/opt/hostedtoolcache/Python/3.9.18/x64/bin/cwltool<span class="w"> </span><span class="m">3</span>.1.20240112164112
+INFO<span class="w"> </span>/opt/hostedtoolcache/Python/3.9.19/x64/bin/cwltool<span class="w"> </span><span class="m">3</span>.1.20240404144621
 INFO<span class="w"> </span>Resolved<span class="w"> </span><span class="s1">&#39;env.cwl&#39;</span><span class="w"> </span>to<span class="w"> </span><span class="s1">&#39;file:///home/runner/work/user_guide/user_guide/src/_includes/cwl/environment-variables/env.cwl&#39;</span>
-INFO<span class="w"> </span><span class="o">[</span>job<span class="w"> </span>env.cwl<span class="o">]</span><span class="w"> </span>/tmp/hoeawl3l$<span class="w"> </span>env<span class="w"> </span>&gt;<span class="w"> </span>/tmp/hoeawl3l/output.txt
+INFO<span class="w"> </span><span class="o">[</span>job<span class="w"> </span>env.cwl<span class="o">]</span><span class="w"> </span>/tmp/mxofprw5$<span class="w"> </span>env<span class="w"> </span>&gt;<span class="w"> </span>/tmp/mxofprw5/output.txt
 INFO<span class="w"> </span><span class="o">[</span>job<span class="w"> </span>env.cwl<span class="o">]</span><span class="w"> </span>completed<span class="w"> </span>success
 <span class="o">{</span>
 <span class="w">    </span><span class="s2">&quot;example_out&quot;</span>:<span class="w"> </span><span class="o">{</span>
 <span class="w">        </span><span class="s2">&quot;location&quot;</span>:<span class="w"> </span><span class="s2">&quot;file:///home/runner/work/user_guide/user_guide/src/_includes/cwl/environment-variables/output.txt&quot;</span>,
 <span class="w">        </span><span class="s2">&quot;basename&quot;</span>:<span class="w"> </span><span class="s2">&quot;output.txt&quot;</span>,
 <span class="w">        </span><span class="s2">&quot;class&quot;</span>:<span class="w"> </span><span class="s2">&quot;File&quot;</span>,
-<span class="w">        </span><span class="s2">&quot;checksum&quot;</span>:<span class="w"> </span><span class="s2">&quot;sha1</span><span class="nv">$4247</span><span class="s2">b9f8703ed6a7d9e885137eb2a73859710dd6&quot;</span>,
+<span class="w">        </span><span class="s2">&quot;checksum&quot;</span>:<span class="w"> </span><span class="s2">&quot;sha1</span><span class="nv">$4</span><span class="s2">f5825a666543aba5743050358d8618146732fba&quot;</span>,
 <span class="w">        </span><span class="s2">&quot;size&quot;</span>:<span class="w"> </span><span class="m">407</span>,
 <span class="w">        </span><span class="s2">&quot;path&quot;</span>:<span class="w"> </span><span class="s2">&quot;/home/runner/work/user_guide/user_guide/src/_includes/cwl/environment-variables/output.txt&quot;</span>
 <span class="w">    </span><span class="o">}</span>
@@ -475,9 +495,9 @@ INFO<span class="w"> </span><span class="o">[</span>job<span class="w"> </span>e
 </pre></div>
 </div>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>cat<span class="w"> </span>output.txt
-<span class="nv">HOME</span><span class="o">=</span>/tmp/hoeawl3l
-<span class="nv">TMPDIR</span><span class="o">=</span>/tmp/1ipdpfno
-<span class="nv">PATH</span><span class="o">=</span>/opt/hostedtoolcache/Python/3.9.18/x64/bin:/opt/hostedtoolcache/Python/3.9.18/x64:/snap/bin:/home/runner/.local/bin:/opt/pipx_bin:/home/runner/.cargo/bin:/home/runner/.config/composer/vendor/bin:/usr/local/.ghcup/bin:/home/runner/.dotnet/tools:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
+<span class="nv">HOME</span><span class="o">=</span>/tmp/mxofprw5
+<span class="nv">TMPDIR</span><span class="o">=</span>/tmp/ry6sj8qf
+<span class="nv">PATH</span><span class="o">=</span>/opt/hostedtoolcache/Python/3.9.19/x64/bin:/opt/hostedtoolcache/Python/3.9.19/x64:/snap/bin:/home/runner/.local/bin:/opt/pipx_bin:/home/runner/.cargo/bin:/home/runner/.config/composer/vendor/bin:/usr/local/.ghcup/bin:/home/runner/.dotnet/tools:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
 <span class="nv">HELLO</span><span class="o">=</span>Hello<span class="w"> </span>world!
 </pre></div>
 </div>
@@ -562,28 +582,6 @@ INFO<span class="w"> </span><span class="o">[</span>job<span class="w"> </span>e
   <script src="../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae"></script>
 <script src="../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae"></script>
 
-<div class="container">
-  <div class="row">
-    <div class="col d-flex flex-row-reverse">
-      <ul class="nav">
-        <li class="nav-item">
-          <a class="nav-link" href="https://github.com/common-workflow-language/user_guide/blob/main/CODE_OF_CONDUCT.md">Code of Conduct</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="https://github.com/common-workflow-language/user_guide/blob/main/CONTRIBUTING.md">Contributing</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="https://github.com/common-workflow-language/user_guide/">Source</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="https://github.com/common-workflow-language/user_guide/blob/main/CITATION.md">Cite</a>
-        </li>
-      </ul>
-    </div>
-  </div>
-</div>
-
-
   <footer class="bd-footer">
 <div class="bd-footer__inner bd-page-width">
   
@@ -602,13 +600,33 @@ INFO<span class="w"> </span><span class="o">[</span>job<span class="w"> </span>e
         <div class="footer-item">
 
   <p class="sphinx-version">
-    Criada usando <a href="https://www.sphinx-doc.org/pt_BR/master">Sphinx</a> 7.2.6.
+    Criada usando <a href="https://www.sphinx-doc.org/pt_BR/master">Sphinx</a> 7.3.7.
     <br/>
   </p>
 </div>
       
     </div>
   
+  
+    <div class="footer-items__center">
+      
+        <div class="footer-item">
+<ul class="nav justify-content-center">
+  <li class="nav-item">
+    <a class="nav-link" href="https://github.com/common-workflow-language/user_guide/blob/main/CODE_OF_CONDUCT.md">Code of Conduct</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="https://github.com/common-workflow-language/user_guide/blob/main/CONTRIBUTING.md">Contributing</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="https://github.com/common-workflow-language/user_guide/">Source</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="https://github.com/common-workflow-language/user_guide/blob/main/CITATION.md">Cite</a>
+  </li>
+</ul></div>
+      
+    </div>
   
   
     <div class="footer-items__end">
@@ -623,6 +641,5 @@ INFO<span class="w"> </span><span class="o">[</span>job<span class="w"> </span>e
 </div>
 
   </footer>
-
   </body>
 </html>

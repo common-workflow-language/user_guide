@@ -12,7 +12,7 @@
     <link rel="icon" sizes="96x96" href="../_static/images/favicons/cwl/favicon-96x96.png" type="image/png">
     <link rel="icon" sizes="128x128" href="../_static/images/favicons/cwl/favicon-128.png" type="image/png">
     <link rel="icon" sizes="196x196" href="../_static/images/favicons/cwl/favicon-196x196.png" type="image/png">
-    <title>2.17. File Formats &#8212; documentação Common Workflow Language User Guide 0.1</title>
+    <title>2.17. File Formats &#8212; Documentação Common Workflow Language User Guide 0.1</title>
   
   
   
@@ -33,7 +33,7 @@
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
 
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=80d5e7a1" />
-    <link rel="stylesheet" type="text/css" href="../_static/graphviz.css?v=eafc0fe6" />
+    <link rel="stylesheet" type="text/css" href="../_static/graphviz.css?v=fd3f3429" />
     <link rel="stylesheet" type="text/css" href="../_static/css/custom.css?v=e0da1575" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
@@ -42,7 +42,7 @@
   <script src="../_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=8d27b9dea8ad943066ae"></script>
 
     <script src="../_static/documentation_options.js?v=88519e4e"></script>
-    <script src="../_static/doctools.js?v=888ff710"></script>
+    <script src="../_static/doctools.js?v=9a2dae69"></script>
     <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../_static/translations.js?v=000972dd"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'topics/file-formats';</script>
@@ -125,8 +125,8 @@
     
     
     
-    <img src="../_static/CWL-Logo-HD-cropped2.png" class="logo__image only-light" alt="documentação Common Workflow Language User Guide 0.1 - Home"/>
-    <script>document.write(`<img src="../_static/CWL-Logo-HD-cropped2.png" class="logo__image only-dark" alt="documentação Common Workflow Language User Guide 0.1 - Home"/>`);</script>
+    <img src="../_static/CWL-Logo-HD-cropped2.png" class="logo__image only-light" alt="Documentação Common Workflow Language User Guide 0.1 - Home"/>
+    <script>document.write(`<img src="../_static/CWL-Logo-HD-cropped2.png" class="logo__image only-dark" alt="Documentação Common Workflow Language User Guide 0.1 - Home"/>`);</script>
   
   
 </a></div>
@@ -363,13 +363,33 @@ document.write(`
   </div>
   
     <div class="sidebar-primary-items__start sidebar-primary__section">
-        <div class="sidebar-primary-item"><nav class="bd-links d-none d-md-block" id="bd-docs-nav" aria-label="Navegação principal">
-  <p class="bd-links__title" role="heading" aria-level="1">
-    Seção Navegação
-  </p>
-  <div class="bd-toc-item navbar-nav">
-    
-  </div>
+        <div class="sidebar-primary-item">
+<nav class="bd-docs-nav bd-links"
+     aria-label="Seção Navegação">
+  <p class="bd-links__title" role="heading" aria-level="1">Seção Navegação</p>
+  <div class="bd-toc-item navbar-nav"><ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="yaml-guide.html">2.1. Guia de YAML</a></li>
+<li class="toctree-l1"><a class="reference internal" href="command-line-tool.html">2.2. Command Line Tool</a></li>
+<li class="toctree-l1"><a class="reference internal" href="expressions.html">2.3. Expressions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="inputs.html">2.4. Inputs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="additional-arguments-and-parameters.html">2.5. Argumentos e Parâmetros Adicionais</a></li>
+<li class="toctree-l1"><a class="reference internal" href="parameter-references.html">2.6. Parameter References</a></li>
+<li class="toctree-l1"><a class="reference internal" href="outputs.html">2.7. Outputs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="custom-types.html">2.8. Custom Types</a></li>
+<li class="toctree-l1"><a class="reference internal" href="expression-tool.html">2.9. Expression Tool</a></li>
+<li class="toctree-l1"><a class="reference internal" href="workflows.html">2.10. Workflows</a></li>
+<li class="toctree-l1"><a class="reference internal" href="operations.html">2.11. Operations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="environment-variables.html">2.12. Environment Variables</a></li>
+<li class="toctree-l1"><a class="reference internal" href="using-containers.html">2.13. Utilizando Containers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="creating-files-at-runtime.html">2.14. Creating Files at Runtime</a></li>
+<li class="toctree-l1"><a class="reference internal" href="staging-input-files.html">2.15. Staging Input Files</a></li>
+<li class="toctree-l1"><a class="reference internal" href="best-practices.html">2.16. Melhores Práticas</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">2.17. File Formats</a></li>
+<li class="toctree-l1"><a class="reference internal" href="metadata-and-authorship.html">2.18. Metadata and Authorship</a></li>
+<li class="toctree-l1"><a class="reference internal" href="specifying-software-requirements.html">2.19. Specifying Software Requirements</a></li>
+<li class="toctree-l1"><a class="reference internal" href="troubleshooting.html">2.20. Solucionando Problemas</a></li>
+</ul>
+</div>
 </nav></div>
     </div>
   
@@ -426,7 +446,7 @@ document.write(`
                 <article class="bd-article">
                   
   <section id="file-formats">
-<h1><span class="section-number">2.17. </span>File Formats<a class="headerlink" href="#file-formats" title="Link to this heading">#</a></h1>
+<h1><span class="section-number">2.17. </span>File Formats<a class="headerlink" href="#file-formats" title="Link para este cabeçalho">#</a></h1>
 <p>Tools and workflows can take <a class="reference external" href="https://w3id.org/cwl/CommandLineTool.html#File"><code class="docutils literal notranslate"><span class="pre">File</span></code></a> types as input and produce them as output.
 We also recommend indicating the format for <a class="reference external" href="https://w3id.org/cwl/CommandLineTool.html#File"><code class="docutils literal notranslate"><span class="pre">File</span></code></a> types. This helps document
 for others how to use your tool while allowing you to do some simple
@@ -441,7 +461,7 @@ document in greater detail, so don’t worry about these for now.</p>
 <p>Note that for added value <code class="docutils literal notranslate"><span class="pre">cwltool</span></code> can do some basic reasoning based on file
 formats and warn you if there seem to be some obvious mismatches.</p>
 <div class="literal-block-wrapper docutils container" id="metadata-example-cwl">
-<div class="code-block-caption"><span class="caption-text"><code class="docutils literal notranslate"><span class="pre">metadata_example.cwl</span></code></span><a class="headerlink" href="#metadata-example-cwl" title="Link to this code">#</a></div>
+<div class="code-block-caption"><span class="caption-text"><code class="docutils literal notranslate"><span class="pre">metadata_example.cwl</span></code></span><a class="headerlink" href="#metadata-example-cwl" title="Link para este código">#</a></div>
 <div class="highlight-cwl notranslate"><div class="highlight"><pre><span></span><span class="c1">#!/usr/bin/env cwl-runner</span>
 <span class="nt">cwlVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">v1.2</span>
 <span class="nt">class</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">CommandLineTool</span>
@@ -478,13 +498,13 @@ formats and warn you if there seem to be some obvious mismatches.</p>
 </pre></div>
 </div>
 <section id="sample-parameter-files">
-<h2><span class="section-number">2.17.1. </span>Sample Parameter Files<a class="headerlink" href="#sample-parameter-files" title="Link to this heading">#</a></h2>
+<h2><span class="section-number">2.17.1. </span>Sample Parameter Files<a class="headerlink" href="#sample-parameter-files" title="Link para este cabeçalho">#</a></h2>
 <p>Below is an example of a parameter file for the example above. We encourage
 checking in working examples of parameter files for your tool. This allows
 others to quickly work with your tool, starting from a “known good”
 parameterization.</p>
 <div class="literal-block-wrapper docutils container" id="sample-yml">
-<div class="code-block-caption"><span class="caption-text"><code class="docutils literal notranslate"><span class="pre">sample.yml</span></code></span><a class="headerlink" href="#sample-yml" title="Link to this code">#</a></div>
+<div class="code-block-caption"><span class="caption-text"><code class="docutils literal notranslate"><span class="pre">sample.yml</span></code></span><a class="headerlink" href="#sample-yml" title="Link para este código">#</a></div>
 <div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">aligned_sequences</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">class</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">File</span>
 <span class="w">    </span><span class="nt">format</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">http://edamontology.org/format_2572</span>
@@ -500,18 +520,18 @@ and can be downloaded e.g. via <code class="docutils literal notranslate"><span 
 <p>Now invoke <code class="docutils literal notranslate"><span class="pre">cwltool</span></code> with the tool description and the input object on the
 command line:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>cwltool<span class="w"> </span>metadata_example.cwl<span class="w"> </span>sample.yml
-INFO<span class="w"> </span>/opt/hostedtoolcache/Python/3.9.18/x64/bin/cwltool<span class="w"> </span><span class="m">3</span>.1.20240112164112
+INFO<span class="w"> </span>/opt/hostedtoolcache/Python/3.9.19/x64/bin/cwltool<span class="w"> </span><span class="m">3</span>.1.20240404144621
 INFO<span class="w"> </span>Resolved<span class="w"> </span><span class="s1">&#39;metadata_example.cwl&#39;</span><span class="w"> </span>to<span class="w"> </span><span class="s1">&#39;file:///home/runner/work/user_guide/user_guide/src/_includes/cwl/file-formats/metadata_example.cwl&#39;</span>
-INFO<span class="w"> </span><span class="o">[</span>job<span class="w"> </span>metadata_example.cwl<span class="o">]</span><span class="w"> </span>/tmp/zunanjz4$<span class="w"> </span>wc<span class="w"> </span><span class="se">\</span>
+INFO<span class="w"> </span><span class="o">[</span>job<span class="w"> </span>metadata_example.cwl<span class="o">]</span><span class="w"> </span>/tmp/hicwgx_a$<span class="w"> </span>wc<span class="w"> </span><span class="se">\</span>
 <span class="w">    </span>-l<span class="w"> </span><span class="se">\</span>
-<span class="w">    </span>/tmp/fie2dxic/stg158c41c1-1c0f-45ae-b639-07efff16f589/file-formats.bam<span class="w"> </span>&gt;<span class="w"> </span>/tmp/zunanjz4/output.txt
+<span class="w">    </span>/tmp/c7tf_qq6/stg03d65419-5303-4e39-9f7f-696b3012a061/file-formats.bam<span class="w"> </span>&gt;<span class="w"> </span>/tmp/hicwgx_a/output.txt
 INFO<span class="w"> </span><span class="o">[</span>job<span class="w"> </span>metadata_example.cwl<span class="o">]</span><span class="w"> </span>completed<span class="w"> </span>success
 <span class="o">{</span>
 <span class="w">    </span><span class="s2">&quot;report&quot;</span>:<span class="w"> </span><span class="o">{</span>
 <span class="w">        </span><span class="s2">&quot;location&quot;</span>:<span class="w"> </span><span class="s2">&quot;file:///home/runner/work/user_guide/user_guide/src/_includes/cwl/file-formats/output.txt&quot;</span>,
 <span class="w">        </span><span class="s2">&quot;basename&quot;</span>:<span class="w"> </span><span class="s2">&quot;output.txt&quot;</span>,
 <span class="w">        </span><span class="s2">&quot;class&quot;</span>:<span class="w"> </span><span class="s2">&quot;File&quot;</span>,
-<span class="w">        </span><span class="s2">&quot;checksum&quot;</span>:<span class="w"> </span><span class="s2">&quot;sha1</span><span class="nv">$455431</span><span class="s2">fbb919673d42e222ed130f012465dd75fa&quot;</span>,
+<span class="w">        </span><span class="s2">&quot;checksum&quot;</span>:<span class="w"> </span><span class="s2">&quot;sha1</span><span class="nv">$ae4b3e4ae3f08df783ed45193a8a0ba1d7f92005</span><span class="s2">&quot;</span>,
 <span class="w">        </span><span class="s2">&quot;size&quot;</span>:<span class="w"> </span><span class="m">77</span>,
 <span class="w">        </span><span class="s2">&quot;format&quot;</span>:<span class="w"> </span><span class="s2">&quot;http://edamontology.org/format_1964&quot;</span>,
 <span class="w">        </span><span class="s2">&quot;path&quot;</span>:<span class="w"> </span><span class="s2">&quot;/home/runner/work/user_guide/user_guide/src/_includes/cwl/file-formats/output.txt&quot;</span>
@@ -613,28 +633,6 @@ INFO<span class="w"> </span><span class="o">[</span>job<span class="w"> </span>m
   <script src="../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae"></script>
 <script src="../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae"></script>
 
-<div class="container">
-  <div class="row">
-    <div class="col d-flex flex-row-reverse">
-      <ul class="nav">
-        <li class="nav-item">
-          <a class="nav-link" href="https://github.com/common-workflow-language/user_guide/blob/main/CODE_OF_CONDUCT.md">Code of Conduct</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="https://github.com/common-workflow-language/user_guide/blob/main/CONTRIBUTING.md">Contributing</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="https://github.com/common-workflow-language/user_guide/">Source</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="https://github.com/common-workflow-language/user_guide/blob/main/CITATION.md">Cite</a>
-        </li>
-      </ul>
-    </div>
-  </div>
-</div>
-
-
   <footer class="bd-footer">
 <div class="bd-footer__inner bd-page-width">
   
@@ -653,13 +651,33 @@ INFO<span class="w"> </span><span class="o">[</span>job<span class="w"> </span>m
         <div class="footer-item">
 
   <p class="sphinx-version">
-    Criada usando <a href="https://www.sphinx-doc.org/pt_BR/master">Sphinx</a> 7.2.6.
+    Criada usando <a href="https://www.sphinx-doc.org/pt_BR/master">Sphinx</a> 7.3.7.
     <br/>
   </p>
 </div>
       
     </div>
   
+  
+    <div class="footer-items__center">
+      
+        <div class="footer-item">
+<ul class="nav justify-content-center">
+  <li class="nav-item">
+    <a class="nav-link" href="https://github.com/common-workflow-language/user_guide/blob/main/CODE_OF_CONDUCT.md">Code of Conduct</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="https://github.com/common-workflow-language/user_guide/blob/main/CONTRIBUTING.md">Contributing</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="https://github.com/common-workflow-language/user_guide/">Source</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="https://github.com/common-workflow-language/user_guide/blob/main/CITATION.md">Cite</a>
+  </li>
+</ul></div>
+      
+    </div>
   
   
     <div class="footer-items__end">
@@ -674,6 +692,5 @@ INFO<span class="w"> </span><span class="o">[</span>job<span class="w"> </span>m
 </div>
 
   </footer>
-
   </body>
 </html>

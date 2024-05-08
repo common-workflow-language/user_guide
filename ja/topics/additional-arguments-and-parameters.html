@@ -12,7 +12,7 @@
     <link rel="icon" sizes="96x96" href="../_static/images/favicons/cwl/favicon-96x96.png" type="image/png">
     <link rel="icon" sizes="128x128" href="../_static/images/favicons/cwl/favicon-128.png" type="image/png">
     <link rel="icon" sizes="196x196" href="../_static/images/favicons/cwl/favicon-196x196.png" type="image/png">
-    <title>2.5. Additional Arguments and Parameters &#8212; Common Workflow Language User Guide 0.1 ドキュメント</title>
+    <title>2.5. 追加の引数とパラメータ &#8212; Common Workflow Language User Guide 0.1 ドキュメント</title>
   
   
   
@@ -33,7 +33,7 @@
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
 
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=80d5e7a1" />
-    <link rel="stylesheet" type="text/css" href="../_static/graphviz.css?v=eafc0fe6" />
+    <link rel="stylesheet" type="text/css" href="../_static/graphviz.css?v=fd3f3429" />
     <link rel="stylesheet" type="text/css" href="../_static/css/custom.css?v=e0da1575" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
@@ -42,7 +42,7 @@
   <script src="../_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=8d27b9dea8ad943066ae"></script>
 
     <script src="../_static/documentation_options.js?v=be13464f"></script>
-    <script src="../_static/doctools.js?v=888ff710"></script>
+    <script src="../_static/doctools.js?v=9a2dae69"></script>
     <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../_static/translations.js?v=4dbe4bdc"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'topics/additional-arguments-and-parameters';</script>
@@ -363,13 +363,33 @@ document.write(`
   </div>
   
     <div class="sidebar-primary-items__start sidebar-primary__section">
-        <div class="sidebar-primary-item"><nav class="bd-links d-none d-md-block" id="bd-docs-nav" aria-label="メインナビゲーション">
-  <p class="bd-links__title" role="heading" aria-level="1">
-    セクションナビゲーション
-  </p>
-  <div class="bd-toc-item navbar-nav">
-    
-  </div>
+        <div class="sidebar-primary-item">
+<nav class="bd-docs-nav bd-links"
+     aria-label="セクションナビゲーション">
+  <p class="bd-links__title" role="heading" aria-level="1">セクションナビゲーション</p>
+  <div class="bd-toc-item navbar-nav"><ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="yaml-guide.html">2.1. YAMLガイド</a></li>
+<li class="toctree-l1"><a class="reference internal" href="command-line-tool.html">2.2. コマンドラインツール</a></li>
+<li class="toctree-l1"><a class="reference internal" href="expressions.html">2.3. Expressions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="inputs.html">2.4. Inputs</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">2.5. 追加の引数とパラメータ</a></li>
+<li class="toctree-l1"><a class="reference internal" href="parameter-references.html">2.6. パラメータリファレンス</a></li>
+<li class="toctree-l1"><a class="reference internal" href="outputs.html">2.7. Outputs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="custom-types.html">2.8. カスタムタイプ</a></li>
+<li class="toctree-l1"><a class="reference internal" href="expression-tool.html">2.9. Expression Tool</a></li>
+<li class="toctree-l1"><a class="reference internal" href="workflows.html">2.10. ワークフロー</a></li>
+<li class="toctree-l1"><a class="reference internal" href="operations.html">2.11. Operations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="environment-variables.html">2.12. 環境変数</a></li>
+<li class="toctree-l1"><a class="reference internal" href="using-containers.html">2.13. コンテナの使用</a></li>
+<li class="toctree-l1"><a class="reference internal" href="creating-files-at-runtime.html">2.14. 実行時にファイルを作成する</a></li>
+<li class="toctree-l1"><a class="reference internal" href="staging-input-files.html">2.15. 入力ファイルのステージング</a></li>
+<li class="toctree-l1"><a class="reference internal" href="best-practices.html">2.16. ベストプラクティス</a></li>
+<li class="toctree-l1"><a class="reference internal" href="file-formats.html">2.17. ファイルフォーマット</a></li>
+<li class="toctree-l1"><a class="reference internal" href="metadata-and-authorship.html">2.18. メタデータと著者</a></li>
+<li class="toctree-l1"><a class="reference internal" href="specifying-software-requirements.html">2.19. ソフトウェア要求事項の指定</a></li>
+<li class="toctree-l1"><a class="reference internal" href="troubleshooting.html">2.20. トラブルシューティング</a></li>
+</ul>
+</div>
 </nav></div>
     </div>
   
@@ -426,15 +446,9 @@ document.write(`
                 <article class="bd-article">
                   
   <section id="additional-arguments-and-parameters">
-<h1><span class="section-number">2.5. </span>Additional Arguments and Parameters<a class="headerlink" href="#additional-arguments-and-parameters" title="Link to this heading">#</a></h1>
-<p>Sometimes tools require additional command line options that don't
-correspond exactly to input parameters.</p>
-<p>In this example, we will wrap the Java compiler to compile a java source
-file to a class file.  By default, &quot;javac&quot; will create the class files in
-the same directory as the source file.  However, CWL input files (and the
-directories in which they appear) may be read-only, so we need to
-instruct &quot;javac&quot; to write the class file to the designated output directory
-instead.</p>
+<h1><span class="section-number">2.5. </span>追加の引数とパラメータ<a class="headerlink" href="#additional-arguments-and-parameters" title="Link to this heading">#</a></h1>
+<p>ツールには、入力パラメータに正確に対応しない追加のコマンドラインオプションが必要な場合があります。</p>
+<p>この例では、Javaコンパイラを使用して、javaソースファイルをclassファイルにコンパイルするようにラップします。  デフォルトでは、&quot;javac &quot;はjavaファイルと同じディレクトリにclassファイルを作成します。  しかし、CWLの入力ファイル（およびそのディレクトリ）は読み取り専用である場合があるので、代わりに指定された出力ディレクトリにclassファイルを書き込むように「javac」に指示する必要があります。</p>
 <div class="literal-block-wrapper docutils container" id="arguments-cwl">
 <div class="code-block-caption"><span class="caption-text"><code class="docutils literal notranslate"><span class="pre">arguments.cwl</span></code></span><a class="headerlink" href="#arguments-cwl" title="Link to this code">#</a></div>
 <div class="highlight-cwl notranslate"><div class="highlight"><pre><span></span><span class="c1">#!/usr/bin/env cwl-runner</span>
@@ -473,27 +487,27 @@ instead.</p>
 </div>
 <p>そして、コマンドラインでツール定義と入力オブジェクトを渡して<code class="docutils literal notranslate"><span class="pre">cwltool</span></code> を起動します：</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>cwltool<span class="w"> </span>arguments.cwl<span class="w"> </span>arguments-job.yml
-INFO<span class="w"> </span>/opt/hostedtoolcache/Python/3.9.18/x64/bin/cwltool<span class="w"> </span><span class="m">3</span>.1.20240112164112
+INFO<span class="w"> </span>/opt/hostedtoolcache/Python/3.9.19/x64/bin/cwltool<span class="w"> </span><span class="m">3</span>.1.20240404144621
 INFO<span class="w"> </span>Resolved<span class="w"> </span><span class="s1">&#39;arguments.cwl&#39;</span><span class="w"> </span>to<span class="w"> </span><span class="s1">&#39;file:///home/runner/work/user_guide/user_guide/src/_includes/cwl/additional-arguments-and-parameters/arguments.cwl&#39;</span>
-INFO<span class="w"> </span><span class="o">[</span>job<span class="w"> </span>arguments.cwl<span class="o">]</span><span class="w"> </span>/tmp/e_bn98kc$<span class="w"> </span>docker<span class="w"> </span><span class="se">\</span>
+INFO<span class="w"> </span><span class="o">[</span>job<span class="w"> </span>arguments.cwl<span class="o">]</span><span class="w"> </span>/tmp/szds39rv$<span class="w"> </span>docker<span class="w"> </span><span class="se">\</span>
 <span class="w">    </span>run<span class="w"> </span><span class="se">\</span>
 <span class="w">    </span>-i<span class="w"> </span><span class="se">\</span>
-<span class="w">    </span>--mount<span class="o">=</span><span class="nv">type</span><span class="o">=</span>bind,source<span class="o">=</span>/tmp/e_bn98kc,target<span class="o">=</span>/NdxiFI<span class="w"> </span><span class="se">\</span>
-<span class="w">    </span>--mount<span class="o">=</span><span class="nv">type</span><span class="o">=</span>bind,source<span class="o">=</span>/tmp/df6wvh8w,target<span class="o">=</span>/tmp<span class="w"> </span><span class="se">\</span>
-<span class="w">    </span>--mount<span class="o">=</span><span class="nv">type</span><span class="o">=</span>bind,source<span class="o">=</span>/home/runner/work/user_guide/user_guide/src/_includes/cwl/additional-arguments-and-parameters/Hello.java,target<span class="o">=</span>/var/lib/cwl/stg92dd901a-ee3e-4406-b9a8-4a09fc0ba985/Hello.java,readonly<span class="w"> </span><span class="se">\</span>
-<span class="w">    </span>--workdir<span class="o">=</span>/NdxiFI<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>--mount<span class="o">=</span><span class="nv">type</span><span class="o">=</span>bind,source<span class="o">=</span>/tmp/szds39rv,target<span class="o">=</span>/axGBvX<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>--mount<span class="o">=</span><span class="nv">type</span><span class="o">=</span>bind,source<span class="o">=</span>/tmp/2dbsooij,target<span class="o">=</span>/tmp<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>--mount<span class="o">=</span><span class="nv">type</span><span class="o">=</span>bind,source<span class="o">=</span>/home/runner/work/user_guide/user_guide/src/_includes/cwl/additional-arguments-and-parameters/Hello.java,target<span class="o">=</span>/var/lib/cwl/stg8658f233-37bc-4e1c-bf77-cb6189d38592/Hello.java,readonly<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>--workdir<span class="o">=</span>/axGBvX<span class="w"> </span><span class="se">\</span>
 <span class="w">    </span>--read-only<span class="o">=</span><span class="nb">true</span><span class="w"> </span><span class="se">\</span>
 <span class="w">    </span>--net<span class="o">=</span>none<span class="w"> </span><span class="se">\</span>
 <span class="w">    </span>--user<span class="o">=</span><span class="m">1001</span>:127<span class="w"> </span><span class="se">\</span>
 <span class="w">    </span>--rm<span class="w"> </span><span class="se">\</span>
-<span class="w">    </span>--cidfile<span class="o">=</span>/tmp/jopkl5w2/20240313072054-513143.cid<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>--cidfile<span class="o">=</span>/tmp/4pvrnc30/20240508123829-006581.cid<span class="w"> </span><span class="se">\</span>
 <span class="w">    </span>--env<span class="o">=</span><span class="nv">TMPDIR</span><span class="o">=</span>/tmp<span class="w"> </span><span class="se">\</span>
-<span class="w">    </span>--env<span class="o">=</span><span class="nv">HOME</span><span class="o">=</span>/NdxiFI<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>--env<span class="o">=</span><span class="nv">HOME</span><span class="o">=</span>/axGBvX<span class="w"> </span><span class="se">\</span>
 <span class="w">    </span>openjdk:9.0.1-11-slim<span class="w"> </span><span class="se">\</span>
 <span class="w">    </span>javac<span class="w"> </span><span class="se">\</span>
 <span class="w">    </span>-d<span class="w"> </span><span class="se">\</span>
-<span class="w">    </span>/NdxiFI<span class="w"> </span><span class="se">\</span>
-<span class="w">    </span>/var/lib/cwl/stg92dd901a-ee3e-4406-b9a8-4a09fc0ba985/Hello.java
+<span class="w">    </span>/axGBvX<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>/var/lib/cwl/stg8658f233-37bc-4e1c-bf77-cb6189d38592/Hello.java
 INFO<span class="w"> </span><span class="o">[</span>job<span class="w"> </span>arguments.cwl<span class="o">]</span><span class="w"> </span>completed<span class="w"> </span>success
 <span class="o">{</span>
 <span class="w">    </span><span class="s2">&quot;classfile&quot;</span>:<span class="w"> </span><span class="o">{</span>
@@ -511,13 +525,7 @@ INFO<span class="w"> </span><span class="o">[</span>job<span class="w"> </span>a
 <div class="highlight-cwl notranslate"><div class="highlight"><pre><span></span><span class="nt">arguments</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="s">&quot;-d&quot;</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">$(runtime.outdir)</span><span class="p p-Indicator">]</span>
 </pre></div>
 </div>
-<p>This example references a runtime parameter.  Runtime parameters provide
-information about the hardware or software environment when the tool is
-actually executed.  The <code class="docutils literal notranslate"><span class="pre">$(runtime.outdir)</span></code> parameter is the path to the
-designated output directory.  Other parameters include <code class="docutils literal notranslate"><span class="pre">$(runtime.tmpdir)</span></code>,
-<code class="docutils literal notranslate"><span class="pre">$(runtime.ram)</span></code>, <code class="docutils literal notranslate"><span class="pre">$(runtime.cores)</span></code>, <code class="docutils literal notranslate"><span class="pre">$(runtime.outdirSize)</span></code>, and
-<code class="docutils literal notranslate"><span class="pre">$(runtime.tmpdirSize)</span></code>.  See the <a class="reference external" href="https://www.commonwl.org/v1.0/CommandLineTool.html#Runtime_environment">Runtime Environment</a> section of the
-CWL specification for details.</p>
+<p>この例では、runtimeパラメータを参照しています。  runtimeパラメータは、ツールが実際に実行されたときのハードウェアまたはソフトウェア環境に関する情報を提供します。  <code class="docutils literal notranslate"> <span class="pre">$(runtime.outdir)</span></code> パラメータは、指定された出力ディレクトリへのパスです。  その他、<code class="docutils literal notranslate"><span class="pre">$(runtime.tmpdir)</span></code>,<code class="docutils literal notranslate"><span class="pre">$(runtime.ram)</span></code>,<code class="docutils literal notranslate"><span class="pre">$(runtime.cores)</span></code>,<code class="docutils literal notranslate"><span class="pre">$(runtime.outdirSize)</span></code>,<code class="docutils literal notranslate"><span class="pre">$(runtime.tmpdirSize)</span></code> などがあります。  詳細はCWL仕様書の<a class="reference external" href="https://www.commonwl.org/v1.0/CommandLineTool.html#Runtime_environment">Runtime Environment</a>の項を参照してください。</p>
 </section>
 
 
@@ -599,28 +607,6 @@ CWL specification for details.</p>
   <script src="../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae"></script>
 <script src="../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae"></script>
 
-<div class="container">
-  <div class="row">
-    <div class="col d-flex flex-row-reverse">
-      <ul class="nav">
-        <li class="nav-item">
-          <a class="nav-link" href="https://github.com/common-workflow-language/user_guide/blob/main/CODE_OF_CONDUCT.md">Code of Conduct</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="https://github.com/common-workflow-language/user_guide/blob/main/CONTRIBUTING.md">Contributing</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="https://github.com/common-workflow-language/user_guide/">Source</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="https://github.com/common-workflow-language/user_guide/blob/main/CITATION.md">Cite</a>
-        </li>
-      </ul>
-    </div>
-  </div>
-</div>
-
-
   <footer class="bd-footer">
 <div class="bd-footer__inner bd-page-width">
   
@@ -639,13 +625,33 @@ CWL specification for details.</p>
         <div class="footer-item">
 
   <p class="sphinx-version">
-    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.2.6.
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.3.7.
     <br/>
   </p>
 </div>
       
     </div>
   
+  
+    <div class="footer-items__center">
+      
+        <div class="footer-item">
+<ul class="nav justify-content-center">
+  <li class="nav-item">
+    <a class="nav-link" href="https://github.com/common-workflow-language/user_guide/blob/main/CODE_OF_CONDUCT.md">Code of Conduct</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="https://github.com/common-workflow-language/user_guide/blob/main/CONTRIBUTING.md">Contributing</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="https://github.com/common-workflow-language/user_guide/">Source</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="https://github.com/common-workflow-language/user_guide/blob/main/CITATION.md">Cite</a>
+  </li>
+</ul></div>
+      
+    </div>
   
   
     <div class="footer-items__end">
@@ -660,6 +666,5 @@ CWL specification for details.</p>
 </div>
 
   </footer>
-
   </body>
 </html>

@@ -33,7 +33,7 @@
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
 
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=80d5e7a1" />
-    <link rel="stylesheet" type="text/css" href="../_static/graphviz.css?v=eafc0fe6" />
+    <link rel="stylesheet" type="text/css" href="../_static/graphviz.css?v=fd3f3429" />
     <link rel="stylesheet" type="text/css" href="../_static/css/custom.css?v=e0da1575" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
@@ -42,7 +42,7 @@
   <script src="../_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=8d27b9dea8ad943066ae"></script>
 
     <script src="../_static/documentation_options.js?v=be13464f"></script>
-    <script src="../_static/doctools.js?v=888ff710"></script>
+    <script src="../_static/doctools.js?v=9a2dae69"></script>
     <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../_static/translations.js?v=4dbe4bdc"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'topics/outputs';</script>
@@ -363,13 +363,33 @@ document.write(`
   </div>
   
     <div class="sidebar-primary-items__start sidebar-primary__section">
-        <div class="sidebar-primary-item"><nav class="bd-links d-none d-md-block" id="bd-docs-nav" aria-label="メインナビゲーション">
-  <p class="bd-links__title" role="heading" aria-level="1">
-    セクションナビゲーション
-  </p>
-  <div class="bd-toc-item navbar-nav">
-    
-  </div>
+        <div class="sidebar-primary-item">
+<nav class="bd-docs-nav bd-links"
+     aria-label="セクションナビゲーション">
+  <p class="bd-links__title" role="heading" aria-level="1">セクションナビゲーション</p>
+  <div class="bd-toc-item navbar-nav"><ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="yaml-guide.html">2.1. YAMLガイド</a></li>
+<li class="toctree-l1"><a class="reference internal" href="command-line-tool.html">2.2. コマンドラインツール</a></li>
+<li class="toctree-l1"><a class="reference internal" href="expressions.html">2.3. Expressions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="inputs.html">2.4. Inputs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="additional-arguments-and-parameters.html">2.5. 追加の引数とパラメータ</a></li>
+<li class="toctree-l1"><a class="reference internal" href="parameter-references.html">2.6. パラメータリファレンス</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">2.7. Outputs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="custom-types.html">2.8. カスタムタイプ</a></li>
+<li class="toctree-l1"><a class="reference internal" href="expression-tool.html">2.9. Expression Tool</a></li>
+<li class="toctree-l1"><a class="reference internal" href="workflows.html">2.10. ワークフロー</a></li>
+<li class="toctree-l1"><a class="reference internal" href="operations.html">2.11. Operations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="environment-variables.html">2.12. 環境変数</a></li>
+<li class="toctree-l1"><a class="reference internal" href="using-containers.html">2.13. コンテナの使用</a></li>
+<li class="toctree-l1"><a class="reference internal" href="creating-files-at-runtime.html">2.14. 実行時にファイルを作成する</a></li>
+<li class="toctree-l1"><a class="reference internal" href="staging-input-files.html">2.15. 入力ファイルのステージング</a></li>
+<li class="toctree-l1"><a class="reference internal" href="best-practices.html">2.16. ベストプラクティス</a></li>
+<li class="toctree-l1"><a class="reference internal" href="file-formats.html">2.17. ファイルフォーマット</a></li>
+<li class="toctree-l1"><a class="reference internal" href="metadata-and-authorship.html">2.18. メタデータと著者</a></li>
+<li class="toctree-l1"><a class="reference internal" href="specifying-software-requirements.html">2.19. ソフトウェア要求事項の指定</a></li>
+<li class="toctree-l1"><a class="reference internal" href="troubleshooting.html">2.20. トラブルシューティング</a></li>
+</ul>
+</div>
 </nav></div>
     </div>
   
@@ -439,11 +459,7 @@ themselves, or the result of examining the content of those files.</p>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
 <p><code class="docutils literal notranslate"><span class="pre">baseCommand</span></code> に必須引数を渡します。</p>
-<p>In previous examples, the <code class="docutils literal notranslate"><span class="pre">baseCommand</span></code> was just a string, with any arguments
-passed as CWL inputs. Instead of a single string, we can use an <em>array of
-strings</em> as the value of <code class="docutils literal notranslate"><span class="pre">baseCommand</span></code>. The first element of the array is the
-command to run, and any subsequent elements are mandatory command line
-arguments</p>
+<p>これまでの例では、<code class="docutils literal notranslate"><span class="pre">baseCommand</span></code> は単なる文字列で、引数はCWL入力として渡していました。単一の文字列の代わりに、<em>文字列の配列</em> を使用することができます。 配列の最初の要素は実行するコマンドで、それ以降の要素は必須のコマンドライン引数です</p>
 </div>
 <div class="literal-block-wrapper docutils container" id="tar-cwl">
 <div class="code-block-caption"><span class="caption-text"><code class="docutils literal notranslate"><span class="pre">tar.cwl</span></code></span><a class="headerlink" href="#tar-cwl" title="Link to this code">#</a></div>
@@ -472,19 +488,19 @@ arguments</p>
 </pre></div>
 </div>
 </div>
-<p>Next, create a tar file for the example.</p>
+<p>次に、サンプルとなるtarファイルを作成します。</p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>touch<span class="w"> </span>hello.txt<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>tar<span class="w"> </span>-cvf<span class="w"> </span>hello.tar<span class="w"> </span>hello.txt
 <span class="go">hello.txt</span>
 </pre></div>
 </div>
 <p>そして、今度はコマンドラインにツール定義と入力オブジェクトを指定して<code class="docutils literal notranslate"><span class="pre">cwltool</span></code> を呼び出します：</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>cwltool<span class="w"> </span>tar.cwl<span class="w"> </span>tar-job.yml
-INFO<span class="w"> </span>/opt/hostedtoolcache/Python/3.9.18/x64/bin/cwltool<span class="w"> </span><span class="m">3</span>.1.20240112164112
+INFO<span class="w"> </span>/opt/hostedtoolcache/Python/3.9.19/x64/bin/cwltool<span class="w"> </span><span class="m">3</span>.1.20240404144621
 INFO<span class="w"> </span>Resolved<span class="w"> </span><span class="s1">&#39;tar.cwl&#39;</span><span class="w"> </span>to<span class="w"> </span><span class="s1">&#39;file:///home/runner/work/user_guide/user_guide/src/_includes/cwl/outputs/tar.cwl&#39;</span>
-INFO<span class="w"> </span><span class="o">[</span>job<span class="w"> </span>tar.cwl<span class="o">]</span><span class="w"> </span>/tmp/4bxw1gqj$<span class="w"> </span>tar<span class="w"> </span><span class="se">\</span>
+INFO<span class="w"> </span><span class="o">[</span>job<span class="w"> </span>tar.cwl<span class="o">]</span><span class="w"> </span>/tmp/p4eds2wv$<span class="w"> </span>tar<span class="w"> </span><span class="se">\</span>
 <span class="w">    </span>--extract<span class="w"> </span><span class="se">\</span>
 <span class="w">    </span>--file<span class="w"> </span><span class="se">\</span>
-<span class="w">    </span>/tmp/z_gpsdpi/stge7aec447-94e6-4d4d-b4a0-8f8dc8c1579b/hello.tar
+<span class="w">    </span>/tmp/hfsca7on/stgfd0520bf-d70b-4b0d-91bf-9c54091d98d0/hello.tar
 INFO<span class="w"> </span><span class="o">[</span>job<span class="w"> </span>tar.cwl<span class="o">]</span><span class="w"> </span>completed<span class="w"> </span>success
 <span class="o">{</span>
 <span class="w">    </span><span class="s2">&quot;example_out&quot;</span>:<span class="w"> </span><span class="o">{</span>
@@ -498,8 +514,7 @@ INFO<span class="w"> </span><span class="o">[</span>job<span class="w"> </span>t
 <span class="o">}</span>INFO<span class="w"> </span>Final<span class="w"> </span>process<span class="w"> </span>status<span class="w"> </span>is<span class="w"> </span>success
 </pre></div>
 </div>
-<p>The field <a class="reference external" href="https://w3id.org/cwl/CommandLineTool.html#CommandOutputBinding"><code class="docutils literal notranslate"><span class="pre">outputBinding</span></code></a> describes how to set the value of each
-output parameter.</p>
+<p><a class="reference external" href="https://w3id.org/cwl/CommandLineTool.html#CommandOutputBinding"><code class="docutils literal notranslate"><span class="pre">outputBinding</span></code></a> フィールドには、各出力パラメータの値の設定方法が記述されています。</p>
 <div class="highlight-cwl notranslate"><div class="highlight"><pre><span></span><span class="nt">outputs</span><span class="p">:</span>
 <span class="w">  </span><span class="nt">example_out</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">File</span>
@@ -507,15 +522,11 @@ output parameter.</p>
 <span class="w">      </span><span class="nt">glob</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">hello.txt</span>
 </pre></div>
 </div>
-<p>The <a class="reference external" href="https://w3id.org/cwl/CommandLineTool.html#CommandOutputBinding"><code class="docutils literal notranslate"><span class="pre">glob</span></code></a>
-field consists of the pattern to match file names in the output directory.
-This can simply be the file's exact name. But if you don't know the name of the
-file in advance, you can use a wildcard pattern like <code class="docutils literal notranslate"><span class="pre">glob:</span> <span class="pre">'*.txt'</span></code>.</p>
+<p><a class="reference external" href="https://w3id.org/cwl/CommandLineTool.html#CommandOutputBinding"><code class="docutils literal notranslate"><span class="pre">glob</span></code></a> フィールドは、出力ディレクトリ内のファイル名で構成されます。前もって出力ファイル名が分からない場合は、<code class="docutils literal notranslate"><span class="pre">glob:</span> <span class="pre">'*.txt'</span></code> のようにワイルドカードパターンを使用することができます。</p>
 </section>
 <section id="capturing-standard-output">
 <h2><span class="section-number">2.7.2. </span>標準出力をキャプチャする<a class="headerlink" href="#capturing-standard-output" title="Link to this heading">#</a></h2>
-<p>To capture a tool's standard output stream, add the <a class="reference external" href="https://w3id.org/cwl/CommandLineTool.html#stdout"><code class="docutils literal notranslate"><span class="pre">stdout</span></code></a> field with
-the name of the file where the output stream should go.  Then add <code class="docutils literal notranslate"><span class="pre">type:</span> <span class="pre">stdout</span></code> on the corresponding output parameter.</p>
+<p>ツールの標準出力を保存するには、<a class="reference external" href="https://w3id.org/cwl/CommandLineTool.html#stdout"><code class="docutils literal notranslate"><span class="pre">stdout</span></code></a> フィールドに、標準出力を保存したいファイル名を追加します。   次に、対応する出力パラメータに<code class="docutils literal notranslate"><span class="pre">type:</span> <span class="pre">stdout</span></code> を追加します。</p>
 <div class="literal-block-wrapper docutils container" id="stdout-cwl">
 <div class="code-block-caption"><span class="caption-text"><code class="docutils literal notranslate"><span class="pre">stdout.cwl</span></code></span><a class="headerlink" href="#stdout-cwl" title="Link to this code">#</a></div>
 <div class="highlight-cwl notranslate"><div class="highlight"><pre><span></span><span class="c1">#!/usr/bin/env cwl-runner</span>
@@ -540,13 +551,12 @@ the name of the file where the output stream should go.  Then add <code class="d
 </pre></div>
 </div>
 </div>
-<p>Now invoke <code class="docutils literal notranslate"><span class="pre">cwltool</span></code> providing the tool description and the input object
-on the command line:</p>
+<p>ここで、コマンドラインにツール定義と入力オブジェクトを指定し <code class="docutils literal notranslate"><span class="pre">cwltool</span></code> を起動します：</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>cwltool<span class="w"> </span>stdout.cwl<span class="w"> </span>echo-job.yml
-INFO<span class="w"> </span>/opt/hostedtoolcache/Python/3.9.18/x64/bin/cwltool<span class="w"> </span><span class="m">3</span>.1.20240112164112
+INFO<span class="w"> </span>/opt/hostedtoolcache/Python/3.9.19/x64/bin/cwltool<span class="w"> </span><span class="m">3</span>.1.20240404144621
 INFO<span class="w"> </span>Resolved<span class="w"> </span><span class="s1">&#39;stdout.cwl&#39;</span><span class="w"> </span>to<span class="w"> </span><span class="s1">&#39;file:///home/runner/work/user_guide/user_guide/src/_includes/cwl/outputs/stdout.cwl&#39;</span>
-INFO<span class="w"> </span><span class="o">[</span>job<span class="w"> </span>stdout.cwl<span class="o">]</span><span class="w"> </span>/tmp/8fsygcnw$<span class="w"> </span><span class="nb">echo</span><span class="w"> </span><span class="se">\</span>
-<span class="w">    </span><span class="s1">&#39;Hello world!&#39;</span><span class="w"> </span>&gt;<span class="w"> </span>/tmp/8fsygcnw/output.txt
+INFO<span class="w"> </span><span class="o">[</span>job<span class="w"> </span>stdout.cwl<span class="o">]</span><span class="w"> </span>/tmp/5arvpvhv$<span class="w"> </span><span class="nb">echo</span><span class="w"> </span><span class="se">\</span>
+<span class="w">    </span><span class="s1">&#39;Hello world!&#39;</span><span class="w"> </span>&gt;<span class="w"> </span>/tmp/5arvpvhv/output.txt
 INFO<span class="w"> </span><span class="o">[</span>job<span class="w"> </span>stdout.cwl<span class="o">]</span><span class="w"> </span>completed<span class="w"> </span>success
 <span class="o">{</span>
 <span class="w">    </span><span class="s2">&quot;example_out&quot;</span>:<span class="w"> </span><span class="o">{</span>
@@ -596,12 +606,11 @@ INFO<span class="w"> </span><span class="o">[</span>job<span class="w"> </span>s
 </pre></div>
 </div>
 </div>
-<p>Now invoke <code class="docutils literal notranslate"><span class="pre">cwltool</span></code> providing the tool description and the input object
-on the command line:</p>
+<p>ここで、コマンドラインにツール定義と入力オブジェクトを指定し <code class="docutils literal notranslate"><span class="pre">cwltool</span></code> を起動します：</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>cwltool<span class="w"> </span>array-outputs.cwl<span class="w"> </span>array-outputs-job.yml
-INFO<span class="w"> </span>/opt/hostedtoolcache/Python/3.9.18/x64/bin/cwltool<span class="w"> </span><span class="m">3</span>.1.20240112164112
+INFO<span class="w"> </span>/opt/hostedtoolcache/Python/3.9.19/x64/bin/cwltool<span class="w"> </span><span class="m">3</span>.1.20240404144621
 INFO<span class="w"> </span>Resolved<span class="w"> </span><span class="s1">&#39;array-outputs.cwl&#39;</span><span class="w"> </span>to<span class="w"> </span><span class="s1">&#39;file:///home/runner/work/user_guide/user_guide/src/_includes/cwl/outputs/array-outputs.cwl&#39;</span>
-INFO<span class="w"> </span><span class="o">[</span>job<span class="w"> </span>array-outputs.cwl<span class="o">]</span><span class="w"> </span>/tmp/e14pbik9$<span class="w"> </span>touch<span class="w"> </span><span class="se">\</span>
+INFO<span class="w"> </span><span class="o">[</span>job<span class="w"> </span>array-outputs.cwl<span class="o">]</span><span class="w"> </span>/tmp/qtcne5b4$<span class="w"> </span>touch<span class="w"> </span><span class="se">\</span>
 <span class="w">    </span>foo.txt<span class="w"> </span><span class="se">\</span>
 <span class="w">    </span>bar.dat<span class="w"> </span><span class="se">\</span>
 <span class="w">    </span>baz.txt
@@ -628,10 +637,7 @@ INFO<span class="w"> </span><span class="o">[</span>job<span class="w"> </span>a
 <span class="o">}</span>INFO<span class="w"> </span>Final<span class="w"> </span>process<span class="w"> </span>status<span class="w"> </span>is<span class="w"> </span>success
 </pre></div>
 </div>
-<p>As described in the <a class="reference internal" href="yaml-guide.html#arrays"><span class="std std-ref">YAML Guide</span></a>,
-the array of expected outputs is specified in <code class="docutils literal notranslate"><span class="pre">array-outputs-job.yml</span></code> with each
-entry marked by a leading <code class="docutils literal notranslate"><span class="pre">-</span></code>. This format can also be used in CWL descriptions
-to mark entries in arrays, as demonstrated in several of the upcoming sections.</p>
+<p><a class="reference internal" href="yaml-guide.html#arrays"><span class="std std-ref">YAML Guide</span></a> で説明されているように、期待される出力の配列は<code class="docutils literal notranslate"><span class="pre">array-outputs-job.yml</span></code> で指定され、配列のエントリーはそれぞれ先頭の<code class="docutils literal notranslate"><span class="pre">-</span></code> で示されています。この書き方は、CWL定義で配列のエントリーを示すために使用することもでき、今後のいくつかのセクションでデモがあります。</p>
 </section>
 </section>
 
@@ -728,28 +734,6 @@ to mark entries in arrays, as demonstrated in several of the upcoming sections.<
   <script src="../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae"></script>
 <script src="../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae"></script>
 
-<div class="container">
-  <div class="row">
-    <div class="col d-flex flex-row-reverse">
-      <ul class="nav">
-        <li class="nav-item">
-          <a class="nav-link" href="https://github.com/common-workflow-language/user_guide/blob/main/CODE_OF_CONDUCT.md">Code of Conduct</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="https://github.com/common-workflow-language/user_guide/blob/main/CONTRIBUTING.md">Contributing</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="https://github.com/common-workflow-language/user_guide/">Source</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="https://github.com/common-workflow-language/user_guide/blob/main/CITATION.md">Cite</a>
-        </li>
-      </ul>
-    </div>
-  </div>
-</div>
-
-
   <footer class="bd-footer">
 <div class="bd-footer__inner bd-page-width">
   
@@ -768,13 +752,33 @@ to mark entries in arrays, as demonstrated in several of the upcoming sections.<
         <div class="footer-item">
 
   <p class="sphinx-version">
-    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.2.6.
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.3.7.
     <br/>
   </p>
 </div>
       
     </div>
   
+  
+    <div class="footer-items__center">
+      
+        <div class="footer-item">
+<ul class="nav justify-content-center">
+  <li class="nav-item">
+    <a class="nav-link" href="https://github.com/common-workflow-language/user_guide/blob/main/CODE_OF_CONDUCT.md">Code of Conduct</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="https://github.com/common-workflow-language/user_guide/blob/main/CONTRIBUTING.md">Contributing</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="https://github.com/common-workflow-language/user_guide/">Source</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="https://github.com/common-workflow-language/user_guide/blob/main/CITATION.md">Cite</a>
+  </li>
+</ul></div>
+      
+    </div>
   
   
     <div class="footer-items__end">
@@ -789,6 +793,5 @@ to mark entries in arrays, as demonstrated in several of the upcoming sections.<
 </div>
 
   </footer>
-
   </body>
 </html>

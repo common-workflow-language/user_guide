@@ -33,7 +33,7 @@
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
 
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=80d5e7a1" />
-    <link rel="stylesheet" type="text/css" href="../_static/graphviz.css?v=eafc0fe6" />
+    <link rel="stylesheet" type="text/css" href="../_static/graphviz.css?v=fd3f3429" />
     <link rel="stylesheet" type="text/css" href="../_static/css/custom.css?v=e0da1575" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
@@ -42,7 +42,7 @@
   <script src="../_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=8d27b9dea8ad943066ae"></script>
 
     <script src="../_static/documentation_options.js?v=be13464f"></script>
-    <script src="../_static/doctools.js?v=888ff710"></script>
+    <script src="../_static/doctools.js?v=9a2dae69"></script>
     <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../_static/translations.js?v=4dbe4bdc"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'introduction/basic-concepts';</script>
@@ -363,13 +363,16 @@ document.write(`
   </div>
   
     <div class="sidebar-primary-items__start sidebar-primary__section">
-        <div class="sidebar-primary-item"><nav class="bd-links d-none d-md-block" id="bd-docs-nav" aria-label="メインナビゲーション">
-  <p class="bd-links__title" role="heading" aria-level="1">
-    セクションナビゲーション
-  </p>
-  <div class="bd-toc-item navbar-nav">
-    
-  </div>
+        <div class="sidebar-primary-item">
+<nav class="bd-docs-nav bd-links"
+     aria-label="セクションナビゲーション">
+  <p class="bd-links__title" role="heading" aria-level="1">セクションナビゲーション</p>
+  <div class="bd-toc-item navbar-nav"><ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="quick-start.html">1.1. クイックスタート</a></li>
+<li class="toctree-l1"><a class="reference internal" href="prerequisites.html">1.2. 前提条件</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">1.3. 基本コンセプト</a></li>
+</ul>
+</div>
 </nav></div>
     </div>
   
@@ -431,7 +434,8 @@ document.write(`
 <section id="the-cwl-specification">
 <h2><span class="section-number">1.3.1. </span>CWLの仕様<a class="headerlink" href="#the-cwl-specification" title="Link to this heading">#</a></h2>
 <p>CWLは、コマンドラインツールを定義し、それらのツールを繋げてワークフローを作成するための方法です。CWLは仕様であり、特定のソフトウェアではないため、CWLを使用して定義されたツールやワークフローは、CWL標準をサポートするさまざまなプラットフォームで利用可能です。</p>
-<a class="reference internal image-reference" href="../_images/CWL-Logo-HD-cropped2.png" id="cwl-logo"><img alt="../_images/CWL-Logo-HD-cropped2.png" class="align-center" id="cwl-logo" src="../_images/CWL-Logo-HD-cropped2.png" style="width: 300px;" /></a>
+<a class="reference internal image-reference" href="../_images/CWL-Logo-HD-cropped2.png" id="cwl-logo"><img alt="../_images/CWL-Logo-HD-cropped2.png" class="align-center" id="cwl-logo" src="../_images/CWL-Logo-HD-cropped2.png" style="width: 300px;" />
+</a>
 <p>CWL仕様は、CWLコミュニティによって書かれ、維持されている文書です。この仕様には異なるバージョンが存在します。このユーザーガイドで扱うバージョンは<code class="docutils literal notranslate"><span class="pre">v1.2</span></code>です。</p>
 <p>仕様のバージョンは、<code class="docutils literal notranslate"><span class="pre">.</span></code>s（ドット）で区切られた最大3つの数字を持つことができます。最初の番号はメジャーリリースで、非推奨機能の削除など、後方互換性のない変更に使用されます。2番目の番号はマイナーリリースで、新機能や後方互換性のある小さな変更に使用されます。最後の番号は、仕様の誤字やその他の修正など、バグフィックスに使用される番号です。</p>
 <div class="admonition note">
@@ -441,10 +445,7 @@ document.write(`
 </section>
 <section id="implementations">
 <h2><span class="section-number">1.3.2. </span>実装<a class="headerlink" href="#implementations" title="Link to this heading">#</a></h2>
-<p>An implementation of the CWL specification is any software written following
-what is defined in a version of the specification document. However, implementations may
-not implement every aspect of the specification. CWL implementations are
-licensed under both Open Source and commercial licenses.</p>
+<p>CWL仕様の実装とは、あるバージョンの仕様書で定義された内容に従って書かれたソフトウェアのことです。ただし、実装は仕様にあるすべてを実装するわけではありません。CWLの実装は、オープンソース・ライセンスと商用ライセンスの両方でライセンスされています。</p>
 <p>CWLは、多くのノードでタスクが並列にスケジューリングされるクラスタ、クラウド、ハイパフォーマンスコンピューティング環境における大規模なワークフローを記述するのに適しています。</p>
 <figure class="align-center" id="specification-and-implementations-graph">
 <div class="graphviz"><object data="../_images/graphviz-b2e161069f145124e4da46557a8340e408a06117.svg" type="image/svg+xml" class="graphviz">
@@ -531,28 +532,17 @@ licensed under both Open Source and commercial licenses.</p>
 </figcaption>
 </figure>
 <p>コマンドラインツールは、<code class="docutils literal notranslate"><span class="pre">echo</span></code> 、<code class="docutils literal notranslate"><span class="pre">ls</span></code> 、<code class="docutils literal notranslate"><span class="pre">tar</span></code> のようなコマンドラインユーティリティのラッパーです。コマンドラインツールは、ワークフローから呼び出せます。</p>
-<p>An expression tool is a wrapper for a JavaScript expression. It can
-be used to simplify workflows and command-line tools, moving common
-parts of a workflow execution into reusable JavaScript code that
-takes inputs and produces outputs like a command-line tool.</p>
-<p>Operation is an abstract process that also takes inputs, produces
-outputs, and can be used in a workflow. But it is a special operation
-not so commonly used. It is discussed in the <a class="reference internal" href="../topics/operations.html"><span class="std std-doc">Operations section</span></a> of this user guide.</p>
+<p>ExpressionToolは、JavaScriptの式のラッパーです。WorkflowやCommandLineToolの簡略化に使用でき、ワークフロー実行の共通部分を、CommandLineToolのように入力を受けて出力を生成する再利用可能なJavaScriptコードに移動させることができます。</p>
+<p>Operationは、入力を受け、出力を出す抽象的なプロセスでもあり、ワークフローで使用することができます。しかし、あまり一般的に使われていない特別な処理です。このユーザーガイドの<a class="reference internal" href="../topics/operations.html"><span class="std std-doc">Operation編</span></a>で説明します。</p>
 <p>Workflowは、ステップを含むプロセスです。ステップには、他のWorkflow（ネストされたWorkflow）、CommandLineTool、ExpressionToolを使用することができます。Workflowの入力は、そのステップのいずれかに渡すことができ、ステップによって生成された出力は、Workflowの最終出力に使用することができます。</p>
 <p>CWL 仕様では、<em>requirements</em> を通じて、実装が追加機能を提供し、ワークフローの前提条件を指定することができます。CWL仕様には、例えば、以下のような多くの要件が定義されています：</p>
 <ul class="simple">
-<li><p><a class="reference external" href="https://w3id.org/cwl/Workflow.html#InlineJavascriptRequirement"><code class="docutils literal notranslate"><span class="pre">InlineJavascriptWorkflow</span></code></a>  - でJavaScriptを有効にします。</p></li>
-<li><p><a class="reference external" href="https://w3id.org/cwl/Workflow.html#SubworkflowFeatureRequirement"><code class="docutils literal notranslate"><span class="pre">SubworkflowFeatureRequirement</span></code></a>  - ネストしたワークフローを有効にします。</p></li>
-<li><p><a class="reference external" href="https://w3id.org/cwl/Workflow.html#InitialWorkDirRequirement"><code class="docutils literal notranslate"><span class="pre">InitialWorkDirRequirement</span></code></a>  - 入力ディレクトリのステージングファイルを制御します。</p></li>
+<li><p><a class="reference external" href="https://w3id.org/cwl/Workflow.html#InlineJavascriptRequirement"><code class="docutils literal notranslate"><span class="pre">InlineJavascriptWorkflow</span></code></a> - でJavaScriptを有効にします。</p></li>
+<li><p><a class="reference external" href="https://w3id.org/cwl/Workflow.html#SubworkflowFeatureRequirement"><code class="docutils literal notranslate"><span class="pre">SubworkflowFeatureRequirement</span></code></a> - ネストしたワークフローを有効にします。</p></li>
+<li><p><a class="reference external" href="https://w3id.org/cwl/Workflow.html#InitialWorkDirRequirement"><code class="docutils literal notranslate"><span class="pre">InitialWorkDirRequirement</span></code></a> - 入力ディレクトリのステージングファイルを制御します。</p></li>
 </ul>
-<p>Some CWL runners may provide requirements that are not in the specification.
-For example, GPU requirements are supported in <code class="docutils literal notranslate"><span class="pre">cwltool</span></code> through the
-<code class="docutils literal notranslate"><span class="pre">cwltool:CUDARequirement</span></code> requirement, but it is not part of the
-<code class="docutils literal notranslate"><span class="pre">v1.2</span></code> specification and may not be supported by other CWL
-runners.</p>
-<p>Hints are similar to requirements, but while requirements list features
-that are required, hints list optional features. Requirements are explained
-in detail in the <a class="reference internal" href="../topics/requirements-and-hints.html"><span class="std std-doc">Requirements</span></a> section.</p>
+<p>いくつかのCWLランナーは、仕様にないrequirementsを提供することがあります。例えば、GPUに関するrequirementsは<code class="docutils literal notranslate"><span class="pre">cwltool</span></code> で<code class="docutils literal notranslate"><span class="pre">cwltool:CUDARequirement</span></code> を通してサポートされていますが、<code class="docutils literal notranslate"><span class="pre">v1.2</span></code>仕様の一部ではないので、他のCWLランナーではサポートされていないかもしれません。</p>
+<p>HintsはRequirementsと似ていますが、Requirementsが必須機能を列挙するのに対し、Hintsはオプションの機能を列挙します。Requirementsについては、<a class="reference internal" href="../topics/requirements-and-hints.html"><span class="std std-doc">Requirements</span></a> セクションで詳しく説明しています。</p>
 </section>
 <section id="fair-workflows">
 <h2><span class="section-number">1.3.4. </span>FAIRワークフロー<a class="headerlink" href="#fair-workflows" title="Link to this heading">#</a></h2>
@@ -567,13 +557,8 @@ of FAIR data and themselves adhere to the FAIR principles.
 — <a class="reference external" href="https://workflows.community/groups/fair/">FAIR Computational Workflows</a>,
 Workflows Community Initiative.</p>
 </div></blockquote>
-<p>CWL has roots in &quot;make&quot; and many similar tools that determine order of
-execution, based on dependencies between tasks. However, unlike &quot;make&quot;, CWL
-tasks are isolated, and you must be explicit about your inputs and outputs.</p>
-<p>The benefit of explicitness and isolation are flexibility, portability, and
-scalability; tools and workflows described with CWL can transparently leverage
-technologies such as Docker and be used with CWL implementations from different
-vendors.</p>
+<p>CWLのルーツは、タスク間の依存関係に基づき、実行順序を決定する &quot;make&quot; や多くの類似ツールにあります。しかし、&quot;make&quot; とは異なり、CWLのタスクは分離されており、入力と出力を明示する必要があります。</p>
+<p>CWLで定義されたツールやワークフローは、Dockerなどの技術を透過的に活用し、異なるベンダーのCWL実装と組み合わせて使用することができるためです。</p>
 <p><code class="docutils literal notranslate"><span class="pre">cwltool</span></code> はまた、データプロベナンスのためのPROV-O標準オントロジーを使用しています。</p>
 </section>
 <section id="learn-more">
@@ -581,7 +566,7 @@ vendors.</p>
 <ul class="simple">
 <li><p>セマンティック・バージョニング -<a class="reference external" href="https://semver.org/">https://semver.org/</a></p></li>
 <li><p>CWLサイト内の「CWL仕様」ページ：<a class="reference external" href="https://www.commonwl.org/specification/">https://www.commonwl.org/specification/</a></p></li>
-<li><p>The Command Line Tool Description Standard: &lt;<a class="reference external" href="https://w3id.org/cwl/CommandLineTool.html">https://www.commonwl.org/v1.2/CommandLineTool.html</a>&gt;</p></li>
+<li><p>The Command Line Tool Description Standard: <a class="reference external" href="https://w3id.org/cwl/CommandLineTool.html">https://w3id.org/cwl/CommandLineTool.html</a></p></li>
 <li><p>GitHubにある現在のCWL仕様：<a class="github reference external" href="https://github.com/common-workflow-language/cwl-v1.2">common-workflow-language/cwl-v1.2</a></p></li>
 <li><p>CWLサイト内の実装のリスト：<a class="reference external" href="https://www.commonwl.org/implementations/">https://www.commonwl.org/implementations/</a></p></li>
 <li><p>PROV-O: PROVオントロジー -<a class="reference external" href="https://www.w3.org/TR/prov-o/">https://www.w3.org/TR/prov-o/</a></p></li>
@@ -685,28 +670,6 @@ vendors.</p>
   <script src="../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae"></script>
 <script src="../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae"></script>
 
-<div class="container">
-  <div class="row">
-    <div class="col d-flex flex-row-reverse">
-      <ul class="nav">
-        <li class="nav-item">
-          <a class="nav-link" href="https://github.com/common-workflow-language/user_guide/blob/main/CODE_OF_CONDUCT.md">Code of Conduct</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="https://github.com/common-workflow-language/user_guide/blob/main/CONTRIBUTING.md">Contributing</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="https://github.com/common-workflow-language/user_guide/">Source</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="https://github.com/common-workflow-language/user_guide/blob/main/CITATION.md">Cite</a>
-        </li>
-      </ul>
-    </div>
-  </div>
-</div>
-
-
   <footer class="bd-footer">
 <div class="bd-footer__inner bd-page-width">
   
@@ -725,13 +688,33 @@ vendors.</p>
         <div class="footer-item">
 
   <p class="sphinx-version">
-    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.2.6.
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.3.7.
     <br/>
   </p>
 </div>
       
     </div>
   
+  
+    <div class="footer-items__center">
+      
+        <div class="footer-item">
+<ul class="nav justify-content-center">
+  <li class="nav-item">
+    <a class="nav-link" href="https://github.com/common-workflow-language/user_guide/blob/main/CODE_OF_CONDUCT.md">Code of Conduct</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="https://github.com/common-workflow-language/user_guide/blob/main/CONTRIBUTING.md">Contributing</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="https://github.com/common-workflow-language/user_guide/">Source</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="https://github.com/common-workflow-language/user_guide/blob/main/CITATION.md">Cite</a>
+  </li>
+</ul></div>
+      
+    </div>
   
   
     <div class="footer-items__end">
@@ -746,6 +729,5 @@ vendors.</p>
 </div>
 
   </footer>
-
   </body>
 </html>
