@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: Common Workflow Language User Guide\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-12-16 11:48+0100\n"
-"PO-Revision-Date: 2024-05-02 08:07+0000\n"
+"PO-Revision-Date: 2024-05-08 01:07+0000\n"
 "Last-Translator: Manabu ISHII <manabu.ishii.rb@gmail.com>\n"
 "Language-Team: Japanese <https://hosted.weblate.org/projects/commonwl/"
 "user-guide/ja/>\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 5.5.3-dev\n"
+"X-Generator: Weblate 5.5.4-rc\n"
 "Generated-By: Babel 2.12.1\n"
 
 #: ../../LICENSE.md:2 a48279b2231348eea3f7a3b74a6362ac
@@ -155,7 +155,7 @@ msgstr "よくある質問"
 
 #: ../../src/faq.md:11 370a9659c7904ef6b5e1ae7480f82ef6
 msgid "How do I create non \"`File`\" types using `evalFrom`?"
-msgstr "\"`File`\" 型をつかわず `evalFrom`を使う方法"
+msgstr "\"`File`\" 型をつかわず `evalFrom`を使うにはどうしたらよいですか?"
 
 #: ../../src/faq.md:41 8333f51e3f5945fe8963adfc6685bcb1
 msgid "How do I rename an input file?"
@@ -246,9 +246,9 @@ msgid ""
 msgstr "2つ目の方法は、`type: File` をスクリプト自体に含める方法です："
 
 #: ../../src/faq.md:138 ba246320fdd94a1aab4736f83718d793
-#, fuzzy
 msgid "How can I set `self`-based input bindings for optional inputs?"
-msgstr "オプショナル入力のために `self`-形式のInput Bindings を設定します"
+msgstr "オプショナル入力のために `self`-形式のInput Bindings "
+"をどのように設定しますか?"
 
 #: ../../src/faq.md:140 6169b7be9af7448abcb57eaf91e1cc91
 msgid ""
@@ -271,23 +271,22 @@ msgid ""
 msgstr "以下は、Booleanパラメータの値によって、コマンドラインに追加する文字列を変える例を示しています。"
 
 #: ../../src/faq.md:188 5c9980839f404ba6aef92ef23034500f
-#, fuzzy
 msgid ""
 "How do I connect a solo value to an input that expects an array of that "
 "type?"
-msgstr "ある型の配列を期待する入力に１つの値を与える"
+msgstr "ある型の配列を期待する入力に１つの値を与えるにはどうしたらよいでしょうか?"
 
 #: ../../src/faq.md:190 2525baf16c1f4725b096f33fd99009cf
-#, fuzzy
 msgid ""
 "Add a "
 "[`MultipleInputFeatureRequirement`](https://www.commonwl.org/v1.0/Workflow.html#MultipleInputFeatureRequirement)"
 " along with [`linkMerge: "
 "merge_nested`](https://www.commonwl.org/v1.0/Workflow.html#WorkflowStepInput):"
 msgstr ""
-"[`MultipleInputFeatureRequirement`](https://www.commonwl.org/v1.0/Workflow.html#MultipleInputFeatureRequirement)"
-" と [`linkMerge: "
-"merge_nested`](https://www.commonwl.org/v1.0/Workflow.html#WorkflowStepInput)を一緒に使います"
+"[`MultipleInputFeatureRequirement`](https://www.commonwl.org/v1.0/Workflow."
+"html#MultipleInputFeatureRequirement) と [`linkMerge: "
+"merge_nested`](https://www.commonwl.org/v1.0/Workflow."
+"html#WorkflowStepInput)を一緒に使います:"
 
 #: ../../src/faq.md:194 a00d5d96b15048a79ae099d22d63bb42
 msgid "merge_nested"
@@ -302,9 +301,8 @@ msgid ""
 msgstr "入力は、各入力リンクに対して正確に1つのエントリで構成される配列でなければなりません。\"merge_nested\"が1つのリンクで指定された場合、リンクからの値は1つのアイテムリストでラップされなければなりません。"
 
 #: ../../src/faq.md:199 3af16c07e3f148ddb8849c94a3864158
-#, fuzzy
 msgid "Which means \"create a list with exactly these sources as elements\"."
-msgstr "つまり、\"まさにこれらのソースを要素とするリストを作成する\" ということです"
+msgstr "つまり、\"まさにこれらのソースを要素とするリストを作成する\" ということです。"
 
 #: ../../src/faq.md:201 0ea3de393d2f42aeb82658c85a19ec45
 #, fuzzy
@@ -371,9 +369,8 @@ msgstr ""
 "のいずれかのコマンドラインフラグについては、特別なレコードタイプを定義することができます。また、ここにnullを指定することで、オプションの入力を作成することができます。"
 
 #: ../../src/faq.md:322 6fd3c469d11d4d52b9fbb7a3d443a8db
-#, fuzzy
 msgid "How do I set mutually exclusive parameters?"
-msgstr "相互に排他的なパラメータを設定する"
+msgstr "相互に排他的なパラメータを設定するにはどうしたらよいでしょうか?"
 
 #: ../../src/faq.md:324 a0687ce5c1f940538abc977cad83138f
 #, fuzzy
@@ -1087,7 +1084,7 @@ msgid ""
 msgstr ""
 "CWLコミュニティは、`cwlref-runner` "
 "という名前のPythonパッケージを公開しており、`cwltool` のエイリアスを`cwl-"
-"runner` という名前でインストールします"
+"runner` という名前でインストールします。"
 
 #: ../../src/introduction/prerequisites.md:91 cc1a9b95508e44a1bf08ae75d990c301
 msgid "Installing `cwl-runner` alias for cwltool with `pip`."
@@ -1863,7 +1860,7 @@ msgid ""
 "[`InitialWorkDirRequirement`](https://w3id.org/cwl/CommandLineTool.html#InitialWorkDirRequirement)."
 msgstr ""
 "[`InitialWorkDirRequirement`](https://w3id.org/cwl/CommandLineTool."
-"html#InitialWorkDirRequirement)から"
+"html#InitialWorkDirRequirement)を使ってそのうようなファイルを生成します。"
 
 #: ../../src/topics/creating-files-at-runtime.md:9
 #: 008f768d56b8465bb4e8f4fde15853a7
@@ -3747,7 +3744,6 @@ msgstr ""
 "にキャッシュされました。作成された中間ファイルを確認することができます："
 
 #: ../../src/topics/troubleshooting.md:44 04e80f7ce14d4d73bc5d290dcf01bcdb
-#, fuzzy
 msgid ""
 "Each workflow step has received a unique ID (the long value that looks "
 "like a hash). The `${HASH}.status` files display the status of each step "
@@ -3953,7 +3949,6 @@ msgid "`echo-uppercase-single-file.cwl`"
 msgstr "`echo-uppercase-single-file.cwl`"
 
 #: ../../src/topics/workflows.md:150 5a9a1dd6ed1f4ca6803f1d235c4fd392
-#, fuzzy
 msgid ""
 "Having separate files helps with modularity and code organization. But it"
 " can be helpful writing everything in a single file for development. "
@@ -3961,20 +3956,19 @@ msgid ""
 "`cwltool --pack`) discussed further in other sections of this user guide."
 msgstr ""
 "ファイルを分けることは、モジュール化やコードの整理に役立ちます。しかし、開発"
-"のためにすべてを1つのファイルに書いておくと便利なことがあります。複数のファイ"
-"ルを1つのファイルにまとめる方法は他にもあります（例：`cwltool --pack` "
+"のためにすべてを1つのファイルに書いておくと便利なことがあります。他にも複数の"
+"ファイルを1つのファイルにまとめる方法があり（例：`cwltool --pack` "
 "）このユーザーガイドの他のセクションで詳しく説明します。"
 
 #: ../../src/topics/workflows.md:160 277ed30d4b3a4156a4523e8d10e6ce60
-#, fuzzy
 msgid ""
 "For a sub-workflows you need to enable the requirement "
 "`SubworkflowFeatureRequirement`. It is covered in another section of this"
 " user guide in more detail."
 msgstr ""
-"サブワークフローでは、Requirement、`SubworkflowFeatureRequirement` を有効にす"
-"る必要があります。このユーザーガイドの別のセクションで、より詳しく説明してい"
-"ます。"
+"サブワークフロー使うにはRequirementの１つである、`SubworkflowFeatureRequireme"
+"nt` を有効にする必要があります。このユーザーガイドの別のセクションで、より詳"
+"しく説明しています。"
 
 #: ../../src/topics/workflows.md:165 82818ab17aa4403eb982fd81a14a5865
 msgid "Writing Workflows"
@@ -3987,7 +3981,6 @@ msgid ""
 msgstr "このワークフローでは、tarファイルからJavaのソースファイルを取り出し、コンパイルします。"
 
 #: ../../src/topics/workflows.md:170 c61097c695424f7195e8205a23b6ecff
-#, fuzzy
 msgid "`1st-workflow.cwl`"
 msgstr "`1st-workflow.cwl`"
 
@@ -4122,11 +4115,11 @@ msgstr ""
 "のパラメータに使用されることになり ます。"
 
 #: ../../src/topics/workflows.md:267 04a4db2f3da94ce29e7999039ee13fde
-#, fuzzy
 msgid ""
 "The `out` section of the workflow step lists the output parameters that "
 "are expected from the tool."
-msgstr "ワークフローステップの`out` セクションには、ツールから期待される出力パラメータが記載されています。"
+msgstr "ワークフローステップの`out` "
+"セクションには、ツールから期待される出力パラメータが記載されています。"
 
 #: ../../src/topics/workflows.md:278 2651ee113a3d4b79b138854ebe729f48
 #, fuzzy
@@ -4205,19 +4198,18 @@ msgstr ""
 "workflow.cwl\" alt=\"Visualization of 1st-workflow.cwl\" /></a>"
 
 #: ../../src/topics/workflows.md:322 7ce847ab54224452b6425de2a55ec893
-#, fuzzy
 msgid ""
 "A CWL `Workflow` can be used as a `step` just like a `CommandLineTool`, "
 "its CWL file is included with `run`. The workflow inputs (`tarball` and "
 "`name_of_file_to_extract`) and outputs (`compiled_class`) then can be "
 "mapped to become the step's input/outputs."
 msgstr ""
-"CWL`Workflow` は、`CommandLineTool` を`step` として使用することができ、その CWL ファイルは`run` "
-"に記述されます。ワークフローの入力（`tarball` および`name_of_file_to_extract` "
-"）と出力（`compiled_class` ）は、ステップの入力/出力になるようにマッピングすることができます。"
+"CWL`Workflow` は、`CommandLineTool` を`step` として使用することができ、その "
+"CWL ファイルは`run` に記述されます。ワークフローの入力（`tarball` "
+"および`name_of_file_to_extract` ）と出力（`compiled_class` "
+"）は、ステップの入力/出力になるようにマッピングすることができます。"
 
 #: ../../src/topics/workflows.md:336 d621821d2c1b403cb7415b381dd883f6
-#, fuzzy
 msgid ""
 "Our `1st-workflow.cwl` was parameterized with workflow inputs, so when "
 "running it we had to provide a job file to denote the tar file and "
@@ -4231,7 +4223,6 @@ msgstr ""
 "テップで再利用できることを意味するため、一般的にベストプラクティスです。"
 
 #: ../../src/topics/workflows.md:341 358c612f175241f7bf148a04d75e00c9
-#, fuzzy
 msgid ""
 "Here we use `default:` to hard-code `\"Hello.java\"` as the "
 "`name_of_file_to_extract` input, however our workflow also requires a tar"
