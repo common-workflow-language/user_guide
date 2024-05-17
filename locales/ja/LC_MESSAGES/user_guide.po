@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: Common Workflow Language User Guide\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-12-16 11:48+0100\n"
-"PO-Revision-Date: 2024-05-08 01:07+0000\n"
+"PO-Revision-Date: 2024-05-17 17:16+0000\n"
 "Last-Translator: Manabu ISHII <manabu.ishii.rb@gmail.com>\n"
 "Language-Team: Japanese <https://hosted.weblate.org/projects/commonwl/"
 "user-guide/ja/>\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 5.5.4-rc\n"
+"X-Generator: Weblate 5.6-dev\n"
 "Generated-By: Babel 2.12.1\n"
 
 #: ../../LICENSE.md:2 a48279b2231348eea3f7a3b74a6362ac
@@ -45,15 +45,19 @@ msgstr ""
 
 #: ../../LICENSE.md:12 754f3f54aa4142ef9dac27f508dd0bca
 msgid "You are free:"
-msgstr ""
+msgstr "あなたは以下の条件に従う限り、自由に："
 
 #: ../../LICENSE.md:14 d2b1d5e965ef4e71b64c359549919975
 msgid "to **Share**---copy and redistribute the material in any medium or format"
-msgstr ""
+msgstr "**共有** --- "
+"どのようなメディアやフォーマットでも資料を複製したり、再配布できます。 "
+"営利目的も含め、どのような目的でも。"
 
 #: ../../LICENSE.md:15 fe9551ffef8149bf8da50e70318e8de8
 msgid "to **Adapt**---remix, transform, and build upon the material"
-msgstr ""
+msgstr "**翻案** --- "
+"マテリアルをリミックスしたり、改変したり、別の作品のベースにしたりできます。 "
+"営利目的も含め、どのような目的でも"
 
 #: ../../LICENSE.md:17 247db3bcc7024c44a044886a29ef1414
 msgid "for any purpose, even commercially."
@@ -63,7 +67,8 @@ msgstr "営利目的であっても、いかなる目的であっても。"
 msgid ""
 "The licensor cannot revoke these freedoms as long as you follow the "
 "license terms:"
-msgstr ""
+msgstr "あなたがライセンスの条件に従っている限り、許諾者がこれらの自由を取り消すこと"
+"はできません。"
 
 #: ../../LICENSE.md:24 551cb5ab59dd4737b1042a4ef79ffab7
 msgid ""
@@ -75,6 +80,13 @@ msgid ""
 "reasonable manner, but not in any way that suggests the licensor endorses"
 " you or your use."
 msgstr ""
+"**表示** --- あなたは 適切なクレジット を表示し(あなたの作品が「Copyright © "
+"the Common Workflow Language project」の作品から派生していることを明記し、"
+"可能であれば https://www.commonwl.org/ "
+"へのリンクを提供してください)、[ライセンスへのリンク][cc-by-human]を提供し、 "
+"変更があったらその旨を示さ なければなりません。これらは合理的であればどのよう"
+"な方法で行っても構いませんが、許諾者があなたやあなたの利用行為を支持している"
+"と示唆するような方法は除きます。"
 
 #: ../../LICENSE.md:32 f6c3b2ccad494ed6811a35537fc1fb0d
 msgid ""
@@ -82,6 +94,9 @@ msgid ""
 "technological measures that legally restrict others from doing anything "
 "the license permits.  With the understanding that:"
 msgstr ""
+"**追加的な制約は課せません** --- あなたは、"
+"このライセンスが他の者に許諾することを法的に制限するようないかなる法的規定も "
+"技術的手段 も適用してはなりません。"
 
 #: ../../LICENSE.md:36 91c95248cd7f435c909ee263a9a8bf3f
 msgid ""
@@ -89,6 +104,9 @@ msgid ""
 "in the public domain or where your use is permitted by an applicable "
 "exception or limitation."
 msgstr ""
+"あなたは、資料の中でパブリック・ドメインに属している部分に関して、"
+"あるいはあなたの利用が著作権法上の 権利制限規定 "
+"にもとづく場合には、ライセンスの規定に従う必要はありません。"
 
 #: ../../LICENSE.md:39 27f79b0b648b4de4b0eb3172b2dc4ae8
 msgid ""
@@ -97,6 +115,9 @@ msgid ""
 "such as publicity, privacy, or moral rights may limit how you use the "
 "material."
 msgstr ""
+"保証は提供されていません。ライセンスはあなたの利用に必要な全ての許諾を与えな"
+"いかも知れません。例えば、 パブリシティ権、肖像権、人格権 などの他の諸権利は"
+"あなたがどのように資料を利用するかを制限することがあります。"
 
 #: ../../LICENSE.md:44 1e367d07720d4f9fb7ebc3149052e823
 msgid "Software"
@@ -120,6 +141,11 @@ msgid ""
 "See the License for the specific language governing permissions and "
 "limitations under the License."
 msgstr ""
+"Unless required by applicable law or agreed to in writing, software "
+"distributed under the License is distributed on an \"AS IS\" BASIS, WITHOUT "
+"WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the "
+"License for the specific language governing permissions and limitations "
+"under the License."
 
 #: ../../src/_includes/what-is-cwl.md:1 ../../src/_includes/what-is-cwl.md:2
 #: 08aa9181d5304e0fa96b28db15718559 d37fc100eb6948bba8b5e757574b2aaf
@@ -131,9 +157,9 @@ msgid ""
 " a variety of platforms that support the CWL standard."
 msgstr ""
 "CWLは、コマンドラインツールを定義し、それらのツールを繋げてワークフローを作成"
-"するための方法です。CWLは仕様であり、特定のソフトウェアではないため、CWLを使"
-"用して定義されたツールやワークフローは、CWL標準をサポートするさまざまなプラッ"
-"トフォームで利用可能です。"
+"します。CWLは仕様であり、特定のソフトウェアではないため、CWLを使用して定義さ"
+"れたツールやワークフローは、CWL標準をサポートするさまざまなプラットフォームで"
+"利用可能です。"
 
 #: ../../src/episodes.md:5 ../../src/setup.md:5
 #: 1361ff6bf4924efc9ce9a85785a6b381 eb254514301c491e81f72ae19c407261
@@ -206,7 +232,7 @@ msgid ""
 msgstr ""
 "最初の方法は、スクリプトの入ったフォルダを "
 "環境変数`PATH`に追加する方法です。これにより、`sh` や`bash` "
-"コマンドを使用せずに、シェルスクリプトを直接実行することができます。"
+"コマンドを使用せずに、シェルスクリプトを直接実行できます。"
 
 #: ../../src/faq.md:93 34ebca4487a54ceab5d087105820e945
 msgid "Start with adding a _shebang_ at the top of your file:"
@@ -239,7 +265,6 @@ msgstr "後で作ったものを共有したいときは、スクリプトをDoc
 "きます。"
 
 #: ../../src/faq.md:119 796ce8155e32486d9651f8f13bfa3148
-#, fuzzy
 msgid ""
 "The second method involves including an input of `type: File` in the "
 "script itself:"
@@ -293,19 +318,20 @@ msgid "merge_nested"
 msgstr "merge_nested"
 
 #: ../../src/faq.md:196 3a92c6cc5c2b40ffa0d692d03bad5c87
-#, fuzzy
 msgid ""
 "The input must be an array consisting of exactly one entry for each input"
 " link. If \"merge_nested\" is specified with a single link, the value "
 "from the link must be wrapped in a single-item list."
-msgstr "入力は、各入力リンクに対して正確に1つのエントリで構成される配列でなければなりません。\"merge_nested\"が1つのリンクで指定された場合、リンクからの値は1つのアイテムリストでラップされなければなりません。"
+msgstr ""
+"入力は、各入力リンクに対して正確に1つのエントリで構成される配列でなければなり"
+"ません。\"merge_nested\"が1つのリンクで指定された場合"
+"、リンクからの値は1つのアイテムリストでラップされなければなりません。"
 
 #: ../../src/faq.md:199 3af16c07e3f148ddb8849c94a3864158
 msgid "Which means \"create a list with exactly these sources as elements\"."
 msgstr "つまり、\"まさにこれらのソースを要素とするリストを作成する\" ということです。"
 
 #: ../../src/faq.md:201 0ea3de393d2f42aeb82658c85a19ec45
-#, fuzzy
 msgid ""
 "Or in other words: if the destination is of type `File[]` (an array of "
 "`File`s) and the source is a single `File` then add "
@@ -314,8 +340,9 @@ msgid ""
 " destination step."
 msgstr ""
 "`File[]` (`File`の配列) で、ソースが単一の`File` "
-"の場合、`MultipleInputFeatureRequirement` をワークフローレベルの`requirements` "
-"に追加し、`linkMerge: merge_nested` を目的ステップのエントリの該当`in`に追加します。"
+"の場合、`MultipleInputFeatureRequirement` "
+"をワークフローレベルの`requirements` に追加し、`linkMerge: merge_nested` "
+"を目的ステップのエントリの該当`in`に追加します。"
 
 #: ../../src/faq.md:229 2f1bbb611c9c4f80b7ae0566432f2f35
 msgid "How do make an input optional? 💯"
@@ -339,13 +366,16 @@ msgstr "どうやってあらかじめ定義された値のリストから入力
 "でenumを使うにはどうしたらよいですか)?"
 
 #: ../../src/faq.md:250 b1934a82553b4da3b7f981e576245dd8
-#, fuzzy
 msgid ""
 "For command line flags that require a specific input as the argument an "
 "enum type can be declared in CWL. **Specifying null here is known as long"
 " form style. It does the same thing as the question mark on the other "
 "inputs.**"
-msgstr "引数として特定の入力を必要とするコマンドラインフラグについては、CWLで列挙型を宣言することで実現できます。**ここでnullを指定することは、ロングフォーム・スタイルとして知られています。他の入力のクエスチョンマークと同じ働きをします。**"
+msgstr ""
+"引数として特定の入力を必要とするコマンドラインフラグについては、CWLで列挙型("
+"enum type)を宣言することで実現できます。**ここでnullを指定することは、ロング"
+"フォーム・スタイルとして知られています。他の入力のクエスチョンマークと同じ働"
+"きをします。**"
 
 #: ../../src/faq.md:267 17fc34fad2094f5ea60e963dabd632b8
 msgid "<a name=\"recordinputs\"></a>"
@@ -359,21 +389,20 @@ msgstr "依存的または排他的な入力パラメータはどのように記
 "レコード入力をどのように使用すればよいですか）？"
 
 #: ../../src/faq.md:270 949ce95c082f4a05891a55fee25d4873
-#, fuzzy
 msgid ""
 "For commandline flags that are either **mutually exclusive** or "
 "**dependent** a special record type can be defined. You can also specify "
 "null here to create optional inputs."
 msgstr ""
-"**相互排他的** または**依存的** "
-"のいずれかのコマンドラインフラグについては、特別なレコードタイプを定義することができます。また、ここにnullを指定することで、オプションの入力を作成することができます。"
+"**相互排他的** または**依存的** のいずれかのコマンドラインフラグについては、"
+"特別なレコードタイプを定義できます。また、ここにnullを指定することで、オプシ"
+"ョンの入力を作成できます。"
 
 #: ../../src/faq.md:322 6fd3c469d11d4d52b9fbb7a3d443a8db
 msgid "How do I set mutually exclusive parameters?"
 msgstr "相互に排他的なパラメータを設定するにはどうしたらよいでしょうか?"
 
 #: ../../src/faq.md:324 a0687ce5c1f940538abc977cad83138f
-#, fuzzy
 msgid ""
 "To properly set fields in a record input type, you need to pass a "
 "dictionary to the input to properly set the parameters. This is done by "
@@ -383,7 +412,7 @@ msgid ""
 msgstr ""
 "レコード入力タイプのフィールドを適切に設定するには、入力に辞書を渡してパラメ"
 "ータを適切に設定する必要があります。これは、インラインJavaScriptを使用し、設"
-"定したいフィールドのキーを持つ辞書を返すことで実現します。ソースフィールドに"
+"定したいフィールドのキーを持つ辞書を返すことで実現します。sourceフィールドに"
 "は、値として使用するワークフローからの入力を示すものが設定されます。"
 
 #: ../../src/faq.md:342 12869ce2cdab4c858f3232c6158514f1
@@ -429,8 +458,8 @@ msgstr "これらの危険な文字を避けられない場合は、`--relax-pat
 msgid ""
 "What should I do when I get CWL Parameter Reference error due to hyphen "
 "in an input identifier?"
-msgstr "入力パラメータ名の中のハイフンがあるため、CWLパラメータリファレンスエラーが起"
-"こりました。どのようしたらよいでしょうか？"
+msgstr "入力パラメータ名の中にハイフンがあるため、CWL Parameter Reference "
+"エラーが起こりました。どのようしたらよいでしょうか？"
 
 #: ../../src/faq.md:375 e39b65947b294b20a444f18d780246f4
 msgid "If `cwltool --validate` returns valid"
@@ -457,7 +486,8 @@ msgstr "このエラーを修正するには、`-` (ハイフン) を`_` (アン
 msgid ""
 "If it is not possible to change the input identifier, then you can use an"
 " alternative CWL Parameter Reference syntax:"
-msgstr "入力識別子を変更することができない場合は、別のCWLパラメータリファレンス構文を使用することができます："
+msgstr "入力識別子を変更することができない場合は、別のCWLパラメータリファレンス構文を"
+"使用できます："
 
 #: ../../src/faq.md:442 fc407a9e8d8c4b699d9cd14b369343b5
 msgid "How do I use CWL and cwltool with Singularity?"
@@ -481,7 +511,6 @@ msgid "How do I debug the JavaScript in my CWL tool?"
 msgstr "CWLツールのJavaScriptをデバッグするには?"
 
 #: ../../src/faq.md:452 5556d3c323664edea55cfb777f4efb3b
-#, fuzzy
 msgid ""
 "You can use the <code>--js-console</code> option of <code>cwltool</code>,"
 " or you can try creating a JavaScript or TypeScript project for your "
@@ -492,12 +521,13 @@ msgid ""
 "language/blob/master/v1.0/v1.0/template-tool.cwl#L6-L8</a></dd>"
 msgstr ""
 "<code>cwltool</code> の <code>--js-console</code> "
-"オプションを使用するか、または、あなたのコードのためのJavaScript または TypeScript "
-"プロジェクトを作成し、<code>expressionLib</code> を使用して読み込んでみてください（例：<a "
-"href=\"https://github.com/common-workflow-language/common-workflow-"
-"language/blob/master/v1.0/v1.0/template-tool.cwl#L6-L8\"> "
-"https://github.com/common-workflow-language/common-workflow-"
-"language/blob/master/v1.0/v1.0/template-tool.cwl#L6-L8</a>"
+"オプションを使用するか、または、あなたのコードのためのJavaScript または "
+"TypeScript プロジェクトを作成し、<code>expressionLib</code> "
+"を使用して読み込んでみてください（例：<a href=\"https://github.com/"
+"common-workflow-language/common-workflow-language/blob/master/v1.0/v1.0/"
+"template-tool.cwl#L6-L8\"> https://github.com/common-workflow-language/"
+"common-workflow-language/blob/master/v1.0/v1.0/template-tool."
+"cwl#L6-L8</a></dd>"
 
 #: ../../src/index.md:1 1c9fb72b83c9467a9672943fb47ffe32
 msgid "Common Workflow Language User Guide"
@@ -524,8 +554,10 @@ msgid ""
 "Request by clicking the \"Edit this page\" button at the right sidebar of"
 " each page."
 msgstr ""
-"このガイドに足りないものがある場合、またはその他のフィードバックを提供したい場合は、[このユーザーガイドのプロジェクトリポジトリ][repo]にIssueを作成してください。また、各ページの右サイドバーにある「このページを編集する」ボタンをクリックすると、Pull"
-" Requestで直接変更を提案することができます。"
+"このガイドに足りないものがある場合、またはその他のフィードバックを提供したい"
+"場合は、[このユーザーガイドのプロジェクトリポジトリ][repo]にIssueを作成してく"
+"ださい。また、各ページの右サイドバーにある「このページを編集する」ボタンをク"
+"リックすると、Pull Requestで直接変更を提案できます。"
 
 #: ../../src/index.md:16 35c50bb5c3a345b4a4ae66b2df065376
 msgid "Navigating the User Guide"
@@ -573,7 +605,7 @@ msgstr ""
 "YAML に精通し、コマンドラインの指示に従うことに慣れていることが期待されます。"
 "このユーザーガイドの他のセクションは、同じ概念をカバーしていますが、より詳細"
 "に説明されています。すでにCWLに精通している場合、またはより高度なコンテンツを"
-"探している場合は、このセクションをスキップすることができます。"
+"探している場合は、このセクションをスキップできます。"
 
 #: ../../src/introduction/basic-concepts.md:10 7a56d394fb244431aefce7ebbb834ecf
 msgid "The CWL Specification"
@@ -692,8 +724,8 @@ msgid ""
 "A command-line tool is a wrapper for a command-line utility like `echo`, "
 "`ls`, and `tar`. A command-line tool can be called from a workflow."
 msgstr ""
-"コマンドラインツールは、`echo` 、`ls` 、`tar` "
-"のようなコマンドラインユーティリティのラッパーです。コマンドラインツールは、ワークフローから呼び出せます。"
+"CommandLineToolは、`echo` 、`ls` 、`tar` "
+"のようなコマンドのラッパーです。CommandLineToolは、Workflowから呼び出せます。"
 
 #: ../../src/introduction/basic-concepts.md:122
 #: c88ad26efa794cbeb6f0690aa0cad5ea
@@ -716,8 +748,8 @@ msgid ""
 "section](../topics/operations.md) of this user guide."
 msgstr ""
 "Operationは、入力を受け、出力を出す抽象的なプロセスでもあり、ワークフローで使"
-"用することができます。しかし、あまり一般的に使われていない特別な処理です。こ"
-"のユーザーガイドの[Operation編](../topics/operations.md)で説明します。"
+"用できます。しかし、あまり一般的に使われていない特別な処理です。このユーザー"
+"ガイドの[Operation編](../topics/operations.md)で説明します。"
 
 #: ../../src/introduction/basic-concepts.md:131
 #: 44aac23f302c4178accf7e431cfbb96c
@@ -729,9 +761,9 @@ msgid ""
 "workflow."
 msgstr ""
 "Workflowは、ステップを含むプロセスです。ステップには、他のWorkflow（ネストさ"
-"れたWorkflow）、CommandLineTool、ExpressionToolを使用することができます。Work"
-"flowの入力は、そのステップのいずれかに渡すことができ、ステップによって生成さ"
-"れた出力は、Workflowの最終出力に使用することができます。"
+"れたWorkflow）、CommandLineTool、ExpressionToolを使用できます。Workflowの入力"
+"は、そのステップのいずれかに渡すことができ、ステップによって生成された出力は"
+"、Workflowの最終出力に使用できます。"
 
 #: ../../src/introduction/basic-concepts.md:137
 #: 5afdb7aaf0bf4c1abf4c22cdbdd58be9
@@ -741,8 +773,9 @@ msgid ""
 "*requirements*. There are many requirements defined in the CWL "
 "specification, for instance:"
 msgstr ""
-"CWL 仕様では、*requirements* "
-"を通じて、実装が追加機能を提供し、ワークフローの前提条件を指定することができます。CWL仕様には、例えば、以下のような多くの要件が定義されています："
+"CWL 仕様では、*requirements* を通じて、実装が追加機能を提供し、ワークフローの"
+"前提条件を指定できます。CWL仕様には、例えば、以下のような多くの要件が定義され"
+"ています："
 
 #: ../../src/introduction/basic-concepts.md:141
 #: 07c5789c59224ed78a3ecd03cfe872e9
@@ -750,7 +783,7 @@ msgid ""
 "[`InlineJavascriptWorkflow`](https://w3id.org/cwl/Workflow.html#InlineJavascriptRequirement)"
 " - enables JavaScript in expressions."
 msgstr ""
-"[`InlineJavascriptWorkflow`](https://w3id.org/cwl/Workflow."
+"[`InlineJavascriptRequirement`](https://w3id.org/cwl/Workflow."
 "html#InlineJavascriptRequirement) - でJavaScriptを有効にします。"
 
 #: ../../src/introduction/basic-concepts.md:142
@@ -781,10 +814,10 @@ msgid ""
 "the {{ cwl_version }} specification and may not be supported by other CWL"
 " runners."
 msgstr ""
-"いくつかのCWLランナーは、仕様にないrequirementsを提供することがあります。例え"
+"いくつかのCWL runnerは、仕様にないrequirementsを提供することがあります。例え"
 "ば、GPUに関するrequirementsは`cwltool` で`cwltool:CUDARequirement` "
-"を通してサポートされていますが、{{ cwl_version }}仕様の一部ではないので、他の"
-"CWLランナーではサポートされていないかもしれません。"
+"を通してサポートされていますが、{{ cwl_version }}仕様の一部ではないので、"
+"他のCWL runnerではサポートされていないかもしれません。"
 
 #: ../../src/introduction/basic-concepts.md:151
 #: b6a5cd431c324078a9a4e1513a14ee28
@@ -816,6 +849,14 @@ msgid ""
 "Workflows](https://workflows.community/groups/fair/), Workflows Community"
 " Initiative."
 msgstr ""
+"FAIR原則は、デジタル資産、特にデータを共有し公開するための基礎を作りました。F"
+"AIR原則は、機械可読性を重視し、すべてのデジタル資産は、検索可能（Findable）、"
+"アクセス可能（Accessible）、相互運用可能（Interoperable）、再利用可能（Reusab"
+"le）であるべきとしています。ワークフローは、科学的プロセスが実施され、データ"
+"が作成される方法をコード化します。従って、ワークフローがFAIRデータの作成をサ"
+"ポートし、かつワークフロー自身がFAIRの原則を遵守することは重要です。- [FAIR "
+"Computational Workflows](https://workflows.community/groups/fair/), "
+"Workflows Community Initiative."
 
 #: ../../src/introduction/basic-concepts.md:167
 #: 4ea1d3bf04dc42f0bc6735a45b9e0dc0
@@ -920,7 +961,6 @@ msgid "Prerequisites"
 msgstr "前提条件"
 
 #: ../../src/introduction/prerequisites.md:6 ab9e21b3e99641d096ba70012b4eb035
-#, fuzzy
 msgid ""
 "The software and configurations listed in this section are prerequisites "
 "for following this user guide. The CWL standards are implemented by many "
@@ -932,10 +972,10 @@ msgstr ""
 "このセクションに記載されているソフトウェアと構成は、このユーザーガイドに従う"
 "ための前提条件となるものです。CWL標準は、多くの異なるワークフローランナー(訳"
 "注:ワークフローを実行するためのソフトウェア)やプラットフォームによって実装さ"
-"れています。この要件のリストは、CWL参照ランナー、`cwltool` に焦点を当てていま"
-"す。他のCWL互換ランナーやワークフローシステムを使用することもできますが、結果"
-"やインターフェイスは異なるかもしれません（ただし、正確なワークフロー出力は同"
-"一でなければなりません）。"
+"れています。この要件のリストは、CWL reference runner である`cwltool` "
+"に焦点を当てています。他のCWL-compatible runnerやワークフローシステムを使用す"
+"ることもできますが、結果やインターフェイスは異なるかもしれません（ただし、正"
+"確なワークフロー出力は同一でなければなりません）。"
 
 #: ../../src/introduction/prerequisites.md:12 8ed426ebcb744839915e7c414d69b1e9
 msgid "CWL Implementations"
@@ -1052,7 +1092,7 @@ msgstr "`cwltool` を使って `true.cwl` を検証します。"
 
 #: ../../src/introduction/prerequisites.md:71 73f074f47d1449dcb40ff960a84851fd
 msgid "You can run the CWL tool description by omitting the `--validate` option:"
-msgstr "`--validate` オプションを省略することで、CWLツール定義を実行することができます："
+msgstr "`--validate` オプションを省略することで、CWLツール定義を実行できます："
 
 #: ../../src/introduction/prerequisites.md:73 2dd5a67870ca41b48e17c468ba15888b
 msgid "Running `true.cwl` with `cwltool`."
@@ -1072,10 +1112,14 @@ msgid ""
 " administrator or user to point to the preferred CWL implementation. This"
 " is convenient for environments with multiple CWL runners."
 msgstr ""
-"`cwl-runner` は、CWL準拠のランナーに対する、実装にとらわれないエイリアスです。これは、`cwl-runner` "
-"エイリアスコマンドを独立して呼び出すことができ、特定のCWLランナープログラム名に依存しないことを意味します。ユーザーは、`cwltool` "
-"のようなCWLランナーを直接呼び出す代わりに、`cwl-runner` を呼び出すことができます。`cwl-runner` "
-"は、システム管理者またはユーザーによってインストールされ、好みのCWL実装を指し示す。これは、複数のCWLランナーがある環境では便利です。"
+"`cwl-runner` "
+"は、CWL準拠のランナーに対する、実装にとらわれないエイリアスです。これは"
+"、`cwl-runner` エイリアスコマンドを独立して呼び出すことができ、特定のCWL "
+"runner のプログラム名に依存しないことを意味します。ユーザーは、`cwltool` "
+"のようなCWL runnerを直接呼び出す代わりに、`cwl-runner` "
+"を呼び出すことができます。`cwl-runner` は、システム管理者またはユーザーによっ"
+"てインストールされ、好みのCWL実装を指します。これは、複数のCWL "
+"runnerがある環境で便利です。"
 
 #: ../../src/introduction/prerequisites.md:88 6dd6aa836099469381fb564d63b84f3d
 msgid ""
@@ -1123,7 +1167,8 @@ msgstr "`true_shebang.cwl`"
 
 #: ../../src/introduction/prerequisites.md:122 4f3cb8d1f9ce4e3d852e81aa4e0f60be
 msgid "Now you can make the file `true_shebang.cwl` executable with `chmod u+x`."
-msgstr "`chmod u+x` を実行することで、 `true_shebang.cwl` を実行可能なファイルにすることができます。"
+msgstr "`chmod u+x` を実行することで、 `true_shebang.cwl` "
+"を実行可能なファイルにできます。"
 
 #: ../../src/introduction/prerequisites.md:124 27693d62faa045d9b03143d9bd2afcdf
 msgid "Making `true.cwl` executable."
@@ -1135,7 +1180,8 @@ msgid ""
 "execution, the program specified in the shebang (`cwl-runner`) will be "
 "used to execute the rest of the file."
 msgstr ""
-"そして最後に、コマンドラインで直接実行することができます。実行時には、shebangで指定されたプログラム(`cwl-"
+"そして最後に、コマンドラインで直接実行できます。実行時には、shebangで指定され"
+"たプログラム(`cwl-"
 "runner`)が、ファイルの残りの部分を実行するために使用されます。"
 
 #: ../../src/introduction/prerequisites.md:135 abba2e14c4e54252bb75983274663a7a
@@ -1215,8 +1261,8 @@ msgid ""
 msgstr ""
 "`cwltool` は、ツール、ワークフロー、およびワークフロー "
 "ステップで指定されたソフトウェアコンテナをDockerを使用して実行します。Docker "
-"ドキュメントの指示に従って、お使いのオペレーティングシステム用にインストール"
-"してください：<https://docs.docker.com/>."
+"ドキュメントの指示に従って、お使いのオペレーティングシステム合わせてインスト"
+"ールしてください：<https://docs.docker.com/>."
 
 #: ../../src/introduction/prerequisites.md:172 2872503638624b7e904ae407375ac165
 msgid ""
@@ -1342,7 +1388,7 @@ msgid ""
 msgstr ""
 "基本的に `cwltool` の使い方は、`cwltool [OPTIONS] [CWL_DOCUMENT] "
 "[INPUTS_OBJECT]`です。`hello_world.cwl` "
-"Workflowは、オプションを指定せずに実行することができます："
+"Workflowは、オプションを指定せずに実行できます："
 
 #: ../../src/introduction/quick-start.md:57 5b393c69816549b084516dda4d4274f5
 msgid "Running `hello_world.cwl` with `cwltool`."
@@ -1366,8 +1412,9 @@ msgid ""
 "YAML. For example:"
 msgstr ""
 "ワークフロー入力パラメータに値を渡すもう一つの方法は、*Inputs Object* "
-"を介する方法です。これは、入力フィールドとその対応する値を含むファイルです。Inputs Objects ファイルは、JSON または YAML "
-"で記述することができます。例えば、以下のようになります："
+"を介する方法です。これは、入力フィールドとその対応する値を含むファイルです。"
+"Inputs Objects ファイルは、JSON または YAML "
+"で記述できます。例えば、以下のようになります："
 
 #: ../../src/introduction/quick-start.md:74 d05e8e016b1d40c28c4b6091103fe920
 msgid "`hello_world-job.json`"
@@ -1381,7 +1428,7 @@ msgstr "このInputs Objectファイルを使用して、「Hello World」ワー
 
 #: ../../src/introduction/quick-start.md:82 4065124edf3a4678a37c82e3070595cb
 msgid "Passing an Inputs Object file to `cwltool`."
-msgstr "`cwltool` に Inputs Object ファイルをします。"
+msgstr "`cwltool` に Inputs Object ファイルを渡します。"
 
 #: ../../src/introduction/quick-start.md:88 52b1602b5c8d48db88d0b16f788e7703
 msgid ""
@@ -1556,7 +1603,6 @@ msgstr ""
 "Direcotry` を適宜使用します。"
 
 #: ../../src/topics/best-practices.md:11 ae127b776eed4894af8cb680377703e0
-#, fuzzy
 msgid ""
 "A CWL document (in conjunction with any external components like "
 "`Dockerfile`s) is software code. Workflow developers should be aware that"
@@ -1602,7 +1648,9 @@ msgstr ""
 msgid ""
 "Useful reading: \"[A Quick Guide to Software Licensing for the Scientist-"
 "Programmer][sci-license]\""
-msgstr "参考文献：\"[科学者・プログラマーのためのソフトウェアライセンス クイックガイド][sci-license]\""
+msgstr ""
+"参考文献：\"[A Quick Guide to Software Licensing for the Scientist-Programmer"
+"][sci-license]\""
 
 #: ../../src/topics/best-practices.md:28 5b976a5aec7d44bda55b0a019e955416
 msgid "_Example of metadata field for license with SPDX identifier:_"
@@ -1614,7 +1662,7 @@ msgid ""
 " Metadata and Authorship section of this User Guide](../topics/metadata-"
 "and-authorship.md)."
 msgstr ""
-"CW定義にメタデータを与える例については、 "
+"CWL定義にメタデータを与える例については、 "
 "[このユーザーガイドのメタデータと著者名のセクション](../topics/metadata-and-"
 "authorship.md)を参照してください。"
 
@@ -1667,7 +1715,6 @@ msgstr ""
 "ツールのバージョンのリストを書きます。"
 
 #: ../../src/topics/best-practices.md:58 88806cb0462f4359801c1fa0ff0ebcc0
-#, fuzzy
 msgid ""
 "`format` should be specified for all input and output `File`s. "
 "Bioinformatics tools should use format identifiers from [EDAM][edam-"
@@ -1682,10 +1729,10 @@ msgstr ""
 "フォマティクスツールは、[EDAM][edam-"
 "example]のフォーマット識別子を使用するのが良いです。`iana:text/plain`,`iana:"
 "text/tab-separated-values`、`$namespaces：{ iana: \"https://www.iana.org/"
-"assignments/media-types/\" }もご参照ください`.[IANA メディアタイプ一覧][iana-"
-"types]（MIME タイプとしても知られています）。バイオインフォマティクス以外のツ"
-"ールについては、同様に適切なオントロジー/統制語彙を使用または構築してください"
-"。このページを編集して私たちに知らせてください。"
+"assignments/media-types/\" }` も参照してください`.[IANA メディアタイプ一覧"
+"][iana-types]（MIME タイプとしても知られています）。バイオインフォマティクス"
+"以外のツールについては、同様に適切なオントロジー/統制語彙を使用または構築して"
+"ください。このページを編集して私たちに知らせてください。"
 
 #: ../../src/topics/best-practices.md:66 b178c7296ed5491782a4180c76883c14
 msgid ""
@@ -1736,16 +1783,16 @@ msgid ""
 msgstr "有効な値のリストが決まっている要素には、`type: string` の代わりに、`type: enum` を使用してください。"
 
 #: ../../src/topics/best-practices.md:85 c100d5192a52497fb6a890b81a388fcf
-#, fuzzy
 msgid ""
 "Evaluate all use of JavaScript for possible elimination or replacement. "
 "One common example: manipulating `File` names and paths? Consider whether"
 " one of the [built in `File` properties][file-prop] like `basename`, "
 "`nameroot`, `nameext`, etc., could be used instead."
 msgstr ""
-"JavaScriptのすべての使用について、削除または置換の可能性を評価します。よくある例：`File` "
-"の名前とパスを操作する方法は？`basename`,`nameroot`,`nameext`, などの [built in`File` "
-"properties][file-prop] のいずれかを代わりに使用できないか考えてみてください。"
+"JavaScriptのすべての使用について、削除または置換の可能性を評価します。よくあ"
+"る例：`File` の名前とパスを操作する方法は？`basename`,`nameroot`,`nameext`, "
+"などの [ビルトイン`File` プロパティ][file-prop] "
+"のいずれかを代わりに使用できないか考えてみてください。"
 
 #: ../../src/topics/best-practices.md:90 e22fbacdb2fb4202b1bd69cfc24af5cd
 msgid ""
@@ -1782,9 +1829,9 @@ msgid ""
 "attribute of the command-line tool CWL document."
 msgstr ""
 "CommandLineToolは、Processオブジェクトの一種であり、それ自体またはワークフロ"
-"ーのステップとして実行することができます。`ls`,`echo`,`tar` などの実行したい"
-"コマンドのラッパーです。実行したいコマンドは、CommandLineToolについてのCWL定"
-"義の`baseCommand` 属性で定義されています。"
+"ーのステップとして実行できます。`ls`,`echo`,`tar` などの実行したいコマンドの"
+"ラッパーです。実行したいコマンドは、CommandLineToolについてのCWL定義の`baseCo"
+"mmand` 属性で定義されています。"
 
 #: ../../src/topics/command-line-tool.md:8 7a180ba1f2d746a78b79be7e899cbad6
 msgid ""
@@ -1792,8 +1839,9 @@ msgid ""
 "following example contains a minimal example of a CWL command-line tool "
 "for the `echo` Linux command, using inputs and outputs."
 msgstr ""
-"CWLコマンドラインツールは、`inputs` と`outputs` も持っていなければなりません。次の例は、Linuxコマンド `echo` "
-"のためのCWLコマンドラインツールの最小限の例で、inputsとoutputsを使用します。"
+"CWL CommandLineToolは、`inputs` と`outputs` "
+"も持っていなければなりません。次の例は、Linuxコマンド `echo` のためのCWL "
+"CommandLineToolの最小限の例で、inputsとoutputsを使用します。"
 
 #: ../../src/topics/command-line-tool.md:19 128bd8cd6788431da54fa07a8dc87f99
 msgid "CWL command-line tool."
@@ -1845,13 +1893,15 @@ msgstr "実行時にファイルを作成する"
 
 #: ../../src/topics/creating-files-at-runtime.md:3
 #: cd0dff10471c4ad2b84e3a0e4d7767ea
-#, fuzzy
 msgid ""
 "Sometimes you need to create a file on the fly from input parameters, "
 "such as tools that expect to read their input configuration from a file "
 "rather than the command line parameters, or need a small wrapper shell "
 "script."
-msgstr "コマンドラインパラメーターではなく、ファイルから入力設定を読み込むことを期待するツールや、小さなラッパーシェルスクリプトが必要な場合など、入力パラメーターからその場でファイルを作成する必要があることがあります。"
+msgstr ""
+"コマンドラインパラメーターではなく、ファイルから入力設定を読み込むことを期待"
+"するツールや、小さなラッパーシェルスクリプトが必要な場合など、入力パラメータ"
+"ーからその場でファイルを作成する必要があることがあります。"
 
 #: ../../src/topics/creating-files-at-runtime.md:7
 #: bf4aea0a22334a1ca75cc20e937e6581
@@ -1880,7 +1930,6 @@ msgstr ""
 
 #: ../../src/topics/creating-files-at-runtime.md:20
 #: aca24b72687c4d4d84bf9de8b71413f7
-#, fuzzy
 msgid ""
 "The _CWL expressions_ are independent of any _shell variables_ used later"
 " during command line tool invocation. That means that any genuine need "
@@ -1888,9 +1937,11 @@ msgid ""
 "`\\${PREFIX}` above is expanded to `${PREFIX}` in the generated file to "
 "be evaluated by the shell script instead of the CWL engine."
 msgstr ""
-"_CWL expressions_ は、コマンドラインツール起動時に使用される_shell variables_ とは無関係です。つまり、`$` "
-"という文字が本当に必要な場合は、** ` \\` で** をエスケープする必要があります。例えば，上記の`\\${PREFIX}` "
-"は，CWLエンジンの代わりにシェルスクリプトで評価されるように，生成されたファイルでは`${PREFIX}` に展開されます．"
+"_CWL expressions_ は、コマンドラインツール起動時に使用される_shell "
+"variables_ とは無関係です。つまり、`$` という文字が本当に必要な場合は、`\\` "
+"で**エスケープ**する必要があります。例えば，上記の`\\${PREFIX}` は，CWLエンジ"
+"ンの代わりにシェルスクリプトで評価されるように，生成されたファイルでは`${PREF"
+"IX}` に展開されます。"
 
 #: ../../src/topics/creating-files-at-runtime.md:27
 #: 750b3232e8754448bc2b5913539495b8
@@ -1918,7 +1969,6 @@ msgstr ""
 
 #: ../../src/topics/creating-files-at-runtime.md:40
 #: 9aeea5a6a4244bc7a1626e0cb7351068
-#, fuzzy
 msgid ""
 "`InitialWorkDirRequirement` requires a `listing`. As the `listing` is a "
 "YAML array, we need a `-` on the first line of each element of the array,"
@@ -1929,7 +1979,7 @@ msgid ""
 " write the whole script on one line)."
 msgstr ""
 "`InitialWorkDirRequirement` は`listing` を必要とします。`listing` は YAML "
-"配列なので、配列の各要素の最初の行に`-` が必要です。この場合、要素は 1 "
+"配列なので、配列の各要素の行の最初に`-` が必要です。この場合、要素は 1 "
 "つだけです。`entryname:` は任意の値を指定できますが、`baseCommand` "
 "で指定したものと一致していなければなりません。最後の部分は`entry:` "
 "で、この後に`|-` が続きます。これは YAML の引用構文で、"
@@ -2008,7 +2058,6 @@ msgstr ""
 "で、テーブル変換で使用できるテーブルオプションのリストがカスタムオブジェクトとしてインポートされます："
 
 #: ../../src/topics/custom-types.md:46 c791096f537141e8bd7cc941d711d108
-#, fuzzy
 msgid ""
 "The reference to a custom type is a combination of the name of the file "
 "in which the object is defined (`biom-convert-table.yaml`) and the name "
@@ -2145,7 +2194,6 @@ msgstr ""
 "runnerによって評価されるJavascriptを使用できます。"
 
 #: ../../src/topics/expressions.md:9 3d48d1a8f7f74bc1886e41653cb53a22
-#, fuzzy
 msgid ""
 "JavaScript expressions should only be used when absolutely necessary. "
 "When manipulating file names, extensions, paths etc, consider whether one"
@@ -2153,10 +2201,11 @@ msgid ""
 "`nameroot`, `nameext`, etc, could be used instead. See the [list of best "
 "practices](best-practices.md)."
 msgstr ""
-"JavaScript "
-"の式は、絶対に必要な場合のみ使用するようにしてください。ファイル名、拡張子、パスなどを操作する場合は、`basename`,`nameroot`,`nameext`,"
-" などの [`File` のビルトインプロパティ][file-prop] "
-"のいずれかを代わりに使用できるかどうかを検討してください。[ベストプラクティスのリスト](best-practices.md)を参照してください。"
+"JavaScript の式は、絶対に必要な場合のみ使用するようにしてください。ファイル名"
+"、拡張子、パスなどを操作する場合は、`basename`,`nameroot`,`nameext`, などの "
+"[`File` のビルトインプロパティ][file-prop] のいずれかを代わりに使用できるかど"
+"うかを検討してください。[ベストプラクティスのリスト](best-practices."
+"md)を参照してください。"
 
 #: ../../src/topics/expressions.md:16 7d444aacd418466bbe588fa964b45179
 msgid "`expression.cwl`"
@@ -2167,7 +2216,7 @@ msgid ""
 "As this tool does not require any `inputs` we can run it with an (almost)"
 " empty job file:"
 msgstr "このツールは`inputs` "
-"を必要としないので、（ほとんど）空のジョブファイルで実行することができます："
+"を必要としないので、（ほとんど）空のジョブファイルで実行できます："
 
 #: ../../src/topics/expressions.md:25 d679fd1363b24c81979c68e7342159cf
 msgid "`empty.yml`"
@@ -2184,7 +2233,7 @@ msgstr ""
 
 #: ../../src/topics/expressions.md:35 624e4a270e374b1699b780df508b9184
 msgid "We can then run `expression.cwl`:"
-msgstr "次に、`expression.cwl` を実行することができます："
+msgstr "次に、`expression.cwl` を実行できます："
 
 #: ../../src/topics/expressions.md:37 c252eac9a35e46aab08bd07bc1cdb57d
 msgid "Running `expression.cwl`"
@@ -2211,13 +2260,12 @@ msgid "Where are JavaScript expressions allowed?"
 msgstr "JavaScriptはどこで使えますか？"
 
 #: ../../src/topics/expressions.md:64 8c3b402c40f64880a4bd42c47b910254
-#, fuzzy
 msgid ""
 "Just like [parameter references](parameter-references.md), you can use "
 "JavaScript Expressions only in certain fields.  These are:"
 msgstr ""
-"[パラメータ参照](parameter-references.md)と同様に、JavaScript 式は特定のフィールドにのみ使用できます。  "
-"以下はその例です："
+"[パラメータ参照](parameter-references.md)と同様に、JavaScript "
+"式は特定のフィールドにのみ使用できます。  以下はその例です："
 
 #: ../../src/topics/expressions.md:66 9bf5ca0e769147c6a9705bc40bd1febc
 msgid ""
@@ -2511,8 +2559,9 @@ msgid ""
 "files or to create JavaScript functions that can be called in other parts"
 " of the CWL document."
 msgstr ""
-"`expressionLib` "
-"属性に追加されたエントリーは、CWLランナーのJavaScriptエンジンで解析されます。これは、外部ファイルをインクルードしたり、CWL定義の他の部分で呼び出すことができるJavaScript関数を作成するために使用することができます。"
+"`expressionLib` 属性に追加されたエントリーは、CWL runnerのJavaScriptエンジン"
+"で解析されます。これは、外部ファイルをインクルードしたり、CWL定義の他の部分で"
+"呼び出すことができるJavaScript関数を作成するために使用できます。"
 
 #: ../../src/topics/expressions.md:128 5b2336cae1ef4cae8ed187d3f33cff25
 msgid ""
@@ -2534,8 +2583,9 @@ msgid ""
 "JavaScript function inline in `expressionLib`. That function can then be "
 "used in other parts of the CWL document:"
 msgstr ""
-"例えば、`InlineJavascriptRequirement` を使って、`expressionLib` に JavaScript "
-"関数をインラインで記述することができます。その関数は、CWL定義の他の部分で使用することができます："
+"例えば、`InlineJavascriptRequirement` を使って、`expressionLib` に "
+"JavaScript "
+"関数をインラインで記述できます。その関数は、CWL定義の他の部分で使用できます："
 
 #: ../../src/topics/expressions.md:139 6839a02fb82d45c29ae518f2b00cb9d5
 msgid "`hello-world-expressionlib-inline.cwl`"
@@ -2610,9 +2660,9 @@ msgid ""
 "the CWL specification to learn more about it."
 msgstr ""
 "`$include` ステートメントを使用すると、ローカルディスクまたはリモートロケーシ"
-"ョンからファイルをインクルードすることができます。相対パスと絶対パスの両方で"
-"動作します。CWL仕様の[`$include`について](https://www.commonwl.org/v1.0/"
-"SchemaSalad.html#Include)を読むと、より詳しく知ることができます。"
+"ョンからファイルをインクルードできます。相対パスと絶対パスの両方で動作します"
+"。CWL仕様の[`$include`について](https://www.commonwl.org/v1.0/SchemaSalad."
+"html#Include)を読むと、より詳しく知ることができます。"
 
 #: ../../src/topics/file-formats.md:1 ac906f26116c45d882e1afa42ae38e34
 msgid "File Formats"
@@ -2628,11 +2678,10 @@ msgid ""
 "some simple type-checking when creating parameter files."
 msgstr ""
 "ToolsやWorkflowsは、[`File`](https://w3id.org/cwl/CommandLineTool.html#File) "
-"型を入力として受け取り、出力として生成することができます。また、[`File`](http"
-"s://w3id.org/cwl/CommandLineTool.html#File) タイプのフォーマットを示すことを"
-"お勧めします。これにより、ツールの使用方法を他の人に示すことができ、また、パ"
-"ラメータファイルを作成する際に簡単な型チェックを行うことができるようになりま"
-"す。"
+"型を入力として受け取り、出力として生成できます。また、[`File`](https://w3id."
+"org/cwl/CommandLineTool.html#File) タイプのフォーマットを示すことをお勧めしま"
+"す。これにより、ツールの使用方法を他の人に示すことができ、パラメータファイル"
+"を作成する際に簡単な型チェックを行うことができるようになります。"
 
 #: ../../src/topics/file-formats.md:8 23ba3dd26f5543119e2c152105b58e98
 msgid ""
@@ -2646,7 +2695,7 @@ msgstr ""
 "）、所属機関のローカルオントロジーを参照すること、またはツールを他者と共有す"
 "る前に迅速に開発するために最初はファイルフォーマットを追加しないことを推奨し"
 "ています。既存の[IANAファイルフォーマット一覧][IANA]と[EDAMファイルフォーマッ"
-"ト一覧][EDAM]は、それぞれのウェブサイトで参照することができます。"
+"ト一覧][EDAM]は、それぞれのウェブサイトで参照できます。"
 
 #: ../../src/topics/file-formats.md:14 81c441846fc249c58607bacf97095eb8
 msgid ""
@@ -2677,20 +2726,21 @@ msgid "Sample Parameter Files"
 msgstr "サンプルパラメーターファイル"
 
 #: ../../src/topics/file-formats.md:34 afd8633db1904897aa3e499354b1c376
-#, fuzzy
 msgid ""
 "Below is an example of a parameter file for the example above. We "
 "encourage checking in working examples of parameter files for your tool. "
 "This allows others to quickly work with your tool, starting from a "
 "\"known good\" parameterization."
-msgstr "以下は、上記の例のパラメータファイルの例です。あなたのツールのパラメータファイルの実例をチェックすることをお勧めします。これにより、他の人が「既知の良い」パラメータ化から始めて、あなたのツールで素早く作業することができます。"
+msgstr ""
+"以下は、上記の例のパラメータファイルの例です。あなたのツールのパラメータファ"
+"イルの実例をチェックすることをお勧めします。これにより、他の人が「既知の良い"
+"」パラメータ化から始めて、あなたのツールで素早く作業できます。"
 
 #: ../../src/topics/file-formats.md:39 bb69d6963c174191bf527335c3f665b7
 msgid "`sample.yml`"
 msgstr "`sample.yml`"
 
 #: ../../src/topics/file-formats.md:45 ddb4f6f81c7d462b974e98c88dd3f558
-#, fuzzy
 msgid ""
 "___Note:___ To follow the example below, you need to download the example"
 " input file, *file-formats.bam*. The file is available from "
@@ -2699,9 +2749,9 @@ msgid ""
 "formats.bam>  and can be downloaded e.g. via `wget`:"
 msgstr ""
 "___注：___ 以下の例に実行するには、例の入力ファイル、*file-formats.bam* "
-"をダウンロードする必要があります。このファイルは<https://github.com/common-workflow-"
-"language/user_guide/raw/main/src/_includes/cwl/file-formats/file-"
-"formats.bam> から入手可能で、`wget` などでダウンロードすることができます："
+"をダウンロードする必要があります。このファイルは<https://github.com/"
+"common-workflow-language/user_guide/raw/main/src/_includes/cwl/file-formats/"
+"file-formats.bam> から入手可能で、`wget` などでダウンロードできます："
 
 #: ../../src/topics/index.md:1 2995cd4fb85c423dba021611dac4a137
 msgid "Topics"
@@ -2716,13 +2766,13 @@ msgid "Essential Input Parameters"
 msgstr "必須入力パラメータ"
 
 #: ../../src/topics/inputs.md:5 17365707f58242369dd6aa73fc8d7242
-#, fuzzy
 msgid ""
 "The `inputs` of a tool is a list of input parameters that control how to "
 "run the tool.  Each parameter has an `id` for the name of parameter, and "
 "`type` describing what types of values are valid for that parameter."
 msgstr ""
-"ツールの`inputs` は、ツールの実行に関わる入力パラメーターのリストです。  各パラメーターには、パラメーター名を示す`id` "
+"ツールの`inputs` は、ツールの実行に関わる入力パラメーターのリストです。  "
+"各パラメーターには、パラメーター名を示す`id` "
 "と、そのパラメーターに有効な値の種類を示す`type` があります。"
 
 #: ../../src/topics/inputs.md:9 521cb5dead5d4e9ab5ff037fb4b683cb
@@ -2761,9 +2811,9 @@ msgid ""
 "You can use `cwltool` to create a template input object. That saves you "
 "from having to type all the input parameters in an input object file:"
 msgstr ""
-"`cwltool` を使って、テンプレートとなる入力オブジェクトを作成することができま"
-"す。これにより、入力オブジェクトファイルにすべての入力パラメータを入力する手"
-"間を省くことができます："
+"`cwltool` を使って、テンプレートとなる入力オブジェクトを作成できます。これに"
+"より、入力オブジェクトファイルにすべての入力パラメータを入力する手間を省くこ"
+"とができます："
 
 #: ../../src/topics/inputs.md:40 5ac6da11d56446de97c251a37d997671
 msgid ""
@@ -2772,7 +2822,7 @@ msgid ""
 "desired input values."
 msgstr ""
 "`cwltool --make-template inp.cwl > inp-job.yml` のように、出力をファイルにリ"
-"ダイレクトします。その後デフォルト値を希望の入力値で修正することができます。"
+"ダイレクトします。その後デフォルト値を希望の入力値で修正できます。"
 
 #: ../../src/topics/inputs.md:44 6a3edb0d259d4d7c900dd9811f978d4e
 msgid ""
@@ -2806,12 +2856,11 @@ msgid ""
 "that the tools aren't accidentally accessing files that were not "
 "explicitly specified"
 msgstr ""
-"CWLリファレンスランナー（cwltool）と他のランナーは、ツールが明示的に指定され"
-"ていないファイルに誤ってアクセスしないように、入力ファイルへの（\"ソフト\""
+"CWL reference runner（cwltool）と他のランナーは、ツールが明示的に指定されてい"
+"ないファイルに誤ってアクセスしないように、入力ファイルへの（\"ソフト\""
 "）シンボリックリンクを持つ一時ディレクトリを作成します"
 
 #: ../../src/topics/inputs.md:70 5bdf77c45346445d8f93353c1e73f768
-#, fuzzy
 msgid ""
 "The field "
 "[`inputBinding`](https://w3id.org/cwl/CommandLineTool.html#Input_binding)"
@@ -2820,10 +2869,10 @@ msgid ""
 "parameter does not appear on the command line.  Let's look at each "
 "example in detail."
 msgstr ""
-"フィールド[`inputBinding`](https://w3id.org/cwl/CommandLineTool.html#Input_bi"
-"nding)はオプションであり、入力パラメータをツールのコマンドラインに表示するか"
-"どうか、またどのように表示するかを指定します。`inputBinding`がない場合、パラ"
-"メータはコマンドラインに表示されません。 それぞれの例を詳しく見てみましょう。"
+"[`inputBinding`](https://w3id.org/cwl/CommandLineTool.html#Input_binding)フィ"
+"ールドはオプションであり、入力パラメータをツールのコマンドラインに含めるかど"
+"うか、またどのように含めるかを指定します。`inputBinding`がない場合、パラメー"
+"タはコマンドラインに含まれません。 それぞれの例を詳しく見てみましょう。"
 
 #: ../../src/topics/inputs.md:83 d783fe52e86f4feda33ea0eecb622603
 msgid ""
@@ -2846,7 +2895,6 @@ msgstr ""
 " hello` と与えられます。"
 
 #: ../../src/topics/inputs.md:109 b106eed01c1744a792368f91f547e553
-#, fuzzy
 msgid ""
 "Integer (and floating point) types appear on the command line with "
 "decimal text representation.  When the option `separate` is false (the "
@@ -2855,10 +2903,9 @@ msgid ""
 msgstr ""
 "整数型（および浮動小数点型）はコマンドラインに10進数のテキスト表現で表示され"
 "ます。 `separate`オプションがfalseの場合（デフォルト値はtrue）、prefixと値は1"
-"つの引数にまとめられます。 上の例では `-i42` として表示されます。"
+"つの引数になるようにまとめられます。 上の例では `-i42` として表示されます。"
 
 #: ../../src/topics/inputs.md:124 1c70336741a842a5b16b687642d1d9b4
-#, fuzzy
 msgid ""
 "File types appear on the command line as the path to the file.  When the "
 "parameter type ends with a question mark `?` it indicates that the "
@@ -2869,8 +2916,8 @@ msgid ""
 msgstr ""
 "ファイル型は、コマンドライン上にファイルへのパスとして表示されます。  パラメ"
 "ータの型の末尾にクエスチョンマーク`?`がある場合、これは、パラメータがオプショ"
-"ンであることを表します。  上記の例では、`--file=/tmp/random/path/whale.txt` "
-"と表示されます。  ただし、入力パラメータに \"example_file\" "
+"ナルであることを表します。  上記の例では、`--file=/tmp/random/path/whale.txt`"
+" と表示されます。  ただし、入力パラメータに \"example_file\" "
 "パラメータを指定しなかった場合、コマンドラインには何も表示されません。"
 
 #: ../../src/topics/inputs.md:131 9294c07c672b414f9c3895ed70b9b4ee
@@ -2910,7 +2957,6 @@ msgid "Array Inputs"
 msgstr "配列入力"
 
 #: ../../src/topics/inputs.md:148 b11a5c7a13b345939e4ae15e1e2c0786
-#, fuzzy
 msgid ""
 "It is easy to add arrays of input parameters represented to the command "
 "line. There are two ways to specify an array parameter. First is to "
@@ -2919,11 +2965,11 @@ msgid ""
 " be added after the type name to indicate that input parameter is array "
 "of that type."
 msgstr ""
-"コマンドラインに表現される入力パラメータの配列を簡単に追加することができます"
-"。配列パラメータを指定するには、2つの方法があります。1つ目の方法は、`type` "
-"に`type: array` と`items` を指定して、配列に現れる可能性のある有効なデータ型"
-"を定義する方法です。2つ目の方法は、入力パラメータがその型の配列であることを示"
-"すために、型名の後に`[]` という括弧を付けることもできます。"
+"コマンドラインに含まれる入力パラメータの配列は簡単に追加できます。配列パラメ"
+"ータを指定するには、2つの方法があります。1つ目の方法は、`type` に`type: "
+"array` と`items` を指定して、配列に現れる可能性のある有効なデータ型を定義する"
+"方法です。2つ目の方法は、入力パラメータがその型の配列であることを示すために、"
+"型名の後に`[]` という括弧を付けることもできます。"
 
 #: ../../src/topics/inputs.md:154 aa00bcfc6c0f4085ae52621a2f4ae8d9
 msgid "`array-inputs.cwl`"
@@ -2952,9 +2998,9 @@ msgid ""
 "item separator string."
 msgstr ""
 "`inputBinding` は、外側の配列パラメータ定義と内側の配列要素定義のいずれかに記"
-"述することができ、上図のようにコマンドラインを構築する際に異なる挙動を示しま"
-"す。また、`itemSeparator` フィールドがあれば、配列の値を項目区切り文字列で区"
-"切って1つの引数に連結することを指定することができます。"
+"述でき、上図のようにコマンドラインを構築する際に異なる挙動を示します。また、`"
+"itemSeparator` フィールドがあれば、配列の値を項目区切り文字列で区切って1つの"
+"引数に連結することを指定できます。"
 
 #: ../../src/topics/inputs.md:185 bb31c6784ea843ec88f185523cfa25df
 msgid ""
@@ -2970,7 +3016,7 @@ msgstr ""
 "列は複数行に渡って表現することも可能で、関連するキーで定義されていない配列の"
 "値は、先頭の`-` でマークされます。これは次のレッスンで実際に確認し、[YAML "
 "Guide](yaml-guide.md#arrays) でより詳細に説明されています。配列の配列、レコー"
-"ドの配列、その他の複雑な型を指定することができます。"
+"ドの配列、その他の複雑な型を指定できます。"
 
 #: ../../src/topics/inputs.md:191 53817379078548b2aeb6195cae9cbab7
 msgid "Inclusive and Exclusive Inputs"
@@ -2985,8 +3031,7 @@ msgid ""
 msgstr ""
 "基本的なツールには、一緒に提供しなければならない複数の引数（依存関係あり）や"
 "、一緒に提供できない複数の引数（排他関係あり）があることがあります。  record"
-"とユニオン型を使ってパラメータをグループ化し、この2つの条件を定義することがで"
-"きます。"
+"とユニオン型を使ってパラメータをグループ化し、この2つの条件を定義できます。"
 
 #: ../../src/topics/inputs.md:198 84e1ab25511c49d1baabb1f80f247b49
 msgid "`record.cwl`"
@@ -3039,8 +3084,9 @@ msgid ""
 msgstr ""
 "排他的入力パラメータを式と組み合わせて使用する場合、JavaScript "
 "オブジェクトの`inputs` に排他的入力値のいずれかが含まれることを意識する必要が"
-"あります。つまり、**or** のブーリアン演算子を使用して、`inputs`にどの値が存在"
-"するかをチェックする必要がある場合があります。"
+"あります。つまり、これらの排他的な値の型は異なる可能性があるので、`input` オ"
+"ブジェクトのプロパティを参照するときに、どの型が使用されているかを確認する必"
+"要があるかもしれません。"
 
 #: ../../src/topics/inputs.md:263 0fecb128b19b44d796b6c1b6de4f7166
 msgid ""
@@ -3067,7 +3113,6 @@ msgstr ""
 "すると、コマンドは正常に実行されるはずです："
 
 #: ../../src/topics/inputs.md:281 11fdeb057d674f118830f431ff019c15
-#, fuzzy
 msgid ""
 "However, if you do not provide any input value, then `file_format` will "
 "be evaluated to `null`, which does not match the expected type for the "
@@ -3075,19 +3120,21 @@ msgid ""
 "workflow."
 msgstr ""
 "しかし、入力値を提供しない場合、`file_format` は、`null` "
-"の値として評価されます。これは、出力フィールドが期待する型（`string` ）と一致しないため、ワークフロー実行時に失敗することになります。"
+"の値として評価されます。これは、出力フィールドが期待する型（`string` "
+"）と一致しないため、ワークフロー実行時に失敗することになります。"
 
 #: ../../src/topics/inputs.md:290 8594cca9d93b4280b6cfee64c8a7c578
-#, fuzzy
 msgid ""
 "To correct it, you should explicitly handle the possibility of a `null` "
 "value. For example, the expression could be changed to "
 "`$(inputs.file_format || 'auto')`, to have a default value `\"auto\"` if "
 "none was provided in the command line or job input file."
 msgstr ""
-"これを修正するには、排他的パラメータ、または`null` を許可するパラメータを使用する場合、JavaScript 式で or "
-"演算子を使用することを忘れてはなりません。たとえば、式を`$(inputs.file_format || 'auto')` "
-"に変更すると、コマンドラインやジョブ入力ファイルで何も指定されていない場合にデフォルト値を持つようになります。"
+"これを修正するには、排他的パラメータ、または`null` "
+"を許可するパラメータを使用する場合、JavaScript 式で or "
+"演算子を使用することを忘れてはなりません。たとえば、式を`$("
+"inputs.file_format || 'auto')` に変更すると、コマンドラインやジョブ入力ファイ"
+"ルで何も指定されていない場合にデフォルト値`\"auto\"`を持つようになります。"
 
 #: ../../src/topics/inputs.md:295 b5055c77f85e43609fe3e9b9839778e3
 msgid ""
@@ -3099,12 +3146,12 @@ msgid ""
 "expression’s value becomes that of the second operand, which is why a "
 "reasonable default can be provided there."
 msgstr ""
-"ここでは、JavaScriptのブール値 \"or\"、 \"演算子 `||` は、その_short-"
-"circuiting_プロパティに使用されます。`inputs.file_format`がブール値の \"true"
-"\"である場合（例えば、列挙された有効な空でない文字列）、式の評価は "
-"`||`の最初のオペランドで停止します。しかし、 `inputs.file_format`が`null`の場"
-"合、式全体の値は2番目のオペランドの値になります。これにより合理的なデフォルト"
-"値を提供します。"
+"ここでは、JavaScriptのブール値 \"or\"、 演算子 `||` は、その _short-"
+"circuiting_ プロパティに使用されます。`inputs.file_format`がブール値の \"true"
+"\"である場合（例えば、列挙された有効な空でない文字列）、式の評価は `||`"
+"の最初のオペランド\"short-circuits\"で停止します。しかし、 `inputs.file_forma"
+"t`が`null`の場合、式全体の値は2番目のオペランドの値になります。これにより合理"
+"的なデフォルト値を提供します。"
 
 #: ../../src/topics/metadata-and-authorship.md:1
 #: 723c2232310c4276aeac2bd6728d2912
@@ -3150,20 +3197,22 @@ msgstr "`metadata_example2.cwl`"
 
 #: ../../src/topics/metadata-and-authorship.md:28
 #: 37b07ea9b7124842b8ba3040f70308e9
-#, fuzzy
 msgid "Extended Example"
 msgstr "拡張された例"
 
 #: ../../src/topics/metadata-and-authorship.md:30
 #: 1cd5989ade6741aabe625c13bed3c8ed
-#, fuzzy
 msgid ""
 "For those that are highly motivated, it is also possible to annotate your"
 " tool with a much larger amount of metadata. This example includes EDAM "
 "ontology tags as keywords (allowing the grouping of related tools), hints"
 " at hardware requirements in order to use the tool, and a few more "
 "metadata fields."
-msgstr "高いモチベーションを持つ人であれば、ツールにもっと多くのメタデータを付与することも可能です。この例では、EDAMオントロジーのタグをキーワードとして含み（関連するツールのグループ化が可能）、ツールを使用するために必要なハードウェアのヒントや、さらにいくつかのメタデータフィールドがあります。"
+msgstr ""
+"高いモチベーションを持つ人であれば、ツールにもっと多くのメタデータを付与する"
+"ことも可能です。この例では、EDAMオントロジーのタグをキーワードとして含み（関"
+"連するツールのグループ化が可能）、ツールを使用するために必要なハードウェアの"
+"ヒントや、さらにいくつかのメタデータフィールドがあります。"
 
 #: ../../src/topics/metadata-and-authorship.md:35
 #: ae7369ba14404d23b72d1ef30dcd4153
@@ -3189,7 +3238,8 @@ msgstr ""
 msgid ""
 "You can create operations to visualize a workflow during development, "
 "before you are ready to submit the workflow to a CWL runner:"
-msgstr "CWLランナーにワークフローを送信する前に、開発中のワークフローを可視化することができます："
+msgstr "CWL "
+"runnerでワークフローを実行する前に、開発中のワークフローを可視化できます："
 
 #: ../../src/topics/operations.md:10 e9b2b97f3059460b867577a49934a338
 msgid "`operations.cwl`"
@@ -3202,8 +3252,8 @@ msgid ""
 "with the CWL Viewer or `cwltool`:"
 msgstr ""
 "ワークフローの`uppercase` ステップは Operation "
-"です。CommandLineToolやExpressionToolのように使用することができます。また、"
-"CWL Viewerや`cwltool` を使って可視化することもできます："
+"です。CommandLineToolやExpressionToolのように使用できます。また、CWL "
+"Viewerや`cwltool` を使って可視化できます："
 
 #: ../../src/topics/operations.md:24 61e4ae6ed18e41708270eb358cd55277
 msgid ""
@@ -3211,9 +3261,9 @@ msgid ""
 " The following image is rendered with the Sphinx `{graphviz}` directive "
 "(this user guide is built with Sphinx):"
 msgstr ""
-"上記のコマンドの出力は、Graphvizを使ってレンダリングすることができます。以下"
-"の画像は、SphinxのGraphvizディレクティブでレンダリングしたものです（このユー"
-"ザーガイドはSphinxで構築されています）："
+"上記のコマンドの出力は、Graphvizを使ってレンダリングできます。以下の画像は、S"
+"phinxの`{graphviz}`ディレクティブでレンダリングしたものです（このユーザーガイ"
+"ドはSphinxで構築されています）："
 
 #: ../../src/topics/operations.md:56 c07e3ff02ac14ffb89bcbd1b30f3f3fd
 msgid ""
@@ -3228,16 +3278,15 @@ msgid "`cwltool` does not know how to run operations"
 msgstr "`cwltool` は、どうやってoperationsを実行するかを知りません"
 
 #: ../../src/topics/operations.md:67 3b90445d3428444cafd7d5c0e5884980
-#, fuzzy
 msgid ""
 "CWL runners may come up with ways to bind operations to concrete steps. A"
 " CWL runner could, for instance, use abstract operations with ID's that "
 "correspond to steps executed by a different workflow engine."
 msgstr ""
 "CWL runnerは、operations "
-"を具体的なステップにバインドする見出すかもしれません。例えば、CWL runnerは、"
+"を具体的なステップに結びつけるかもしれません。例えば、CWL runnerは、"
 "ワークフローエンジンで実行される異なるステップに対応するIDを持つ抽象的な "
-"operation を使用することができます。"
+"operation を使用できます。"
 
 #: ../../src/topics/outputs.md:1 35e7bad6fdc04bcf9bbfbb2d8d42cfa5
 msgid "Outputs"
@@ -3260,7 +3309,6 @@ msgstr ""
 "と、そのパラメーターに有効な値の型を示す`type` があります。"
 
 #: ../../src/topics/outputs.md:10 a229d8d983344e51a231edb5f667d84b
-#, fuzzy
 msgid ""
 "When a tool runs under CWL, the starting working directory is the "
 "designated output directory.  The underlying tool or script must record "
@@ -3268,11 +3316,11 @@ msgid ""
 "output parameters returned by the CWL tool are either the output files "
 "themselves, or the result of examining the content of those files."
 msgstr ""
-"CWLでツールを実行する場合、開始時の作業ディレクトリが出力ディレクトリになりま"
-"す。  基礎となるツールやスクリプトは、出力ディレクトリに作成されるファイルの"
-"形でその結果を記録しなければなりません。  CWLツールによって返される出力パラメ"
-"ータは、出力ファイルそのものであるか、またはそれらのファイルの内容を調べるこ"
-"とによって得られるものです。"
+"CWLでツールを実行する場合、実行を開始したディレクトリが出力ディレクトリになり"
+"ます。  基礎となるツールやスクリプトは、出力ディレクトリに作成されるファイル"
+"の形でその結果を記録しなければなりません。  CWLツールによって返される出力パラ"
+"メータは、出力ファイルそのものであるか、またはそれらのファイルの内容を調べる"
+"ことによって得られるものです。"
 
 #: ../../src/topics/outputs.md:16 9845e517f7d848e5b59a97880ca6999f
 msgid ""
@@ -3294,8 +3342,8 @@ msgid ""
 msgstr ""
 "これまでの例では、`baseCommand` "
 "は単なる文字列で、引数はCWL入力として渡していました。単一の文字列の代わりに、"
-"_文字列の配列_ を使用することができます。 配列の最初の要素は実行するコマンド"
-"で、それ以降の要素は必須のコマンドライン引数です"
+"_文字列の配列_ を使用できます。 配列の最初の要素は実行するコマンドで、それ以"
+"降の要素は必須のコマンドライン引数です"
 
 #: ../../src/topics/outputs.md:28 9b65071222c94951bed12ac53e964ee3
 msgid "`tar.cwl`"
@@ -3337,7 +3385,7 @@ msgstr ""
 "[`glob`](https://w3id.org/cwl/CommandLineTool.html#CommandOutputBinding) フィ"
 "ールドは、出力ディレクトリ内のファイル名で構成されます。前もって出力ファイル"
 "名が分からない場合は、`glob: '*.txt'` "
-"のようにワイルドカードパターンを使用することができます。"
+"のようにワイルドカードパターンを使用できます。"
 
 #: ../../src/topics/outputs.md:69 8a6e9173198241429effd911c3a7c4d7
 msgid "Capturing Standard Output"
@@ -3414,8 +3462,8 @@ msgstr ""
 "ん。なぜなら、\"hello.txt \"というファイル名は"
 "、使用する入力ファイルによって異なるか、または依存する可能性があるからです。"
 "  これを避けるために、ジョブパラメーターファイル(`.yml`)で必要なファイル名を"
-"指定することができます。この例では、入力パラメーターの値を他のフィールドから"
-"動的に参照して、抽出するファイル名を指定する方法を説明します。"
+"指定できます。この例では、入力パラメーターの値を他のフィールドから動的に参照"
+"して、抽出するファイル名を指定する方法を説明します。"
 
 #: ../../src/topics/parameter-references.md:13 50db8add9b1942d986e581b8d21c2ee4
 msgid "`tar-param.cwl`"
@@ -3433,11 +3481,11 @@ msgstr "入力ファイル(入力オブジェクト)を作成し、コマンド�
 "ジェクトを指定して`cwltool` を呼び出します："
 
 #: ../../src/topics/parameter-references.md:36 06926a516ae6432d96e3eaa62202cd86
-#, fuzzy
 msgid ""
 "Certain fields permit parameter references which are enclosed in "
 "`$(...)`. These are evaluated and replaced with value being referenced."
-msgstr "`$(...)` で囲まれたパラメータ参照を許可するフィールドもあります。これらは評価され、参照されている値に置き換えられます。"
+msgstr "`$(...)` で囲まれたパラメータ参照を許可するフィールドもあります。これらは評価"
+"され、参照されている値に置き換えられます。"
 
 #: ../../src/topics/parameter-references.md:47 384fe8188f414eafbbb8d6b81bdfd779
 msgid ""
@@ -3472,8 +3520,7 @@ msgstr "パラメータ参照はどこで許されるのですか？"
 
 #: ../../src/topics/parameter-references.md:61 055d3268859c46c4b7db5005608bae05
 msgid "You can only use parameter references in certain fields.  These are:"
-msgstr "パラメータ参照は、特定のフィールドでのみ使用することができます。  "
-"以下はその例です："
+msgstr "パラメータ参照は、特定のフィールドでのみ使用できます。  以下はその例です："
 
 #: ../../src/topics/parameter-references.md:63 2ed66835bd9044adbfdd0b5097787f22
 msgid ""
@@ -3588,7 +3635,6 @@ msgstr "ソフトウェア要求事項の指定"
 
 #: ../../src/topics/specifying-software-requirements.md:3
 #: e708866921ea49d69d3c2a32d63ea468
-#, fuzzy
 msgid ""
 "Often, tool descriptions will be written for a specific version of a "
 "software. To make it easier for others to use your descriptions, you can "
@@ -3619,10 +3665,10 @@ msgid ""
 "enable these checks with the reference implementation, use the "
 "[dependency resolvers configuration][dependencies]."
 msgstr ""
-"CWLランナーによっては、これらのヒントを使用して、ジョブの実行前に必要なソフト"
-"ウェアがインストールされ、利用可能であることをチェックすることができます。リ"
-"ファレンス実装でこれらのチェックを有効にするには、[依存性解決のための設定][de"
-"pendencies] を使用します。"
+"CWL runnerによっては、これらのヒントを使用して、ジョブの実行前に必要なソフト"
+"ウェアがインストールされ、利用可能であることをチェックできます。リファレンス"
+"実装でこれらのチェックを有効にするには、[依存性解決のための設定][dependencies"
+"] を使用します。"
 
 #: ../../src/topics/specifying-software-requirements.md:29
 #: 1a8b8aadf1c64e87b8b670e288bc14bc
@@ -3641,6 +3687,17 @@ msgid ""
 "preference, are to include the DOI for the main tool citation and the URL"
 " to the tool."
 msgstr ""
+"バージョン番号だけでなく、ツールの一意なリソース識別子（URI）が[RRID][rrid]の"
+"形で与えられます。RRIDを持つリソースは[SciCrunch][scicrunch]レジストリで検索"
+"することができ、科学リソースを一貫して検索、追跡、参照するためのポータルを提"
+"供します。ツールを [`SoftwareRequirement`](https://w3id.org/cwl/"
+"CommandLineTool.html#SoftwareRequirement) として指定したい場合は、SciCrunch "
+"でツールを検索し、レジストリで割り当てられた RRID を使用してください。("
+"ツールを SciCrunch に追加するには [リソースの追加チュートリアル][scicrunch-"
+"add-tool] を参照してください)。この RRID を使って、（[identifiers."
+"org][identifiers] 経由で）要件説明の `specs` フィールドでツールを参照できます"
+"。他の良い選択としては、優先順位の高い順に、メインのツールの引用のためのDOIと"
+"ツールのURLを含めることです。"
 
 #: ../../src/topics/staging-input-files.md:1 d10c792550e8498c8ee384d3093da306
 msgid "Staging Input Files"
@@ -3679,8 +3736,9 @@ msgid ""
 " executing CWL. We focus on `cwltool` here but some of these techniques "
 "may apply to other CWL Runners."
 msgstr ""
-"このセクションでは、CWLの実行に問題がある場合にトラブルシューティングを行う方法を説明します。ここでは、`cwltool` "
-"に焦点を当てますが、これらのテクニックのいくつかは他のCWLランナーにも適用されるかもしれません。"
+"このセクションでは、CWLの実行に問題がある場合にトラブルシューティングを行う方"
+"法を説明します。ここでは、`cwltool` に焦点を当てますが、"
+"いくつかのテクニックは他のCWL runnerでも使えるかもしれません。"
 
 #: ../../src/topics/troubleshooting.md:6 1d47f4ce04554cabb1ccf40a13ee42ec
 msgid "Run `cwltool` with `cachedir`"
@@ -3696,9 +3754,9 @@ msgid ""
 msgstr ""
 "ワークフロー実行時に`--cachedir` オプションを使用すると、`cwltool` に中間ファ"
 "イル（入力ファイルでも出力ファイルでもないが、ワークフロー実行中に作成される"
-"ファイル）をキャッシュするよう指示することができます。デフォルトでは、これら"
-"のファイルは一時ディレクトリに作成されますが、別のディレクトリに書き込むこと"
-"でアクセスが容易になります。"
+"ファイル）をキャッシュするよう指示できます。デフォルトでは、これらのファイル"
+"は一時ディレクトリに作成されますが、別のディレクトリに書き込むことでアクセス"
+"が容易になります。"
 
 #: ../../src/topics/troubleshooting.md:14 36ec60b80c714357a4274217274136ff
 msgid ""
@@ -3741,7 +3799,7 @@ msgstr ""
 "`step_b` が存在しない `revv` コマンドの実行に失敗したため、ワークフローは "
 "`permanentFail` ステータスになっています。`step_a` は正常に実行され、"
 "その出力は `cachedir` "
-"にキャッシュされました。作成された中間ファイルを確認することができます："
+"にキャッシュされました。作成された中間ファイルを確認できます："
 
 #: ../../src/topics/troubleshooting.md:44 04e80f7ce14d4d73bc5d290dcf01bcdb
 msgid ""
@@ -3811,18 +3869,17 @@ msgstr ""
 "いランタイムを提供することによって、ソフトウェアのインストールを簡素化します"
 "。  しかし、コンテナはホストシステムから意図的に隔離されているため、Dockerコ"
 "ンテナ内でツールを実行するには、入力ファイルがコンテナ内で利用可能で、出力フ"
-"ァイルがコンテナから回収できることを確認するための追加作業が必要です。  CWLラ"
-"ンナーはこの作業を自動的に行うことができるため、Dockerコンテナの呼び出しや管"
-"理の複雑さを回避しながら、Dockerを使用してソフトウェア管理を簡素化することが"
-"できます。"
+"ァイルがコンテナから回収できることを確認するための追加作業が必要です。  CWL r"
+"unnerはこの作業を自動的に行うことができるため、Dockerコンテナの呼び出しや管理"
+"の複雑さを回避しながら、Dockerを使用してソフトウェア管理を簡素化できます。"
 
 #: ../../src/topics/using-containers.md:15 4b0f6cfc8a774c77bfbc99e568af2ece
 msgid ""
 "One of the responsibilities of the CWL runner is to adjust the paths of "
 "input files to reflect the location where they appear inside the "
 "container."
-msgstr "CWLランナーの役割のひとつに、入力ファイルのパスをコンテナ内のでの配置位置に合"
-"わせることがあります。"
+msgstr "CWL runnerの役割のひとつに、入力ファイルのパスをコンテナ内のでのパスに合わせ"
+"ることがあります。"
 
 #: ../../src/topics/using-containers.md:18 27c02a5d479a420eab7d14888d9fb288
 msgid ""
@@ -3852,7 +3909,6 @@ msgstr ""
 "の部分だけです。"
 
 #: ../../src/topics/using-containers.md:44 1f02618ab6254459ae71f72844e3cc18
-#, fuzzy
 msgid ""
 "`baseCommand: node` tells CWL that we will be running this command using "
 "the Node Js runtime that is meant for Javascript files. We then need to "
@@ -3890,7 +3946,8 @@ msgstr "`hello.js`"
 msgid ""
 "Notice the CWL runner has constructed a Docker command line to run the "
 "script."
-msgstr "CWLランナーがスクリプトを実行するためにDockerコマンドラインを構築していることに注目してください。"
+msgstr "CWL runnerがスクリプトを実行するためにDockerコマンドラインを構築していること"
+"に注目してください。"
 
 #: ../../src/topics/using-containers.md:72 d2dd89a5edde4f2eab4c2baf0cc78745
 msgid ""
@@ -3990,7 +4047,6 @@ msgid "Visualization of 1st-workflow.cwl"
 msgstr "1st-workflow.cwlの可視化"
 
 #: ../../src/topics/workflows.md:180 f0831481a43548039fbc4fd17555af57
-#, fuzzy
 msgid ""
 "[![Visualization of 1st-"
 "workflow.cwl](https://view.commonwl.org/graph/png/github.com/common-"
@@ -4002,15 +4058,13 @@ msgid ""
 "language/user_guide/blob/a29e7eae0006660946fc705a310b37a21a7e1edc/_includes/cwl/21"
 "-1st-workflow/1st-workflow.cwl)"
 msgstr ""
-"[[1st-"
-"workflow.cwlを可視化したもの]](https://view.commonwl.org/graph/png/github.com"
-"/common-workflow-"
-"language/user_guide/blob/a29e7eae0006660946fc705a310b37a21a7e1edc/_includes/cwl/21"
-"-1st-workflow/1st-"
-"workflow.cwl)](https://view.commonwl.org/graph/png/github.com/common-"
-"workflow-"
-"language/user_guide/blob/a29e7eae0006660946fc705a310b37a21a7e1edc/_includes/cwl/21"
-"-1st-workflow/1st-workflow.cwl)"
+"[![1st-workflow.cwlを可視化したもの](https://view.commonwl.org/graph/png/"
+"github.com/common-workflow-language/user_guide/blob/"
+"a29e7eae0006660946fc705a310b37a21a7e1edc/_includes/cwl/21-1st-workflow/1st-"
+"workflow.cwl)](https://view.commonwl.org/graph/png/github.com/"
+"common-workflow-language/user_guide/blob/"
+"a29e7eae0006660946fc705a310b37a21a7e1edc/_includes/cwl/21-1st-workflow/1st-"
+"workflow.cwl)"
 
 #: ../../src/topics/workflows.md:183 5ff059fc8ae6471c8ea86dab7e5a93f5
 msgid ""
@@ -4066,7 +4120,6 @@ msgstr ""
 "を、ワークフロー出力パラメータ`compiled_class` とします。"
 
 #: ../../src/topics/workflows.md:248 e0429688fce445da8083e69323e5b020
-#, fuzzy
 msgid ""
 "The `steps` section describes the actual steps of the workflow.  In this "
 "example, the first step extracts a file from a tar file, and the second "
@@ -4085,19 +4138,18 @@ msgstr ""
 "されることがあります。"
 
 #: ../../src/topics/workflows.md:256 980f5eada57c4fadbb783838ded1fa0b
-#, fuzzy
 msgid ""
 "The first step, `untar` runs `tar-param.cwl` (described previously in "
 "[Parameter References](parameter-references.md)). This tool has two input"
 " parameters, `tarfile` and `extractfile` and one output parameter "
 "`extracted_file`."
 msgstr ""
-"最初のステップである`untar` は、`tar-param.cwl` を実行します（[パラメータ参照](parameter-"
-"references.md)で以前説明しました）。このツールは、2つの入力パラメータ、`tarfile` と`extractfile` "
-"と1つの出力パラメータ`extracted_file` を持ちます。"
+"最初のステップである`untar` は、`tar-param.cwl` を実行します（[パラメータ参照"
+"](parameter-references."
+"md)で以前説明しました）。このツールは、2つの入力パラメータ、`tarfile` "
+"と`extractfile` と1つの出力パラメータ`extracted_file` を持ちます。"
 
 #: ../../src/topics/workflows.md:261 3532e165842f4ebb8db0c78208071555
-#, fuzzy
 msgid ""
 "The ``in`` section of the workflow step connects these two input "
 "parameters to the inputs of the workflow, `tarball` and "
@@ -4122,7 +4174,6 @@ msgstr "ワークフローステップの`out` "
 "セクションには、ツールから期待される出力パラメータが記載されています。"
 
 #: ../../src/topics/workflows.md:278 2651ee113a3d4b79b138854ebe729f48
-#, fuzzy
 msgid ""
 "The second step `compile` depends on the results from the first step by "
 "connecting the input parameter `src` to the output parameter of `untar` "
@@ -4134,7 +4185,7 @@ msgstr ""
 "第2ステップ `compile` は、第1ステップの結果に依存し、入力パラメータ`src` "
 "を`untar` の出力パラメータに接続し、`untar/extracted_file` を使用します。  "
 "これは、`arguments.cwl` (以前に [追加の引数とパラメータ](additional-"
-"arguments-and-parameters.md)で説明) "
+"arguments-and-parameters.md)で説明したものです) "
 "を実行します。このステップの出力`classfile` は、前述のワークフローの`outputs`"
 " セクションに接続されています。"
 
@@ -4149,8 +4200,10 @@ msgid ""
 " workflow can be used as a step in another CWL workflow, if the workflow "
 "engine supports the `SubworkflowFeatureRequirement`:"
 msgstr ""
-"ワークフローは、複数のツールを組み合わせてより大きな処理を実行するための方法です。ワークフローエンジンが`SubworkflowFeatureRequirement`"
-" をサポートしている場合、CWL ワークフローを別の CWL ワークフローのステップとすることができます ："
+"ワークフローは、複数のツールを組み合わせてより大きな処理を実行するための方法"
+"です。ワークフローエンジンが`SubworkflowFeatureRequirement` "
+"をサポートしている場合、CWL ワークフローを別の CWL "
+"ワークフローのステップにできます ："
 
 #: ../../src/topics/workflows.md:297 44d281d99cd944478db98446a984c001
 msgid ""
@@ -4207,7 +4260,7 @@ msgstr ""
 "CWL`Workflow` は、`CommandLineTool` を`step` として使用することができ、その "
 "CWL ファイルは`run` に記述されます。ワークフローの入力（`tarball` "
 "および`name_of_file_to_extract` ）と出力（`compiled_class` "
-"）は、ステップの入力/出力になるようにマッピングすることができます。"
+"）は、ステップの入力/出力になるようにマッピングできます。"
 
 #: ../../src/topics/workflows.md:336 d621821d2c1b403cb7415b381dd883f6
 msgid ""
@@ -4238,28 +4291,28 @@ msgstr ""
 "るのがよいでしょう。これらは、ツールとしての使用法にも現れるからです。"
 
 #: ../../src/topics/workflows.md:347 c6297c120e004ae8b52d5b519fbc04d2
-#, fuzzy
 msgid ""
 "It is also possible to do a less generic approach and avoid external "
 "dependencies in the job file. So in this workflow we can generate a hard-"
 "coded `Hello.java` file using the previously mentioned "
 "`InitialWorkDirRequirement` requirement, before adding it to a tar file."
 msgstr ""
-"また、あまり一般的でない方法で、ジョブファイルの外部依存を回避することも可能です。そこで、このワークフローでは、先に述べた`InitialWorkDirRequirement`"
-" の要件を使用して、ハードコードされた`Hello.java` ファイルを生成してから、それを tar ファイルに追加することができます。"
+"また、あまり一般的でない方法で、ジョブファイルの外部依存を回避することも可能"
+"です。そこで、このワークフローでは、先に述べた`InitialWorkDirRequirement` "
+"の要件を使用して、ハードコードされた`Hello.java` ファイルを生成してから、"
+"それを tar ファイルに追加できます。"
 
 #: ../../src/topics/workflows.md:366 66f76677f4ce42baa8a8813410ea5aee
-#, fuzzy
 msgid ""
 "In this case our step can assume `Hello.java` rather than be "
 "parameterized, so we can use hardcoded values `hello.tar` and "
 "`Hello.java` in a `baseCommand` and the resulting `outputs`:"
 msgstr ""
-"この場合、ステップではパラメータ化するのではなく、`Hello.java` を想定することができるので、`baseCommand` "
-"で直接書かれた値`hello.tar` と`Hello.java` を使用でき、結果として`outputs` が得られます："
+"この場合、ステップではパラメータ化するのではなく、`Hello.java` "
+"を想定することができるので、`baseCommand` に直接書かれた値`hello.tar` "
+"と`Hello.java` を使用でき、結果として`outputs` が得られます："
 
 #: ../../src/topics/workflows.md:383 a8ccb9f9ab4448e087ea8448d620d33c
-#, fuzzy
 msgid ""
 "Did you notice that we didn't split out the `tar --create` tool to a "
 "separate file, but rather embedded it within the CWL Workflow file? This "
@@ -4267,8 +4320,11 @@ msgid ""
 "reason for doing it in this case is because the command line is hard-"
 "coded with filenames that only make sense within this workflow."
 msgstr ""
-"`tar --create` ツールを別のファイルに分割せず、CWL Workflow "
-"定義の中に埋め込んだことにお気づきでしょうか。これは一般的にベストプラクティスではありません。なぜなら、そのツールを再利用できないからです。このケースでそれを行う理由は、コマンドラインに、このワークフロー定義内でしか意味をなさないファイル名がハードコーディングされているためです。"
+"`tar --create` ツールを別のファイルに分割せず、CWL Workflow 定義の中に埋め込"
+"んだことにお気づきでしょうか。これは一般的にベストプラクティスではありません"
+"。なぜなら、そのツールを再利用できないからです。このケースでそれを行う理由は"
+"、コマンドラインに、このワークフロー定義内でしか意味をなさないファイル名がハ"
+"ードコーディングされているためです。"
 
 #: ../../src/topics/workflows.md:389 afe43b9e92e949a589f493293eff2903
 msgid ""
@@ -4300,7 +4356,6 @@ msgid "Scattering Steps"
 msgstr "Scatter ステップ"
 
 #: ../../src/topics/workflows.md:400 eab4437bf9994b649954221375e3dd6d
-#, fuzzy
 msgid ""
 "Now that we know how to write workflows, we can start utilizing the "
 "`ScatterFeatureRequirement`. This feature tells the runner that you wish "
@@ -4312,10 +4367,10 @@ msgid ""
 msgstr ""
 "ワークフローの書き方がわかったので、`ScatterFeatureRequirement` を利用し始め"
 "ることができます。この機能は、ツールやワークフローを入力のリストに対して複数"
-"回実行したいことをランナーに伝えます。ワークフローは、入力を配列として受け取"
-"り、配列の各要素に対して、あたかも1つの入力であるかのように、指定されたステッ"
-"プを実行します。これにより、多くの異なるコマンドや入力 yaml ファイルを生成す"
-"ることなく、複数の入力に対して同じワークフローを実行することができます。"
+"回実行したいことをrunnerに伝えます。ワークフローは、入力を配列として受け取り"
+"、配列の各要素をあたかも1つの入力であるかのように、指定されたステップを実行し"
+"ます。これにより、多くの異なるコマンドや入力 yaml ファイルを生成することなく"
+"、複数の入力に対して同じワークフローを実行できます。"
 
 #: ../../src/topics/workflows.md:411 c245ba0ae2074fa388ad6c35695033c8
 msgid ""
@@ -4351,21 +4406,23 @@ msgid ""
 " particular step. Note that the input name listed after scatter is the "
 "one of the step's input, not a workflow level input."
 msgstr ""
-"ここでは、ステップ`echo` に、`scatter` という新しいフィールドを追加しました。"
-"このフィールドは、CWLランナーに、このステップの入力を分散して実行したいことを"
-"伝えます。scatterの後に記載されている入力名は、ワークフローレベルの入力名では"
-"なく、ステップの入力名であることに注意してください。"
+"ここでは、ステップ`echo` に、`scatter` "
+"という新しいフィールドを追加しました。このフィールドは、CWL runnerに、このス"
+"テップの入力を分散して実行したいことを伝えます。scatterの後に記載されている入"
+"力名は、ワークフローレベルの入力名ではなく、ステップの入力名であることに注意"
+"してください。"
 
 #: ../../src/topics/workflows.md:445 0d5cf8b82dbd47f2abd1ed16b9b3eb61
-#, fuzzy
 msgid ""
 "For our first scatter, it's as simple as that! Since our tool doesn't "
 "collect any outputs, we still use `outputs: []` in our workflow, but if "
 "you expect that the final output of your workflow will now have multiple "
 "outputs to collect, be sure to update that to an array type as well!"
 msgstr ""
-"最初のスキャッターでは、これと同じくらい簡単です！このツールは出力を回収しないので、`outputs: []` "
-"を使います。しかし、ワークフローの最終出力に収集する複数の出力があることが予想される場合、それを配列型に更新するようにしてください！"
+"最初のスキャッターでは、これと同じくらい簡単です！このツールは出力を回収しな"
+"いので、`outputs: []` を使います。しかし、ワークフローの最終出力に収集する複"
+"数の出力があることが予想される場合、それを配列型に更新するようにしてください"
+"！"
 
 #: ../../src/topics/workflows.md:450 38b7042a270043ba82c11cf2e758f0c8
 msgid "Using the following input file:"
@@ -4416,18 +4473,17 @@ msgid "`wc-tool.cwl`"
 msgstr "`wc-tool.cwl`"
 
 #: ../../src/topics/workflows.md:489 63595d35dded4911aab0be3a165eec0c
-#, fuzzy
 msgid ""
 "Now, how do we incorporate scatter? Remember the scatter field is under "
 "each step:"
-msgstr "さて、スキャッターはどのように取り入れるのでしょうか？スキャッターフィールドは各ステップの下にあることを思い出してください："
+msgstr "さて、scatterはどのように取り入れるのでしょうか？scatterフィールドは各ステッ"
+"プの下にあることを思い出してください："
 
 #: ../../src/topics/workflows.md:491 a7f96ec6e4f24c62ac0f5b6edcc9734b
 msgid "`scatter-two-steps.cwl`"
 msgstr "`scatter-two-steps.cwl`"
 
 #: ../../src/topics/workflows.md:497 122452b7d7114c3fa53cbea286703023
-#, fuzzy
 msgid ""
 "Here we have placed the scatter field under each step. This is fine for "
 "this example since it runs quickly, but if you're running many samples "
@@ -4490,7 +4546,7 @@ msgid ""
 msgstr ""
 "このワークフローは、条件付きステップを含み、入力に基づき実行されます。これに"
 "より、ワークフローは、プログラムの開始時に与えられた入力パラメータや以前のス"
-"テップによって、追加のステップをスキップすることができます。"
+"テップによって、追加のステップをスキップできます。"
 
 #: ../../src/topics/workflows.md:527 9ac7b4f71621411da9a4ca3bc277dcb0
 msgid "`conditional-workflow.cwl`"
@@ -4504,7 +4560,6 @@ msgstr "まず、このワークフローはCWL仕様のバージョン1."
 "2以降から対応しているがわかります。"
 
 #: ../../src/topics/workflows.md:573 4742fe09a4264fb8be6f092519de5d72
-#, fuzzy
 msgid ""
 "The first step of the workflow (step1) contains two input properties and "
 "will execute foo.cwl when the conditions are met. The new property `when`"
@@ -4614,7 +4669,7 @@ msgstr ""
 "上記のYAMLは4つのキー -`first_name`,`last_name`,`age_years`, `home` - 及びそ"
 "れぞれの値を定義しています。値は、文字列、数値（整数、浮動小数点、科学的表現"
 "）、ブール値（`true` または`false` "
-"）、またはより複雑な入れ子型（下記参照）にすることができます。"
+"）、またはより複雑な入れ子型（下記参照）にできます。"
 
 #: ../../src/topics/yaml-guide.md:51 6939eb7e783744d7bcf75ea0a7cae129
 msgid ""
@@ -4641,8 +4696,8 @@ msgid ""
 "characters to the right of ` #` will be ignored by the program "
 "interpreting the YAML. For example:"
 msgstr ""
-"`#` を使うと、CWL定義や入力パラメータファイルにコメントを追加することができま"
-"す。` #` の右側にある文字は、YAML "
+"`#` を使うと、CWL定義や入力パラメータファイルにコメントを追加できます。` #` "
+"の右側にある文字は、YAML "
 "を解釈するプログラムによって無視されます。たとえば、次のようになります："
 
 #: ../../src/topics/yaml-guide.md:76 13da997c82c04023a4b7bb36b76e969d
@@ -4657,7 +4712,6 @@ msgid "Maps"
 msgstr "マップ"
 
 #: ../../src/topics/yaml-guide.md:81 aedf8c4f615845ad91a7947217005d6e
-#, fuzzy
 msgid ""
 "When describing a tool or workflow with CWL, it is usually necessary to "
 "construct more complex, nested representations. Referred to as _maps_, "
@@ -4667,15 +4721,14 @@ msgid ""
 "the key to which they belong (the \"parent\"), and should be indented "
 "with two spaces (⇥tab characters are not allowed). For example:"
 msgstr ""
-"CWLでツールやワークフローを定義する場合、通常、より複雑で入れ子の表現を構築す"
-"る必要があります。_maps_ と呼ばれるこれらの階層構造は、キーの値として追加のキ"
-"ーと値のペアを提供することでYAMLで記述されます。これらのペア（「子」と呼ばれ"
-"ることもあります）は、属するキー（「親」）の下の新しい行に書かれ、2つのスペー"
-"スでインデントされます（⇥タブ文字は許可されていません）。例えば、次のようにな"
-"ります："
+"CWLでツールやワークフローを定義する場合、通常、より複雑で入れ子構造の表現を構"
+"築する必要があります。_maps_ と呼ばれるこれらの階層構造は、キーの値として追加"
+"のキーと値のペアを提供することによりYAMLで記述されます。これらのペア（「子」"
+"と呼ばれることもあります）は、属するキー（「親」）の下の新しい行に書かれ、2つ"
+"のスペースでインデントされます（⇥タブ文字は許可されていません）。例えば、次の"
+"ようになります："
 
 #: ../../src/topics/yaml-guide.md:104 f0f1f414f74342a89065ba5ded8668e5
-#, fuzzy
 msgid ""
 "The YAML above illustrates how to build up complex nested object "
 "descriptions relatively quickly. The `inputs` map contains a single key, "
@@ -4688,8 +4741,8 @@ msgid ""
 "object it describes."
 msgstr ""
 "上記のYAMLは、複雑なネストされたオブジェクトの記述を比較的素早く構築する方法"
-"を示しています。`inputs` マップは単一のキー、`example_flag` "
-"を含み、それ自体が2つのキー、`type` と`inputBinding` "
+"を示しています。`inputs` マップはキー`example_flag` "
+"だけを含み、それ自体が2つのキー、`type` と`inputBinding` "
 "を含み、これらの子の1つ、`inputBinding` はさらに2つのキーと値のペア "
 "(`position` と`prefix`) を含みます。1つのキーに対して複数の値/キーバリューペ"
 "アを提供することについての詳細は、以下の[配列](#arrays)のセクションを参照して"
@@ -4701,7 +4754,6 @@ msgid "Arrays"
 msgstr "配列"
 
 #: ../../src/topics/yaml-guide.md:129 5aca9a90fb6149529ed717992746a2f3
-#, fuzzy
 msgid ""
 "In certain circumstances, it is necessary to provide multiple values or "
 "objects for a single key. As we've already seen in the [Maps](#maps) "
@@ -4713,13 +4765,12 @@ msgid ""
 msgstr ""
 "ある状況下では、1つのキーに対して複数の値やオブジェクトを提供する必要がありま"
 "す。上記の[Maps](#maps)のセクションですでに見たように、1つのキーに複数のキー"
-"と値のペアをマッピングすることができます。しかし、各値にユニークなキーを用意"
-"しなくても、キーに対して複数の値を定義することも可能です。この場合、_array_ "
+"と値のペアをマッピングできます。しかし、各値にユニークなキーを用意しなくても"
+"、キーに対して複数の値を定義することも可能です。この場合、_array_ "
 "を用いて、各値を独自の行で定義し、その前に`-` "
 "を置くことで実現できます。例えば、次のようになります："
 
 #: ../../src/topics/yaml-guide.md:146 d1c9e72e004b4fb4a6efb7748a15ab6f
-#, fuzzy
 msgid "and a more complex example combining maps and arrays:"
 msgstr "と、マップと配列を組み合わせたより複雑な例です："
 
@@ -4737,12 +4788,10 @@ msgstr ""
 "(JSON)][json]に基づいています。マップと配列は、JSON構文を使ってYAMLで定義することもできます。例えば:"
 
 #: ../../src/topics/yaml-guide.md:177 d8feed2d36d04fe283b9de9784d91941
-#, fuzzy
 msgid "and:"
 msgstr "と："
 
 #: ../../src/topics/yaml-guide.md:184 5156ad32791048f8ace51475d7689575
-#, fuzzy
 msgid ""
 "Native JSON can be useful in indicating where a field is intentionally "
 "left empty (such as `[]` for an empty array), as well as where it makes "
@@ -4751,23 +4800,25 @@ msgid ""
 "However, as the second example above shows, it can severely affect the "
 "readability of a YAML file, and should be used sparingly."
 msgstr ""
-"ネイティブ JSON は、フィールドが意図的に空のままになっている場所 (空の配列を表す`[]` など) "
-"や、値が同じ行にあることがより理にかなっている場所 (たとえば、シェルコマンドでオプションフラグとその値を提供する場合) "
-"を示すのに便利なことがあります。しかし、上の2番目の例が示すように、YAMLファイルの可読性に深刻な影響を与える可能性があるので、控えめに使用する必要があります。"
+"ネイティブ JSON は、フィールドが意図的に空のままになっている場所 "
+"(空の配列を表す`[]` など) や、値が同じ行にあることがより理にかなっている場所 "
+"(たとえば、シェルコマンドでオプションフラグとその値を提供する場合) を示すのに"
+"便利なことがあります。しかし、上の2番目の例が示すように、YAMLファイルの可読性"
+"に深刻な影響を与える可能性があるので、控えめに使用する必要があります。"
 
 #: ../../src/topics/yaml-guide.md:194 ce49f80e6fc0498b8ad298fb1f0268f3
 msgid "Reference"
 msgstr "リファレンス"
 
 #: ../../src/topics/yaml-guide.md:196 180d261392a644fcb8ff47d7a4a160c0
-#, fuzzy
 msgid ""
 "The [Learn YAML in Y Minutes][yaml-y-mins] reference was very helpful for"
 " us while we wrote this guide, though it also covers features that are "
 "not valid in CWL."
 msgstr ""
-"[Learn YAML in Y Minutes][yaml-y-mins] "
-"リファレンスは、CWLでは有効でない機能もカバーしていますが、このガイドを書く間、私たちにとって非常に役に立ちました。"
+"[Learn YAML in Y Minutes][yaml-y-mins] リファレンスは、CWLでは有効でない機能"
+"もカバーしていますが、このガイドを書く間、私たちにとって非常に役に立ちました"
+"。"
 
 #: ../../src/tutorials.md:1 d682035afebf4c128755bd4e58780dd2
 msgid "Tutorials"
