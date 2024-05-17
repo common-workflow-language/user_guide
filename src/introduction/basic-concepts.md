@@ -138,7 +138,7 @@ The CWL specification allows for implementations to provide extra
 functionality and specify prerequisites to workflows through *requirements*.
 There are many requirements defined in the CWL specification, for instance:
 
-- [`InlineJavascriptWorkflow`](https://w3id.org/cwl/Workflow.html#InlineJavascriptRequirement) - enables JavaScript in expressions.
+- [`InlineJavascriptRequirement`](https://w3id.org/cwl/Workflow.html#InlineJavascriptRequirement) - enables JavaScript in expressions.
 - [`SubworkflowFeatureRequirement`](https://w3id.org/cwl/Workflow.html#SubworkflowFeatureRequirement) - enables nested workflows.
 - [`InitialWorkDirRequirement`](https://w3id.org/cwl/Workflow.html#InitialWorkDirRequirement) - controls staging files in the input directory.
 
