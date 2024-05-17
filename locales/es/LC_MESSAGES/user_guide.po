@@ -9,15 +9,16 @@ msgstr ""
 "Project-Id-Version: Common Workflow Language User Guide\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-12-16 11:48+0100\n"
-"PO-Revision-Date: 2023-01-27 14:27+0000\n"
-"Last-Translator: Michael Crusoe <mrc@commonwl.org>\n"
+"PO-Revision-Date: 2024-05-16 13:22+0000\n"
+"Last-Translator: Núria Queralt Rosinach <nqueralt.r@gmail.com>\n"
+"Language-Team: Spanish <https://hosted.weblate.org/projects/commonwl/"
+"user-guide/es/>\n"
 "Language: es\n"
-"Language-Team: Spanish <https://hosted.weblate.org/projects/commonwl"
-"/user-guide/es/>\n"
-"Plural-Forms: nplurals=2; plural=n != 1;\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 5.6-dev\n"
 "Generated-By: Babel 2.12.1\n"
 
 #: ../../LICENSE.md:2 a48279b2231348eea3f7a3b74a6362ac
@@ -156,11 +157,16 @@ msgid ""
 " of software, tools and workflows described using CWL are portable across"
 " a variety of platforms that support the CWL standard."
 msgstr ""
+"CWL es una manera de describir herramientas de línea de comandos y "
+"conectarlas para crear flujos de trabajo. Puesto que CWL es una "
+"especificación y no un software concreto, las herramientas y flujos de "
+"trabajo descritos usando CWL son portables en múltiples plataformas que "
+"soporten el estándar CWL."
 
 #: ../../src/episodes.md:5 ../../src/setup.md:5
 #: 1361ff6bf4924efc9ce9a85785a6b381 eb254514301c491e81f72ae19c407261
 msgid "This page has moved"
-msgstr ""
+msgstr "Esta página se ha trasladado"
 
 #: ../../src/episodes.md:9 f03d7cbe6670451db0896f1b674d56c7
 msgid ""
@@ -168,10 +174,13 @@ msgid ""
 "old User Guide. Please use the new [Table of Contents](index.md#table-of-"
 "contents) to browse the User Guide."
 msgstr ""
+"Esta página es obsoleta y la mantenemos aquí para preservar los enlaces de "
+"la Guía del Usuario antigua. Por favor utilice la nueva [Tabla de "
+"Contenidos](index.md#table-of-contents) para navegar por la Guía del Usuario."
 
 #: ../../src/faq.md:1 d65ad48ac6314bf0a74c34a6766561fc
 msgid "FAQ"
-msgstr ""
+msgstr "Preguntas frecuentes"
 
 #: ../../src/faq.md:11 370a9659c7904ef6b5e1ae7480f82ef6
 msgid "How do I create non \"`File`\" types using `evalFrom`?"
@@ -208,11 +217,11 @@ msgstr ""
 
 #: ../../src/faq.md:86 8641f105131b4ac1bca7e0a46756ef79
 msgid "How do I reference a local script?"
-msgstr ""
+msgstr "¿Cómo hago referencia a un script local?"
 
 #: ../../src/faq.md:88 d3e43b40d6994b32bc37067ee116418e
 msgid "There are two ways to reference a local script:"
-msgstr ""
+msgstr "Hay dos maneras de referenciar un script local:"
 
 #: ../../src/faq.md:90 64b140a321ca4087945339c523cc24dd
 msgid ""
@@ -4368,4 +4377,3 @@ msgstr ""
 #~ " only part that is really new "
 #~ "is the `dockerRequirement` section."
 #~ msgstr ""
-

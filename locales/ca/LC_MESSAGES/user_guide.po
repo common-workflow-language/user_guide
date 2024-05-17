@@ -8,48 +8,59 @@ msgstr ""
 "Project-Id-Version: Common Workflow Language User Guide\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-01-25 14:33+0100\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: Automatically generated\n"
-"Language-Team: none\n"
+"PO-Revision-Date: 2024-05-17 10:02+0000\n"
+"Last-Translator: Núria Queralt Rosinach <nqueralt.r@gmail.com>\n"
+"Language-Team: Catalan <https://hosted.weblate.org/projects/commonwl/"
+"user-guide/ca/>\n"
 "Language: ca\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 5.6-dev\n"
 
 #: ../../LICENSE.md:2
 #: 4e203044f0464fd5a3256430391dde12
+#, fuzzy
 msgid "Licenses"
-msgstr ""
+msgstr "Llicències"
 
 #: ../../LICENSE.md:4
 #: 79a9837f877147fa8e3931968aae7fb5
 msgid "Instructional Material"
-msgstr ""
+msgstr "Material Didàctic"
 
 #: ../../LICENSE.md:6
 #: 747f9dd48bc54f44adcd8b18c57f4d9d
 msgid "All Common Workflow Language project instructional material and changes to the structure are also made available under the [Creative Commons Attribution license][cc-by-human]. The following is a human-readable summary of (and not a substitute for) the [full legal text of the CC BY 4.0 license][cc-by-legal]."
 msgstr ""
+"Tot el material didàctic del projecte Common Workflow Language i els canvis "
+"de l’estructura estan disponibles sota la llicència [Creative Commons "
+"Attribution License][cc-by-human]. El següent és un resum (i no un substitut)"
+" en format llegible per persones del [text legal complet de la llicència CC "
+"BY 4.0][cc-by-legal]."
 
 #: ../../LICENSE.md:12
 #: 98f18f72afa043f9a79aa9b5fc8bdf22
 msgid "You are free:"
-msgstr ""
+msgstr "Vostè és lliure de:"
 
 #: ../../LICENSE.md:14
 #: 466be810dd8d4a838e0edb5869f2c4eb
 msgid "to **Share**---copy and redistribute the material in any medium or format"
 msgstr ""
+"a **Compartir**---còpia i redistribueix el material en qualsevol medi o "
+"format"
 
 #: ../../LICENSE.md:15
 #: 18a3a0aec35743848c97bc178f9c94ff
 msgid "to **Adapt**---remix, transform, and build upon the material"
-msgstr ""
+msgstr "a **Adaptar**---remescla, transforma i construeix segons el material"
 
 #: ../../LICENSE.md:17
 #: b746b1e4dca14de1a8e18036b7602a73
 msgid "for any purpose, even commercially."
-msgstr ""
+msgstr "per qualsevol propòsit, fins i tot comercial."
 
 #: ../../LICENSE.md:19
 #: 6021e65292a149d5b15e14491f3eb05e
