@@ -9,8 +9,8 @@ msgstr ""
 "Project-Id-Version: Common Workflow Language User Guide\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-12-16 11:48+0100\n"
-"PO-Revision-Date: 2024-05-16 13:22+0000\n"
-"Last-Translator: Núria Queralt Rosinach <nqueralt.r@gmail.com>\n"
+"PO-Revision-Date: 2024-05-17 10:02+0000\n"
+"Last-Translator: José Raúl Romero <jrromero@uco.es>\n"
 "Language-Team: Spanish <https://hosted.weblate.org/projects/commonwl/"
 "user-guide/es/>\n"
 "Language: es\n"
@@ -184,11 +184,11 @@ msgstr "Preguntas frecuentes"
 
 #: ../../src/faq.md:11 370a9659c7904ef6b5e1ae7480f82ef6
 msgid "How do I create non \"`File`\" types using `evalFrom`?"
-msgstr ""
+msgstr "¿Cómo creo tipos que no sean \"`File`\" utilizando `evalFrom`?"
 
 #: ../../src/faq.md:41 8333f51e3f5945fe8963adfc6685bcb1
 msgid "How do I rename an input file?"
-msgstr ""
+msgstr "¿Cómo renombro un fichero de entrada?"
 
 #: ../../src/faq.md:43 f6b88d9154d049d7807afa9bb0f1ac98
 msgid ""
@@ -197,16 +197,23 @@ msgid ""
 "produced from another step in a workflow, and don't want to work with the"
 " default names that these files were given when they were created."
 msgstr ""
+"Este ejemplo muestra como cambiar el nombre de un fichero de entrada como "
+"parte de la descripción de una herramienta. Esto podría ser útil cuando se "
+"están tomando archivos producidos por otro paso del flujo de trabajo y no se "
+"desea trabajar con los nombres predeterminados que se les asignó cuando "
+"fueron creados."
 
 #: ../../src/faq.md:59 833510f5896b4a6eb5875d25eca5b047
 msgid "How do I rename an output file?"
-msgstr ""
+msgstr "¿Cómo renombro un fichero de salida?"
 
 #: ../../src/faq.md:61 207e2f97d1c44233ae3f109c5a6ec944
 msgid ""
 "This example demonstrates how to change the name of an output file from "
 "the default name given to it by a tool:"
 msgstr ""
+"Este ejemplo muestra cómo cambiar el nombre de un fichero de salida a partir "
+"del nombre por defecto asignado por una herramienta:"
 
 #: ../../src/faq.md:83 d66acc583da24273980a52be03e79e91
 msgid ""
@@ -214,6 +221,9 @@ msgid ""
 " engines will rename the file using the new name for subsequent steps or "
 "as a workflow-level output."
 msgstr ""
+"Cambiando el campo `basename` en  `outputEval`, los motores de flujo de "
+"trabajo CWL renombrarán el fichero utilizando el nuevo nombre para los pasos "
+"posteriores o como salida a nivel de flujo de trabajo."
 
 #: ../../src/faq.md:86 8641f105131b4ac1bca7e0a46756ef79
 msgid "How do I reference a local script?"
@@ -230,16 +240,21 @@ msgid ""
 "the shell script directly (without explicitly using the `sh` or `bash` "
 "commands)."
 msgstr ""
+"El primer método implica añadir la ruta al directorio donde se alojan los "
+"scripts a la variable de entorno `PATH`. Esto permite ejecutar directamente "
+"el script de shell (sin necesidad de utilizar explícitamente comandos `sh` o "
+"`bash`)."
 
 #: ../../src/faq.md:93 34ebca4487a54ceab5d087105820e945
 msgid "Start with adding a _shebang_ at the top of your file:"
-msgstr ""
+msgstr "Se empieza añadiendo _shebang_ en la parte superior del fichero:"
 
 #: ../../src/faq.md:99 6b04a4dcdada4515b28d74aacff3537a
 msgid ""
 "After that, make the script executable with the command `chmod +x "
 "scriptname.sh`"
 msgstr ""
+"Después, se hace el script ejecutable con el comando `chmod +x scriptname.sh`"
 
 #: ../../src/faq.md:101 756ab4f7edcf42d3872bb86818e088c3
 msgid ""
@@ -247,26 +262,37 @@ msgid ""
 "located. (It is good practice to use `$HOME/bin` for storing your own "
 "scripts)."
 msgstr ""
+"Finalmente, se modifica el `PATH` para añadir el directorio en el que se "
+"aloja el script. (Es buena práctica utilizar `$HOME/bin` para alojar los "
+"scripts propios.)"
 
 #: ../../src/faq.md:108 efb46b3a2d7c4c51b65998602bfa6f18
 msgid "Now you can use `baseCommand: scriptname.sh` to run the script directly."
 msgstr ""
+"Ahora se puede utilizar `baseCommand: scriptname.sh` para ejecutar el script "
+"directamente."
 
 #: ../../src/faq.md:117 844938d5d2304c6cb03184b4b4b0b024
 msgid ""
 "When you wish to share your work later, you can place your script in a "
 "software container in the Docker format."
 msgstr ""
+"Cuando se desee compartir el trabajo más tarde, se puede colocar su script "
+"en un contenedor de software en formato Docker."
 
 #: ../../src/faq.md:119 796ce8155e32486d9651f8f13bfa3148
 msgid ""
 "The second method involves including an input of `type: File` in the "
 "script itself:"
 msgstr ""
+"El segundo método consiste en incluir una entrada con `type: File` en el "
+"propio script:"
 
 #: ../../src/faq.md:138 ba246320fdd94a1aab4736f83718d793
 msgid "How can I set `self`-based input bindings for optional inputs?"
 msgstr ""
+"¿Cómo puedo configurar enlaces de entrada basados en `self` para entradas "
+"opcionales?"
 
 #: ../../src/faq.md:140 6169b7be9af7448abcb57eaf91e1cc91
 msgid ""
@@ -274,6 +300,10 @@ msgid ""
 "input binding makes use of `self`. Below is an example workaround for "
 "this, pending a more sophisticated fix."
 msgstr ""
+"Actualmente, `cwltool` no puede hacer frente a la falta de entradas "
+"opcionales si su enlace de entrada hace uso de `self`. A continuación se "
+"muestra un ejemplo de solución para esto, a la espera de una solución más "
+"sofisticada."
 
 #: ../../src/faq.md:165 6c98b7948059411b8e09cf03a552c5ab
 msgid "How can I model a \"one-or-the-other\" parameter?"
@@ -284,12 +314,17 @@ msgid ""
 "Below is an example showing how to specify different strings to be added "
 "to a command line, based on the value given to a Boolean parameter."
 msgstr ""
+"A continuación se muestra un ejemplo de cómo especificar diferentes cadenas "
+"que se añadirán a una línea de comandos, en función del valor dado a un "
+"parámetro booleano."
 
 #: ../../src/faq.md:188 5c9980839f404ba6aef92ef23034500f
 msgid ""
 "How do I connect a solo value to an input that expects an array of that "
 "type?"
 msgstr ""
+"¿Cómo puedo conectar un valor aislado a una entrada que espera un array de "
+"ese tipo?"
 
 #: ../../src/faq.md:190 2525baf16c1f4725b096f33fd99009cf
 msgid ""
@@ -298,10 +333,14 @@ msgid ""
 " along with [`linkMerge: "
 "merge_nested`](https://www.commonwl.org/v1.0/Workflow.html#WorkflowStepInput):"
 msgstr ""
+"Añade un [`MultipleInputFeatureRequirement`](https://www.commonwl.org/v1.0/"
+"Workflow.html#MultipleInputFeatureRequirement) junto con [`linkMerge: "
+"merge_nested`](https://www.commonwl.org/v1.0/Workflow."
+"html#WorkflowStepInput):"
 
 #: ../../src/faq.md:194 a00d5d96b15048a79ae099d22d63bb42
 msgid "merge_nested"
-msgstr ""
+msgstr "merge_nested"
 
 #: ../../src/faq.md:196 3a92c6cc5c2b40ffa0d692d03bad5c87
 msgid ""
@@ -309,10 +348,15 @@ msgid ""
 " link. If \"merge_nested\" is specified with a single link, the value "
 "from the link must be wrapped in a single-item list."
 msgstr ""
+"La entrada debe ser una matriz que conste exactamente de una entrada por "
+"cada enlace de entrada. Si se especifica \"merge_nested\" con un solo "
+"enlace, el valor del enlace debe envolverse en una lista de un solo elemento."
 
 #: ../../src/faq.md:199 3af16c07e3f148ddb8849c94a3864158
 msgid "Which means \"create a list with exactly these sources as elements\"."
 msgstr ""
+"¿Qué significa \"crear una lista con exactamente estas fuentes como "
+"elementos\"?"
 
 #: ../../src/faq.md:201 0ea3de393d2f42aeb82658c85a19ec45
 msgid ""
@@ -322,26 +366,35 @@ msgid ""
 "and add `linkMerge: merge_nested` under the appropriate `in` entry of the"
 " destination step."
 msgstr ""
+"O en otras palabras: si el destino es de tipo `File[]` (un array de `File`s) "
+"y el origen es un único `File`, entonces se añade "
+"`MultipleInputFeatureRequirement` al `requirements` a nivel de flujo de "
+"trabajo y se añade `linkMerge: merge_nested` bajo la entrada `in` apropiada "
+"del paso de destino."
 
 #: ../../src/faq.md:229 2f1bbb611c9c4f80b7ae0566432f2f35
 msgid "How do make an input optional? 💯"
-msgstr ""
+msgstr "¿Cómo hago una entrada opcional? 💯"
 
 #: ../../src/faq.md:231 08a226efe5d141e68215ac77725033db
 msgid ""
 "To make an input parameter optional, add a question mark to the type "
 "declaration."
 msgstr ""
+"Para crear un parámetro de entrada opcional, se añade un símbolo de "
+"interrogación a la declaración del tipo."
 
 #: ../../src/faq.md:247 06e70a855a8f455ca0536eead77073c2
 msgid "<a name=\"enuminputs\"></a>"
-msgstr ""
+msgstr "<a name=\"enuminputs\"></a>"
 
 #: ../../src/faq.md:248 7fda8eeb6a7f4689993ed0118c77f023
 msgid ""
 "How do I specify an input that must come from a list of predefined values"
 " (i.e. How do I use enum inputs) ?"
 msgstr ""
+"¿Cómo especifico una entrada que debe proceder de una lista de valores "
+"predeterminados (esto es, cómo utilizar entradas \"enum\")?"
 
 #: ../../src/faq.md:250 b1934a82553b4da3b7f981e576245dd8
 msgid ""
@@ -350,16 +403,22 @@ msgid ""
 " form style. It does the same thing as the question mark on the other "
 "inputs.**"
 msgstr ""
+"Para los indicadores de línea de comandos que requieren una entrada "
+"específica como argumento, se puede declarar un tipo enum en CWL. **"
+"Especificar null aquí se conoce como estilo de forma larga. Hace lo mismo "
+"que el signo de interrogación en las otras entradas.**"
 
 #: ../../src/faq.md:267 17fc34fad2094f5ea60e963dabd632b8
 msgid "<a name=\"recordinputs\"></a>"
-msgstr ""
+msgstr "<a name=\"recordinputs\"></a>"
 
 #: ../../src/faq.md:268 4d7acfbeba5b4e9cb31f08ef4b280447
 msgid ""
 "How do I describe dependent or exclusive input parameters(e.g. How do I "
 "use record inputs)?"
 msgstr ""
+"¿Cómo describo los parámetros de entrada dependientes o exclusivos (por "
+"ejemplo, cómo utilizo las entradas de registro)?"
 
 #: ../../src/faq.md:270 949ce95c082f4a05891a55fee25d4873
 msgid ""
@@ -367,10 +426,13 @@ msgid ""
 "**dependent** a special record type can be defined. You can also specify "
 "null here to create optional inputs."
 msgstr ""
+"Para los indicadores de línea de comandos que son mutuamente excluyentes ****"
+" o dependientes **** se puede definir un tipo de registro especial. También "
+"se puede especificar null aquí para crear entradas opcionales."
 
 #: ../../src/faq.md:322 6fd3c469d11d4d52b9fbb7a3d443a8db
 msgid "How do I set mutually exclusive parameters?"
-msgstr ""
+msgstr "¿Cómo configuro parámetros mutuamente excluyentes?"
 
 #: ../../src/faq.md:324 a0687ce5c1f940538abc977cad83138f
 msgid ""
@@ -380,44 +442,58 @@ msgid ""
 "field you want to set. The source field is set to indicate the input from"
 " the workflow to be used as the value."
 msgstr ""
+"Para establecer correctamente los campos en un tipo de entrada de registro, "
+"es necesario pasar un diccionario a la entrada para establecer correctamente "
+"los parámetros. Esto se hace utilizando JavaScript en línea y devolviendo el "
+"diccionario con la clave del campo que desea establecer. El campo fuente se "
+"establece para indicar la entrada del flujo de trabajo que se utilizará como "
+"valor."
 
 #: ../../src/faq.md:342 12869ce2cdab4c858f3232c6158514f1
 msgid "How can I set Booleans?"
-msgstr ""
+msgstr "¿Cómo puedo establecer valores de tipo Boolean?"
 
 #: ../../src/faq.md:344 8dcb88744e5840029de0e1bbf1c4b967
 msgid "These can be set by using the default field"
-msgstr ""
+msgstr "Se pueden asignar utilizando valores \"default\""
 
 #: ../../src/faq.md:349 972b7a5551bb43e6b9fa30e0cb713ff7
 msgid "What should I do when concatenating strings in inputs?"
-msgstr ""
+msgstr "¿Qué debería hacer para concatenar cadenas en las entradas?"
 
 #: ../../src/faq.md:351 68f74afc21d846dd9070d45dec0cc1d8
 msgid "The valueFrom field must be used instead of default."
-msgstr ""
+msgstr "El campo `valueFrom` debe ser utilizado en lugar de `default`."
 
 #: ../../src/faq.md:359 53b633c6f8644106beb95ae567eb0708
 msgid ""
 "I get `cwltool` errors due to filenames with space characters inside. "
 "What should I do?"
 msgstr ""
+"Obtengo errores en `cwltool` debido a nombres de fichero con caracteres de "
+"espacio. ¿Qué debo hacer?"
 
 #: ../../src/faq.md:361 7101bb5cb69e4faca4e60eabb4eb258e
 msgid "`cwltool` does not allow some characters in filenames by default."
 msgstr ""
+"`cwltool` no me permite algunos caracteres en los nombres de fichero por "
+"defecto."
 
 #: ../../src/faq.md:363 0eaf834b0ca847cca6736794895f5f81
 msgid ""
 "For example, the filename `a space is here.txt` includes 3 space "
 "characters."
 msgstr ""
+"Por ejemplo, el nombre de fichero `aqui hay un espacio.txt` incluye 3 "
+"caracteres de espacio."
 
 #: ../../src/faq.md:371 7dabd8aab7a5423b842433616640bac0
 msgid ""
 "If you can not avoid these dangerous characters, then pass `--relax-path-"
 "checks` to `cwltool`."
 msgstr ""
+"Si no puede evitar estos caracteres peligrosos, pase `--relax-path-checks` a "
+"`cwltool`."
 
 #: ../../src/faq.md:373 b7ec33f38ce74ceb890f4379e4c41054
 msgid ""
