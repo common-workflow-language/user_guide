@@ -493,22 +493,22 @@ input file from its leading directory path.</p>
 <p>Now invoke <code class="docutils literal notranslate"><span class="pre">cwltool</span></code> with the tool description and the input object on the
 command line:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>cwltool<span class="w"> </span>linkfile.cwl<span class="w"> </span>arguments-job.yml
-INFO<span class="w"> </span>/opt/hostedtoolcache/Python/3.9.19/x64/bin/cwltool<span class="w"> </span><span class="m">3</span>.1.20240404144621
+INFO<span class="w"> </span>/opt/hostedtoolcache/Python/3.9.19/x64/bin/cwltool<span class="w"> </span><span class="m">3</span>.1.20240508115724
 INFO<span class="w"> </span>Resolved<span class="w"> </span><span class="s1">&#39;linkfile.cwl&#39;</span><span class="w"> </span>to<span class="w"> </span><span class="s1">&#39;file:///home/runner/work/user_guide/user_guide/src/_includes/cwl/staging-input-files/linkfile.cwl&#39;</span>
-INFO<span class="w"> </span><span class="o">[</span>job<span class="w"> </span>linkfile.cwl<span class="o">]</span><span class="w"> </span>/tmp/0xmua9_b$<span class="w"> </span>docker<span class="w"> </span><span class="se">\</span>
+INFO<span class="w"> </span><span class="o">[</span>job<span class="w"> </span>linkfile.cwl<span class="o">]</span><span class="w"> </span>/tmp/1q180if1$<span class="w"> </span>docker<span class="w"> </span><span class="se">\</span>
 <span class="w">    </span>run<span class="w"> </span><span class="se">\</span>
 <span class="w">    </span>-i<span class="w"> </span><span class="se">\</span>
-<span class="w">    </span>--mount<span class="o">=</span><span class="nv">type</span><span class="o">=</span>bind,source<span class="o">=</span>/tmp/0xmua9_b,target<span class="o">=</span>/mklorJ<span class="w"> </span><span class="se">\</span>
-<span class="w">    </span>--mount<span class="o">=</span><span class="nv">type</span><span class="o">=</span>bind,source<span class="o">=</span>/tmp/pc1fslyd,target<span class="o">=</span>/tmp<span class="w"> </span><span class="se">\</span>
-<span class="w">    </span>--mount<span class="o">=</span><span class="nv">type</span><span class="o">=</span>bind,source<span class="o">=</span>/home/runner/work/user_guide/user_guide/src/_includes/cwl/staging-input-files/Hello.java,target<span class="o">=</span>/mklorJ/Hello.java,readonly<span class="w"> </span><span class="se">\</span>
-<span class="w">    </span>--workdir<span class="o">=</span>/mklorJ<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>--mount<span class="o">=</span><span class="nv">type</span><span class="o">=</span>bind,source<span class="o">=</span>/tmp/1q180if1,target<span class="o">=</span>/tsTZSG<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>--mount<span class="o">=</span><span class="nv">type</span><span class="o">=</span>bind,source<span class="o">=</span>/tmp/88509mav,target<span class="o">=</span>/tmp<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>--mount<span class="o">=</span><span class="nv">type</span><span class="o">=</span>bind,source<span class="o">=</span>/home/runner/work/user_guide/user_guide/src/_includes/cwl/staging-input-files/Hello.java,target<span class="o">=</span>/tsTZSG/Hello.java,readonly<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>--workdir<span class="o">=</span>/tsTZSG<span class="w"> </span><span class="se">\</span>
 <span class="w">    </span>--read-only<span class="o">=</span><span class="nb">true</span><span class="w"> </span><span class="se">\</span>
 <span class="w">    </span>--net<span class="o">=</span>none<span class="w"> </span><span class="se">\</span>
 <span class="w">    </span>--user<span class="o">=</span><span class="m">1001</span>:127<span class="w"> </span><span class="se">\</span>
 <span class="w">    </span>--rm<span class="w"> </span><span class="se">\</span>
-<span class="w">    </span>--cidfile<span class="o">=</span>/tmp/_ym220w2/20240508123656-141799.cid<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>--cidfile<span class="o">=</span>/tmp/0tedw2fm/20240518114435-199760.cid<span class="w"> </span><span class="se">\</span>
 <span class="w">    </span>--env<span class="o">=</span><span class="nv">TMPDIR</span><span class="o">=</span>/tmp<span class="w"> </span><span class="se">\</span>
-<span class="w">    </span>--env<span class="o">=</span><span class="nv">HOME</span><span class="o">=</span>/mklorJ<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>--env<span class="o">=</span><span class="nv">HOME</span><span class="o">=</span>/tsTZSG<span class="w"> </span><span class="se">\</span>
 <span class="w">    </span>openjdk:9.0.1-11-slim<span class="w"> </span><span class="se">\</span>
 <span class="w">    </span>javac<span class="w"> </span><span class="se">\</span>
 <span class="w">    </span>Hello.java

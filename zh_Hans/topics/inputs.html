@@ -505,7 +505,7 @@ special types <em>File</em>, <em>Directory</em> and <em>Any</em>.</p>
 <p>You can use <code class="docutils literal notranslate"><span class="pre">cwltool</span></code> to create a template input object. That saves you from having
 to type all the input parameters in an input object file:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>cwltool<span class="w"> </span>--make-template<span class="w"> </span>inp.cwl
-INFO<span class="w"> </span>/opt/hostedtoolcache/Python/3.9.19/x64/bin/cwltool<span class="w"> </span><span class="m">3</span>.1.20240404144621
+INFO<span class="w"> </span>/opt/hostedtoolcache/Python/3.9.19/x64/bin/cwltool<span class="w"> </span><span class="m">3</span>.1.20240508115724
 INFO<span class="w"> </span>Resolved<span class="w"> </span><span class="s1">&#39;inp.cwl&#39;</span><span class="w"> </span>to<span class="w"> </span><span class="s1">&#39;file:///home/runner/work/user_guide/user_guide/src/_includes/cwl/inputs/inp.cwl&#39;</span>
 example_string:<span class="w"> </span>a_string<span class="w">  </span><span class="c1"># type &#39;string&#39;</span>
 example_int:<span class="w"> </span><span class="m">0</span><span class="w">  </span><span class="c1"># type &#39;int&#39;</span>
@@ -524,15 +524,15 @@ example_file:<span class="w">  </span><span class="c1"># type &#39;File&#39; (op
 </div>
 <p>现在，使用 <code class="docutils literal notranslate"><span class="pre">cwltool</span> <span class="pre">inp.cwl</span> <span class="pre">inp-job.yml</span></code> 命令，即指定工具描述和输入对象、通过命令行调用 <code class="docutils literal notranslate"><span class="pre">cwltool</span></code>. 下方文本框描述了这两个命令及命令行的预期输出：</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>cwltool<span class="w"> </span>inp.cwl<span class="w"> </span>inp-job.yml
-INFO<span class="w"> </span>/opt/hostedtoolcache/Python/3.9.19/x64/bin/cwltool<span class="w"> </span><span class="m">3</span>.1.20240404144621
+INFO<span class="w"> </span>/opt/hostedtoolcache/Python/3.9.19/x64/bin/cwltool<span class="w"> </span><span class="m">3</span>.1.20240508115724
 INFO<span class="w"> </span>Resolved<span class="w"> </span><span class="s1">&#39;inp.cwl&#39;</span><span class="w"> </span>to<span class="w"> </span><span class="s1">&#39;file:///home/runner/work/user_guide/user_guide/src/_includes/cwl/inputs/inp.cwl&#39;</span>
-INFO<span class="w"> </span><span class="o">[</span>job<span class="w"> </span>inp.cwl<span class="o">]</span><span class="w"> </span>/tmp/xwexz_8m$<span class="w"> </span><span class="nb">echo</span><span class="w"> </span><span class="se">\</span>
+INFO<span class="w"> </span><span class="o">[</span>job<span class="w"> </span>inp.cwl<span class="o">]</span><span class="w"> </span>/tmp/wa4j5tpa$<span class="w"> </span><span class="nb">echo</span><span class="w"> </span><span class="se">\</span>
 <span class="w">    </span>-f<span class="w"> </span><span class="se">\</span>
 <span class="w">    </span>-i42<span class="w"> </span><span class="se">\</span>
 <span class="w">    </span>--example-string<span class="w"> </span><span class="se">\</span>
 <span class="w">    </span>hello<span class="w"> </span><span class="se">\</span>
-<span class="w">    </span>--file<span class="o">=</span>/tmp/il8tw9ve/stg14a7dbd5-b3d4-421f-8193-b857924db210/whale.txt
--f<span class="w"> </span>-i42<span class="w"> </span>--example-string<span class="w"> </span>hello<span class="w"> </span>--file<span class="o">=</span>/tmp/il8tw9ve/stg14a7dbd5-b3d4-421f-8193-b857924db210/whale.txt
+<span class="w">    </span>--file<span class="o">=</span>/tmp/v506yue_/stgc2d1c1e1-674f-47cf-b764-5609652febd3/whale.txt
+-f<span class="w"> </span>-i42<span class="w"> </span>--example-string<span class="w"> </span>hello<span class="w"> </span>--file<span class="o">=</span>/tmp/v506yue_/stgc2d1c1e1-674f-47cf-b764-5609652febd3/whale.txt
 INFO<span class="w"> </span><span class="o">[</span>job<span class="w"> </span>inp.cwl<span class="o">]</span><span class="w"> </span>completed<span class="w"> </span>success
 <span class="o">{}</span>INFO<span class="w"> </span>Final<span class="w"> </span>process<span class="w"> </span>status<span class="w"> </span>is<span class="w"> </span>success
 </pre></div>
@@ -635,9 +635,9 @@ line.  Let's look at each example in detail.</p>
 </div>
 <p>现在，调用命令 <code class="docutils literal notranslate"><span class="pre">cwltool</span></code> 并为它提供工具描述和输入对象：</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>cwltool<span class="w"> </span>array-inputs.cwl<span class="w"> </span>array-inputs-job.yml
-INFO<span class="w"> </span>/opt/hostedtoolcache/Python/3.9.19/x64/bin/cwltool<span class="w"> </span><span class="m">3</span>.1.20240404144621
+INFO<span class="w"> </span>/opt/hostedtoolcache/Python/3.9.19/x64/bin/cwltool<span class="w"> </span><span class="m">3</span>.1.20240508115724
 INFO<span class="w"> </span>Resolved<span class="w"> </span><span class="s1">&#39;array-inputs.cwl&#39;</span><span class="w"> </span>to<span class="w"> </span><span class="s1">&#39;file:///home/runner/work/user_guide/user_guide/src/_includes/cwl/inputs/array-inputs.cwl&#39;</span>
-INFO<span class="w"> </span><span class="o">[</span>job<span class="w"> </span>array-inputs.cwl<span class="o">]</span><span class="w"> </span>/tmp/mnynhms9$<span class="w"> </span><span class="nb">echo</span><span class="w"> </span><span class="se">\</span>
+INFO<span class="w"> </span><span class="o">[</span>job<span class="w"> </span>array-inputs.cwl<span class="o">]</span><span class="w"> </span>/tmp/x3351nz0$<span class="w"> </span><span class="nb">echo</span><span class="w"> </span><span class="se">\</span>
 <span class="w">    </span>-A<span class="w"> </span><span class="se">\</span>
 <span class="w">    </span>one<span class="w"> </span><span class="se">\</span>
 <span class="w">    </span>two<span class="w"> </span><span class="se">\</span>
@@ -645,7 +645,7 @@ INFO<span class="w"> </span><span class="o">[</span>job<span class="w"> </span>a
 <span class="w">    </span>-B<span class="o">=</span>four<span class="w"> </span><span class="se">\</span>
 <span class="w">    </span>-B<span class="o">=</span>five<span class="w"> </span><span class="se">\</span>
 <span class="w">    </span>-B<span class="o">=</span>six<span class="w"> </span><span class="se">\</span>
-<span class="w">    </span>-C<span class="o">=</span>seven,eight,nine<span class="w"> </span>&gt;<span class="w"> </span>/tmp/mnynhms9/output.txt
+<span class="w">    </span>-C<span class="o">=</span>seven,eight,nine<span class="w"> </span>&gt;<span class="w"> </span>/tmp/x3351nz0/output.txt
 INFO<span class="w"> </span><span class="o">[</span>job<span class="w"> </span>array-inputs.cwl<span class="o">]</span><span class="w"> </span>completed<span class="w"> </span>success
 <span class="o">{</span>
 <span class="w">    </span><span class="s2">&quot;example_out&quot;</span>:<span class="w"> </span><span class="o">{</span>
@@ -722,7 +722,7 @@ INFO<span class="w"> </span><span class="o">[</span>job<span class="w"> </span>a
 </div>
 </div>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>cwltool<span class="w"> </span>record.cwl<span class="w"> </span>record-job1.yml
-INFO<span class="w"> </span>/opt/hostedtoolcache/Python/3.9.19/x64/bin/cwltool<span class="w"> </span><span class="m">3</span>.1.20240404144621
+INFO<span class="w"> </span>/opt/hostedtoolcache/Python/3.9.19/x64/bin/cwltool<span class="w"> </span><span class="m">3</span>.1.20240508115724
 INFO<span class="w"> </span>Resolved<span class="w"> </span><span class="s1">&#39;record.cwl&#39;</span><span class="w"> </span>to<span class="w"> </span><span class="s1">&#39;file:///home/runner/work/user_guide/user_guide/src/_includes/cwl/inputs/record.cwl&#39;</span>
 ERROR<span class="w"> </span>Workflow<span class="w"> </span>error,<span class="w"> </span>try<span class="w"> </span>again<span class="w"> </span>with<span class="w"> </span>--debug<span class="w"> </span><span class="k">for</span><span class="w"> </span>more<span class="w"> </span>information:
 Invalid<span class="w"> </span>job<span class="w"> </span>input<span class="w"> </span>record:
@@ -743,17 +743,17 @@ Invalid<span class="w"> </span>job<span class="w"> </span>input<span class="w"> 
 </div>
 </div>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>cwltool<span class="w"> </span>record.cwl<span class="w"> </span>record-job2.yml
-INFO<span class="w"> </span>/opt/hostedtoolcache/Python/3.9.19/x64/bin/cwltool<span class="w"> </span><span class="m">3</span>.1.20240404144621
+INFO<span class="w"> </span>/opt/hostedtoolcache/Python/3.9.19/x64/bin/cwltool<span class="w"> </span><span class="m">3</span>.1.20240508115724
 INFO<span class="w"> </span>Resolved<span class="w"> </span><span class="s1">&#39;record.cwl&#39;</span><span class="w"> </span>to<span class="w"> </span><span class="s1">&#39;file:///home/runner/work/user_guide/user_guide/src/_includes/cwl/inputs/record.cwl&#39;</span>
 <span class="hll">record-job2.yml:6:3:<span class="w"> </span>Warning:<span class="w"> </span>invalid<span class="w"> </span>field<span class="w"> </span><span class="s1">&#39;itemD&#39;</span>,<span class="w"> </span>expected<span class="w"> </span>one<span class="w"> </span>of:<span class="w"> </span><span class="s1">&#39;itemC&#39;</span>
 </span>WARNING<span class="w"> </span>record-job2.yml:6:3:<span class="w"> </span>Warning:<span class="w"> </span>invalid<span class="w"> </span>field<span class="w"> </span><span class="s1">&#39;itemD&#39;</span>,<span class="w"> </span>expected<span class="w"> </span>one<span class="w"> </span>of:<span class="w"> </span><span class="s1">&#39;itemC&#39;</span>
-INFO<span class="w"> </span><span class="o">[</span>job<span class="w"> </span>record.cwl<span class="o">]</span><span class="w"> </span>/tmp/xxr2vghh$<span class="w"> </span><span class="nb">echo</span><span class="w"> </span><span class="se">\</span>
+INFO<span class="w"> </span><span class="o">[</span>job<span class="w"> </span>record.cwl<span class="o">]</span><span class="w"> </span>/tmp/xhxufcbp$<span class="w"> </span><span class="nb">echo</span><span class="w"> </span><span class="se">\</span>
 <span class="w">    </span>-A<span class="w"> </span><span class="se">\</span>
 <span class="w">    </span>one<span class="w"> </span><span class="se">\</span>
 <span class="w">    </span>-B<span class="w"> </span><span class="se">\</span>
 <span class="hll"><span class="w">    </span>two<span class="w"> </span><span class="se">\</span>
 </span><span class="hll"><span class="w">    </span>-C<span class="w"> </span><span class="se">\</span>
-</span><span class="w">    </span>three<span class="w"> </span>&gt;<span class="w"> </span>/tmp/xxr2vghh/output.txt
+</span><span class="w">    </span>three<span class="w"> </span>&gt;<span class="w"> </span>/tmp/xhxufcbp/output.txt
 INFO<span class="w"> </span><span class="o">[</span>job<span class="w"> </span>record.cwl<span class="o">]</span><span class="w"> </span>completed<span class="w"> </span>success
 <span class="o">{</span>
 <span class="w">    </span><span class="s2">&quot;example_out&quot;</span>:<span class="w"> </span><span class="o">{</span>
@@ -783,15 +783,15 @@ INFO<span class="w"> </span><span class="o">[</span>job<span class="w"> </span>r
 </div>
 </div>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>cwltool<span class="w"> </span>record.cwl<span class="w"> </span>record-job3.yml
-INFO<span class="w"> </span>/opt/hostedtoolcache/Python/3.9.19/x64/bin/cwltool<span class="w"> </span><span class="m">3</span>.1.20240404144621
+INFO<span class="w"> </span>/opt/hostedtoolcache/Python/3.9.19/x64/bin/cwltool<span class="w"> </span><span class="m">3</span>.1.20240508115724
 INFO<span class="w"> </span>Resolved<span class="w"> </span><span class="s1">&#39;record.cwl&#39;</span><span class="w"> </span>to<span class="w"> </span><span class="s1">&#39;file:///home/runner/work/user_guide/user_guide/src/_includes/cwl/inputs/record.cwl&#39;</span>
-INFO<span class="w"> </span><span class="o">[</span>job<span class="w"> </span>record.cwl<span class="o">]</span><span class="w"> </span>/tmp/8osg0yxv$<span class="w"> </span><span class="nb">echo</span><span class="w"> </span><span class="se">\</span>
+INFO<span class="w"> </span><span class="o">[</span>job<span class="w"> </span>record.cwl<span class="o">]</span><span class="w"> </span>/tmp/nfwav8mj$<span class="w"> </span><span class="nb">echo</span><span class="w"> </span><span class="se">\</span>
 <span class="w">    </span>-A<span class="w"> </span><span class="se">\</span>
 <span class="w">    </span>one<span class="w"> </span><span class="se">\</span>
 <span class="w">    </span>-B<span class="w"> </span><span class="se">\</span>
 <span class="w">    </span>two<span class="w"> </span><span class="se">\</span>
 <span class="hll"><span class="w">    </span>-D<span class="w"> </span><span class="se">\</span>
-</span><span class="hll"><span class="w">    </span>four<span class="w"> </span>&gt;<span class="w"> </span>/tmp/8osg0yxv/output.txt
+</span><span class="hll"><span class="w">    </span>four<span class="w"> </span>&gt;<span class="w"> </span>/tmp/nfwav8mj/output.txt
 </span>INFO<span class="w"> </span><span class="o">[</span>job<span class="w"> </span>record.cwl<span class="o">]</span><span class="w"> </span>completed<span class="w"> </span>success
 <span class="o">{</span>
 <span class="w">    </span><span class="s2">&quot;example_out&quot;</span>:<span class="w"> </span><span class="o">{</span>
@@ -853,9 +853,9 @@ parameter without taking into consideration a <code class="docutils literal notr
 valid value, such as <code class="docutils literal notranslate"><span class="pre">fasta</span></code> (one of the possible values of the enum), your
 command should execute successfully:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>cwltool<span class="w"> </span>exclusive-parameter-expressions.cwl<span class="w"> </span>--file_format<span class="w"> </span>fasta
-INFO<span class="w"> </span>/opt/hostedtoolcache/Python/3.9.19/x64/bin/cwltool<span class="w"> </span><span class="m">3</span>.1.20240404144621
+INFO<span class="w"> </span>/opt/hostedtoolcache/Python/3.9.19/x64/bin/cwltool<span class="w"> </span><span class="m">3</span>.1.20240508115724
 INFO<span class="w"> </span>Resolved<span class="w"> </span><span class="s1">&#39;exclusive-parameter-expressions.cwl&#39;</span><span class="w"> </span>to<span class="w"> </span><span class="s1">&#39;file:///home/runner/work/user_guide/user_guide/src/_includes/cwl/inputs/exclusive-parameter-expressions.cwl&#39;</span>
-INFO<span class="w"> </span><span class="o">[</span>job<span class="w"> </span>exclusive-parameter-expressions.cwl<span class="o">]</span><span class="w"> </span>/tmp/eftjdyvd$<span class="w"> </span><span class="nb">true</span><span class="w"> </span><span class="se">\</span>
+INFO<span class="w"> </span><span class="o">[</span>job<span class="w"> </span>exclusive-parameter-expressions.cwl<span class="o">]</span><span class="w"> </span>/tmp/rupjbln5$<span class="w"> </span><span class="nb">true</span><span class="w"> </span><span class="se">\</span>
 <span class="w">    </span>--format<span class="w"> </span><span class="se">\</span>
 <span class="w">    </span>fasta
 INFO<span class="w"> </span><span class="o">[</span>job<span class="w"> </span>exclusive-parameter-expressions.cwl<span class="o">]</span><span class="w"> </span>completed<span class="w"> </span>success
@@ -868,9 +868,9 @@ INFO<span class="w"> </span><span class="o">[</span>job<span class="w"> </span>e
 evaluated to <code class="docutils literal notranslate"><span class="pre">null</span></code>, which does not match the expected type for the
 output field (a <code class="docutils literal notranslate"><span class="pre">string</span></code>), resulting in failure when running your workflow.</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>cwltool<span class="w"> </span>exclusive-parameter-expressions.cwl
-INFO<span class="w"> </span>/opt/hostedtoolcache/Python/3.9.19/x64/bin/cwltool<span class="w"> </span><span class="m">3</span>.1.20240404144621
+INFO<span class="w"> </span>/opt/hostedtoolcache/Python/3.9.19/x64/bin/cwltool<span class="w"> </span><span class="m">3</span>.1.20240508115724
 INFO<span class="w"> </span>Resolved<span class="w"> </span><span class="s1">&#39;exclusive-parameter-expressions.cwl&#39;</span><span class="w"> </span>to<span class="w"> </span><span class="s1">&#39;file:///home/runner/work/user_guide/user_guide/src/_includes/cwl/inputs/exclusive-parameter-expressions.cwl&#39;</span>
-INFO<span class="w"> </span><span class="o">[</span>job<span class="w"> </span>exclusive-parameter-expressions.cwl<span class="o">]</span><span class="w"> </span>/tmp/9mulc9wx$<span class="w"> </span><span class="nb">true</span>
+INFO<span class="w"> </span><span class="o">[</span>job<span class="w"> </span>exclusive-parameter-expressions.cwl<span class="o">]</span><span class="w"> </span>/tmp/t4yvkoae$<span class="w"> </span><span class="nb">true</span>
 <span class="hll">ERROR<span class="w"> </span><span class="o">[</span>job<span class="w"> </span>exclusive-parameter-expressions.cwl<span class="o">]</span><span class="w"> </span>Job<span class="w"> </span>error:
 </span><span class="hll">Error<span class="w"> </span>validating<span class="w"> </span>output<span class="w"> </span>record.<span class="w"> </span>the<span class="w"> </span><span class="s1">&#39;text_output&#39;</span><span class="w"> </span>field<span class="w"> </span>is<span class="w"> </span>not<span class="w"> </span>valid<span class="w"> </span>because
 </span><span class="hll"><span class="w">  </span>the<span class="w"> </span>value<span class="w"> </span>is<span class="w"> </span>not<span class="w"> </span>string

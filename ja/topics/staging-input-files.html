@@ -488,22 +488,22 @@ document.write(`
 </div>
 <p>ここで、コマンドラインにツール定義と入力オブジェクトを指定して、<code class="docutils literal notranslate"><span class="pre">cwltool</span></code> を起動します：</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>cwltool<span class="w"> </span>linkfile.cwl<span class="w"> </span>arguments-job.yml
-INFO<span class="w"> </span>/opt/hostedtoolcache/Python/3.9.19/x64/bin/cwltool<span class="w"> </span><span class="m">3</span>.1.20240404144621
+INFO<span class="w"> </span>/opt/hostedtoolcache/Python/3.9.19/x64/bin/cwltool<span class="w"> </span><span class="m">3</span>.1.20240508115724
 INFO<span class="w"> </span>Resolved<span class="w"> </span><span class="s1">&#39;linkfile.cwl&#39;</span><span class="w"> </span>to<span class="w"> </span><span class="s1">&#39;file:///home/runner/work/user_guide/user_guide/src/_includes/cwl/staging-input-files/linkfile.cwl&#39;</span>
-INFO<span class="w"> </span><span class="o">[</span>job<span class="w"> </span>linkfile.cwl<span class="o">]</span><span class="w"> </span>/tmp/f3ufyh3_$<span class="w"> </span>docker<span class="w"> </span><span class="se">\</span>
+INFO<span class="w"> </span><span class="o">[</span>job<span class="w"> </span>linkfile.cwl<span class="o">]</span><span class="w"> </span>/tmp/c4p9tezt$<span class="w"> </span>docker<span class="w"> </span><span class="se">\</span>
 <span class="w">    </span>run<span class="w"> </span><span class="se">\</span>
 <span class="w">    </span>-i<span class="w"> </span><span class="se">\</span>
-<span class="w">    </span>--mount<span class="o">=</span><span class="nv">type</span><span class="o">=</span>bind,source<span class="o">=</span>/tmp/f3ufyh3_,target<span class="o">=</span>/lHWEpI<span class="w"> </span><span class="se">\</span>
-<span class="w">    </span>--mount<span class="o">=</span><span class="nv">type</span><span class="o">=</span>bind,source<span class="o">=</span>/tmp/l7tzm09o,target<span class="o">=</span>/tmp<span class="w"> </span><span class="se">\</span>
-<span class="w">    </span>--mount<span class="o">=</span><span class="nv">type</span><span class="o">=</span>bind,source<span class="o">=</span>/home/runner/work/user_guide/user_guide/src/_includes/cwl/staging-input-files/Hello.java,target<span class="o">=</span>/lHWEpI/Hello.java,readonly<span class="w"> </span><span class="se">\</span>
-<span class="w">    </span>--workdir<span class="o">=</span>/lHWEpI<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>--mount<span class="o">=</span><span class="nv">type</span><span class="o">=</span>bind,source<span class="o">=</span>/tmp/c4p9tezt,target<span class="o">=</span>/YcHclK<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>--mount<span class="o">=</span><span class="nv">type</span><span class="o">=</span>bind,source<span class="o">=</span>/tmp/9mh3bjoo,target<span class="o">=</span>/tmp<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>--mount<span class="o">=</span><span class="nv">type</span><span class="o">=</span>bind,source<span class="o">=</span>/home/runner/work/user_guide/user_guide/src/_includes/cwl/staging-input-files/Hello.java,target<span class="o">=</span>/YcHclK/Hello.java,readonly<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>--workdir<span class="o">=</span>/YcHclK<span class="w"> </span><span class="se">\</span>
 <span class="w">    </span>--read-only<span class="o">=</span><span class="nb">true</span><span class="w"> </span><span class="se">\</span>
 <span class="w">    </span>--net<span class="o">=</span>none<span class="w"> </span><span class="se">\</span>
 <span class="w">    </span>--user<span class="o">=</span><span class="m">1001</span>:127<span class="w"> </span><span class="se">\</span>
 <span class="w">    </span>--rm<span class="w"> </span><span class="se">\</span>
-<span class="w">    </span>--cidfile<span class="o">=</span>/tmp/zsnos9e7/20240508123908-331737.cid<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>--cidfile<span class="o">=</span>/tmp/mj5xotb9/20240518114647-817604.cid<span class="w"> </span><span class="se">\</span>
 <span class="w">    </span>--env<span class="o">=</span><span class="nv">TMPDIR</span><span class="o">=</span>/tmp<span class="w"> </span><span class="se">\</span>
-<span class="w">    </span>--env<span class="o">=</span><span class="nv">HOME</span><span class="o">=</span>/lHWEpI<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>--env<span class="o">=</span><span class="nv">HOME</span><span class="o">=</span>/YcHclK<span class="w"> </span><span class="se">\</span>
 <span class="w">    </span>openjdk:9.0.1-11-slim<span class="w"> </span><span class="se">\</span>
 <span class="w">    </span>javac<span class="w"> </span><span class="se">\</span>
 <span class="w">    </span>Hello.java

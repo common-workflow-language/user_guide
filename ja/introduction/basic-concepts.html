@@ -430,10 +430,10 @@ document.write(`
                   
   <section id="basic-concepts">
 <h1><span class="section-number">1.3. </span>基本コンセプト<a class="headerlink" href="#basic-concepts" title="Link to this heading">#</a></h1>
-<p>このセクションでは、Common Workflow Language（CWL）ワークフローの使用を開始するための基本的な概念について説明します。読者は、ワークフローマネージャー、YAML に精通し、コマンドラインの指示に従うことに慣れていることが期待されます。このユーザーガイドの他のセクションは、同じ概念をカバーしていますが、より詳細に説明されています。すでにCWLに精通している場合、またはより高度なコンテンツを探している場合は、このセクションをスキップすることができます。</p>
+<p>このセクションでは、Common Workflow Language（CWL）ワークフローの使用を開始するための基本的な概念について説明します。読者は、ワークフローマネージャー、YAML に精通し、コマンドラインの指示に従うことに慣れていることが期待されます。このユーザーガイドの他のセクションは、同じ概念をカバーしていますが、より詳細に説明されています。すでにCWLに精通している場合、またはより高度なコンテンツを探している場合は、このセクションをスキップできます。</p>
 <section id="the-cwl-specification">
 <h2><span class="section-number">1.3.1. </span>CWLの仕様<a class="headerlink" href="#the-cwl-specification" title="Link to this heading">#</a></h2>
-<p>CWLは、コマンドラインツールを定義し、それらのツールを繋げてワークフローを作成するための方法です。CWLは仕様であり、特定のソフトウェアではないため、CWLを使用して定義されたツールやワークフローは、CWL標準をサポートするさまざまなプラットフォームで利用可能です。</p>
+<p>CWLは、コマンドラインツールを定義し、それらのツールを繋げてワークフローを作成します。CWLは仕様であり、特定のソフトウェアではないため、CWLを使用して定義されたツールやワークフローは、CWL標準をサポートするさまざまなプラットフォームで利用可能です。</p>
 <a class="reference internal image-reference" href="../_images/CWL-Logo-HD-cropped2.png" id="cwl-logo"><img alt="../_images/CWL-Logo-HD-cropped2.png" class="align-center" id="cwl-logo" src="../_images/CWL-Logo-HD-cropped2.png" style="width: 300px;" />
 </a>
 <p>CWL仕様は、CWLコミュニティによって書かれ、維持されている文書です。この仕様には異なるバージョンが存在します。このユーザーガイドで扱うバージョンは<code class="docutils literal notranslate"><span class="pre">v1.2</span></code>です。</p>
@@ -531,31 +531,23 @@ document.write(`
 <p><span class="caption-text">CWLオブジェクトモデルで使用可能な処理単位です。</span><a class="headerlink" href="#processing-units-graph" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
-<p>コマンドラインツールは、<code class="docutils literal notranslate"><span class="pre">echo</span></code> 、<code class="docutils literal notranslate"><span class="pre">ls</span></code> 、<code class="docutils literal notranslate"><span class="pre">tar</span></code> のようなコマンドラインユーティリティのラッパーです。コマンドラインツールは、ワークフローから呼び出せます。</p>
+<p>CommandLineToolは、<code class="docutils literal notranslate"><span class="pre">echo</span></code> 、<code class="docutils literal notranslate"><span class="pre">ls</span></code> 、<code class="docutils literal notranslate"><span class="pre">tar</span></code> のようなコマンドのラッパーです。CommandLineToolは、Workflowから呼び出せます。</p>
 <p>ExpressionToolは、JavaScriptの式のラッパーです。WorkflowやCommandLineToolの簡略化に使用でき、ワークフロー実行の共通部分を、CommandLineToolのように入力を受けて出力を生成する再利用可能なJavaScriptコードに移動させることができます。</p>
-<p>Operationは、入力を受け、出力を出す抽象的なプロセスでもあり、ワークフローで使用することができます。しかし、あまり一般的に使われていない特別な処理です。このユーザーガイドの<a class="reference internal" href="../topics/operations.html"><span class="std std-doc">Operation編</span></a>で説明します。</p>
-<p>Workflowは、ステップを含むプロセスです。ステップには、他のWorkflow（ネストされたWorkflow）、CommandLineTool、ExpressionToolを使用することができます。Workflowの入力は、そのステップのいずれかに渡すことができ、ステップによって生成された出力は、Workflowの最終出力に使用することができます。</p>
-<p>CWL 仕様では、<em>requirements</em> を通じて、実装が追加機能を提供し、ワークフローの前提条件を指定することができます。CWL仕様には、例えば、以下のような多くの要件が定義されています：</p>
+<p>Operationは、入力を受け、出力を出す抽象的なプロセスでもあり、ワークフローで使用できます。しかし、あまり一般的に使われていない特別な処理です。このユーザーガイドの<a class="reference internal" href="../topics/operations.html"><span class="std std-doc">Operation編</span></a>で説明します。</p>
+<p>Workflowは、ステップを含むプロセスです。ステップには、他のWorkflow（ネストされたWorkflow）、CommandLineTool、ExpressionToolを使用できます。Workflowの入力は、そのステップのいずれかに渡すことができ、ステップによって生成された出力は、Workflowの最終出力に使用できます。</p>
+<p>CWL 仕様では、<em>requirements</em> を通じて、実装が追加機能を提供し、ワークフローの前提条件を指定できます。CWL仕様には、例えば、以下のような多くの要件が定義されています：</p>
 <ul class="simple">
-<li><p><a class="reference external" href="https://w3id.org/cwl/Workflow.html#InlineJavascriptRequirement"><code class="docutils literal notranslate"><span class="pre">InlineJavascriptWorkflow</span></code></a> - でJavaScriptを有効にします。</p></li>
+<li><p><a class="reference external" href="https://w3id.org/cwl/Workflow.html#InlineJavascriptRequirement"><code class="docutils literal notranslate"><span class="pre">InlineJavascriptRequirement</span></code></a> - enables JavaScript in expressions.</p></li>
 <li><p><a class="reference external" href="https://w3id.org/cwl/Workflow.html#SubworkflowFeatureRequirement"><code class="docutils literal notranslate"><span class="pre">SubworkflowFeatureRequirement</span></code></a> - ネストしたワークフローを有効にします。</p></li>
 <li><p><a class="reference external" href="https://w3id.org/cwl/Workflow.html#InitialWorkDirRequirement"><code class="docutils literal notranslate"><span class="pre">InitialWorkDirRequirement</span></code></a> - 入力ディレクトリのステージングファイルを制御します。</p></li>
 </ul>
-<p>いくつかのCWLランナーは、仕様にないrequirementsを提供することがあります。例えば、GPUに関するrequirementsは<code class="docutils literal notranslate"><span class="pre">cwltool</span></code> で<code class="docutils literal notranslate"><span class="pre">cwltool:CUDARequirement</span></code> を通してサポートされていますが、<code class="docutils literal notranslate"><span class="pre">v1.2</span></code>仕様の一部ではないので、他のCWLランナーではサポートされていないかもしれません。</p>
+<p>いくつかのCWL runnerは、仕様にないrequirementsを提供することがあります。例えば、GPUに関するrequirementsは<code class="docutils literal notranslate"><span class="pre">cwltool</span></code> で<code class="docutils literal notranslate"><span class="pre">cwltool:CUDARequirement</span></code> を通してサポートされていますが、<code class="docutils literal notranslate"><span class="pre">v1.2</span></code>仕様の一部ではないので、他のCWL runnerではサポートされていないかもしれません。</p>
 <p>HintsはRequirementsと似ていますが、Requirementsが必須機能を列挙するのに対し、Hintsはオプションの機能を列挙します。Requirementsについては、<a class="reference internal" href="../topics/requirements-and-hints.html"><span class="std std-doc">Requirements</span></a> セクションで詳しく説明しています。</p>
 </section>
 <section id="fair-workflows">
 <h2><span class="section-number">1.3.4. </span>FAIRワークフロー<a class="headerlink" href="#fair-workflows" title="Link to this heading">#</a></h2>
 <blockquote>
-<div><p>The FAIR principles have laid a foundation for sharing and publishing
-digital assets, and in particular, data. The FAIR principles emphasize
-machine accessibility and that all digital assets should be Findable,
-Accessible, Interoperable, and Reusable. Workflows encode the methods
-by which the scientific process is conducted and via which data are
-created. It is thus important that workflows both support the creation
-of FAIR data and themselves adhere to the FAIR principles.
-— <a class="reference external" href="https://workflows.community/groups/fair/">FAIR Computational Workflows</a>,
-Workflows Community Initiative.</p>
+<div><p>FAIR原則は、デジタル資産、特にデータを共有し公開するための基礎を作りました。FAIR原則は、機械可読性を重視し、すべてのデジタル資産は、検索可能（Findable）、アクセス可能（Accessible）、相互運用可能（Interoperable）、再利用可能（Reusable）であるべきとしています。ワークフローは、科学的プロセスが実施され、データが作成される方法をコード化します。従って、ワークフローがFAIRデータの作成をサポートし、かつワークフロー自身がFAIRの原則を遵守することは重要です。- <a class="reference external" href="https://workflows.community/groups/fair/">FAIR Computational Workflows</a>, Workflows Community Initiative.</p>
 </div></blockquote>
 <p>CWLのルーツは、タスク間の依存関係に基づき、実行順序を決定する &quot;make&quot; や多くの類似ツールにあります。しかし、&quot;make&quot; とは異なり、CWLのタスクは分離されており、入力と出力を明示する必要があります。</p>
 <p>CWLで定義されたツールやワークフローは、Dockerなどの技術を透過的に活用し、異なるベンダーのCWL実装と組み合わせて使用することができるためです。</p>

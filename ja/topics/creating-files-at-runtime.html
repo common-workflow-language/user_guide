@@ -447,9 +447,7 @@ document.write(`
                   
   <section id="creating-files-at-runtime">
 <h1><span class="section-number">2.14. </span>実行時にファイルを作成する<a class="headerlink" href="#creating-files-at-runtime" title="Link to this heading">#</a></h1>
-<p>Sometimes you need to create a file on the fly from input parameters,
-such as tools that expect to read their input configuration from a file
-rather than the command line parameters, or need a small wrapper shell script.</p>
+<p>コマンドラインパラメーターではなく、ファイルから入力設定を読み込むことを期待するツールや、小さなラッパーシェルスクリプトが必要な場合など、入力パラメーターからその場でファイルを作成する必要があることがあります。</p>
 <p><a class="reference external" href="https://w3id.org/cwl/CommandLineTool.html#InitialWorkDirRequirement"><code class="docutils literal notranslate"><span class="pre">InitialWorkDirRequirement</span></code></a>を使ってそのうようなファイルを生成します。</p>
 <div class="literal-block-wrapper docutils container" id="createfile-cwl">
 <div class="code-block-caption"><span class="caption-text"><code class="docutils literal notranslate"><span class="pre">createfile.cwl</span></code></span><a class="headerlink" href="#createfile-cwl" title="Link to this code">#</a></div>
@@ -479,11 +477,7 @@ rather than the command line parameters, or need a small wrapper shell script.</
 <p><code class="docutils literal notranslate"><span class="pre">$(inputs.message)</span></code> のような <a class="reference internal" href="expressions.html"><span class="std std-doc">Expressions</span></a>は、ファイルを作成する前にCWL実行エンジンによって展開されます。ここでは、入力パラメータ<code class="docutils literal notranslate"><span class="pre">message</span></code> に値を挿入します。</p>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
-<p>The <em>CWL expressions</em> are independent of any <em>shell variables</em>
-used later during command line tool invocation. That means that any genuine
-need for the character <code class="docutils literal notranslate"><span class="pre">$</span></code> must be <strong>escaped</strong> with <code class="docutils literal notranslate"><span class="pre">\</span></code>.
-For instance, <code class="docutils literal notranslate"><span class="pre">\${PREFIX}</span></code> above is expanded to <code class="docutils literal notranslate"><span class="pre">${PREFIX}</span></code> in the generated file
-to be evaluated by the shell script instead of the CWL engine.</p>
+<p><em>CWL expressions</em> は、コマンドラインツール起動時に使用される_shell variables_ とは無関係です。つまり、<code class="docutils literal notranslate"><span class="pre">$</span></code> という文字が本当に必要な場合は、<code class="docutils literal notranslate"><span class="pre">\</span></code> で<strong>エスケープ</strong>する必要があります。例えば，上記の<code class="docutils literal notranslate"><span class="pre">\${PREFIX}</span></code> は，CWLエンジンの代わりにシェルスクリプトで評価されるように，生成されたファイルでは<code class="docutils literal notranslate"><span class="pre">${PREFIX}</span></code> に展開されます。</p>
 </div>
 <p>上記のCWLツールをテストするために、このジョブを使用して、入力値<code class="docutils literal notranslate"><span class="pre">message</span></code> を与えます：</p>
 <div class="literal-block-wrapper docutils container" id="echo-job-yml">
@@ -493,24 +487,17 @@ to be evaluated by the shell script instead of the CWL engine.</p>
 </div>
 </div>
 <p>これを実行する前に、各ステップをもう少し詳しく見てみましょう。ベースコマンド<code class="docutils literal notranslate"><span class="pre">baseCommand:</span> <span class="pre">[&quot;sh&quot;,</span> <span class="pre">&quot;example.sh&quot;]</span></code> は、<code class="docutils literal notranslate"><span class="pre">sh</span> <span class="pre">example.sh</span></code> というコマンドを実行します。これで、作成したファイルがシェルで実行されます。</p>
-<p><code class="docutils literal notranslate"><span class="pre">InitialWorkDirRequirement</span></code> requires a <code class="docutils literal notranslate"><span class="pre">listing</span></code>.
-As the <code class="docutils literal notranslate"><span class="pre">listing</span></code> is a YAML array, we need a <code class="docutils literal notranslate"><span class="pre">-</span></code> on the first line of
-each element of the array, in this case we have just one element.
-<code class="docutils literal notranslate"><span class="pre">entryname:</span></code> can have any value,
-but it must match what was specified in the <code class="docutils literal notranslate"><span class="pre">baseCommand</span></code>.
-The final part is <code class="docutils literal notranslate"><span class="pre">entry:</span></code>, this is followed by <code class="docutils literal notranslate"><span class="pre">|-</span></code>
-which is YAML quoting syntax, and means that you are using a multiline string
-(without it, we would need to write the whole script on one line).</p>
+<p><code class="docutils literal notranslate"><span class="pre">InitialWorkDirRequirement</span></code> は<code class="docutils literal notranslate"><span class="pre">listing</span></code> を必要とします。<code class="docutils literal notranslate"><span class="pre">listing</span></code> は YAML 配列なので、配列の各要素の行の最初に<code class="docutils literal notranslate"><span class="pre">-</span></code> が必要です。この場合、要素は 1 つだけです。<code class="docutils literal notranslate"><span class="pre">entryname:</span></code> は任意の値を指定できますが、<code class="docutils literal notranslate"><span class="pre">baseCommand</span></code> で指定したものと一致していなければなりません。最後の部分は<code class="docutils literal notranslate"><span class="pre">entry:</span></code> で、この後に<code class="docutils literal notranslate"><span class="pre">|-</span></code> が続きます。これは YAML の引用構文で、複数行の文字列を使用していることを意味します (これがなければ、スクリプト全体を 1 行で記述する必要があります).</p>
 <div class="admonition note">
 <p class="admonition-title">注釈</p>
 <p>フォーマットについては、<a class="reference internal" href="yaml-guide.html#maps"><span class="std std-ref">YAMLガイド</span></a>を参照してください。</p>
 </div>
 <p>ここで、コマンドラインにツール定義と入力オブジェクトを指定して、<code class="docutils literal notranslate"><span class="pre">cwltool</span></code> を起動します：</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>cwltool<span class="w"> </span>createfile.cwl<span class="w"> </span>echo-job.yml
-INFO<span class="w"> </span>/opt/hostedtoolcache/Python/3.9.19/x64/bin/cwltool<span class="w"> </span><span class="m">3</span>.1.20240404144621
+INFO<span class="w"> </span>/opt/hostedtoolcache/Python/3.9.19/x64/bin/cwltool<span class="w"> </span><span class="m">3</span>.1.20240508115724
 INFO<span class="w"> </span>Resolved<span class="w"> </span><span class="s1">&#39;createfile.cwl&#39;</span><span class="w"> </span>to<span class="w"> </span><span class="s1">&#39;file:///home/runner/work/user_guide/user_guide/src/_includes/cwl/creating-files-at-runtime/createfile.cwl&#39;</span>
-INFO<span class="w"> </span><span class="o">[</span>job<span class="w"> </span>createfile.cwl<span class="o">]</span><span class="w"> </span>/tmp/8o6_cazk$<span class="w"> </span>sh<span class="w"> </span><span class="se">\</span>
-<span class="w">    </span>example.sh<span class="w"> </span>&gt;<span class="w"> </span>/tmp/8o6_cazk/output.txt
+INFO<span class="w"> </span><span class="o">[</span>job<span class="w"> </span>createfile.cwl<span class="o">]</span><span class="w"> </span>/tmp/9ukqd8ut$<span class="w"> </span>sh<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>example.sh<span class="w"> </span>&gt;<span class="w"> </span>/tmp/9ukqd8ut/output.txt
 INFO<span class="w"> </span><span class="o">[</span>job<span class="w"> </span>createfile.cwl<span class="o">]</span><span class="w"> </span>completed<span class="w"> </span>success
 <span class="o">{</span>
 <span class="w">    </span><span class="s2">&quot;example_out&quot;</span>:<span class="w"> </span><span class="o">{</span>

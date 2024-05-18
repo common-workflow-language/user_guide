@@ -609,7 +609,7 @@ document.write(`
 </div>
 <div class="admonition-visualization-of-1st-workflow-cwl admonition">
 <p class="admonition-title">1st-workflow.cwlの可視化</p>
-<p><a class="reference external" href="https://view.commonwl.org/graph/png/github.com/common-workflow-language/user_guide/blob/a29e7eae0006660946fc705a310b37a21a7e1edc/_includes/cwl/21-1st-workflow/1st-workflow.cwl"><img alt="1st-workflow.cwlの可視化" src="https://view.commonwl.org/graph/png/github.com/common-workflow-language/user_guide/blob/a29e7eae0006660946fc705a310b37a21a7e1edc/_includes/cwl/21-1st-workflow/1st-workflow.cwl" /></a></p>
+<p><a class="reference external" href="https://view.commonwl.org/graph/png/github.com/common-workflow-language/user_guide/blob/a29e7eae0006660946fc705a310b37a21a7e1edc/_includes/cwl/21-1st-workflow/1st-workflow.cwl"><img alt="1st-workflow.cwlを可視化したもの" src="https://view.commonwl.org/graph/png/github.com/common-workflow-language/user_guide/blob/a29e7eae0006660946fc705a310b37a21a7e1edc/_includes/cwl/21-1st-workflow/1st-workflow.cwl" /></a></p>
 </div>
 <p>Runの入力データを記述するために、別ファイルのYAMLまたはJSONオブジェクトを使用します：</p>
 <div class="literal-block-wrapper docutils container" id="st-workflow-job-yml">
@@ -628,39 +628,39 @@ document.write(`
 </div>
 <p>ここで、コマンドラインにツール定義と入力オブジェクトを指定して、<code class="docutils literal notranslate"><span class="pre">cwltool</span></code> を起動します：</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>cwltool<span class="w"> </span>1st-workflow.cwl<span class="w"> </span>1st-workflow-job.yml
-INFO<span class="w"> </span>/opt/hostedtoolcache/Python/3.9.19/x64/bin/cwltool<span class="w"> </span><span class="m">3</span>.1.20240404144621
+INFO<span class="w"> </span>/opt/hostedtoolcache/Python/3.9.19/x64/bin/cwltool<span class="w"> </span><span class="m">3</span>.1.20240508115724
 INFO<span class="w"> </span>Resolved<span class="w"> </span><span class="s1">&#39;1st-workflow.cwl&#39;</span><span class="w"> </span>to<span class="w"> </span><span class="s1">&#39;file:///home/runner/work/user_guide/user_guide/src/_includes/cwl/workflows/1st-workflow.cwl&#39;</span>
 INFO<span class="w"> </span><span class="o">[</span>workflow<span class="w"> </span><span class="o">]</span><span class="w"> </span>start
 INFO<span class="w"> </span><span class="o">[</span>workflow<span class="w"> </span><span class="o">]</span><span class="w"> </span>starting<span class="w"> </span>step<span class="w"> </span>untar
 INFO<span class="w"> </span><span class="o">[</span>step<span class="w"> </span>untar<span class="o">]</span><span class="w"> </span>start
-INFO<span class="w"> </span><span class="o">[</span>job<span class="w"> </span>untar<span class="o">]</span><span class="w"> </span>/tmp/05ctj9w6$<span class="w"> </span>tar<span class="w"> </span><span class="se">\</span>
+INFO<span class="w"> </span><span class="o">[</span>job<span class="w"> </span>untar<span class="o">]</span><span class="w"> </span>/tmp/4n4_5fwz$<span class="w"> </span>tar<span class="w"> </span><span class="se">\</span>
 <span class="w">    </span>--extract<span class="w"> </span><span class="se">\</span>
 <span class="w">    </span>--file<span class="w"> </span><span class="se">\</span>
-<span class="w">    </span>/tmp/5pjkgzoa/stg36e3a560-04d6-4272-a7fd-3236a4a49f7d/hello.tar<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>/tmp/q6qv1pzc/stg6b17059c-878b-4b09-af1e-a90a419c0e51/hello.tar<span class="w"> </span><span class="se">\</span>
 <span class="w">    </span>Hello.java
 INFO<span class="w"> </span><span class="o">[</span>job<span class="w"> </span>untar<span class="o">]</span><span class="w"> </span>completed<span class="w"> </span>success
 INFO<span class="w"> </span><span class="o">[</span>step<span class="w"> </span>untar<span class="o">]</span><span class="w"> </span>completed<span class="w"> </span>success
 INFO<span class="w"> </span><span class="o">[</span>workflow<span class="w"> </span><span class="o">]</span><span class="w"> </span>starting<span class="w"> </span>step<span class="w"> </span>compile
 INFO<span class="w"> </span><span class="o">[</span>step<span class="w"> </span>compile<span class="o">]</span><span class="w"> </span>start
-INFO<span class="w"> </span><span class="o">[</span>job<span class="w"> </span>compile<span class="o">]</span><span class="w"> </span>/tmp/eg35c__m$<span class="w"> </span>docker<span class="w"> </span><span class="se">\</span>
+INFO<span class="w"> </span><span class="o">[</span>job<span class="w"> </span>compile<span class="o">]</span><span class="w"> </span>/tmp/y4hm2pka$<span class="w"> </span>docker<span class="w"> </span><span class="se">\</span>
 <span class="w">    </span>run<span class="w"> </span><span class="se">\</span>
 <span class="w">    </span>-i<span class="w"> </span><span class="se">\</span>
-<span class="w">    </span>--mount<span class="o">=</span><span class="nv">type</span><span class="o">=</span>bind,source<span class="o">=</span>/tmp/eg35c__m,target<span class="o">=</span>/DFwyXJ<span class="w"> </span><span class="se">\</span>
-<span class="w">    </span>--mount<span class="o">=</span><span class="nv">type</span><span class="o">=</span>bind,source<span class="o">=</span>/tmp/3s113hhv,target<span class="o">=</span>/tmp<span class="w"> </span><span class="se">\</span>
-<span class="w">    </span>--mount<span class="o">=</span><span class="nv">type</span><span class="o">=</span>bind,source<span class="o">=</span>/tmp/05ctj9w6/Hello.java,target<span class="o">=</span>/var/lib/cwl/stg45dd3a90-acfe-46d5-b223-aa59b2ec08fc/Hello.java,readonly<span class="w"> </span><span class="se">\</span>
-<span class="w">    </span>--workdir<span class="o">=</span>/DFwyXJ<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>--mount<span class="o">=</span><span class="nv">type</span><span class="o">=</span>bind,source<span class="o">=</span>/tmp/y4hm2pka,target<span class="o">=</span>/iTZQSi<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>--mount<span class="o">=</span><span class="nv">type</span><span class="o">=</span>bind,source<span class="o">=</span>/tmp/cahdndsh,target<span class="o">=</span>/tmp<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>--mount<span class="o">=</span><span class="nv">type</span><span class="o">=</span>bind,source<span class="o">=</span>/tmp/4n4_5fwz/Hello.java,target<span class="o">=</span>/var/lib/cwl/stg73d20f81-0007-4536-abab-4a3e46676cf2/Hello.java,readonly<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>--workdir<span class="o">=</span>/iTZQSi<span class="w"> </span><span class="se">\</span>
 <span class="w">    </span>--read-only<span class="o">=</span><span class="nb">true</span><span class="w"> </span><span class="se">\</span>
 <span class="w">    </span>--net<span class="o">=</span>none<span class="w"> </span><span class="se">\</span>
 <span class="w">    </span>--user<span class="o">=</span><span class="m">1001</span>:127<span class="w"> </span><span class="se">\</span>
 <span class="w">    </span>--rm<span class="w"> </span><span class="se">\</span>
-<span class="w">    </span>--cidfile<span class="o">=</span>/tmp/64a9el64/20240508123916-512583.cid<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>--cidfile<span class="o">=</span>/tmp/ipj3n_kt/20240518114656-085539.cid<span class="w"> </span><span class="se">\</span>
 <span class="w">    </span>--env<span class="o">=</span><span class="nv">TMPDIR</span><span class="o">=</span>/tmp<span class="w"> </span><span class="se">\</span>
-<span class="w">    </span>--env<span class="o">=</span><span class="nv">HOME</span><span class="o">=</span>/DFwyXJ<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>--env<span class="o">=</span><span class="nv">HOME</span><span class="o">=</span>/iTZQSi<span class="w"> </span><span class="se">\</span>
 <span class="w">    </span>openjdk:9.0.1-11-slim<span class="w"> </span><span class="se">\</span>
 <span class="w">    </span>javac<span class="w"> </span><span class="se">\</span>
 <span class="w">    </span>-d<span class="w"> </span><span class="se">\</span>
-<span class="w">    </span>/DFwyXJ<span class="w"> </span><span class="se">\</span>
-<span class="w">    </span>/var/lib/cwl/stg45dd3a90-acfe-46d5-b223-aa59b2ec08fc/Hello.java
+<span class="w">    </span>/iTZQSi<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>/var/lib/cwl/stg73d20f81-0007-4536-abab-4a3e46676cf2/Hello.java
 INFO<span class="w"> </span><span class="o">[</span>job<span class="w"> </span>compile<span class="o">]</span><span class="w"> </span>completed<span class="w"> </span>success
 INFO<span class="w"> </span><span class="o">[</span>step<span class="w"> </span>compile<span class="o">]</span><span class="w"> </span>completed<span class="w"> </span>success
 INFO<span class="w"> </span><span class="o">[</span>workflow<span class="w"> </span><span class="o">]</span><span class="w"> </span>completed<span class="w"> </span>success
@@ -704,22 +704,9 @@ INFO<span class="w"> </span><span class="o">[</span>workflow<span class="w"> </s
 <span class="w">    </span><span class="nt">out</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="nv">extracted_file</span><span class="p p-Indicator">]</span>
 </pre></div>
 </div>
-<p>The <code class="docutils literal notranslate"><span class="pre">steps</span></code> section describes the actual steps of the workflow.  In this
-example, the first step extracts a file from a tar file, and the second
-step compiles the file from the first step using the java compiler.
-Workflow steps are not necessarily run in the order they are listed,
-instead the order is determined by the dependencies between steps (using
-<code class="docutils literal notranslate"><span class="pre">source</span></code>).  In addition, workflow steps which do not depend on one
-another may run in parallel.</p>
-<p>The first step, <code class="docutils literal notranslate"><span class="pre">untar</span></code> runs <code class="docutils literal notranslate"><span class="pre">tar-param.cwl</span></code> (described previously in
-<a class="reference internal" href="parameter-references.html"><span class="std std-doc">Parameter References</span></a>).
-This tool has two input parameters, <code class="docutils literal notranslate"><span class="pre">tarfile</span></code> and <code class="docutils literal notranslate"><span class="pre">extractfile</span></code> and one output
-parameter <code class="docutils literal notranslate"><span class="pre">extracted_file</span></code>.</p>
-<p>The <code class="docutils literal notranslate"><span class="pre">in</span></code> section of the workflow step connects these two input parameters to
-the inputs of the workflow, <code class="docutils literal notranslate"><span class="pre">tarball</span></code> and <code class="docutils literal notranslate"><span class="pre">name_of_file_to_extract</span></code> using
-<code class="docutils literal notranslate"><span class="pre">source</span></code>.  This means that when the workflow step is executed, the values
-assigned to <code class="docutils literal notranslate"><span class="pre">tarball</span></code> and <code class="docutils literal notranslate"><span class="pre">name_of_file_to_extract</span></code> will be used for the
-parameters <code class="docutils literal notranslate"><span class="pre">tarfile</span></code> and <code class="docutils literal notranslate"><span class="pre">extractfile</span></code> in order to run the tool.</p>
+<p><code class="docutils literal notranslate"><span class="pre">steps</span></code> セクションでは、ワークフローの実際のステップを説明しています。  この例では、最初のステップで tar ファイルからファイルを抽出し、2 番目のステップで java コンパイラを使用して最初のステップで抽出されたファイルをコンパイルしています。ワークフローのステップは、必ずしもリストされた順序で実行されるわけではなく、ステップ間の依存関係によって順序が決定されます（<code class="docutils literal notranslate"><span class="pre">source</span></code> を使用）。  また、互いに依存しないワークフロー・ステップは、並行して実行されることがあります。</p>
+<p>最初のステップである<code class="docutils literal notranslate"><span class="pre">untar</span></code> は、<code class="docutils literal notranslate"><span class="pre">tar-param.cwl</span></code> を実行します（<a class="reference internal" href="parameter-references.html"><span class="std std-doc">パラメータ参照</span></a>で以前説明しました）。このツールは、2つの入力パラメータ、<code class="docutils literal notranslate"><span class="pre">tarfile</span></code> と<code class="docutils literal notranslate"><span class="pre">extractfile</span></code> と1つの出力パラメータ<code class="docutils literal notranslate"><span class="pre">extracted_file</span></code> を持ちます。</p>
+<p>ワークフローステップの<code class="docutils literal notranslate"><span class="pre">in</span></code> セクションは、これらの2つの入力パラメータを、<code class="docutils literal notranslate"><span class="pre">source</span></code> を使用してワークフローの入力である<code class="docutils literal notranslate"><span class="pre">tarball</span></code> および<code class="docutils literal notranslate"><span class="pre">name_of_file_to_extract</span></code> に接続しています。  つまり、ワークフローステップが実行されると、<code class="docutils literal notranslate"><span class="pre">tarball</span></code> と<code class="docutils literal notranslate"><span class="pre">name_of_file_to_extract</span></code> に割り当てられた値が、ツールを実行するために<code class="docutils literal notranslate"><span class="pre">tarfile</span></code> と<code class="docutils literal notranslate"><span class="pre">extractfile</span></code> のパラメータに使用されることになり ます。</p>
 <p>ワークフローステップの<code class="docutils literal notranslate"><span class="pre">out</span></code> セクションには、ツールから期待される出力パラメータが記載されています。</p>
 <div class="highlight-cwl notranslate"><div class="highlight"><pre><span></span><span class="w">  </span><span class="nt">compile</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">run</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">arguments.cwl</span>
@@ -728,16 +715,11 @@ parameters <code class="docutils literal notranslate"><span class="pre">tarfile<
 <span class="w">    </span><span class="nt">out</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="nv">classfile</span><span class="p p-Indicator">]</span>
 </pre></div>
 </div>
-<p>The second step <code class="docutils literal notranslate"><span class="pre">compile</span></code> depends on the results from the first step by
-connecting the input parameter <code class="docutils literal notranslate"><span class="pre">src</span></code> to the output parameter of <code class="docutils literal notranslate"><span class="pre">untar</span></code> using
-<code class="docutils literal notranslate"><span class="pre">untar/extracted_file</span></code>.  It runs <code class="docutils literal notranslate"><span class="pre">arguments.cwl</span></code> (described previously in
-<a class="reference internal" href="additional-arguments-and-parameters.html"><span class="std std-doc">Additional Arguments and Parameters</span></a>).
-The output of this step <code class="docutils literal notranslate"><span class="pre">classfile</span></code> is connected to the
-<code class="docutils literal notranslate"><span class="pre">outputs</span></code> section for the Workflow, described above.</p>
+<p>第2ステップ <code class="docutils literal notranslate"><span class="pre">compile</span></code> は、第1ステップの結果に依存し、入力パラメータ<code class="docutils literal notranslate"><span class="pre">src</span></code> を<code class="docutils literal notranslate"><span class="pre">untar</span></code> の出力パラメータに接続し、<code class="docutils literal notranslate"><span class="pre">untar/extracted_file</span></code> を使用します。  これは、<code class="docutils literal notranslate"><span class="pre">arguments.cwl</span></code> (以前に <a class="reference internal" href="additional-arguments-and-parameters.html"><span class="std std-doc">追加の引数とパラメータ</span></a>で説明したものです) を実行します。このステップの出力<code class="docutils literal notranslate"><span class="pre">classfile</span></code> は、前述のワークフローの<code class="docutils literal notranslate"><span class="pre">outputs</span></code> セクションに接続されています。</p>
 </section>
 <section id="nested-workflows">
 <h2><span class="section-number">2.10.2. </span>ネストされたワークフロー<a class="headerlink" href="#nested-workflows" title="Link to this heading">#</a></h2>
-<p>ワークフローは、複数のツールを組み合わせてより大きな処理を実行するための方法です。ワークフローエンジンが<code class="docutils literal notranslate"><span class="pre">SubworkflowFeatureRequirement</span></code> をサポートしている場合、CWL ワークフローを別の CWL ワークフローのステップとすることができます ：</p>
+<p>ワークフローは、複数のツールを組み合わせてより大きな処理を実行するための方法です。ワークフローエンジンが<code class="docutils literal notranslate"><span class="pre">SubworkflowFeatureRequirement</span></code> をサポートしている場合、CWL ワークフローを別の CWL ワークフローのステップにできます ：</p>
 <div class="highlight-cwl notranslate"><div class="highlight"><pre><span></span><span class="nt">requirements</span><span class="p">:</span>
 <span class="w">  </span><span class="nt">SubworkflowFeatureRequirement</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">{}</span>
 </pre></div>
@@ -798,14 +780,14 @@ The output of this step <code class="docutils literal notranslate"><span class="
 <p class="admonition-title">注釈</p>
 <p class="rubric">Visualization of the workflow and the inner workflow from its `compile` step</a>
 <p>この2ステップのワークフローは、<code class="docutils literal notranslate"><span class="pre">create-tar</span></code> ステップから始まり、オレンジ色の<code class="docutils literal notranslate"><span class="pre">compile</span></code> ステップに接続されています。<code class="docutils literal notranslate"><span class="pre">compile</span></code> は、右図にある別のワークフローです。紫色では、固定文字列<code class="docutils literal notranslate"><span class="pre">&quot;Hello.java&quot;</span></code> が<code class="docutils literal notranslate"><span class="pre">name_of_file_to_extract</span></code> として与えられているのがわかります。</p>
-<p><a href="https://view.commonwl.org/workflows/github.com/common-workflow-language/user_guide/blob/main/_includes/cwl/workflows/nestedworkflows.cwl"><img
-src="https://view.commonwl.org/graph/svg/github.com/common-workflow-language/user_guide/blob/main/_includes/cwl/workflows/nestedworkflows.cwl"
+<p><a href="https://view.commonwl.org/workflows/github.com/common-workflow-language/user_guide/blob/main/src/_includes/cwl/workflows/nestedworkflows.cwl"><img
+src="https://view.commonwl.org/graph/svg/github.com/common-workflow-language/user_guide/blob/main/src/_includes/cwl/workflows/nestedworkflows.cwl"
 alt="Visualization of nestedworkflows.cwl" /></a>
-<a href="https://view.commonwl.org/workflows/github.com/common-workflow-language/user_guide/blob/main/_includes/cwl/workflows/1st-workflow.cwl"><img
-src="https://view.commonwl.org/graph/svg/github.com/common-workflow-language/user_guide/blob/main/_includes/cwl/workflows/1st-workflow.cwl"
+<a href="https://view.commonwl.org/workflows/github.com/common-workflow-language/user_guide/blob/main/src/_includes/cwl/workflows/1st-workflow.cwl"><img
+src="https://view.commonwl.org/graph/svg/github.com/common-workflow-language/user_guide/blob/main/src/_includes/cwl/workflows/1st-workflow.cwl"
 alt="Visualization of 1st-workflow.cwl" /></a></p>
 </div>
-<p>CWL<code class="docutils literal notranslate"><span class="pre">Workflow</span></code> は、<code class="docutils literal notranslate"><span class="pre">CommandLineTool</span></code> を<code class="docutils literal notranslate"><span class="pre">step</span></code> として使用することができ、その CWL ファイルは<code class="docutils literal notranslate"><span class="pre">run</span></code> に記述されます。ワークフローの入力（<code class="docutils literal notranslate"><span class="pre">tarball</span></code> および<code class="docutils literal notranslate"><span class="pre">name_of_file_to_extract</span></code> ）と出力（<code class="docutils literal notranslate"><span class="pre">compiled_class</span></code> ）は、ステップの入力/出力になるようにマッピングすることができます。</p>
+<p>CWL<code class="docutils literal notranslate"><span class="pre">Workflow</span></code> は、<code class="docutils literal notranslate"><span class="pre">CommandLineTool</span></code> を<code class="docutils literal notranslate"><span class="pre">step</span></code> として使用することができ、その CWL ファイルは<code class="docutils literal notranslate"><span class="pre">run</span></code> に記述されます。ワークフローの入力（<code class="docutils literal notranslate"><span class="pre">tarball</span></code> および<code class="docutils literal notranslate"><span class="pre">name_of_file_to_extract</span></code> ）と出力（<code class="docutils literal notranslate"><span class="pre">compiled_class</span></code> ）は、ステップの入力/出力になるようにマッピングできます。</p>
 <div class="highlight-cwl notranslate"><div class="highlight"><pre><span></span><span class="w">  </span><span class="nt">compile</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">run</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1st-workflow.cwl</span>
 <span class="w">    </span><span class="nt">in</span><span class="p">:</span>
@@ -817,10 +799,7 @@ alt="Visualization of 1st-workflow.cwl" /></a></p>
 </div>
 <p><code class="docutils literal notranslate"><span class="pre">1st-workflow.cwl</span></code> はワークフロー入力でパラメータ化されているため、実行時には tar ファイルと<code class="docutils literal notranslate"><span class="pre">*.java</span></code> ファイル名を示すジョブファイルを提供する必要がありました。これは、複数の親ワークフローや、同じワークフロー内の複数のステップで再利用できることを意味するため、一般的にベストプラクティスです。</p>
 <p>ここでは、<code class="docutils literal notranslate"><span class="pre">default:</span></code> を使って、<code class="docutils literal notranslate"><span class="pre">&quot;Hello.java&quot;</span></code> を<code class="docutils literal notranslate"><span class="pre">name_of_file_to_extract</span></code> input として固定しています。しかし、このワークフローでは<code class="docutils literal notranslate"><span class="pre">tarball</span></code> の tar ファイルも必要です。これは<code class="docutils literal notranslate"><span class="pre">create-tar</span></code> ステップで用意します。この時点で、<code class="docutils literal notranslate"><span class="pre">1st-workflow.cwl</span></code> 、より具体的な入力/出力名を持つようにリファクタリングするのがよいでしょう。これらは、ツールとしての使用法にも現れるからです。</p>
-<p>It is also possible to do a less generic approach and avoid external
-dependencies in the job file. So in this workflow we can generate a hard-coded
-<code class="docutils literal notranslate"><span class="pre">Hello.java</span></code> file using the previously mentioned <code class="docutils literal notranslate"><span class="pre">InitialWorkDirRequirement</span></code>
-requirement, before adding it to a tar file.</p>
+<p>また、あまり一般的でない方法で、ジョブファイルの外部依存を回避することも可能です。そこで、このワークフローでは、先に述べた<code class="docutils literal notranslate"><span class="pre">InitialWorkDirRequirement</span></code> の要件を使用して、ハードコードされた<code class="docutils literal notranslate"><span class="pre">Hello.java</span></code> ファイルを生成してから、それを tar ファイルに追加できます。</p>
 <div class="highlight-cwl notranslate"><div class="highlight"><pre><span></span><span class="w">  </span><span class="nt">create-tar</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">requirements</span><span class="p">:</span>
 <span class="w">      </span><span class="nt">InitialWorkDirRequirement</span><span class="p">:</span>
@@ -834,9 +813,7 @@ requirement, before adding it to a tar file.</p>
 <span class="w">              </span><span class="no">}</span>
 </pre></div>
 </div>
-<p>In this case our step can assume <code class="docutils literal notranslate"><span class="pre">Hello.java</span></code> rather than be parameterized, so
-we can use hardcoded values <code class="docutils literal notranslate"><span class="pre">hello.tar</span></code> and <code class="docutils literal notranslate"><span class="pre">Hello.java</span></code> in a <code class="docutils literal notranslate"><span class="pre">baseCommand</span></code> and
-the resulting <code class="docutils literal notranslate"><span class="pre">outputs</span></code>:</p>
+<p>この場合、ステップではパラメータ化するのではなく、<code class="docutils literal notranslate"><span class="pre">Hello.java</span></code> を想定することができるので、<code class="docutils literal notranslate"><span class="pre">baseCommand</span></code> に直接書かれた値<code class="docutils literal notranslate"><span class="pre">hello.tar</span></code> と<code class="docutils literal notranslate"><span class="pre">Hello.java</span></code> を使用でき、結果として<code class="docutils literal notranslate"><span class="pre">outputs</span></code> が得られます：</p>
 <div class="highlight-cwl notranslate"><div class="highlight"><pre><span></span><span class="w">  </span><span class="nt">run</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">class</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">CommandLineTool</span>
 <span class="w">    </span><span class="nt">inputs</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[]</span>
@@ -849,21 +826,13 @@ the resulting <code class="docutils literal notranslate"><span class="pre">outpu
 <span class="w">          </span><span class="nt">glob</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;hello.tar&quot;</span>
 </pre></div>
 </div>
-<p>Did you notice that we didn't split out the <code class="docutils literal notranslate"><span class="pre">tar</span> <span class="pre">--create</span></code> tool to a separate file,
-but rather embedded it within the CWL Workflow file? This is generally not best
-practice, as the tool then can't be reused. The reason for doing it in this case
-is because the command line is hard-coded with filenames that only make sense
-within this workflow.</p>
+<p><code class="docutils literal notranslate"><span class="pre">tar</span> <span class="pre">--create</span></code> ツールを別のファイルに分割せず、CWL Workflow 定義の中に埋め込んだことにお気づきでしょうか。これは一般的にベストプラクティスではありません。なぜなら、そのツールを再利用できないからです。このケースでそれを行う理由は、コマンドラインに、このワークフロー定義内でしか意味をなさないファイル名がハードコーディングされているためです。</p>
 <p>この例では、外部にtarファイルを用意する必要がありました。これは内部ワークフローがそれを入力として受け取るように設計されているためです。内部ワークフローのリファクタリングとしては、コンパイルするjavaファイルのリストを受け取るようにすれば、他のワークフローにおいてもツールステップとしての使い方が簡単になります。</p>
 <p>ネストされたワークフローは、より高機能で再利用可能なワークフローユニットを生成する強力な機能ですが、CWLツール定義の作成と同様に、複数のワークフローでの使い勝手を向上させるための配慮が必要です。</p>
 </section>
 <section id="scattering-steps">
 <h2><span class="section-number">2.10.3. </span>Scatter ステップ<a class="headerlink" href="#scattering-steps" title="Link to this heading">#</a></h2>
-<p>Now that we know how to write workflows, we can start utilizing the <code class="docutils literal notranslate"><span class="pre">ScatterFeatureRequirement</span></code>.
-This feature tells the runner that you wish to run a tool or workflow multiple times over a list
-of inputs. The workflow then takes the input(s) as an array and will run the specified step(s)
-on each element of the array as if it were a single input. This allows you to run the same workflow
-on multiple inputs without having to generate many different commands or input yaml files.</p>
+<p>ワークフローの書き方がわかったので、<code class="docutils literal notranslate"><span class="pre">ScatterFeatureRequirement</span></code> を利用し始めることができます。この機能は、ツールやワークフローを入力のリストに対して複数回実行したいことをrunnerに伝えます。ワークフローは、入力を配列として受け取り、配列の各要素をあたかも1つの入力であるかのように、指定されたステップを実行します。これにより、多くの異なるコマンドや入力 yaml ファイルを生成することなく、複数の入力に対して同じワークフローを実行できます。</p>
 <div class="highlight-cwl notranslate"><div class="highlight"><pre><span></span><span class="nt">requirements</span><span class="p">:</span>
 <span class="w">  </span><span class="nt">ScatterFeatureRequirement</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">{}</span>
 </pre></div>
@@ -908,11 +877,8 @@ on multiple inputs without having to generate many different commands or input y
 <span class="w">    </span><span class="nt">out</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[]</span>
 </pre></div>
 </div>
-<p>ここでは、ステップ<code class="docutils literal notranslate"><span class="pre">echo</span></code> に、<code class="docutils literal notranslate"><span class="pre">scatter</span></code> という新しいフィールドを追加しました。このフィールドは、CWLランナーに、このステップの入力を分散して実行したいことを伝えます。scatterの後に記載されている入力名は、ワークフローレベルの入力名ではなく、ステップの入力名であることに注意してください。</p>
-<p>For our first scatter, it's as simple as that! Since our tool doesn't collect any outputs, we
-still use <code class="docutils literal notranslate"><span class="pre">outputs:</span> <span class="pre">[]</span></code> in our workflow, but if you expect that the final output of your
-workflow will now have multiple outputs to collect, be sure to update that to an array type
-as well!</p>
+<p>ここでは、ステップ<code class="docutils literal notranslate"><span class="pre">echo</span></code> に、<code class="docutils literal notranslate"><span class="pre">scatter</span></code> という新しいフィールドを追加しました。このフィールドは、CWL runnerに、このステップの入力を分散して実行したいことを伝えます。scatterの後に記載されている入力名は、ワークフローレベルの入力名ではなく、ステップの入力名であることに注意してください。</p>
+<p>最初のスキャッターでは、これと同じくらい簡単です！このツールは出力を回収しないので、<code class="docutils literal notranslate"><span class="pre">outputs:</span> <span class="pre">[]</span></code> を使います。しかし、ワークフローの最終出力に収集する複数の出力があることが予想される場合、それを配列型に更新するようにしてください！</p>
 <p>以下の入力ファイルを使用します：</p>
 <div class="literal-block-wrapper docutils container" id="scatter-job-yml">
 <div class="code-block-caption"><span class="caption-text"><code class="docutils literal notranslate"><span class="pre">scatter-job.yml</span></code></span><a class="headerlink" href="#scatter-job-yml" title="Link to this code">#</a></div>
@@ -926,25 +892,25 @@ as well!</p>
 </div>
 <p>注意点として、<a class="reference internal" href="../introduction/quick-start.html"><span class="std std-doc"><code class="docutils literal notranslate"><span class="pre">hello_world.cwl</span></code></span></a> は単にメッセージに対して<code class="docutils literal notranslate"><span class="pre">echo</span></code> というコマンドを呼び出します。コマンドラインで <code class="docutils literal notranslate"><span class="pre">cwltool</span> <span class="pre">scatter-workflow.cwl</span> <span class="pre">scatter-job.yml</span></code> を呼び出します：</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>cwltool<span class="w"> </span>scatter-workflow.cwl<span class="w"> </span>scatter-job.yml
-INFO<span class="w"> </span>/opt/hostedtoolcache/Python/3.9.19/x64/bin/cwltool<span class="w"> </span><span class="m">3</span>.1.20240404144621
+INFO<span class="w"> </span>/opt/hostedtoolcache/Python/3.9.19/x64/bin/cwltool<span class="w"> </span><span class="m">3</span>.1.20240508115724
 INFO<span class="w"> </span>Resolved<span class="w"> </span><span class="s1">&#39;scatter-workflow.cwl&#39;</span><span class="w"> </span>to<span class="w"> </span><span class="s1">&#39;file:///home/runner/work/user_guide/user_guide/src/_includes/cwl/workflows/scatter-workflow.cwl&#39;</span>
 INFO<span class="w"> </span><span class="o">[</span>workflow<span class="w"> </span><span class="o">]</span><span class="w"> </span>start
 INFO<span class="w"> </span><span class="o">[</span>workflow<span class="w"> </span><span class="o">]</span><span class="w"> </span>starting<span class="w"> </span>step<span class="w"> </span><span class="nb">echo</span>
 INFO<span class="w"> </span><span class="o">[</span>step<span class="w"> </span>echo<span class="o">]</span><span class="w"> </span>start
-INFO<span class="w"> </span><span class="o">[</span>job<span class="w"> </span>echo<span class="o">]</span><span class="w"> </span>/tmp/t15q7xg9$<span class="w"> </span><span class="nb">echo</span><span class="w"> </span><span class="se">\</span>
-<span class="w">    </span><span class="s1">&#39;Hello world!&#39;</span><span class="w"> </span>&gt;<span class="w"> </span>/tmp/t15q7xg9/4e58fa7cfe8505476c857c252be2f391ddbf1187
+INFO<span class="w"> </span><span class="o">[</span>job<span class="w"> </span>echo<span class="o">]</span><span class="w"> </span>/tmp/kkgojjhp$<span class="w"> </span><span class="nb">echo</span><span class="w"> </span><span class="se">\</span>
+<span class="w">    </span><span class="s1">&#39;Hello world!&#39;</span><span class="w"> </span>&gt;<span class="w"> </span>/tmp/kkgojjhp/4e58fa7cfe8505476c857c252be2f391ddbf1187
 INFO<span class="w"> </span><span class="o">[</span>job<span class="w"> </span>echo<span class="o">]</span><span class="w"> </span>completed<span class="w"> </span>success
 INFO<span class="w"> </span><span class="o">[</span>step<span class="w"> </span>echo<span class="o">]</span><span class="w"> </span>start
-INFO<span class="w"> </span><span class="o">[</span>job<span class="w"> </span>echo_2<span class="o">]</span><span class="w"> </span>/tmp/87scew3q$<span class="w"> </span><span class="nb">echo</span><span class="w"> </span><span class="se">\</span>
-<span class="w">    </span><span class="s1">&#39;Hola mundo!&#39;</span><span class="w"> </span>&gt;<span class="w"> </span>/tmp/87scew3q/4e58fa7cfe8505476c857c252be2f391ddbf1187
+INFO<span class="w"> </span><span class="o">[</span>job<span class="w"> </span>echo_2<span class="o">]</span><span class="w"> </span>/tmp/6pce0lfg$<span class="w"> </span><span class="nb">echo</span><span class="w"> </span><span class="se">\</span>
+<span class="w">    </span><span class="s1">&#39;Hola mundo!&#39;</span><span class="w"> </span>&gt;<span class="w"> </span>/tmp/6pce0lfg/4e58fa7cfe8505476c857c252be2f391ddbf1187
 INFO<span class="w"> </span><span class="o">[</span>job<span class="w"> </span>echo_2<span class="o">]</span><span class="w"> </span>completed<span class="w"> </span>success
 INFO<span class="w"> </span><span class="o">[</span>step<span class="w"> </span>echo<span class="o">]</span><span class="w"> </span>start
-INFO<span class="w"> </span><span class="o">[</span>job<span class="w"> </span>echo_3<span class="o">]</span><span class="w"> </span>/tmp/xmphcsn8$<span class="w"> </span><span class="nb">echo</span><span class="w"> </span><span class="se">\</span>
-<span class="w">    </span><span class="s1">&#39;Bonjour le monde!&#39;</span><span class="w"> </span>&gt;<span class="w"> </span>/tmp/xmphcsn8/4e58fa7cfe8505476c857c252be2f391ddbf1187
+INFO<span class="w"> </span><span class="o">[</span>job<span class="w"> </span>echo_3<span class="o">]</span><span class="w"> </span>/tmp/z902b96y$<span class="w"> </span><span class="nb">echo</span><span class="w"> </span><span class="se">\</span>
+<span class="w">    </span><span class="s1">&#39;Bonjour le monde!&#39;</span><span class="w"> </span>&gt;<span class="w"> </span>/tmp/z902b96y/4e58fa7cfe8505476c857c252be2f391ddbf1187
 INFO<span class="w"> </span><span class="o">[</span>job<span class="w"> </span>echo_3<span class="o">]</span><span class="w"> </span>completed<span class="w"> </span>success
 INFO<span class="w"> </span><span class="o">[</span>step<span class="w"> </span>echo<span class="o">]</span><span class="w"> </span>start
-INFO<span class="w"> </span><span class="o">[</span>job<span class="w"> </span>echo_4<span class="o">]</span><span class="w"> </span>/tmp/bgjtinaf$<span class="w"> </span><span class="nb">echo</span><span class="w"> </span><span class="se">\</span>
-<span class="w">    </span><span class="s1">&#39;Hallo welt!&#39;</span><span class="w"> </span>&gt;<span class="w"> </span>/tmp/bgjtinaf/4e58fa7cfe8505476c857c252be2f391ddbf1187
+INFO<span class="w"> </span><span class="o">[</span>job<span class="w"> </span>echo_4<span class="o">]</span><span class="w"> </span>/tmp/luv8o7cd$<span class="w"> </span><span class="nb">echo</span><span class="w"> </span><span class="se">\</span>
+<span class="w">    </span><span class="s1">&#39;Hallo welt!&#39;</span><span class="w"> </span>&gt;<span class="w"> </span>/tmp/luv8o7cd/4e58fa7cfe8505476c857c252be2f391ddbf1187
 INFO<span class="w"> </span><span class="o">[</span>job<span class="w"> </span>echo_4<span class="o">]</span><span class="w"> </span>completed<span class="w"> </span>success
 INFO<span class="w"> </span><span class="o">[</span>step<span class="w"> </span>echo<span class="o">]</span><span class="w"> </span>completed<span class="w"> </span>success
 INFO<span class="w"> </span><span class="o">[</span>workflow<span class="w"> </span><span class="o">]</span><span class="w"> </span>completed<span class="w"> </span>success
@@ -978,7 +944,7 @@ INFO<span class="w"> </span><span class="o">[</span>workflow<span class="w"> </s
 </pre></div>
 </div>
 </div>
-<p>Now, how do we incorporate scatter? Remember the scatter field is under each step:</p>
+<p>さて、scatterはどのように取り入れるのでしょうか？scatterフィールドは各ステップの下にあることを思い出してください：</p>
 <div class="literal-block-wrapper docutils container" id="scatter-two-steps-cwl">
 <div class="code-block-caption"><span class="caption-text"><code class="docutils literal notranslate"><span class="pre">scatter-two-steps.cwl</span></code></span><a class="headerlink" href="#scatter-two-steps-cwl" title="Link to this code">#</a></div>
 <div class="highlight-cwl notranslate"><div class="highlight"><pre><span></span><span class="c1">#!/usr/bin/env cwl-runner</span>
@@ -1009,17 +975,7 @@ INFO<span class="w"> </span><span class="o">[</span>workflow<span class="w"> </s
 </pre></div>
 </div>
 </div>
-<p>Here we have placed the scatter field under each step. This is fine for this example since
-it runs quickly, but if you're running many samples for a more complex workflow, you may
-wish to consider an alternative. Here we are running scatter on each step independently, but
-since the second step is not dependent on the first step completing all languages, we aren't
-using the scatter functionality efficiently. The second step expects an array as input from
-the first step, so it will wait until everything in step one is finished before doing anything.
-Pretend that <code class="docutils literal notranslate"><span class="pre">echo</span> <span class="pre">Hello</span> <span class="pre">World!</span></code> takes 1 minute to perform, <code class="docutils literal notranslate"><span class="pre">wc</span> <span class="pre">-c</span></code> on the output takes 3 minutes
-and that <code class="docutils literal notranslate"><span class="pre">echo</span> <span class="pre">Hallo</span> <span class="pre">welt!</span></code> takes 5 minutes to perform, and <code class="docutils literal notranslate"><span class="pre">wc</span></code> on that output takes 3 minutes.
-Even though <code class="docutils literal notranslate"><span class="pre">echo</span> <span class="pre">Hello</span> <span class="pre">World!</span></code> could finish in 4 minutes, it will actually finish in 8 minutes
-because the first step must wait on <code class="docutils literal notranslate"><span class="pre">echo</span> <span class="pre">Hallo</span> <span class="pre">welt!</span></code>. You can see how this might not scale
-well.</p>
+<p>ここでは、各ステップの下にscatterフィールドを配置しました。この例では素早く実行されるので問題ありませんが、より複雑なワークフローのために多くのサンプルを実行する場合は、別の方法を検討することをお勧めします。ここでは、各ステップで独立してscatterを実行していますが、2番目のステップはすべての言語を完了する最初のステップに依存していないため、scatter機能を効率的に使用することはできません。第2ステップは第1ステップからの入力として配列を期待するので、何かをする前に第1ステップのすべてが終了するまで待つことになります。<code class="docutils literal notranslate"><span class="pre">echo</span> <span class="pre">Hello</span> <span class="pre">World!</span></code> の実行に1分、出力の<code class="docutils literal notranslate"><span class="pre">wc</span> <span class="pre">-c</span></code> に3分、<code class="docutils literal notranslate"><span class="pre">echo</span> <span class="pre">Hallo</span> <span class="pre">welt!</span></code> の実行に5分、出力の<code class="docutils literal notranslate"><span class="pre">wc</span></code> に3分かかると仮定してください。<code class="docutils literal notranslate"><span class="pre">echo</span> <span class="pre">Hello</span> <span class="pre">World!</span></code> が4分で終了しても、最初のステップは<code class="docutils literal notranslate"><span class="pre">echo</span> <span class="pre">Hallo</span> <span class="pre">welt!</span></code> を待つ必要があるので、実際には8分で終了することになります。このように、うまくスケールしないことがおわかりいただけると思います。</p>
 <p>では、他のサンプルと独立して進行できるステップを分散させるにはどうすればいいのでしょうか？<a class="reference external" href="#nested-workflows">Nested Workflows</a>で、ワークフロー全体を別のワークフローの1ステップにすることができることを思い出しましょう！2ステップのワークフローを1ステップのサブワークフローに変換してみましょう：</p>
 <div class="literal-block-wrapper docutils container" id="scatter-nested-workflow-cwl">
 <div class="code-block-caption"><span class="caption-text"><code class="docutils literal notranslate"><span class="pre">scatter-nested-workflow.cwl</span></code></span><a class="headerlink" href="#scatter-nested-workflow-cwl" title="Link to this code">#</a></div>
@@ -1064,7 +1020,7 @@ well.</p>
 </section>
 <section id="conditional-workflows">
 <h2><span class="section-number">2.10.4. </span>条件分岐ワークフロー<a class="headerlink" href="#conditional-workflows" title="Link to this heading">#</a></h2>
-<p>このワークフローは、条件付きステップを含み、入力に基づき実行されます。これにより、ワークフローは、プログラムの開始時に与えられた入力パラメータや以前のステップによって、追加のステップをスキップすることができます。</p>
+<p>このワークフローは、条件付きステップを含み、入力に基づき実行されます。これにより、ワークフローは、プログラムの開始時に与えられた入力パラメータや以前のステップによって、追加のステップをスキップできます。</p>
 <div class="literal-block-wrapper docutils container" id="conditional-workflow-cwl">
 <div class="code-block-caption"><span class="caption-text"><code class="docutils literal notranslate"><span class="pre">conditional-workflow.cwl</span></code></span><a class="headerlink" href="#conditional-workflow-cwl" title="Link to this code">#</a></div>
 <div class="highlight-cwl notranslate"><div class="highlight"><pre><span></span><span class="nt">class</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Workflow</span>
@@ -1109,7 +1065,7 @@ well.</p>
 <span class="nt">cwlVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">v1.2</span>
 </pre></div>
 </div>
-<p>The first step of the workflow (step1) contains two input properties and will execute foo.cwl when the conditions are met. The new property <code class="docutils literal notranslate"><span class="pre">when</span></code> is where the condition validation takes place. In this case only when <code class="docutils literal notranslate"><span class="pre">in1</span></code>  from the workflow contains a value <code class="docutils literal notranslate"><span class="pre">&lt;</span> <span class="pre">1</span></code> this step will be executed.</p>
+<p>ワークフローの最初のステップ（step1）には2つの入力プロパティがあり、条件を満たしたときにfoo.cwlを実行します。新しいプロパティ<code class="docutils literal notranslate"><span class="pre">when</span></code> は、条件の検証が行われる場所です。この場合、ワークフローから<code class="docutils literal notranslate"><span class="pre">in1</span></code> に値<code class="docutils literal notranslate"><span class="pre">&lt;</span> <span class="pre">1</span></code> が含まれるときのみ、このステップが実行されます。</p>
 <div class="highlight-cwl notranslate"><div class="highlight"><pre><span></span><span class="nt">steps</span><span class="p">:</span>
 
 <span class="w">  </span><span class="nt">step1</span><span class="p">:</span>

@@ -447,8 +447,8 @@ document.write(`
                   
   <section id="command-line-tool">
 <h1><span class="section-number">2.2. </span>コマンドラインツール<a class="headerlink" href="#command-line-tool" title="Link to this heading">#</a></h1>
-<p>CommandLineToolは、Processオブジェクトの一種であり、それ自体またはワークフローのステップとして実行することができます。<code class="docutils literal notranslate"><span class="pre">ls</span></code>,<code class="docutils literal notranslate"><span class="pre">echo</span></code>,<code class="docutils literal notranslate"><span class="pre">tar</span></code> などの実行したいコマンドのラッパーです。実行したいコマンドは、CommandLineToolについてのCWL定義の<code class="docutils literal notranslate"><span class="pre">baseCommand</span></code> 属性で定義されています。</p>
-<p>CWLコマンドラインツールは、<code class="docutils literal notranslate"><span class="pre">inputs</span></code> と<code class="docutils literal notranslate"><span class="pre">outputs</span></code> も持っていなければなりません。次の例は、Linuxコマンド <code class="docutils literal notranslate"><span class="pre">echo</span></code> のためのCWLコマンドラインツールの最小限の例で、inputsとoutputsを使用します。</p>
+<p>CommandLineToolは、Processオブジェクトの一種であり、それ自体またはワークフローのステップとして実行できます。<code class="docutils literal notranslate"><span class="pre">ls</span></code>,<code class="docutils literal notranslate"><span class="pre">echo</span></code>,<code class="docutils literal notranslate"><span class="pre">tar</span></code> などの実行したいコマンドのラッパーです。実行したいコマンドは、CommandLineToolについてのCWL定義の<code class="docutils literal notranslate"><span class="pre">baseCommand</span></code> 属性で定義されています。</p>
+<p>CWL CommandLineToolは、<code class="docutils literal notranslate"><span class="pre">inputs</span></code> と<code class="docutils literal notranslate"><span class="pre">outputs</span></code> も持っていなければなりません。次の例は、Linuxコマンド <code class="docutils literal notranslate"><span class="pre">echo</span></code> のためのCWL CommandLineToolの最小限の例で、inputsとoutputsを使用します。</p>
 <figure class="align-center" id="id1">
 <div class="graphviz"><object data="../_images/graphviz-50f71480e1fde5bfe7ca5afa005f8614587f43e8.svg" type="image/svg+xml" class="graphviz">
 <p class="warning">digraph G {

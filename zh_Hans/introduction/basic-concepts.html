@@ -536,7 +536,7 @@ document.write(`
 <p>“工作流”指的是可分为步骤的流程。“步骤”可以是其他工作流（嵌套工作流），也可以是命令行工具或表达式工具。工作流的输入可以传递给它的任一步骤，而其步骤生成的输出可用作工作流的最终输出。</p>
 <p>CWL 规约允许其实现提供额外功能，或通过 <em>requirements</em> （要求）指定工作流的先决条件。CWL 规约定义了诸种要求，如：</p>
 <ul class="simple">
-<li><p><a class="reference external" href="https://w3id.org/cwl/Workflow.html#InlineJavascriptRequirement"><code class="docutils literal notranslate"><span class="pre">InlineJavascriptWorkflow</span></code></a> - enables JavaScript in expressions.</p></li>
+<li><p><a class="reference external" href="https://w3id.org/cwl/Workflow.html#InlineJavascriptRequirement"><code class="docutils literal notranslate"><span class="pre">InlineJavascriptRequirement</span></code></a> - enables JavaScript in expressions.</p></li>
 <li><p><a class="reference external" href="https://w3id.org/cwl/Workflow.html#SubworkflowFeatureRequirement"><code class="docutils literal notranslate"><span class="pre">SubworkflowFeatureRequirement</span></code></a> - enables nested workflows.</p></li>
 <li><p><a class="reference external" href="https://w3id.org/cwl/Workflow.html#InitialWorkDirRequirement"><code class="docutils literal notranslate"><span class="pre">InitialWorkDirRequirement</span></code></a> - controls staging files in the input directory.</p></li>
 </ul>

@@ -502,12 +502,12 @@ arguments</p>
 </div>
 <p>And now invoke <code class="docutils literal notranslate"><span class="pre">cwltool</span></code> with the tool description and the input object on the command line:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>cwltool<span class="w"> </span>tar.cwl<span class="w"> </span>tar-job.yml
-INFO<span class="w"> </span>/opt/hostedtoolcache/Python/3.9.19/x64/bin/cwltool<span class="w"> </span><span class="m">3</span>.1.20240404144621
+INFO<span class="w"> </span>/opt/hostedtoolcache/Python/3.9.19/x64/bin/cwltool<span class="w"> </span><span class="m">3</span>.1.20240508115724
 INFO<span class="w"> </span>Resolved<span class="w"> </span><span class="s1">&#39;tar.cwl&#39;</span><span class="w"> </span>to<span class="w"> </span><span class="s1">&#39;file:///home/runner/work/user_guide/user_guide/src/_includes/cwl/outputs/tar.cwl&#39;</span>
-INFO<span class="w"> </span><span class="o">[</span>job<span class="w"> </span>tar.cwl<span class="o">]</span><span class="w"> </span>/tmp/lu0zn30o$<span class="w"> </span>tar<span class="w"> </span><span class="se">\</span>
+INFO<span class="w"> </span><span class="o">[</span>job<span class="w"> </span>tar.cwl<span class="o">]</span><span class="w"> </span>/tmp/ik8e9ol9$<span class="w"> </span>tar<span class="w"> </span><span class="se">\</span>
 <span class="w">    </span>--extract<span class="w"> </span><span class="se">\</span>
 <span class="w">    </span>--file<span class="w"> </span><span class="se">\</span>
-<span class="w">    </span>/tmp/amj95z89/stgffbe1dd1-8879-416c-a8e6-1967570e8701/hello.tar
+<span class="w">    </span>/tmp/i673v27i/stgc060c662-b14a-4b8f-9c15-f0bcf6d567c9/hello.tar
 INFO<span class="w"> </span><span class="o">[</span>job<span class="w"> </span>tar.cwl<span class="o">]</span><span class="w"> </span>completed<span class="w"> </span>success
 <span class="o">{</span>
 <span class="w">    </span><span class="s2">&quot;example_out&quot;</span>:<span class="w"> </span><span class="o">{</span>
@@ -565,10 +565,10 @@ the name of the file where the output stream should go.  Then add <code class="d
 </div>
 <p>Agora chame o <code class="docutils literal notranslate"><span class="pre">cwltool</span></code> passando a descrição da ferramenta e o objeto de entrada na linha de comando:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>cwltool<span class="w"> </span>stdout.cwl<span class="w"> </span>echo-job.yml
-INFO<span class="w"> </span>/opt/hostedtoolcache/Python/3.9.19/x64/bin/cwltool<span class="w"> </span><span class="m">3</span>.1.20240404144621
+INFO<span class="w"> </span>/opt/hostedtoolcache/Python/3.9.19/x64/bin/cwltool<span class="w"> </span><span class="m">3</span>.1.20240508115724
 INFO<span class="w"> </span>Resolved<span class="w"> </span><span class="s1">&#39;stdout.cwl&#39;</span><span class="w"> </span>to<span class="w"> </span><span class="s1">&#39;file:///home/runner/work/user_guide/user_guide/src/_includes/cwl/outputs/stdout.cwl&#39;</span>
-INFO<span class="w"> </span><span class="o">[</span>job<span class="w"> </span>stdout.cwl<span class="o">]</span><span class="w"> </span>/tmp/nhvwecut$<span class="w"> </span><span class="nb">echo</span><span class="w"> </span><span class="se">\</span>
-<span class="w">    </span><span class="s1">&#39;Hello world!&#39;</span><span class="w"> </span>&gt;<span class="w"> </span>/tmp/nhvwecut/output.txt
+INFO<span class="w"> </span><span class="o">[</span>job<span class="w"> </span>stdout.cwl<span class="o">]</span><span class="w"> </span>/tmp/xipd1uxb$<span class="w"> </span><span class="nb">echo</span><span class="w"> </span><span class="se">\</span>
+<span class="w">    </span><span class="s1">&#39;Hello world!&#39;</span><span class="w"> </span>&gt;<span class="w"> </span>/tmp/xipd1uxb/output.txt
 INFO<span class="w"> </span><span class="o">[</span>job<span class="w"> </span>stdout.cwl<span class="o">]</span><span class="w"> </span>completed<span class="w"> </span>success
 <span class="o">{</span>
 <span class="w">    </span><span class="s2">&quot;example_out&quot;</span>:<span class="w"> </span><span class="o">{</span>
@@ -620,9 +620,9 @@ INFO<span class="w"> </span><span class="o">[</span>job<span class="w"> </span>s
 </div>
 <p>Agora chame o <code class="docutils literal notranslate"><span class="pre">cwltool</span></code> passando a descrição da ferramenta e o objeto de entrada na linha de comando:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>cwltool<span class="w"> </span>array-outputs.cwl<span class="w"> </span>array-outputs-job.yml
-INFO<span class="w"> </span>/opt/hostedtoolcache/Python/3.9.19/x64/bin/cwltool<span class="w"> </span><span class="m">3</span>.1.20240404144621
+INFO<span class="w"> </span>/opt/hostedtoolcache/Python/3.9.19/x64/bin/cwltool<span class="w"> </span><span class="m">3</span>.1.20240508115724
 INFO<span class="w"> </span>Resolved<span class="w"> </span><span class="s1">&#39;array-outputs.cwl&#39;</span><span class="w"> </span>to<span class="w"> </span><span class="s1">&#39;file:///home/runner/work/user_guide/user_guide/src/_includes/cwl/outputs/array-outputs.cwl&#39;</span>
-INFO<span class="w"> </span><span class="o">[</span>job<span class="w"> </span>array-outputs.cwl<span class="o">]</span><span class="w"> </span>/tmp/gkgwe06_$<span class="w"> </span>touch<span class="w"> </span><span class="se">\</span>
+INFO<span class="w"> </span><span class="o">[</span>job<span class="w"> </span>array-outputs.cwl<span class="o">]</span><span class="w"> </span>/tmp/bsv_bfbj$<span class="w"> </span>touch<span class="w"> </span><span class="se">\</span>
 <span class="w">    </span>foo.txt<span class="w"> </span><span class="se">\</span>
 <span class="w">    </span>bar.dat<span class="w"> </span><span class="se">\</span>
 <span class="w">    </span>baz.txt

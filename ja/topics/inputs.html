@@ -449,9 +449,7 @@ document.write(`
 <h1><span class="section-number">2.4. </span>Inputs<a class="headerlink" href="#inputs" title="Link to this heading">#</a></h1>
 <section id="essential-input-parameters">
 <h2><span class="section-number">2.4.1. </span>必須入力パラメータ<a class="headerlink" href="#essential-input-parameters" title="Link to this heading">#</a></h2>
-<p>The <code class="docutils literal notranslate"><span class="pre">inputs</span></code> of a tool is a list of input parameters that control how to
-run the tool.  Each parameter has an <code class="docutils literal notranslate"><span class="pre">id</span></code> for the name of parameter, and
-<code class="docutils literal notranslate"><span class="pre">type</span></code> describing what types of values are valid for that parameter.</p>
+<p>ツールの<code class="docutils literal notranslate"><span class="pre">inputs</span></code> は、ツールの実行に関わる入力パラメーターのリストです。  各パラメーターには、パラメーター名を示す<code class="docutils literal notranslate"><span class="pre">id</span></code> と、そのパラメーターに有効な値の種類を示す<code class="docutils literal notranslate"><span class="pre">type</span></code> があります。</p>
 <p>利用可能なプリミティブ型は<em>string</em>,<em>int</em>,<em>long</em>,<em>float</em>,<em>double</em>, <em>null</em>; 複合型は<em>array</em>と<em>record</em>; さらに特殊型<em>File</em>,<em>Directory</em> ,<em>Any</em> があります。</p>
 <p>次の例では、異なる型の入力パラメーターが、異なる方法でコマンドライン上に表示されることを示します。</p>
 <p>まず、以下の内容を含む<code class="docutils literal notranslate"><span class="pre">inp.cwl</span></code> というファイルを作成します：</p>
@@ -503,9 +501,9 @@ run the tool.  Each parameter has an <code class="docutils literal notranslate">
 </div>
 <div class="admonition note">
 <p class="admonition-title">注釈</p>
-<p><code class="docutils literal notranslate"><span class="pre">cwltool</span></code> を使って、テンプレートとなる入力オブジェクトを作成することができます。これにより、入力オブジェクトファイルにすべての入力パラメータを入力する手間を省くことができます：</p>
+<p><code class="docutils literal notranslate"><span class="pre">cwltool</span></code> を使って、テンプレートとなる入力オブジェクトを作成できます。これにより、入力オブジェクトファイルにすべての入力パラメータを入力する手間を省くことができます：</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>cwltool<span class="w"> </span>--make-template<span class="w"> </span>inp.cwl
-INFO<span class="w"> </span>/opt/hostedtoolcache/Python/3.9.19/x64/bin/cwltool<span class="w"> </span><span class="m">3</span>.1.20240404144621
+INFO<span class="w"> </span>/opt/hostedtoolcache/Python/3.9.19/x64/bin/cwltool<span class="w"> </span><span class="m">3</span>.1.20240508115724
 INFO<span class="w"> </span>Resolved<span class="w"> </span><span class="s1">&#39;inp.cwl&#39;</span><span class="w"> </span>to<span class="w"> </span><span class="s1">&#39;file:///home/runner/work/user_guide/user_guide/src/_includes/cwl/inputs/inp.cwl&#39;</span>
 example_string:<span class="w"> </span>a_string<span class="w">  </span><span class="c1"># type &#39;string&#39;</span>
 example_int:<span class="w"> </span><span class="m">0</span><span class="w">  </span><span class="c1"># type &#39;int&#39;</span>
@@ -515,7 +513,7 @@ example_file:<span class="w">  </span><span class="c1"># type &#39;File&#39; (op
 <span class="w">    </span>path:<span class="w"> </span>a/file/path
 </pre></div>
 </div>
-<p><code class="docutils literal notranslate"><span class="pre">cwltool</span> <span class="pre">--make-template</span> <span class="pre">inp.cwl</span> <span class="pre">&gt;</span> <span class="pre">inp-job.yml</span></code> のように、出力をファイルにリダイレクトします。その後デフォルト値を希望の入力値で修正することができます。</p>
+<p><code class="docutils literal notranslate"><span class="pre">cwltool</span> <span class="pre">--make-template</span> <span class="pre">inp.cwl</span> <span class="pre">&gt;</span> <span class="pre">inp-job.yml</span></code> のように、出力をファイルにリダイレクトします。その後デフォルト値を希望の入力値で修正できます。</p>
 </div>
 <p>&quot;example_file&quot; は <code class="docutils literal notranslate"><span class="pre">File</span></code> 型として、フィールド <code class="docutils literal notranslate"><span class="pre">class：</span> <span class="pre">File</span></code> と <code class="docutils literal notranslate"><span class="pre">path</span></code> フィールドを持つオブジェクトとして提供されなければなりません。</p>
 <p>次に、コマンドラインで<code class="docutils literal notranslate"><span class="pre">touch</span> <span class="pre">whale.txt</span></code> と入力し、<a class="reference external" href="http://www.linfo.org/touch.html">touch</a>をコマンドを使用して whale.txt を作成します。</p>
@@ -524,15 +522,15 @@ example_file:<span class="w">  </span><span class="c1"># type &#39;File&#39; (op
 </div>
 <p>次に、<code class="docutils literal notranslate"><span class="pre">cwltool</span> <span class="pre">inp.cwl</span> <span class="pre">inp-job.yml</span></code> というコマンドを使い、コマンドラインにツール定義と入力オブジェクトを指定して<code class="docutils literal notranslate"><span class="pre">cwltool</span></code> を起動します。次のボックステキストは、これら2つのコマンドと、コマンドラインから期待される出力について説明しています：</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>cwltool<span class="w"> </span>inp.cwl<span class="w"> </span>inp-job.yml
-INFO<span class="w"> </span>/opt/hostedtoolcache/Python/3.9.19/x64/bin/cwltool<span class="w"> </span><span class="m">3</span>.1.20240404144621
+INFO<span class="w"> </span>/opt/hostedtoolcache/Python/3.9.19/x64/bin/cwltool<span class="w"> </span><span class="m">3</span>.1.20240508115724
 INFO<span class="w"> </span>Resolved<span class="w"> </span><span class="s1">&#39;inp.cwl&#39;</span><span class="w"> </span>to<span class="w"> </span><span class="s1">&#39;file:///home/runner/work/user_guide/user_guide/src/_includes/cwl/inputs/inp.cwl&#39;</span>
-INFO<span class="w"> </span><span class="o">[</span>job<span class="w"> </span>inp.cwl<span class="o">]</span><span class="w"> </span>/tmp/xepon3e0$<span class="w"> </span><span class="nb">echo</span><span class="w"> </span><span class="se">\</span>
+INFO<span class="w"> </span><span class="o">[</span>job<span class="w"> </span>inp.cwl<span class="o">]</span><span class="w"> </span>/tmp/cmrl71jp$<span class="w"> </span><span class="nb">echo</span><span class="w"> </span><span class="se">\</span>
 <span class="w">    </span>-f<span class="w"> </span><span class="se">\</span>
 <span class="w">    </span>-i42<span class="w"> </span><span class="se">\</span>
 <span class="w">    </span>--example-string<span class="w"> </span><span class="se">\</span>
 <span class="w">    </span>hello<span class="w"> </span><span class="se">\</span>
-<span class="w">    </span>--file<span class="o">=</span>/tmp/s1a73_yq/stgbad35087-7d05-47e1-8742-6ef598b0bdc3/whale.txt
--f<span class="w"> </span>-i42<span class="w"> </span>--example-string<span class="w"> </span>hello<span class="w"> </span>--file<span class="o">=</span>/tmp/s1a73_yq/stgbad35087-7d05-47e1-8742-6ef598b0bdc3/whale.txt
+<span class="w">    </span>--file<span class="o">=</span>/tmp/rhvc8wvv/stg7c7273be-ecd7-4297-bbc4-479641fabf95/whale.txt
+-f<span class="w"> </span>-i42<span class="w"> </span>--example-string<span class="w"> </span>hello<span class="w"> </span>--file<span class="o">=</span>/tmp/rhvc8wvv/stg7c7273be-ecd7-4297-bbc4-479641fabf95/whale.txt
 INFO<span class="w"> </span><span class="o">[</span>job<span class="w"> </span>inp.cwl<span class="o">]</span><span class="w"> </span>completed<span class="w"> </span>success
 <span class="o">{}</span>INFO<span class="w"> </span>Final<span class="w"> </span>process<span class="w"> </span>status<span class="w"> </span>is<span class="w"> </span>success
 </pre></div>
@@ -540,12 +538,9 @@ INFO<span class="w"> </span><span class="o">[</span>job<span class="w"> </span>i
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
 <p class="rubric">Where did those `/tmp` paths come from?</p>
-<p>CWLリファレンスランナー（cwltool）と他のランナーは、ツールが明示的に指定されていないファイルに誤ってアクセスしないように、入力ファイルへの（&quot;ソフト&quot;）シンボリックリンクを持つ一時ディレクトリを作成します</p>
+<p>CWL reference runner（cwltool）と他のランナーは、ツールが明示的に指定されていないファイルに誤ってアクセスしないように、入力ファイルへの（&quot;ソフト&quot;）シンボリックリンクを持つ一時ディレクトリを作成します</p>
 </div>
-<p>The field <a class="reference external" href="https://w3id.org/cwl/CommandLineTool.html#Input_binding"><code class="docutils literal notranslate"><span class="pre">inputBinding</span></code></a> is optional and indicates whether and how the
-input parameter should appear on the tool's command line.  If
-<code class="docutils literal notranslate"><span class="pre">inputBinding</span></code> is missing, the parameter does not appear on the command
-line.  Let's look at each example in detail.</p>
+<p><a class="reference external" href="https://w3id.org/cwl/CommandLineTool.html#Input_binding"><code class="docutils literal notranslate"><span class="pre">inputBinding</span></code></a>フィールドはオプションであり、入力パラメータをツールのコマンドラインに含めるかどうか、またどのように含めるかを指定します。<code class="docutils literal notranslate"><span class="pre">inputBinding</span></code>がない場合、パラメータはコマンドラインに含まれません。 それぞれの例を詳しく見てみましょう。</p>
 <div class="highlight-cwl notranslate"><div class="highlight"><pre><span></span><span class="nt">example_flag</span><span class="p">:</span>
 <span class="w">  </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">boolean</span>
 <span class="w">  </span><span class="nt">inputBinding</span><span class="p">:</span>
@@ -570,10 +565,7 @@ line.  Let's look at each example in detail.</p>
 <span class="w">    </span><span class="nt">separate</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
 </pre></div>
 </div>
-<p>Integer (and floating point) types appear on the command line with
-decimal text representation.  When the option <code class="docutils literal notranslate"><span class="pre">separate</span></code> is false (the
-default value is true), the prefix and value are combined into a single
-argument.  In the example above, this is rendered as <code class="docutils literal notranslate"><span class="pre">-i42</span></code>.</p>
+<p>整数型（および浮動小数点型）はコマンドラインに10進数のテキスト表現で表示されます。 <code class="docutils literal notranslate"><span class="pre">separate</span></code>オプションがfalseの場合（デフォルト値はtrue）、prefixと値は1つの引数になるようにまとめられます。 上の例では <code class="docutils literal notranslate"><span class="pre">-i42</span></code> として表示されます。</p>
 <div class="highlight-cwl notranslate"><div class="highlight"><pre><span></span><span class="nt">example_file</span><span class="p">:</span>
 <span class="w">  </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">File?</span>
 <span class="w">  </span><span class="nt">inputBinding</span><span class="p">:</span>
@@ -582,23 +574,14 @@ argument.  In the example above, this is rendered as <code class="docutils liter
 <span class="w">    </span><span class="nt">position</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">4</span>
 </pre></div>
 </div>
-<p>File types appear on the command line as the path to the file.  When the
-parameter type ends with a question mark <code class="docutils literal notranslate"><span class="pre">?</span></code> it indicates that the
-parameter is optional.  In the example above, this is rendered as
-<code class="docutils literal notranslate"><span class="pre">--file=/tmp/random/path/whale.txt</span></code>.  However, if the &quot;example_file&quot;
-parameter were not provided in the input, nothing would appear on the
-command line.</p>
+<p>ファイル型は、コマンドライン上にファイルへのパスとして表示されます。  パラメータの型の末尾にクエスチョンマーク<code class="docutils literal notranslate"><span class="pre">?</span></code>がある場合、これは、パラメータがオプショナルであることを表します。  上記の例では、<code class="docutils literal notranslate"><span class="pre">--file=/tmp/random/path/whale.txt</span></code> と表示されます。  ただし、入力パラメータに &quot;example_file&quot; パラメータを指定しなかった場合、コマンドラインには何も表示されません。</p>
 <p>入力ファイルは読み取り専用です。  入力ファイルを更新したい場合は、<a class="reference internal" href="staging-input-files.html"><span class="std std-doc">まず出力ディレクトリにコピーする</span></a>必要があります。</p>
 <p><code class="docutils literal notranslate"><span class="pre">position</span></code> の値は、パラメータがコマンドライン上のどこに表示されるかを決定するために使用されます。  Positionは、絶対的なものではなく、互いに相対的なものです。  そのため、位置は連続である必要はなく、1、3、5の位置にある3つのパラメータは、1、2、3と同じコマンドラインになります。  複数のパラメータが同じ位置を持つことも可能です（パラメータ名で紐付けを行います）。また、位置フィールドは任意です。  デフォルトの位置は0です。</p>
 <p><code class="docutils literal notranslate"><span class="pre">baseCommand</span></code> フィールドは、常にパラメータの前の最終コマンド行に表示されます。</p>
 </section>
 <section id="array-inputs">
 <h2><span class="section-number">2.4.2. </span>配列入力<a class="headerlink" href="#array-inputs" title="Link to this heading">#</a></h2>
-<p>It is easy to add arrays of input parameters represented to the command
-line. There are two ways to specify an array parameter. First is to provide
-<code class="docutils literal notranslate"><span class="pre">type</span></code> field with <code class="docutils literal notranslate"><span class="pre">type:</span> <span class="pre">array</span></code> and <code class="docutils literal notranslate"><span class="pre">items</span></code> defining the valid data types
-that may appear in the array. Alternatively, brackets <code class="docutils literal notranslate"><span class="pre">[]</span></code> may be added after
-the type name to indicate that input parameter is array of that type.</p>
+<p>コマンドラインに含まれる入力パラメータの配列は簡単に追加できます。配列パラメータを指定するには、2つの方法があります。1つ目の方法は、<code class="docutils literal notranslate"><span class="pre">type</span></code> に<code class="docutils literal notranslate"><span class="pre">type:</span> <span class="pre">array</span></code> と<code class="docutils literal notranslate"><span class="pre">items</span></code> を指定して、配列に現れる可能性のある有効なデータ型を定義する方法です。2つ目の方法は、入力パラメータがその型の配列であることを示すために、型名の後に<code class="docutils literal notranslate"><span class="pre">[]</span></code> という括弧を付けることもできます。</p>
 <div class="literal-block-wrapper docutils container" id="array-inputs-cwl">
 <div class="code-block-caption"><span class="caption-text"><code class="docutils literal notranslate"><span class="pre">array-inputs.cwl</span></code></span><a class="headerlink" href="#array-inputs-cwl" title="Link to this code">#</a></div>
 <div class="highlight-cwl notranslate"><div class="highlight"><pre><span></span><span class="c1">#!/usr/bin/env cwl-runner</span>
@@ -647,9 +630,9 @@ the type name to indicate that input parameter is array of that type.</p>
 </div>
 <p>ここで、コマンドラインにツール定義と入力オブジェクトを指定し <code class="docutils literal notranslate"><span class="pre">cwltool</span></code> を起動します：</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>cwltool<span class="w"> </span>array-inputs.cwl<span class="w"> </span>array-inputs-job.yml
-INFO<span class="w"> </span>/opt/hostedtoolcache/Python/3.9.19/x64/bin/cwltool<span class="w"> </span><span class="m">3</span>.1.20240404144621
+INFO<span class="w"> </span>/opt/hostedtoolcache/Python/3.9.19/x64/bin/cwltool<span class="w"> </span><span class="m">3</span>.1.20240508115724
 INFO<span class="w"> </span>Resolved<span class="w"> </span><span class="s1">&#39;array-inputs.cwl&#39;</span><span class="w"> </span>to<span class="w"> </span><span class="s1">&#39;file:///home/runner/work/user_guide/user_guide/src/_includes/cwl/inputs/array-inputs.cwl&#39;</span>
-INFO<span class="w"> </span><span class="o">[</span>job<span class="w"> </span>array-inputs.cwl<span class="o">]</span><span class="w"> </span>/tmp/2nd0ssvw$<span class="w"> </span><span class="nb">echo</span><span class="w"> </span><span class="se">\</span>
+INFO<span class="w"> </span><span class="o">[</span>job<span class="w"> </span>array-inputs.cwl<span class="o">]</span><span class="w"> </span>/tmp/3ugxks63$<span class="w"> </span><span class="nb">echo</span><span class="w"> </span><span class="se">\</span>
 <span class="w">    </span>-A<span class="w"> </span><span class="se">\</span>
 <span class="w">    </span>one<span class="w"> </span><span class="se">\</span>
 <span class="w">    </span>two<span class="w"> </span><span class="se">\</span>
@@ -657,7 +640,7 @@ INFO<span class="w"> </span><span class="o">[</span>job<span class="w"> </span>a
 <span class="w">    </span>-B<span class="o">=</span>four<span class="w"> </span><span class="se">\</span>
 <span class="w">    </span>-B<span class="o">=</span>five<span class="w"> </span><span class="se">\</span>
 <span class="w">    </span>-B<span class="o">=</span>six<span class="w"> </span><span class="se">\</span>
-<span class="w">    </span>-C<span class="o">=</span>seven,eight,nine<span class="w"> </span>&gt;<span class="w"> </span>/tmp/2nd0ssvw/output.txt
+<span class="w">    </span>-C<span class="o">=</span>seven,eight,nine<span class="w"> </span>&gt;<span class="w"> </span>/tmp/3ugxks63/output.txt
 INFO<span class="w"> </span><span class="o">[</span>job<span class="w"> </span>array-inputs.cwl<span class="o">]</span><span class="w"> </span>completed<span class="w"> </span>success
 <span class="o">{</span>
 <span class="w">    </span><span class="s2">&quot;example_out&quot;</span>:<span class="w"> </span><span class="o">{</span>
@@ -675,12 +658,12 @@ INFO<span class="w"> </span><span class="o">[</span>job<span class="w"> </span>a
 <span class="go">-A one two three -B=four -B=five -B=six -C=seven,eight,nine</span>
 </pre></div>
 </div>
-<p><code class="docutils literal notranslate"><span class="pre">inputBinding</span></code> は、外側の配列パラメータ定義と内側の配列要素定義のいずれかに記述することができ、上図のようにコマンドラインを構築する際に異なる挙動を示します。また、<code class="docutils literal notranslate"><span class="pre">itemSeparator</span></code> フィールドがあれば、配列の値を項目区切り文字列で区切って1つの引数に連結することを指定することができます。</p>
-<p>なお、入力の配列は大括弧の中で指定します <code class="docutils literal notranslate"><span class="pre">array-inputs-job.yml</span></code>の<code class="docutils literal notranslate"><span class="pre">[]</span></code>です.配列は複数行に渡って表現することも可能で、関連するキーで定義されていない配列の値は、先頭の<code class="docutils literal notranslate"><span class="pre">-</span></code> でマークされます。これは次のレッスンで実際に確認し、<a class="reference internal" href="yaml-guide.html#arrays"><span class="std std-ref">YAML Guide</span></a> でより詳細に説明されています。配列の配列、レコードの配列、その他の複雑な型を指定することができます。</p>
+<p><code class="docutils literal notranslate"><span class="pre">inputBinding</span></code> は、外側の配列パラメータ定義と内側の配列要素定義のいずれかに記述でき、上図のようにコマンドラインを構築する際に異なる挙動を示します。また、<code class="docutils literal notranslate"><span class="pre">itemSeparator</span></code> フィールドがあれば、配列の値を項目区切り文字列で区切って1つの引数に連結することを指定できます。</p>
+<p>なお、入力の配列は大括弧の中で指定します <code class="docutils literal notranslate"><span class="pre">array-inputs-job.yml</span></code>の<code class="docutils literal notranslate"><span class="pre">[]</span></code>です.配列は複数行に渡って表現することも可能で、関連するキーで定義されていない配列の値は、先頭の<code class="docutils literal notranslate"><span class="pre">-</span></code> でマークされます。これは次のレッスンで実際に確認し、<a class="reference internal" href="yaml-guide.html#arrays"><span class="std std-ref">YAML Guide</span></a> でより詳細に説明されています。配列の配列、レコードの配列、その他の複雑な型を指定できます。</p>
 </section>
 <section id="inclusive-and-exclusive-inputs">
 <h2><span class="section-number">2.4.3. </span>包括的入力と排他的入力<a class="headerlink" href="#inclusive-and-exclusive-inputs" title="Link to this heading">#</a></h2>
-<p>基本的なツールには、一緒に提供しなければならない複数の引数（依存関係あり）や、一緒に提供できない複数の引数（排他関係あり）があることがあります。  recordとユニオン型を使ってパラメータをグループ化し、この2つの条件を定義することができます。</p>
+<p>基本的なツールには、一緒に提供しなければならない複数の引数（依存関係あり）や、一緒に提供できない複数の引数（排他関係あり）があることがあります。  recordとユニオン型を使ってパラメータをグループ化し、この2つの条件を定義できます。</p>
 <div class="literal-block-wrapper docutils container" id="record-cwl">
 <div class="code-block-caption"><span class="caption-text"><code class="docutils literal notranslate"><span class="pre">record.cwl</span></code></span><a class="headerlink" href="#record-cwl" title="Link to this code">#</a></div>
 <div class="highlight-cwl notranslate"><div class="highlight"><pre><span></span><span class="c1">#!/usr/bin/env cwl-runner</span>
@@ -734,7 +717,7 @@ INFO<span class="w"> </span><span class="o">[</span>job<span class="w"> </span>a
 </div>
 </div>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>cwltool<span class="w"> </span>record.cwl<span class="w"> </span>record-job1.yml
-INFO<span class="w"> </span>/opt/hostedtoolcache/Python/3.9.19/x64/bin/cwltool<span class="w"> </span><span class="m">3</span>.1.20240404144621
+INFO<span class="w"> </span>/opt/hostedtoolcache/Python/3.9.19/x64/bin/cwltool<span class="w"> </span><span class="m">3</span>.1.20240508115724
 INFO<span class="w"> </span>Resolved<span class="w"> </span><span class="s1">&#39;record.cwl&#39;</span><span class="w"> </span>to<span class="w"> </span><span class="s1">&#39;file:///home/runner/work/user_guide/user_guide/src/_includes/cwl/inputs/record.cwl&#39;</span>
 ERROR<span class="w"> </span>Workflow<span class="w"> </span>error,<span class="w"> </span>try<span class="w"> </span>again<span class="w"> </span>with<span class="w"> </span>--debug<span class="w"> </span><span class="k">for</span><span class="w"> </span>more<span class="w"> </span>information:
 Invalid<span class="w"> </span>job<span class="w"> </span>input<span class="w"> </span>record:
@@ -755,17 +738,17 @@ Invalid<span class="w"> </span>job<span class="w"> </span>input<span class="w"> 
 </div>
 </div>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>cwltool<span class="w"> </span>record.cwl<span class="w"> </span>record-job2.yml
-INFO<span class="w"> </span>/opt/hostedtoolcache/Python/3.9.19/x64/bin/cwltool<span class="w"> </span><span class="m">3</span>.1.20240404144621
+INFO<span class="w"> </span>/opt/hostedtoolcache/Python/3.9.19/x64/bin/cwltool<span class="w"> </span><span class="m">3</span>.1.20240508115724
 INFO<span class="w"> </span>Resolved<span class="w"> </span><span class="s1">&#39;record.cwl&#39;</span><span class="w"> </span>to<span class="w"> </span><span class="s1">&#39;file:///home/runner/work/user_guide/user_guide/src/_includes/cwl/inputs/record.cwl&#39;</span>
 <span class="hll">record-job2.yml:6:3:<span class="w"> </span>Warning:<span class="w"> </span>invalid<span class="w"> </span>field<span class="w"> </span><span class="s1">&#39;itemD&#39;</span>,<span class="w"> </span>expected<span class="w"> </span>one<span class="w"> </span>of:<span class="w"> </span><span class="s1">&#39;itemC&#39;</span>
 </span>WARNING<span class="w"> </span>record-job2.yml:6:3:<span class="w"> </span>Warning:<span class="w"> </span>invalid<span class="w"> </span>field<span class="w"> </span><span class="s1">&#39;itemD&#39;</span>,<span class="w"> </span>expected<span class="w"> </span>one<span class="w"> </span>of:<span class="w"> </span><span class="s1">&#39;itemC&#39;</span>
-INFO<span class="w"> </span><span class="o">[</span>job<span class="w"> </span>record.cwl<span class="o">]</span><span class="w"> </span>/tmp/wqe8avcb$<span class="w"> </span><span class="nb">echo</span><span class="w"> </span><span class="se">\</span>
+INFO<span class="w"> </span><span class="o">[</span>job<span class="w"> </span>record.cwl<span class="o">]</span><span class="w"> </span>/tmp/xj7vn7c6$<span class="w"> </span><span class="nb">echo</span><span class="w"> </span><span class="se">\</span>
 <span class="w">    </span>-A<span class="w"> </span><span class="se">\</span>
 <span class="w">    </span>one<span class="w"> </span><span class="se">\</span>
 <span class="w">    </span>-B<span class="w"> </span><span class="se">\</span>
 <span class="hll"><span class="w">    </span>two<span class="w"> </span><span class="se">\</span>
 </span><span class="hll"><span class="w">    </span>-C<span class="w"> </span><span class="se">\</span>
-</span><span class="w">    </span>three<span class="w"> </span>&gt;<span class="w"> </span>/tmp/wqe8avcb/output.txt
+</span><span class="w">    </span>three<span class="w"> </span>&gt;<span class="w"> </span>/tmp/xj7vn7c6/output.txt
 INFO<span class="w"> </span><span class="o">[</span>job<span class="w"> </span>record.cwl<span class="o">]</span><span class="w"> </span>completed<span class="w"> </span>success
 <span class="o">{</span>
 <span class="w">    </span><span class="s2">&quot;example_out&quot;</span>:<span class="w"> </span><span class="o">{</span>
@@ -795,15 +778,15 @@ INFO<span class="w"> </span><span class="o">[</span>job<span class="w"> </span>r
 </div>
 </div>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>cwltool<span class="w"> </span>record.cwl<span class="w"> </span>record-job3.yml
-INFO<span class="w"> </span>/opt/hostedtoolcache/Python/3.9.19/x64/bin/cwltool<span class="w"> </span><span class="m">3</span>.1.20240404144621
+INFO<span class="w"> </span>/opt/hostedtoolcache/Python/3.9.19/x64/bin/cwltool<span class="w"> </span><span class="m">3</span>.1.20240508115724
 INFO<span class="w"> </span>Resolved<span class="w"> </span><span class="s1">&#39;record.cwl&#39;</span><span class="w"> </span>to<span class="w"> </span><span class="s1">&#39;file:///home/runner/work/user_guide/user_guide/src/_includes/cwl/inputs/record.cwl&#39;</span>
-INFO<span class="w"> </span><span class="o">[</span>job<span class="w"> </span>record.cwl<span class="o">]</span><span class="w"> </span>/tmp/zp4_wonj$<span class="w"> </span><span class="nb">echo</span><span class="w"> </span><span class="se">\</span>
+INFO<span class="w"> </span><span class="o">[</span>job<span class="w"> </span>record.cwl<span class="o">]</span><span class="w"> </span>/tmp/j05qne7w$<span class="w"> </span><span class="nb">echo</span><span class="w"> </span><span class="se">\</span>
 <span class="w">    </span>-A<span class="w"> </span><span class="se">\</span>
 <span class="w">    </span>one<span class="w"> </span><span class="se">\</span>
 <span class="w">    </span>-B<span class="w"> </span><span class="se">\</span>
 <span class="w">    </span>two<span class="w"> </span><span class="se">\</span>
 <span class="hll"><span class="w">    </span>-D<span class="w"> </span><span class="se">\</span>
-</span><span class="hll"><span class="w">    </span>four<span class="w"> </span>&gt;<span class="w"> </span>/tmp/zp4_wonj/output.txt
+</span><span class="hll"><span class="w">    </span>four<span class="w"> </span>&gt;<span class="w"> </span>/tmp/j05qne7w/output.txt
 </span>INFO<span class="w"> </span><span class="o">[</span>job<span class="w"> </span>record.cwl<span class="o">]</span><span class="w"> </span>completed<span class="w"> </span>success
 <span class="o">{</span>
 <span class="w">    </span><span class="s2">&quot;example_out&quot;</span>:<span class="w"> </span><span class="o">{</span>
@@ -824,7 +807,7 @@ INFO<span class="w"> </span><span class="o">[</span>job<span class="w"> </span>r
 <p>3番目の例では、<code class="docutils literal notranslate"><span class="pre">itemD</span></code> のみが提供されているので、コマンドラインに表示されます。</p>
 <section id="exclusive-input-parameters-with-expressions">
 <h3><span class="section-number">2.4.3.1. </span>式で入力パラメータを排他的に指定する<a class="headerlink" href="#exclusive-input-parameters-with-expressions" title="Link to this heading">#</a></h3>
-<p>排他的入力パラメータを式と組み合わせて使用する場合、JavaScript オブジェクトの<code class="docutils literal notranslate"><span class="pre">inputs</span></code> に排他的入力値のいずれかが含まれることを意識する必要があります。つまり、<strong>or</strong> のブーリアン演算子を使用して、<code class="docutils literal notranslate"><span class="pre">inputs</span></code>にどの値が存在するかをチェックする必要がある場合があります。</p>
+<p>排他的入力パラメータを式と組み合わせて使用する場合、JavaScript オブジェクトの<code class="docutils literal notranslate"><span class="pre">inputs</span></code> に排他的入力値のいずれかが含まれることを意識する必要があります。つまり、これらの排他的な値の型は異なる可能性があるので、<code class="docutils literal notranslate"><span class="pre">input</span></code> オブジェクトのプロパティを参照するときに、どの型が使用されているかを確認する必要があるかもしれません。</p>
 <p><code class="docutils literal notranslate"><span class="pre">file_format</span></code> 入力パラメータに、<code class="docutils literal notranslate"><span class="pre">null</span></code> (つまり、値がない)、または enum の任意の値を受け入れる排他的なものを含む例を使ってみましょう。</p>
 <div class="literal-block-wrapper docutils container" id="exclusive-parameter-expressions-cwl">
 <div class="code-block-caption"><span class="caption-text"><code class="docutils literal notranslate"><span class="pre">exclusive-parameter-expressions.cwl</span></code></span><a class="headerlink" href="#exclusive-parameter-expressions-cwl" title="Link to this code">#</a></div>
@@ -858,9 +841,9 @@ INFO<span class="w"> </span><span class="o">[</span>job<span class="w"> </span>r
 </div>
 <p>JavaScriptの式では、<code class="docutils literal notranslate"><span class="pre">null</span></code> の値を考慮せずに、排他的入力パラメータの値を使用していることに注意してください。<code class="docutils literal notranslate"><span class="pre">fasta</span></code>（enumの値の1つ）のような有効な値を指定すると、コマンドは正常に実行されるはずです：</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>cwltool<span class="w"> </span>exclusive-parameter-expressions.cwl<span class="w"> </span>--file_format<span class="w"> </span>fasta
-INFO<span class="w"> </span>/opt/hostedtoolcache/Python/3.9.19/x64/bin/cwltool<span class="w"> </span><span class="m">3</span>.1.20240404144621
+INFO<span class="w"> </span>/opt/hostedtoolcache/Python/3.9.19/x64/bin/cwltool<span class="w"> </span><span class="m">3</span>.1.20240508115724
 INFO<span class="w"> </span>Resolved<span class="w"> </span><span class="s1">&#39;exclusive-parameter-expressions.cwl&#39;</span><span class="w"> </span>to<span class="w"> </span><span class="s1">&#39;file:///home/runner/work/user_guide/user_guide/src/_includes/cwl/inputs/exclusive-parameter-expressions.cwl&#39;</span>
-INFO<span class="w"> </span><span class="o">[</span>job<span class="w"> </span>exclusive-parameter-expressions.cwl<span class="o">]</span><span class="w"> </span>/tmp/zg5vrzon$<span class="w"> </span><span class="nb">true</span><span class="w"> </span><span class="se">\</span>
+INFO<span class="w"> </span><span class="o">[</span>job<span class="w"> </span>exclusive-parameter-expressions.cwl<span class="o">]</span><span class="w"> </span>/tmp/2rza2x99$<span class="w"> </span><span class="nb">true</span><span class="w"> </span><span class="se">\</span>
 <span class="w">    </span>--format<span class="w"> </span><span class="se">\</span>
 <span class="w">    </span>fasta
 INFO<span class="w"> </span><span class="o">[</span>job<span class="w"> </span>exclusive-parameter-expressions.cwl<span class="o">]</span><span class="w"> </span>completed<span class="w"> </span>success
@@ -869,13 +852,11 @@ INFO<span class="w"> </span><span class="o">[</span>job<span class="w"> </span>e
 <span class="o">}</span>INFO<span class="w"> </span>Final<span class="w"> </span>process<span class="w"> </span>status<span class="w"> </span>is<span class="w"> </span>success
 </pre></div>
 </div>
-<p>However, if you do not provide any input value, then <code class="docutils literal notranslate"><span class="pre">file_format</span></code> will be
-evaluated to <code class="docutils literal notranslate"><span class="pre">null</span></code>, which does not match the expected type for the
-output field (a <code class="docutils literal notranslate"><span class="pre">string</span></code>), resulting in failure when running your workflow.</p>
+<p>しかし、入力値を提供しない場合、<code class="docutils literal notranslate"><span class="pre">file_format</span></code> は、<code class="docutils literal notranslate"><span class="pre">null</span></code> の値として評価されます。これは、出力フィールドが期待する型（<code class="docutils literal notranslate"><span class="pre">string</span></code> ）と一致しないため、ワークフロー実行時に失敗することになります。</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>cwltool<span class="w"> </span>exclusive-parameter-expressions.cwl
-INFO<span class="w"> </span>/opt/hostedtoolcache/Python/3.9.19/x64/bin/cwltool<span class="w"> </span><span class="m">3</span>.1.20240404144621
+INFO<span class="w"> </span>/opt/hostedtoolcache/Python/3.9.19/x64/bin/cwltool<span class="w"> </span><span class="m">3</span>.1.20240508115724
 INFO<span class="w"> </span>Resolved<span class="w"> </span><span class="s1">&#39;exclusive-parameter-expressions.cwl&#39;</span><span class="w"> </span>to<span class="w"> </span><span class="s1">&#39;file:///home/runner/work/user_guide/user_guide/src/_includes/cwl/inputs/exclusive-parameter-expressions.cwl&#39;</span>
-INFO<span class="w"> </span><span class="o">[</span>job<span class="w"> </span>exclusive-parameter-expressions.cwl<span class="o">]</span><span class="w"> </span>/tmp/bwcuw2ky$<span class="w"> </span><span class="nb">true</span>
+INFO<span class="w"> </span><span class="o">[</span>job<span class="w"> </span>exclusive-parameter-expressions.cwl<span class="o">]</span><span class="w"> </span>/tmp/hjn0vbj_$<span class="w"> </span><span class="nb">true</span>
 <span class="hll">ERROR<span class="w"> </span><span class="o">[</span>job<span class="w"> </span>exclusive-parameter-expressions.cwl<span class="o">]</span><span class="w"> </span>Job<span class="w"> </span>error:
 </span><span class="hll">Error<span class="w"> </span>validating<span class="w"> </span>output<span class="w"> </span>record.<span class="w"> </span>the<span class="w"> </span><span class="s1">&#39;text_output&#39;</span><span class="w"> </span>field<span class="w"> </span>is<span class="w"> </span>not<span class="w"> </span>valid<span class="w"> </span>because
 </span><span class="hll"><span class="w">  </span>the<span class="w"> </span>value<span class="w"> </span>is<span class="w"> </span>not<span class="w"> </span>string
@@ -886,10 +867,8 @@ INFO<span class="w"> </span><span class="o">[</span>job<span class="w"> </span>e
 <span class="o">{}</span>WARNING<span class="w"> </span>Final<span class="w"> </span>process<span class="w"> </span>status<span class="w"> </span>is<span class="w"> </span>permanentFail
 </pre></div>
 </div>
-<p>To correct it, you should explicitly handle the possibility of a <code class="docutils literal notranslate"><span class="pre">null</span></code> value.
-For example, the expression could be changed to <code class="docutils literal notranslate"><span class="pre">$(inputs.file_format</span> <span class="pre">||</span> <span class="pre">'auto')</span></code>, to have a default value <code class="docutils literal notranslate"><span class="pre">&quot;auto&quot;</span></code> if none was provided in the command
-line or job input file.</p>
-<p>ここでは、JavaScriptのブール値 &quot;or&quot;、 &quot;演算子 <code class="docutils literal notranslate"><span class="pre">||</span></code> は、その_short-circuiting_プロパティに使用されます。<code class="docutils literal notranslate"><span class="pre">inputs.file_format</span></code>がブール値の &quot;true&quot;である場合（例えば、列挙された有効な空でない文字列）、式の評価は <code class="docutils literal notranslate"><span class="pre">||</span></code>の最初のオペランドで停止します。しかし、 <code class="docutils literal notranslate"><span class="pre">inputs.file_format</span></code>が<code class="docutils literal notranslate"><span class="pre">null</span></code>の場合、式全体の値は2番目のオペランドの値になります。これにより合理的なデフォルト値を提供します。</p>
+<p>これを修正するには、排他的パラメータ、または<code class="docutils literal notranslate"><span class="pre">null</span></code> を許可するパラメータを使用する場合、JavaScript 式で or 演算子を使用することを忘れてはなりません。たとえば、式を<code class="docutils literal notranslate"><span class="pre">$(inputs.file_format</span> <span class="pre">||</span> <span class="pre">'auto')</span></code> に変更すると、コマンドラインやジョブ入力ファイルで何も指定されていない場合にデフォルト値<code class="docutils literal notranslate"><span class="pre">&quot;auto&quot;</span></code>を持つようになります。</p>
+<p>ここでは、JavaScriptのブール値 &quot;or&quot;、 演算子 <code class="docutils literal notranslate"><span class="pre">||</span></code> は、その <em>short-circuiting</em> プロパティに使用されます。<code class="docutils literal notranslate"><span class="pre">inputs.file_format</span></code>がブール値の &quot;true&quot;である場合（例えば、列挙された有効な空でない文字列）、式の評価は <code class="docutils literal notranslate"><span class="pre">||</span></code>の最初のオペランド&quot;short-circuits&quot;で停止します。しかし、 <code class="docutils literal notranslate"><span class="pre">inputs.file_format</span></code>が<code class="docutils literal notranslate"><span class="pre">null</span></code>の場合、式全体の値は2番目のオペランドの値になります。これにより合理的なデフォルト値を提供します。</p>
 </section>
 </section>
 </section>

@@ -498,12 +498,12 @@ arguments</p>
 </div>
 <p>现在，在命令行上结合工具描述和输入对象运行 <code class="docutils literal notranslate"><span class="pre">cwltool</span></code>:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>cwltool<span class="w"> </span>tar.cwl<span class="w"> </span>tar-job.yml
-INFO<span class="w"> </span>/opt/hostedtoolcache/Python/3.9.19/x64/bin/cwltool<span class="w"> </span><span class="m">3</span>.1.20240404144621
+INFO<span class="w"> </span>/opt/hostedtoolcache/Python/3.9.19/x64/bin/cwltool<span class="w"> </span><span class="m">3</span>.1.20240508115724
 INFO<span class="w"> </span>Resolved<span class="w"> </span><span class="s1">&#39;tar.cwl&#39;</span><span class="w"> </span>to<span class="w"> </span><span class="s1">&#39;file:///home/runner/work/user_guide/user_guide/src/_includes/cwl/outputs/tar.cwl&#39;</span>
-INFO<span class="w"> </span><span class="o">[</span>job<span class="w"> </span>tar.cwl<span class="o">]</span><span class="w"> </span>/tmp/jcuyoz1v$<span class="w"> </span>tar<span class="w"> </span><span class="se">\</span>
+INFO<span class="w"> </span><span class="o">[</span>job<span class="w"> </span>tar.cwl<span class="o">]</span><span class="w"> </span>/tmp/i3s25t6t$<span class="w"> </span>tar<span class="w"> </span><span class="se">\</span>
 <span class="w">    </span>--extract<span class="w"> </span><span class="se">\</span>
 <span class="w">    </span>--file<span class="w"> </span><span class="se">\</span>
-<span class="w">    </span>/tmp/dw23mjs3/stgf63be718-cecd-4b9e-8c43-bbb2ee3fad9a/hello.tar
+<span class="w">    </span>/tmp/rsk9c9gg/stg93a3deb9-7da1-46ad-bc6d-d91aec78451c/hello.tar
 INFO<span class="w"> </span><span class="o">[</span>job<span class="w"> </span>tar.cwl<span class="o">]</span><span class="w"> </span>completed<span class="w"> </span>success
 <span class="o">{</span>
 <span class="w">    </span><span class="s2">&quot;example_out&quot;</span>:<span class="w"> </span><span class="o">{</span>
@@ -561,10 +561,10 @@ the name of the file where the output stream should go.  Then add <code class="d
 </div>
 <p>现在，调用命令 <code class="docutils literal notranslate"><span class="pre">cwltool</span></code> 并为它提供工具描述和输入对象：</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>cwltool<span class="w"> </span>stdout.cwl<span class="w"> </span>echo-job.yml
-INFO<span class="w"> </span>/opt/hostedtoolcache/Python/3.9.19/x64/bin/cwltool<span class="w"> </span><span class="m">3</span>.1.20240404144621
+INFO<span class="w"> </span>/opt/hostedtoolcache/Python/3.9.19/x64/bin/cwltool<span class="w"> </span><span class="m">3</span>.1.20240508115724
 INFO<span class="w"> </span>Resolved<span class="w"> </span><span class="s1">&#39;stdout.cwl&#39;</span><span class="w"> </span>to<span class="w"> </span><span class="s1">&#39;file:///home/runner/work/user_guide/user_guide/src/_includes/cwl/outputs/stdout.cwl&#39;</span>
-INFO<span class="w"> </span><span class="o">[</span>job<span class="w"> </span>stdout.cwl<span class="o">]</span><span class="w"> </span>/tmp/r_7n1loz$<span class="w"> </span><span class="nb">echo</span><span class="w"> </span><span class="se">\</span>
-<span class="w">    </span><span class="s1">&#39;Hello world!&#39;</span><span class="w"> </span>&gt;<span class="w"> </span>/tmp/r_7n1loz/output.txt
+INFO<span class="w"> </span><span class="o">[</span>job<span class="w"> </span>stdout.cwl<span class="o">]</span><span class="w"> </span>/tmp/d4uehejd$<span class="w"> </span><span class="nb">echo</span><span class="w"> </span><span class="se">\</span>
+<span class="w">    </span><span class="s1">&#39;Hello world!&#39;</span><span class="w"> </span>&gt;<span class="w"> </span>/tmp/d4uehejd/output.txt
 INFO<span class="w"> </span><span class="o">[</span>job<span class="w"> </span>stdout.cwl<span class="o">]</span><span class="w"> </span>completed<span class="w"> </span>success
 <span class="o">{</span>
 <span class="w">    </span><span class="s2">&quot;example_out&quot;</span>:<span class="w"> </span><span class="o">{</span>
@@ -616,9 +616,9 @@ INFO<span class="w"> </span><span class="o">[</span>job<span class="w"> </span>s
 </div>
 <p>现在，调用命令 <code class="docutils literal notranslate"><span class="pre">cwltool</span></code> 并为它提供工具描述和输入对象：</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>cwltool<span class="w"> </span>array-outputs.cwl<span class="w"> </span>array-outputs-job.yml
-INFO<span class="w"> </span>/opt/hostedtoolcache/Python/3.9.19/x64/bin/cwltool<span class="w"> </span><span class="m">3</span>.1.20240404144621
+INFO<span class="w"> </span>/opt/hostedtoolcache/Python/3.9.19/x64/bin/cwltool<span class="w"> </span><span class="m">3</span>.1.20240508115724
 INFO<span class="w"> </span>Resolved<span class="w"> </span><span class="s1">&#39;array-outputs.cwl&#39;</span><span class="w"> </span>to<span class="w"> </span><span class="s1">&#39;file:///home/runner/work/user_guide/user_guide/src/_includes/cwl/outputs/array-outputs.cwl&#39;</span>
-INFO<span class="w"> </span><span class="o">[</span>job<span class="w"> </span>array-outputs.cwl<span class="o">]</span><span class="w"> </span>/tmp/p30l_o9e$<span class="w"> </span>touch<span class="w"> </span><span class="se">\</span>
+INFO<span class="w"> </span><span class="o">[</span>job<span class="w"> </span>array-outputs.cwl<span class="o">]</span><span class="w"> </span>/tmp/fafuybud$<span class="w"> </span>touch<span class="w"> </span><span class="se">\</span>
 <span class="w">    </span>foo.txt<span class="w"> </span><span class="se">\</span>
 <span class="w">    </span>bar.dat<span class="w"> </span><span class="se">\</span>
 <span class="w">    </span>baz.txt

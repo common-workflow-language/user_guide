@@ -447,11 +447,7 @@ document.write(`
                   
   <section id="specifying-software-requirements">
 <h1><span class="section-number">2.19. </span>ソフトウェア要求事項の指定<a class="headerlink" href="#specifying-software-requirements" title="Link to this heading">#</a></h1>
-<p>Often, tool descriptions will be written for a specific version of a software. To
-make it easier for others to use your descriptions, you can include a
-<a class="reference external" href="https://w3id.org/cwl/CommandLineTool.html#SoftwareRequirement"><code class="docutils literal notranslate"><span class="pre">SoftwareRequirement</span></code></a> field in the <code class="docutils literal notranslate"><span class="pre">hints</span></code> section.
-This may also help to avoid confusion about which version of a tool the
-description was written for.</p>
+<p>多くの場合、ツール定義はソフトウェアの特定のバージョン用に書かれます。他の人があなたの説明を使いやすくするために、<code class="docutils literal notranslate"><span class="pre">hints</span></code> セクションに <a class="reference external" href="https://w3id.org/cwl/CommandLineTool.html#SoftwareRequirement"><code class="docutils literal notranslate"><span class="pre">SoftwareRequirement</span></code></a> フィールドを含めることができます。これは、ツール定義がどのツールのどのバージョン用に書かれたかについての混乱を避けるのにも役立ちます。</p>
 <div class="highlight-cwl notranslate"><div class="highlight"><pre><span></span><span class="c1">#!/usr/bin/env cwl-runner</span>
 <span class="nt">cwlVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">v1.2</span>
 <span class="nt">class</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">CommandLineTool</span>
@@ -531,16 +527,8 @@ description was written for.</p>
 <span class="w">        </span><span class="nt">version</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="w"> </span><span class="s">&quot;5.21-60&quot;</span><span class="w"> </span><span class="p p-Indicator">]</span>
 </pre></div>
 </div>
-<p>CWLランナーによっては、これらのヒントを使用して、ジョブの実行前に必要なソフトウェアがインストールされ、利用可能であることをチェックすることができます。リファレンス実装でこれらのチェックを有効にするには、<a class="reference external" href="https://github.com/common-workflow-language/cwltool#leveraging-softwarerequirements-beta">依存性解決のための設定</a> を使用します。</p>
-<p>As well as a version number, a unique resource identifier (URI) for the tool is
-given in the form of an <a class="reference external" href="https://scicrunch.org/resources/about/resource">RRID</a>. Resources with RRIDs can be looked up in the
-<a class="reference external" href="https://scicrunch.org">SciCrunch</a> registry, which provides a portal for finding, tracking,
-and referring to scientific resources consistently. If you want to specify a
-tool as a <a class="reference external" href="https://w3id.org/cwl/CommandLineTool.html#SoftwareRequirement"><code class="docutils literal notranslate"><span class="pre">SoftwareRequirement</span></code></a>, search for the tool on SciCrunch and use the
-RRID that it has been assigned in the registry. (Follow this <a class="reference external" href="https://scicrunch.org/page/tutorials/336">Adding a Resource Tutorial</a> to add a tool to SciCrunch). You can use this RRID to refer
-to the tool (via <a class="reference external" href="https://identifiers.org/">identifiers.org</a>) in the <code class="docutils literal notranslate"><span class="pre">specs</span></code> field of your
-requirement description. Other good choices, in order of preference, are to
-include the DOI for the main tool citation and the URL to the tool.</p>
+<p>CWL runnerによっては、これらのヒントを使用して、ジョブの実行前に必要なソフトウェアがインストールされ、利用可能であることをチェックできます。リファレンス実装でこれらのチェックを有効にするには、<a class="reference external" href="https://github.com/common-workflow-language/cwltool#leveraging-softwarerequirements-beta">依存性解決のための設定</a> を使用します。</p>
+<p>バージョン番号だけでなく、ツールの一意なリソース識別子（URI）が<a class="reference external" href="https://scicrunch.org/resources/about/resource">RRID</a>の形で与えられます。RRIDを持つリソースは<a class="reference external" href="https://scicrunch.org">SciCrunch</a>レジストリで検索することができ、科学リソースを一貫して検索、追跡、参照するためのポータルを提供します。ツールを <a class="reference external" href="https://w3id.org/cwl/CommandLineTool.html#SoftwareRequirement"><code class="docutils literal notranslate"><span class="pre">SoftwareRequirement</span></code></a> として指定したい場合は、SciCrunch でツールを検索し、レジストリで割り当てられた RRID を使用してください。(ツールを SciCrunch に追加するには <a class="reference external" href="https://scicrunch.org/page/tutorials/336">リソースの追加チュートリアル</a> を参照してください)。この RRID を使って、（<a class="reference external" href="https://identifiers.org/">identifiers.org</a> 経由で）要件説明の <code class="docutils literal notranslate"><span class="pre">specs</span></code> フィールドでツールを参照できます。他の良い選択としては、優先順位の高い順に、メインのツールの引用のためのDOIとツールのURLを含めることです。</p>
 </section>
 
 

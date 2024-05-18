@@ -449,8 +449,8 @@ document.write(`
 <h1><span class="section-number">2.13. </span>コンテナの使用<a class="headerlink" href="#using-containers" title="Link to this heading">#</a></h1>
 <section id="running-tools-inside-docker">
 <h2><span class="section-number">2.13.1. </span>Dockerの内部でツールを実行する<a class="headerlink" href="#running-tools-inside-docker" title="Link to this heading">#</a></h2>
-<p><a class="reference external" href="https://docker.io">Docker</a>コンテナは、ソフトウェアとその依存関係のための完全な既知の良いランタイムを提供することによって、ソフトウェアのインストールを簡素化します。  しかし、コンテナはホストシステムから意図的に隔離されているため、Dockerコンテナ内でツールを実行するには、入力ファイルがコンテナ内で利用可能で、出力ファイルがコンテナから回収できることを確認するための追加作業が必要です。  CWLランナーはこの作業を自動的に行うことができるため、Dockerコンテナの呼び出しや管理の複雑さを回避しながら、Dockerを使用してソフトウェア管理を簡素化することができます。</p>
-<p>CWLランナーの役割のひとつに、入力ファイルのパスをコンテナ内のでの配置位置に合わせることがあります。</p>
+<p><a class="reference external" href="https://docker.io">Docker</a>コンテナは、ソフトウェアとその依存関係のための完全な既知の良いランタイムを提供することによって、ソフトウェアのインストールを簡素化します。  しかし、コンテナはホストシステムから意図的に隔離されているため、Dockerコンテナ内でツールを実行するには、入力ファイルがコンテナ内で利用可能で、出力ファイルがコンテナから回収できることを確認するための追加作業が必要です。  CWL runnerはこの作業を自動的に行うことができるため、Dockerコンテナの呼び出しや管理の複雑さを回避しながら、Dockerを使用してソフトウェア管理を簡素化できます。</p>
+<p>CWL runnerの役割のひとつに、入力ファイルのパスをコンテナ内のでのパスに合わせることがあります。</p>
 <p>この例では、Dockerコンテナ内で簡単なNode.jsスクリプトを実行し、標準出力に「Hello World」と表示します。</p>
 <div class="literal-block-wrapper docutils container" id="docker-cwl">
 <div class="code-block-caption"><span class="caption-text"><code class="docutils literal notranslate"><span class="pre">docker.cwl</span></code></span><a class="headerlink" href="#docker-cwl" title="Link to this code">#</a></div>
@@ -488,13 +488,7 @@ document.write(`
 <span class="w">    </span><span class="nt">dockerPull</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">node:slim</span>
 </pre></div>
 </div>
-<p><code class="docutils literal notranslate"><span class="pre">baseCommand:</span> <span class="pre">node</span></code> tells CWL that we will be running this command using the Node Js runtime that is meant for Javascript files. We
-then need to specify some <code class="docutils literal notranslate"><span class="pre">hints</span></code> for how to find the container we want.  In this case we list
-just our requirements for the docker container in <code class="docutils literal notranslate"><span class="pre">DockerRequirements</span></code>.  The <code class="docutils literal notranslate"><span class="pre">dockerPull:</span></code>
-parameter takes the same value that you would pass to a <code class="docutils literal notranslate"><span class="pre">docker</span> <span class="pre">pull</span></code> command. That is,
-the name of the container image (you can even specify the tag, which is good idea for
-best practices when using containers for reproducible research). In this case we have
-used a container called <code class="docutils literal notranslate"><span class="pre">node:slim</span></code>.</p>
+<p><code class="docutils literal notranslate"><span class="pre">baseCommand:</span> <span class="pre">node</span></code> は、Javascript ファイル用の Node Js ランタイムを使用してこのコマンドを実行することを CWL に指示します。次に、必要なコンテナを見つける方法について、<code class="docutils literal notranslate"><span class="pre">hints</span></code> をいくつか指定する必要があります。  この場合、<code class="docutils literal notranslate"><span class="pre">DockerRequirements</span></code> に docker コンテナに関する要件だけを列挙します。  <code class="docutils literal notranslate"> <span class="pre">dockerPull:</span></code> パラメータは、<code class="docutils literal notranslate"><span class="pre">docker</span> <span class="pre">pull</span></code> コマンドに渡すのと同じ値を取ります。つまり、コンテナイメージの名前です（タグを指定することも可能で、再現可能な研究にコンテナを使用する際のベストプラクティスに適しています）。この場合、<code class="docutils literal notranslate"><span class="pre">node:slim</span></code> というコンテナを使用しました。</p>
 <p>Javascriptで &quot;hello.js &quot;というファイルを作成し、<code class="docutils literal notranslate"><span class="pre">cwltool</span></code> コマンドラインでツール定義と入力オブジェクトを指定して呼び出します：</p>
 <div class="literal-block-wrapper docutils container" id="hello-js">
 <div class="code-block-caption"><span class="caption-text"><code class="docutils literal notranslate"><span class="pre">hello.js</span></code></span><a class="headerlink" href="#hello-js" title="Link to this code">#</a></div>
@@ -503,26 +497,26 @@ used a container called <code class="docutils literal notranslate"><span class="
 </div>
 </div>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>cwltool<span class="w"> </span>docker.cwl<span class="w"> </span>docker-job.yml
-INFO<span class="w"> </span>/opt/hostedtoolcache/Python/3.9.19/x64/bin/cwltool<span class="w"> </span><span class="m">3</span>.1.20240404144621
+INFO<span class="w"> </span>/opt/hostedtoolcache/Python/3.9.19/x64/bin/cwltool<span class="w"> </span><span class="m">3</span>.1.20240508115724
 INFO<span class="w"> </span>Resolved<span class="w"> </span><span class="s1">&#39;docker.cwl&#39;</span><span class="w"> </span>to<span class="w"> </span><span class="s1">&#39;file:///home/runner/work/user_guide/user_guide/src/_includes/cwl/using-containers/docker.cwl&#39;</span>
-INFO<span class="w"> </span><span class="o">[</span>job<span class="w"> </span>docker.cwl<span class="o">]</span><span class="w"> </span>/tmp/eh63o6nk$<span class="w"> </span>docker<span class="w"> </span><span class="se">\</span>
+INFO<span class="w"> </span><span class="o">[</span>job<span class="w"> </span>docker.cwl<span class="o">]</span><span class="w"> </span>/tmp/qo5vhm37$<span class="w"> </span>docker<span class="w"> </span><span class="se">\</span>
 <span class="w">    </span>run<span class="w"> </span><span class="se">\</span>
 <span class="w">    </span>-i<span class="w"> </span><span class="se">\</span>
-<span class="w">    </span>--mount<span class="o">=</span><span class="nv">type</span><span class="o">=</span>bind,source<span class="o">=</span>/tmp/eh63o6nk,target<span class="o">=</span>/iviPCv<span class="w"> </span><span class="se">\</span>
-<span class="w">    </span>--mount<span class="o">=</span><span class="nv">type</span><span class="o">=</span>bind,source<span class="o">=</span>/tmp/f9uezwzb,target<span class="o">=</span>/tmp<span class="w"> </span><span class="se">\</span>
-<span class="w">    </span>--mount<span class="o">=</span><span class="nv">type</span><span class="o">=</span>bind,source<span class="o">=</span>/home/runner/work/user_guide/user_guide/src/_includes/cwl/using-containers/hello.js,target<span class="o">=</span>/var/lib/cwl/stg54effc83-a86b-44ef-9e81-ba13be04dd34/hello.js,readonly<span class="w"> </span><span class="se">\</span>
-<span class="w">    </span>--workdir<span class="o">=</span>/iviPCv<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>--mount<span class="o">=</span><span class="nv">type</span><span class="o">=</span>bind,source<span class="o">=</span>/tmp/qo5vhm37,target<span class="o">=</span>/puBHaQ<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>--mount<span class="o">=</span><span class="nv">type</span><span class="o">=</span>bind,source<span class="o">=</span>/tmp/9j95bijv,target<span class="o">=</span>/tmp<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>--mount<span class="o">=</span><span class="nv">type</span><span class="o">=</span>bind,source<span class="o">=</span>/home/runner/work/user_guide/user_guide/src/_includes/cwl/using-containers/hello.js,target<span class="o">=</span>/var/lib/cwl/stge88fb01a-b830-4460-8fd7-692b07452116/hello.js,readonly<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>--workdir<span class="o">=</span>/puBHaQ<span class="w"> </span><span class="se">\</span>
 <span class="w">    </span>--read-only<span class="o">=</span><span class="nb">true</span><span class="w"> </span><span class="se">\</span>
 <span class="w">    </span>--net<span class="o">=</span>none<span class="w"> </span><span class="se">\</span>
 <span class="w">    </span>--log-driver<span class="o">=</span>none<span class="w"> </span><span class="se">\</span>
 <span class="w">    </span>--user<span class="o">=</span><span class="m">1001</span>:127<span class="w"> </span><span class="se">\</span>
 <span class="w">    </span>--rm<span class="w"> </span><span class="se">\</span>
-<span class="w">    </span>--cidfile<span class="o">=</span>/tmp/jamj089w/20240508123913-882990.cid<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>--cidfile<span class="o">=</span>/tmp/q_03q71y/20240518114653-403171.cid<span class="w"> </span><span class="se">\</span>
 <span class="w">    </span>--env<span class="o">=</span><span class="nv">TMPDIR</span><span class="o">=</span>/tmp<span class="w"> </span><span class="se">\</span>
-<span class="w">    </span>--env<span class="o">=</span><span class="nv">HOME</span><span class="o">=</span>/iviPCv<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>--env<span class="o">=</span><span class="nv">HOME</span><span class="o">=</span>/puBHaQ<span class="w"> </span><span class="se">\</span>
 <span class="w">    </span>node:slim<span class="w"> </span><span class="se">\</span>
 <span class="w">    </span>node<span class="w"> </span><span class="se">\</span>
-<span class="w">    </span>/var/lib/cwl/stg54effc83-a86b-44ef-9e81-ba13be04dd34/hello.js<span class="w"> </span>&gt;<span class="w"> </span>/tmp/eh63o6nk/output.txt
+<span class="w">    </span>/var/lib/cwl/stge88fb01a-b830-4460-8fd7-692b07452116/hello.js<span class="w"> </span>&gt;<span class="w"> </span>/tmp/qo5vhm37/output.txt
 INFO<span class="w"> </span><span class="o">[</span>job<span class="w"> </span>docker.cwl<span class="o">]</span><span class="w"> </span>completed<span class="w"> </span>success
 <span class="o">{</span>
 <span class="w">    </span><span class="s2">&quot;example_out&quot;</span>:<span class="w"> </span><span class="o">{</span>
@@ -540,7 +534,7 @@ INFO<span class="w"> </span><span class="o">[</span>job<span class="w"> </span>d
 Hello<span class="w"> </span>World
 </pre></div>
 </div>
-<p>CWLランナーがスクリプトを実行するためにDockerコマンドラインを構築していることに注目してください。</p>
+<p>CWL runnerがスクリプトを実行するためにDockerコマンドラインを構築していることに注目してください。</p>
 <p>この例では、スクリプト<code class="docutils literal notranslate"><span class="pre">hello.js</span></code> のパスは、コンテナの外側では <code class="docutils literal notranslate"><span class="pre">/home/me/cwl/user_guide/hello.js</span></code> が、コンテナの内側では<code class="docutils literal notranslate"><span class="pre">/var/lib/cwl/job369354770_examples/hello.js</span></code> です。これは<code class="docutils literal notranslate"><span class="pre">node</span></code> コマンドの呼び出しに反映されているためです。</p>
 </section>
 </section>

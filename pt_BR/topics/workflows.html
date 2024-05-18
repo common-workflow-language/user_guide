@@ -642,39 +642,39 @@ compiles it.</p>
 <p>Now invoke <code class="docutils literal notranslate"><span class="pre">cwltool</span></code> with the tool description and the input object on the
 command line:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>cwltool<span class="w"> </span>1st-workflow.cwl<span class="w"> </span>1st-workflow-job.yml
-INFO<span class="w"> </span>/opt/hostedtoolcache/Python/3.9.19/x64/bin/cwltool<span class="w"> </span><span class="m">3</span>.1.20240404144621
+INFO<span class="w"> </span>/opt/hostedtoolcache/Python/3.9.19/x64/bin/cwltool<span class="w"> </span><span class="m">3</span>.1.20240508115724
 INFO<span class="w"> </span>Resolved<span class="w"> </span><span class="s1">&#39;1st-workflow.cwl&#39;</span><span class="w"> </span>to<span class="w"> </span><span class="s1">&#39;file:///home/runner/work/user_guide/user_guide/src/_includes/cwl/workflows/1st-workflow.cwl&#39;</span>
 INFO<span class="w"> </span><span class="o">[</span>workflow<span class="w"> </span><span class="o">]</span><span class="w"> </span>start
 INFO<span class="w"> </span><span class="o">[</span>workflow<span class="w"> </span><span class="o">]</span><span class="w"> </span>starting<span class="w"> </span>step<span class="w"> </span>untar
 INFO<span class="w"> </span><span class="o">[</span>step<span class="w"> </span>untar<span class="o">]</span><span class="w"> </span>start
-INFO<span class="w"> </span><span class="o">[</span>job<span class="w"> </span>untar<span class="o">]</span><span class="w"> </span>/tmp/542vrkyn$<span class="w"> </span>tar<span class="w"> </span><span class="se">\</span>
+INFO<span class="w"> </span><span class="o">[</span>job<span class="w"> </span>untar<span class="o">]</span><span class="w"> </span>/tmp/_0gduwiy$<span class="w"> </span>tar<span class="w"> </span><span class="se">\</span>
 <span class="w">    </span>--extract<span class="w"> </span><span class="se">\</span>
 <span class="w">    </span>--file<span class="w"> </span><span class="se">\</span>
-<span class="w">    </span>/tmp/azoxf87a/stg7d91348d-b1df-436f-9bab-e5da3713058b/hello.tar<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>/tmp/j44od788/stga77c8e3f-a466-477f-b69d-886cd5273dd3/hello.tar<span class="w"> </span><span class="se">\</span>
 <span class="w">    </span>Hello.java
 INFO<span class="w"> </span><span class="o">[</span>job<span class="w"> </span>untar<span class="o">]</span><span class="w"> </span>completed<span class="w"> </span>success
 INFO<span class="w"> </span><span class="o">[</span>step<span class="w"> </span>untar<span class="o">]</span><span class="w"> </span>completed<span class="w"> </span>success
 INFO<span class="w"> </span><span class="o">[</span>workflow<span class="w"> </span><span class="o">]</span><span class="w"> </span>starting<span class="w"> </span>step<span class="w"> </span>compile
 INFO<span class="w"> </span><span class="o">[</span>step<span class="w"> </span>compile<span class="o">]</span><span class="w"> </span>start
-INFO<span class="w"> </span><span class="o">[</span>job<span class="w"> </span>compile<span class="o">]</span><span class="w"> </span>/tmp/prrw0tw0$<span class="w"> </span>docker<span class="w"> </span><span class="se">\</span>
+INFO<span class="w"> </span><span class="o">[</span>job<span class="w"> </span>compile<span class="o">]</span><span class="w"> </span>/tmp/8u4y1fzv$<span class="w"> </span>docker<span class="w"> </span><span class="se">\</span>
 <span class="w">    </span>run<span class="w"> </span><span class="se">\</span>
 <span class="w">    </span>-i<span class="w"> </span><span class="se">\</span>
-<span class="w">    </span>--mount<span class="o">=</span><span class="nv">type</span><span class="o">=</span>bind,source<span class="o">=</span>/tmp/prrw0tw0,target<span class="o">=</span>/bVTIjq<span class="w"> </span><span class="se">\</span>
-<span class="w">    </span>--mount<span class="o">=</span><span class="nv">type</span><span class="o">=</span>bind,source<span class="o">=</span>/tmp/q8qv6x1a,target<span class="o">=</span>/tmp<span class="w"> </span><span class="se">\</span>
-<span class="w">    </span>--mount<span class="o">=</span><span class="nv">type</span><span class="o">=</span>bind,source<span class="o">=</span>/tmp/542vrkyn/Hello.java,target<span class="o">=</span>/var/lib/cwl/stgdccc1e54-5bbc-4bcf-9c79-c56de1a6bd78/Hello.java,readonly<span class="w"> </span><span class="se">\</span>
-<span class="w">    </span>--workdir<span class="o">=</span>/bVTIjq<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>--mount<span class="o">=</span><span class="nv">type</span><span class="o">=</span>bind,source<span class="o">=</span>/tmp/8u4y1fzv,target<span class="o">=</span>/zIcOji<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>--mount<span class="o">=</span><span class="nv">type</span><span class="o">=</span>bind,source<span class="o">=</span>/tmp/l4yoth60,target<span class="o">=</span>/tmp<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>--mount<span class="o">=</span><span class="nv">type</span><span class="o">=</span>bind,source<span class="o">=</span>/tmp/_0gduwiy/Hello.java,target<span class="o">=</span>/var/lib/cwl/stg9ab9624e-ec18-4acd-9cdb-cf22ab9afe86/Hello.java,readonly<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>--workdir<span class="o">=</span>/zIcOji<span class="w"> </span><span class="se">\</span>
 <span class="w">    </span>--read-only<span class="o">=</span><span class="nb">true</span><span class="w"> </span><span class="se">\</span>
 <span class="w">    </span>--net<span class="o">=</span>none<span class="w"> </span><span class="se">\</span>
 <span class="w">    </span>--user<span class="o">=</span><span class="m">1001</span>:127<span class="w"> </span><span class="se">\</span>
 <span class="w">    </span>--rm<span class="w"> </span><span class="se">\</span>
-<span class="w">    </span>--cidfile<span class="o">=</span>/tmp/c7rmgdq_/20240508123704-096230.cid<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>--cidfile<span class="o">=</span>/tmp/dowz8g5t/20240518114443-187390.cid<span class="w"> </span><span class="se">\</span>
 <span class="w">    </span>--env<span class="o">=</span><span class="nv">TMPDIR</span><span class="o">=</span>/tmp<span class="w"> </span><span class="se">\</span>
-<span class="w">    </span>--env<span class="o">=</span><span class="nv">HOME</span><span class="o">=</span>/bVTIjq<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>--env<span class="o">=</span><span class="nv">HOME</span><span class="o">=</span>/zIcOji<span class="w"> </span><span class="se">\</span>
 <span class="w">    </span>openjdk:9.0.1-11-slim<span class="w"> </span><span class="se">\</span>
 <span class="w">    </span>javac<span class="w"> </span><span class="se">\</span>
 <span class="w">    </span>-d<span class="w"> </span><span class="se">\</span>
-<span class="w">    </span>/bVTIjq<span class="w"> </span><span class="se">\</span>
-<span class="w">    </span>/var/lib/cwl/stgdccc1e54-5bbc-4bcf-9c79-c56de1a6bd78/Hello.java
+<span class="w">    </span>/zIcOji<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>/var/lib/cwl/stg9ab9624e-ec18-4acd-9cdb-cf22ab9afe86/Hello.java
 INFO<span class="w"> </span><span class="o">[</span>job<span class="w"> </span>compile<span class="o">]</span><span class="w"> </span>completed<span class="w"> </span>success
 INFO<span class="w"> </span><span class="o">[</span>step<span class="w"> </span>compile<span class="o">]</span><span class="w"> </span>completed<span class="w"> </span>success
 INFO<span class="w"> </span><span class="o">[</span>workflow<span class="w"> </span><span class="o">]</span><span class="w"> </span>completed<span class="w"> </span>success
@@ -827,11 +827,11 @@ workflow:</p>
 the <code class="docutils literal notranslate"><span class="pre">compile</span></code> step in orange; <code class="docutils literal notranslate"><span class="pre">compile</span></code> is another workflow, diagrammed on the
 right. In purple we see the fixed string <code class="docutils literal notranslate"><span class="pre">&quot;Hello.java&quot;</span></code> being supplied as the
 <code class="docutils literal notranslate"><span class="pre">name_of_file_to_extract</span></code>.</p>
-<p><a href="https://view.commonwl.org/workflows/github.com/common-workflow-language/user_guide/blob/main/_includes/cwl/workflows/nestedworkflows.cwl"><img
-src="https://view.commonwl.org/graph/svg/github.com/common-workflow-language/user_guide/blob/main/_includes/cwl/workflows/nestedworkflows.cwl"
+<p><a href="https://view.commonwl.org/workflows/github.com/common-workflow-language/user_guide/blob/main/src/_includes/cwl/workflows/nestedworkflows.cwl"><img
+src="https://view.commonwl.org/graph/svg/github.com/common-workflow-language/user_guide/blob/main/src/_includes/cwl/workflows/nestedworkflows.cwl"
 alt="Visualization of nestedworkflows.cwl" /></a>
-<a href="https://view.commonwl.org/workflows/github.com/common-workflow-language/user_guide/blob/main/_includes/cwl/workflows/1st-workflow.cwl"><img
-src="https://view.commonwl.org/graph/svg/github.com/common-workflow-language/user_guide/blob/main/_includes/cwl/workflows/1st-workflow.cwl"
+<a href="https://view.commonwl.org/workflows/github.com/common-workflow-language/user_guide/blob/main/src/_includes/cwl/workflows/1st-workflow.cwl"><img
+src="https://view.commonwl.org/graph/svg/github.com/common-workflow-language/user_guide/blob/main/src/_includes/cwl/workflows/1st-workflow.cwl"
 alt="Visualization of 1st-workflow.cwl" /></a></p>
 </div>
 <p>A CWL <code class="docutils literal notranslate"><span class="pre">Workflow</span></code> can be used as a <code class="docutils literal notranslate"><span class="pre">step</span></code> just like a <code class="docutils literal notranslate"><span class="pre">CommandLineTool</span></code>, its CWL
@@ -976,25 +976,25 @@ as well!</p>
 <code class="docutils literal notranslate"><span class="pre">echo</span></code> on a message. If we invoke <code class="docutils literal notranslate"><span class="pre">cwltool</span> <span class="pre">scatter-workflow.cwl</span> <span class="pre">scatter-job.yml</span></code> on the
 command line:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>cwltool<span class="w"> </span>scatter-workflow.cwl<span class="w"> </span>scatter-job.yml
-INFO<span class="w"> </span>/opt/hostedtoolcache/Python/3.9.19/x64/bin/cwltool<span class="w"> </span><span class="m">3</span>.1.20240404144621
+INFO<span class="w"> </span>/opt/hostedtoolcache/Python/3.9.19/x64/bin/cwltool<span class="w"> </span><span class="m">3</span>.1.20240508115724
 INFO<span class="w"> </span>Resolved<span class="w"> </span><span class="s1">&#39;scatter-workflow.cwl&#39;</span><span class="w"> </span>to<span class="w"> </span><span class="s1">&#39;file:///home/runner/work/user_guide/user_guide/src/_includes/cwl/workflows/scatter-workflow.cwl&#39;</span>
 INFO<span class="w"> </span><span class="o">[</span>workflow<span class="w"> </span><span class="o">]</span><span class="w"> </span>start
 INFO<span class="w"> </span><span class="o">[</span>workflow<span class="w"> </span><span class="o">]</span><span class="w"> </span>starting<span class="w"> </span>step<span class="w"> </span><span class="nb">echo</span>
 INFO<span class="w"> </span><span class="o">[</span>step<span class="w"> </span>echo<span class="o">]</span><span class="w"> </span>start
-INFO<span class="w"> </span><span class="o">[</span>job<span class="w"> </span>echo<span class="o">]</span><span class="w"> </span>/tmp/hhj12vij$<span class="w"> </span><span class="nb">echo</span><span class="w"> </span><span class="se">\</span>
-<span class="w">    </span><span class="s1">&#39;Hello world!&#39;</span><span class="w"> </span>&gt;<span class="w"> </span>/tmp/hhj12vij/4e58fa7cfe8505476c857c252be2f391ddbf1187
+INFO<span class="w"> </span><span class="o">[</span>job<span class="w"> </span>echo<span class="o">]</span><span class="w"> </span>/tmp/hpkrczie$<span class="w"> </span><span class="nb">echo</span><span class="w"> </span><span class="se">\</span>
+<span class="w">    </span><span class="s1">&#39;Hello world!&#39;</span><span class="w"> </span>&gt;<span class="w"> </span>/tmp/hpkrczie/4e58fa7cfe8505476c857c252be2f391ddbf1187
 INFO<span class="w"> </span><span class="o">[</span>job<span class="w"> </span>echo<span class="o">]</span><span class="w"> </span>completed<span class="w"> </span>success
 INFO<span class="w"> </span><span class="o">[</span>step<span class="w"> </span>echo<span class="o">]</span><span class="w"> </span>start
-INFO<span class="w"> </span><span class="o">[</span>job<span class="w"> </span>echo_2<span class="o">]</span><span class="w"> </span>/tmp/urauvkae$<span class="w"> </span><span class="nb">echo</span><span class="w"> </span><span class="se">\</span>
-<span class="w">    </span><span class="s1">&#39;Hola mundo!&#39;</span><span class="w"> </span>&gt;<span class="w"> </span>/tmp/urauvkae/4e58fa7cfe8505476c857c252be2f391ddbf1187
+INFO<span class="w"> </span><span class="o">[</span>job<span class="w"> </span>echo_2<span class="o">]</span><span class="w"> </span>/tmp/wdhh0uy2$<span class="w"> </span><span class="nb">echo</span><span class="w"> </span><span class="se">\</span>
+<span class="w">    </span><span class="s1">&#39;Hola mundo!&#39;</span><span class="w"> </span>&gt;<span class="w"> </span>/tmp/wdhh0uy2/4e58fa7cfe8505476c857c252be2f391ddbf1187
 INFO<span class="w"> </span><span class="o">[</span>job<span class="w"> </span>echo_2<span class="o">]</span><span class="w"> </span>completed<span class="w"> </span>success
 INFO<span class="w"> </span><span class="o">[</span>step<span class="w"> </span>echo<span class="o">]</span><span class="w"> </span>start
-INFO<span class="w"> </span><span class="o">[</span>job<span class="w"> </span>echo_3<span class="o">]</span><span class="w"> </span>/tmp/acsadhfj$<span class="w"> </span><span class="nb">echo</span><span class="w"> </span><span class="se">\</span>
-<span class="w">    </span><span class="s1">&#39;Bonjour le monde!&#39;</span><span class="w"> </span>&gt;<span class="w"> </span>/tmp/acsadhfj/4e58fa7cfe8505476c857c252be2f391ddbf1187
+INFO<span class="w"> </span><span class="o">[</span>job<span class="w"> </span>echo_3<span class="o">]</span><span class="w"> </span>/tmp/ud6mkfeb$<span class="w"> </span><span class="nb">echo</span><span class="w"> </span><span class="se">\</span>
+<span class="w">    </span><span class="s1">&#39;Bonjour le monde!&#39;</span><span class="w"> </span>&gt;<span class="w"> </span>/tmp/ud6mkfeb/4e58fa7cfe8505476c857c252be2f391ddbf1187
 INFO<span class="w"> </span><span class="o">[</span>job<span class="w"> </span>echo_3<span class="o">]</span><span class="w"> </span>completed<span class="w"> </span>success
 INFO<span class="w"> </span><span class="o">[</span>step<span class="w"> </span>echo<span class="o">]</span><span class="w"> </span>start
-INFO<span class="w"> </span><span class="o">[</span>job<span class="w"> </span>echo_4<span class="o">]</span><span class="w"> </span>/tmp/w2deiyd3$<span class="w"> </span><span class="nb">echo</span><span class="w"> </span><span class="se">\</span>
-<span class="w">    </span><span class="s1">&#39;Hallo welt!&#39;</span><span class="w"> </span>&gt;<span class="w"> </span>/tmp/w2deiyd3/4e58fa7cfe8505476c857c252be2f391ddbf1187
+INFO<span class="w"> </span><span class="o">[</span>job<span class="w"> </span>echo_4<span class="o">]</span><span class="w"> </span>/tmp/c4wh99e9$<span class="w"> </span><span class="nb">echo</span><span class="w"> </span><span class="se">\</span>
+<span class="w">    </span><span class="s1">&#39;Hallo welt!&#39;</span><span class="w"> </span>&gt;<span class="w"> </span>/tmp/c4wh99e9/4e58fa7cfe8505476c857c252be2f391ddbf1187
 INFO<span class="w"> </span><span class="o">[</span>job<span class="w"> </span>echo_4<span class="o">]</span><span class="w"> </span>completed<span class="w"> </span>success
 INFO<span class="w"> </span><span class="o">[</span>step<span class="w"> </span>echo<span class="o">]</span><span class="w"> </span>completed<span class="w"> </span>success
 INFO<span class="w"> </span><span class="o">[</span>workflow<span class="w"> </span><span class="o">]</span><span class="w"> </span>completed<span class="w"> </span>success

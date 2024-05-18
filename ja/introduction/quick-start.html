@@ -433,7 +433,7 @@ document.write(`
 <p>このセクションでは、CWLとは何か、またCWLについてもっと詳しく知ることができる場所について、簡単に紹介します。CWLに関する予備知識は必要ありませんが、コマンドラインを使用することに慣れていると良いです。</p>
 <section id="hello-world">
 <h2><span class="section-number">1.1.1. </span>&quot;Hello World&quot;<a class="headerlink" href="#hello-world" title="Link to this heading">#</a></h2>
-<p>CWLは、コマンドラインツールを定義し、それらのツールを繋げてワークフローを作成するための方法です。CWLは仕様であり、特定のソフトウェアではないため、CWLを使用して定義されたツールやワークフローは、CWL標準をサポートするさまざまなプラットフォームで利用可能です。</p>
+<p>CWLは、コマンドラインツールを定義し、それらのツールを繋げてワークフローを作成します。CWLは仕様であり、特定のソフトウェアではないため、CWLを使用して定義されたツールやワークフローは、CWL標準をサポートするさまざまなプラットフォームで利用可能です。</p>
 <p>CWLドキュメントは<a class="reference internal" href="../topics/index.html"><span class="std std-doc">YAML</span></a>(および/またはJSON)で書かれています。以下の例は、コメントで注釈されたシンプルなCWL &quot;Hello World&quot; ワークフローを示しています。コメントは<code class="docutils literal notranslate"><span class="pre">#</span></code> で始まることに注意してください：</p>
 <div class="literal-block-wrapper docutils container" id="hello-world-cwl">
 <div class="code-block-caption"><span class="caption-text"><code class="docutils literal notranslate"><span class="pre">hello_world.cwl</span></code></span><a class="headerlink" href="#hello-world-cwl" title="Link to this code">#</a></div>
@@ -479,13 +479,13 @@ document.write(`
 </section>
 <section id="running-hello-world">
 <h2><span class="section-number">1.1.3. </span>&quot;Hello World&quot;を実行する<a class="headerlink" href="#running-hello-world" title="Link to this heading">#</a></h2>
-<p>基本的に <code class="docutils literal notranslate"><span class="pre">cwltool</span></code> の使い方は、<code class="docutils literal notranslate"><span class="pre">cwltool</span> <span class="pre">[OPTIONS]</span> <span class="pre">[CWL_DOCUMENT]</span> <span class="pre">[INPUTS_OBJECT]</span></code>です。<code class="docutils literal notranslate"><span class="pre">hello_world.cwl</span></code> Workflowは、オプションを指定せずに実行することができます：</p>
+<p>基本的に <code class="docutils literal notranslate"><span class="pre">cwltool</span></code> の使い方は、<code class="docutils literal notranslate"><span class="pre">cwltool</span> <span class="pre">[OPTIONS]</span> <span class="pre">[CWL_DOCUMENT]</span> <span class="pre">[INPUTS_OBJECT]</span></code>です。<code class="docutils literal notranslate"><span class="pre">hello_world.cwl</span></code> Workflowは、オプションを指定せずに実行できます：</p>
 <div class="literal-block-wrapper docutils container" id="running-hello-world-cwl-with-cwltool">
 <div class="code-block-caption"><span class="caption-text"><code class="docutils literal notranslate"><span class="pre">hello_world.cwl</span></code> を <code class="docutils literal notranslate"><span class="pre">cwltool</span></code> で実行します。</span><a class="headerlink" href="#running-hello-world-cwl-with-cwltool" title="Link to this code">#</a></div>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>cwltool<span class="w"> </span>hello_world.cwl
-INFO<span class="w"> </span>/opt/hostedtoolcache/Python/3.9.19/x64/bin/cwltool<span class="w"> </span><span class="m">3</span>.1.20240404144621
+INFO<span class="w"> </span>/opt/hostedtoolcache/Python/3.9.19/x64/bin/cwltool<span class="w"> </span><span class="m">3</span>.1.20240508115724
 INFO<span class="w"> </span>Resolved<span class="w"> </span><span class="s1">&#39;hello_world.cwl&#39;</span><span class="w"> </span>to<span class="w"> </span><span class="s1">&#39;file:///home/runner/work/user_guide/user_guide/src/_includes/cwl/hello_world.cwl&#39;</span>
-INFO<span class="w"> </span><span class="o">[</span>job<span class="w"> </span>hello_world.cwl<span class="o">]</span><span class="w"> </span>/tmp/r5n2n22g$<span class="w"> </span><span class="nb">echo</span><span class="w"> </span><span class="se">\</span>
+INFO<span class="w"> </span><span class="o">[</span>job<span class="w"> </span>hello_world.cwl<span class="o">]</span><span class="w"> </span>/tmp/qxbgl5ix$<span class="w"> </span><span class="nb">echo</span><span class="w"> </span><span class="se">\</span>
 <span class="w">    </span><span class="s1">&#39;Hello World&#39;</span>
 Hello<span class="w"> </span>World
 INFO<span class="w"> </span><span class="o">[</span>job<span class="w"> </span>hello_world.cwl<span class="o">]</span><span class="w"> </span>completed<span class="w"> </span>success
@@ -497,9 +497,9 @@ INFO<span class="w"> </span><span class="o">[</span>job<span class="w"> </span>h
 <div class="literal-block-wrapper docutils container" id="running-hello-world-cwl-with-cwltool-passing-an-input-parameter">
 <div class="code-block-caption"><span class="caption-text"><code class="docutils literal notranslate"><span class="pre">hello_world.cwl</span></code> を<code class="docutils literal notranslate"><span class="pre">cwltool</span></code> で入力パラメータを渡して実行する。</span><a class="headerlink" href="#running-hello-world-cwl-with-cwltool-passing-an-input-parameter" title="Link to this code">#</a></div>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>cwltool<span class="w"> </span>hello_world.cwl<span class="w"> </span>--message<span class="o">=</span><span class="s2">&quot;Hola mundo&quot;</span>
-INFO<span class="w"> </span>/opt/hostedtoolcache/Python/3.9.19/x64/bin/cwltool<span class="w"> </span><span class="m">3</span>.1.20240404144621
+INFO<span class="w"> </span>/opt/hostedtoolcache/Python/3.9.19/x64/bin/cwltool<span class="w"> </span><span class="m">3</span>.1.20240508115724
 INFO<span class="w"> </span>Resolved<span class="w"> </span><span class="s1">&#39;hello_world.cwl&#39;</span><span class="w"> </span>to<span class="w"> </span><span class="s1">&#39;file:///home/runner/work/user_guide/user_guide/src/_includes/cwl/hello_world.cwl&#39;</span>
-INFO<span class="w"> </span><span class="o">[</span>job<span class="w"> </span>hello_world.cwl<span class="o">]</span><span class="w"> </span>/tmp/eizfmbiv$<span class="w"> </span><span class="nb">echo</span><span class="w"> </span><span class="se">\</span>
+INFO<span class="w"> </span><span class="o">[</span>job<span class="w"> </span>hello_world.cwl<span class="o">]</span><span class="w"> </span>/tmp/5p0aw4x_$<span class="w"> </span><span class="nb">echo</span><span class="w"> </span><span class="se">\</span>
 <span class="w">    </span><span class="s1">&#39;Hola mundo&#39;</span>
 Hola<span class="w"> </span>mundo
 INFO<span class="w"> </span><span class="o">[</span>job<span class="w"> </span>hello_world.cwl<span class="o">]</span><span class="w"> </span>completed<span class="w"> </span>success
@@ -507,7 +507,7 @@ INFO<span class="w"> </span><span class="o">[</span>job<span class="w"> </span>h
 </pre></div>
 </div>
 </div>
-<p>ワークフロー入力パラメータに値を渡すもう一つの方法は、<em>Inputs Object</em> を介する方法です。これは、入力フィールドとその対応する値を含むファイルです。Inputs Objects ファイルは、JSON または YAML で記述することができます。例えば、以下のようになります：</p>
+<p>ワークフロー入力パラメータに値を渡すもう一つの方法は、<em>Inputs Object</em> を介する方法です。これは、入力フィールドとその対応する値を含むファイルです。Inputs Objects ファイルは、JSON または YAML で記述できます。例えば、以下のようになります：</p>
 <div class="literal-block-wrapper docutils container" id="hello-world-job-json">
 <div class="code-block-caption"><span class="caption-text"><code class="docutils literal notranslate"><span class="pre">hello_world-job.json</span></code></span><a class="headerlink" href="#hello-world-job-json" title="Link to this code">#</a></div>
 <div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
@@ -518,11 +518,11 @@ INFO<span class="w"> </span><span class="o">[</span>job<span class="w"> </span>h
 </div>
 <p>このInputs Objectファイルを使用して、「Hello World」ワークフローを実行することができるようになりました：</p>
 <div class="literal-block-wrapper docutils container" id="passing-an-inputs-object-file-to-cwltool">
-<div class="code-block-caption"><span class="caption-text"><code class="docutils literal notranslate"><span class="pre">cwltool</span></code> に Inputs Object ファイルをします。</span><a class="headerlink" href="#passing-an-inputs-object-file-to-cwltool" title="Link to this code">#</a></div>
+<div class="code-block-caption"><span class="caption-text"><code class="docutils literal notranslate"><span class="pre">cwltool</span></code> に Inputs Object ファイルを渡します。</span><a class="headerlink" href="#passing-an-inputs-object-file-to-cwltool" title="Link to this code">#</a></div>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>cwltool<span class="w"> </span>hello_world.cwl<span class="w"> </span>hello_world-job.json
-INFO<span class="w"> </span>/opt/hostedtoolcache/Python/3.9.19/x64/bin/cwltool<span class="w"> </span><span class="m">3</span>.1.20240404144621
+INFO<span class="w"> </span>/opt/hostedtoolcache/Python/3.9.19/x64/bin/cwltool<span class="w"> </span><span class="m">3</span>.1.20240508115724
 INFO<span class="w"> </span>Resolved<span class="w"> </span><span class="s1">&#39;hello_world.cwl&#39;</span><span class="w"> </span>to<span class="w"> </span><span class="s1">&#39;file:///home/runner/work/user_guide/user_guide/src/_includes/cwl/hello_world.cwl&#39;</span>
-INFO<span class="w"> </span><span class="o">[</span>job<span class="w"> </span>hello_world.cwl<span class="o">]</span><span class="w"> </span>/tmp/ltdjs3dk$<span class="w"> </span><span class="nb">echo</span><span class="w"> </span><span class="se">\</span>
+INFO<span class="w"> </span><span class="o">[</span>job<span class="w"> </span>hello_world.cwl<span class="o">]</span><span class="w"> </span>/tmp/tbvdotje$<span class="w"> </span><span class="nb">echo</span><span class="w"> </span><span class="se">\</span>
 <span class="w">    </span>こんにちは世界
 こんにちは世界
 INFO<span class="w"> </span><span class="o">[</span>job<span class="w"> </span>hello_world.cwl<span class="o">]</span><span class="w"> </span>completed<span class="w"> </span>success

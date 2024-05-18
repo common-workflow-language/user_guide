@@ -430,11 +430,7 @@ document.write(`
                   
   <section id="prerequisites">
 <h1><span class="section-number">1.2. </span>前提条件<a class="headerlink" href="#prerequisites" title="Link to this heading">#</a></h1>
-<p>The software and configurations listed in this section are prerequisites for
-following this user guide. The CWL standards are implemented by many different
-workflow runners and platforms. This list of requirements focuses on the CWL reference runner,
-<code class="docutils literal notranslate"><span class="pre">cwltool</span></code>. You can use another CWL-compatible runner or workflow system, but the results and
-interface may look different (though the exact workflow outputs should be identical).</p>
+<p>このセクションに記載されているソフトウェアと構成は、このユーザーガイドに従うための前提条件となるものです。CWL標準は、多くの異なるワークフローランナー(訳注:ワークフローを実行するためのソフトウェア)やプラットフォームによって実装されています。この要件のリストは、CWL reference runner である<code class="docutils literal notranslate"><span class="pre">cwltool</span></code> に焦点を当てています。他のCWL-compatible runnerやワークフローシステムを使用することもできますが、結果やインターフェイスは異なるかもしれません（ただし、正確なワークフロー出力は同一でなければなりません）。</p>
 <div class="admonition-cwl-implementations admonition">
 <p class="admonition-title">CWL実装</p>
 <p>CWL標準規格の実装は数多く存在します。あるものは完全なCWL実装であり、他のものはワークフローエンジンのプラグインや拡を含むことがあります。<a class="reference internal" href="basic-concepts.html#implementations"><span class="std std-ref">実装</span></a>のセクションでより詳しい説明をしています。</p>
@@ -476,19 +472,19 @@ interface may look different (though the exact workflow outputs should be identi
 <div class="literal-block-wrapper docutils container" id="validating-truecwl-with-cwltool">
 <div class="code-block-caption"><span class="caption-text"><code class="docutils literal notranslate"><span class="pre">cwltool</span></code> を使って <code class="docutils literal notranslate"><span class="pre">true.cwl</span></code> を検証します。</span><a class="headerlink" href="#validating-truecwl-with-cwltool" title="Link to this code">#</a></div>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>cwltool<span class="w"> </span>--validate<span class="w"> </span>true.cwl
-INFO<span class="w"> </span>/opt/hostedtoolcache/Python/3.9.19/x64/bin/cwltool<span class="w"> </span><span class="m">3</span>.1.20240404144621
+INFO<span class="w"> </span>/opt/hostedtoolcache/Python/3.9.19/x64/bin/cwltool<span class="w"> </span><span class="m">3</span>.1.20240508115724
 INFO<span class="w"> </span>Resolved<span class="w"> </span><span class="s1">&#39;true.cwl&#39;</span><span class="w"> </span>to<span class="w"> </span><span class="s1">&#39;file:///home/runner/work/user_guide/user_guide/src/_includes/cwl/true.cwl&#39;</span>
 true.cwl<span class="w"> </span>is<span class="w"> </span>valid<span class="w"> </span>CWL.
 </pre></div>
 </div>
 </div>
-<p><code class="docutils literal notranslate"><span class="pre">--validate</span></code> オプションを省略することで、CWLツール定義を実行することができます：</p>
+<p><code class="docutils literal notranslate"><span class="pre">--validate</span></code> オプションを省略することで、CWLツール定義を実行できます：</p>
 <div class="literal-block-wrapper docutils container" id="running-true-cwl-with-cwltool">
 <div class="code-block-caption"><span class="caption-text"><code class="docutils literal notranslate"><span class="pre">cwltool</span></code> を使って <code class="docutils literal notranslate"><span class="pre">true.cwl</span></code> を実行します。</span><a class="headerlink" href="#running-true-cwl-with-cwltool" title="Link to this code">#</a></div>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>cwltool<span class="w"> </span>true.cwl
-INFO<span class="w"> </span>/opt/hostedtoolcache/Python/3.9.19/x64/bin/cwltool<span class="w"> </span><span class="m">3</span>.1.20240404144621
+INFO<span class="w"> </span>/opt/hostedtoolcache/Python/3.9.19/x64/bin/cwltool<span class="w"> </span><span class="m">3</span>.1.20240508115724
 INFO<span class="w"> </span>Resolved<span class="w"> </span><span class="s1">&#39;true.cwl&#39;</span><span class="w"> </span>to<span class="w"> </span><span class="s1">&#39;file:///home/runner/work/user_guide/user_guide/src/_includes/cwl/true.cwl&#39;</span>
-INFO<span class="w"> </span><span class="o">[</span>job<span class="w"> </span>true.cwl<span class="o">]</span><span class="w"> </span>/tmp/65swjrxz$<span class="w"> </span><span class="nb">true</span>
+INFO<span class="w"> </span><span class="o">[</span>job<span class="w"> </span>true.cwl<span class="o">]</span><span class="w"> </span>/tmp/ui8_39lo$<span class="w"> </span><span class="nb">true</span>
 INFO<span class="w"> </span><span class="o">[</span>job<span class="w"> </span>true.cwl<span class="o">]</span><span class="w"> </span>completed<span class="w"> </span>success
 <span class="o">{}</span>INFO<span class="w"> </span>Final<span class="w"> </span>process<span class="w"> </span>status<span class="w"> </span>is<span class="w"> </span>success
 </pre></div>
@@ -496,7 +492,7 @@ INFO<span class="w"> </span><span class="o">[</span>job<span class="w"> </span>t
 </div>
 <section id="generic-cwl-runner-alias">
 <h3><span class="section-number">1.2.2.1. </span>一般的な <code class="docutils literal notranslate"><span class="pre">cwl-runner</span></code> エイリアス<a class="headerlink" href="#generic-cwl-runner-alias" title="Link to this heading">#</a></h3>
-<p><code class="docutils literal notranslate"><span class="pre">cwl-runner</span></code> は、CWL準拠のランナーに対する、実装にとらわれないエイリアスです。これは、<code class="docutils literal notranslate"><span class="pre">cwl-runner</span></code> エイリアスコマンドを独立して呼び出すことができ、特定のCWLランナープログラム名に依存しないことを意味します。ユーザーは、<code class="docutils literal notranslate"><span class="pre">cwltool</span></code> のようなCWLランナーを直接呼び出す代わりに、<code class="docutils literal notranslate"><span class="pre">cwl-runner</span></code> を呼び出すことができます。<code class="docutils literal notranslate"><span class="pre">cwl-runner</span></code> は、システム管理者またはユーザーによってインストールされ、好みのCWL実装を指し示す。これは、複数のCWLランナーがある環境では便利です。</p>
+<p><code class="docutils literal notranslate"><span class="pre">cwl-runner</span></code> は、CWL準拠のランナーに対する、実装にとらわれないエイリアスです。これは、<code class="docutils literal notranslate"><span class="pre">cwl-runner</span></code> エイリアスコマンドを独立して呼び出すことができ、特定のCWL runner のプログラム名に依存しないことを意味します。ユーザーは、<code class="docutils literal notranslate"><span class="pre">cwltool</span></code> のようなCWL runnerを直接呼び出す代わりに、<code class="docutils literal notranslate"><span class="pre">cwl-runner</span></code> を呼び出すことができます。<code class="docutils literal notranslate"><span class="pre">cwl-runner</span></code> は、システム管理者またはユーザーによってインストールされ、好みのCWL実装を指します。これは、複数のCWL runnerがある環境で便利です。</p>
 <p>CWLコミュニティは、<code class="docutils literal notranslate"><span class="pre">cwlref-runner</span></code> という名前のPythonパッケージを公開しており、<code class="docutils literal notranslate"><span class="pre">cwltool</span></code> のエイリアスを<code class="docutils literal notranslate"><span class="pre">cwl-runner</span></code> という名前でインストールします。</p>
 <div class="literal-block-wrapper docutils container" id="installing-cwlrunner-with-pip">
 <div class="code-block-caption"><span class="caption-text">cwltool のエイリアス <code class="docutils literal notranslate"><span class="pre">cwl-runner</span></code> を <code class="docutils literal notranslate"><span class="pre">pip</span></code> でインストールします。</span><a class="headerlink" href="#installing-cwlrunner-with-pip" title="Link to this code">#</a></div>
@@ -508,7 +504,7 @@ INFO<span class="w"> </span><span class="o">[</span>job<span class="w"> </span>t
 <div class="literal-block-wrapper docutils container" id="validating-true-cwl-with-cwl-runner">
 <div class="code-block-caption"><span class="caption-text">検証<code class="docutils literal notranslate"><span class="pre">true.cwl</span></code> with<code class="docutils literal notranslate"><span class="pre">cwl-runner</span></code>.</span><a class="headerlink" href="#validating-true-cwl-with-cwl-runner" title="Link to this code">#</a></div>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>cwl-runner<span class="w"> </span>--validate<span class="w"> </span>true.cwl
-INFO<span class="w"> </span>/opt/hostedtoolcache/Python/3.9.19/x64/bin/cwl-runner<span class="w"> </span><span class="m">3</span>.1.20240404144621
+INFO<span class="w"> </span>/opt/hostedtoolcache/Python/3.9.19/x64/bin/cwl-runner<span class="w"> </span><span class="m">3</span>.1.20240508115724
 INFO<span class="w"> </span>Resolved<span class="w"> </span><span class="s1">&#39;true.cwl&#39;</span><span class="w"> </span>to<span class="w"> </span><span class="s1">&#39;file:///home/runner/work/user_guide/user_guide/src/_includes/cwl/true.cwl&#39;</span>
 true.cwl<span class="w"> </span>is<span class="w"> </span>valid<span class="w"> </span>CWL.
 </pre></div>
@@ -517,9 +513,9 @@ true.cwl<span class="w"> </span>is<span class="w"> </span>valid<span class="w"> 
 <div class="literal-block-wrapper docutils container" id="running-true-cwl-with-cwl-runner">
 <div class="code-block-caption"><span class="caption-text"><code class="docutils literal notranslate"><span class="pre">true.cwl</span></code> を <code class="docutils literal notranslate"><span class="pre">cwl-runner</span></code> で実行します。</span><a class="headerlink" href="#running-true-cwl-with-cwl-runner" title="Link to this code">#</a></div>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>cwl-runner<span class="w"> </span>true.cwl
-INFO<span class="w"> </span>/opt/hostedtoolcache/Python/3.9.19/x64/bin/cwl-runner<span class="w"> </span><span class="m">3</span>.1.20240404144621
+INFO<span class="w"> </span>/opt/hostedtoolcache/Python/3.9.19/x64/bin/cwl-runner<span class="w"> </span><span class="m">3</span>.1.20240508115724
 INFO<span class="w"> </span>Resolved<span class="w"> </span><span class="s1">&#39;true.cwl&#39;</span><span class="w"> </span>to<span class="w"> </span><span class="s1">&#39;file:///home/runner/work/user_guide/user_guide/src/_includes/cwl/true.cwl&#39;</span>
-INFO<span class="w"> </span><span class="o">[</span>job<span class="w"> </span>true.cwl<span class="o">]</span><span class="w"> </span>/tmp/tp539yzt$<span class="w"> </span><span class="nb">true</span>
+INFO<span class="w"> </span><span class="o">[</span>job<span class="w"> </span>true.cwl<span class="o">]</span><span class="w"> </span>/tmp/ql4lgs56$<span class="w"> </span><span class="nb">true</span>
 INFO<span class="w"> </span><span class="o">[</span>job<span class="w"> </span>true.cwl<span class="o">]</span><span class="w"> </span>completed<span class="w"> </span>success
 <span class="o">{}</span>INFO<span class="w"> </span>Final<span class="w"> </span>process<span class="w"> </span>status<span class="w"> </span>is<span class="w"> </span>success
 </pre></div>
@@ -539,20 +535,20 @@ INFO<span class="w"> </span><span class="o">[</span>job<span class="w"> </span>t
 </pre></div>
 </div>
 </div>
-<p><code class="docutils literal notranslate"><span class="pre">chmod</span> <span class="pre">u+x</span></code> を実行することで、 <code class="docutils literal notranslate"><span class="pre">true_shebang.cwl</span></code> を実行可能なファイルにすることができます。</p>
+<p><code class="docutils literal notranslate"><span class="pre">chmod</span> <span class="pre">u+x</span></code> を実行することで、 <code class="docutils literal notranslate"><span class="pre">true_shebang.cwl</span></code> を実行可能なファイルにできます。</p>
 <div class="literal-block-wrapper docutils container" id="making-true-cwl-executable">
 <div class="code-block-caption"><span class="caption-text"><code class="docutils literal notranslate"><span class="pre">true.cwl</span></code> 実行可能なものにする。</span><a class="headerlink" href="#making-true-cwl-executable" title="Link to this code">#</a></div>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>chmod<span class="w"> </span>u+x<span class="w"> </span>true.cwl
 </pre></div>
 </div>
 </div>
-<p>そして最後に、コマンドラインで直接実行することができます。実行時には、shebangで指定されたプログラム(<code class="docutils literal notranslate"><span class="pre">cwl-runner</span></code>)が、ファイルの残りの部分を実行するために使用されます。</p>
+<p>そして最後に、コマンドラインで直接実行できます。実行時には、shebangで指定されたプログラム(<code class="docutils literal notranslate"><span class="pre">cwl-runner</span></code>)が、ファイルの残りの部分を実行するために使用されます。</p>
 <div class="literal-block-wrapper docutils container" id="running-true-shebang-cwl-with-a-shebang">
 <div class="code-block-caption"><span class="caption-text"><code class="docutils literal notranslate"><span class="pre">true_shebang.cwl</span></code> をシェバングで実行する。</span><a class="headerlink" href="#running-true-shebang-cwl-with-a-shebang" title="Link to this code">#</a></div>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>./true_shebang.cwl
-INFO<span class="w"> </span>/opt/hostedtoolcache/Python/3.9.19/x64/bin/cwl-runner<span class="w"> </span><span class="m">3</span>.1.20240404144621
+INFO<span class="w"> </span>/opt/hostedtoolcache/Python/3.9.19/x64/bin/cwl-runner<span class="w"> </span><span class="m">3</span>.1.20240508115724
 INFO<span class="w"> </span>Resolved<span class="w"> </span><span class="s1">&#39;./true_shebang.cwl&#39;</span><span class="w"> </span>to<span class="w"> </span><span class="s1">&#39;file:///home/runner/work/user_guide/user_guide/src/_includes/cwl/true_shebang.cwl&#39;</span>
-INFO<span class="w"> </span><span class="o">[</span>job<span class="w"> </span>true_shebang.cwl<span class="o">]</span><span class="w"> </span>/tmp/_zog9n8f$<span class="w"> </span><span class="nb">true</span>
+INFO<span class="w"> </span><span class="o">[</span>job<span class="w"> </span>true_shebang.cwl<span class="o">]</span><span class="w"> </span>/tmp/xs0k60x9$<span class="w"> </span><span class="nb">true</span>
 INFO<span class="w"> </span><span class="o">[</span>job<span class="w"> </span>true_shebang.cwl<span class="o">]</span><span class="w"> </span>completed<span class="w"> </span>success
 <span class="o">{}</span>INFO<span class="w"> </span>Final<span class="w"> </span>process<span class="w"> </span>status<span class="w"> </span>is<span class="w"> </span>success
 </pre></div>
@@ -576,7 +572,7 @@ INFO<span class="w"> </span><span class="o">[</span>job<span class="w"> </span>t
 </section>
 <section id="docker">
 <h2><span class="section-number">1.2.4. </span>Docker<a class="headerlink" href="#docker" title="Link to this heading">#</a></h2>
-<p><code class="docutils literal notranslate"><span class="pre">cwltool</span></code> は、ツール、ワークフロー、およびワークフロー ステップで指定されたソフトウェアコンテナをDockerを使用して実行します。Docker ドキュメントの指示に従って、お使いのオペレーティングシステム用にインストールしてください：<a class="reference external" href="https://docs.docker.com/">https://docs.docker.com/</a>.</p>
+<p><code class="docutils literal notranslate"><span class="pre">cwltool</span></code> は、ツール、ワークフロー、およびワークフロー ステップで指定されたソフトウェアコンテナをDockerを使用して実行します。Docker ドキュメントの指示に従って、お使いのオペレーティングシステム合わせてインストールしてください：<a class="reference external" href="https://docs.docker.com/">https://docs.docker.com/</a>.</p>
 <p>Dockerコンテナの書き方や構築方法を知っておく必要はありません。このユーザーガイドの残りの部分では、実行例として既存のDockerイメージを使用し、コンテナのある実行モデルとない実行モデルの違いを明確にすることにします。</p>
 <div class="admonition note">
 <p class="admonition-title">注釈</p>

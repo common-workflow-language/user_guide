@@ -473,12 +473,12 @@ document.write(`
 <span class="nt">home</span><span class="p">:</span><span class="w">       </span><span class="l l-Scalar l-Scalar-Plain">Bag End, Hobbiton</span>
 </pre></div>
 </div>
-<p>上記のYAMLは4つのキー -<code class="docutils literal notranslate"><span class="pre">first_name</span></code>,<code class="docutils literal notranslate"><span class="pre">last_name</span></code>,<code class="docutils literal notranslate"><span class="pre">age_years</span></code>, <code class="docutils literal notranslate"><span class="pre">home</span></code> - 及びそれぞれの値を定義しています。値は、文字列、数値（整数、浮動小数点、科学的表現）、ブール値（<code class="docutils literal notranslate"><span class="pre">true</span></code> または<code class="docutils literal notranslate"><span class="pre">false</span></code> ）、またはより複雑な入れ子型（下記参照）にすることができます。</p>
+<p>上記のYAMLは4つのキー -<code class="docutils literal notranslate"><span class="pre">first_name</span></code>,<code class="docutils literal notranslate"><span class="pre">last_name</span></code>,<code class="docutils literal notranslate"><span class="pre">age_years</span></code>, <code class="docutils literal notranslate"><span class="pre">home</span></code> - 及びそれぞれの値を定義しています。値は、文字列、数値（整数、浮動小数点、科学的表現）、ブール値（<code class="docutils literal notranslate"><span class="pre">true</span></code> または<code class="docutils literal notranslate"><span class="pre">false</span></code> ）、またはより複雑な入れ子型（下記参照）にできます。</p>
 <p>値は引用符で括ることができますが、意味が変わってきます。例えば、<code class="docutils literal notranslate"><span class="pre">&quot;1234&quot;</span></code> は文字列として扱われ、<code class="docutils literal notranslate"><span class="pre">1234</span></code> は整数値として扱われます。CWLでは、<code class="docutils literal notranslate"><span class="pre">baseCommand</span></code> のすべての部分が文字列でなければならないので、コマンドに固定した数値を指定する場合は、その数値を引用符で囲むようにしてください：[echo, &quot;42&quot;]`.</p>
 </section>
 <section id="comments">
 <h2><span class="section-number">2.1.3. </span>コメント<a class="headerlink" href="#comments" title="Link to this heading">#</a></h2>
-<p><code class="docutils literal notranslate"><span class="pre">#</span></code> を使うと、CWL定義や入力パラメータファイルにコメントを追加することができます。<code class="docutils literal notranslate"> <span class="pre">#</span></code> の右側にある文字は、YAML を解釈するプログラムによって無視されます。たとえば、次のようになります：</p>
+<p><code class="docutils literal notranslate"><span class="pre">#</span></code> を使うと、CWL定義や入力パラメータファイルにコメントを追加できます。<code class="docutils literal notranslate"> <span class="pre">#</span></code> の右側にある文字は、YAML を解釈するプログラムによって無視されます。たとえば、次のようになります：</p>
 <div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">first_name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Bilbo</span>
 <span class="nt">last_name</span><span class="p">:</span><span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">Baggins</span>
 <span class="nt">age_years</span><span class="p">:</span><span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">111</span>
@@ -490,16 +490,7 @@ document.write(`
 </section>
 <section id="maps">
 <h2><span class="section-number">2.1.4. </span>マップ<a class="headerlink" href="#maps" title="Link to this heading">#</a></h2>
-<p>When describing a tool or workflow with CWL,
-it is usually necessary to construct more complex, nested representations.
-Referred to as <em>maps</em>,
-these hierarchical structures are described in YAML by providing
-additional key-value pairs as the value of any key.
-These pairs (sometimes referred to as &quot;children&quot;) are written
-on new lines under the key to which they belong (the &quot;parent&quot;),
-and should be indented with two spaces
-(⇥tab characters are not allowed).
-For example:</p>
+<p>CWLでツールやワークフローを定義する場合、通常、より複雑で入れ子構造の表現を構築する必要があります。<em>maps</em> と呼ばれるこれらの階層構造は、キーの値として追加のキーと値のペアを提供することによりYAMLで記述されます。これらのペア（「子」と呼ばれることもあります）は、属するキー（「親」）の下の新しい行に書かれ、2つのスペースでインデントされます（⇥タブ文字は許可されていません）。例えば、次のようになります：</p>
 <div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">cwlVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">v1.0</span>
 <span class="nt">class</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">CommandLineTool</span>
 <span class="nt">baseCommand</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">echo</span>
@@ -511,16 +502,7 @@ For example:</p>
 <span class="w">      </span><span class="nt">prefix</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">-f</span>
 </pre></div>
 </div>
-<p>The YAML above illustrates how to build up complex nested object
-descriptions relatively quickly.
-The <code class="docutils literal notranslate"><span class="pre">inputs</span></code> map contains a single key, <code class="docutils literal notranslate"><span class="pre">example_flag</span></code>,
-which itself contains two keys, <code class="docutils literal notranslate"><span class="pre">type</span></code> and <code class="docutils literal notranslate"><span class="pre">inputBinding</span></code>,
-while one of these children, <code class="docutils literal notranslate"><span class="pre">inputBinding</span></code>,
-contains a further two key-value pairs (<code class="docutils literal notranslate"><span class="pre">position</span></code> and <code class="docutils literal notranslate"><span class="pre">prefix</span></code>).
-See the <a class="reference external" href="#arrays">Arrays</a> section below for more information about providing multiple
-values/key-value pairs for a single key.
-For comparison with the example YAML above,
-here is a graphical representation of the <code class="docutils literal notranslate"><span class="pre">inputs</span></code> object it describes.</p>
+<p>上記のYAMLは、複雑なネストされたオブジェクトの記述を比較的素早く構築する方法を示しています。<code class="docutils literal notranslate"><span class="pre">inputs</span></code> マップはキー<code class="docutils literal notranslate"><span class="pre">example_flag</span></code> だけを含み、それ自体が2つのキー、<code class="docutils literal notranslate"><span class="pre">type</span></code> と<code class="docutils literal notranslate"><span class="pre">inputBinding</span></code> を含み、これらの子の1つ、<code class="docutils literal notranslate"><span class="pre">inputBinding</span></code> はさらに2つのキーと値のペア (<code class="docutils literal notranslate"><span class="pre">position</span></code> と<code class="docutils literal notranslate"><span class="pre">prefix</span></code>) を含みます。1つのキーに対して複数の値/キーバリューペアを提供することについての詳細は、以下の<a class="reference external" href="#arrays">配列</a>のセクションを参照してください。上記のYAMLの例と比較するために、<code class="docutils literal notranslate"><span class="pre">inputs</span></code> オブジェクトを図式化したものを示します。</p>
 <div class="mermaid">
 graph TD
   inputs --> example_flag
@@ -535,22 +517,14 @@ graph TD
 </section>
 <section id="arrays">
 <h2><span class="section-number">2.1.5. </span>配列<a class="headerlink" href="#arrays" title="Link to this heading">#</a></h2>
-<p>In certain circumstances, it is necessary to provide
-multiple values or objects for a single key.
-As we've already seen in the <a class="reference external" href="#maps">Maps</a> section above,
-more than one key-value pair can be mapped to a single key.
-However, it is also possible to define multiple values for a key
-without having to provide a unique key for each value.
-We can achieve this with an <em>array</em>,
-where each value is defined on its own line and preceded by <code class="docutils literal notranslate"><span class="pre">-</span></code>.
-For example:</p>
+<p>ある状況下では、1つのキーに対して複数の値やオブジェクトを提供する必要があります。上記の<a class="reference external" href="#maps">Maps</a>のセクションですでに見たように、1つのキーに複数のキーと値のペアをマッピングできます。しかし、各値にユニークなキーを用意しなくても、キーに対して複数の値を定義することも可能です。この場合、<em>array</em> を用いて、各値を独自の行で定義し、その前に<code class="docutils literal notranslate"><span class="pre">-</span></code> を置くことで実現できます。例えば、次のようになります：</p>
 <div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">touchfiles</span><span class="p">:</span>
 <span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">foo.txt</span>
 <span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">bar.dat</span>
 <span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">baz.txt</span>
 </pre></div>
 </div>
-<p>and a more complex example combining maps and arrays:</p>
+<p>と、マップと配列を組み合わせたより複雑な例です：</p>
 <div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">exclusive_parameters</span><span class="p">:</span>
 <span class="w">  </span><span class="nt">type</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">record</span>
@@ -576,26 +550,16 @@ For example:</p>
 <div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">touchfiles</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="nv">foo.txt</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">bar.dat</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">baz.txt</span><span class="p p-Indicator">]</span><span class="w"> </span><span class="c1"># equivalent to first Arrays example</span>
 </pre></div>
 </div>
-<p>and:</p>
+<p>と：</p>
 <div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="c1"># equivalent to the `inputs` example in &quot;Maps&quot; above</span>
 <span class="nt">inputs</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">{</span><span class="nt">example_flag</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">{</span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="nv">boolean</span><span class="p p-Indicator">,</span><span class="nt"> inputBinding</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">{</span><span class="nt">position</span><span class="p">:</span><span class="w"> </span><span class="nv">1</span><span class="p p-Indicator">,</span><span class="nt"> prefix</span><span class="p">:</span><span class="w"> </span><span class="nv">-f</span><span class="p p-Indicator">}}}</span>
 </pre></div>
 </div>
-<p>Native JSON can be useful
-in indicating where a field is intentionally left empty
-(such as <code class="docutils literal notranslate"><span class="pre">[]</span></code> for an empty array),
-as well as where it makes more sense
-for the values to be located on the same line
-(For example, when providing option flags and their values in a shell command).
-However, as the second example above shows,
-it can severely affect the readability of a YAML file,
-and should be used sparingly.</p>
+<p>ネイティブ JSON は、フィールドが意図的に空のままになっている場所 (空の配列を表す<code class="docutils literal notranslate"><span class="pre">[]</span></code> など) や、値が同じ行にあることがより理にかなっている場所 (たとえば、シェルコマンドでオプションフラグとその値を提供する場合) を示すのに便利なことがあります。しかし、上の2番目の例が示すように、YAMLファイルの可読性に深刻な影響を与える可能性があるので、控えめに使用する必要があります。</p>
 </section>
 <section id="reference">
 <h2><span class="section-number">2.1.7. </span>リファレンス<a class="headerlink" href="#reference" title="Link to this heading">#</a></h2>
-<p>The <a class="reference external" href="https://learnxinyminutes.com/docs/yaml/">Learn YAML in Y Minutes</a> reference was very helpful for us
-while we wrote this guide,
-though it also covers features that are not valid in CWL.</p>
+<p><a class="reference external" href="https://learnxinyminutes.com/docs/yaml/">Learn YAML in Y Minutes</a> リファレンスは、CWLでは有効でない機能もカバーしていますが、このガイドを書く間、私たちにとって非常に役に立ちました。</p>
 </section>
 </section>
 

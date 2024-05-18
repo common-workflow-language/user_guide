@@ -450,16 +450,12 @@ document.write(`
 <section id="returning-output-files">
 <h2><span class="section-number">2.7.1. </span>出力ファイルの回収<a class="headerlink" href="#returning-output-files" title="Link to this heading">#</a></h2>
 <p>ツールの<code class="docutils literal notranslate"><span class="pre">outputs</span></code> は、ツールの実行後に返されるべき出力パラメータのリストです。  各パラメーターには、パラメーター名を示す<code class="docutils literal notranslate"><span class="pre">id</span></code> と、そのパラメーターに有効な値の型を示す<code class="docutils literal notranslate"><span class="pre">type</span></code> があります。</p>
-<p>When a tool runs under CWL, the starting working directory is the
-designated output directory.  The underlying tool or script must record
-its results in the form of files created in the output directory.  The
-output parameters returned by the CWL tool are either the output files
-themselves, or the result of examining the content of those files.</p>
+<p>CWLでツールを実行する場合、実行を開始したディレクトリが出力ディレクトリになります。  基礎となるツールやスクリプトは、出力ディレクトリに作成されるファイルの形でその結果を記録しなければなりません。  CWLツールによって返される出力パラメータは、出力ファイルそのものであるか、またはそれらのファイルの内容を調べることによって得られるものです。</p>
 <p>次の例は、tarファイルから抽出されたファイルを返す方法を示しています。</p>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
 <p><code class="docutils literal notranslate"><span class="pre">baseCommand</span></code> に必須引数を渡します。</p>
-<p>これまでの例では、<code class="docutils literal notranslate"><span class="pre">baseCommand</span></code> は単なる文字列で、引数はCWL入力として渡していました。単一の文字列の代わりに、<em>文字列の配列</em> を使用することができます。 配列の最初の要素は実行するコマンドで、それ以降の要素は必須のコマンドライン引数です</p>
+<p>これまでの例では、<code class="docutils literal notranslate"><span class="pre">baseCommand</span></code> は単なる文字列で、引数はCWL入力として渡していました。単一の文字列の代わりに、<em>文字列の配列</em> を使用できます。 配列の最初の要素は実行するコマンドで、それ以降の要素は必須のコマンドライン引数です</p>
 </div>
 <div class="literal-block-wrapper docutils container" id="tar-cwl">
 <div class="code-block-caption"><span class="caption-text"><code class="docutils literal notranslate"><span class="pre">tar.cwl</span></code></span><a class="headerlink" href="#tar-cwl" title="Link to this code">#</a></div>
@@ -495,12 +491,12 @@ themselves, or the result of examining the content of those files.</p>
 </div>
 <p>そして、今度はコマンドラインにツール定義と入力オブジェクトを指定して<code class="docutils literal notranslate"><span class="pre">cwltool</span></code> を呼び出します：</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>cwltool<span class="w"> </span>tar.cwl<span class="w"> </span>tar-job.yml
-INFO<span class="w"> </span>/opt/hostedtoolcache/Python/3.9.19/x64/bin/cwltool<span class="w"> </span><span class="m">3</span>.1.20240404144621
+INFO<span class="w"> </span>/opt/hostedtoolcache/Python/3.9.19/x64/bin/cwltool<span class="w"> </span><span class="m">3</span>.1.20240508115724
 INFO<span class="w"> </span>Resolved<span class="w"> </span><span class="s1">&#39;tar.cwl&#39;</span><span class="w"> </span>to<span class="w"> </span><span class="s1">&#39;file:///home/runner/work/user_guide/user_guide/src/_includes/cwl/outputs/tar.cwl&#39;</span>
-INFO<span class="w"> </span><span class="o">[</span>job<span class="w"> </span>tar.cwl<span class="o">]</span><span class="w"> </span>/tmp/p4eds2wv$<span class="w"> </span>tar<span class="w"> </span><span class="se">\</span>
+INFO<span class="w"> </span><span class="o">[</span>job<span class="w"> </span>tar.cwl<span class="o">]</span><span class="w"> </span>/tmp/izsq2pz6$<span class="w"> </span>tar<span class="w"> </span><span class="se">\</span>
 <span class="w">    </span>--extract<span class="w"> </span><span class="se">\</span>
 <span class="w">    </span>--file<span class="w"> </span><span class="se">\</span>
-<span class="w">    </span>/tmp/hfsca7on/stgfd0520bf-d70b-4b0d-91bf-9c54091d98d0/hello.tar
+<span class="w">    </span>/tmp/504mwufr/stgb0e3fb6e-75ff-49a9-a8ea-ab3b5bbf5b1f/hello.tar
 INFO<span class="w"> </span><span class="o">[</span>job<span class="w"> </span>tar.cwl<span class="o">]</span><span class="w"> </span>completed<span class="w"> </span>success
 <span class="o">{</span>
 <span class="w">    </span><span class="s2">&quot;example_out&quot;</span>:<span class="w"> </span><span class="o">{</span>
@@ -522,7 +518,7 @@ INFO<span class="w"> </span><span class="o">[</span>job<span class="w"> </span>t
 <span class="w">      </span><span class="nt">glob</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">hello.txt</span>
 </pre></div>
 </div>
-<p><a class="reference external" href="https://w3id.org/cwl/CommandLineTool.html#CommandOutputBinding"><code class="docutils literal notranslate"><span class="pre">glob</span></code></a> フィールドは、出力ディレクトリ内のファイル名で構成されます。前もって出力ファイル名が分からない場合は、<code class="docutils literal notranslate"><span class="pre">glob:</span> <span class="pre">'*.txt'</span></code> のようにワイルドカードパターンを使用することができます。</p>
+<p><a class="reference external" href="https://w3id.org/cwl/CommandLineTool.html#CommandOutputBinding"><code class="docutils literal notranslate"><span class="pre">glob</span></code></a> フィールドは、出力ディレクトリ内のファイル名で構成されます。前もって出力ファイル名が分からない場合は、<code class="docutils literal notranslate"><span class="pre">glob:</span> <span class="pre">'*.txt'</span></code> のようにワイルドカードパターンを使用できます。</p>
 </section>
 <section id="capturing-standard-output">
 <h2><span class="section-number">2.7.2. </span>標準出力をキャプチャする<a class="headerlink" href="#capturing-standard-output" title="Link to this heading">#</a></h2>
@@ -553,10 +549,10 @@ INFO<span class="w"> </span><span class="o">[</span>job<span class="w"> </span>t
 </div>
 <p>ここで、コマンドラインにツール定義と入力オブジェクトを指定し <code class="docutils literal notranslate"><span class="pre">cwltool</span></code> を起動します：</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>cwltool<span class="w"> </span>stdout.cwl<span class="w"> </span>echo-job.yml
-INFO<span class="w"> </span>/opt/hostedtoolcache/Python/3.9.19/x64/bin/cwltool<span class="w"> </span><span class="m">3</span>.1.20240404144621
+INFO<span class="w"> </span>/opt/hostedtoolcache/Python/3.9.19/x64/bin/cwltool<span class="w"> </span><span class="m">3</span>.1.20240508115724
 INFO<span class="w"> </span>Resolved<span class="w"> </span><span class="s1">&#39;stdout.cwl&#39;</span><span class="w"> </span>to<span class="w"> </span><span class="s1">&#39;file:///home/runner/work/user_guide/user_guide/src/_includes/cwl/outputs/stdout.cwl&#39;</span>
-INFO<span class="w"> </span><span class="o">[</span>job<span class="w"> </span>stdout.cwl<span class="o">]</span><span class="w"> </span>/tmp/5arvpvhv$<span class="w"> </span><span class="nb">echo</span><span class="w"> </span><span class="se">\</span>
-<span class="w">    </span><span class="s1">&#39;Hello world!&#39;</span><span class="w"> </span>&gt;<span class="w"> </span>/tmp/5arvpvhv/output.txt
+INFO<span class="w"> </span><span class="o">[</span>job<span class="w"> </span>stdout.cwl<span class="o">]</span><span class="w"> </span>/tmp/lbfmqir_$<span class="w"> </span><span class="nb">echo</span><span class="w"> </span><span class="se">\</span>
+<span class="w">    </span><span class="s1">&#39;Hello world!&#39;</span><span class="w"> </span>&gt;<span class="w"> </span>/tmp/lbfmqir_/output.txt
 INFO<span class="w"> </span><span class="o">[</span>job<span class="w"> </span>stdout.cwl<span class="o">]</span><span class="w"> </span>completed<span class="w"> </span>success
 <span class="o">{</span>
 <span class="w">    </span><span class="s2">&quot;example_out&quot;</span>:<span class="w"> </span><span class="o">{</span>
@@ -608,9 +604,9 @@ INFO<span class="w"> </span><span class="o">[</span>job<span class="w"> </span>s
 </div>
 <p>ここで、コマンドラインにツール定義と入力オブジェクトを指定し <code class="docutils literal notranslate"><span class="pre">cwltool</span></code> を起動します：</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>cwltool<span class="w"> </span>array-outputs.cwl<span class="w"> </span>array-outputs-job.yml
-INFO<span class="w"> </span>/opt/hostedtoolcache/Python/3.9.19/x64/bin/cwltool<span class="w"> </span><span class="m">3</span>.1.20240404144621
+INFO<span class="w"> </span>/opt/hostedtoolcache/Python/3.9.19/x64/bin/cwltool<span class="w"> </span><span class="m">3</span>.1.20240508115724
 INFO<span class="w"> </span>Resolved<span class="w"> </span><span class="s1">&#39;array-outputs.cwl&#39;</span><span class="w"> </span>to<span class="w"> </span><span class="s1">&#39;file:///home/runner/work/user_guide/user_guide/src/_includes/cwl/outputs/array-outputs.cwl&#39;</span>
-INFO<span class="w"> </span><span class="o">[</span>job<span class="w"> </span>array-outputs.cwl<span class="o">]</span><span class="w"> </span>/tmp/qtcne5b4$<span class="w"> </span>touch<span class="w"> </span><span class="se">\</span>
+INFO<span class="w"> </span><span class="o">[</span>job<span class="w"> </span>array-outputs.cwl<span class="o">]</span><span class="w"> </span>/tmp/0052w3l5$<span class="w"> </span>touch<span class="w"> </span><span class="se">\</span>
 <span class="w">    </span>foo.txt<span class="w"> </span><span class="se">\</span>
 <span class="w">    </span>bar.dat<span class="w"> </span><span class="se">\</span>
 <span class="w">    </span>baz.txt

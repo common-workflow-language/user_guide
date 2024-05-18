@@ -447,10 +447,10 @@ document.write(`
                   
   <section id="troubleshooting">
 <h1><span class="section-number">2.20. </span>トラブルシューティング<a class="headerlink" href="#troubleshooting" title="Link to this heading">#</a></h1>
-<p>このセクションでは、CWLの実行に問題がある場合にトラブルシューティングを行う方法を説明します。ここでは、<code class="docutils literal notranslate"><span class="pre">cwltool</span></code> に焦点を当てますが、これらのテクニックのいくつかは他のCWLランナーにも適用されるかもしれません。</p>
+<p>このセクションでは、CWLの実行に問題がある場合にトラブルシューティングを行う方法を説明します。ここでは、<code class="docutils literal notranslate"><span class="pre">cwltool</span></code> に焦点を当てますが、いくつかのテクニックは他のCWL runnerでも使えるかもしれません。</p>
 <section id="run-cwltool-with-cachedir">
 <h2><span class="section-number">2.20.1. </span><code class="docutils literal notranslate"><span class="pre">cwltool</span></code> を<code class="docutils literal notranslate"><span class="pre">cachedir</span></code> で実行する<a class="headerlink" href="#run-cwltool-with-cachedir" title="Link to this heading">#</a></h2>
-<p>ワークフロー実行時に<code class="docutils literal notranslate"><span class="pre">--cachedir</span></code> オプションを使用すると、<code class="docutils literal notranslate"><span class="pre">cwltool</span></code> に中間ファイル（入力ファイルでも出力ファイルでもないが、ワークフロー実行中に作成されるファイル）をキャッシュするよう指示することができます。デフォルトでは、これらのファイルは一時ディレクトリに作成されますが、別のディレクトリに書き込むことでアクセスが容易になります。</p>
+<p>ワークフロー実行時に<code class="docutils literal notranslate"><span class="pre">--cachedir</span></code> オプションを使用すると、<code class="docutils literal notranslate"><span class="pre">cwltool</span></code> に中間ファイル（入力ファイルでも出力ファイルでもないが、ワークフロー実行中に作成されるファイル）をキャッシュするよう指示できます。デフォルトでは、これらのファイルは一時ディレクトリに作成されますが、別のディレクトリに書き込むことでアクセスが容易になります。</p>
 <p>次の例では、<code class="docutils literal notranslate"><span class="pre">troubleshooting-wf1.cwl</span></code> <code class="docutils literal notranslate"> <span class="pre">step_a</span></code> と<code class="docutils literal notranslate"><span class="pre">step_b</span></code> という2つのステップを用意しています。このワークフローは、<code class="docutils literal notranslate"><span class="pre">echo</span> <span class="pre">&quot;Hello</span> <span class="pre">World&quot;</span> <span class="pre">|</span> <span class="pre">rev</span></code> と同等で、&quot;Hello World&quot; というメッセージを反転して、すなわち &quot;dlroW olleH&quot; と表示します。しかし、2番目のステップである<code class="docutils literal notranslate"><span class="pre">step_b</span></code>,<strong>にはタイプミス</strong> があり、<code class="docutils literal notranslate"><span class="pre">rev</span></code> コマンドを実行する代わりに<code class="docutils literal notranslate"><span class="pre">revv</span></code> を実行しようとし、失敗しています。</p>
 <div class="literal-block-wrapper docutils container" id="troubleshooting-wf1-cwl">
 <div class="code-block-caption"><span class="caption-text"><code class="docutils literal notranslate"><span class="pre">troubleshooting-wf1.cwl</span></code></span><a class="headerlink" href="#troubleshooting-wf1-cwl" title="Link to this code">#</a></div>
@@ -506,7 +506,7 @@ document.write(`
 </div>
 <p><code class="docutils literal notranslate"><span class="pre">--cachedir</span></code> に <code class="docutils literal notranslate"><span class="pre">/tmp/cachedir/</span></code> を指定して、このワークフローを実行してみましょう（<code class="docutils literal notranslate"><span class="pre">cwltool</span></code> は、ディレクトリがまだ存在しない場合、新規作成します）：</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>cwltool<span class="w"> </span>--cachedir<span class="w"> </span>/tmp/cachedir/<span class="w"> </span>troubleshooting-wf1.cwl
-INFO<span class="w"> </span>/opt/hostedtoolcache/Python/3.9.19/x64/bin/cwltool<span class="w"> </span><span class="m">3</span>.1.20240404144621
+INFO<span class="w"> </span>/opt/hostedtoolcache/Python/3.9.19/x64/bin/cwltool<span class="w"> </span><span class="m">3</span>.1.20240508115724
 INFO<span class="w"> </span>Resolved<span class="w"> </span><span class="s1">&#39;troubleshooting-wf1.cwl&#39;</span><span class="w"> </span>to<span class="w"> </span><span class="s1">&#39;file:///home/runner/work/user_guide/user_guide/src/_includes/cwl/troubleshooting/troubleshooting-wf1.cwl&#39;</span>
 INFO<span class="w"> </span><span class="o">[</span>workflow<span class="w"> </span><span class="o">]</span><span class="w"> </span>start
 INFO<span class="w"> </span><span class="o">[</span>workflow<span class="w"> </span><span class="o">]</span><span class="w"> </span>starting<span class="w"> </span>step<span class="w"> </span>step_a
@@ -517,7 +517,7 @@ INFO<span class="w"> </span><span class="o">[</span>workflow<span class="w"> </s
 INFO<span class="w"> </span><span class="o">[</span>step<span class="w"> </span>step_b<span class="o">]</span><span class="w"> </span>start
 INFO<span class="w"> </span><span class="o">[</span>job<span class="w"> </span>step_b<span class="o">]</span><span class="w"> </span>Output<span class="w"> </span>of<span class="w"> </span>job<span class="w"> </span>will<span class="w"> </span>be<span class="w"> </span>cached<span class="w"> </span><span class="k">in</span><span class="w"> </span>/tmp/cachedir/609ea62e2a895d4dd4f7fd481ae06273
 INFO<span class="w"> </span><span class="o">[</span>job<span class="w"> </span>step_b<span class="o">]</span><span class="w"> </span>/tmp/cachedir/609ea62e2a895d4dd4f7fd481ae06273$<span class="w"> </span>revv<span class="w"> </span><span class="se">\</span>
-<span class="hll"><span class="w">    </span>/tmp/ltbb5ssa/stgcbb4d7f1-a11f-4df3-a582-af1f383d8d0d/stdout.txt<span class="w"> </span>&gt;<span class="w"> </span>/tmp/cachedir/609ea62e2a895d4dd4f7fd481ae06273/stdout.txt
+<span class="hll"><span class="w">    </span>/tmp/fb0u6peq/stgad69a82e-28c5-439d-bb4c-52fd7434ad69/stdout.txt<span class="w"> </span>&gt;<span class="w"> </span>/tmp/cachedir/609ea62e2a895d4dd4f7fd481ae06273/stdout.txt
 </span><span class="hll">ERROR<span class="w"> </span><span class="s1">&#39;revv&#39;</span><span class="w"> </span>not<span class="w"> </span>found:<span class="w"> </span><span class="o">[</span>Errno<span class="w"> </span><span class="m">2</span><span class="o">]</span><span class="w"> </span>No<span class="w"> </span>such<span class="w"> </span>file<span class="w"> </span>or<span class="w"> </span>directory:<span class="w"> </span><span class="s1">&#39;revv&#39;</span>
 </span><span class="hll">WARNING<span class="w"> </span><span class="o">[</span>job<span class="w"> </span>step_b<span class="o">]</span><span class="w"> </span>completed<span class="w"> </span>permanentFail
 </span>ERROR<span class="w"> </span><span class="o">[</span>step<span class="w"> </span>step_b<span class="o">]</span><span class="w"> </span>Output<span class="w"> </span>is<span class="w"> </span>missing<span class="w"> </span>expected<span class="w"> </span>field<span class="w"> </span>file:///home/runner/work/user_guide/user_guide/src/_includes/cwl/troubleshooting/troubleshooting-wf1.cwl#step_b/reversed_message
@@ -528,29 +528,29 @@ WARNING<span class="w"> </span><span class="o">[</span>step<span class="w"> </sp
 </span><span class="o">}</span>WARNING<span class="w"> </span>Final<span class="w"> </span>process<span class="w"> </span>status<span class="w"> </span>is<span class="w"> </span>permanentFail
 </pre></div>
 </div>
-<p><code class="docutils literal notranslate"><span class="pre">step_b</span></code> が存在しない <code class="docutils literal notranslate"><span class="pre">revv</span></code> コマンドの実行に失敗したため、ワークフローは <code class="docutils literal notranslate"><span class="pre">permanentFail</span></code> ステータスになっています。<code class="docutils literal notranslate"><span class="pre">step_a</span></code> は正常に実行され、その出力は <code class="docutils literal notranslate"><span class="pre">cachedir</span></code> にキャッシュされました。作成された中間ファイルを確認することができます：</p>
+<p><code class="docutils literal notranslate"><span class="pre">step_b</span></code> が存在しない <code class="docutils literal notranslate"><span class="pre">revv</span></code> コマンドの実行に失敗したため、ワークフローは <code class="docutils literal notranslate"><span class="pre">permanentFail</span></code> ステータスになっています。<code class="docutils literal notranslate"><span class="pre">step_a</span></code> は正常に実行され、その出力は <code class="docutils literal notranslate"><span class="pre">cachedir</span></code> にキャッシュされました。作成された中間ファイルを確認できます：</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>tree<span class="w"> </span>/tmp/cachedir
 /tmp/cachedir
 ├──<span class="w"> </span>3dfb3e8c82b46e9e2d650a90a303a16a
 <span class="hll">│<span class="w">   </span>└──<span class="w"> </span>stdout.txt
 </span>├──<span class="w"> </span>3dfb3e8c82b46e9e2d650a90a303a16a.status
+├──<span class="w"> </span>43uzrvga
 ├──<span class="w"> </span>609ea62e2a895d4dd4f7fd481ae06273
 │<span class="w">   </span>└──<span class="w"> </span>stdout.txt
 ├──<span class="w"> </span>609ea62e2a895d4dd4f7fd481ae06273.status
-├──<span class="w"> </span>9pukw0aw
-├──<span class="w"> </span>_5lcs4tw
-├──<span class="w"> </span>_n6uxl4z
-├──<span class="w"> </span>do1sv7ue
+├──<span class="w"> </span>629so9et
+├──<span class="w"> </span>86ambv53
+├──<span class="w"> </span>_953sv1n
+├──<span class="w"> </span>a3kcdo31
 ├──<span class="w"> </span>edb2bbda4f67d8bf15e1112f6a5a10cf
 │<span class="w">   </span>└──<span class="w"> </span>stdout.txt
 ├──<span class="w"> </span>edb2bbda4f67d8bf15e1112f6a5a10cf.status
-├──<span class="w"> </span>hdt49eit
-├──<span class="w"> </span>jpujlghi
-├──<span class="w"> </span>ktwzfdpi
-├──<span class="w"> </span>mq66l4iv
-├──<span class="w"> </span>q0vgfs70
-├──<span class="w"> </span>tg_impy6
-└──<span class="w"> </span>tve1xo3e
+├──<span class="w"> </span>g_q3zryu
+├──<span class="w"> </span>oxy9z5j5
+├──<span class="w"> </span>tgca11o8
+├──<span class="w"> </span>u8kkmgcv
+├──<span class="w"> </span>ul1hai7c
+└──<span class="w"> </span>yxzpmizj
 
 <span class="m">14</span><span class="w"> </span>directories,<span class="w"> </span><span class="m">6</span><span class="w"> </span>files
 </pre></div>
@@ -558,7 +558,7 @@ WARNING<span class="w"> </span><span class="o">[</span>step<span class="w"> </sp
 <p>各ワークフローのステップには、一意のID（ハッシュのような長い値）が付与されています。<code class="docutils literal notranslate"><span class="pre">${HASH}.status</span></code> ファイルは、ワークフローによって実行された各ステップのステータスを表示します。そして、<code class="docutils literal notranslate"><span class="pre">step_a</span></code> 出力ファイル<code class="docutils literal notranslate"><span class="pre">stdout.txt</span></code> は、上記のコマンドの出力で確認できます。</p>
 <p><code class="docutils literal notranslate"><span class="pre">step_b</span></code> が<code class="docutils literal notranslate"><span class="pre">rev</span></code> を実行するように、タイプミスを修正します（すなわち、<code class="docutils literal notranslate"><span class="pre">step_b</span></code> の<code class="docutils literal notranslate"><span class="pre">revv</span></code> を<code class="docutils literal notranslate"><span class="pre">rev</span></code> で置き換えます）。タイプミスを修正した後、前回と同じ引数で<code class="docutils literal notranslate"><span class="pre">cwltool</span></code> を実行すると、<code class="docutils literal notranslate"><span class="pre">cwltool</span></code> の出力に、<code class="docutils literal notranslate"><span class="pre">step_a</span></code> の出力が事前にキャッシュされていることと、<code class="docutils literal notranslate"><span class="pre">step_b</span></code> の出力の新しいキャッシュ・エントリーがあることがわかります。また、<code class="docutils literal notranslate"><span class="pre">step_b</span></code> のステータスは、今度は、成功であることに注目してください。</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>cwltool<span class="w"> </span>--cachedir<span class="w"> </span>/tmp/cachedir/<span class="w"> </span>troubleshooting-wf1-stepb-fixed.cwl
-INFO<span class="w"> </span>/opt/hostedtoolcache/Python/3.9.19/x64/bin/cwltool<span class="w"> </span><span class="m">3</span>.1.20240404144621
+INFO<span class="w"> </span>/opt/hostedtoolcache/Python/3.9.19/x64/bin/cwltool<span class="w"> </span><span class="m">3</span>.1.20240508115724
 INFO<span class="w"> </span>Resolved<span class="w"> </span><span class="s1">&#39;troubleshooting-wf1-stepb-fixed.cwl&#39;</span><span class="w"> </span>to<span class="w"> </span><span class="s1">&#39;file:///home/runner/work/user_guide/user_guide/src/_includes/cwl/troubleshooting/troubleshooting-wf1-stepb-fixed.cwl&#39;</span>
 INFO<span class="w"> </span><span class="o">[</span>workflow<span class="w"> </span><span class="o">]</span><span class="w"> </span>start
 INFO<span class="w"> </span><span class="o">[</span>workflow<span class="w"> </span><span class="o">]</span><span class="w"> </span>starting<span class="w"> </span>step<span class="w"> </span>step_a

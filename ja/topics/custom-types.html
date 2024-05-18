@@ -545,12 +545,7 @@ document.write(`
 <span class="w">      </span><span class="nt">prefix</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">--table-type</span>
 </pre></div>
 </div>
-<p>The reference to a custom type is a combination of the name of the file in which
-the object is defined (<code class="docutils literal notranslate"><span class="pre">biom-convert-table.yaml</span></code>) and the name of the object
-within that file (<code class="docutils literal notranslate"><span class="pre">table_type</span></code>) that defines the custom type. In this case the <code class="docutils literal notranslate"><span class="pre">symbols</span></code>
-array from the imported <code class="docutils literal notranslate"><span class="pre">biom-convert-table.yaml</span></code> file define the allowable table options.
-For example, in <code class="docutils literal notranslate"><span class="pre">custom-types.yml</span></code>, we pass <code class="docutils literal notranslate"><span class="pre">OTU</span> <span class="pre">table</span></code> as an <code class="docutils literal notranslate"><span class="pre">input</span></code> that
-tells the tool to create an OTU table in hdf5 format.</p>
+<p>カスタムタイプの参照は、そのオブジェクトが定義されているファイル名（<code class="docutils literal notranslate"><span class="pre">biom-convert-table.yaml</span></code> ）と、カスタムタイプを定義するそのファイル内のオブジェクト名（<code class="docutils literal notranslate"><span class="pre">table_type</span></code> ）を組み合わせたものです。この場合、インポートされた<code class="docutils literal notranslate"><span class="pre">biom-convert-table.yaml</span></code> ファイルからの<code class="docutils literal notranslate"><span class="pre">symbols</span></code> 配列が、許容されるテーブルオプションを定義します。例えば、<code class="docutils literal notranslate"><span class="pre">custom-types.yml</span></code> では、<code class="docutils literal notranslate"><span class="pre">OTU</span> <span class="pre">table</span></code> を<code class="docutils literal notranslate"><span class="pre">input</span></code> として渡し、hdf5 形式の OTU table を作成するようツールに指示しています。</p>
 <p>カスタムタイプを記述するYAMLファイルの内容を以下に示します：</p>
 <div class="literal-block-wrapper docutils container" id="biom-convert-table-yaml">
 <div class="code-block-caption"><span class="caption-text"><code class="docutils literal notranslate"><span class="pre">biom-convert-table.yaml</span></code></span><a class="headerlink" href="#biom-convert-table-yaml" title="Link to this code">#</a></div>

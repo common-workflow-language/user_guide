@@ -431,7 +431,7 @@ document.write(`
 <li><p><a class="reference internal" href="#how-can-i-set-booleans" id="id13">ブール値を設定するにはどうしたらよいでしょうか？</a></p></li>
 <li><p><a class="reference internal" href="#what-should-i-do-when-concatenating-strings-in-inputs" id="id14">入力された文字列を連結するにはどうしたら良いでしょうか？</a></p></li>
 <li><p><a class="reference internal" href="#i-get-cwltool-errors-due-to-filenames-with-space-characters-inside-what-should-i-do" id="id15"><code class="docutils literal notranslate"><span class="pre">cwltool</span></code> ファイル名の中に空白文字があるために起こるエラーにはどのように対処したらよいでしょうか？</a></p></li>
-<li><p><a class="reference internal" href="#what-should-i-do-when-i-get-cwl-parameter-reference-error-due-to-hyphen-in-an-input-identifier" id="id16">入力パラメータ名の中のハイフンがあるため、CWLパラメータリファレンスエラーが起こりました。どのようしたらよいでしょうか？</a></p></li>
+<li><p><a class="reference internal" href="#what-should-i-do-when-i-get-cwl-parameter-reference-error-due-to-hyphen-in-an-input-identifier" id="id16">入力パラメータ名の中にハイフンがあるため、CWL Parameter Reference エラーが起こりました。どのようしたらよいでしょうか？</a></p></li>
 <li><p><a class="reference internal" href="#how-do-i-use-cwl-and-cwltool-with-singularity" id="id17">SingularityをCWLとcwltoolで使うにはどうしたらよいでしょうか？</a></p></li>
 <li><p><a class="reference internal" href="#how-do-i-debug-the-javascript-in-my-cwl-tool" id="id18">CWLツールのJavaScriptをデバッグするには?</a></p></li>
 </ul>
@@ -505,7 +505,7 @@ document.write(`
 <section id="how-do-i-reference-a-local-script">
 <h2><a class="toc-backref" href="#id1" role="doc-backlink"><span class="section-number">4.4. </span>ローカルスクリプトを参照するにはどうしたらよいですか？</a><a class="headerlink" href="#how-do-i-reference-a-local-script" title="Link to this heading">#</a></h2>
 <p>ローカルスクリプトを参照するには、2つの方法があります：</p>
-<p>最初の方法は、スクリプトの入ったフォルダを 環境変数<code class="docutils literal notranslate"><span class="pre">PATH</span></code>に追加する方法です。これにより、<code class="docutils literal notranslate"><span class="pre">sh</span></code> や<code class="docutils literal notranslate"><span class="pre">bash</span></code> コマンドを使用せずに、シェルスクリプトを直接実行することができます。</p>
+<p>最初の方法は、スクリプトの入ったフォルダを 環境変数<code class="docutils literal notranslate"><span class="pre">PATH</span></code>に追加する方法です。これにより、<code class="docutils literal notranslate"><span class="pre">sh</span></code> や<code class="docutils literal notranslate"><span class="pre">bash</span></code> コマンドを使用せずに、シェルスクリプトを直接実行できます。</p>
 <p>まず、ファイルの先頭に <em>shebang</em> を追加します：</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="ch">#!/bin/bash</span>
 </pre></div>
@@ -523,7 +523,7 @@ document.write(`
 </pre></div>
 </div>
 <p>後で作ったものを共有したいときは、スクリプトをDockerコンテナに入れることができます。</p>
-<p>The second method involves including an input of <code class="docutils literal notranslate"><span class="pre">type:</span> <span class="pre">File</span></code> in the script itself:</p>
+<p>2つ目の方法は、<code class="docutils literal notranslate"><span class="pre">type:</span> <span class="pre">File</span></code> をスクリプト自体に含める方法です：</p>
 <div class="highlight-cwl notranslate"><div class="highlight"><pre><span></span><span class="nt">class</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">CommandLineTool</span>
 
 <span class="nt">inputs</span><span class="p">:</span>
@@ -589,13 +589,10 @@ document.write(`
 <p><a class="reference external" href="https://www.commonwl.org/v1.0/Workflow.html#MultipleInputFeatureRequirement"><code class="docutils literal notranslate"><span class="pre">MultipleInputFeatureRequirement</span></code></a> と <a class="reference external" href="https://www.commonwl.org/v1.0/Workflow.html#WorkflowStepInput"><code class="docutils literal notranslate"><span class="pre">linkMerge:</span> <span class="pre">merge_nested</span></code></a>を一緒に使います:</p>
 <blockquote>
 <div><p>merge_nested</p>
-<p>The input must be an array consisting of exactly one entry for each input link.
-If &quot;merge_nested&quot; is specified with a single link, the value from the link must be wrapped in a single-item list.</p>
+<p>入力は、各入力リンクに対して正確に1つのエントリで構成される配列でなければなりません。&quot;merge_nested&quot;が1つのリンクで指定された場合、リンクからの値は1つのアイテムリストでラップされなければなりません。</p>
 </div></blockquote>
 <p>つまり、&quot;まさにこれらのソースを要素とするリストを作成する&quot; ということです。</p>
-<p>Or in other words: if the destination is of type <code class="docutils literal notranslate"><span class="pre">File[]</span></code> (an array of <code class="docutils literal notranslate"><span class="pre">File</span></code>s)
-and the source is a single <code class="docutils literal notranslate"><span class="pre">File</span></code> then add <code class="docutils literal notranslate"><span class="pre">MultipleInputFeatureRequirement</span></code> to the Workflow level <code class="docutils literal notranslate"><span class="pre">requirements</span></code>
-and add <code class="docutils literal notranslate"><span class="pre">linkMerge:</span> <span class="pre">merge_nested</span></code> under the appropriate <code class="docutils literal notranslate"><span class="pre">in</span></code> entry of the destination step.</p>
+<p><code class="docutils literal notranslate"><span class="pre">File[]</span></code> (<code class="docutils literal notranslate"><span class="pre">File</span></code>の配列) で、ソースが単一の<code class="docutils literal notranslate"><span class="pre">File</span></code> の場合、<code class="docutils literal notranslate"><span class="pre">MultipleInputFeatureRequirement</span></code> をワークフローレベルの<code class="docutils literal notranslate"><span class="pre">requirements</span></code> に追加し、<code class="docutils literal notranslate"><span class="pre">linkMerge:</span> <span class="pre">merge_nested</span></code> を目的ステップのエントリの該当<code class="docutils literal notranslate"><span class="pre">in</span></code>に追加します。</p>
 <div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">cwlVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">v1.0</span>
 <span class="nt">class</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Workflow</span>
 
@@ -642,7 +639,7 @@ and add <code class="docutils literal notranslate"><span class="pre">linkMerge:<
 </section>
 <section id="how-do-i-specify-an-input-that-must-come-from-a-list-of-predefined-values-i-e-how-do-i-use-enum-inputs">
 <h2><a class="toc-backref" href="#id1" role="doc-backlink"><span class="section-number">4.9. </span>どうやってあらかじめ定義された値のリストから入力を指定できますか(つまり、入力でenumを使うにはどうしたらよいですか)?</a><a class="headerlink" href="#how-do-i-specify-an-input-that-must-come-from-a-list-of-predefined-values-i-e-how-do-i-use-enum-inputs" title="Link to this heading">#</a></h2>
-<p>For command line flags that require a specific input as the argument an enum type can be declared in CWL. <strong>Specifying null here is known as long form style. It does the same thing as the question mark on the other inputs.</strong></p>
+<p>引数として特定の入力を必要とするコマンドラインフラグについては、CWLで列挙型(enum type)を宣言することで実現できます。<strong>ここでnullを指定することは、ロングフォーム・スタイルとして知られています。他の入力のクエスチョンマークと同じ働きをします。</strong></p>
 <div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">Format</span><span class="p">:</span>
 <span class="w">  </span><span class="nt">type</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&quot;null&quot;</span>
@@ -662,7 +659,7 @@ and add <code class="docutils literal notranslate"><span class="pre">linkMerge:<
 </section>
 <section id="how-do-i-describe-dependent-or-exclusive-input-parameters-e-g-how-do-i-use-record-inputs">
 <h2><a class="toc-backref" href="#id1" role="doc-backlink"><span class="section-number">4.10. </span>依存的または排他的な入力パラメータはどのように記述すればよいですか（例えば、レコード入力をどのように使用すればよいですか）？</a><a class="headerlink" href="#how-do-i-describe-dependent-or-exclusive-input-parameters-e-g-how-do-i-use-record-inputs" title="Link to this heading">#</a></h2>
-<p>For commandline flags that are either <strong>mutually exclusive</strong> or <strong>dependent</strong> a special record type can be defined. You can also specify null here to create optional inputs.</p>
+<p><strong>相互排他的</strong> または<strong>依存的</strong> のいずれかのコマンドラインフラグについては、特別なレコードタイプを定義できます。また、ここにnullを指定することで、オプションの入力を作成できます。</p>
 <div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="c1">#Using record inputs to create mutually exclusive inputs</span>
 
 <span class="w">  </span><span class="nt">Strand</span><span class="p">:</span>
@@ -716,7 +713,7 @@ and add <code class="docutils literal notranslate"><span class="pre">linkMerge:<
 </section>
 <section id="how-do-i-set-mutually-exclusive-parameters">
 <h2><a class="toc-backref" href="#id1" role="doc-backlink"><span class="section-number">4.11. </span>相互に排他的なパラメータを設定するにはどうしたらよいでしょうか?</a><a class="headerlink" href="#how-do-i-set-mutually-exclusive-parameters" title="Link to this heading">#</a></h2>
-<p>To properly set fields in a record input type, you need to pass a dictionary to the input to properly set the parameters. This is done by using inline JavaScript and returning the dictionary with the key of the field you want to set. The source field is set to indicate the input from the workflow to be used as the value.</p>
+<p>レコード入力タイプのフィールドを適切に設定するには、入力に辞書を渡してパラメータを適切に設定する必要があります。これは、インラインJavaScriptを使用し、設定したいフィールドのキーを持つ辞書を返すことで実現します。sourceフィールドには、値として使用するワークフローからの入力を示すものが設定されます。</p>
 <div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">steps</span><span class="p">:</span>
 
 <span class="w">  </span><span class="nt">build_hisat2_index</span><span class="p">:</span>
@@ -737,7 +734,7 @@ and add <code class="docutils literal notranslate"><span class="pre">linkMerge:<
 <h2><a class="toc-backref" href="#id1" role="doc-backlink"><span class="section-number">4.12. </span>ブール値を設定するにはどうしたらよいでしょうか？</a><a class="headerlink" href="#how-can-i-set-booleans" title="Link to this heading">#</a></h2>
 <p>デフォルトフィールドを使って、これらを設定します</p>
 <div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">input</span><span class="p">:</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">default:true</span>
+<span class="w">  </span><span class="nt">default</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 </pre></div>
 </div>
 </section>
@@ -762,7 +759,7 @@ and add <code class="docutils literal notranslate"><span class="pre">linkMerge:<
 <p>これらの危険な文字を避けられない場合は、<code class="docutils literal notranslate"><span class="pre">--relax-path-checks</span></code> を<code class="docutils literal notranslate"><span class="pre">cwltool</span></code> に渡してください。</p>
 </section>
 <section id="what-should-i-do-when-i-get-cwl-parameter-reference-error-due-to-hyphen-in-an-input-identifier">
-<h2><a class="toc-backref" href="#id1" role="doc-backlink"><span class="section-number">4.15. </span>入力パラメータ名の中のハイフンがあるため、CWLパラメータリファレンスエラーが起こりました。どのようしたらよいでしょうか？</a><a class="headerlink" href="#what-should-i-do-when-i-get-cwl-parameter-reference-error-due-to-hyphen-in-an-input-identifier" title="Link to this heading">#</a></h2>
+<h2><a class="toc-backref" href="#id1" role="doc-backlink"><span class="section-number">4.15. </span>入力パラメータ名の中にハイフンがあるため、CWL Parameter Reference エラーが起こりました。どのようしたらよいでしょうか？</a><a class="headerlink" href="#what-should-i-do-when-i-get-cwl-parameter-reference-error-due-to-hyphen-in-an-input-identifier" title="Link to this heading">#</a></h2>
 <p><code class="docutils literal notranslate"><span class="pre">cwltool</span> <span class="pre">--validate</span></code> の結果に問題ない場合</p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>cwltool<span class="w"> </span>--validate<span class="w"> </span>cwl/qiime.cwl
 <span class="go">INFO /usr/local/bin/cwltool 1.0.20190831161204</span>
@@ -813,7 +810,7 @@ and add <code class="docutils literal notranslate"><span class="pre">linkMerge:<
 <span class="w">      </span><span class="l l-Scalar l-Scalar-Plain"># ^ changed here</span>
 </pre></div>
 </div>
-<p>入力識別子を変更することができない場合は、別のCWLパラメータリファレンス構文を使用することができます：</p>
+<p>入力識別子を変更することができない場合は、別のCWLパラメータリファレンス構文を使用できます：</p>
 <div class="highlight-cwl notranslate"><div class="highlight"><pre><span></span><span class="nt">valueFrom</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">$(inputs[&quot;sample-input&quot;])</span>
 </pre></div>
 </div>
@@ -825,10 +822,7 @@ and add <code class="docutils literal notranslate"><span class="pre">linkMerge:<
 </section>
 <section id="how-do-i-debug-the-javascript-in-my-cwl-tool">
 <h2><a class="toc-backref" href="#id1" role="doc-backlink"><span class="section-number">4.17. </span>CWLツールのJavaScriptをデバッグするには?</a><a class="headerlink" href="#how-do-i-debug-the-javascript-in-my-cwl-tool" title="Link to this heading">#</a></h2>
-<p>You can use the <code>–js-console</code> option of <code>cwltool</code>, or you can try
-creating a JavaScript or TypeScript project for your code, and load it
-using <code>expressionLib</code>, e.g.: <a href="https://github.com/common-workflow-language/common-workflow-language/blob/master/v1.0/v1.0/template-tool.cwl#L6-L8">
-https://github.com/common-workflow-language/common-workflow-language/blob/master/v1.0/v1.0/template-tool.cwl#L6-L8</a></dd></p>
+<p><code>cwltool</code> の <code>–js-console</code> オプションを使用するか、または、あなたのコードのためのJavaScript または TypeScript プロジェクトを作成し、<code>expressionLib</code> を使用して読み込んでみてください（例：<a href="https://github.com/common-workflow-language/common-workflow-language/blob/master/v1.0/v1.0/template-tool.cwl#L6-L8"> https://github.com/common-workflow-language/common-workflow-language/blob/master/v1.0/v1.0/template-tool.cwl#L6-L8</a></dd></p>
 </section>
 </section>
 
@@ -892,7 +886,7 @@ https://github.com/common-workflow-language/common-workflow-language/blob/master
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#how-can-i-set-booleans">4.12. ブール値を設定するにはどうしたらよいでしょうか？</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-should-i-do-when-concatenating-strings-in-inputs">4.13. 入力された文字列を連結するにはどうしたら良いでしょうか？</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#i-get-cwltool-errors-due-to-filenames-with-space-characters-inside-what-should-i-do">4.14. <code class="docutils literal notranslate"><span class="pre">cwltool</span></code> ファイル名の中に空白文字があるために起こるエラーにはどのように対処したらよいでしょうか？</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-should-i-do-when-i-get-cwl-parameter-reference-error-due-to-hyphen-in-an-input-identifier">4.15. 入力パラメータ名の中のハイフンがあるため、CWLパラメータリファレンスエラーが起こりました。どのようしたらよいでしょうか？</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-should-i-do-when-i-get-cwl-parameter-reference-error-due-to-hyphen-in-an-input-identifier">4.15. 入力パラメータ名の中にハイフンがあるため、CWL Parameter Reference エラーが起こりました。どのようしたらよいでしょうか？</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#how-do-i-use-cwl-and-cwltool-with-singularity">4.16. SingularityをCWLとcwltoolで使うにはどうしたらよいでしょうか？</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#how-do-i-debug-the-javascript-in-my-cwl-tool">4.17. CWLツールのJavaScriptをデバッグするには?</a></li>
 </ul>

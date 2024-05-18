@@ -447,8 +447,8 @@ document.write(`
                   
   <section id="file-formats">
 <h1><span class="section-number">2.17. </span>ファイルフォーマット<a class="headerlink" href="#file-formats" title="Link to this heading">#</a></h1>
-<p>ToolsやWorkflowsは、<a class="reference external" href="https://w3id.org/cwl/CommandLineTool.html#File"><code class="docutils literal notranslate"><span class="pre">File</span></code></a> 型を入力として受け取り、出力として生成することができます。また、<a class="reference external" href="https://w3id.org/cwl/CommandLineTool.html#File"><code class="docutils literal notranslate"><span class="pre">File</span></code></a> タイプのフォーマットを示すことをお勧めします。これにより、ツールの使用方法を他の人に示すことができ、また、パラメータファイルを作成する際に簡単な型チェックを行うことができるようになります。</p>
-<p>ファイルフォーマットについては、既存のオントロジーを参照すること（例ではEDAM）、所属機関のローカルオントロジーを参照すること、またはツールを他者と共有する前に迅速に開発するために最初はファイルフォーマットを追加しないことを推奨しています。既存の<a class="reference external" href="https://www.iana.org/assignments/media-types/media-types.xhtml">IANAファイルフォーマット一覧</a>と<a class="reference external" href="https://www.ebi.ac.uk/ols/ontologies/edam/terms?iri=http%3A%2F%2Fedamontology.org%2Fformat_1915">EDAMファイルフォーマット一覧</a>は、それぞれのウェブサイトで参照することができます。</p>
+<p>ToolsやWorkflowsは、<a class="reference external" href="https://w3id.org/cwl/CommandLineTool.html#File"><code class="docutils literal notranslate"><span class="pre">File</span></code></a> 型を入力として受け取り、出力として生成できます。また、<a class="reference external" href="https://w3id.org/cwl/CommandLineTool.html#File"><code class="docutils literal notranslate"><span class="pre">File</span></code></a> タイプのフォーマットを示すことをお勧めします。これにより、ツールの使用方法を他の人に示すことができ、パラメータファイルを作成する際に簡単な型チェックを行うことができるようになります。</p>
+<p>ファイルフォーマットについては、既存のオントロジーを参照すること（例ではEDAM）、所属機関のローカルオントロジーを参照すること、またはツールを他者と共有する前に迅速に開発するために最初はファイルフォーマットを追加しないことを推奨しています。既存の<a class="reference external" href="https://www.iana.org/assignments/media-types/media-types.xhtml">IANAファイルフォーマット一覧</a>と<a class="reference external" href="https://www.ebi.ac.uk/ols/ontologies/edam/terms?iri=http%3A%2F%2Fedamontology.org%2Fformat_1915">EDAMファイルフォーマット一覧</a>は、それぞれのウェブサイトで参照できます。</p>
 <p>次のチュートリアルで、<code class="docutils literal notranslate"><span class="pre">$namespaces</span></code> と<code class="docutils literal notranslate"><span class="pre">$schemas</span></code> の部分をより詳しく説明しますので、今は気にしないでください。</p>
 <p>なお、さらなる利点として<code class="docutils literal notranslate"><span class="pre">cwltool</span></code> は、ファイル形式に基づく基本的な推論を行い、明らかな不一致があるようであれば警告を発します。</p>
 <div class="literal-block-wrapper docutils container" id="metadata-example-cwl">
@@ -490,10 +490,7 @@ document.write(`
 </div>
 <section id="sample-parameter-files">
 <h2><span class="section-number">2.17.1. </span>サンプルパラメーターファイル<a class="headerlink" href="#sample-parameter-files" title="Link to this heading">#</a></h2>
-<p>Below is an example of a parameter file for the example above. We encourage
-checking in working examples of parameter files for your tool. This allows
-others to quickly work with your tool, starting from a &quot;known good&quot;
-parameterization.</p>
+<p>以下は、上記の例のパラメータファイルの例です。あなたのツールのパラメータファイルの実例をチェックすることをお勧めします。これにより、他の人が「既知の良い」パラメータ化から始めて、あなたのツールで素早く作業できます。</p>
 <div class="literal-block-wrapper docutils container" id="sample-yml">
 <div class="code-block-caption"><span class="caption-text"><code class="docutils literal notranslate"><span class="pre">sample.yml</span></code></span><a class="headerlink" href="#sample-yml" title="Link to this code">#</a></div>
 <div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">aligned_sequences</span><span class="p">:</span>
@@ -503,25 +500,24 @@ parameterization.</p>
 </pre></div>
 </div>
 </div>
-<p><em><strong>Note:</strong></em> To follow the example below, you need to download the example input file, <em>file-formats.bam</em>. The file is available from <a class="github reference external" href="https://github.com/common-workflow-language/user_guide/raw/main/src/_includes/cwl/file-formats/file-formats.bam">common-workflow-language/user_guide</a>
-and can be downloaded e.g. via <code class="docutils literal notranslate"><span class="pre">wget</span></code>:</p>
+<p><em><strong>注：</strong></em> 以下の例に実行するには、例の入力ファイル、<em>file-formats.bam</em> をダウンロードする必要があります。このファイルは<a class="github reference external" href="https://github.com/common-workflow-language/user_guide/raw/main/src/_includes/cwl/file-formats/file-formats.bam">common-workflow-language/user_guide</a> から入手可能で、<code class="docutils literal notranslate"><span class="pre">wget</span></code> などでダウンロードできます：</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ wget https://github.com/common-workflow-language/user_guide/raw/main/src/_includes/cwl/file-formats/file-formats.bam
 </pre></div>
 </div>
 <p>ここで、コマンドラインにツール定義と入力オブジェクトを指定して、<code class="docutils literal notranslate"><span class="pre">cwltool</span></code> を起動します：</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>cwltool<span class="w"> </span>metadata_example.cwl<span class="w"> </span>sample.yml
-INFO<span class="w"> </span>/opt/hostedtoolcache/Python/3.9.19/x64/bin/cwltool<span class="w"> </span><span class="m">3</span>.1.20240404144621
+INFO<span class="w"> </span>/opt/hostedtoolcache/Python/3.9.19/x64/bin/cwltool<span class="w"> </span><span class="m">3</span>.1.20240508115724
 INFO<span class="w"> </span>Resolved<span class="w"> </span><span class="s1">&#39;metadata_example.cwl&#39;</span><span class="w"> </span>to<span class="w"> </span><span class="s1">&#39;file:///home/runner/work/user_guide/user_guide/src/_includes/cwl/file-formats/metadata_example.cwl&#39;</span>
-INFO<span class="w"> </span><span class="o">[</span>job<span class="w"> </span>metadata_example.cwl<span class="o">]</span><span class="w"> </span>/tmp/ju720eqm$<span class="w"> </span>wc<span class="w"> </span><span class="se">\</span>
+INFO<span class="w"> </span><span class="o">[</span>job<span class="w"> </span>metadata_example.cwl<span class="o">]</span><span class="w"> </span>/tmp/dnlt7lfj$<span class="w"> </span>wc<span class="w"> </span><span class="se">\</span>
 <span class="w">    </span>-l<span class="w"> </span><span class="se">\</span>
-<span class="w">    </span>/tmp/_myw_e7y/stgc2137312-a658-463b-a66a-2969b172dd8e/file-formats.bam<span class="w"> </span>&gt;<span class="w"> </span>/tmp/ju720eqm/output.txt
+<span class="w">    </span>/tmp/ulie7rv9/stgad7ee7ec-5f40-40b4-9bcc-b77f51c04274/file-formats.bam<span class="w"> </span>&gt;<span class="w"> </span>/tmp/dnlt7lfj/output.txt
 INFO<span class="w"> </span><span class="o">[</span>job<span class="w"> </span>metadata_example.cwl<span class="o">]</span><span class="w"> </span>completed<span class="w"> </span>success
 <span class="o">{</span>
 <span class="w">    </span><span class="s2">&quot;report&quot;</span>:<span class="w"> </span><span class="o">{</span>
 <span class="w">        </span><span class="s2">&quot;location&quot;</span>:<span class="w"> </span><span class="s2">&quot;file:///home/runner/work/user_guide/user_guide/src/_includes/cwl/file-formats/output.txt&quot;</span>,
 <span class="w">        </span><span class="s2">&quot;basename&quot;</span>:<span class="w"> </span><span class="s2">&quot;output.txt&quot;</span>,
 <span class="w">        </span><span class="s2">&quot;class&quot;</span>:<span class="w"> </span><span class="s2">&quot;File&quot;</span>,
-<span class="w">        </span><span class="s2">&quot;checksum&quot;</span>:<span class="w"> </span><span class="s2">&quot;sha1</span><span class="nv">$b61a80e44eb641ed56ef4b531fa74c0b018ca03d</span><span class="s2">&quot;</span>,
+<span class="w">        </span><span class="s2">&quot;checksum&quot;</span>:<span class="w"> </span><span class="s2">&quot;sha1</span><span class="nv">$835</span><span class="s2">f7bf2c539c75934dc1c8f29c40341acba442e&quot;</span>,
 <span class="w">        </span><span class="s2">&quot;size&quot;</span>:<span class="w"> </span><span class="m">77</span>,
 <span class="w">        </span><span class="s2">&quot;format&quot;</span>:<span class="w"> </span><span class="s2">&quot;http://edamontology.org/format_1964&quot;</span>,
 <span class="w">        </span><span class="s2">&quot;path&quot;</span>:<span class="w"> </span><span class="s2">&quot;/home/runner/work/user_guide/user_guide/src/_includes/cwl/file-formats/output.txt&quot;</span>

@@ -344,7 +344,7 @@ steps:
 These can be set by using the default field
 ```yaml
 input:
-  default:true
+  default: true
 ```
 ## What should I do when concatenating strings in inputs?
 

@@ -448,7 +448,7 @@ document.write(`
   <section id="operations">
 <h1><span class="section-number">2.11. </span>Operations<a class="headerlink" href="#operations" title="Link to this heading">#</a></h1>
 <p>Operationは、Workflow、CommandLineTool、ExpressionToolと同様に、CWL Processの一種です。Workflowのステップで、入力と出力を指定しますが、実行するのに十分な情報を提供しません。</p>
-<p>CWLランナーにワークフローを送信する前に、開発中のワークフローを可視化することができます：</p>
+<p>CWL runnerでワークフローを実行する前に、開発中のワークフローを可視化できます：</p>
 <div class="literal-block-wrapper docutils container" id="operations-cwl">
 <div class="code-block-caption"><span class="caption-text"><code class="docutils literal notranslate"><span class="pre">operations.cwl</span></code></span><a class="headerlink" href="#operations-cwl" title="Link to this code">#</a></div>
 <div class="highlight-cwl notranslate"><div class="highlight"><pre><span></span><span class="nt">cwlVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">v1.2</span>
@@ -481,9 +481,9 @@ document.write(`
 </pre></div>
 </div>
 </div>
-<p>ワークフローの<code class="docutils literal notranslate"><span class="pre">uppercase</span></code> ステップは Operation です。CommandLineToolやExpressionToolのように使用することができます。また、CWL Viewerや<code class="docutils literal notranslate"><span class="pre">cwltool</span></code> を使って可視化することもできます：</p>
+<p>ワークフローの<code class="docutils literal notranslate"><span class="pre">uppercase</span></code> ステップは Operation です。CommandLineToolやExpressionToolのように使用できます。また、CWL Viewerや<code class="docutils literal notranslate"><span class="pre">cwltool</span></code> を使って可視化できます：</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>cwltool<span class="w"> </span>--print-dot<span class="w"> </span>operations.cwl
-INFO<span class="w"> </span>/opt/hostedtoolcache/Python/3.9.19/x64/bin/cwltool<span class="w"> </span><span class="m">3</span>.1.20240404144621
+INFO<span class="w"> </span>/opt/hostedtoolcache/Python/3.9.19/x64/bin/cwltool<span class="w"> </span><span class="m">3</span>.1.20240508115724
 INFO<span class="w"> </span>Resolved<span class="w"> </span><span class="s1">&#39;operations.cwl&#39;</span><span class="w"> </span>to<span class="w"> </span><span class="s1">&#39;file:///home/runner/work/user_guide/user_guide/src/_includes/cwl/operations/operations.cwl&#39;</span>
 digraph<span class="w"> </span>G<span class="w"> </span><span class="o">{</span>
 <span class="nv">bgcolor</span><span class="o">=</span><span class="s2">&quot;#eeeeee&quot;</span><span class="p">;</span>
@@ -541,7 +541,7 @@ style=dashed;
 <div class="literal-block-wrapper docutils container" id="operations-output-error-cwltool">
 <div class="code-block-caption"><span class="caption-text"><code class="docutils literal notranslate"><span class="pre">cwltool</span></code> は、どうやってoperationsを実行するかを知りません</span><a class="headerlink" href="#operations-output-error-cwltool" title="Link to this code">#</a></div>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>cwltool<span class="w"> </span>operations.cwl<span class="w"> </span>--message<span class="w"> </span>Hello
-INFO<span class="w"> </span>/opt/hostedtoolcache/Python/3.9.19/x64/bin/cwltool<span class="w"> </span><span class="m">3</span>.1.20240404144621
+INFO<span class="w"> </span>/opt/hostedtoolcache/Python/3.9.19/x64/bin/cwltool<span class="w"> </span><span class="m">3</span>.1.20240508115724
 INFO<span class="w"> </span>Resolved<span class="w"> </span><span class="s1">&#39;operations.cwl&#39;</span><span class="w"> </span>to<span class="w"> </span><span class="s1">&#39;file:///home/runner/work/user_guide/user_guide/src/_includes/cwl/operations/operations.cwl&#39;</span>
 ERROR<span class="w"> </span>Workflow<span class="w"> </span>error,<span class="w"> </span>try<span class="w"> </span>again<span class="w"> </span>with<span class="w"> </span>--debug<span class="w"> </span><span class="k">for</span><span class="w"> </span>more<span class="w"> </span>information:
 operations.cwl:19:7:<span class="w"> </span>Workflow<span class="w"> </span>has<span class="w"> </span>unrunnable<span class="w"> </span>abstract<span class="w"> </span>Operation
@@ -550,9 +550,7 @@ operations.cwl:19:7:<span class="w"> </span>Workflow<span class="w"> </span>has<
 </div>
 <div class="admonition note">
 <p class="admonition-title">注釈</p>
-<p>CWL runners may come up with ways to bind operations to concrete steps.
-A CWL runner could, for instance, use abstract operations with ID's that
-correspond to steps executed by a different workflow engine.</p>
+<p>CWL runnerは、operations を具体的なステップに結びつけるかもしれません。例えば、CWL runnerは、ワークフローエンジンで実行される異なるステップに対応するIDを持つ抽象的な operation を使用できます。</p>
 </div>
 </section>
 

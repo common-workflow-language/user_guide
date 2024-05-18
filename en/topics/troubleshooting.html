@@ -515,7 +515,7 @@ fails.</p>
 <p>Let’s execute this workflow with <code class="docutils literal notranslate"><span class="pre">/tmp/cachedir/</span></code> as the <code class="docutils literal notranslate"><span class="pre">--cachedir</span></code> value (<code class="docutils literal notranslate"><span class="pre">cwltool</span></code> will
 create the directory for you if it does not exist already):</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>cwltool<span class="w"> </span>--cachedir<span class="w"> </span>/tmp/cachedir/<span class="w"> </span>troubleshooting-wf1.cwl
-INFO<span class="w"> </span>/opt/hostedtoolcache/Python/3.9.19/x64/bin/cwltool<span class="w"> </span><span class="m">3</span>.1.20240404144621
+INFO<span class="w"> </span>/opt/hostedtoolcache/Python/3.9.19/x64/bin/cwltool<span class="w"> </span><span class="m">3</span>.1.20240508115724
 INFO<span class="w"> </span>Resolved<span class="w"> </span><span class="s1">&#39;troubleshooting-wf1.cwl&#39;</span><span class="w"> </span>to<span class="w"> </span><span class="s1">&#39;file:///home/runner/work/user_guide/user_guide/src/_includes/cwl/troubleshooting/troubleshooting-wf1.cwl&#39;</span>
 INFO<span class="w"> </span><span class="o">[</span>workflow<span class="w"> </span><span class="o">]</span><span class="w"> </span>start
 INFO<span class="w"> </span><span class="o">[</span>workflow<span class="w"> </span><span class="o">]</span><span class="w"> </span>starting<span class="w"> </span>step<span class="w"> </span>step_a
@@ -526,7 +526,7 @@ INFO<span class="w"> </span><span class="o">[</span>workflow<span class="w"> </s
 INFO<span class="w"> </span><span class="o">[</span>step<span class="w"> </span>step_b<span class="o">]</span><span class="w"> </span>start
 INFO<span class="w"> </span><span class="o">[</span>job<span class="w"> </span>step_b<span class="o">]</span><span class="w"> </span>Output<span class="w"> </span>of<span class="w"> </span>job<span class="w"> </span>will<span class="w"> </span>be<span class="w"> </span>cached<span class="w"> </span><span class="k">in</span><span class="w"> </span>/tmp/cachedir/609ea62e2a895d4dd4f7fd481ae06273
 INFO<span class="w"> </span><span class="o">[</span>job<span class="w"> </span>step_b<span class="o">]</span><span class="w"> </span>/tmp/cachedir/609ea62e2a895d4dd4f7fd481ae06273$<span class="w"> </span>revv<span class="w"> </span><span class="se">\</span>
-<span class="hll"><span class="w">    </span>/tmp/pwsx0_m8/stg943daafa-9fc2-4cc6-ba03-d406409a25f6/stdout.txt<span class="w"> </span>&gt;<span class="w"> </span>/tmp/cachedir/609ea62e2a895d4dd4f7fd481ae06273/stdout.txt
+<span class="hll"><span class="w">    </span>/tmp/h3omixy1/stg761e6d2a-123a-4a31-9a8b-e50b1fc9b1d8/stdout.txt<span class="w"> </span>&gt;<span class="w"> </span>/tmp/cachedir/609ea62e2a895d4dd4f7fd481ae06273/stdout.txt
 </span><span class="hll">ERROR<span class="w"> </span><span class="s1">&#39;revv&#39;</span><span class="w"> </span>not<span class="w"> </span>found:<span class="w"> </span><span class="o">[</span>Errno<span class="w"> </span><span class="m">2</span><span class="o">]</span><span class="w"> </span>No<span class="w"> </span>such<span class="w"> </span>file<span class="w"> </span>or<span class="w"> </span>directory:<span class="w"> </span><span class="s1">&#39;revv&#39;</span>
 </span><span class="hll">WARNING<span class="w"> </span><span class="o">[</span>job<span class="w"> </span>step_b<span class="o">]</span><span class="w"> </span>completed<span class="w"> </span>permanentFail
 </span>ERROR<span class="w"> </span><span class="o">[</span>step<span class="w"> </span>step_b<span class="o">]</span><span class="w"> </span>Output<span class="w"> </span>is<span class="w"> </span>missing<span class="w"> </span>expected<span class="w"> </span>field<span class="w"> </span>file:///home/runner/work/user_guide/user_guide/src/_includes/cwl/troubleshooting/troubleshooting-wf1.cwl#step_b/reversed_message
@@ -549,12 +549,12 @@ created:</p>
 ├──<span class="w"> </span>609ea62e2a895d4dd4f7fd481ae06273
 │<span class="w">   </span>└──<span class="w"> </span>stdout.txt
 ├──<span class="w"> </span>609ea62e2a895d4dd4f7fd481ae06273.status
-├──<span class="w"> </span>do1sv7ue
+├──<span class="w"> </span>629so9et
 ├──<span class="w"> </span>edb2bbda4f67d8bf15e1112f6a5a10cf
 │<span class="w">   </span>└──<span class="w"> </span>stdout.txt
 ├──<span class="w"> </span>edb2bbda4f67d8bf15e1112f6a5a10cf.status
-├──<span class="w"> </span>jpujlghi
-└──<span class="w"> </span>tg_impy6
+├──<span class="w"> </span>g_q3zryu
+└──<span class="w"> </span>ul1hai7c
 
 <span class="m">6</span><span class="w"> </span>directories,<span class="w"> </span><span class="m">6</span><span class="w"> </span>files
 </pre></div>
@@ -568,7 +568,7 @@ as the previous time, note that now <code class="docutils literal notranslate"><
 pre-cached outputs for <code class="docutils literal notranslate"><span class="pre">step_a</span></code>, and about a new cache entry for the output of <code class="docutils literal notranslate"><span class="pre">step_b</span></code>.
 Also note that the status of <code class="docutils literal notranslate"><span class="pre">step_b</span></code> is now of success.</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>cwltool<span class="w"> </span>--cachedir<span class="w"> </span>/tmp/cachedir/<span class="w"> </span>troubleshooting-wf1-stepb-fixed.cwl
-INFO<span class="w"> </span>/opt/hostedtoolcache/Python/3.9.19/x64/bin/cwltool<span class="w"> </span><span class="m">3</span>.1.20240404144621
+INFO<span class="w"> </span>/opt/hostedtoolcache/Python/3.9.19/x64/bin/cwltool<span class="w"> </span><span class="m">3</span>.1.20240508115724
 INFO<span class="w"> </span>Resolved<span class="w"> </span><span class="s1">&#39;troubleshooting-wf1-stepb-fixed.cwl&#39;</span><span class="w"> </span>to<span class="w"> </span><span class="s1">&#39;file:///home/runner/work/user_guide/user_guide/src/_includes/cwl/troubleshooting/troubleshooting-wf1-stepb-fixed.cwl&#39;</span>
 INFO<span class="w"> </span><span class="o">[</span>workflow<span class="w"> </span><span class="o">]</span><span class="w"> </span>start
 INFO<span class="w"> </span><span class="o">[</span>workflow<span class="w"> </span><span class="o">]</span><span class="w"> </span>starting<span class="w"> </span>step<span class="w"> </span>step_a

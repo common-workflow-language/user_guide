@@ -484,9 +484,9 @@ document.write(`
 <div class="literal-block-wrapper docutils container" id="running-hello-world-cwl-with-cwltool">
 <div class="code-block-caption"><span class="caption-text">使用 <code class="docutils literal notranslate"><span class="pre">cwltool</span></code> 运行 <code class="docutils literal notranslate"><span class="pre">hello_world.cwl</span></code>.</span><a class="headerlink" href="#running-hello-world-cwl-with-cwltool" title="Link to this code">#</a></div>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>cwltool<span class="w"> </span>hello_world.cwl
-INFO<span class="w"> </span>/opt/hostedtoolcache/Python/3.9.19/x64/bin/cwltool<span class="w"> </span><span class="m">3</span>.1.20240404144621
+INFO<span class="w"> </span>/opt/hostedtoolcache/Python/3.9.19/x64/bin/cwltool<span class="w"> </span><span class="m">3</span>.1.20240508115724
 INFO<span class="w"> </span>Resolved<span class="w"> </span><span class="s1">&#39;hello_world.cwl&#39;</span><span class="w"> </span>to<span class="w"> </span><span class="s1">&#39;file:///home/runner/work/user_guide/user_guide/src/_includes/cwl/hello_world.cwl&#39;</span>
-INFO<span class="w"> </span><span class="o">[</span>job<span class="w"> </span>hello_world.cwl<span class="o">]</span><span class="w"> </span>/tmp/7icmgmvy$<span class="w"> </span><span class="nb">echo</span><span class="w"> </span><span class="se">\</span>
+INFO<span class="w"> </span><span class="o">[</span>job<span class="w"> </span>hello_world.cwl<span class="o">]</span><span class="w"> </span>/tmp/neh61eyn$<span class="w"> </span><span class="nb">echo</span><span class="w"> </span><span class="se">\</span>
 <span class="w">    </span><span class="s1">&#39;Hello World&#39;</span>
 Hello<span class="w"> </span>World
 INFO<span class="w"> </span><span class="o">[</span>job<span class="w"> </span>hello_world.cwl<span class="o">]</span><span class="w"> </span>completed<span class="w"> </span>success
@@ -498,9 +498,9 @@ INFO<span class="w"> </span><span class="o">[</span>job<span class="w"> </span>h
 <div class="literal-block-wrapper docutils container" id="running-hello-world-cwl-with-cwltool-passing-an-input-parameter">
 <div class="code-block-caption"><span class="caption-text">向 <code class="docutils literal notranslate"><span class="pre">cwltool</span></code> 传递输入参数值运行 <code class="docutils literal notranslate"><span class="pre">hello_world.cwl</span></code>.</span><a class="headerlink" href="#running-hello-world-cwl-with-cwltool-passing-an-input-parameter" title="Link to this code">#</a></div>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>cwltool<span class="w"> </span>hello_world.cwl<span class="w"> </span>--message<span class="o">=</span><span class="s2">&quot;Hola mundo&quot;</span>
-INFO<span class="w"> </span>/opt/hostedtoolcache/Python/3.9.19/x64/bin/cwltool<span class="w"> </span><span class="m">3</span>.1.20240404144621
+INFO<span class="w"> </span>/opt/hostedtoolcache/Python/3.9.19/x64/bin/cwltool<span class="w"> </span><span class="m">3</span>.1.20240508115724
 INFO<span class="w"> </span>Resolved<span class="w"> </span><span class="s1">&#39;hello_world.cwl&#39;</span><span class="w"> </span>to<span class="w"> </span><span class="s1">&#39;file:///home/runner/work/user_guide/user_guide/src/_includes/cwl/hello_world.cwl&#39;</span>
-INFO<span class="w"> </span><span class="o">[</span>job<span class="w"> </span>hello_world.cwl<span class="o">]</span><span class="w"> </span>/tmp/w8byza1j$<span class="w"> </span><span class="nb">echo</span><span class="w"> </span><span class="se">\</span>
+INFO<span class="w"> </span><span class="o">[</span>job<span class="w"> </span>hello_world.cwl<span class="o">]</span><span class="w"> </span>/tmp/4gf6c3oy$<span class="w"> </span><span class="nb">echo</span><span class="w"> </span><span class="se">\</span>
 <span class="w">    </span><span class="s1">&#39;Hola mundo&#39;</span>
 Hola<span class="w"> </span>mundo
 INFO<span class="w"> </span><span class="o">[</span>job<span class="w"> </span>hello_world.cwl<span class="o">]</span><span class="w"> </span>completed<span class="w"> </span>success
@@ -521,9 +521,9 @@ INFO<span class="w"> </span><span class="o">[</span>job<span class="w"> </span>h
 <div class="literal-block-wrapper docutils container" id="passing-an-inputs-object-file-to-cwltool">
 <div class="code-block-caption"><span class="caption-text">将输入对象文件传递给 <code class="docutils literal notranslate"><span class="pre">cwltool</span></code>.</span><a class="headerlink" href="#passing-an-inputs-object-file-to-cwltool" title="Link to this code">#</a></div>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>cwltool<span class="w"> </span>hello_world.cwl<span class="w"> </span>hello_world-job.json
-INFO<span class="w"> </span>/opt/hostedtoolcache/Python/3.9.19/x64/bin/cwltool<span class="w"> </span><span class="m">3</span>.1.20240404144621
+INFO<span class="w"> </span>/opt/hostedtoolcache/Python/3.9.19/x64/bin/cwltool<span class="w"> </span><span class="m">3</span>.1.20240508115724
 INFO<span class="w"> </span>Resolved<span class="w"> </span><span class="s1">&#39;hello_world.cwl&#39;</span><span class="w"> </span>to<span class="w"> </span><span class="s1">&#39;file:///home/runner/work/user_guide/user_guide/src/_includes/cwl/hello_world.cwl&#39;</span>
-INFO<span class="w"> </span><span class="o">[</span>job<span class="w"> </span>hello_world.cwl<span class="o">]</span><span class="w"> </span>/tmp/_e_amgnt$<span class="w"> </span><span class="nb">echo</span><span class="w"> </span><span class="se">\</span>
+INFO<span class="w"> </span><span class="o">[</span>job<span class="w"> </span>hello_world.cwl<span class="o">]</span><span class="w"> </span>/tmp/21a5suid$<span class="w"> </span><span class="nb">echo</span><span class="w"> </span><span class="se">\</span>
 <span class="w">    </span>こんにちは世界
 こんにちは世界
 INFO<span class="w"> </span><span class="o">[</span>job<span class="w"> </span>hello_world.cwl<span class="o">]</span><span class="w"> </span>completed<span class="w"> </span>success

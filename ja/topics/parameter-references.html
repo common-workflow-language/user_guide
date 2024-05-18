@@ -447,7 +447,7 @@ document.write(`
                   
   <section id="parameter-references">
 <h1><span class="section-number">2.6. </span>パラメータリファレンス<a class="headerlink" href="#parameter-references" title="Link to this heading">#</a></h1>
-<p>前の例では、&quot;tar &quot;プログラムを使用してファイルを抽出しました。しかし、その例は非常に限定的なものでした。というのも、私たちが興味を持っているファイルは&quot;hello.txt&quot;と呼ばれ、これが<code class="docutils literal notranslate"><span class="pre">.cwl</span></code> ファイルに直接書き込まれていると仮定していたからです。これは最良の方法ではありません。なぜなら、&quot;hello.txt &quot;というファイル名は、使用する入力ファイルによって異なるか、または依存する可能性があるからです。  これを避けるために、ジョブパラメーターファイル(<code class="docutils literal notranslate"><span class="pre">.yml</span></code>)で必要なファイル名を指定することができます。この例では、入力パラメーターの値を他のフィールドから動的に参照して、抽出するファイル名を指定する方法を説明します。</p>
+<p>前の例では、&quot;tar &quot;プログラムを使用してファイルを抽出しました。しかし、その例は非常に限定的なものでした。というのも、私たちが興味を持っているファイルは&quot;hello.txt&quot;と呼ばれ、これが<code class="docutils literal notranslate"><span class="pre">.cwl</span></code> ファイルに直接書き込まれていると仮定していたからです。これは最良の方法ではありません。なぜなら、&quot;hello.txt &quot;というファイル名は、使用する入力ファイルによって異なるか、または依存する可能性があるからです。  これを避けるために、ジョブパラメーターファイル(<code class="docutils literal notranslate"><span class="pre">.yml</span></code>)で必要なファイル名を指定できます。この例では、入力パラメーターの値を他のフィールドから動的に参照して、抽出するファイル名を指定する方法を説明します。</p>
 <div class="literal-block-wrapper docutils container" id="tar-param-cwl">
 <div class="code-block-caption"><span class="caption-text"><code class="docutils literal notranslate"><span class="pre">tar-param.cwl</span></code></span><a class="headerlink" href="#tar-param-cwl" title="Link to this code">#</a></div>
 <div class="highlight-cwl notranslate"><div class="highlight"><pre><span></span><span class="c1">#!/usr/bin/env cwl-runner</span>
@@ -485,12 +485,12 @@ document.write(`
 </pre></div>
 </div>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>cwltool<span class="w"> </span>tar-param.cwl<span class="w"> </span>tar-param-job.yml
-INFO<span class="w"> </span>/opt/hostedtoolcache/Python/3.9.19/x64/bin/cwltool<span class="w"> </span><span class="m">3</span>.1.20240404144621
+INFO<span class="w"> </span>/opt/hostedtoolcache/Python/3.9.19/x64/bin/cwltool<span class="w"> </span><span class="m">3</span>.1.20240508115724
 INFO<span class="w"> </span>Resolved<span class="w"> </span><span class="s1">&#39;tar-param.cwl&#39;</span><span class="w"> </span>to<span class="w"> </span><span class="s1">&#39;file:///home/runner/work/user_guide/user_guide/src/_includes/cwl/parameter-references/tar-param.cwl&#39;</span>
-INFO<span class="w"> </span><span class="o">[</span>job<span class="w"> </span>tar-param.cwl<span class="o">]</span><span class="w"> </span>/tmp/h8pv3jmq$<span class="w"> </span>tar<span class="w"> </span><span class="se">\</span>
+INFO<span class="w"> </span><span class="o">[</span>job<span class="w"> </span>tar-param.cwl<span class="o">]</span><span class="w"> </span>/tmp/gxt7eeh6$<span class="w"> </span>tar<span class="w"> </span><span class="se">\</span>
 <span class="w">    </span>--extract<span class="w"> </span><span class="se">\</span>
 <span class="w">    </span>--file<span class="w"> </span><span class="se">\</span>
-<span class="w">    </span>/tmp/zjs1o5lm/stgc786b881-b5e9-4b85-92cf-8981adf46fe8/hello.tar<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>/tmp/wwbsd107/stg04ba75f6-a7b6-4ddf-b424-bff59fe64c27/hello.tar<span class="w"> </span><span class="se">\</span>
 <span class="w">    </span>goodbye.txt
 INFO<span class="w"> </span><span class="o">[</span>job<span class="w"> </span>tar-param.cwl<span class="o">]</span><span class="w"> </span>completed<span class="w"> </span>success
 <span class="o">{</span>
@@ -505,8 +505,7 @@ INFO<span class="w"> </span><span class="o">[</span>job<span class="w"> </span>t
 <span class="o">}</span>INFO<span class="w"> </span>Final<span class="w"> </span>process<span class="w"> </span>status<span class="w"> </span>is<span class="w"> </span>success
 </pre></div>
 </div>
-<p>Certain fields permit parameter references which are enclosed in <code class="docutils literal notranslate"><span class="pre">$(...)</span></code>.
-These are evaluated and replaced with value being referenced.</p>
+<p><code class="docutils literal notranslate"><span class="pre">$(...)</span></code> で囲まれたパラメータ参照を許可するフィールドもあります。これらは評価され、参照されている値に置き換えられます。</p>
 <div class="highlight-cwl notranslate"><div class="highlight"><pre><span></span><span class="nt">outputs</span><span class="p">:</span>
 <span class="w">  </span><span class="nt">extracted_out</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">File</span>
@@ -519,7 +518,7 @@ These are evaluated and replaced with value being referenced.</p>
 <p><code class="docutils literal notranslate"><span class="pre">File</span></code> パラメータはオブジェクトであるため、入力ファイルのパスを取得するには、ファイルオブジェクトのpathフィールドを参照する必要があります。上記の例でtarファイルのパスを参照するには、<code class="docutils literal notranslate"><span class="pre">$(inputs.tarfile.path)</span></code>となります。</p>
 <div class="admonition-where-are-parameter-references-allowed admonition">
 <p class="admonition-title">パラメータ参照はどこで許されるのですか？</p>
-<p>パラメータ参照は、特定のフィールドでのみ使用することができます。  以下はその例です：</p>
+<p>パラメータ参照は、特定のフィールドでのみ使用できます。  以下はその例です：</p>
 <ul class="simple">
 <li><p><a class="reference external" href="http://www.commonwl.org/v1.0/CommandLineTool.html#CommandLineTool"><code class="docutils literal notranslate"><span class="pre">CommandLineTool</span></code></a> から</p>
 <ul>
