@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: Common Workflow Language User Guide\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-12-16 11:48+0100\n"
-"PO-Revision-Date: 2024-05-17 17:16+0000\n"
+"PO-Revision-Date: 2024-05-30 05:09+0000\n"
 "Last-Translator: Manabu ISHII <manabu.ishii.rb@gmail.com>\n"
 "Language-Team: Japanese <https://hosted.weblate.org/projects/commonwl/"
 "user-guide/ja/>\n"
@@ -1149,7 +1149,7 @@ msgstr "検証`true.cwl` with`cwl-runner`."
 
 #: ../../src/introduction/prerequisites.md:107 4890bf20bc3842d3a7421b555bcda94a
 msgid "Running `true.cwl` with `cwl-runner`."
-msgstr "`true.cwl` を `cwl-runner` で実行します。"
+msgstr "`cwl-runner` で `true.cwl` を 実行します。"
 
 #: ../../src/introduction/prerequisites.md:112 2475a83cf6ed4389bb680fa37e8fe69c
 msgid ""
@@ -1392,7 +1392,7 @@ msgstr ""
 
 #: ../../src/introduction/quick-start.md:57 5b393c69816549b084516dda4d4274f5
 msgid "Running `hello_world.cwl` with `cwltool`."
-msgstr "`hello_world.cwl` を `cwltool` で実行します。"
+msgstr "`cwltool` で`hello_world.cwl` を 実行します。"
 
 #: ../../src/introduction/quick-start.md:62 4306d8ad802f45c18487d932d04492fa
 msgid ""
@@ -1402,7 +1402,8 @@ msgstr "また、`echo` base コマンドの引数を変更するのと同様に
 
 #: ../../src/introduction/quick-start.md:65 8339ec411ad04c70ab8d795eb154fc38
 msgid "Running `hello_world.cwl` with `cwltool` passing an input parameter."
-msgstr "`hello_world.cwl` を`cwltool` で入力パラメータを渡して実行する。"
+msgstr "`cwltool` で`hello_world.cwl` "
+"と、それに対する入力パラメータを渡して実行します。"
 
 #: ../../src/introduction/quick-start.md:70 3ecca6985e754951aee00c93effe9517
 msgid ""
