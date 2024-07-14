@@ -9,8 +9,9 @@ msgstr ""
 "Project-Id-Version: Common Workflow Language User Guide\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-12-16 11:48+0100\n"
-"PO-Revision-Date: 2024-05-17 10:02+0000\n"
-"Last-Translator: José Raúl Romero <jrromero@uco.es>\n"
+"PO-Revision-Date: 2024-07-10 21:09+0000\n"
+"Last-Translator: Benjamin Esteban González Morales <benja314gonzalez@gmail."
+"com>\n"
 "Language-Team: Spanish <https://hosted.weblate.org/projects/commonwl/"
 "user-guide/es/>\n"
 "Language: es\n"
@@ -18,7 +19,7 @@ msgstr ""
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.6-dev\n"
+"X-Generator: Weblate 5.7-dev\n"
 "Generated-By: Babel 2.12.1\n"
 
 #: ../../LICENSE.md:2 a48279b2231348eea3f7a3b74a6362ac
@@ -503,29 +504,32 @@ msgstr ""
 
 #: ../../src/faq.md:375 e39b65947b294b20a444f18d780246f4
 msgid "If `cwltool --validate` returns valid"
-msgstr ""
+msgstr "Sí `cwltool --validate` devuelve válido"
 
 #: ../../src/faq.md:384 dcd42c65681b438bb541fb38ddebb536
 msgid "But executing it causes an error like:"
-msgstr ""
+msgstr "Pero ejecutarlo causa un error como:"
 
 #: ../../src/faq.md:396 2b96665acac449758b852bbe7600e007
+#, fuzzy
 msgid "The file is here"
-msgstr ""
+msgstr "El documento está aquí"
 
 #: ../../src/faq.md:410 f59751d2f0014e59af7879a748062cec
 msgid "Problem caused by `-` (hyphen character)."
-msgstr ""
+msgstr "Problema causado por `-` (guión)."
 
 #: ../../src/faq.md:423 7780f461ca4c478b92fca893c0b0894a
 msgid "To fix this error, change `-` (hyphen) to `_` (underscore):"
-msgstr ""
+msgstr "Para arreglar este error, cambie el `-` (guión) por `_` (barra baja):"
 
 #: ../../src/faq.md:436 88df56dfff854fc68fb6ad3835a846e4
 msgid ""
 "If it is not possible to change the input identifier, then you can use an"
 " alternative CWL Parameter Reference syntax:"
 msgstr ""
+"Si no es posible cambiar el indentificador del input, entonces puedes usar "
+"una sintaxis alternativa para referencias de parámetros CWL:"
 
 #: ../../src/faq.md:442 fc407a9e8d8c4b699d9cd14b369343b5
 msgid "How do I use CWL and cwltool with Singularity?"
@@ -541,8 +545,9 @@ msgid ""
 msgstr ""
 
 #: ../../src/faq.md:450 61641314d82b43e982e54c64c73232c5
+#, fuzzy
 msgid "How do I debug the JavaScript in my CWL tool?"
-msgstr ""
+msgstr "¿Como corrijo (debug) el Javascript en mi herramienta CLW?"
 
 #: ../../src/faq.md:452 5556d3c323664edea55cfb777f4efb3b
 msgid ""
@@ -568,7 +573,7 @@ msgstr ""
 
 #: ../../src/index.md:7 0adfc2adb0c74372b25d197dd3a73b8b
 msgid "Contributions and Feedback are Welcome!"
-msgstr ""
+msgstr "¡Aceptamos feedback y contribuciones!"
 
 #: ../../src/index.md:9 96c8dca812f1415db7c5c006b0c0e022
 msgid ""
@@ -581,7 +586,7 @@ msgstr ""
 
 #: ../../src/index.md:16 35c50bb5c3a345b4a4ae66b2df065376
 msgid "Navigating the User Guide"
-msgstr ""
+msgstr "Navegando la Guia de Usuario"
 
 #: ../../src/index.md:18 9431edcf4e344fb89b6a251e627279d2
 msgid ""
@@ -590,6 +595,10 @@ msgid ""
 "subsections of the [Topics](/topics/index.md) have detailed information "
 "about the most common topics for CWL."
 msgstr ""
+"Si eres un principiante comienza con la sección de [Introduction](/"
+"introduction/index.md). Para usuarios avanzados las subsecciones de "
+"[Topics](/topics/index.md) tienen información detallada sobre los temas mas "
+"comunes para CWL."
 
 #: ../../src/index.md:23 61cf57e61a9f46e5a1bff6368c5ad5e3
 msgid ""
