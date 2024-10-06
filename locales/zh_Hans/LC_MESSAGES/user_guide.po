@@ -9,16 +9,16 @@ msgstr ""
 "Project-Id-Version: Common Workflow Language User Guide\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-12-16 11:48+0100\n"
-"PO-Revision-Date: 2024-04-11 09:01+0000\n"
+"PO-Revision-Date: 2024-10-06 10:16+0000\n"
 "Last-Translator: Zoë Ma <zoe.ma@curii.com>\n"
-"Language-Team: Chinese (Simplified) <https://hosted.weblate.org/projects/"
-"commonwl/user-guide/zh_Hans/>\n"
+"Language-Team: Chinese (Simplified Han script) <https://hosted.weblate.org/"
+"projects/commonwl/user-guide/zh_Hans/>\n"
 "Language: zh_Hans\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 5.5-dev\n"
+"X-Generator: Weblate 5.8-dev\n"
 "Generated-By: Babel 2.12.1\n"
 
 #: ../../LICENSE.md:2 a48279b2231348eea3f7a3b74a6362ac
@@ -152,14 +152,12 @@ msgid "FAQ"
 msgstr "常见问题"
 
 #: ../../src/faq.md:11 370a9659c7904ef6b5e1ae7480f82ef6
-#, fuzzy
 msgid "How do I create non \"`File`\" types using `evalFrom`?"
-msgstr "使用 `evalFrom` 的非“`File`”类型"
+msgstr "如何用 `evalFrom` 创建非“`File`”类型？"
 
 #: ../../src/faq.md:41 8333f51e3f5945fe8963adfc6685bcb1
-#, fuzzy
 msgid "How do I rename an input file?"
-msgstr "重命名输入文件"
+msgstr "如何重命名输入文件？"
 
 #: ../../src/faq.md:43 f6b88d9154d049d7807afa9bb0f1ac98
 msgid ""
@@ -172,9 +170,8 @@ msgstr ""
 "中更改输入文件名称。如果要使用工作流中其它步骤产生的文件，但又不想使用这些文件创建时的默认名称，这时候更名操作可以派上用场。"
 
 #: ../../src/faq.md:59 833510f5896b4a6eb5875d25eca5b047
-#, fuzzy
 msgid "How do I rename an output file?"
-msgstr "重命名输出文件"
+msgstr "如何重命名输出文件？"
 
 #: ../../src/faq.md:61 207e2f97d1c44233ae3f109c5a6ec944
 msgid ""
@@ -188,26 +185,26 @@ msgid ""
 " engines will rename the file using the new name for subsequent steps or "
 "as a workflow-level output."
 msgstr ""
+"通过修改 `outputEval` 字段下的 `basename` 字段，可让 CWL "
+"工作流引擎为后续步骤或工作流级别的输出重命名该文件，使用新文件名。"
 
 #: ../../src/faq.md:86 8641f105131b4ac1bca7e0a46756ef79
-#, fuzzy
 msgid "How do I reference a local script?"
-msgstr "引用本地脚本"
+msgstr "如何引用本地脚本？"
 
 #: ../../src/faq.md:88 d3e43b40d6994b32bc37067ee116418e
 msgid "There are two ways to reference a local script:"
 msgstr "引用本地脚本有两种方法："
 
 #: ../../src/faq.md:90 64b140a321ca4087945339c523cc24dd
-#, fuzzy
 msgid ""
 "The first method involves adding the path to a folder containing your "
 "scripts to the `PATH` environment variable. This allows you to execute "
 "the shell script directly (without explicitly using the `sh` or `bash` "
 "commands)."
 msgstr ""
-"第一种方法是将包含相关脚本的文件夹添加至`PATH`（路径）环境变量。这样可以直接运行 shell 脚本，无需使用 `sh` 或 `bash` "
-"命令。"
+"第一种方法是将包含相关脚本的文件夹添加至`PATH`（路径）环境变量。"
+"这样可以直接运行 shell 脚本，无需直接使用 `sh` 或 `bash` 命令。"
 
 #: ../../src/faq.md:93 34ebca4487a54ceab5d087105820e945
 msgid "Start with adding a _shebang_ at the top of your file:"
@@ -243,9 +240,8 @@ msgid ""
 msgstr "第二种方法是将 `type: File` 输入内容编写进脚本："
 
 #: ../../src/faq.md:138 ba246320fdd94a1aab4736f83718d793
-#, fuzzy
 msgid "How can I set `self`-based input bindings for optional inputs?"
-msgstr "为可选输入项设置用到 `self` 变量的输入绑定"
+msgstr "如何为可选输入项设置用到 `self` 变量的输入绑定？"
 
 #: ../../src/faq.md:140 6169b7be9af7448abcb57eaf91e1cc91
 msgid ""
@@ -255,9 +251,8 @@ msgid ""
 msgstr "目前，如果缺失的可选输入项用到了 `self`, `cwltool` 将无法处理。在更高明的解决办法出现前，下面的例子可作为临时变通一用。"
 
 #: ../../src/faq.md:165 6c98b7948059411b8e09cf03a552c5ab
-#, fuzzy
 msgid "How can I model a \"one-or-the-other\" parameter?"
-msgstr "构建“非此即彼”参数的模型"
+msgstr "如何构建“非此即彼”的参数？"
 
 #: ../../src/faq.md:167 d1424da3f43c4519a4c4735f4a720341
 msgid ""
@@ -266,25 +261,22 @@ msgid ""
 msgstr "以下示例演示的，是根据某个布尔参数的取值，来指定添加到命令行的字符串。"
 
 #: ../../src/faq.md:188 5c9980839f404ba6aef92ef23034500f
-#, fuzzy
 msgid ""
 "How do I connect a solo value to an input that expects an array of that "
 "type?"
-msgstr "将某个元素值与期待该值类型的数组关联起来"
+msgstr "如何将某个元素值与期待同一类型的数组关联起来？"
 
 #: ../../src/faq.md:190 2525baf16c1f4725b096f33fd99009cf
-#, fuzzy
 msgid ""
 "Add a "
 "[`MultipleInputFeatureRequirement`](https://www.commonwl.org/v1.0/Workflow.html#MultipleInputFeatureRequirement)"
 " along with [`linkMerge: "
 "merge_nested`](https://www.commonwl.org/v1.0/Workflow.html#WorkflowStepInput):"
 msgstr ""
-"将 "
-"[`MultipleInputFeatureRequirement`](https://www.commonwl.org/v1.0/Workflow.html#MultipleInputFeatureRequirement)"
-" 与 [`linkMerge: "
-"merge_nested`](https://www.commonwl.org/v1.0/Workflow.html#WorkflowStepInput)"
-" 联合使用"
+"将 [`MultipleInputFeatureRequirement`](https://www.commonwl.org/v1.0/Workflow"
+".html#MultipleInputFeatureRequirement) 与 "
+"[`linkMerge:merge_nested`](https://www.commonwl.org/v1.0/Workflow."
+"html#WorkflowStepInput) 联合使用："
 
 #: ../../src/faq.md:194 a00d5d96b15048a79ae099d22d63bb42
 msgid "merge_nested"
@@ -298,9 +290,8 @@ msgid ""
 msgstr "输入必须是一个数组，每个输入链接只包含一个条目。如果使用单个链接指定“merge_nested”，则链接中的值必须包含在单项列表中。"
 
 #: ../../src/faq.md:199 3af16c07e3f148ddb8849c94a3864158
-#, fuzzy
 msgid "Which means \"create a list with exactly these sources as elements\"."
-msgstr "这段话意思是，“创建一个列表，其中的元素正是这些源”"
+msgstr "这段话意思是，“创建一个列表，令其中的元素正是这些源”。"
 
 #: ../../src/faq.md:201 0ea3de393d2f42aeb82658c85a19ec45
 msgid ""
@@ -316,7 +307,7 @@ msgstr ""
 
 #: ../../src/faq.md:229 2f1bbb611c9c4f80b7ae0566432f2f35
 msgid "How do make an input optional? 💯"
-msgstr ""
+msgstr "如何使某个输入称为可选的？💯"
 
 #: ../../src/faq.md:231 08a226efe5d141e68215ac77725033db
 msgid ""
@@ -332,7 +323,7 @@ msgstr "<a name=\"enuminputs\"></a>"
 msgid ""
 "How do I specify an input that must come from a list of predefined values"
 " (i.e. How do I use enum inputs) ?"
-msgstr ""
+msgstr "如何让某个输入只能从一组固定的值中取一（即：如何使用枚举类型输入）？"
 
 #: ../../src/faq.md:250 b1934a82553b4da3b7f981e576245dd8
 msgid ""
@@ -352,7 +343,7 @@ msgstr "<a name=\"recordinputs\"></a>"
 msgid ""
 "How do I describe dependent or exclusive input parameters(e.g. How do I "
 "use record inputs)?"
-msgstr ""
+msgstr "如何描述彼此依存或互斥的输入参数（即：如何使用记录类型输入）？"
 
 #: ../../src/faq.md:270 949ce95c082f4a05891a55fee25d4873
 msgid ""
@@ -364,9 +355,8 @@ msgstr ""
 "null 创建可选输入。"
 
 #: ../../src/faq.md:322 6fd3c469d11d4d52b9fbb7a3d443a8db
-#, fuzzy
 msgid "How do I set mutually exclusive parameters?"
-msgstr "设定互斥参数"
+msgstr "如何设定互斥参数？"
 
 #: ../../src/faq.md:324 a0687ce5c1f940538abc977cad83138f
 msgid ""
@@ -380,29 +370,26 @@ msgstr ""
 "返回以待设置字段为主键的字典。此处设定了 source （源）字段，以指示工作流中要充当其键值的输入。"
 
 #: ../../src/faq.md:342 12869ce2cdab4c858f3232c6158514f1
-#, fuzzy
 msgid "How can I set Booleans?"
-msgstr "设置布尔参数"
+msgstr "如何设置布尔参数？"
 
 #: ../../src/faq.md:344 8dcb88744e5840029de0e1bbf1c4b967
 msgid "These can be set by using the default field"
 msgstr "可使用 default（默认）字段设置"
 
 #: ../../src/faq.md:349 972b7a5551bb43e6b9fa30e0cb713ff7
-#, fuzzy
 msgid "What should I do when concatenating strings in inputs?"
-msgstr "在输入中串联字符串"
+msgstr "在输入中串联多个字符串时该如何操作？"
 
 #: ../../src/faq.md:351 68f74afc21d846dd9070d45dec0cc1d8
 msgid "The valueFrom field must be used instead of default."
 msgstr "为此必须使用 valueFrom 而非 default 字段。"
 
 #: ../../src/faq.md:359 53b633c6f8644106beb95ae567eb0708
-#, fuzzy
 msgid ""
 "I get `cwltool` errors due to filenames with space characters inside. "
 "What should I do?"
-msgstr "因文件名含有空格字符，`cwltool`报错"
+msgstr "因文件名含有空格字符，`cwltool`报错，该怎么解决？"
 
 #: ../../src/faq.md:361 7101bb5cb69e4faca4e60eabb4eb258e
 msgid "`cwltool` does not allow some characters in filenames by default."
@@ -421,11 +408,10 @@ msgid ""
 msgstr "如果不能避开这些危险的字符，您可以为 `cwltool` 传递 `--relax-path-checks` 选项。"
 
 #: ../../src/faq.md:373 b7ec33f38ce74ceb890f4379e4c41054
-#, fuzzy
 msgid ""
 "What should I do when I get CWL Parameter Reference error due to hyphen "
 "in an input identifier?"
-msgstr "输入标识符中包含连字符导致 CWL 参数引用错误"
+msgstr "输入标识符中包含连字符造成 CWL 参数引用错误，如何解决？"
 
 #: ../../src/faq.md:375 e39b65947b294b20a444f18d780246f4
 msgid "If `cwltool --validate` returns valid"
@@ -444,9 +430,8 @@ msgid "Problem caused by `-` (hyphen character)."
 msgstr "问题由 `-`（连字符）引发。"
 
 #: ../../src/faq.md:423 7780f461ca4c478b92fca893c0b0894a
-#, fuzzy
 msgid "To fix this error, change `-` (hyphen) to `_` (underscore):"
-msgstr "修复方法是将 `-`（连字符）更改为 `_`（下划线）"
+msgstr "修复方法是将 `-`（连字符）更改为 `_`（下划线）："
 
 #: ../../src/faq.md:436 88df56dfff854fc68fb6ad3835a846e4
 msgid ""
@@ -455,9 +440,8 @@ msgid ""
 msgstr "如果不能改动输入标识符，您可使用另一种 CWL 参数引用句法："
 
 #: ../../src/faq.md:442 fc407a9e8d8c4b699d9cd14b369343b5
-#, fuzzy
 msgid "How do I use CWL and cwltool with Singularity?"
-msgstr "在 Singularity 下使用 CWL 和 cwltool"
+msgstr "如何在 Singularity 下使用 CWL 和 cwltool?"
 
 #: ../../src/faq.md:445 239f5f81cef042b08fb8015c36b3ecad
 msgid ""
@@ -472,7 +456,7 @@ msgstr ""
 
 #: ../../src/faq.md:450 61641314d82b43e982e54c64c73232c5
 msgid "How do I debug the JavaScript in my CWL tool?"
-msgstr ""
+msgstr "如何调试 CWL 工具中的 JavaScript 代码？"
 
 #: ../../src/faq.md:452 5556d3c323664edea55cfb777f4efb3b
 msgid ""
@@ -710,27 +694,30 @@ msgstr "CWL 规约允许其实现提供额外功能，或通过 *requirements* �
 
 #: ../../src/introduction/basic-concepts.md:141
 #: 07c5789c59224ed78a3ecd03cfe872e9
-#, fuzzy
 msgid ""
 "[`InlineJavascriptWorkflow`](https://w3id.org/cwl/Workflow.html#InlineJavascriptRequirement)"
 " - enables JavaScript in expressions."
-msgstr "`InlineJavascriptWorkflow` —— 在表达式中启用 JavaScript。"
+msgstr ""
+"[`InlineJavascriptWorkflow`](https://w3id.org/cwl/Workflow."
+"html#InlineJavascriptRequirement) —— 在表达式中启用 JavaScript."
 
 #: ../../src/introduction/basic-concepts.md:142
 #: 6f9854ae1b884ad39f88d2f39d66cb98
-#, fuzzy
 msgid ""
 "[`SubworkflowFeatureRequirement`](https://w3id.org/cwl/Workflow.html#SubworkflowFeatureRequirement)"
 " - enables nested workflows."
-msgstr "`SubworkflowFeatureRequirement` —— 启用嵌套工作流。"
+msgstr ""
+"[`SubworkflowFeatureRequirement`](https://w3id.org/cwl/Workflow."
+"html#SubworkflowFeatureRequirement) —— 启用嵌套工作流。"
 
 #: ../../src/introduction/basic-concepts.md:143
 #: 23fef6de073f4da18118e4d0512670fe
-#, fuzzy
 msgid ""
 "[`InitialWorkDirRequirement`](https://w3id.org/cwl/Workflow.html#InitialWorkDirRequirement)"
 " - controls staging files in the input directory."
-msgstr "`InitialWorkDirRequirement` —— 控制输入目录中的暂存文件。"
+msgstr ""
+"[`InitialWorkDirRequirement`](https://w3id.org/cwl/Workflow."
+"html#InitialWorkDirRequirement) —— 控制输入目录中的暂存文件。"
 
 #: ../../src/introduction/basic-concepts.md:145
 #: fb3762f91177401ea624d1e716d67ae6
@@ -762,7 +749,6 @@ msgstr "FAIR 工作流"
 
 #: ../../src/introduction/basic-concepts.md:157
 #: bcbf5d76cf5f47b2a9691b7d2d8ef891
-#, fuzzy
 msgid ""
 "The FAIR principles have laid a foundation for sharing and publishing "
 "digital assets, and in particular, data. The FAIR principles emphasize "
@@ -775,10 +761,11 @@ msgid ""
 " Initiative."
 msgstr ""
 "FAIR 为数字资源（尤其是数据）的共享和发布提供了一组基本原则。FAIR "
-"四项原则强调了“机器可读”的重要性，进而提出应使所有数字资源可发现、可访问、可互操作以及可重用 (Findable, Accessible, "
-"Interoperable, and "
-"Reusable)。工作流通过代码所描述的，正是科学工作得以开展、数据得以创建的过程。因此，应强调工作流须支持创建 FAIR 数据，遵从 FAIR"
-" 原则。—— 工作流社群行动之[FAIR 计算工作流](https://workflows.community/groups/fair/)。"
+"四项原则强调“机器可读”的重要性，进而提出应使所有数字资源可发现、可访问、"
+"可互操作以及可重用 (Findable, Accessible, Interoperable, and Reusable)。工作"
+"流通过代码所描述的，正是让科学工作得以开展、数据得以创建的过程。因此，"
+"应强调工作流须支持创建 FAIR 数据，并且其自身也遵从 FAIR 原则。—— "
+"工作流社群行动之[FAIR 计算工作流](https://workflows.community/groups/fair/)。"
 
 #: ../../src/introduction/basic-concepts.md:167
 #: 4ea1d3bf04dc42f0bc6735a45b9e0dc0
@@ -828,13 +815,12 @@ msgstr "CWL网站上的规约页面： <https://www.commonwl.org/specification/>
 
 #: ../../src/introduction/basic-concepts.md:182
 #: a5b37924c7d04ab984ff2542847afc4a
-#, fuzzy
 msgid ""
 "The Command Line Tool Description Standard: "
 "<[https://www.commonwl.org/v1.2/CommandLineTool.html](https://w3id.org/cwl/CommandLineTool.html)>"
 msgstr ""
-"来自 "
-"[`CommandLineTool`](https://www.commonwl.org/v1.0/CommandLineTool.html#CommandLineTool)"
+"命令行工具描述标准：<[https://www.commonwl.org/v1.2/CommandLineTool."
+"html](https://w3id.org/cwl/CommandLineTool.html)>"
 
 #: ../../src/introduction/basic-concepts.md:183
 #: 44af015fa36644b99f07338d241d29c1
@@ -929,7 +915,6 @@ msgid "Windows"
 msgstr "Windows"
 
 #: ../../src/introduction/prerequisites.md:29 aeeb990abbbd42cca122c342054be29c
-#, fuzzy
 msgid ""
 "If you are using Windows, you will have to install the Windows Subsystem "
 "for Linux 2 as documented in the [`cwltool` documentation for Microsoft "
@@ -937,11 +922,11 @@ msgid ""
 "language/cwltool/blob/main/README.rst#ms-windows-users). Your operating "
 "system also needs internet access and a recent version of Python (3.6+)."
 msgstr ""
-"如使用 Windows 操作系统，须首先安装[适用于 Linux 的 Windows 子系统 "
-"2](https://learn.microsoft.com/en-us/windows/wsl/install) (WSL2)。请参阅 "
-"`cwltool` [说明文件](https://github.com/common-workflow-"
-"language/cwltool/blob/main/README.rst#ms-windows-users) ，了解关于安装 WSL2 "
-"的细节。同时，您的操作系统还需能接入互联网，以及运行较新版本（3.6 以上）的 Python."
+"如使用 Windows 操作系统，须首先安装适用于 Linux 的 Windows 子系统 2 (WSL2)，"
+"详请参阅 [`cwltool` 说明文件针对微软 Windows 用户的部分](https://github.com/"
+"common-workflow-language/cwltool/blob/main/README.rst#ms-windows-"
+"users)。同时，您的操作系统还需能接入互联网，以及运行较新版本（3.6 以上）的 "
+"Python."
 
 #: ../../src/introduction/prerequisites.md:34 21d1f29fb15745c480194eae6acdd031
 msgid "CWL Runner"
@@ -961,17 +946,17 @@ msgstr ""
 msgid ""
 "`cwltool` can be installed with `pip`, `apt`, or `conda`. We recommend "
 "using a virtual environment like `venv` or `conda`."
-msgstr ""
+msgstr "`cwltool` 可通过 `pip`, `apt`, "
+"或者`conda`安装。我们推荐使用`venv`或`conda`等虚拟环境。"
 
 #: ../../src/introduction/prerequisites.md:48 1edf8b8438334ae29dc406dbfd711228
-#, fuzzy
 msgid ""
 "Visit the `cwltool` "
 "[documentation](https://cwltool.readthedocs.io/en/latest/#install) for "
 "details on installing `cwltool`."
 msgstr ""
-"请参阅 `cwltool` [说明文件](https://github.com/common-workflow-"
-"language/cwltool#install)查看其他安装方法，包括用 `apt` 或 `conda`."
+"关于安装`cwltoom`的详情，请参阅 `cwltool` [说明文件](https://cwltool."
+"readthedocs.io/en/latest/#install)."
 
 #: ../../src/introduction/prerequisites.md:52 5e300141ce43435f9437507374987213
 msgid "Let's use a simple CWL tool description `true.cwl` with `cwltool`."
@@ -1009,7 +994,7 @@ msgstr "用 `cwltool` 运行 `true.cwl`."
 
 #: ../../src/introduction/prerequisites.md:78 d2dc809318be49cc996d892e93ad84ac
 msgid "Generic ``cwl-runner`` alias"
-msgstr ""
+msgstr "通用别名``cwl-runner``"
 
 #: ../../src/introduction/prerequisites.md:80 9809c2e262924ef286b0bd62e0b00995
 msgid ""
@@ -1027,11 +1012,12 @@ msgstr ""
 "CWL 运行程序共存的环境。"
 
 #: ../../src/introduction/prerequisites.md:88 6dd6aa836099469381fb564d63b84f3d
-#, fuzzy
 msgid ""
 "The CWL community publishes a Python package with the name `cwlref-"
 "runner` that installs an alias for `cwltool` under the name `cwl-runner`."
-msgstr "CWL 社群发布有名为 `cwlref-runner` 的 Python 包，以安装 `cwl-runner` 作为 `cwltool` 的别名"
+msgstr ""
+"CWL 社群发布有名为 `cwlref-runner` 的 Python 包，以安装 `cwl-runner` 作为 "
+"`cwltool` 的别名。"
 
 #: ../../src/introduction/prerequisites.md:91 cc1a9b95508e44a1bf08ae75d990c301
 msgid "Installing `cwl-runner` alias for cwltool with `pip`."
@@ -1088,7 +1074,6 @@ msgid "Running `true_shebang.cwl` with a shebang."
 msgstr "使用 shebang 运行 `true_shebang.cwl`."
 
 #: ../../src/introduction/prerequisites.md:141 11fea992c00940d29eb29ccf4b9370e9
-#, fuzzy
 msgid ""
 "The *shebang* is the two-character sequence `#!` at the beginning of a "
 "script. When the script is executable, the operating system will execute "
@@ -1097,10 +1082,11 @@ msgid ""
 " using a hard-coded location, since `/usr/bin/env [executable]` looks for"
 " the `[executable]` program in the system `PATH`,"
 msgstr ""
-"所谓 *shebang* 是指脚本起始处的 `#!` 两个连续字符。如果脚本可执行，操作系统将用紧跟在 shebang "
-"之后写明的可执行程序来执行此脚本。一个好习惯是用 `/usr/bin/env &lt;可执行程序名&gt;`， 而不是硬性编码其所在路径，理由是 "
-"`/usr/bin/env &lt;可执行程序名&gt;` 进行的，是在系统 `PATH`（命令路径环境变量）中查找 "
-"`&lt;可执行程序名&gt;` 的实际路径"
+"所谓 *shebang* 是指脚本起始处 `#!` 这两个连续字符。如果脚本可执行，"
+"操作系统将用紧跟在 shebang 之后写明的可执行程序来执行此脚本。一个好习惯是用 "
+"`/usr/bin/env [可执行程序名]`，而不是硬性编码其所在路径。这是因为 `/usr/bin/"
+"env [可执行程序名]` 所做的事情，是在系统 `PATH`（命令路径环境变量）下查找 "
+"`[可执行程序名]` 的实际位置，"
 
 #: ../../src/introduction/prerequisites.md:148 854736eef2ac4b63b187a4cea9660ae4
 msgid "Text Editor"
@@ -1263,14 +1249,13 @@ msgid "Running \"Hello World\""
 msgstr "运行“Hello World”"
 
 #: ../../src/introduction/quick-start.md:53 0595e96912dc40e5a09f2ced2d2b7bcd
-#, fuzzy
 msgid ""
 "The usage of the `cwltool` command-line executable is basically `cwltool "
 "[OPTIONS] [CWL_DOCUMENT] [INPUTS_OBJECT]`. You can run the "
 "`hello_world.cwl` workflow without specifying any option:"
 msgstr ""
-"`cwltool` 命令行程序的基本用法是 `cwltool [选项] &lt;CWL 文件名&gt; [输入对象]`. "
-"您可以不指定任何选项，直接运行 `hello_world.cwl` 工作流："
+"`cwltool` 命令行程序的基本用法是 `cwltool [选项] [CWL 文件] [输入对象]`. "
+"运行 `hello_world.cwl` 工作流，您无需指定任何选项："
 
 #: ../../src/introduction/quick-start.md:57 5b393c69816549b084516dda4d4274f5
 msgid "Running `hello_world.cwl` with `cwltool`."
@@ -1515,14 +1500,14 @@ msgid "_Example of metadata field for license with SPDX identifier:_"
 msgstr "_用 SPDX 标识符指定许可协议的元数据字段示例：_"
 
 #: ../../src/topics/best-practices.md:37 924b8df24deb4c82b32732f491c9a246
-#, fuzzy
 msgid ""
 "For more examples of providing metadata within CWL descriptions, see [the"
 " Metadata and Authorship section of this User Guide](../topics/metadata-"
 "and-authorship.md)."
 msgstr ""
-"关于在 CWL 描述中提供元数据的更多示例，请参见[《用户指南》的“元数据和著作权”一节](../topics/metadata-and-"
-"authorship.md)。"
+"关于在 CWL "
+"描述中提供元数据的更多示例，请参见[本《用户指南》中“元数据和著作权”一节](../"
+"topics/metadata-and-authorship.md)。"
 
 #: ../../src/topics/best-practices.md:40 9e64a9fc89cb45cfbff0e925cc91b1be
 msgid ""
@@ -1532,11 +1517,12 @@ msgid ""
 msgstr "为 CWL 工具或工作流描述的作者添加[署名信息][license-example]。请使用明确、独一无二的标识符，如[ORCID][orcid]."
 
 #: ../../src/topics/best-practices.md:44 87030aef02044b8283c76debab4772bf
-#, fuzzy
 msgid ""
 "In tool descriptions, list dependencies using short name(s) under "
 "[`SoftwareRequirement`](https://w3id.org/cwl/CommandLineTool.html#SoftwareRequirement)."
-msgstr "在工具描述中，将所依赖的软件在 `SoftwareRequirement` 下以简短的名称列出。"
+msgstr ""
+"在工具描述中，将所依赖的软件在 [`SoftwareRequirement`](https://w3id.org/cwl/"
+"CommandLineTool.html#SoftwareRequirement) 下以简短的名称列出。"
 
 #: ../../src/topics/best-practices.md:47 6c9eaae099fa4ca4b0986b1c4146df50
 msgid ""
@@ -1559,12 +1545,13 @@ msgstr ""
 "`foo_input`、`foo_file`、`result`、`input`、`output` 等缺乏明确内涵的名称。"
 
 #: ../../src/topics/best-practices.md:55 b0493895105e43849bff2026763e472a
-#, fuzzy
 msgid ""
 "In tool descriptions, include a list of version(s) of the tool that are "
 "known to work with this description under "
 "[`SoftwareRequirement`](https://w3id.org/cwl/CommandLineTool.html#SoftwareRequirement)."
-msgstr "在工具描述中 `SoftwareRequirement` 下，请列出已知能与该描述兼容的工具版本。"
+msgstr ""
+"在工具描述中 [`SoftwareRequirement`](https://w3id.org/cwl/CommandLineTool."
+"html#SoftwareRequirement) 下，请列出已知能与该描述兼容的工具版本。"
 
 #: ../../src/topics/best-practices.md:58 88806cb0462f4359801c1fa0ff0ebcc0
 msgid ""
@@ -1592,7 +1579,6 @@ msgid ""
 msgstr "将所有能作为流读写（即单次、非随机访问）的输入和输出 `File`（文件）标记为 `streamable: true`."
 
 #: ../../src/topics/best-practices.md:69 886d15c1972243acadccff5760f842f1
-#, fuzzy
 msgid ""
 "Each "
 "[`CommandLineTool`](https://w3id.org/cwl/CommandLineTool.html#CommandLineTool)"
@@ -1600,8 +1586,9 @@ msgid ""
 "(sub)command is capable of more. Don't overcomplicate your tool "
 "descriptions with options that you don't need or use."
 msgstr ""
-"即使某个命令或其子命令能够执行更多操作，每个 "
-"`CommandLineTool`（命令行工具）描述也应侧重于单个操作。请勿添加非必需或用不到的选项，以免工作描述过于复杂。"
+"即使某个命令或其子命令有多种功能，每个 [`CommandLineTool`](https://w3id.org/"
+"cwl/CommandLineTool.html#CommandLineTool)（命令行工具）描述也应侧重于单个操作"
+"。请勿添加非必需或用不到的选项，以免工作描述过度复杂。"
 
 #: ../../src/topics/best-practices.md:73 ef5a5f9b253c4ca3916802a695fb7c6d
 msgid ""
@@ -1713,13 +1700,15 @@ msgid ""
 "by default, so you must include the requirement for network access in the"
 " specification of your tool."
 msgstr ""
+"这用来指明某个进程是否需要对外 IPv4/IPv6 网络连接。从 CWL v1.1 "
+"版本起，程序不再默认有权访问网络，因此您需要在工具描述中加入网络访问需求。"
 
 #: ../../src/topics/command-line-tool.md:84 3282a357799f4a72a6b8bace206144c4
-#, fuzzy
 msgid ""
 "CWL v1.0 command-line tools that are upgraded to v1.1 or v1.2 or v1.2 "
 "will have `networkAccess: true` set automatically."
-msgstr "从 CWL v1.0 版本升级到 1.1 或 1.2 版的命令行工具将自动获取网络访问权限。"
+msgstr "从 CWL v1.0 版本升级到 1.1 或 1.2 版的命令行工具将自动加入 `networkAccess: "
+"true` 设置。"
 
 #: ../../src/topics/creating-files-at-runtime.md:1
 #: 17c5b4ee43cc4a979676ad27e473d046
@@ -1739,13 +1728,12 @@ msgstr ""
 
 #: ../../src/topics/creating-files-at-runtime.md:7
 #: bf4aea0a22334a1ca75cc20e937e6581
-#, fuzzy
 msgid ""
 "To generate such files, we can use the "
 "[`InitialWorkDirRequirement`](https://w3id.org/cwl/CommandLineTool.html#InitialWorkDirRequirement)."
 msgstr ""
-"来自 "
-"[`InitialWorkDirRequirement`](https://www.commonwl.org/v1.0/CommandLineTool.html#InitialWorkDirRequirement)"
+"要生成这样的文件，我们可以使用 [`InitialWorkDirRequirement`](https://w3id."
+"org/cwl/CommandLineTool.html#InitialWorkDirRequirement)."
 
 #: ../../src/topics/creating-files-at-runtime.md:9
 #: 008f768d56b8465bb4e8f4fde15853a7
@@ -1917,7 +1905,6 @@ msgstr ""
 "项，如下例 `custom-types.cwl` 所示："
 
 #: ../../src/topics/custom-types.md:76 dce43b138ba24b22bfa9fa5692a17009
-#, fuzzy
 msgid ""
 "Note also that the author of this CWL description has also included "
 "[`ResourceRequirement`](https://w3id.org/cwl/CommandLineTool.html#ResourceRequirement)s,"
@@ -1927,8 +1914,10 @@ msgid ""
 "These features are discussed further in other chapters of this user "
 "guide."
 msgstr ""
-"另请注意，作者还在此 CWL 描述中加入了 `ResourceRequirement`, "
-"指定了工具正常运行所需的最低内存容量和内核数、该描述针对的软件具体版本、以及其他有用的元数据。这些功能将在《用户指南》其他章节中进一步讨论。"
+"另请注意，作者还在此 CWL 描述中加入了 [`ResourceRequirement`](https://w3id."
+"org/cwl/CommandLineTool.html#ResourceRequirement), 指定了工具正常运行所需的最"
+"低内存容量和内核数、该描述针对的软件具体版本、以及其他有用的元数据。这些功能"
+"将在《用户指南》其他章节中进一步讨论。"
 
 #: ../../src/topics/environment-variables.md:1 19737f89f2994815969fa4a88346f49a
 msgid "Environment Variables"
@@ -1960,15 +1949,16 @@ msgstr ""
 "JavaScript 表达式，以对输入数据进行运算，并生成结果作为输出。"
 
 #: ../../src/topics/expression-tool.md:8 7e930144163e4d6e9f0bcaa764497ccf
-#, fuzzy
 msgid ""
 "Similar to the command-line tool it requires `inputs` and `outputs`. But "
 "instead of `baseCommand`, it requires an "
 "[`expression`](https://w3id.org/cwl/CommandLineTool.html#Expressions_(Optional))"
 " attribute."
 msgstr ""
-"与命令行工具一样，它需要 `inputs`（输入）和 `outputs`（输出），但与之不同的是，它需要的是 `expression` 属性，而非"
-" `baseCommand`."
+"与命令行工具一样，它需要 `inputs`（输入）和 "
+"`outputs`（输出），但与之不同的是，它需要的是 [`expression`](https://w3id."
+"org/cwl/CommandLineTool.html#Expressions_(Optional)) 属性，而非 "
+"`baseCommand`."
 
 #: ../../src/topics/expression-tool.md:17 f172488c19a94d688036197117d30b38
 msgid "CWL expression tool."
@@ -1979,7 +1969,6 @@ msgid "`uppercase.cwl`"
 msgstr "`uppercase.cwl`"
 
 #: ../../src/topics/expression-tool.md:67 0b63da31bc274b3cad798b07149592ab
-#, fuzzy
 msgid ""
 "We had to use an "
 "[`InlineJavascriptRequirement`](https://w3id.org/cwl/CommandLineTool.html#InlineJavascriptRequirement)"
@@ -1988,22 +1977,25 @@ msgid ""
 "requirement."
 msgstr ""
 "因为我们的表达式在 `.toUpperCase()` 处含有一个 JavaScript 调用，所以必须使用 "
-"`InlineJavascriptRequirements`. 这向使用表达式工具的其他工具表明 JavaScript 是必备条件。"
+"[`InlineJavascriptRequirement`](https://w3id.org/cwl/CommandLineTool."
+"html#InlineJavascriptRequirement). 这向使用表达式工具的其他工具表明 "
+"JavaScript 是必备条件。"
 
 #: ../../src/topics/expressions.md:1 b0e567a985f748538552bdb486a47998
 msgid "Expressions"
 msgstr "表达式"
 
 #: ../../src/topics/expressions.md:3 24d05cbbab8e460e99f2edc97ab0dcec
-#, fuzzy
 msgid ""
 "If you need to manipulate input parameters, include the requirement "
 "[`InlineJavascriptRequirement`](https://w3id.org/cwl/CommandLineTool.html#InlineJavascriptRequirement)"
 " and then anywhere a parameter reference is legal you can provide a "
 "fragment of Javascript that will be evaluated by the CWL runner."
 msgstr ""
-"如果需要对输入参数进行处理，请添加需求 `InlineJavascriptRequirement`. "
-"然后，在可以合法引用参数的任何地方，您都可以提供一 JavaScript 片段，让 CWL 运行程序计算其值。"
+"如果需要对输入参数进行处理，请添加需求  "
+"[`InlineJavascriptRequirement`](https://w3id.org/cwl/CommandLineTool."
+"html#InlineJavascriptRequirement). 然后，在任何可以合法引用参数的地方，"
+"您都可以提供一 JavaScript 片段，让 CWL 运行程序计算其值。"
 
 #: ../../src/topics/expressions.md:9 3d48d1a8f7f74bc1886e41653cb53a22
 msgid ""
@@ -2189,11 +2181,8 @@ msgstr "`outputEval`"
 #: ../../src/topics/expressions.md:83
 #: ../../src/topics/parameter-references.md:80 9448462d104b4be5904623c85a9e16b7
 #: bf11a7a72147445c9b8e44b541e09f36
-#, fuzzy
 msgid "From [`Workflow`](https://w3id.org/cwl/Workflow.html)"
-msgstr ""
-"来自 "
-"[WorkflowStepInput](https://www.commonwl.org/v1.0/Workflow.html#WorkflowStepInput)"
+msgstr "来自 [`Workflow`](https://w3id.org/cwl/Workflow.html)"
 
 #: ../../src/topics/expressions.md:84 0d54a777a33d4f17a2f3390384a3c0c5
 msgid ""
@@ -2360,15 +2349,15 @@ msgid "Using External Libraries and Inline JavaScript Code with `expressionLib`"
 msgstr "通过 `expressionLib` 使用外部库和内联 JavaScript 代码"
 
 #: ../../src/topics/expressions.md:118 ea6cbaa5dae647538c0bd9a4d5cad3f9
-#, fuzzy
 msgid ""
 "The requirement "
 "[`InlineJavascriptRequirement`](https://w3id.org/cwl/CommandLineTool.html#InlineJavascriptRequirement)"
 " supports an `expressionLib` attribute that allows users to load external"
 " JavaScript files, or to provide inline JavaScript code."
 msgstr ""
-"`InlineJavascriptRequirements` 这一需求支持 `expressionLib` 属性，可以让用户加载外部 "
-"JavaScript 文件或提供内联 JavaScript 代码。"
+"[`InlineJavascriptRequirement`](https://w3id.org/cwl/CommandLineTool."
+"html#InlineJavascriptRequirement) 这一需求支持 `expressionLib` 属性，"
+"可以让用户加载外部 JavaScript 文件或提供内联 JavaScript 代码。"
 
 #: ../../src/topics/expressions.md:122 484dc17440524cfda4dc486a7c5d5f63
 msgid ""
@@ -2481,7 +2470,6 @@ msgid "File Formats"
 msgstr "文件格式"
 
 #: ../../src/topics/file-formats.md:3 d99dab4f2f264c68b839b59b80d570e0
-#, fuzzy
 msgid ""
 "Tools and workflows can take "
 "[`File`](https://w3id.org/cwl/CommandLineTool.html#File) types as input "
@@ -2490,8 +2478,10 @@ msgid ""
 "helps document for others how to use your tool while allowing you to do "
 "some simple type-checking when creating parameter files."
 msgstr ""
-"`File` 类型既可作为工具和工作流的输入，也可以成为它们生成的输出。另外，我们建议指明 `File` "
-"类型的格式，以便向他人说明您的工具如何使用，同时还能让您在创建参数文件时进行简单的类型检验。"
+"[`File`](https://w3id.org/cwl/CommandLineTool.html#File) "
+"类型既可作为工具和工作流的输入，也可以成为它们生成的输出。另外，我们建议指明 "
+"[`File`](https://w3id.org/cwl/CommandLineTool.html#File) 类型的格式，以便向他"
+"人说明您的工具如何使用，同时还能让您在创建参数文件时进行简单的类型检验。"
 
 #: ../../src/topics/file-formats.md:8 23ba3dd26f5543119e2c152105b58e98
 msgid ""
@@ -2579,15 +2569,16 @@ msgstr ""
 "字段描述有效参数值的类型。"
 
 #: ../../src/topics/inputs.md:9 521cb5dead5d4e9ab5ff037fb4b683cb
-#, fuzzy
 msgid ""
 "Available primitive types are *string*, *boolean*, *int*, *long*, "
 "*float*, *double*, and *null*; complex types are *array* and *record*; in"
 " addition there are special types *File*, *Directory* and *Any*."
 msgstr ""
-"可用的原始类型有 *string*（字符串）、 *int*（整型）、*long*（长整型）、 "
-"*float*（浮点数）、*double*（双精度浮点数）以及 *null*（空）等；复合类型指的是 *array*（数组）和 "
-"*record*（记录）；此外还有特殊类型 *File*（文件）、*Directory*（目录）以及 *Any*（任意）等。"
+"可用的原始类型有 "
+"*string*（字符串）、*boolean*（布尔变量）、*int*（整型）、*long*（长整型）、 "
+"*float*（浮点数）、*double*（双精度浮点数）以及 *null*（空）等；"
+"复合类型指的是 *array*（数组）和 *record*（记录）；此外还有特殊类型 "
+"*File*（文件）、*Directory*（目录）以及 *Any*（任意）等。"
 
 #: ../../src/topics/inputs.md:13 fbdf2c1bed3e41d7a41ec6b14d134a98
 msgid ""
@@ -2612,11 +2603,10 @@ msgid "`inp-job.yml`"
 msgstr "`inp-job.yml`"
 
 #: ../../src/topics/inputs.md:33 9cc4a60d01f945aa9b4c43afcf20098b
-#, fuzzy
 msgid ""
 "You can use `cwltool` to create a template input object. That saves you "
 "from having to type all the input parameters in an input object file:"
-msgstr "您可以用 `cwltool` 创建模板输入对象，以省去在输入对象文件中一一键入输入参数："
+msgstr "您可以用 `cwltool` 创建模板输入对象，以免在输入对象文件中写入全部输入参数："
 
 #: ../../src/topics/inputs.md:40 5ac6da11d56446de97c251a37d997671
 msgid ""
@@ -2660,7 +2650,6 @@ msgstr ""
 "和其他运行程序会建立临时目录，在其中创建指向您文件的符号链接（又称“软”链接），以防工具意外访问未经明文指定的文件"
 
 #: ../../src/topics/inputs.md:70 5bdf77c45346445d8f93353c1e73f768
-#, fuzzy
 msgid ""
 "The field "
 "[`inputBinding`](https://w3id.org/cwl/CommandLineTool.html#Input_binding)"
@@ -2669,8 +2658,11 @@ msgid ""
 "parameter does not appear on the command line.  Let's look at each "
 "example in detail."
 msgstr ""
-"字段 `inputBinding` 为可选项，用来说明该输入参数是否应出现在工具的命令行上、以何种方式出现。 如果没有 "
-"`inputBinding`, 则该参数不会出现在命令行上。 我们来仔细看看每个示例。"
+"字段  [`inputBinding`](https://w3id.org/cwl/CommandLineTool."
+"html#Input_binding) "
+"为可选项，用来说明该输入参数是否应出现在工具的命令行上、以何种方式出现。 "
+"如果没有 `inputBinding`, 则该参数不会出现在命令行上。 "
+"我们来仔细看看每个示例。"
 
 #: ../../src/topics/inputs.md:83 d783fe52e86f4feda33ea0eecb622603
 msgid ""
@@ -2855,7 +2847,6 @@ msgid "Exclusive Input Parameters with Expressions"
 msgstr "互斥输入参数与表达式"
 
 #: ../../src/topics/inputs.md:257 cf22f21ec44c483986979316544a7c3b
-#, fuzzy
 msgid ""
 "If you use exclusive input parameters and reference them in expressions, "
 "you need to be aware that the `inputs` JavaScript object will contain one"
@@ -2864,7 +2855,8 @@ msgid ""
 " use when you reference the properties of the `input` object."
 msgstr ""
 "将互斥的输入参数与表达式结合使用时，需要注意 `inputs` 这个 JavaScript "
-"对象可能包含互斥输入值中的任何一个。这意味着你可能需要用逻辑“**或**”运算符来检查哪些值是存在的。"
+"对象可能包含互斥输入值中的任何一个。因为这些互斥值可能属于不同类型，"
+"您可能需要在引用 `input` 对象的属性时检查实际出现的是哪一类型。"
 
 #: ../../src/topics/inputs.md:263 0fecb128b19b44d796b6c1b6de4f7166
 msgid ""
@@ -2880,38 +2872,36 @@ msgid "`exclusive-parameter-expressions.cwl`"
 msgstr "`exclusive-parameter-expressions.cwl`"
 
 #: ../../src/topics/inputs.md:272 60b585142f06489d9f48090b664b6d32
-#, fuzzy
 msgid ""
 "Note how the JavaScript expression uses the value of the exclusive input "
 "parameter without taking into consideration a `null` value. If you "
 "provide a valid value, such as `fasta` (one of the possible values of the"
 " enum), your command should execute successfully:"
 msgstr ""
-"请注意，这里的 JavaScript 表达式用到了互斥输入参数的值，但没有考虑到空值 `null` 的情况。如果提供的值有效，比如 “fasta”"
-" （枚举中的一个值），命令将会成功执行："
+"请注意，这里的 JavaScript 表达式用到了互斥输入参数的值，但没有考虑到出现空值 "
+"`null` 的情况。如果提供的值有效，比如 "
+"`fasta`（枚举中的一个值），命令将会成功执行："
 
 #: ../../src/topics/inputs.md:281 11fdeb057d674f118830f431ff019c15
-#, fuzzy
 msgid ""
 "However, if you do not provide any input value, then `file_format` will "
 "be evaluated to `null`, which does not match the expected type for the "
 "output field (a `string`), resulting in failure when running your "
 "workflow."
 msgstr ""
-"但是，如果未提供任何输入值，则 `file_format` 的值为 `null`, 从而不符合输出字段的预期类型（字符串 "
-"`string`），导致工作流运行失败。"
+"但是，如果未提供任何输入值，则 `file_format` 的值为 `null`, "
+"从而不符合输出字段的预期类型（字符串 `string`），导致工作流运行失败。"
 
 #: ../../src/topics/inputs.md:290 8594cca9d93b4280b6cfee64c8a7c578
-#, fuzzy
 msgid ""
 "To correct it, you should explicitly handle the possibility of a `null` "
 "value. For example, the expression could be changed to "
 "`$(inputs.file_format || 'auto')`, to have a default value `\"auto\"` if "
 "none was provided in the command line or job input file."
 msgstr ""
-"为了修正这个问题，需要记住的，是在 JavaScript 表达式中使用互斥参数或任何允许为空 (`null`) "
-"的参数时，应使用逻辑“或”运算符。例如，表达式可以修改为 `$(inputs.file_format || 'auto')`, "
-"从而在命令行或作业输入文件未提供值的情况下有默认值可用。"
+"为了修正这个问题，需要专门处理出现 `null` 空值的情形。例如，表达式可以修改为 "
+"`$(inputs.file_format || 'auto')`, "
+"从而在命令行或作业输入文件未提供值的情况下有默认值 `\"auto\"` 可用。"
 
 #: ../../src/topics/inputs.md:295 b5055c77f85e43609fe3e9b9839778e3
 msgid ""
@@ -2923,6 +2913,11 @@ msgid ""
 "expression’s value becomes that of the second operand, which is why a "
 "reasonable default can be provided there."
 msgstr ""
+"这里，我们要使用的是 JavaScript 中布尔“或”运算符 `||` 的_短路_特点。如果 "
+"`inputs.file_format` 为布尔意义上的“真值”（例如来自枚举的有效、非空字符串），"
+"这个表达式的计值过程到 `||` 运算符前的操作数就终止，也就是“短路”了。反之，"
+"如果 `inputs.file_format` 为 `null`, "
+"则该表达式整体的值就等于后一个操作数，因此这里可以用来安放合理的默认值。"
 
 #: ../../src/topics/metadata-and-authorship.md:1
 #: 723c2232310c4276aeac2bd6728d2912
@@ -3009,30 +3004,29 @@ msgid "`operations.cwl`"
 msgstr "`operations.cwl`"
 
 #: ../../src/topics/operations.md:16 d21e9444182d4e27bae934db4573ae99
-#, fuzzy
 msgid ""
 "The `uppercase` step of the workflow is an operation. It can appear where"
 " a command line tool or an expression is expected. You can also plot it "
 "with the CWL Viewer or `cwltool`:"
 msgstr ""
-"工作流中的 `uppercase` 步骤是一个抽象操作，可以充当命令行工具或表达式使用。您可以用 CWL Viewer 或 `cwltool` "
-"将它绘制出来："
+"工作流中的 `uppercase` "
+"步骤是一个操作，可以出现在命令行工具或表达式能出现的任何位置。您还可以用 CWL "
+"Viewer 或 `cwltool` 将它绘制出来："
 
 #: ../../src/topics/operations.md:24 61e4ae6ed18e41708270eb358cd55277
-#, fuzzy
 msgid ""
 "The output of the command above can be rendered with a Graphviz renderer."
 " The following image is rendered with the Sphinx `{graphviz}` directive "
 "(this user guide is built with Sphinx):"
 msgstr ""
-"以上命令的输出可用 Graphviz 渲染出来。下面的图片是使用 Sphinx Graphviz 指令来渲染的（本《用户指南》是以 Sphinx "
-"编译）："
+"以上命令的输出可用 Graphviz 渲染出来。下面的图片是使用 Sphinx 的 `{graphviz}`"
+" 指令来渲染的（本《用户指南》就是用 Sphinx 编译的）："
 
 #: ../../src/topics/operations.md:56 c07e3ff02ac14ffb89bcbd1b30f3f3fd
 msgid ""
 "The operation file will fail to run with `cwltool` because `cwltool` "
 "lacks the necessary information to execute it:"
-msgstr ""
+msgstr "用 `cwltool` 运行该操作文件将会失败，因为 `cwltool` 缺少执行所需的必要信息："
 
 #: ../../src/topics/operations.md:59 e184470550e645f6b9ce658af7e65ecf
 msgid "`cwltool` does not know how to run operations"
@@ -3064,7 +3058,6 @@ msgstr ""
 "`id`字段，以及描述其有效值类型的 `type` 字段。"
 
 #: ../../src/topics/outputs.md:10 a229d8d983344e51a231edb5f667d84b
-#, fuzzy
 msgid ""
 "When a tool runs under CWL, the starting working directory is the "
 "designated output directory.  The underlying tool or script must record "
@@ -3072,7 +3065,8 @@ msgid ""
 "output parameters returned by the CWL tool are either the output files "
 "themselves, or the result of examining the content of those files."
 msgstr ""
-"工具在 CWL 下运行时，起始工作目录即指定输出目录。 基础工具或脚本记录运行结果，必须以输出目录下文件的形式实现。 CWL "
+"工具在 CWL 下运行时，起始工作目录即指定输出目录。 "
+"基础工具或脚本要记录运行结果，必须以输出目录下文件的形式实现。 CWL "
 "工具返回的输出参数要么是输出文件本身，要么是分析这些文件的内容而得出的信息。"
 
 #: ../../src/topics/outputs.md:16 9845e517f7d848e5b59a97880ca6999f
@@ -3086,7 +3080,6 @@ msgid "Passing mandatory arguments to the `baseCommand`"
 msgstr "将必要参数传递给 `baseCommand`"
 
 #: ../../src/topics/outputs.md:21 553d535b023e4d69a888fe5b24bb8c5b
-#, fuzzy
 msgid ""
 "In previous examples, the `baseCommand` was just a string, with any "
 "arguments passed as CWL inputs. Instead of a single string, we can use an"
@@ -3094,8 +3087,9 @@ msgid ""
 "the array is the command to run, and any subsequent elements are "
 "mandatory command line arguments"
 msgstr ""
-"在此前的例子里，`baseCommand` 命令不过是一个字符串，命令的参数都由 CWL "
-"输入传递而来。不过，我们也可以用字符串数组构建命令。为此，只需要让待运行的命令成为数组的第一个元素，这样所有后续元素均成为命令行的必要参数"
+"在此前的例子里，`baseCommand` 命令只是一个字符串，命令的参数都由 CWL "
+"输入传递而来。不过，我们也可以用_字符串数组_作为 `baseCommand` "
+"的值。数组的第一个元素是将要运行的命令，其后的元素均为命令行的必要参数"
 
 #: ../../src/topics/outputs.md:28 9b65071222c94951bed12ac53e964ee3
 msgid "`tar.cwl`"
@@ -3116,15 +3110,15 @@ msgid ""
 msgstr "现在，在命令行上结合工具描述和输入对象运行 `cwltool`:"
 
 #: ../../src/topics/outputs.md:53 707803bec0cb42919905c7c321bd9d30
-#, fuzzy
 msgid ""
 "The field "
 "[`outputBinding`](https://w3id.org/cwl/CommandLineTool.html#CommandOutputBinding)"
 " describes how to set the value of each output parameter."
-msgstr "`outputBinding` 字段描述如何设置每个输出参数的值。"
+msgstr ""
+"[`outputBinding`](https://w3id.org/cwl/CommandLineTool."
+"html#CommandOutputBinding) 字段描述如何设置每个输出参数的值。"
 
 #: ../../src/topics/outputs.md:64 cbaec50871e04718883c8c91ff475d20
-#, fuzzy
 msgid ""
 "The "
 "[`glob`](https://w3id.org/cwl/CommandLineTool.html#CommandOutputBinding) "
@@ -3132,22 +3126,25 @@ msgid ""
 "directory. This can simply be the file's exact name. But if you don't "
 "know the name of the file in advance, you can use a wildcard pattern like"
 " `glob: '*.txt'`."
-msgstr "`glob` 字段由输出目录中的文件名组成。如果事先不知道文件名，可以使用通配符，例如 `glob: '*.txt'`."
+msgstr ""
+"[`glob`](https://w3id.org/cwl/CommandLineTool.html#CommandOutputBinding) 字段"
+"包含可匹配输出目录中文件名的模式。这可以是确切的文件名，不过如果事先不知道文"
+"件名，还可以使用通配符，如 `glob: '*.txt'`."
 
 #: ../../src/topics/outputs.md:69 8a6e9173198241429effd911c3a7c4d7
 msgid "Capturing Standard Output"
 msgstr "捕获标准输出"
 
 #: ../../src/topics/outputs.md:71 a7c4fdaeda3e411fbeb802c5fa529ce9
-#, fuzzy
 msgid ""
 "To capture a tool's standard output stream, add the "
 "[`stdout`](https://w3id.org/cwl/CommandLineTool.html#stdout) field with "
 "the name of the file where the output stream should go.  Then add `type: "
 "stdout` on the corresponding output parameter."
 msgstr ""
-"要捕获工具的标准输出流，请添加 `stdout` 字段，配上输出流应定向到的文件名。 然后，给相应的输出参数添加 `type: stdout` "
-"字段。"
+"要捕获工具的标准输出流，请添加 [`stdout`](https://w3id.org/cwl/"
+"CommandLineTool.html#stdout) 字段，配上输出流应定向到的文件名。 然后，"
+"给相应的输出参数添加 `type: stdout` 字段。"
 
 #: ../../src/topics/outputs.md:75 cf2ef8dc7fda49308c09efe4f4ef5d7b
 msgid "`stdout.cwl`"
@@ -3371,7 +3368,6 @@ msgstr "指定软件需求"
 
 #: ../../src/topics/specifying-software-requirements.md:3
 #: e708866921ea49d69d3c2a32d63ea468
-#, fuzzy
 msgid ""
 "Often, tool descriptions will be written for a specific version of a "
 "software. To make it easier for others to use your descriptions, you can "
@@ -3380,8 +3376,10 @@ msgid ""
 " field in the `hints` section. This may also help to avoid confusion "
 "about which version of a tool the description was written for."
 msgstr ""
-"工具描述往往是针对特定版本的软件而编写。为了方便他人使用您的工具描述，您可以在 `hints` 部分添加`SoftwareRequirement`"
-" 字段，用来指明该描述适用于哪些版本的工具。"
+"工具描述往往是针对特定版本的软件而编写。为了方便他人使用您的工具描述，"
+"您可以在 `hints` 部分添加[`SoftwareRequirement`](https://w3id.org/cwl/"
+"CommandLineTool.html#SoftwareRequirement)  "
+"字段，用来指明该描述适用于哪个工具版本。"
 
 #: ../../src/topics/specifying-software-requirements.md:13
 #: 6f722d6fd54f485fa964076c8d08938b
@@ -3921,7 +3919,6 @@ msgstr ""
 "由紫色的部分可见字符串常量 `\"Hello.java\"` 赋值给 `name_of_file_to_extract`."
 
 #: ../../src/topics/workflows.md:314 8654f2d86b644609aaa5b9b73db30bda
-#, fuzzy
 msgid ""
 "<a href=\"https://view.commonwl.org/workflows/github.com/common-workflow-"
 "language/user_guide/blob/main/_includes/cwl/workflows/nestedworkflows.cwl\"><img"
@@ -3966,6 +3963,10 @@ msgid ""
 " reused in multiple parent workflows, or even in multiple steps within "
 "the same workflow."
 msgstr ""
+"我们的 `1st-workflow.cwl` 文件基于工作流输入进行了参数化，"
+"因此运行时必须提供作业文件 (job file) 以指明 tar 文件和 `*.java` 的文件名。一"
+"般而言这样做是最合适的，好处在于多个上级工作流、乃至同一工作流中的多个步骤间"
+"可以重复使用代码。"
 
 #: ../../src/topics/workflows.md:341 358c612f175241f7bf148a04d75e00c9
 msgid ""
@@ -3976,6 +3977,10 @@ msgid ""
 "have more specific input/output names, as those also appear in its usage "
 "as a tool."
 msgstr ""
+"这里，我们用 `default:` 字段，将输入 `name_of_file_to_extract` 硬性编码为 `"
+"\"Hello.java\"`, 然而我们的工作流仍然需要 `tarball` 字段指定的一个 tar 文件，"
+"我们会通过 `create-tar` 这个步骤将它创建好。到这一步，比较好的办法是重整 "
+"`1st-workflow.cwl` 中的代码，像用作工具时一样使用更具体的输入/输出名。"
 
 #: ../../src/topics/workflows.md:347 c6297c120e004ae8b52d5b519fbc04d2
 msgid ""
