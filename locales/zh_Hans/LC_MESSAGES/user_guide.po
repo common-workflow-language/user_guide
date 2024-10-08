@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: Common Workflow Language User Guide\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-12-16 11:48+0100\n"
-"PO-Revision-Date: 2024-10-06 10:16+0000\n"
+"PO-Revision-Date: 2024-10-08 03:26+0000\n"
 "Last-Translator: Zoë Ma <zoe.ma@curii.com>\n"
 "Language-Team: Chinese (Simplified Han script) <https://hosted.weblate.org/"
 "projects/commonwl/user-guide/zh_Hans/>\n"
@@ -3989,6 +3989,9 @@ msgid ""
 "coded `Hello.java` file using the previously mentioned "
 "`InitialWorkDirRequirement` requirement, before adding it to a tar file."
 msgstr ""
+"另一种可能是采用更加特殊化的办法，避免作业文件中的外部依赖。在这个工作流中， "
+"我们可以利用前述 `InitialWorkDirRequirement` 需求，生成一个硬性编码的 `Hello."
+"java` 文件，然后将它添加到 tar 文件。"
 
 #: ../../src/topics/workflows.md:366 66f76677f4ce42baa8a8813410ea5aee
 msgid ""
@@ -3996,6 +3999,9 @@ msgid ""
 "parameterized, so we can use hardcoded values `hello.tar` and "
 "`Hello.java` in a `baseCommand` and the resulting `outputs`:"
 msgstr ""
+"这种情况下，我们的步骤中可以直接以 `Hello.java` 为前提假定，无需参数化，"
+"从而在 `baseCommand` 以及产出的 `outputs` 中使用硬性编码的值 `hello.tar` 和 "
+"`Hello.java`:"
 
 #: ../../src/topics/workflows.md:383 a8ccb9f9ab4448e087ea8448d620d33c
 msgid ""
@@ -4005,6 +4011,10 @@ msgid ""
 "reason for doing it in this case is because the command line is hard-"
 "coded with filenames that only make sense within this workflow."
 msgstr ""
+"您是否注意到，我们并没有将 `tar --create` 工具划分到一个独立的文件，"
+"而是嵌入到 CWL 工作流文件中？一般而言这样做并不是最合适的，将导致工具无法重复"
+"使用。在这个特例中，如此操作的原因是命令行已是硬性编码的，其中的文件名仅对这"
+"一个工作流有效。"
 
 #: ../../src/topics/workflows.md:389 afe43b9e92e949a589f493293eff2903
 msgid ""
@@ -4014,6 +4024,9 @@ msgid ""
 "to compile, which would simplify its usage as a tool step in other "
 "workflows."
 msgstr ""
+"这个例子里我们不得不在外部创制 tar 文件，但这无非是因为我们将内部工作流设计成"
+"以该文件为输入。内部工作流更好的重整方式，可以是令其接受一个待编译 Java "
+"文件的列表，使之作为工具步骤用于其它工作流中时的用法得以简化。"
 
 #: ../../src/topics/workflows.md:394 239eef3a740d42a69208a8f4e716d2b3
 msgid ""
@@ -4022,10 +4035,12 @@ msgid ""
 " Tool description, care must be taken to improve its usability in "
 "multiple workflows."
 msgstr ""
+"嵌套的工作流作为一种强大的功能，可以用于生成高阶函数和可复用的工作流单元——然"
+"而，正如创建 CWL 工具描述时一样，我们必须用心于提高它在多个工作流间的可用性。"
 
 #: ../../src/topics/workflows.md:398 96d1ca78cc324f40b61c4b7330447db2
 msgid "Scattering Steps"
-msgstr ""
+msgstr "分散步骤"
 
 #: ../../src/topics/workflows.md:400 eab4437bf9994b649954221375e3dd6d
 msgid ""
@@ -4037,6 +4052,11 @@ msgid ""
 "allows you to run the same workflow on multiple inputs without having to "
 "generate many different commands or input yaml files."
 msgstr ""
+"了解了如何编写工作流，我们可以准备使用 `ScatterFeatureRequirement`. 该功能用"
+"于告诉运行程序，您打算对列表中的多个输入重复运行某个工具或者工作流。这样，工"
+"作流可以将输入作为数组，并对每个数组元素运行指定的步骤，如同单个输入一样。这"
+"样， 我们可以让同一工作流对多个输入运行，而无需生成多个不同的命令或者 YAML "
+"输入文件。"
 
 #: ../../src/topics/workflows.md:411 c245ba0ae2074fa388ad6c35695033c8
 msgid ""
@@ -4045,6 +4065,9 @@ msgid ""
 "workflow that calls our first example (`hello_world.cwl`) and takes an "
 "array of strings as input to the workflow:"
 msgstr ""
+"用户第一次接触分散 (scatter) 功能，最主要的原因一般是为了对多个不同的样本进行"
+"同一分析。我们从一个简单的工作流出发，调用我们的第一个示例 (`hello_world."
+"cwl`), 并以一个字符串数组作为工作流的输入："
 
 #: ../../src/topics/workflows.md:415 83537938ce1244709f9b72269b048d63
 msgid "`scatter-workflow.cwl`"
@@ -4054,13 +4077,14 @@ msgstr "`scatter-workflow.cwl`"
 msgid ""
 "Aside from the `requirements` section including "
 "`ScatterFeatureRequirement`, what is going on here?"
-msgstr ""
+msgstr "除了 `requirements` 代码段加入了 `ScatterFeatureRequirement` "
+"以外，还有什么新情况？"
 
 #: ../../src/topics/workflows.md:429 ccbbba3189404241a44736c970249b84
 msgid ""
 "First of all, notice that the main workflow level input here requires an "
 "array of strings."
-msgstr ""
+msgstr "首先，请注意，主工作流级别的输入这时需要字符串数组。"
 
 #: ../../src/topics/workflows.md:441 31eff13bb8334fc7b6d48ef6c5b1ce33
 msgid ""
@@ -4069,6 +4093,9 @@ msgid ""
 " particular step. Note that the input name listed after scatter is the "
 "one of the step's input, not a workflow level input."
 msgstr ""
+"这里，我们在 `echo` 步骤下添加了名为 `scatter` "
+"的新字段。该字段告诉运行程序，我们希望让这一特定步骤对输入分散运行。请注意，"
+"\"scatter\" 后列出的输入名是该步骤的输入之一，而非工作流层面的输入。"
 
 #: ../../src/topics/workflows.md:445 0d5cf8b82dbd47f2abd1ed16b9b3eb61
 msgid ""
@@ -4077,10 +4104,13 @@ msgid ""
 "you expect that the final output of your workflow will now have multiple "
 "outputs to collect, be sure to update that to an array type as well!"
 msgstr ""
+"我们第一次做分散，就是这么简单。因为我们的工具并不收集任何输出，"
+"我们仍然可以在工作流中写上 `outputs: []`. 但是，如果你知道工作流的最终输出需"
+"要归集多个输出，请记得这里同样要更改为数组类型！"
 
 #: ../../src/topics/workflows.md:450 38b7042a270043ba82c11cf2e758f0c8
 msgid "Using the following input file:"
-msgstr ""
+msgstr "使用如下输入文件："
 
 #: ../../src/topics/workflows.md:452 b3fc75c262fe4a3a8e8bfba1abb07b3d
 msgid "`scatter-job.yml`"
@@ -4092,6 +4122,9 @@ msgid ""
 " calls the command `echo` on a message. If we invoke `cwltool scatter-"
 "workflow.cwl scatter-job.yml` on the command line:"
 msgstr ""
+"提醒一下，[`hello_world.cwl`](../introduction/quick-start.md) "
+"仅仅是对某段文字调用 `echo` 这个命令。如果我们在命令行调用 `cwltool scatter-"
+"workflow.cwl scatter-job.yml`:"
 
 #: ../../src/topics/workflows.md:466 b6a33410ee9a45d7bf7b2ba56f786f8f
 msgid ""
@@ -4099,12 +4132,16 @@ msgid ""
 "of our `message_array`. Ok, so how about if we want to scatter over two "
 "steps in a workflow?"
 msgstr ""
+"可以看到，这个工作流分多次对 `message_array` 数组的每个元素一一调用 \"echo\""
+". 好的，那么如果我们想要让工作流中两个步骤进行分散，该怎么办？"
 
 #: ../../src/topics/workflows.md:469 99b5c8a845ab4beb8524a69c051e2d42
 msgid ""
 "Let's perform a simple echo like above, but capturing `stdout` by adding "
 "the following lines instead of `outputs: []`"
 msgstr ""
+"和之前一样，我们来做一个简单的回显 (echo), 但这次将捕获 "
+"`stdout`（标准输出）。为此，我们用以下数行代码取代 `outputs: []`"
 
 #: ../../src/topics/workflows.md:472 97bf58937d3f4e98af702e3c1a418992
 msgid "`hello_world_to_stdout.cwl`"
@@ -4114,7 +4151,7 @@ msgstr "`hello_world_to_stdout.cwl`"
 msgid ""
 "And add a second step that uses `wc` to count the characters in each "
 "file. See the tool below:"
-msgstr ""
+msgstr "进而添加第二个步骤，用 `wc` 命令计算每个文件中的字符数量。请见如下工具："
 
 #: ../../src/topics/workflows.md:483 4afccfe982ff4be2be96cbe5889e5014
 msgid "`wc-tool.cwl`"
@@ -4124,7 +4161,7 @@ msgstr "`wc-tool.cwl`"
 msgid ""
 "Now, how do we incorporate scatter? Remember the scatter field is under "
 "each step:"
-msgstr ""
+msgstr "现在，该如何加入分散操作呢？请记住，\"scatter\"（分散）字段出现在每个步骤下："
 
 #: ../../src/topics/workflows.md:491 a7f96ec6e4f24c62ac0f5b6edcc9734b
 msgid "`scatter-two-steps.cwl`"
@@ -4147,6 +4184,16 @@ msgid ""
 "the first step must wait on `echo Hallo welt!`. You can see how this "
 "might not scale well."
 msgstr ""
+"这里，我们在每一步骤下加入了 \"scatter\" 字段。对这个具体的示例而言这样做无妨"
+"，因为这段程序运行得很快。但是，如果要对较多样本运行更复杂的工作流，您可能得"
+"另寻途径。这里，我们在每个步骤中独立地进行分散，但既然第二个步骤并不实际依赖"
+"第一个步骤对所有语种（即输入数组中的一个元素）全部完成操作，我们并没有高效地"
+"运用分散功能。第二个步骤期待从第一个步骤得来的数组作为其输入，因此将一直等待"
+"到第一步骤完全结束才会开始运行。打个比方，假设运行 `echo Hello World!` "
+"需要花1分钟，对其输出运行 `wc -c` 需要3分钟，然后 `echo Hallo welt!` "
+"需要5分钟来运行，最后对其输出运行 `wc` 需要3分钟。即使 `echo Hello World!` "
+"本可以在4分钟内完成，它也要实际花费8分钟，因为第一个步骤必须等待 `echo Hallo "
+"welt!` 完成。很显然，运算量大时这样的表现会很差劲。"
 
 #: ../../src/topics/workflows.md:509 85dd63daf04546b78bdcb68c1d985fa9
 msgid ""
