@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: Common Workflow Language User Guide\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-12-16 11:48+0100\n"
-"PO-Revision-Date: 2024-10-08 03:26+0000\n"
+"PO-Revision-Date: 2024-10-11 11:16+0000\n"
 "Last-Translator: Zoë Ma <zoe.ma@curii.com>\n"
 "Language-Team: Chinese (Simplified Han script) <https://hosted.weblate.org/"
 "projects/commonwl/user-guide/zh_Hans/>\n"
@@ -4202,6 +4202,9 @@ msgid ""
 " make an entire workflow a single step in another workflow! Convert our "
 "two-step workflow to a single step subworkflow:"
 msgstr ""
+"好的，那么，我们对不依赖其它样本、可以独立进行的步骤，该如何分散？请回想[嵌套"
+"的工作流](#nested-workflows)部分，其中写道，我们可以让整个工作流称为另一个工"
+"作流中的一个步骤！我们将两步骤的工作流改写为单一步骤的子工作流："
 
 #: ../../src/topics/workflows.md:513 fac138ba275745898b763a7d719a8235
 msgid "`scatter-nested-workflow.cwl`"
@@ -4211,18 +4214,20 @@ msgstr "`scatter-nested-workflow.cwl`"
 msgid ""
 "Now the scatter acts on a single step, but that step consists of two "
 "steps so each step is performed in parallel."
-msgstr ""
+msgstr "这样，分散就可以针对一个单独的步骤进行，不过该步骤本身分为两个子步骤。这就让"
+"每个分散的步骤并行进行。"
 
 #: ../../src/topics/workflows.md:522 b0bf01dad1234a1db3c87b10953e42ef
 msgid "Conditional Workflows"
-msgstr ""
+msgstr "条件性工作流"
 
 #: ../../src/topics/workflows.md:524 8d933ed1ec6e408589f781e3a425b869
 msgid ""
 "This workflow contains a conditional step and is executed based on the "
 "input. This allows workflows to skip additional steps based on input "
 "parameters given at the start of the program or by previous steps."
-msgstr ""
+msgstr "这个工作流包含一个取决于输入的有条件步骤，可以根据程序起始或先前步骤给出的输"
+"入参数决定是否跳过某些额外步骤。"
 
 #: ../../src/topics/workflows.md:527 9ac7b4f71621411da9a4ca3bc277dcb0
 msgid "`conditional-workflow.cwl`"
@@ -4232,7 +4237,7 @@ msgstr "`conditional-workflow.cwl`"
 msgid ""
 "The first thing you'll notice is that this workflow is only compatible "
 "for version 1.2 or greater of the CWL standards."
-msgstr ""
+msgstr "首先要注意，这个工作流只能兼容于版本1.2或以上的 CWL 标准。"
 
 #: ../../src/topics/workflows.md:573 4742fe09a4264fb8be6f092519de5d72
 msgid ""
@@ -4242,6 +4247,9 @@ msgid ""
 "`in1`  from the workflow contains a value `< 1` this step will be "
 "executed."
 msgstr ""
+"工作流的第一个步骤 (step1) 包含两个输入字段，它将在条件满足时执行 foo.cwl. "
+"这里新出现的字段 `when` 就是进行条件检验的地方。这个例子里，只有当 `in1` "
+"从工作流获取的值小于1 (`< 1`) 时，此步骤才会执行。"
 
 #: ../../src/topics/workflows.md:587 b33ecd2b8af042feb08687e32d4b6bbf
 msgid ""
@@ -4250,61 +4258,69 @@ msgid ""
 "is shown in the log by `INFO [step step1] start` whereas the second step "
 "is skipped as indicated by `INFO [step step2] will be skipped`."
 msgstr ""
+"使用命令如 `cwltool cond-wf-003.1.cwl --val 0`, 则输入参数值 (0) "
+"将满足第一个步骤的条件，从而使之得到执行，并且在日志中以 `INFO [step step1] "
+"start` 出现。相反，第二个步骤则跳过了，即日志中 `INFO [step step2] will be "
+"skipped` 所记。"
 
 #: ../../src/topics/workflows.md:607 7cd80b31a94543358ece7a2d413adce9
 msgid ""
 "When a value of 3 is given the first conditional step will not be "
 "executed but the second step will `cwltool cond-wf-003.1.cwl --val 3`."
 msgstr ""
+"当参数值为3, 如命令 `cwltool cond-wf-003.1.cwl --val 3` "
+"所给出，则第一个条件行步骤不会执行，反之第二个会。"
 
 #: ../../src/topics/workflows.md:627 9679e32f65e0482a8b083387e4a18c1f
 msgid ""
 "If no conditions are met for example when using `--val 2` the workflow "
 "will raise a permanentFail."
-msgstr ""
+msgstr "如果条件都不成立，如用 `--val 2` 所导致的，则工作流将发起 permanentFail "
+"异常。"
 
 #: ../../src/topics/yaml-guide.md:1 4fa76441f95d45fab76ab7eef8d7d4d2
 msgid "YAML Guide"
-msgstr ""
+msgstr "YAML 语言指南"
 
 #: ../../src/topics/yaml-guide.md:6 705765787eb84ecaae004194225924cb
 msgid ""
 "[YAML][yaml] is a file format designed to be readable by both computers "
 "and humans. This guide introduces the features of YAML that are relevant "
 "when writing CWL descriptions and input parameter files."
-msgstr ""
+msgstr "[YAML][yaml] 是一种让计算机和人都能读懂的文件格式。这部分指南主要针对编写 "
+"CWL 描述和输入参数文件，介绍 YAML 的特性。"
 
 #: ../../src/topics/yaml-guide.md:13 cb243f6ab11f48ffb5c91945c4e0d101
 msgid "You can skip this section if you are already comfortable with YAML."
-msgstr ""
+msgstr "如果你已经能够得心应手地运用 YAML, 这一部分可以跳过。"
 
 #: ../../src/topics/yaml-guide.md:16 cfc95d15e33a492f842649f92ced941d
 msgid "Contents"
-msgstr ""
+msgstr "目录"
 
 #: ../../src/topics/yaml-guide.md:18 f618d44d202f4c2ea6ff72a1dca2c659
 msgid "[Key-Value Pairs](#key-value-pairs)"
-msgstr ""
+msgstr "[键值对](#key-value-pairs)"
 
 #: ../../src/topics/yaml-guide.md:19 36bfa6ed40c54bd99826bedff12c759d
 msgid "[Comments](#comments)"
-msgstr ""
+msgstr "[注释](#comments)"
 
 #: ../../src/topics/yaml-guide.md:20 61913753eb0c4c728889b47f1110be24
 msgid "[Maps](#maps)"
-msgstr ""
+msgstr "[映射](#maps)"
 
 #: ../../src/topics/yaml-guide.md:21 0de824a05eea46209aafa6f9e2e8623c
 msgid "[Arrays](#arrays)"
-msgstr ""
+msgstr "[数组](#arrays)"
 
 #: ../../src/topics/yaml-guide.md:22 95627bc476b3415ca4d77246125137d2
 msgid "[JSON Style](#json-style)"
-msgstr ""
+msgstr "[JSON 样式](#json-style)"
 
 #: ../../src/topics/yaml-guide.md:24 3f64a6d33d9a4c22a8a839a8def82686
 msgid "Key-Value Pairs"
-msgstr ""
+msgstr "键值对"
 
 #: ../../src/topics/yaml-guide.md:26 2f74f6eaa8d84dc9b4d0a166844dedbe
 msgid ""
@@ -4315,6 +4331,11 @@ msgid ""
 "special meaning in the CWL specification and underscored key names "
 "otherwise. For example:"
 msgstr ""
+"根本而言，YAML 格式的文件是一组形如 `key: value`（即“键: 值”）的_键值对_ "
+"(key-value pair). 这里，冒号 `:` 后的空白字符是不可少的。CWL "
+"文件中的键名不得包含空白字符——CWL 规约中有特殊含义的词组键名写为 "
+"[_camelCase_][camelCase]（“驼峰”大小写），无特殊含义者用下划线 (_) "
+"分隔键名中的词。例如："
 
 #: ../../src/topics/yaml-guide.md:42 514365e59d9648deb896e2068d967a64
 msgid ""
