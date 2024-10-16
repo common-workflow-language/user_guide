@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: Common Workflow Language User Guide\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-12-16 11:48+0100\n"
-"PO-Revision-Date: 2024-10-11 11:16+0000\n"
+"PO-Revision-Date: 2024-10-16 10:15+0000\n"
 "Last-Translator: Zoë Ma <zoe.ma@curii.com>\n"
 "Language-Team: Chinese (Simplified Han script) <https://hosted.weblate.org/"
 "projects/commonwl/user-guide/zh_Hans/>\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 5.8-dev\n"
+"X-Generator: Weblate 5.8-rc\n"
 "Generated-By: Babel 2.12.1\n"
 
 #: ../../LICENSE.md:2 a48279b2231348eea3f7a3b74a6362ac
@@ -4345,6 +4345,9 @@ msgid ""
 "representation), Boolean (`true` or `false`), or more complex nested "
 "types (see below)."
 msgstr ""
+"上面这一段 YAML 包含4个键——`first_name`, `last_name`, `age_years`, 以及 `home"
+"`——及其对应的值。值可以是字符串，数值（整数，浮点数，或者科学记数法），布尔值"
+"（真值 `true` 或非真值 `false`），或者更复杂的嵌套类型（见下）。"
 
 #: ../../src/topics/yaml-guide.md:51 6939eb7e783744d7bcf75ea0a7cae129
 msgid ""
@@ -4356,27 +4359,34 @@ msgid ""
 "want to specify a fixed numeric value to a command, make sure that you "
 "wrap that numeric value in quotes: `baseCommand: [echo, \"42\"]`."
 msgstr ""
+"值可以用括号包围起来，但要当心这样做可能改变其理解：`\"1234\"` "
+"会被当作字符串，而 `1234` "
+"为整数。有的时候，这之间的区别会很重要，例如描述命令的参数时：CWL "
+"语言中，`baseCommand` 的所有部分都必须为字符串；因此，如果你打算给命令传递一"
+"个数值常数作为参数值，那就必须将该数值用括号包围起来：`baseCommand: [echo, "
+"\"42\"]`."
 
 #: ../../src/topics/yaml-guide.md:61 96e1776b09e840ebbc9b4b7e01da0e43
 msgid "Comments"
-msgstr ""
+msgstr "注释"
 
 #: ../../src/topics/yaml-guide.md:63 8b17f7557c3540b2b0d0beca0fe4ebc7
 msgid ""
 "You may use `#` to add comments to your CWL and parameter files. Any "
 "characters to the right of ` #` will be ignored by the program "
 "interpreting the YAML. For example:"
-msgstr ""
+msgstr "在 CWL 和参数文件中，可以用 `#` 符号引入注释。每行中 ` #` "
+"之后的全部字符都会被 YAML 解释程序忽略。例如："
 
 #: ../../src/topics/yaml-guide.md:76 13da997c82c04023a4b7bb36b76e969d
 msgid ""
 "If there is anything on the line before the comment, be sure to add at "
 "least one space before the `#`!"
-msgstr ""
+msgstr "如果在某行里，注释之前有任何内容，记得 `#` 前需要至少一个空白字符！"
 
 #: ../../src/topics/yaml-guide.md:79 b9fc191166a64450b64a8182adabad75
 msgid "Maps"
-msgstr ""
+msgstr "映射"
 
 #: ../../src/topics/yaml-guide.md:81 aedf8c4f615845ad91a7947217005d6e
 msgid ""
@@ -4388,6 +4398,10 @@ msgid ""
 "the key to which they belong (the \"parent\"), and should be indented "
 "with two spaces (⇥tab characters are not allowed). For example:"
 msgstr ""
+"用 CWL 描述工具或工作流时，通常需要构造更加复杂、多级嵌套的表示。这样的层级结"
+"构称为“映射”；用 YAML 表示映射，是用一组键值对作为某个键的值。这样（作为值）"
+"的键值对有时称为“子”键值对，写为其所属键（“母”键）下另起的新行，且应该用两个"
+"空格字符增加一级缩进（制表符⇥不允许用作此目的）。例如："
 
 #: ../../src/topics/yaml-guide.md:104 f0f1f414f74342a89065ba5ded8668e5
 msgid ""
@@ -4401,10 +4415,16 @@ msgid ""
 " example YAML above, here is a graphical representation of the `inputs` "
 "object it describes."
 msgstr ""
+"上面的 YAML 样本展示了快速构建复杂嵌套对象描述的办法。`inputs` "
+"这个映射包含单独一个键 `example_flag`, 而后者本身又包含两个键 `type` 和 "
+"`inputBinding`; 其中，`inputBinding` 这个子键又包含另外两个键值对 (`position`"
+" 和 `prefix`). 如果要为某一个键提供多个单值或子键值对值，请参见后面的[数组](#"
+"arrays)部分。这里，我们用如下图形表示它所描述的 `inputs` 这个对象，"
+"以供与上面的 YAML 对照。"
 
 #: ../../src/topics/yaml-guide.md:127 965405e2a45a4cbb8f227bc8ceeb05df
 msgid "Arrays"
-msgstr ""
+msgstr "数组"
 
 #: ../../src/topics/yaml-guide.md:129 5aca9a90fb6149529ed717992746a2f3
 msgid ""
@@ -4416,14 +4436,18 @@ msgid ""
 "this with an _array_, where each value is defined on its own line and "
 "preceded by `-`. For example:"
 msgstr ""
+"有些情况下，我们需要为某个键提供多个值或对象。如前面的[映射](#maps)部分所述，"
+"一个键下可以映射多个键值对。不过，我们还可以为某个键指定多个值，同时无需为每"
+"个值都添加一个独特的子键。这可以通过“数组”实现；数组中的每个元素值出现在 "
+"`-`（短线）符号后的新行上。例如："
 
 #: ../../src/topics/yaml-guide.md:146 d1c9e72e004b4fb4a6efb7748a15ab6f
 msgid "and a more complex example combining maps and arrays:"
-msgstr ""
+msgstr "以及将映射与数组结合的一个较复杂例子："
 
 #: ../../src/topics/yaml-guide.md:167 9a3d6879404745a48cd394bf86865dbc
 msgid "JSON Style"
-msgstr ""
+msgstr "JSON 样式"
 
 #: ../../src/topics/yaml-guide.md:169 6a7cca0339794e679329b00d89e29d2b
 msgid ""
@@ -4431,10 +4455,12 @@ msgid ""
 "arrays can also be defined in YAML using the native JSON syntax. For "
 "example:"
 msgstr ""
+"YAML 的基础是 [JavaScript Object Notation (JSON)][json]. YAML "
+"映射与数组都可以用 JSON 原生的语法表达。例如："
 
 #: ../../src/topics/yaml-guide.md:177 d8feed2d36d04fe283b9de9784d91941
 msgid "and:"
-msgstr ""
+msgstr "以及："
 
 #: ../../src/topics/yaml-guide.md:184 5156ad32791048f8ace51475d7689575
 msgid ""
@@ -4445,10 +4471,14 @@ msgid ""
 "However, as the second example above shows, it can severely affect the "
 "readability of a YAML file, and should be used sparingly."
 msgstr ""
+"原生 JSON 可以用于表达某字段值有意为空（如使用 `[]` "
+"代表空数组），以及多个值适合出现在同一行内的情况（如为 shell "
+"命令行提供选项和参数值的时候）。不过，如上第二个例子所示，这种格式可能让 "
+"YAML 文件的可读性大打折扣，因此应慎用。"
 
 #: ../../src/topics/yaml-guide.md:194 ce49f80e6fc0498b8ad298fb1f0268f3
 msgid "Reference"
-msgstr ""
+msgstr "参考资料"
 
 #: ../../src/topics/yaml-guide.md:196 180d261392a644fcb8ff47d7a4a160c0
 msgid ""
@@ -4456,21 +4486,25 @@ msgid ""
 " us while we wrote this guide, though it also covers features that are "
 "not valid in CWL."
 msgstr ""
+"[Learn YAML in Y Minutes][yaml-y-mins] "
+"作为参考资料在我们写作本《指南》的过程中起到了很大的帮助，"
+"不过其中介绍的部分语言特性不适用于 CWL."
 
 #: ../../src/tutorials.md:1 d682035afebf4c128755bd4e58780dd2
 msgid "Tutorials"
-msgstr ""
+msgstr "教程"
 
 #: ../../src/tutorials.md:5 d9adeab63ec54084bc41fb90f264d3ae
 msgid ""
 "This is a list of tutorials provided by the CWL community. Use the `Edit "
 "this page` link in the menu if you would like to add another tutorial to "
 "the list."
-msgstr ""
+msgstr "这里是 CWL 社区提供的一份教程列表。如果您想添加新的教程，请使用菜单栏中的 `"
+"Edit this page`（编辑此页面）链接。"
 
 #: ../../src/tutorials.md:7 23c81edb650b4f86a60c5e0bcedeac1d
 msgid "Beginner Tutorials"
-msgstr ""
+msgstr "入门教程"
 
 #: ../../src/tutorials.md:9 87ddaa1e5f57445c8f13803722aa146e
 msgid ""
@@ -4478,22 +4512,24 @@ msgid ""
 "Contributors.](https://carpentries-incubator.github.io/cwl-novice-"
 "tutorial/)"
 msgstr ""
+"[Introduction to Workflows with Common Workflow Language: For "
+"Contributors.](https://carpentries-incubator.github.io/cwl-novice-tutorial/)"
 
 #: ../../src/tutorials.md:11 b8ee193ba533498db6263e0f5f4ec45f
 msgid "Advanced Tutorials"
-msgstr ""
+msgstr "进阶教程"
 
 #: ../../src/tutorials.md:13 67c4b3923fce46fdab025495125c91d4
 msgid "[Typescript in CWL](https://github.com/umccr/cwl-ica/wiki/TypeScript)"
-msgstr ""
+msgstr "[Typescript in CWL](https://github.com/umccr/cwl-ica/wiki/TypeScript)"
 
 #: ../../src/tutorials.md:15 e640316669104239970794191b6da38b
 msgid "Bioinformatics Tutorials"
-msgstr ""
+msgstr "生物信息学相关教程"
 
 #: ../../src/tutorials.md:17 efe94af44b874f9b81b245fbdee43f7f
 msgid "[rnaseq with CWL](https://arvados.github.io/rnaseq-cwl-training/)"
-msgstr ""
+msgstr "[rnaseq with CWL](https://arvados.github.io/rnaseq-cwl-training/)"
 
 #~ msgid "In CWL, everything must be directly stated."
 #~ msgstr "在CWL中，一切都必须直接说明。"
