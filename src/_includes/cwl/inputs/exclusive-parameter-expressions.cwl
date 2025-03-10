@@ -13,7 +13,7 @@ inputs:
           - fastq
           - fasta.gz
           - fastq.gz
-        inputBinding:
+        arguments:
           position: 0
           prefix: '--format'
 outputs:
