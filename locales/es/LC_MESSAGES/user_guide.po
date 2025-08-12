@@ -9,9 +9,8 @@ msgstr ""
 "Project-Id-Version: Common Workflow Language User Guide\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-12-16 11:48+0100\n"
-"PO-Revision-Date: 2024-07-10 21:09+0000\n"
-"Last-Translator: Benjamin Esteban González Morales <benja314gonzalez@gmail."
-"com>\n"
+"PO-Revision-Date: 2024-12-18 17:00+0000\n"
+"Last-Translator: Julian Lopez Gordillo <julian.lopezgordillo@naturalis.nl>\n"
 "Language-Team: Spanish <https://hosted.weblate.org/projects/commonwl/"
 "user-guide/es/>\n"
 "Language: es\n"
@@ -19,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.7-dev\n"
+"X-Generator: Weblate 5.9.2-dev\n"
 "Generated-By: Babel 2.12.1\n"
 
 #: ../../LICENSE.md:2 a48279b2231348eea3f7a3b74a6362ac
@@ -501,6 +500,8 @@ msgid ""
 "What should I do when I get CWL Parameter Reference error due to hyphen "
 "in an input identifier?"
 msgstr ""
+"¿Qué debo hacer cuando obtengo un error de Referencia de Parámetro CWL "
+"debido a un guión en un identificador de entrada?"
 
 #: ../../src/faq.md:375 e39b65947b294b20a444f18d780246f4
 msgid "If `cwltool --validate` returns valid"
@@ -511,9 +512,8 @@ msgid "But executing it causes an error like:"
 msgstr "Pero ejecutarlo causa un error como:"
 
 #: ../../src/faq.md:396 2b96665acac449758b852bbe7600e007
-#, fuzzy
 msgid "The file is here"
-msgstr "El documento está aquí"
+msgstr "El archivo está aquí"
 
 #: ../../src/faq.md:410 f59751d2f0014e59af7879a748062cec
 msgid "Problem caused by `-` (hyphen character)."
@@ -533,7 +533,7 @@ msgstr ""
 
 #: ../../src/faq.md:442 fc407a9e8d8c4b699d9cd14b369343b5
 msgid "How do I use CWL and cwltool with Singularity?"
-msgstr ""
+msgstr "¿Cómo uso CWL y cwltool con Singularity?"
 
 #: ../../src/faq.md:445 239f5f81cef042b08fb8015c36b3ecad
 msgid ""
@@ -543,9 +543,13 @@ msgid ""
 "Directly specifying a Singularity format container is not part of the CWL"
 " standards."
 msgstr ""
+"Los estándares CWL se han construido en base a contenedores en formato "
+"Docker (opcionales). El ejecutor de referencia y otras implementaciones de "
+"CWL soportan ejecutar dichos contenedores en formato Docker usando el motor "
+"de Singularity. Especificar directamente un contenedor en formato "
+"Singularity no es parte de los estándares CWL."
 
 #: ../../src/faq.md:450 61641314d82b43e982e54c64c73232c5
-#, fuzzy
 msgid "How do I debug the JavaScript in my CWL tool?"
 msgstr "¿Como corrijo (debug) el Javascript en mi herramienta CLW?"
 
@@ -562,20 +566,25 @@ msgstr ""
 
 #: ../../src/index.md:1 1c9fb72b83c9467a9672943fb47ffe32
 msgid "Common Workflow Language User Guide"
-msgstr ""
+msgstr "Guía de Usuario del Common Workflow Language"
 
 #: ../../src/index.md:3 aaa44578e27345e682ab44686b4da159
+#, fuzzy
 msgid ""
 "This guide will introduce you to writing workflows using the [Common "
 "Workflow Language](https://www.commonwl.org/) (CWL) open standards. This "
 "guide describes the latest specification {{ cwl_version }}."
 msgstr ""
+"Esta guía te presentará cómo escribir workflows (procesos de trabajo) usando "
+"los estándares abiertos [Common Workflow Language](https://www.commonwl.org/)"
+" (CWL). Esta guía describe la última especificación {{ cwl_version }}."
 
 #: ../../src/index.md:7 0adfc2adb0c74372b25d197dd3a73b8b
 msgid "Contributions and Feedback are Welcome!"
 msgstr "¡Aceptamos feedback y contribuciones!"
 
 #: ../../src/index.md:9 96c8dca812f1415db7c5c006b0c0e022
+#, fuzzy
 msgid ""
 "If you find that something is missing from this guide, or if you would "
 "like to provide other feedback, file an Issue on the [project repository "
@@ -583,6 +592,10 @@ msgid ""
 "Request by clicking the \"Edit this page\" button at the right sidebar of"
 " each page."
 msgstr ""
+"Si encuentras que falta algo en esta guía, o si te gustaría proporcionar "
+"otros comentarios, abre un Issue en el [repositorio de esta guía][repo]. "
+"También puedes sugerir cambios directamente en un Pull Request al clicar el "
+"botón \"Editar esta página\" situado en la columna derecha de cada página."
 
 #: ../../src/index.md:16 35c50bb5c3a345b4a4ae66b2df065376
 msgid "Navigating the User Guide"

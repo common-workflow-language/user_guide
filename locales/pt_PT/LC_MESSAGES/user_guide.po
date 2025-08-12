@@ -9,15 +9,16 @@ msgstr ""
 "Project-Id-Version: Common Workflow Language User Guide\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-12-16 11:48+0100\n"
-"PO-Revision-Date: 2023-04-03 19:41+0000\n"
+"PO-Revision-Date: 2025-07-29 17:04+0000\n"
 "Last-Translator: ssantos <ssantos@web.de>\n"
+"Language-Team: Portuguese (Portugal) <https://hosted.weblate.org/projects/"
+"commonwl/user-guide/pt_PT/>\n"
 "Language: pt_PT\n"
-"Language-Team: Portuguese (Portugal) "
-"<https://hosted.weblate.org/projects/commonwl/user-guide/pt_PT/>\n"
-"Plural-Forms: nplurals=2; plural=n > 1;\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n > 1;\n"
+"X-Generator: Weblate 5.13-dev\n"
 "Generated-By: Babel 2.12.1\n"
 
 #: ../../LICENSE.md:2 a48279b2231348eea3f7a3b74a6362ac
@@ -178,9 +179,8 @@ msgid "How do I create non \"`File`\" types using `evalFrom`?"
 msgstr "Usando `evalFrom` para Tipos Diferentes de \"`File`\""
 
 #: ../../src/faq.md:41 8333f51e3f5945fe8963adfc6685bcb1
-#, fuzzy
 msgid "How do I rename an input file?"
-msgstr "Renomear um Arquivo de Entrada"
+msgstr "Como posso renomear um ficheiro de entrada?"
 
 #: ../../src/faq.md:43 f6b88d9154d049d7807afa9bb0f1ac98
 msgid ""
@@ -195,9 +195,8 @@ msgstr ""
 "utilizar os nomes dados por padrão quando estes arquivos foram criados."
 
 #: ../../src/faq.md:59 833510f5896b4a6eb5875d25eca5b047
-#, fuzzy
 msgid "How do I rename an output file?"
-msgstr "Renomear um Arquivo de Saída"
+msgstr "Como posso renomear um ficheiro de saída?"
 
 #: ../../src/faq.md:61 207e2f97d1c44233ae3f109c5a6ec944
 msgid ""
@@ -215,9 +214,8 @@ msgid ""
 msgstr ""
 
 #: ../../src/faq.md:86 8641f105131b4ac1bca7e0a46756ef79
-#, fuzzy
 msgid "How do I reference a local script?"
-msgstr "Como Fazer Referência a um Script Local"
+msgstr "Como faço referência a um script local?"
 
 #: ../../src/faq.md:88 d3e43b40d6994b32bc37067ee116418e
 msgid "There are two ways to reference a local script:"
@@ -294,9 +292,8 @@ msgstr ""
 "solução mais elegante para este problema."
 
 #: ../../src/faq.md:165 6c98b7948059411b8e09cf03a552c5ab
-#, fuzzy
 msgid "How can I model a \"one-or-the-other\" parameter?"
-msgstr "Modelar um Parâmetro do tipo \"um-ou-o-outro\""
+msgstr "Como posso modelar um parâmetro \"um ou outro\"?"
 
 #: ../../src/faq.md:167 d1424da3f43c4519a4c4735f4a720341
 msgid ""
@@ -4426,4 +4423,3 @@ msgstr ""
 #~ " only part that is really new "
 #~ "is the `dockerRequirement` section."
 #~ msgstr ""
-
