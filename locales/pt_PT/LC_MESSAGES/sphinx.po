@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: Common Workflow Language User Guide\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-01-25 14:33+0100\n"
-"PO-Revision-Date: 2024-07-14 10:09+0000\n"
+"PO-Revision-Date: 2025-07-29 17:04+0000\n"
 "Last-Translator: ssantos <ssantos@web.de>\n"
 "Language-Team: Portuguese (Portugal) <https://hosted.weblate.org/projects/"
 "commonwl/cwl-user-guide-sphinx/pt_PT/>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Generator: Weblate 5.7-dev\n"
+"X-Generator: Weblate 5.13-dev\n"
 
 #: ../../src/_templates/sidebar-nav-bs.html:1
 #: d65b012160e9455eb4d2628279fffc42
@@ -27,4 +27,4 @@ msgstr "Navegação principal"
 #: ../../src/_templates/sidebar-nav-bs.html:3
 #: 4b3441eb77f448daa60718b7bfa862db
 msgid "Section Navigation"
-msgstr ""
+msgstr "Secção de navegação"
