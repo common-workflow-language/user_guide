@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: Common Workflow Language User Guide\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-01-25 14:33+0100\n"
-"PO-Revision-Date: 2024-12-17 12:00+0000\n"
-"Last-Translator: தமிழ்நேரம் <anishprabu.t@gmail.com>\n"
+"PO-Revision-Date: 2024-12-20 20:00+0000\n"
+"Last-Translator: Michael Crusoe <mrc@commonwl.org>\n"
 "Language-Team: Tamil <https://hosted.weblate.org/projects/commonwl/"
 "user-guide/ta/>\n"
 "Language: ta\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.9\n"
+"X-Generator: Weblate 5.10-dev\n"
 
 #: ../../LICENSE.md:2
 #: 4e203044f0464fd5a3256430391dde12
@@ -328,7 +328,7 @@ msgstr ""
 #: ../../src/faq.md:247
 #: a854006054ce4ffe94bbfa73bdbecbf2
 msgid "<a name=\"enuminputs\"></a>"
-msgstr "<a பெயர் = \"enuminputs\"> </a>"
+msgstr "<a name=\"enuminputs\"></a>"
 
 #: ../../src/faq.md:248
 #: f80eb714e9df417fbba555b5dd5f4d8c
@@ -346,7 +346,7 @@ msgstr ""
 #: ../../src/faq.md:267
 #: ad1c26711ccd4efd8fdb25f9293d33fd
 msgid "<a name=\"recordinputs\"></a>"
-msgstr "<a பெயர் = \"RecordInputs\"> </a>"
+msgstr "<a name=\"recordinputs\"></a>"
 
 #: ../../src/faq.md:268
 #: 49e2095b51f84f609f5d4bc088ad9745
