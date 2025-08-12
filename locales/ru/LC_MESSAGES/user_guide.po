@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: Common Workflow Language User Guide\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-01-25 14:33+0100\n"
-"PO-Revision-Date: 2025-01-07 06:07+0000\n"
-"Last-Translator: gfbdrgng <hnaofegnp@hldrive.com>\n"
+"PO-Revision-Date: 2025-08-12 10:22+0000\n"
+"Last-Translator: Michael Crusoe <mrc@commonwl.org>\n"
 "Language-Team: Russian <https://hosted.weblate.org/projects/commonwl/"
 "user-guide/ru/>\n"
 "Language: ru\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
 "n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
-"X-Generator: Weblate 5.10-dev\n"
+"X-Generator: Weblate 5.13-dev\n"
 
 #: ../../LICENSE.md:2
 #: 4e203044f0464fd5a3256430391dde12
@@ -1544,7 +1544,7 @@ msgstr ""
 #: ecf2b9c0b1664afe9c4e180610610021
 msgid "Include [attribution information][license-example] for the author(s) of the CWL tool or workflow description. Use unambiguous identifiers like [ORCID][orcid]."
 msgstr ""
-"Включите [информацию об авторстве][пример лицензии] для автора(ов) описания "
+"Включите [информацию об авторстве][license-example] для автора(ов) описания "
 "инструмента CWL или рабочего процесса. Используйте однозначные "
 "идентификаторы, например [ORCID][orcid]."
 
@@ -1670,7 +1670,7 @@ msgid "Software containers should be made to be conformant to the [\"Recommendat
 msgstr ""
 "Контейнеры для программного обеспечения должны соответствовать ["
 "\"Рекомендациям по упаковке и контейнеризации программного обеспечения для "
-"биоинформатики\"][контейнеры] (также полезны для других дисциплин)."
+"биоинформатики\"][containers] (также полезны для других дисциплин)."
 
 #: ../../src/topics/command-line-tool.md:1
 #: 3f4e98f6bfa141feba8c4b120e3d03e8
