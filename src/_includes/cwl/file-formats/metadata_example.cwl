@@ -9,7 +9,7 @@ inputs:
     type: File
     label: Aligned sequences in BAM format
     format: edam:format_2572
-    inputBinding:
+    arguments:
       position: 1
 
 baseCommand: [ wc, -l ]
