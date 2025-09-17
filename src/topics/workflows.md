@@ -402,6 +402,7 @@ This feature tells the runner that you wish to run a tool or workflow multiple t
 of inputs. The workflow then takes the input(s) as an array and will run the specified step(s)
 on each element of the array as if it were a single input. This allows you to run the same workflow
 on multiple inputs without having to generate many different commands or input yaml files.
+To use `scatter`, `ScatterFeatureRequirement` must be specified in the workflow or workflow step requirements.
 
 ```cwl
 requirements:
@@ -439,13 +440,12 @@ steps:
 ```
 
 Here we've added a new field to the step `echo` called `scatter`. This field tells the
-runner that we'd like to scatter over this input for this particular step. Note that
+runner that we'd like to scatter over this input for this particular step. An input parameter may be listed more than once, if a parameter is listed more than once, it becomes
+a nested array. As a result, upstream parameters which are connected to the
+scattered parameters must be arrays. Note that
 the input name listed after scatter is the one of the step's input, not a workflow level input.
 
-For our first scatter, it's as simple as that! Since our tool doesn't collect any outputs, we
-still use `outputs: []` in our workflow, but if you expect that the final output of your
-workflow will now have multiple outputs to collect, be sure to update that to an array type
-as well!
+For our first scatter, it's as simple as that! Each job in the scatter results in an entry in the output array because all output parameter types are also implicitly wrapped in arrays. Since our tool doesn't collect any outputs, we still use `outputs: []` in our workflow, but if you expect that the final output of your workflow will now have multiple outputs to collect, be sure to update that to an array type as well!
 
 Using the following input file:
 
@@ -518,6 +518,116 @@ two-step workflow to a single step subworkflow:
 
 Now the scatter acts on a single step, but that step consists of two steps so each step is performed
 in parallel.
+
+If `scatter` declares more than one input parameter,
+`scatterMethod` describes how to divide the inputs into separate jobs.
+There are 3 scatter methods in CWL: `dot_product`, `flat_crossproduct`, and `nested_crossproduct`.
+
+`dotproduct` specifies that each of the input arrays are aligned,
+and one element taken from each array to construct each job.
+It is an error if all input arrays are not the same length.
+
+```cwl
+#!/usr/bin/env cwl-runner
+cwlVersion: v1.2
+class: Workflow
+
+requirements:
+  ScatterFeatureRequirement: {}
+
+inputs:
+  message_file: File[]
+  message_array: string[]
+
+outputs:
+  output_array:
+    type: File[]
+    outputSource: step1/output
+
+steps:
+  step1:
+    run: example.cwl
+    scatter: [input_file, input_array]
+    scatterMethod: dotproduct
+    in:
+      input_file: message_file
+      input_array: message_array
+    out: [output]
+  ```
+
+`nested_crossproduct` specifies the Cartesian product of the inputs,
+producing a job for every combination of the scattered inputs. The
+output must be nested arrays for each level of scattering, in the
+order that the input arrays are listed in the `scatter` field.
+
+```cwl
+#!/usr/bin/env cwl-runner
+cwlVersion: v1.2
+class: Workflow
+
+requirements:
+  ScatterFeatureRequirement: {}
+
+inputs:
+  message_file: File[]
+  message_array: string[]
+
+outputs:
+  output_array:
+    type:
+      type: array
+      items:
+        type: array
+        items: File
+    outputSource: step1/output
+
+steps:
+  step1:
+    run: example.cwl
+    scatter: [input_file, input_array]
+    scatterMethod: nested_crossproduct
+    in:
+      input_file: message_file
+      input_array: message_array
+    out: [output]
+```
+
+`flat_crossproduct` specifies the Cartesian product of the inputs,
+producing a job for every combination of the scattered inputs. The
+output arrays must be flattened to a single level, but otherwise listed in the
+order that the input arrays are listed in the `scatter` field.
+
+```cwl
+#!/usr/bin/env cwl-runner
+cwlVersion: v1.2
+class: Workflow
+
+requirements:
+  ScatterFeatureRequirement: {}
+
+inputs:
+  message_file: File[]
+  message_array: string[]
+
+outputs:
+    output_array:
+    type:
+      type: array
+      items:
+        type: array
+        items: File
+    outputSource: step1/output   
+
+steps:
+  step1:
+    run: example.cwl
+    scatter: [input_file, input_array]
+    scatterMethod: flat_crossproduct
+    in:
+      input_file: message_file
+      input_array: message_array
+    out: [output]
+```
 
 ## Conditional Workflows
 
