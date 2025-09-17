@@ -29,7 +29,7 @@ dependencies = [
     "cwl-utils==0.*",
     "myst-parser==3.*",
     "pydata-sphinx-theme==0.*",
-    "sphinx==7.*",
+    "sphinx==8.*",
     "sphinx-reredirects==0.1.*",
     "sphinxcontrib-runcmd==0.2.*",
     "sphinx-favicon",
