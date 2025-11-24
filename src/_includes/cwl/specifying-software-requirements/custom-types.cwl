@@ -29,11 +29,11 @@ hints:
 inputs:
   proteinFile:
     type: File
-    inputBinding:
+    arguments:
       prefix: --input
   applications:
     type: InterProScan-apps.yml#apps[]?
-    inputBinding:
+    arguments:
       itemSeparator: ','
       prefix: --applications
 

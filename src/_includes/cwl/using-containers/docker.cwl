@@ -8,7 +8,7 @@ hints:
 inputs:
   src:
     type: File
-    inputBinding:
+    arguments:
       position: 1
 outputs:
   example_out:

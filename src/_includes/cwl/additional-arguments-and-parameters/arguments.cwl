@@ -10,7 +10,7 @@ arguments: ["-d", $(runtime.outdir)]
 inputs:
   src:
     type: File
-    inputBinding:
+    arguments:
       position: 1
 outputs:
   classfile:

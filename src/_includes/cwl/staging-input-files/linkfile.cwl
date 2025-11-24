@@ -14,7 +14,7 @@ requirements:
 inputs:
   src:
     type: File
-    inputBinding:
+    arguments:
       position: 1
       valueFrom: $(self.basename)
 
