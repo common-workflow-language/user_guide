@@ -30,7 +30,7 @@ dependencies = [
     "myst-parser==3.*",
     "pydata-sphinx-theme==0.*",
     "sphinx==7.*",
-    "sphinx-reredirects==0.1.*",
+    "sphinx-reredirects==1.1.*",
     "sphinxcontrib-runcmd==0.2.*",
     "sphinx-favicon",
     "python-Levenshtein",
