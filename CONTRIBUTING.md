@@ -98,7 +98,7 @@ repository for reference while revising.
 ## Building
 
 The user guide uses [Sphinx](https://www.sphinx-doc.org/), a Python documentation
-tool. You must have a recent version of Python 3.6+ installed to build the project
+tool. You must have a recent version of Python 3.10+ installed to build the project
 locally. It is also recommended having `make` (otherwise look at the commands used
 in `Makefile`).
 
