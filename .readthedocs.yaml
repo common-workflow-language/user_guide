@@ -3,10 +3,10 @@ version: 2
 # NOTE: If you modify this file to install a package with pip or apt, please
 #       verify if we need the same package added to our CI.
 build:
-  os: ubuntu-22.04
+  os: ubuntu-24.04
   tools:
-    python: "3.9"
-    nodejs: "16"
+    python: "3.14"
+    nodejs: "24"
   apt_packages:
     - graphviz
     - tree
