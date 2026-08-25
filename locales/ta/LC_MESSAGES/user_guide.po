@@ -8,16 +8,16 @@ msgstr ""
 "Project-Id-Version: Common Workflow Language User Guide\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-01-25 14:33+0100\n"
-"PO-Revision-Date: 2025-08-15 04:02+0000\n"
-"Last-Translator: தமிழ்நேரம் <anishprabu.t@gmail.com>\n"
-"Language-Team: Tamil <https://hosted.weblate.org/projects/commonwl/"
-"user-guide/ta/>\n"
+"PO-Revision-Date: 2026-02-24 16:09+0000\n"
+"Last-Translator: தமிழ்நேரம் <tamilneram247@gmail.com>\n"
+"Language-Team: Tamil <https://hosted.weblate.org/projects/commonwl/user-"
+"guide/ta/>\n"
 "Language: ta\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.13-dev\n"
+"X-Generator: Weblate 5.16.1-dev\n"
 
 #: ../../LICENSE.md:2
 #: 4e203044f0464fd5a3256430391dde12
@@ -410,7 +410,7 @@ msgstr ""
 #: fdaec25650ab4b0fb1c527610e24ae5a
 msgid "For example, the filename `a space is here.txt` includes 3 space characters."
 msgstr ""
-"எடுத்துக்காட்டாக, `ஒரு இடம் இங்கே உள்ளது.TXT` 3 இடைவெளி எழுத்துக்களை உள்ளடக்கியது."
+"எடுத்துக்காட்டாக, `ஒரு இடம் இங்கே உள்ளது.உரை` இல் 3 இடைவெளி எழுத்துக்களை உள்ளடக்கியது."
 
 #: ../../src/faq.md:371
 #: 182959fc9f4746d082994e07d05c8cde
@@ -1221,9 +1221,9 @@ msgstr "`pip` உடன்` cwltool` ஐ நிறுவுகிறது."
 #: a81342e756d24c40acc15835d0a768f2
 msgid "If installing the cwltool using the pip command doesn't work for you, the [prerequisites](prerequisites.md) section contains other ways to install `cwltool` and a more detailed list of software and libraries used for following the rest of this user guide."
 msgstr ""
-"PIP கட்டளையைப் பயன்படுத்தி பொபமொகருவியை நிறுவுவது உங்களுக்காக வேலை செய்யாது என்றால், "
-"[முன்நிபந்தனைகள்](prerequisites.md) பிரிவில் `cwltool` ஐ நிறுவ பிற வழிகள் உள்ளன, "
-"மேலும் இந்த பயனரின் மீதமுள்ளவற்றை பின்பற்ற பயன்படுத்தப்படும் மென்பொருள் மற்றும் நூலகங்களின் "
+"pip கட்டளையைப் பயன்படுத்தி பொபமொகருவியை நிறுவுவது உங்களுக்காக வேலை செய்யாது என்றால், "
+"[முன்நிபந்தனைகள்](prerequisites.md) பிரிவில் `cwltool` ஐ நிறுவப் பிற வழிகள் உள்ளன, "
+"மேலும் இந்தப் பயனரின் மீதமுள்ளவற்றை பின்பற்றப் பயன்படுத்தப்படும் மென்பொருள் மற்றும் நூலகங்களின் "
 "விரிவான பட்டியலையும் கொண்டுள்ளது வழிகாட்டி."
 
 #: ../../src/introduction/quick-start.md:51
@@ -2795,7 +2795,7 @@ msgstr ""
 #: a1073b6306044dffb414319ae01f68bb
 msgid "Let's use an example that contains an exclusive `file_format` input parameter that accepts `null` (i.e. no value provided), or any value from an enum."
 msgstr ""
-"`NULL` (அதாவது மதிப்பு எதுவும் வழங்கப்படவில்லை) அல்லது ஒரு ENUM இலிருந்து எந்த "
+"`சுழிய` (அதாவது மதிப்பு எதுவும் வழங்கப்படவில்லை) அல்லது ஒரு எண்ணிக்கை இலிருந்து எந்த "
 "மதிப்பையும் ஏற்றுக்கொள்ளும் பிரத்யேக` file_format` உள்ளீட்டு அளவுருவைக் கொண்ட ஒரு "
 "உதாரணத்தைப் பயன்படுத்துவோம்."
 
@@ -2808,10 +2808,9 @@ msgstr "`பிரத்யேக-அளவுரு-வெளிப்பாட
 #: 9a1d92334685449386dfa3b3a899ed48
 msgid "Note how the JavaScript expression uses the value of the exclusive input parameter without taking into consideration a `null` value. If you provide a valid value, such as “fasta” (one of the values of the enum), your command should execute successfully:"
 msgstr ""
-"`பூச்ய` மதிப்பைக் கருத்தில் கொள்ளாமல் சாவாகைஉரை வெளிப்பாடு பிரத்யேக உள்ளீட்டு அளவுருவின் "
-"மதிப்பை எவ்வாறு பயன்படுத்துகிறது என்பதைக் கவனியுங்கள். “ஃபாச்டா” (ENUM இன் மதிப்புகளில் "
-"ஒன்று) போன்ற சரியான மதிப்பை நீங்கள் வழங்கினால், உங்கள் கட்டளை வெற்றிகரமாக செயல்படுத்த "
-"வேண்டும்:"
+"`சுழிய` மதிப்பைக் கருத்தில் கொள்ளாமல் சாவாகைஉரை வெளிப்பாடு பிரத்யேக உள்ளீட்டு அளவுருவின் "
+"மதிப்பை எவ்வாறு பயன்படுத்துகிறது என்பதைக் கவனியுங்கள். “ஃபாச்டா” (எண்ணிக்கை இன் மதிப்புகளில் "
+"ஒன்று) போன்ற சரியான மதிப்பை நீங்கள் வழங்கினால், உங்கள் கட்டளை வெற்றிகரமாகச் செயல்படுத்த வேண்டும்:"
 
 #: ../../src/topics/inputs.md:280
 #: fb623af4c480411b8fde28d01c981411
@@ -2826,10 +2825,11 @@ msgstr ""
 #: e98e165f6bba40809c90473d72f9d592
 msgid "To correct it, you must remember to use an or operator in your JavaScript expression when using exclusive parameters, or any parameter that allows `null`. For example, the expression could be changed to `$(inputs.file_format || 'auto')`, to have a default value if none was provided in the command line or job input file."
 msgstr ""
-"அதை சரிசெய்ய, பிரத்யேக அளவுருக்களைப் பயன்படுத்தும் போது அல்லது `NULL` ஐ அனுமதிக்கும் எந்"
-"த அளவுருவையும் பயன்படுத்தும் போது உங்கள் சாவாகைஉரை வெளிப்பாட்டில் ஒரு அல்லது ஆபரேட்டரைப் "
-"பயன்படுத்த நினைவில் கொள்ள வேண்டும். எடுத்துக்காட்டாக, வெளிப்பாட்டை கட்டளை வரி அல்லது வேலை "
-"உள்ளீட்டு கோப்பில் எதுவும் வழங்கப்படாவிட்டால் இயல்புநிலை மதிப்பைக் கொண்டிருக்க `$ (உள்ளீடுகள்."
+"அதைச் சரிசெய்ய, பிரத்யேக அளவுருக்களைப் பயன்படுத்தும்போது அல்லது `சுழிய` ஐ அனுமதிக்கும் "
+"எந்த அளவுருவையும் பயன்படுத்தும்போது உங்கள் சாவாகைஉரை வெளிப்பாட்டில் ஒரு அல்லது ஆபரேட்டரைப் "
+"பயன்படுத்த நினைவில் கொள்ள வேண்டும். எடுத்துக்காட்டாக, கட்டளை வரியில் அல்லது வேலை உள்ளீட்டு "
+"கோப்பில் எதுவும் வழங்கப்படவில்லை எனில், வெளிப்பாடு `$(inputs.file_format || 'auto')` "
+"என மாற்றப்படலாம்."
 
 #: ../../src/topics/metadata-and-authorship.md:1
 #: d33aa2353ad44fb885d3a1ee48263dc4
@@ -3363,9 +3363,9 @@ msgstr ""
 #: 764d933cc4da446abd8dd8f913f05dac
 msgid "The workflow is in the `permanentFail` status due to `step_b` failing to execute the non-existent `revv` command. The `step_a` was executed successfully and its output has been cached in your `cachedir` location. You can inspect the intermediate files created:"
 msgstr ""
-"`STEP_B` இல்லாத` ரெவ்.வி` கட்டளையை இயக்கத் தவறியதால் பணிப்பாய்வு `நிரந்தர வால்` நிலையில்"
-" உள்ளது. `STEP_A` வெற்றிகரமாக செயல்படுத்தப்பட்டது மற்றும் அதன் வெளியீடு உங்கள்` கேசெடிர்` "
-"இடத்தில் தற்காலிகமாக சேமிக்கப்பட்டுள்ளது. உருவாக்கப்பட்ட இடைநிலை கோப்புகளை நீங்கள் ஆய்வு "
+"`படி_ஆ` இல்லாத `revv` கட்டளையை இயக்கத் தவறியதால் பணிப்பாய்வு `நிரந்தர தோல்வி` நிலையில் "
+"உள்ளது. `படி_அ` வெற்றிகரமாகச் செயல்படுத்தப்பட்டது மற்றும் அதன் வெளியீடு உங்கள் `cachedir` "
+"இடத்தில் தற்காலிகமாகச் சேமிக்கப்பட்டுள்ளது. உருவாக்கப்பட்ட இடைநிலை கோப்புகளை நீங்கள் ஆய்வு "
 "செய்யலாம்:"
 
 #: ../../src/topics/troubleshooting.md:44
@@ -3382,10 +3382,10 @@ msgstr ""
 msgid "Now fix the typo so `step_b` executes `rev` (i.e. replace `revv` by `rev` in the `step_b`). After fixing the typo, when you execute `cwltool` with the same arguments as the previous time, note that now `cwltool` output contains information about pre-cached outputs for `step_a`, and about a new cache entry for the output of `step_b`. Also note that the status of `step_b` is now of success."
 msgstr ""
 "இப்போது எழுத்துப்பிழையை சரிசெய்யவும், எனவே `step_b` செயல்படுத்துகிறது` rev` (அதாவது "
-"`revv` ஆல்` rev` ஆல் `step_b`). எழுத்துப்பிழையை சரிசெய்த பிறகு, முந்தைய நேரத்தின் அதே"
-" வாதங்களுடன் `cwltool` ஐ இயக்கும்போது, இப்போது` cwltool` வெளியீட்டில் `Step_a` க்கான "
-"முன்-தற்காலிக வெளியீடுகள் பற்றிய தகவல்கள் உள்ளன, மேலும்` step_b`. `STEP_B` இன் நிலை "
-"இப்போது வெற்றிபெறுகிறது என்பதையும் நினைவில் கொள்க."
+"`revv` ஆல்` rev` ஆல் `step_b`). எழுத்துப்பிழையை சரிசெய்த பிறகு, முந்தைய நேரத்தின் "
+"அதே வாதங்களுடன் `cwltool` ஐ இயக்கும்போது, இப்போது` cwltool` வெளியீட்டில் `படி_அ` க்கான "
+"முன்-தற்காலிக வெளியீடுகள்பற்றிய தகவல்கள் உள்ளன, மேலும் `படி_ஆ`. `படி_ஆ` இன் நிலை இப்போது "
+"வெற்றிபெறுகிறது என்பதையும் நினைவில் கொள்க."
 
 #: ../../src/topics/troubleshooting.md:59
 #: 7e0bf00f8ce542b9b009cdcf1945a9e5
@@ -3598,7 +3598,7 @@ msgstr ""
 #: ../../src/topics/workflows.md:185
 #: 26c51dcb76364ed780376aecb7cbacda
 msgid "`1st-workflow-job.yml`"
-msgstr "`1 வது-வொர்க்ஃப்ளோ-JOB.YML`"
+msgstr "`1 வது-பணிப்பாய்வு-பணி.yml`"
 
 #: ../../src/topics/workflows.md:191
 #: 6fcf8ad3d1bd49afa4a105622437bd59
@@ -3819,11 +3819,11 @@ msgstr "சிதறல் படிகள்"
 msgid "Now that we know how to write workflows, we can start utilizing the `ScatterFeatureRequirement`. This feature tells the runner that you wish to run a tool or workflow multiple times over a list of inputs. The workflow then takes the input(s) as an array and will run the specified step(s) on each element of the array as if it were a single input. This allows you to run the same workflow on multiple inputs without having to generate many different commands or input yaml files."
 msgstr ""
 "இப்போது பணிப்பாய்வுகளை எழுதுவது எப்படி என்று எங்களுக்குத் தெரியும், "
-"`சிதறல்ஃபீட்டர்ரெக்யூமென்ட்` ஐப் பயன்படுத்தத் தொடங்கலாம். உள்ளீடுகளின் பட்டியலில் ஒரு கருவி "
-"அல்லது பணிப்பாய்வுகளை பல முறை இயக்க விரும்புகிறீர்கள் என்று இந்த நற்பொருத்தம் ரன்னரிடம் "
-"கூறுகிறது. பணிப்பாய்வு பின்னர் உள்ளீட்டை (களை) ஒரு வரிசையாக எடுத்து, வரிசையின் ஒவ்வொரு "
-"உறுப்பிலும் குறிப்பிட்ட படி (களை) ஒரு உள்ளீடு போல இயக்கும். பல கட்டளைகளை அல்லது உள்ளீட்டு "
-"YAML கோப்புகளை உருவாக்காமல் பல உள்ளீடுகளில் ஒரே பணிப்பாய்வுகளை இயக்க இது உங்களை "
+"`ScatterFeatureRequirement` ஐப் பயன்படுத்தத் தொடங்கலாம். உள்ளீடுகளின் பட்டியலில் ஒரு "
+"கருவி அல்லது பணிப்பாய்வுகளை பல முறை இயக்க விரும்புகிறீர்கள் என்று இந்த நற்பொருத்தம் "
+"ரன்னரிடம் கூறுகிறது. பணிப்பாய்வு பின்னர் உள்ளீட்டை (களை) ஒரு வரிசையாக எடுத்து, வரிசையின் "
+"ஒவ்வொரு உறுப்பிலும் குறிப்பிட்ட படி (களை) ஒரு உள்ளீடுபோல இயக்கும். பல கட்டளைகளை அல்லது "
+"உள்ளீட்டு yaml கோப்புகளை உருவாக்காமல் பல உள்ளீடுகளில் ஒரே பணிப்பாய்வுகளை இயக்க இது உங்களை "
 "அனுமதிக்கிறது."
 
 #: ../../src/topics/workflows.md:411
@@ -3844,7 +3844,7 @@ msgstr "`சிதறல்-வொர்க்ஃப்ளோ.சிடபிள
 #: 3a67d77a2e7b4c0bb61cc3585ceae942
 msgid "Aside from the `requirements` section including `ScatterFeatureRequirement`, what is going on here?"
 msgstr ""
-"`SPATTERFEATUREREQUIREMENT` உட்பட` தேவைகள்` பிரிவைத் தவிர, இங்கே என்ன நடக்கிறது?"
+"`ScatterFeatureRequirement` உட்பட` தேவைகள்` பிரிவைத் தவிர, இங்கே என்ன நடக்கிறது?"
 
 #: ../../src/topics/workflows.md:429
 #: f1cb55fc59824cc18a95fd6dcb32cf4c
