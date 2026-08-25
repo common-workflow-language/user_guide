@@ -8,16 +8,16 @@ msgstr ""
 "Project-Id-Version: Common Workflow Language User Guide\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-01-25 14:33+0100\n"
-"PO-Revision-Date: 2025-08-15 04:02+0000\n"
-"Last-Translator: தமிழ்நேரம் <anishprabu.t@gmail.com>\n"
-"Language-Team: Tamil <https://hosted.weblate.org/projects/commonwl/"
-"user-guide/ta/>\n"
+"PO-Revision-Date: 2026-08-25 14:30+0000\n"
+"Last-Translator: Michael Crusoe <mrc@commonwl.org>\n"
+"Language-Team: Tamil <https://hosted.weblate.org/projects/commonwl/user-"
+"guide/ta/>\n"
 "Language: ta\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.13-dev\n"
+"X-Generator: Weblate 2026.9.dev0\n"
 
 #: ../../LICENSE.md:2
 #: 4e203044f0464fd5a3256430391dde12
@@ -41,30 +41,30 @@ msgstr ""
 #: ../../LICENSE.md:12
 #: 98f18f72afa043f9a79aa9b5fc8bdf22
 msgid "You are free:"
-msgstr "நீங்கள் கட்டற்று:"
+msgstr "நீங்கள் சுதந்திரமானவர்:"
 
 #: ../../LICENSE.md:14
 #: 466be810dd8d4a838e0edb5869f2c4eb
 msgid "to **Share**---copy and redistribute the material in any medium or format"
 msgstr ""
-"**பகிர** ---எந்த வழியிலும் அல்லது வடிவத்திலும் பொருளை நகலெடுத்து மறுபகிர்வு செய்யுங்கள்"
+"**பகிர** ---எந்த வழியிலும் அல்லது வடிவத்திலும் பொருளை நகலெடுத்து மறுபகிர்வு செய்யவும்"
 
 #: ../../LICENSE.md:15
 #: 18a3a0aec35743848c97bc178f9c94ff
 msgid "to **Adapt**---remix, transform, and build upon the material"
-msgstr ""
-"**மாற்றியமைக்க** ---மறு கலவை, மாற்ற மற்றும் பொருள்மீது உருவாக்க இசைகிறது"
+msgstr "**தகவமை** ---மறு கலவை, உருமாற்றம் மற்றும் பொருள்மீது கட்டமைத்தல்"
 
 #: ../../LICENSE.md:17
 #: b746b1e4dca14de1a8e18036b7602a73
 msgid "for any purpose, even commercially."
-msgstr "எந்தவொரு நோக்கத்திற்காகவும், வணிக நோக்கத்திற்காகக் கூட."
+msgstr "எந்தவொரு குறிக்கோளுக்காகவும், வணிகரீதியாக கூட."
 
 #: ../../LICENSE.md:19
 #: 6021e65292a149d5b15e14491f3eb05e
 msgid "The licensor cannot revoke these freedoms as long as you follow the license terms:"
 msgstr ""
-"உரிம விதிமுறைகளைப் பின்பற்றும் வரை உரிமதாரர் இந்தக் கட்டற்றதை தடை செய்ய முடியாது:"
+"உரிமை விதிமுறைகளைப் பின்பற்றும் வரை உரிமைவழங்குநர் இந்தக் சுதந்திரத்தை திரும்பபெற "
+"முடியாது:"
 
 #: ../../LICENSE.md:24
 #: 8fb7a2946c384364814c6ec3910997d3
@@ -290,7 +290,7 @@ msgstr ""
 #: ../../src/faq.md:194
 #: 941077158ec54ae19bfa2e2ad6662da1
 msgid "merge_nested"
-msgstr "ஒன்றிணைத்தல்_கூடு_கட்டப்பட்டது"
+msgstr "merge_nested"
 
 #: ../../src/faq.md:196
 #: 937cb94a370640c788fbc3fe0b19f2e5
@@ -410,7 +410,7 @@ msgstr ""
 #: fdaec25650ab4b0fb1c527610e24ae5a
 msgid "For example, the filename `a space is here.txt` includes 3 space characters."
 msgstr ""
-"எடுத்துக்காட்டாக, `ஒரு இடம் இங்கே உள்ளது.TXT` 3 இடைவெளி எழுத்துக்களை உள்ளடக்கியது."
+"எடுத்துக்காட்டாக, `ஒரு இடம் இங்கே உள்ளது.உரை` இல் 3 இடைவெளி எழுத்துக்களை உள்ளடக்கியது."
 
 #: ../../src/faq.md:371
 #: 182959fc9f4746d082994e07d05c8cde
@@ -946,7 +946,7 @@ msgstr ""
 #: ../../src/introduction/prerequisites.md:67
 #: 040c019b6e844eda8c8c2b210852516b
 msgid "`true.cwl`"
-msgstr "`True.cwl`"
+msgstr "`true.cwl`"
 
 #: ../../src/introduction/prerequisites.md:73
 #: 6391e08e0bde49f4b21286d8fdb97433
@@ -1113,7 +1113,7 @@ msgstr ""
 #: ../../src/introduction/prerequisites.md:177
 #: 6ce8b81560e341c580d316d69202b268
 msgid "Docker"
-msgstr "கப்பல்துறை"
+msgstr "Docker"
 
 #: ../../src/introduction/prerequisites.md:181
 #: 40cfd559d6a848d1aae354d3bdaa8e9c
@@ -1181,7 +1181,7 @@ msgstr ""
 #: ../../src/introduction/quick-start.md:16
 #: 9e51962a7e5c47248f3e20703ae101eb
 msgid "`hello_world.cwl`"
-msgstr "`Hello_world.cwl`"
+msgstr "`hello_world.cwl`"
 
 #: ../../src/introduction/quick-start.md:22
 #: 7e475e3f3c4a4404bb0236124c0f7ce7
@@ -1221,9 +1221,9 @@ msgstr "`pip` உடன்` cwltool` ஐ நிறுவுகிறது."
 #: a81342e756d24c40acc15835d0a768f2
 msgid "If installing the cwltool using the pip command doesn't work for you, the [prerequisites](prerequisites.md) section contains other ways to install `cwltool` and a more detailed list of software and libraries used for following the rest of this user guide."
 msgstr ""
-"PIP கட்டளையைப் பயன்படுத்தி பொபமொகருவியை நிறுவுவது உங்களுக்காக வேலை செய்யாது என்றால், "
-"[முன்நிபந்தனைகள்](prerequisites.md) பிரிவில் `cwltool` ஐ நிறுவ பிற வழிகள் உள்ளன, "
-"மேலும் இந்த பயனரின் மீதமுள்ளவற்றை பின்பற்ற பயன்படுத்தப்படும் மென்பொருள் மற்றும் நூலகங்களின் "
+"pip கட்டளையைப் பயன்படுத்தி பொபமொகருவியை நிறுவுவது உங்களுக்காக வேலை செய்யாது என்றால், "
+"[முன்நிபந்தனைகள்](prerequisites.md) பிரிவில் `cwltool` ஐ நிறுவப் பிற வழிகள் உள்ளன, "
+"மேலும் இந்தப் பயனரின் மீதமுள்ளவற்றை பின்பற்றப் பயன்படுத்தப்படும் மென்பொருள் மற்றும் நூலகங்களின் "
 "விரிவான பட்டியலையும் கொண்டுள்ளது வழிகாட்டி."
 
 #: ../../src/introduction/quick-start.md:51
@@ -1268,7 +1268,7 @@ msgstr ""
 #: ../../src/introduction/quick-start.md:74
 #: 1a44a545434b448aa956005deeed90a8
 msgid "`hello_world-job.json`"
-msgstr "`Hello_world-job.json`"
+msgstr "`hello_world-job.json`"
 
 #: ../../src/introduction/quick-start.md:80
 #: e76bfcc0c9f84bcdb3f6d5277869a88c
@@ -1369,14 +1369,14 @@ msgstr ""
 #: ../../src/topics/additional-arguments-and-parameters.md:13
 #: a74935dc31664e979ca8f90a6a4ba53c
 msgid "`arguments.cwl`"
-msgstr "`வாதங்கள். பொபமொ`"
+msgstr "`arguments.cwl`"
 
 #: ../../src/topics/additional-arguments-and-parameters.md:19
 #: ../../src/topics/staging-input-files.md:15
 #: 0a8065edd8af4eaea08989a1060ce48f
 #: f357755f6dcb4971bade8636064f8dd1
 msgid "`arguments-job.yml`"
-msgstr "`வாதங்கள்-job.yml`"
+msgstr "`arguments-job.yml`"
 
 #: ../../src/topics/additional-arguments-and-parameters.md:24
 #: 6359191b4f684d5aa3602e4aaf394883
@@ -1686,7 +1686,7 @@ msgstr ""
 #: ../../src/topics/creating-files-at-runtime.md:9
 #: d3f74c3b094a427fbec831afab657d50
 msgid "`createfile.cwl`"
-msgstr "`criatefile.cwl`"
+msgstr "`createfile.cwl`"
 
 #: ../../src/topics/creating-files-at-runtime.md:15
 #: cfffc518ba6e4ed1a80762ed6f7d25df
@@ -1720,7 +1720,7 @@ msgstr ""
 #: 2699fbc4376148af91b7a5a6cdac467c
 #: ca03defa3ad14cf698171cb09e3055c1
 msgid "`echo-job.yml`"
-msgstr "`Echo-job.yml`"
+msgstr "`echo-job.yml`"
 
 #: ../../src/topics/creating-files-at-runtime.md:35
 #: 10d1373bb14a4a3cacd3b92a2f83382d
@@ -1788,12 +1788,12 @@ msgstr ""
 #: ../../src/topics/custom-types.md:12
 #: ef5f35acb97f4ddfad7b688712f53484
 msgid "`custom-types.cwl`"
-msgstr "`Custom-types.cwl`"
+msgstr "`custom-types.cwl`"
 
 #: ../../src/topics/custom-types.md:18
 #: 7015dfa99a6f4cfb87ebf0ed61e8043c
 msgid "`custom-types.yml`"
-msgstr "`Custom-types.yml`"
+msgstr "`custom-types.yml`"
 
 #: ../../src/topics/custom-types.md:24
 #: a999b1acda2641598086648c64aa3831
@@ -1833,7 +1833,7 @@ msgstr ""
 #: ../../src/topics/custom-types.md:55
 #: fecfbb44456640d8ba05e519bf2ff564
 msgid "`biom-convert-table.yaml`"
-msgstr "`பயோம்-கான்ப்-டேபிள்.யம்ல்`"
+msgstr "`biom-convert-table.yaml`"
 
 #: ../../src/topics/custom-types.md:61
 #: d718630a296545f3a989c8c71e9ddc77
@@ -1869,7 +1869,7 @@ msgstr ""
 #: ../../src/topics/environment-variables.md:7
 #: bfdebb32440a4034beb42135e38884e8
 msgid "`env.cwl`"
-msgstr "`Env.cwl`"
+msgstr "`env.cwl`"
 
 #: ../../src/topics/expression-tool.md:1
 #: 777d4a52f7554eff84db2df6d4d0f729
@@ -1900,7 +1900,7 @@ msgstr "பொபமொ வெளிப்பாடு கருவி."
 #: ../../src/topics/expression-tool.md:48
 #: 39727e9058f24b62b8746a46d3f812c2
 msgid "`uppercase.cwl`"
-msgstr "`Worpercase.cwl`"
+msgstr "`uppercase.cwl`"
 
 #: ../../src/topics/expression-tool.md:67
 #: e3ecac0a8e604f2b98a2a12b0579990a
@@ -1936,7 +1936,7 @@ msgstr ""
 #: ../../src/topics/expressions.md:16
 #: 7fdbfd1c937b4991bf4a2fa26ea310e4
 msgid "`expression.cwl`"
-msgstr "`Expression.cwl`"
+msgstr "`expression.cwl`"
 
 #: ../../src/topics/expressions.md:22
 #: efb5fd14988c4e2a8f834ee5369d4102
@@ -1948,7 +1948,7 @@ msgstr ""
 #: ../../src/topics/expressions.md:25
 #: e833649b951841c49397796f996d29f3
 msgid "`empty.yml`"
-msgstr "`gaing.yml`"
+msgstr "`empty.yml`"
 
 #: ../../src/topics/expressions.md:31
 #: 276f688ba7cc471a842f085ca852b1d9
@@ -2006,8 +2006,9 @@ msgstr ""
 #: ../../src/topics/parameter-references.md:64
 #: 1acb064f7a4a482aa0174bdc847c6382
 #: 0222780b98ac48e89b1b4f57c9df8590
+#, fuzzy
 msgid "`arguments`"
-msgstr "`வாதங்கள்`"
+msgstr "`arguments`"
 
 #: ../../src/topics/expressions.md:68
 #: ../../src/topics/expressions.md:76
@@ -2022,7 +2023,7 @@ msgstr "`வாதங்கள்`"
 #: e4e68011dc5f42e4918c747afa7d764b
 #: d44e3cfa661840eb851782e24caf1b68
 msgid "`valueFrom`"
-msgstr "`மதிப்பு`"
+msgstr "`valueFrom`"
 
 #: ../../src/topics/expressions.md:69
 #: ../../src/topics/parameter-references.md:66
@@ -2043,7 +2044,7 @@ msgstr "`stdout`"
 #: 2437656e20354d63bede1b98d5348e2c
 #: 37392218309d4baebe62fc38bf50efe9
 msgid "`stderr`"
-msgstr "`ச்டைடர்`"
+msgstr "`stderr`"
 
 #: ../../src/topics/expressions.md:72
 #: 8210b36347a749889450529ecdf4ff0e
@@ -2069,7 +2070,7 @@ msgstr ""
 #: bd61499b71e64164878dea08d6d7141e
 #: ed875a006df64f9e8a55fa5e9fa87404
 msgid "`format`"
-msgstr "`வடிவமைப்பு`"
+msgstr "`format`"
 
 #: ../../src/topics/expressions.md:74
 #: ../../src/topics/expressions.md:79
@@ -2088,7 +2089,7 @@ msgstr "`வடிவமைப்பு`"
 #: cd7a0190511d4613b09600a3b1e9d55f
 #: 47def3b078e2402182039be0227090ae
 msgid "`secondaryFiles`"
-msgstr "`இரண்டாம் நிலை கோப்புகள்`"
+msgstr "`secondaryFiles`"
 
 #: ../../src/topics/expressions.md:75
 #: 23088850ad02459696f6bbd385109aac
@@ -2116,7 +2117,7 @@ msgstr ""
 #: 582b03ac742745a89f4dfc86b7404db2
 #: d193ce0123db4535a4f0b11405ad0322
 msgid "`glob`"
-msgstr "`குளோப்`"
+msgstr "`glob`"
 
 #: ../../src/topics/expressions.md:82
 #: ../../src/topics/parameter-references.md:79
@@ -2168,7 +2169,7 @@ msgstr ""
 #: c2a92d3eca7f4ee39cec649170eeea53
 #: 3c939769ede94602a67fc50c435741cf
 msgid "`expression`"
-msgstr "`வெளிப்பாடு`"
+msgstr "`expression`"
 
 #: ../../src/topics/expressions.md:92
 #: f495da32f05a4a5ba9539be0a54c1a59
@@ -2190,14 +2191,14 @@ msgstr ""
 #: 4b73495cf18a4d908525292b6f23c419
 #: d0eec6969d174b258e0f010800884cc6
 msgid "`coresMin`"
-msgstr "`colorsmin`"
+msgstr "`coresMin`"
 
 #: ../../src/topics/expressions.md:97
 #: ../../src/topics/parameter-references.md:94
 #: 718ceee9973240ec9c100977bbcc8921
 #: 2b25152f6df5494a8632f3ce631c20d8
 msgid "`coresMax`"
-msgstr "`colorsmax`"
+msgstr "`coresMax`"
 
 #: ../../src/topics/expressions.md:98
 #: ../../src/topics/parameter-references.md:95
@@ -2211,7 +2212,7 @@ msgstr "`ramMin`"
 #: 594bc5b7e5be4be9b5e1f6b2502e3bd3
 #: b885e108dced4981a445e5fa0a044394
 msgid "`ramMax`"
-msgstr "`rammax`"
+msgstr "`ramMax`"
 
 #: ../../src/topics/expressions.md:100
 #: ../../src/topics/parameter-references.md:97
@@ -2225,14 +2226,14 @@ msgstr "`tmpdirMin`"
 #: 509a5e2ec52d413eb57754d359f133e4
 #: 58bf8016f5f04c26b645025f405e2288
 msgid "`tmpdirMax`"
-msgstr "`tmpdirmax`"
+msgstr "`tmpdirMax`"
 
 #: ../../src/topics/expressions.md:102
 #: ../../src/topics/parameter-references.md:99
 #: 5a60ab5ee19446f8a6f49ab8583101a9
 #: 7c817029d55b4700ae8e84be4d0f0ca0
 msgid "`outdirMin`"
-msgstr "`வெளிப்புறம்`"
+msgstr "`outdirMin`"
 
 #: ../../src/topics/expressions.md:103
 #: ../../src/topics/parameter-references.md:100
@@ -2253,7 +2254,7 @@ msgstr ""
 #: 9359ef94c41249ea8e76fe629926054e
 #: a258554d462f4f5f83ece28d5b2fc584
 msgid "`listing`"
-msgstr "`பட்டியல்`"
+msgstr "`listing`"
 
 #: ../../src/topics/expressions.md:106
 #: 8d0b142bb7ed4e61b8fb03de197240ce
@@ -2265,14 +2266,14 @@ msgstr "[Dirent](https://www.commonwl.org/v1.0/CommandLineTool.html#Dirent)இ�
 #: effc0208cf4f4551958db6e526c0528b
 #: 9d4889c8cec24351a7a9e3c547e331b6
 msgid "`entry`"
-msgstr "`நுழைவு`"
+msgstr "`entry`"
 
 #: ../../src/topics/expressions.md:108
 #: ../../src/topics/parameter-references.md:105
 #: be6c1e85c7b6495d8086c262daad20e7
 #: af4f7f232a9d42388c0ba1cfc7c2cdf7
 msgid "`entryname`"
-msgstr "`entryName`"
+msgstr "`entryname`"
 
 #: ../../src/topics/expressions.md:109
 #: ../../src/topics/parameter-references.md:106
@@ -2364,7 +2365,7 @@ msgstr ""
 #: ../../src/topics/expressions.md:158
 #: ed590f9e6f4f425da886b110295c45db
 msgid "`custom-functions.js`"
-msgstr "`தனிப்பயன்-செயல்பாடுகள். js`"
+msgstr "`custom-functions.js`"
 
 #: ../../src/topics/expressions.md:164
 #: 093235307d6f47d4858e559b780ef5e5
@@ -2396,7 +2397,7 @@ msgstr ""
 #: ../../src/topics/expressions.md:186
 #: c4098489fbb049789f022cd3e5c3d49b
 msgid "`hello-world-expressionlib.cwl`"
-msgstr "`அலோ-வேர்ல்ட்-எக்ச்பிரசன் லிப்.ச்விஎல்`"
+msgstr "`hello-world-expressionlib.cwl`"
 
 #: ../../src/topics/expressions.md:193
 #: 5979e4ae5c424276bdbc47f69b379d0f
@@ -2481,7 +2482,7 @@ msgstr ""
 #: ../../src/topics/file-formats.md:39
 #: aebee48b742c4145a600fd2daf8c75dc
 msgid "`sample.yml`"
-msgstr "`மாதிரி.ஒய்எம்எல்`"
+msgstr "`sample.yml`"
 
 #: ../../src/topics/file-formats.md:45
 #: 56ee4dcfff6141d5bef80eb96559876d
@@ -2510,19 +2511,20 @@ msgstr "அத்தியாவசிய உள்ளீட்டு அளவ�
 
 #: ../../src/topics/inputs.md:5
 #: 96671c56523c4ea9992fb5dfcfa6490e
+#, fuzzy
 msgid "The `inputs` of a tool is a list of input parameters that control how to run the tool.  Each parameter has an `id` for the name of parameter, and `type` describing what types of values are valid for that parameter."
 msgstr ""
-"ஒரு கருவியின் `உள்ளீடுகள்` கருவியை எவ்வாறு இயக்குவது என்பதைக் கட்டுப்படுத்தும் உள்ளீட்டு "
-"அளவுருக்களின் பட்டியல். ஒவ்வொரு அளவுருவிலும் அளவுருவின் பெயருக்கு `ஐடி` உள்ளது, மேலும் "
+"ஒரு கருவியின் `inputs` கருவியை எவ்வாறு இயக்குவது என்பதைக் கட்டுப்படுத்தும் உள்ளீட்டு "
+"அளவுருக்களின் பட்டியல். ஒவ்வொரு அளவுருவிலும் அளவுருவின் பெயருக்கு `id` உள்ளது, மேலும் "
 "அந்த அளவுருவுக்கு எந்த வகையான மதிப்புகள் செல்லுபடியாகும் என்பதை விவரிக்கிறது."
 
 #: ../../src/topics/inputs.md:9
 #: bcc6246742cb46bfb185e415c4a3431a
 msgid "Available primitive types are *string*, *int*, *long*, *float*, *double*, and *null*; complex types are *array* and *record*; in addition there are special types *File*, *Directory* and *Any*."
 msgstr ""
-"கிடைக்கக்கூடிய பழமையான வகைகள் *சரம் *, *எண்ணாக *, *நீண்ட *, *மிதவை *, *இரட்டை *, "
-"மற்றும் *பூச்ய *; சிக்கலான வகைகள் *வரிசை *மற்றும் *பதிவு *; கூடுதலாக சிறப்பு வகைகள் "
-"*கோப்பு *, *அடைவு *மற்றும் *ஏதேனும் *உள்ளன."
+"கிடைக்கக்கூடிய பழமையான வகைகள் *string *, *int *, *long *, *float *, *double *, "
+"மற்றும் *null *; சிக்கலான வகைகள் *array *மற்றும் *record *; கூடுதலாக சிறப்பு வகைகள் "
+"*File *, *Directory *மற்றும் *Any *உள்ளன."
 
 #: ../../src/topics/inputs.md:13
 #: 86dce36de687449c88fb5eb9d64eb045
@@ -2539,7 +2541,7 @@ msgstr "முதலில், பின்வருவனவற்றைக் 
 #: ../../src/topics/inputs.md:18
 #: 8bdb875b63104f699efe28ea0abb1e3d
 msgid "`inp.cwl`"
-msgstr "`Inp.cwl`"
+msgstr "`inp.cwl`"
 
 #: ../../src/topics/inputs.md:24
 #: c6a0151a68494c0cb0176781e65e252e
@@ -2683,7 +2685,7 @@ msgstr ""
 #: ../../src/topics/inputs.md:154
 #: 01f30e38dfdd452dba3a996073936e16
 msgid "`array-inputs.cwl`"
-msgstr "`வரிசை-inputs.cwl`"
+msgstr "`array-inputs.cwl`"
 
 #: ../../src/topics/inputs.md:160
 #: 787d4bfb093c4ad287b902084706b751
@@ -2739,12 +2741,12 @@ msgstr ""
 #: ../../src/topics/inputs.md:198
 #: ddf598abf4f34aca9fffa045860fbf96
 msgid "`record.cwl`"
-msgstr "`Record.cwl`"
+msgstr "`record.cwl`"
 
 #: ../../src/topics/inputs.md:204
 #: d52a8089920e45bd89d582533b50e3a1
 msgid "`record-job1.yml`"
-msgstr "`Record-job1.yml`"
+msgstr "`record-job1.yml`"
 
 #: ../../src/topics/inputs.md:215
 #: 750474486a84482292eeba45f118287f
@@ -2755,7 +2757,7 @@ msgstr ""
 #: ../../src/topics/inputs.md:217
 #: 9a5cf1d76fc84c1f9b0d123a3a2a480b
 msgid "`record-job2.yml`"
-msgstr "`Record-job2.yml`"
+msgstr "`record-job2.yml`"
 
 #: ../../src/topics/inputs.md:233
 #: 1eb0e39bb6d04b8cab300f44a79f3add
@@ -2768,7 +2770,7 @@ msgstr ""
 #: ../../src/topics/inputs.md:236
 #: bc21ee10bff843689cc98ac6630edcea
 msgid "`record-job3.yml`"
-msgstr "`Record-job3.yml`"
+msgstr "`record-job3.yml`"
 
 #: ../../src/topics/inputs.md:252
 #: 4b2ab812f62c4f949dd25c8527f2411c
@@ -2795,23 +2797,22 @@ msgstr ""
 #: a1073b6306044dffb414319ae01f68bb
 msgid "Let's use an example that contains an exclusive `file_format` input parameter that accepts `null` (i.e. no value provided), or any value from an enum."
 msgstr ""
-"`NULL` (அதாவது மதிப்பு எதுவும் வழங்கப்படவில்லை) அல்லது ஒரு ENUM இலிருந்து எந்த "
+"`சுழிய` (அதாவது மதிப்பு எதுவும் வழங்கப்படவில்லை) அல்லது ஒரு எண்ணிக்கை இலிருந்து எந்த "
 "மதிப்பையும் ஏற்றுக்கொள்ளும் பிரத்யேக` file_format` உள்ளீட்டு அளவுருவைக் கொண்ட ஒரு "
 "உதாரணத்தைப் பயன்படுத்துவோம்."
 
 #: ../../src/topics/inputs.md:265
 #: 4a31c733092142b1af834eab1747c224
 msgid "`exclusive-parameter-expressions.cwl`"
-msgstr "`பிரத்யேக-அளவுரு-வெளிப்பாடுகள். cwl`"
+msgstr "`exclusive-parameter-expressions.cwl`"
 
 #: ../../src/topics/inputs.md:271
 #: 9a1d92334685449386dfa3b3a899ed48
 msgid "Note how the JavaScript expression uses the value of the exclusive input parameter without taking into consideration a `null` value. If you provide a valid value, such as “fasta” (one of the values of the enum), your command should execute successfully:"
 msgstr ""
-"`பூச்ய` மதிப்பைக் கருத்தில் கொள்ளாமல் சாவாகைஉரை வெளிப்பாடு பிரத்யேக உள்ளீட்டு அளவுருவின் "
-"மதிப்பை எவ்வாறு பயன்படுத்துகிறது என்பதைக் கவனியுங்கள். “ஃபாச்டா” (ENUM இன் மதிப்புகளில் "
-"ஒன்று) போன்ற சரியான மதிப்பை நீங்கள் வழங்கினால், உங்கள் கட்டளை வெற்றிகரமாக செயல்படுத்த "
-"வேண்டும்:"
+"`சுழிய` மதிப்பைக் கருத்தில் கொள்ளாமல் சாவாகைஉரை வெளிப்பாடு பிரத்யேக உள்ளீட்டு அளவுருவின் "
+"மதிப்பை எவ்வாறு பயன்படுத்துகிறது என்பதைக் கவனியுங்கள். “ஃபாச்டா” (எண்ணிக்கை இன் மதிப்புகளில் "
+"ஒன்று) போன்ற சரியான மதிப்பை நீங்கள் வழங்கினால், உங்கள் கட்டளை வெற்றிகரமாகச் செயல்படுத்த வேண்டும்:"
 
 #: ../../src/topics/inputs.md:280
 #: fb623af4c480411b8fde28d01c981411
@@ -2826,10 +2827,11 @@ msgstr ""
 #: e98e165f6bba40809c90473d72f9d592
 msgid "To correct it, you must remember to use an or operator in your JavaScript expression when using exclusive parameters, or any parameter that allows `null`. For example, the expression could be changed to `$(inputs.file_format || 'auto')`, to have a default value if none was provided in the command line or job input file."
 msgstr ""
-"அதை சரிசெய்ய, பிரத்யேக அளவுருக்களைப் பயன்படுத்தும் போது அல்லது `NULL` ஐ அனுமதிக்கும் எந்"
-"த அளவுருவையும் பயன்படுத்தும் போது உங்கள் சாவாகைஉரை வெளிப்பாட்டில் ஒரு அல்லது ஆபரேட்டரைப் "
-"பயன்படுத்த நினைவில் கொள்ள வேண்டும். எடுத்துக்காட்டாக, வெளிப்பாட்டை கட்டளை வரி அல்லது வேலை "
-"உள்ளீட்டு கோப்பில் எதுவும் வழங்கப்படாவிட்டால் இயல்புநிலை மதிப்பைக் கொண்டிருக்க `$ (உள்ளீடுகள்."
+"அதைச் சரிசெய்ய, பிரத்யேக அளவுருக்களைப் பயன்படுத்தும்போது அல்லது `சுழிய` ஐ அனுமதிக்கும் "
+"எந்த அளவுருவையும் பயன்படுத்தும்போது உங்கள் சாவாகைஉரை வெளிப்பாட்டில் ஒரு அல்லது ஆபரேட்டரைப் "
+"பயன்படுத்த நினைவில் கொள்ள வேண்டும். எடுத்துக்காட்டாக, கட்டளை வரியில் அல்லது வேலை உள்ளீட்டு "
+"கோப்பில் எதுவும் வழங்கப்படவில்லை எனில், வெளிப்பாடு `$(inputs.file_format || 'auto')` "
+"என மாற்றப்படலாம்."
 
 #: ../../src/topics/metadata-and-authorship.md:1
 #: d33aa2353ad44fb885d3a1ee48263dc4
@@ -2906,7 +2908,7 @@ msgstr ""
 #: ../../src/topics/operations.md:10
 #: 49cf614893d8438299b3bca384eb40cf
 msgid "`operations.cwl`"
-msgstr "`செயல்பாடுகள். பொபமொ`"
+msgstr "`operations.cwl`"
 
 #: ../../src/topics/operations.md:16
 #: 88160cef4cfa4add9020aa89511a5749
@@ -3350,7 +3352,7 @@ msgstr ""
 #: ../../src/topics/troubleshooting.md:20
 #: 0490b1fab86749e49b473949c52bbe8b
 msgid "`troubleshooting-wf1.cwl`"
-msgstr "`சரிசெய்தல்-wf1.cwl`"
+msgstr "`troubleshooting-wf1.cwl`"
 
 #: ../../src/topics/troubleshooting.md:27
 #: cfe9d8241fe84bd5b74042a5625d933f
@@ -3363,9 +3365,9 @@ msgstr ""
 #: 764d933cc4da446abd8dd8f913f05dac
 msgid "The workflow is in the `permanentFail` status due to `step_b` failing to execute the non-existent `revv` command. The `step_a` was executed successfully and its output has been cached in your `cachedir` location. You can inspect the intermediate files created:"
 msgstr ""
-"`STEP_B` இல்லாத` ரெவ்.வி` கட்டளையை இயக்கத் தவறியதால் பணிப்பாய்வு `நிரந்தர வால்` நிலையில்"
-" உள்ளது. `STEP_A` வெற்றிகரமாக செயல்படுத்தப்பட்டது மற்றும் அதன் வெளியீடு உங்கள்` கேசெடிர்` "
-"இடத்தில் தற்காலிகமாக சேமிக்கப்பட்டுள்ளது. உருவாக்கப்பட்ட இடைநிலை கோப்புகளை நீங்கள் ஆய்வு "
+"`படி_ஆ` இல்லாத `revv` கட்டளையை இயக்கத் தவறியதால் பணிப்பாய்வு `நிரந்தர தோல்வி` நிலையில் "
+"உள்ளது. `படி_அ` வெற்றிகரமாகச் செயல்படுத்தப்பட்டது மற்றும் அதன் வெளியீடு உங்கள் `cachedir` "
+"இடத்தில் தற்காலிகமாகச் சேமிக்கப்பட்டுள்ளது. உருவாக்கப்பட்ட இடைநிலை கோப்புகளை நீங்கள் ஆய்வு "
 "செய்யலாம்:"
 
 #: ../../src/topics/troubleshooting.md:44
@@ -3382,10 +3384,10 @@ msgstr ""
 msgid "Now fix the typo so `step_b` executes `rev` (i.e. replace `revv` by `rev` in the `step_b`). After fixing the typo, when you execute `cwltool` with the same arguments as the previous time, note that now `cwltool` output contains information about pre-cached outputs for `step_a`, and about a new cache entry for the output of `step_b`. Also note that the status of `step_b` is now of success."
 msgstr ""
 "இப்போது எழுத்துப்பிழையை சரிசெய்யவும், எனவே `step_b` செயல்படுத்துகிறது` rev` (அதாவது "
-"`revv` ஆல்` rev` ஆல் `step_b`). எழுத்துப்பிழையை சரிசெய்த பிறகு, முந்தைய நேரத்தின் அதே"
-" வாதங்களுடன் `cwltool` ஐ இயக்கும்போது, இப்போது` cwltool` வெளியீட்டில் `Step_a` க்கான "
-"முன்-தற்காலிக வெளியீடுகள் பற்றிய தகவல்கள் உள்ளன, மேலும்` step_b`. `STEP_B` இன் நிலை "
-"இப்போது வெற்றிபெறுகிறது என்பதையும் நினைவில் கொள்க."
+"`revv` ஆல்` rev` ஆல் `step_b`). எழுத்துப்பிழையை சரிசெய்த பிறகு, முந்தைய நேரத்தின் "
+"அதே வாதங்களுடன் `cwltool` ஐ இயக்கும்போது, இப்போது` cwltool` வெளியீட்டில் `படி_அ` க்கான "
+"முன்-தற்காலிக வெளியீடுகள்பற்றிய தகவல்கள் உள்ளன, மேலும் `படி_ஆ`. `படி_ஆ` இன் நிலை இப்போது "
+"வெற்றிபெறுகிறது என்பதையும் நினைவில் கொள்க."
 
 #: ../../src/topics/troubleshooting.md:59
 #: 7e0bf00f8ce542b9b009cdcf1945a9e5
@@ -3438,7 +3440,7 @@ msgstr ""
 #: ../../src/topics/using-containers.md:21
 #: 7921a837ee744c5aa9a5bda04b0c8db1
 msgid "`docker.cwl`"
-msgstr "`Docker.cwl`"
+msgstr "`docker.cwl`"
 
 #: ../../src/topics/using-containers.md:27
 #: 387e9bc9381a4450af54aff77e4df6a2
@@ -3476,7 +3478,7 @@ msgstr ""
 #: ../../src/topics/using-containers.md:55
 #: 1a5596243cec4c948d9b6bf0bb12fad0
 msgid "`hello.js`"
-msgstr "`அலோ.சேச்`"
+msgstr "`hello.js`"
 
 #: ../../src/topics/using-containers.md:69
 #: 483181f498fc4d968b5fe6ef427709f7
@@ -3521,7 +3523,7 @@ msgstr ""
 #: ../../src/topics/workflows.md:51
 #: a913c76d06164fa18718a8a6a7dcf0d6
 msgid "`echo-uppercase.cwl`"
-msgstr "`Echo-wpercase.cwl`"
+msgstr "`echo-uppercase.cwl`"
 
 #: ../../src/topics/workflows.md:81
 #: 93188ed43ee949cc98b3ea679ce14feb
@@ -3567,7 +3569,7 @@ msgstr ""
 #: ../../src/topics/workflows.md:170
 #: 55ab007d472f43388e4c77aae8f165e7
 msgid "`1st-workflow.cwl`"
-msgstr "`1 வது-வொர்க்ஃப்ளோ.சிடபிள்யூஎல்`"
+msgstr "`1st-workflow.cwl`"
 
 #: ../../src/topics/workflows.md:179
 #: ../../src/topics/workflows.md:180
@@ -3598,7 +3600,7 @@ msgstr ""
 #: ../../src/topics/workflows.md:185
 #: 26c51dcb76364ed780376aecb7cbacda
 msgid "`1st-workflow-job.yml`"
-msgstr "`1 வது-வொர்க்ஃப்ளோ-JOB.YML`"
+msgstr "`1 வது-பணிப்பாய்வு-பணி.yml`"
 
 #: ../../src/topics/workflows.md:191
 #: 6fcf8ad3d1bd49afa4a105622437bd59
@@ -3709,7 +3711,7 @@ msgstr ""
 #: ../../src/topics/workflows.md:300
 #: 49ed137fe996452a8534c68d100db941
 msgid "`nestedworkflows.cwl`"
-msgstr "`NestestWorkflows.cwl`"
+msgstr "`nestedworkflows.cwl`"
 
 #: ../../src/topics/workflows.md:309
 #: b7f93705e5b8416696be01850072e8c0
@@ -3819,11 +3821,11 @@ msgstr "சிதறல் படிகள்"
 msgid "Now that we know how to write workflows, we can start utilizing the `ScatterFeatureRequirement`. This feature tells the runner that you wish to run a tool or workflow multiple times over a list of inputs. The workflow then takes the input(s) as an array and will run the specified step(s) on each element of the array as if it were a single input. This allows you to run the same workflow on multiple inputs without having to generate many different commands or input yaml files."
 msgstr ""
 "இப்போது பணிப்பாய்வுகளை எழுதுவது எப்படி என்று எங்களுக்குத் தெரியும், "
-"`சிதறல்ஃபீட்டர்ரெக்யூமென்ட்` ஐப் பயன்படுத்தத் தொடங்கலாம். உள்ளீடுகளின் பட்டியலில் ஒரு கருவி "
-"அல்லது பணிப்பாய்வுகளை பல முறை இயக்க விரும்புகிறீர்கள் என்று இந்த நற்பொருத்தம் ரன்னரிடம் "
-"கூறுகிறது. பணிப்பாய்வு பின்னர் உள்ளீட்டை (களை) ஒரு வரிசையாக எடுத்து, வரிசையின் ஒவ்வொரு "
-"உறுப்பிலும் குறிப்பிட்ட படி (களை) ஒரு உள்ளீடு போல இயக்கும். பல கட்டளைகளை அல்லது உள்ளீட்டு "
-"YAML கோப்புகளை உருவாக்காமல் பல உள்ளீடுகளில் ஒரே பணிப்பாய்வுகளை இயக்க இது உங்களை "
+"`ScatterFeatureRequirement` ஐப் பயன்படுத்தத் தொடங்கலாம். உள்ளீடுகளின் பட்டியலில் ஒரு "
+"கருவி அல்லது பணிப்பாய்வுகளை பல முறை இயக்க விரும்புகிறீர்கள் என்று இந்த நற்பொருத்தம் "
+"ரன்னரிடம் கூறுகிறது. பணிப்பாய்வு பின்னர் உள்ளீட்டை (களை) ஒரு வரிசையாக எடுத்து, வரிசையின் "
+"ஒவ்வொரு உறுப்பிலும் குறிப்பிட்ட படி (களை) ஒரு உள்ளீடுபோல இயக்கும். பல கட்டளைகளை அல்லது "
+"உள்ளீட்டு yaml கோப்புகளை உருவாக்காமல் பல உள்ளீடுகளில் ஒரே பணிப்பாய்வுகளை இயக்க இது உங்களை "
 "அனுமதிக்கிறது."
 
 #: ../../src/topics/workflows.md:411
@@ -3838,13 +3840,13 @@ msgstr ""
 #: ../../src/topics/workflows.md:415
 #: 1e1f4d85fc5f49b5aac5c5b00f77d6fd
 msgid "`scatter-workflow.cwl`"
-msgstr "`சிதறல்-வொர்க்ஃப்ளோ.சிடபிள்யூஎல்`"
+msgstr "`scatter-workflow.cwl`"
 
 #: ../../src/topics/workflows.md:421
 #: 3a67d77a2e7b4c0bb61cc3585ceae942
 msgid "Aside from the `requirements` section including `ScatterFeatureRequirement`, what is going on here?"
 msgstr ""
-"`SPATTERFEATUREREQUIREMENT` உட்பட` தேவைகள்` பிரிவைத் தவிர, இங்கே என்ன நடக்கிறது?"
+"`ScatterFeatureRequirement` உட்பட` தேவைகள்` பிரிவைத் தவிர, இங்கே என்ன நடக்கிறது?"
 
 #: ../../src/topics/workflows.md:429
 #: f1cb55fc59824cc18a95fd6dcb32cf4c
@@ -3880,7 +3882,7 @@ msgstr "பின்வரும் உள்ளீட்டு கோப்ப�
 #: ../../src/topics/workflows.md:452
 #: 842b926ae34542cb9023021f137b08be
 msgid "`scatter-job.yml`"
-msgstr "`சிதறல்-job.yml`"
+msgstr "`scatter-job.yml`"
 
 #: ../../src/topics/workflows.md:458
 #: b662c1a5a4424c8d8350a806356acc61
@@ -3908,7 +3910,7 @@ msgstr ""
 #: ../../src/topics/workflows.md:472
 #: 242993d42b164ee5abe7ca10d45856de
 msgid "`hello_world_to_stdout.cwl`"
-msgstr "`அலோ_போர்ட்_டோ_ச்டூட்.ச்விஎல்`"
+msgstr "`hello_world_to_stdout.cwl`"
 
 #: ../../src/topics/workflows.md:480
 #: 4a94e5f7e1bc4d628702140e4e51d6d3
@@ -3932,7 +3934,7 @@ msgstr ""
 #: ../../src/topics/workflows.md:491
 #: 99fa96caacaa45cb97aded9a24fcac6d
 msgid "`scatter-two-steps.cwl`"
-msgstr "`சிதறல்-இரண்டு-படி. cwl`"
+msgstr "`scatter-two-steps.cwl`"
 
 #: ../../src/topics/workflows.md:497
 #: b5338f39e8c74ff28e139da68089a742
@@ -3965,7 +3967,7 @@ msgstr ""
 #: ../../src/topics/workflows.md:513
 #: 1c9e386922324ec8a59306572c19fb8b
 msgid "`scatter-nested-workflow.cwl`"
-msgstr "`சிதறல்-நெச்டட்-வொர்க்ஃப்ளோ.ச்விஎல்`"
+msgstr "`scatter-nested-workflow.cwl`"
 
 #: ../../src/topics/workflows.md:519
 #: d80ab383eec9402faba997b548fe42eb
@@ -3990,7 +3992,7 @@ msgstr ""
 #: ../../src/topics/workflows.md:527
 #: 20b9f181420c401d8615c17a10027517
 msgid "`conditional-workflow.cwl`"
-msgstr "`நிபந்தனை-வொர்க்ஃப்ளோ.சிடபிள்யூஎல்`"
+msgstr "`conditional-workflow.cwl`"
 
 #: ../../src/topics/workflows.md:566
 #: 8dbd56473f8c40c0bb12a48be06117e3
