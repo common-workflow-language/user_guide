@@ -2471,7 +2471,6 @@ msgstr ""
 #: ../../src/topics/expressions.md:67
 #: ../../src/topics/parameter-references.md:64 7ab0dbd54c1441539673fa12ef96b89e
 #: e76c6ece0c594fefa86b190879c5acaa
-#, fuzzy
 msgid "`arguments`"
 msgstr "`arguments`"
 
