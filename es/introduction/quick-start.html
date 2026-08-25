@@ -12,7 +12,7 @@
     <link rel="icon" sizes="96x96" href="../_static/images/favicons/cwl/favicon-96x96.png" type="image/png">
     <link rel="icon" sizes="128x128" href="../_static/images/favicons/cwl/favicon-128.png" type="image/png">
     <link rel="icon" sizes="196x196" href="../_static/images/favicons/cwl/favicon-196x196.png" type="image/png">
-    <title>1.1. Quick Start &#8212; documentación de Common Workflow Language User Guide - 0.1</title>
+    <title>1.1. Inicio rápido &#8212; documentación de Common Workflow Language User Guide - 0.1</title>
   
   
   
@@ -20,71 +20,67 @@
     document.documentElement.dataset.mode = localStorage.getItem("mode") || "light";
     document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
   </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../_static/styles/theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
-<link href="../_static/styles/bootstrap.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
-<link href="../_static/styles/pydata-sphinx-theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+  <link href="../_static/styles/theme.css?digest=cb8930eaaf36d9849b67" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=cb8930eaaf36d9849b67" rel="stylesheet" />
 
-  
-  <link href="../_static/vendor/fontawesome/6.5.1/css/all.min.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
-  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-solid-900.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
-
-    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=80d5e7a1" />
-    <link rel="stylesheet" type="text/css" href="../_static/graphviz.css?v=fd3f3429" />
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b86133f3" />
+    <link rel="stylesheet" type="text/css" href="../_static/graphviz.css?v=4ae1632d" />
     <link rel="stylesheet" type="text/css" href="../_static/css/custom.css?v=e0da1575" />
   
+  <!-- So that users can add custom icons -->
+  <script defer src="../_static/scripts/fontawesome.js?digest=cb8930eaaf36d9849b67"></script>
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae" />
-<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae" />
-  <script src="../_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=8d27b9dea8ad943066ae"></script>
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=cb8930eaaf36d9849b67" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=cb8930eaaf36d9849b67" />
 
     <script src="../_static/documentation_options.js?v=9c9b61ad"></script>
-    <script src="../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../_static/doctools.js?v=9bcbadda"></script>
     <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
-    <script src="../_static/translations.js?v=efdbd0b9"></script>
+    <script src="../_static/translations.js?v=f85f4cfb"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'introduction/quick-start';</script>
+    <script>DOCUMENTATION_OPTIONS.search_as_you_type = false;</script>
     <link rel="icon" href="../_static/favicon.ico"/>
     <link rel="index" title="Índice" href="../genindex.html" />
     <link rel="search" title="Búsqueda" href="../search.html" />
-    <link rel="next" title="1.2. Prerequisites" href="prerequisites.html" />
-    <link rel="prev" title="1. Introduction" href="index.html" />
+    <link rel="next" title="1.2. Prerrequisitos" href="prerequisites.html" />
+    <link rel="prev" title="1. Introducción" href="index.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="es"/>
+  <meta name="docsearch:version" content="" />
+  
+    
+    <script src="../_static/searchtools.js"></script>
+    <script src="../_static/language_data.js"></script>
+    <script src="../searchindex.js"></script>
+  
   </head>
+  <body data-default-mode="light">
   
   
-  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="light">
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Saltar al contenido principal</a></div>
 
-  
-  
-  <a id="pst-skip-link" class="skip-link" href="#main-content">Saltar al contenido principal</a>
   
   <div id="pst-scroll-pixel-helper"></div>
   
   <button type="button" class="btn rounded-pill" id="pst-back-to-top">
-    <i class="fa-solid fa-arrow-up"></i>
-    Back to top
-  </button>
-
+    <i class="fa-solid fa-arrow-up"></i>Volver arriba</button>
   
-  <input type="checkbox"
-          class="sidebar-toggle"
-          name="__primary"
-          id="__primary"/>
-  <label class="overlay overlay-primary" for="__primary"></label>
   
-  <input type="checkbox"
-          class="sidebar-toggle"
-          name="__secondary"
-          id="__secondary"/>
-  <label class="overlay overlay-secondary" for="__secondary"></label>
   
-  <div class="search-button__wrapper">
-    <div class="search-button__overlay"></div>
-    <div class="search-button__search-container">
+  
+  <dialog id="pst-search-dialog">
+    
 <form class="bd-search d-flex align-items-center"
       action="../search.html"
       method="get">
@@ -92,7 +88,6 @@
   <input type="search"
          class="form-control"
          name="q"
-         id="search-input"
          placeholder="Search the docs ..."
          aria-label="Search the docs ..."
          autocomplete="off"
@@ -100,20 +95,27 @@
          autocapitalize="off"
          spellcheck="false"/>
   <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
-</form></div>
-  </div>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Advertencia de versión"></aside>
+</div>
+
   
-    <header class="bd-header navbar navbar-expand-lg bd-navbar">
+    <header id="pst-header" class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
 <div class="bd-header__inner bd-page-width">
-  <label class="sidebar-toggle primary-toggle" for="__primary">
+  <button class="pst-navbar-icon sidebar-toggle primary-toggle" aria-label="Navegación del sitio">
     <span class="fa-solid fa-bars"></span>
-  </label>
+  </button>
   
   
   <div class="col-lg-3 navbar-header-items__start">
     
       <div class="navbar-item">
 
+  
+    
   
 
 <a class="navbar-brand logo" href="../index.html">
@@ -126,7 +128,7 @@
     
     
     <img src="../_static/CWL-Logo-HD-cropped2.png" class="logo__image only-light" alt="documentación de Common Workflow Language User Guide - 0.1 - Home"/>
-    <script>document.write(`<img src="../_static/CWL-Logo-HD-cropped2.png" class="logo__image only-dark" alt="documentación de Common Workflow Language User Guide - 0.1 - Home"/>`);</script>
+    <img src="../_static/CWL-Logo-HD-cropped2.png" class="logo__image only-dark pst-js-only" alt="documentación de Common Workflow Language User Guide - 0.1 - Home"/>
   
   
 </a></div>
@@ -138,50 +140,50 @@
     <div class="me-auto navbar-header-items__center">
       
         <div class="navbar-item">
-<nav class="navbar-nav">
+<nav>
   <ul class="bd-navbar-elements navbar-nav">
     
-                    <li class="nav-item current active">
-                      <a class="nav-link nav-internal" href="index.html">
-                        Introduction
-                      </a>
-                    </li>
-                
+<li class="nav-item current active">
+  <a class="nav-link nav-internal" href="index.html">
+    Introducción
+  </a>
+</li>
 
-                    <li class="nav-item">
-                      <a class="nav-link nav-internal" href="../topics/index.html">
-                        Topics
-                      </a>
-                    </li>
-                
 
-                    <li class="nav-item">
-                      <a class="nav-link nav-internal" href="../tutorials.html">
-                        Tutorials
-                      </a>
-                    </li>
-                
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../topics/index.html">
+    Temas
+  </a>
+</li>
 
-                    <li class="nav-item">
-                      <a class="nav-link nav-internal" href="../faq.html">
-                        Preguntas frecuentes
-                      </a>
-                    </li>
-                
 
-                    <li class="nav-item">
-                      <a class="nav-link nav-internal" href="../LICENSE.html">
-                        Licencias
-                      </a>
-                    </li>
-                
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../tutorials.html">
+    Tutoriales
+  </a>
+</li>
 
-                <li class="nav-item">
-                  <a class="nav-link nav-external" href="https://www.commonwl.org/community/">
-                    Community
-                  </a>
-                </li>
-                
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../faq.html">
+    P+F
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../LICENSE.html">
+    Licencias
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-external" href="https://www.commonwl.org/community/">
+    Community
+  </a>
+</li>
+
   </ul>
 </nav></div>
       
@@ -193,31 +195,30 @@
         <div class="navbar-item navbar-persistent--container">
           
 
- <script>
- document.write(`
-   <button class="btn navbar-btn search-button-field search-button__button" title="Búsqueda" aria-label="Búsqueda" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="fa-solid fa-magnifying-glass"></i>
-    <span class="search-button__default-text">Búsqueda</span>
-    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
-   </button>
- `);
- </script>
+<button class="btn search-button-field search-button__button pst-js-only" title="Búsqueda" aria-label="Búsqueda" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Búsqueda</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
         </div>
       
       
         <div class="navbar-item">
 
-<script>
-document.write(`
-  <button class="btn btn-sm navbar-btn theme-switch-button" title="claro/oscuro" aria-label="claro/oscuro" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
-    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
-    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+<div class="theme-switch-container dropdown pst-js-only" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Tema">
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button dropdown-toggle" aria-label="Tema" data-bs-toggle="dropdown">
+    <i class="theme-switch fa-solid fa-sun fa-lg fa-fw" data-mode="light" title="Claro"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg fa-fw" data-mode="dark" title="Oscuro"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg fa-fw" data-mode="auto" title="Sistema"></i>
   </button>
-`);
-</script></div>
+  <ul class="dropdown-menu dropdown-menu-end">
+    <li><button class="dropdown-item d-flex align-items-center theme-change-button" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg fa-fw me-1"></i>Sistema</button></li>
+    <li><button class="dropdown-item d-flex align-items-center theme-change-button" data-mode="light"><i class="fa-solid fa-sun fa-lg fa-fw me-1"></i>Claro</button></li>
+    <li><button class="dropdown-item d-flex align-items-center theme-change-button" data-mode="dark"><i class="fa-solid fa-moon fa-lg fa-fw me-1"></i>Oscuro</button></li>
+  </ul>
+</div></div>
       
-        <div class="navbar-item"><ul class="navbar-icon-links navbar-nav"
+        <div class="navbar-item"><ul class="navbar-icon-links"
     aria-label="Icon Links">
         <li class="nav-item">
           
@@ -228,8 +229,7 @@ document.write(`
           
           
           
-          <a href="https://github.com/common-workflow-language/user_guide/" title="GitHub" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fab fa-github-square fa-lg" aria-hidden="true"></i></span>
-            <span class="sr-only">GitHub</span></a>
+          <a href="https://github.com/common-workflow-language/user_guide/" title="GitHub" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fab fa-github-square fa-lg" aria-hidden="true"></i><span class="visually-hidden">GitHub</span></a>
         </li>
 </ul></div>
       
@@ -240,22 +240,18 @@ document.write(`
   
     <div class="navbar-persistent--mobile">
 
- <script>
- document.write(`
-   <button class="btn navbar-btn search-button-field search-button__button" title="Búsqueda" aria-label="Búsqueda" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="fa-solid fa-magnifying-glass"></i>
-    <span class="search-button__default-text">Búsqueda</span>
-    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
-   </button>
- `);
- </script>
+<button class="btn search-button-field search-button__button pst-js-only" title="Búsqueda" aria-label="Búsqueda" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Búsqueda</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
     </div>
   
 
   
-    <label class="sidebar-toggle secondary-toggle" for="__secondary" tabindex="0">
+    <button class="pst-navbar-icon sidebar-toggle secondary-toggle" aria-label="En esta página">
       <span class="fa-solid fa-outdent"></span>
-    </label>
+    </button>
   
 </div>
 
@@ -267,7 +263,8 @@ document.write(`
       
       
       
-      <div class="bd-sidebar-primary bd-sidebar">
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
         
 
   
@@ -276,53 +273,56 @@ document.write(`
     
       <div class="sidebar-header-items__center">
         
-          <div class="navbar-item">
-<nav class="navbar-nav">
+          
+          
+            <div class="navbar-item">
+<nav>
   <ul class="bd-navbar-elements navbar-nav">
     
-                    <li class="nav-item current active">
-                      <a class="nav-link nav-internal" href="index.html">
-                        Introduction
-                      </a>
-                    </li>
-                
+<li class="nav-item current active">
+  <a class="nav-link nav-internal" href="index.html">
+    Introducción
+  </a>
+</li>
 
-                    <li class="nav-item">
-                      <a class="nav-link nav-internal" href="../topics/index.html">
-                        Topics
-                      </a>
-                    </li>
-                
 
-                    <li class="nav-item">
-                      <a class="nav-link nav-internal" href="../tutorials.html">
-                        Tutorials
-                      </a>
-                    </li>
-                
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../topics/index.html">
+    Temas
+  </a>
+</li>
 
-                    <li class="nav-item">
-                      <a class="nav-link nav-internal" href="../faq.html">
-                        Preguntas frecuentes
-                      </a>
-                    </li>
-                
 
-                    <li class="nav-item">
-                      <a class="nav-link nav-internal" href="../LICENSE.html">
-                        Licencias
-                      </a>
-                    </li>
-                
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../tutorials.html">
+    Tutoriales
+  </a>
+</li>
 
-                <li class="nav-item">
-                  <a class="nav-link nav-external" href="https://www.commonwl.org/community/">
-                    Community
-                  </a>
-                </li>
-                
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../faq.html">
+    P+F
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../LICENSE.html">
+    Licencias
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-external" href="https://www.commonwl.org/community/">
+    Community
+  </a>
+</li>
+
   </ul>
 </nav></div>
+          
         
       </div>
     
@@ -332,17 +332,20 @@ document.write(`
         
           <div class="navbar-item">
 
-<script>
-document.write(`
-  <button class="btn btn-sm navbar-btn theme-switch-button" title="claro/oscuro" aria-label="claro/oscuro" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
-    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
-    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+<div class="theme-switch-container dropdown pst-js-only" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Tema">
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button dropdown-toggle" aria-label="Tema" data-bs-toggle="dropdown">
+    <i class="theme-switch fa-solid fa-sun fa-lg fa-fw" data-mode="light" title="Claro"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg fa-fw" data-mode="dark" title="Oscuro"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg fa-fw" data-mode="auto" title="Sistema"></i>
   </button>
-`);
-</script></div>
+  <ul class="dropdown-menu dropdown-menu-end">
+    <li><button class="dropdown-item d-flex align-items-center theme-change-button" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg fa-fw me-1"></i>Sistema</button></li>
+    <li><button class="dropdown-item d-flex align-items-center theme-change-button" data-mode="light"><i class="fa-solid fa-sun fa-lg fa-fw me-1"></i>Claro</button></li>
+    <li><button class="dropdown-item d-flex align-items-center theme-change-button" data-mode="dark"><i class="fa-solid fa-moon fa-lg fa-fw me-1"></i>Oscuro</button></li>
+  </ul>
+</div></div>
         
-          <div class="navbar-item"><ul class="navbar-icon-links navbar-nav"
+          <div class="navbar-item"><ul class="navbar-icon-links"
     aria-label="Icon Links">
         <li class="nav-item">
           
@@ -353,8 +356,7 @@ document.write(`
           
           
           
-          <a href="https://github.com/common-workflow-language/user_guide/" title="GitHub" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fab fa-github-square fa-lg" aria-hidden="true"></i></span>
-            <span class="sr-only">GitHub</span></a>
+          <a href="https://github.com/common-workflow-language/user_guide/" title="GitHub" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fab fa-github-square fa-lg" aria-hidden="true"></i><span class="visually-hidden">GitHub</span></a>
         </li>
 </ul></div>
         
@@ -363,14 +365,22 @@ document.write(`
   </div>
   
     <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item pst-sidebar-collapse"><button id="pst-collapse-sidebar-button" aria-expanded="true" aria-controls="pst-primary-sidebar">
+  <svg class="pst-icon" role="img" aria-hidden="true" focusable="false" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+    <path fill="currentColor" d="M3 15.5C2.36232 15.5 1.74874 15.2564 1.28478 14.8189C0.820828 14.3815 0.541576 13.7832 0.504167 13.1467L0.5 13L0.5 3C0.499965 2.36232 0.743605 1.74874 1.18107 1.28478C1.61854 0.820828 2.21676 0.541576 2.85333 0.504167L3 0.5L13 0.5C13.6377 0.499965 14.2513 0.743605 14.7152 1.18107C15.1792 1.61854 15.4584 2.21676 15.4958 2.85333L15.5 3L15.5 13C15.5 13.6377 15.2564 14.2513 14.8189 14.7152C14.3815 15.1792 13.7832 15.4584 13.1467 15.4958L13 15.5L3 15.5ZM3 13.8333L10.5 13.8333L10.5 2.16667L3 2.16667C2.79589 2.16669 2.59889 2.24163 2.44636 2.37726C2.29383 2.5129 2.19638 2.69979 2.1725 2.9025L2.16667 3L2.16667 13C2.16669 13.2041 2.24163 13.4011 2.37726 13.5536C2.5129 13.7062 2.69979 13.8036 2.9025 13.8275L3 13.8333ZM6.65583 10.325L6.5775 10.2558L4.91083 8.58917C4.76735 8.44567 4.68116 8.25476 4.66843 8.05223C4.65569 7.84971 4.71729 7.6495 4.84167 7.48917L4.91083 7.41083L6.5775 5.74417C6.72747 5.59471 6.9287 5.50794 7.14032 5.50148C7.35194 5.49502 7.55809 5.56935 7.7169 5.70937C7.8757 5.8494 7.97525 6.04463 7.99533 6.25539C8.01541 6.46616 7.95451 6.67667 7.825 6.84417L7.75583 6.9225L6.67917 8L7.75583 9.0775C7.89931 9.22099 7.98551 9.41191 7.99824 9.61443C8.01097 9.81695 7.94938 10.0172 7.825 10.1775L7.75583 10.2558C7.61234 10.3993 7.42142 10.4855 7.2189 10.4982C7.01638 10.511 6.81617 10.4494 6.65583 10.325Z"/>
+  </svg>
+  <span class="pst-collapse-sidebar-label">Colapsar barra lateral</span>
+  <span class="pst-expand-sidebar-label">Expandir barra lateral</span>
+</button></div>
         <div class="sidebar-primary-item">
+
 <nav class="bd-docs-nav bd-links"
      aria-label="Sección Navegación">
   <p class="bd-links__title" role="heading" aria-level="1">Sección Navegación</p>
   <div class="bd-toc-item navbar-nav"><ul class="current nav bd-sidenav">
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">1.1. Quick Start</a></li>
-<li class="toctree-l1"><a class="reference internal" href="prerequisites.html">1.2. Prerequisites</a></li>
-<li class="toctree-l1"><a class="reference internal" href="basic-concepts.html">1.3. Basic Concepts</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">1.1. Inicio rápido</a></li>
+<li class="toctree-l1"><a class="reference internal" href="prerequisites.html">1.2. Prerrequisitos</a></li>
+<li class="toctree-l1"><a class="reference internal" href="basic-concepts.html">1.3. Conceptos básicos</a></li>
 </ul>
 </div>
 </nav></div>
@@ -378,29 +388,32 @@ document.write(`
   
   
   <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
   </div>
-  
-  <div id="rtd-footer-container"></div>
 
 
       </div>
       
-      <main id="main-content" class="bd-main">
+      <main id="main-content" class="bd-main" role="main">
         
         
           <div class="bd-content">
             <div class="bd-article-container">
               
-              <div class="bd-header-article">
+              <div class="bd-header-article d-print-none">
 <div class="header-article-items header-article__inner">
   
     <div class="header-article-items__start">
       
         <div class="header-article-item">
 
-
-
-<nav aria-label="Miga de pan">
+<nav aria-label="Miga de pan" class="d-print-none">
   <ul class="bd-breadcrumbs">
     
     <li class="breadcrumb-item breadcrumb-home">
@@ -409,9 +422,9 @@ document.write(`
       </a>
     </li>
     
-    <li class="breadcrumb-item"><a href="index.html" class="nav-link"><span class="section-number">1. </span>Introduction</a></li>
+    <li class="breadcrumb-item"><a href="index.html" class="nav-link"><span class="section-number">1. </span>Introducción</a></li>
     
-    <li class="breadcrumb-item active" aria-current="page"><span...</li>
+    <li class="breadcrumb-item active" aria-current="page"><span class="ellipsis"><span class="section-number">1.1. </span>Inicio rápido</span></li>
   </ul>
 </nav>
 </div>
@@ -429,117 +442,100 @@ document.write(`
                 <article class="bd-article">
                   
   <section id="quick-start">
-<h1><span class="section-number">1.1. </span>Quick Start<a class="headerlink" href="#quick-start" title="Link to this heading">#</a></h1>
-<p>This section will show you a brief overview of what CWL is, and where you
-can learn more about it. No previous knowledge of CWL is required, but you
-must be comfortable following instructions for the command-line.</p>
+<h1><span class="section-number">1.1. </span>Inicio rápido<a class="headerlink" href="#quick-start" title="Link to this heading">#</a></h1>
+<p>Esta sección le mostrará un breve resumen de lo que es CWL, y dónde puede aprender más sobre él. No se requieren conocimientos previos de CWL, pero debe sentirse cómodo siguiendo instrucciones para la línea de comandos.</p>
 <section id="hello-world">
-<h2><span class="section-number">1.1.1. </span>“Hello World”<a class="headerlink" href="#hello-world" title="Link to this heading">#</a></h2>
-<p>CWL es una manera de describir herramientas de línea de comandos y conectarlas para crear flujos de trabajo. Puesto que CWL es una especificación y no un software concreto, las herramientas y flujos de trabajo descritos usando CWL son portables en múltiples plataformas que soporten el estándar CWL.</p>
-<p>CWL documents are written in <a class="reference internal" href="../topics/index.html"><span class="std std-doc">YAML</span></a> (and/or JSON).
-The example below shows a simple CWL “Hello World” workflow annotated
-with comments. Note that comments start with <code class="docutils literal notranslate"><span class="pre">#</span></code>:</p>
+<h2><span class="section-number">1.1.1. </span>«Hola Mundo»<a class="headerlink" href="#hello-world" title="Link to this heading">#</a></h2>
+<p>CWL es una forma de describir herramientas de línea de comandos y conectarlas entre sí para crear flujos de trabajo. Dado que CWL es una especificación y no un software específico, las herramientas y los flujos de trabajo descritos mediante CWL son portables en diversas plataformas compatibles con el estándar CWL.</p>
+<p>Los documentos CWL se escriben en <a class="reference internal" href="../topics/index.html"><span class="std std-doc">YAML</span></a> (y/o JSON). El siguiente ejemplo muestra un simple flujo de trabajo CWL «Hola Mundo» anotado con comentarios. Tenga en cuenta que los comentarios empiezan por <code class="docutils literal notranslate"><span class="pre">#</span></code>:</p>
 <div class="literal-block-wrapper docutils container" id="hello-world-cwl">
 <div class="code-block-caption"><span class="caption-text"><code class="docutils literal notranslate"><span class="pre">hello_world.cwl</span></code></span><a class="headerlink" href="#hello-world-cwl" title="Link to this code">#</a></div>
 <div class="highlight-cwl notranslate"><div class="highlight"><pre><span></span><span class="nt">cwlVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">v1.2</span>
 
 <span class="c1"># What type of CWL process we have in this document.</span>
 <span class="nt">class</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">CommandLineTool</span>
-<span class="c1"># This CommandLineTool executes the linux &quot;echo&quot; command-line tool.</span>
+<span class="c1"># This CommandLineTool executes the linux "echo" command-line tool.</span>
 <span class="nt">baseCommand</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">echo</span>
 
 <span class="c1"># The inputs for this process.</span>
 <span class="nt">inputs</span><span class="p">:</span>
 <span class="w">  </span><span class="nt">message</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">string</span>
-<span class="w">    </span><span class="c1"># A default value that can be overridden, e.g. --message &quot;Hola mundo&quot;</span>
-<span class="w">    </span><span class="nt">default</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;Hello</span><span class="nv"> </span><span class="s">World&quot;</span>
-<span class="w">    </span><span class="c1"># Bind this message value as an argument to &quot;echo&quot;.</span>
+<span class="w">    </span><span class="c1"># A default value that can be overridden, e.g. --message "Hola mundo"</span>
+<span class="w">    </span><span class="nt">default</span><span class="p">:</span><span class="w"> </span><span class="s">"Hello</span><span class="nv"> </span><span class="s">World"</span>
+<span class="w">    </span><span class="c1"># Bind this message value as an argument to "echo".</span>
 <span class="w">    </span><span class="nt">inputBinding</span><span class="p">:</span>
 <span class="w">      </span><span class="nt">position</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1</span>
 <span class="nt">outputs</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[]</span>
 </pre></div>
 </div>
 </div>
-<p>The example above is just a wrapper for the <code class="docutils literal notranslate"><span class="pre">echo</span></code> command-line tool.
-Running the workflow above with the default input values will produce the same result as the
-command-line <code class="docutils literal notranslate"><span class="pre">echo</span> <span class="pre">&quot;Hello</span> <span class="pre">World&quot;</span></code>.</p>
+<p>El ejemplo anterior es sólo una envoltura para la herramienta de línea de comandos <code class="docutils literal notranslate"><span class="pre">echo</span></code>. Ejecutar el flujo de trabajo anterior con los valores de entrada por defecto producirá el mismo resultado que la línea de comandos <code class="docutils literal notranslate"><span class="pre">echo</span> <span class="pre">&quot;Hola</span> <span class="pre">Mundo&quot;</span></code>.</p>
 <div class="admonition note">
 <p class="admonition-title">Nota</p>
-<p>In CWL, there is a distinction between a command-line tool and a workflow. But
-for the sake of simplicity, we are using the term “workflow” here. You will learn
-more about this in the <a class="reference internal" href="basic-concepts.html"><span class="std std-doc">basic concepts</span></a> section.</p>
+<p>En CWL, hay una distinción entre una herramienta de línea de comandos y un flujo de trabajo. Pero en aras de la simplicidad, vamos a utilizar el término «flujo de trabajo» aquí. Aprenderás más sobre esto en la sección <a class="reference internal" href="basic-concepts.html"><span class="std std-doc">conceptos básicos</span></a>.</p>
 </div>
 </section>
 <section id="installing-a-cwl-runner">
-<h2><span class="section-number">1.1.2. </span>Installing a CWL Runner<a class="headerlink" href="#installing-a-cwl-runner" title="Link to this heading">#</a></h2>
-<p><code class="docutils literal notranslate"><span class="pre">cwltool</span></code> is an implementation of the CWL specification. It is also the
-CWL <em>Reference Runner</em> for the specification, and it is compliant with the
-latest version of the specification: <code class="docutils literal notranslate"><span class="pre">v1.2</span></code>. You can install
-<code class="docutils literal notranslate"><span class="pre">cwltool</span></code> using <code class="docutils literal notranslate"><span class="pre">pip</span></code>:</p>
+<h2><span class="section-number">1.1.2. </span>Instalación de un ejecutante CWL<a class="headerlink" href="#installing-a-cwl-runner" title="Link to this heading">#</a></h2>
+<p><code class="docutils literal notranslate"><span class="pre">cwltool</span></code> es una implementación de la especificación CWL. También es el CWL <em>Reference Runner</em> para la especificación, y es compatible con la última versión de la especificación: <code class="docutils literal notranslate"><span class="pre">v1.2</span></code>. Puedes instalar <code class="docutils literal notranslate"><span class="pre">cwltool</span></code> usando <code class="docutils literal notranslate"><span class="pre">pip</span></code>:</p>
 <div class="literal-block-wrapper docutils container" id="installing-cwltool-with-pip">
-<div class="code-block-caption"><span class="caption-text">Installing <code class="docutils literal notranslate"><span class="pre">cwltool</span></code> with <code class="docutils literal notranslate"><span class="pre">pip</span></code>.</span><a class="headerlink" href="#installing-cwltool-with-pip" title="Link to this code">#</a></div>
+<div class="code-block-caption"><span class="caption-text">Instalando <code class="docutils literal notranslate"><span class="pre">cwltool</span></code> con <code class="docutils literal notranslate"><span class="pre">pip</span></code>.</span><a class="headerlink" href="#installing-cwltool-with-pip" title="Link to this code">#</a></div>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>pip<span class="w"> </span>install<span class="w"> </span>cwltool
 </pre></div>
 </div>
 </div>
 <div class="admonition note">
 <p class="admonition-title">Nota</p>
-<p>If installing the cwltool using the pip command doesn’t work for you, the <a class="reference internal" href="prerequisites.html"><span class="std std-doc">prerequisites</span></a> section contains other ways to install <code class="docutils literal notranslate"><span class="pre">cwltool</span></code> and a more detailed list
-of software and libraries used for following the rest of this user guide.</p>
+<p>Si la instalación de <code class="docutils literal notranslate"><span class="pre">cwltool</span></code> mediante el comando pip no le funciona, la sección <a class="reference internal" href="prerequisites.html"><span class="std std-doc">prerequisites</span></a> contiene otras formas de instalar <code class="docutils literal notranslate"><span class="pre">cwltool</span></code> y una lista más detallada del software y las librerías utilizadas para seguir el resto de esta guía de usuario.</p>
 </div>
 </section>
 <section id="running-hello-world">
-<h2><span class="section-number">1.1.3. </span>Running «Hello World»<a class="headerlink" href="#running-hello-world" title="Link to this heading">#</a></h2>
-<p>The usage of the <code class="docutils literal notranslate"><span class="pre">cwltool</span></code> command-line executable is basically
-<code class="docutils literal notranslate"><span class="pre">cwltool</span> <span class="pre">[OPTIONS]</span> <span class="pre">[CWL_DOCUMENT]</span> <span class="pre">[INPUTS_OBJECT]</span></code>. You can run the
-<code class="docutils literal notranslate"><span class="pre">hello_world.cwl</span></code> workflow without specifying any option:</p>
+<h2><span class="section-number">1.1.3. </span>Ejecutando «Hola Mundo»<a class="headerlink" href="#running-hello-world" title="Link to this heading">#</a></h2>
+<p>El uso de la línea de comando <code class="docutils literal notranslate"><span class="pre">cwltool</span></code> ejecutable básicamente es <code class="docutils literal notranslate"><span class="pre">cwltool</span> <span class="pre">[OPTIONS]</span> <span class="pre">[CWL_DOCUMENT]</span> <span class="pre">[INPUTS_OBJECT]</span></code>. Puede ejecutar el flujo de trabajo <code class="docutils literal notranslate"><span class="pre">hello_world.cwl</span></code> sin especificar ninguna opción:</p>
 <div class="literal-block-wrapper docutils container" id="running-hello-world-cwl-with-cwltool">
-<div class="code-block-caption"><span class="caption-text">Running <code class="docutils literal notranslate"><span class="pre">hello_world.cwl</span></code> with <code class="docutils literal notranslate"><span class="pre">cwltool</span></code>.</span><a class="headerlink" href="#running-hello-world-cwl-with-cwltool" title="Link to this code">#</a></div>
+<div class="code-block-caption"><span class="caption-text">Ejecutando <code class="docutils literal notranslate"><span class="pre">hello_world.cwl</span></code> con <code class="docutils literal notranslate"><span class="pre">cwltool</span></code>.</span><a class="headerlink" href="#running-hello-world-cwl-with-cwltool" title="Link to this code">#</a></div>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>cwltool<span class="w"> </span>hello_world.cwl
-INFO<span class="w"> </span>/opt/hostedtoolcache/Python/3.9.19/x64/bin/cwltool<span class="w"> </span><span class="m">3</span>.1.20240508115724
-INFO<span class="w"> </span>Resolved<span class="w"> </span><span class="s1">&#39;hello_world.cwl&#39;</span><span class="w"> </span>to<span class="w"> </span><span class="s1">&#39;file:///home/runner/work/user_guide/user_guide/src/_includes/cwl/hello_world.cwl&#39;</span>
-INFO<span class="w"> </span><span class="o">[</span>job<span class="w"> </span>hello_world.cwl<span class="o">]</span><span class="w"> </span>/tmp/bqiwrviv$<span class="w"> </span><span class="nb">echo</span><span class="w"> </span><span class="se">\</span>
-<span class="w">    </span><span class="s1">&#39;Hello World&#39;</span>
+INFO<span class="w"> </span>/opt/hostedtoolcache/Python/3.14.7/x64/bin/cwltool<span class="w"> </span><span class="m">3</span>.2.20260720092025
+INFO<span class="w"> </span>Resolved<span class="w"> </span><span class="s1">'hello_world.cwl'</span><span class="w"> </span>to<span class="w"> </span><span class="s1">'file:///home/runner/work/user_guide/user_guide/src/_includes/cwl/hello_world.cwl'</span>
+INFO<span class="w"> </span><span class="o">[</span>job<span class="w"> </span>hello_world.cwl<span class="o">]</span><span class="w"> </span>/tmp/fobsxrde$<span class="w"> </span><span class="nb">echo</span><span class="w"> </span><span class="se">\</span>
+<span class="w">    </span><span class="s1">'Hello World'</span>
 Hello<span class="w"> </span>World
 INFO<span class="w"> </span><span class="o">[</span>job<span class="w"> </span>hello_world.cwl<span class="o">]</span><span class="w"> </span>completed<span class="w"> </span>success
 <span class="o">{}</span>INFO<span class="w"> </span>Final<span class="w"> </span>process<span class="w"> </span>status<span class="w"> </span>is<span class="w"> </span>success
 </pre></div>
 </div>
 </div>
-<p>Or you can override the default value of the input parameter <code class="docutils literal notranslate"><span class="pre">message</span></code>, similar
-to how you would change the argument of the <code class="docutils literal notranslate"><span class="pre">echo</span></code> base command:</p>
+<p>O puede sobrescribir el valor por defecto del parámetro de entrada <code class="docutils literal notranslate"><span class="pre">message</span></code>, similar a como cambiaría el argumento del comando base <code class="docutils literal notranslate"><span class="pre">echo</span></code>:</p>
 <div class="literal-block-wrapper docutils container" id="running-hello-world-cwl-with-cwltool-passing-an-input-parameter">
-<div class="code-block-caption"><span class="caption-text">Running <code class="docutils literal notranslate"><span class="pre">hello_world.cwl</span></code> with <code class="docutils literal notranslate"><span class="pre">cwltool</span></code> passing an input parameter.</span><a class="headerlink" href="#running-hello-world-cwl-with-cwltool-passing-an-input-parameter" title="Link to this code">#</a></div>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>cwltool<span class="w"> </span>hello_world.cwl<span class="w"> </span>--message<span class="o">=</span><span class="s2">&quot;Hola mundo&quot;</span>
-INFO<span class="w"> </span>/opt/hostedtoolcache/Python/3.9.19/x64/bin/cwltool<span class="w"> </span><span class="m">3</span>.1.20240508115724
-INFO<span class="w"> </span>Resolved<span class="w"> </span><span class="s1">&#39;hello_world.cwl&#39;</span><span class="w"> </span>to<span class="w"> </span><span class="s1">&#39;file:///home/runner/work/user_guide/user_guide/src/_includes/cwl/hello_world.cwl&#39;</span>
-INFO<span class="w"> </span><span class="o">[</span>job<span class="w"> </span>hello_world.cwl<span class="o">]</span><span class="w"> </span>/tmp/v6vgm2ca$<span class="w"> </span><span class="nb">echo</span><span class="w"> </span><span class="se">\</span>
-<span class="w">    </span><span class="s1">&#39;Hola mundo&#39;</span>
+<div class="code-block-caption"><span class="caption-text">Ejecutando <code class="docutils literal notranslate"><span class="pre">hello_world.cwl</span></code> con <code class="docutils literal notranslate"><span class="pre">cwltool</span></code> pasando un parámetro de entrada.</span><a class="headerlink" href="#running-hello-world-cwl-with-cwltool-passing-an-input-parameter" title="Link to this code">#</a></div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>cwltool<span class="w"> </span>hello_world.cwl<span class="w"> </span>--message<span class="o">=</span><span class="s2">"Hola mundo"</span>
+INFO<span class="w"> </span>/opt/hostedtoolcache/Python/3.14.7/x64/bin/cwltool<span class="w"> </span><span class="m">3</span>.2.20260720092025
+INFO<span class="w"> </span>Resolved<span class="w"> </span><span class="s1">'hello_world.cwl'</span><span class="w"> </span>to<span class="w"> </span><span class="s1">'file:///home/runner/work/user_guide/user_guide/src/_includes/cwl/hello_world.cwl'</span>
+INFO<span class="w"> </span><span class="o">[</span>job<span class="w"> </span>hello_world.cwl<span class="o">]</span><span class="w"> </span>/tmp/3d5top7n$<span class="w"> </span><span class="nb">echo</span><span class="w"> </span><span class="se">\</span>
+<span class="w">    </span><span class="s1">'Hola mundo'</span>
 Hola<span class="w"> </span>mundo
 INFO<span class="w"> </span><span class="o">[</span>job<span class="w"> </span>hello_world.cwl<span class="o">]</span><span class="w"> </span>completed<span class="w"> </span>success
 <span class="o">{}</span>INFO<span class="w"> </span>Final<span class="w"> </span>process<span class="w"> </span>status<span class="w"> </span>is<span class="w"> </span>success
 </pre></div>
 </div>
 </div>
-<p>Another way of passing values to your workflow input parameters is via an
-<em>Inputs Object</em>. This is a file containing the input fields with their
-corresponding values. The Inputs Objects file can be written in JSON or YAML. For example:</p>
+<p>Otra forma de pasar valores a los parámetros de entrada de su flujo de trabajo es a través de un <em>Inputs Object</em>. Se trata de un archivo que contiene los campos de entrada con sus valores correspondientes. El archivo de Objetos de Entrada se puede escribir en JSON o YAML. Por ejemplo:</p>
 <div class="literal-block-wrapper docutils container" id="hello-world-job-json">
 <div class="code-block-caption"><span class="caption-text"><code class="docutils literal notranslate"><span class="pre">hello_world-job.json</span></code></span><a class="headerlink" href="#hello-world-job-json" title="Link to this code">#</a></div>
 <div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
-<span class="w">  </span><span class="nt">&quot;message&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;こんにちは世界&quot;</span>
+<span class="w">  </span><span class="nt">"message"</span><span class="p">:</span><span class="w"> </span><span class="s2">"こんにちは世界"</span>
 <span class="p">}</span>
 </pre></div>
 </div>
 </div>
-<p>You can use this Inputs Object file now to execute the “Hello World” workflow:</p>
+<p>Ahora puede utilizar este archivo Objeto de Entrada para ejecutar el flujo de trabajo «Hola Mundo»:</p>
 <div class="literal-block-wrapper docutils container" id="passing-an-inputs-object-file-to-cwltool">
-<div class="code-block-caption"><span class="caption-text">Passing an Inputs Object file to <code class="docutils literal notranslate"><span class="pre">cwltool</span></code>.</span><a class="headerlink" href="#passing-an-inputs-object-file-to-cwltool" title="Link to this code">#</a></div>
+<div class="code-block-caption"><span class="caption-text">Pasar un archivo de Objetos de Entrada a <code class="docutils literal notranslate"><span class="pre">cwltool</span></code>.</span><a class="headerlink" href="#passing-an-inputs-object-file-to-cwltool" title="Link to this code">#</a></div>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>cwltool<span class="w"> </span>hello_world.cwl<span class="w"> </span>hello_world-job.json
-INFO<span class="w"> </span>/opt/hostedtoolcache/Python/3.9.19/x64/bin/cwltool<span class="w"> </span><span class="m">3</span>.1.20240508115724
-INFO<span class="w"> </span>Resolved<span class="w"> </span><span class="s1">&#39;hello_world.cwl&#39;</span><span class="w"> </span>to<span class="w"> </span><span class="s1">&#39;file:///home/runner/work/user_guide/user_guide/src/_includes/cwl/hello_world.cwl&#39;</span>
-INFO<span class="w"> </span><span class="o">[</span>job<span class="w"> </span>hello_world.cwl<span class="o">]</span><span class="w"> </span>/tmp/fnwbxiii$<span class="w"> </span><span class="nb">echo</span><span class="w"> </span><span class="se">\</span>
+INFO<span class="w"> </span>/opt/hostedtoolcache/Python/3.14.7/x64/bin/cwltool<span class="w"> </span><span class="m">3</span>.2.20260720092025
+INFO<span class="w"> </span>Resolved<span class="w"> </span><span class="s1">'hello_world.cwl'</span><span class="w"> </span>to<span class="w"> </span><span class="s1">'file:///home/runner/work/user_guide/user_guide/src/_includes/cwl/hello_world.cwl'</span>
+INFO<span class="w"> </span><span class="o">[</span>job<span class="w"> </span>hello_world.cwl<span class="o">]</span><span class="w"> </span>/tmp/q_54bp2t$<span class="w"> </span><span class="nb">echo</span><span class="w"> </span><span class="se">\</span>
 <span class="w">    </span>こんにちは世界
 こんにちは世界
 INFO<span class="w"> </span><span class="o">[</span>job<span class="w"> </span>hello_world.cwl<span class="o">]</span><span class="w"> </span>completed<span class="w"> </span>success
@@ -549,22 +545,19 @@ INFO<span class="w"> </span><span class="o">[</span>job<span class="w"> </span>h
 </div>
 <div class="admonition note">
 <p class="admonition-title">Nota</p>
-<p>We used a similar file name for the workflow and for the Inputs Object files.
-The <em>-job.json</em> suffix is very common in Inputs Object files, but it is not
-a requirement. You can choose any name for your workflows and Inputs Object
-files.</p>
+<p>Utilizamos un nombre de archivo similar para el flujo de trabajo y para los archivos de Objetos de Entrada. El sufijo <em>-job.json</em> es muy común en los archivos Objetos de Entrada, pero no es un requisito. Puede elegir cualquier nombre para sus flujos de trabajo y archivos de Objetos de Entrada.</p>
 </div>
 </section>
 <section id="learn-more">
-<h2><span class="section-number">1.1.4. </span>Learn More<a class="headerlink" href="#learn-more" title="Link to this heading">#</a></h2>
-<p>Continue reading the next sections of this User Guide!</p>
+<h2><span class="section-number">1.1.4. </span>Más información<a class="headerlink" href="#learn-more" title="Link to this heading">#</a></h2>
+<p>Continúe leyendo las siguientes secciones de esta Guía del Usuario.</p>
 <ul class="simple">
-<li><p><a class="reference external" href="https://www.commonwl.org/implementations">List of CWL Implementations</a>.</p></li>
-<li><p>The <a class="reference external" href="https://github.com/common-workflow-language"><code class="docutils literal notranslate"><span class="pre">common-workflow-language</span></code> organization</a> at GitHub.</p></li>
-<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Common_Workflow_Language">Common Workflow Language at Wikipedia</a>.</p></li>
-<li><p><a class="reference external" href="http://yaml.org/">YAML.org</a> and <a class="reference external" href="https://en.wikipedia.org/wiki/YAML">YAML at Wikipedia</a>.</p></li>
-<li><p>The <a class="reference external" href="https://www.commonwl.org/v1.2">CWL Specification v1.2</a>.</p></li>
-<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Workflow_management_system">Workflow management system at Wikipedia</a>.</p></li>
+<li><p><a class="reference external" href="https://www.commonwl.org/implementations">Lista de implementaciones del CWL</a>.</p></li>
+<li><p>La organización <a class="reference external" href="https://github.com/common-workflow-language"><code class="docutils literal notranslate"><span class="pre">common-workflow-language</span></code></a> en GitHub.</p></li>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Common_Workflow_Language">Lenguaje común de flujo de trabajo en Wikipedia</a>.</p></li>
+<li><p><a class="reference external" href="http://yaml.org/">YAML.org</a> y <a class="reference external" href="https://en.wikipedia.org/wiki/YAML">YAML en Wikipedia</a>.</p></li>
+<li><p>La <a class="reference external" href="https://www.commonwl.org/v1.2">v1.2 DE LA ESPECIFICACIÓN CWL</a>.</p></li>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Workflow_management_system">Sistema de gestión del flujo de trabajo en Wikipedia</a>.</p></li>
 </ul>
 </section>
 </section>
@@ -576,7 +569,7 @@ files.</p>
               
               
               
-                <footer class="prev-next-footer">
+                <footer class="prev-next-footer d-print-none">
                   
 <div class="prev-next-area">
     <a class="left-prev"
@@ -585,7 +578,7 @@ files.</p>
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">anterior</p>
-        <p class="prev-next-title"><span class="section-number">1. </span>Introduction</p>
+        <p class="prev-next-title"><span class="section-number">1. </span>Introducción</p>
       </div>
     </a>
     <a class="right-next"
@@ -593,7 +586,7 @@ files.</p>
        title="siguiente página">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">siguiente</p>
-        <p class="prev-next-title"><span class="section-number">1.2. </span>Prerequisites</p>
+        <p class="prev-next-title"><span class="section-number">1.2. </span>Prerrequisitos</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -604,7 +597,8 @@ files.</p>
             
             
               
-                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
 
 
   <div class="sidebar-secondary-item">
@@ -613,12 +607,12 @@ files.</p>
     class="page-toc tocsection onthispage">
     <i class="fa-solid fa-list"></i> En esta página
   </div>
-  <nav class="bd-toc-nav page-toc" aria-labelledby="pst-page-navigation-heading-2">
-    <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#hello-world">1.1.1. “Hello World”</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#installing-a-cwl-runner">1.1.2. Installing a CWL Runner</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#running-hello-world">1.1.3. Running «Hello World»</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#learn-more">1.1.4. Learn More</a></li>
+  <nav id="pst-page-toc-nav" class="page-toc" aria-labelledby="pst-page-navigation-heading-2">
+    <ul class="pst-show_toc_level nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#hello-world">1.1.1. «Hola Mundo»</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#installing-a-cwl-runner">1.1.2. Instalación de un ejecutante CWL</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#running-hello-world">1.1.3. Ejecutando «Hola Mundo»</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#learn-more">1.1.4. Más información</a></li>
 </ul>
   </nav></div>
 
@@ -660,8 +654,8 @@ files.</p>
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae"></script>
-<script src="../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae"></script>
+  <script defer src="../_static/scripts/bootstrap.js?digest=cb8930eaaf36d9849b67"></script>
+<script defer src="../_static/scripts/pydata-sphinx-theme.js?digest=cb8930eaaf36d9849b67"></script>
 
   <footer class="bd-footer">
 <div class="bd-footer__inner bd-page-width">
@@ -681,7 +675,7 @@ files.</p>
         <div class="footer-item">
 
   <p class="sphinx-version">
-    Creado usando <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.3.7.
+    Creado usando <a href="https://www.sphinx-doc.org/">Sphinx</a> 8.2.3.
     <br/>
   </p>
 </div>
@@ -714,7 +708,8 @@ files.</p>
       
         <div class="footer-item">
 <p class="theme-version">
-  Construido con el <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">Tema PyData Sphinx</a> 0.15.2.
+  <!-- # L10n: Setting the PST URL as an argument as this does not need to be localized -->
+  Construido con el <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html"> Tema PyData Sphinx </a> 0.21.0.
 </p></div>
       
     </div>

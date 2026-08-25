@@ -12,7 +12,7 @@
     <link rel="icon" sizes="96x96" href="_static/images/favicons/cwl/favicon-96x96.png" type="image/png">
     <link rel="icon" sizes="128x128" href="_static/images/favicons/cwl/favicon-128.png" type="image/png">
     <link rel="icon" sizes="196x196" href="_static/images/favicons/cwl/favicon-196x196.png" type="image/png">
-    <title>通用工作流语言用户指南 &#8212; Common Workflow Language User Guide 0.1 文档</title>
+    <title>通用工作流语言用户指南 &#8212; Common Workflow Language User Guide 0.1 documentation</title>
   
   
   
@@ -20,69 +20,65 @@
     document.documentElement.dataset.mode = localStorage.getItem("mode") || "light";
     document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
   </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="_static/styles/theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
-<link href="_static/styles/bootstrap.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
-<link href="_static/styles/pydata-sphinx-theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+  <link href="_static/styles/theme.css?digest=cb8930eaaf36d9849b67" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=cb8930eaaf36d9849b67" rel="stylesheet" />
 
-  
-  <link href="_static/vendor/fontawesome/6.5.1/css/all.min.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
-  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.1/webfonts/fa-solid-900.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
-
-    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=80d5e7a1" />
-    <link rel="stylesheet" type="text/css" href="_static/graphviz.css?v=fd3f3429" />
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=b86133f3" />
+    <link rel="stylesheet" type="text/css" href="_static/graphviz.css?v=4ae1632d" />
     <link rel="stylesheet" type="text/css" href="_static/css/custom.css?v=e0da1575" />
   
+  <!-- So that users can add custom icons -->
+  <script defer src="_static/scripts/fontawesome.js?digest=cb8930eaaf36d9849b67"></script>
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae" />
-<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae" />
-  <script src="_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=8d27b9dea8ad943066ae"></script>
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=cb8930eaaf36d9849b67" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=cb8930eaaf36d9849b67" />
 
     <script src="_static/documentation_options.js?v=ac4875c4"></script>
-    <script src="_static/doctools.js?v=9a2dae69"></script>
+    <script src="_static/doctools.js?v=9bcbadda"></script>
     <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'index';</script>
+    <script>DOCUMENTATION_OPTIONS.search_as_you_type = false;</script>
     <link rel="icon" href="_static/favicon.ico"/>
-    <link rel="index" title="索引" href="genindex.html" />
+    <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="搜索" href="search.html" />
     <link rel="next" title="1. 概述" href="introduction/index.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="zh-Hans"/>
+  <meta name="docsearch:version" content="" />
+  
+    
+    <script src="_static/searchtools.js"></script>
+    <script src="_static/language_data.js"></script>
+    <script src="searchindex.js"></script>
+  
   </head>
+  <body data-default-mode="light">
   
   
-  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="light">
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">跳转至主要内容</a></div>
 
-  
-  
-  <a id="pst-skip-link" class="skip-link" href="#main-content">Skip to main content</a>
   
   <div id="pst-scroll-pixel-helper"></div>
   
   <button type="button" class="btn rounded-pill" id="pst-back-to-top">
-    <i class="fa-solid fa-arrow-up"></i>
-    Back to top
-  </button>
-
+    <i class="fa-solid fa-arrow-up"></i>回到顶部</button>
   
-  <input type="checkbox"
-          class="sidebar-toggle"
-          name="__primary"
-          id="__primary"/>
-  <label class="overlay overlay-primary" for="__primary"></label>
   
-  <input type="checkbox"
-          class="sidebar-toggle"
-          name="__secondary"
-          id="__secondary"/>
-  <label class="overlay overlay-secondary" for="__secondary"></label>
   
-  <div class="search-button__wrapper">
-    <div class="search-button__overlay"></div>
-    <div class="search-button__search-container">
+  
+  <dialog id="pst-search-dialog">
+    
 <form class="bd-search d-flex align-items-center"
       action="search.html"
       method="get">
@@ -90,7 +86,6 @@
   <input type="search"
          class="form-control"
          name="q"
-         id="search-input"
          placeholder="Search the docs ..."
          aria-label="Search the docs ..."
          autocomplete="off"
@@ -98,20 +93,27 @@
          autocapitalize="off"
          spellcheck="false"/>
   <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
-</form></div>
-  </div>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="版本警告"></aside>
+</div>
+
   
-    <header class="bd-header navbar navbar-expand-lg bd-navbar">
+    <header id="pst-header" class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
 <div class="bd-header__inner bd-page-width">
-  <label class="sidebar-toggle primary-toggle" for="__primary">
+  <button class="pst-navbar-icon sidebar-toggle primary-toggle" aria-label="网页导航">
     <span class="fa-solid fa-bars"></span>
-  </label>
+  </button>
   
   
   <div class="col-lg-3 navbar-header-items__start">
     
       <div class="navbar-item">
 
+  
+    
   
 
 <a class="navbar-brand logo" href="#">
@@ -123,8 +125,8 @@
     
     
     
-    <img src="_static/CWL-Logo-HD-cropped2.png" class="logo__image only-light" alt="Common Workflow Language User Guide 0.1 文档 - Home"/>
-    <script>document.write(`<img src="_static/CWL-Logo-HD-cropped2.png" class="logo__image only-dark" alt="Common Workflow Language User Guide 0.1 文档 - Home"/>`);</script>
+    <img src="_static/CWL-Logo-HD-cropped2.png" class="logo__image only-light" alt="Common Workflow Language User Guide 0.1 documentation - Home"/>
+    <img src="_static/CWL-Logo-HD-cropped2.png" class="logo__image only-dark pst-js-only" alt="Common Workflow Language User Guide 0.1 documentation - Home"/>
   
   
 </a></div>
@@ -136,50 +138,50 @@
     <div class="me-auto navbar-header-items__center">
       
         <div class="navbar-item">
-<nav class="navbar-nav">
+<nav>
   <ul class="bd-navbar-elements navbar-nav">
     
-                    <li class="nav-item">
-                      <a class="nav-link nav-internal" href="introduction/index.html">
-                        概述
-                      </a>
-                    </li>
-                
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="introduction/index.html">
+    概述
+  </a>
+</li>
 
-                    <li class="nav-item">
-                      <a class="nav-link nav-internal" href="topics/index.html">
-                        主题
-                      </a>
-                    </li>
-                
 
-                    <li class="nav-item">
-                      <a class="nav-link nav-internal" href="tutorials.html">
-                        Tutorials
-                      </a>
-                    </li>
-                
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="topics/index.html">
+    主题
+  </a>
+</li>
 
-                    <li class="nav-item">
-                      <a class="nav-link nav-internal" href="faq.html">
-                        常见问题
-                      </a>
-                    </li>
-                
 
-                    <li class="nav-item">
-                      <a class="nav-link nav-internal" href="LICENSE.html">
-                        许可协议
-                      </a>
-                    </li>
-                
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="tutorials.html">
+    教程
+  </a>
+</li>
 
-                <li class="nav-item">
-                  <a class="nav-link nav-external" href="https://www.commonwl.org/community/">
-                    Community
-                  </a>
-                </li>
-                
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="faq.html">
+    常见问题
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="LICENSE.html">
+    许可协议
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-external" href="https://www.commonwl.org/community/">
+    Community
+  </a>
+</li>
+
   </ul>
 </nav></div>
       
@@ -191,31 +193,30 @@
         <div class="navbar-item navbar-persistent--container">
           
 
- <script>
- document.write(`
-   <button class="btn navbar-btn search-button-field search-button__button" title="搜索" aria-label="搜索" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="fa-solid fa-magnifying-glass"></i>
-    <span class="search-button__default-text">搜索</span>
-    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
-   </button>
- `);
- </script>
+<button class="btn search-button-field search-button__button pst-js-only" title="搜索" aria-label="搜索" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">搜索</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
         </div>
       
       
         <div class="navbar-item">
 
-<script>
-document.write(`
-  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
-    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
-    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+<div class="theme-switch-container dropdown pst-js-only" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Color mode">
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button dropdown-toggle" aria-label="Color mode" data-bs-toggle="dropdown">
+    <i class="theme-switch fa-solid fa-sun fa-lg fa-fw" data-mode="light" title="亮色"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg fa-fw" data-mode="dark" title="暗色"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg fa-fw" data-mode="auto" title="System Settings"></i>
   </button>
-`);
-</script></div>
+  <ul class="dropdown-menu dropdown-menu-end">
+    <li><button class="dropdown-item d-flex align-items-center theme-change-button" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg fa-fw me-1"></i>System Settings</button></li>
+    <li><button class="dropdown-item d-flex align-items-center theme-change-button" data-mode="light"><i class="fa-solid fa-sun fa-lg fa-fw me-1"></i>亮色</button></li>
+    <li><button class="dropdown-item d-flex align-items-center theme-change-button" data-mode="dark"><i class="fa-solid fa-moon fa-lg fa-fw me-1"></i>暗色</button></li>
+  </ul>
+</div></div>
       
-        <div class="navbar-item"><ul class="navbar-icon-links navbar-nav"
+        <div class="navbar-item"><ul class="navbar-icon-links"
     aria-label="Icon Links">
         <li class="nav-item">
           
@@ -226,8 +227,7 @@ document.write(`
           
           
           
-          <a href="https://github.com/common-workflow-language/user_guide/" title="GitHub" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fab fa-github-square fa-lg" aria-hidden="true"></i></span>
-            <span class="sr-only">GitHub</span></a>
+          <a href="https://github.com/common-workflow-language/user_guide/" title="GitHub" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fab fa-github-square fa-lg" aria-hidden="true"></i><span class="visually-hidden">GitHub</span></a>
         </li>
 </ul></div>
       
@@ -238,22 +238,18 @@ document.write(`
   
     <div class="navbar-persistent--mobile">
 
- <script>
- document.write(`
-   <button class="btn navbar-btn search-button-field search-button__button" title="搜索" aria-label="搜索" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="fa-solid fa-magnifying-glass"></i>
-    <span class="search-button__default-text">搜索</span>
-    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
-   </button>
- `);
- </script>
+<button class="btn search-button-field search-button__button pst-js-only" title="搜索" aria-label="搜索" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">搜索</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
     </div>
   
 
   
-    <label class="sidebar-toggle secondary-toggle" for="__secondary" tabindex="0">
+    <button class="pst-navbar-icon sidebar-toggle secondary-toggle" aria-label="当前页面">
       <span class="fa-solid fa-outdent"></span>
-    </label>
+    </button>
   
 </div>
 
@@ -267,7 +263,8 @@ document.write(`
       
         
       
-      <div class="bd-sidebar-primary bd-sidebar hide-on-wide">
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar hide-on-wide">
         
 
   
@@ -276,53 +273,56 @@ document.write(`
     
       <div class="sidebar-header-items__center">
         
-          <div class="navbar-item">
-<nav class="navbar-nav">
+          
+          
+            <div class="navbar-item">
+<nav>
   <ul class="bd-navbar-elements navbar-nav">
     
-                    <li class="nav-item">
-                      <a class="nav-link nav-internal" href="introduction/index.html">
-                        概述
-                      </a>
-                    </li>
-                
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="introduction/index.html">
+    概述
+  </a>
+</li>
 
-                    <li class="nav-item">
-                      <a class="nav-link nav-internal" href="topics/index.html">
-                        主题
-                      </a>
-                    </li>
-                
 
-                    <li class="nav-item">
-                      <a class="nav-link nav-internal" href="tutorials.html">
-                        Tutorials
-                      </a>
-                    </li>
-                
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="topics/index.html">
+    主题
+  </a>
+</li>
 
-                    <li class="nav-item">
-                      <a class="nav-link nav-internal" href="faq.html">
-                        常见问题
-                      </a>
-                    </li>
-                
 
-                    <li class="nav-item">
-                      <a class="nav-link nav-internal" href="LICENSE.html">
-                        许可协议
-                      </a>
-                    </li>
-                
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="tutorials.html">
+    教程
+  </a>
+</li>
 
-                <li class="nav-item">
-                  <a class="nav-link nav-external" href="https://www.commonwl.org/community/">
-                    Community
-                  </a>
-                </li>
-                
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="faq.html">
+    常见问题
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="LICENSE.html">
+    许可协议
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-external" href="https://www.commonwl.org/community/">
+    Community
+  </a>
+</li>
+
   </ul>
 </nav></div>
+          
         
       </div>
     
@@ -332,17 +332,20 @@ document.write(`
         
           <div class="navbar-item">
 
-<script>
-document.write(`
-  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
-    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
-    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+<div class="theme-switch-container dropdown pst-js-only" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Color mode">
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button dropdown-toggle" aria-label="Color mode" data-bs-toggle="dropdown">
+    <i class="theme-switch fa-solid fa-sun fa-lg fa-fw" data-mode="light" title="亮色"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg fa-fw" data-mode="dark" title="暗色"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg fa-fw" data-mode="auto" title="System Settings"></i>
   </button>
-`);
-</script></div>
+  <ul class="dropdown-menu dropdown-menu-end">
+    <li><button class="dropdown-item d-flex align-items-center theme-change-button" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg fa-fw me-1"></i>System Settings</button></li>
+    <li><button class="dropdown-item d-flex align-items-center theme-change-button" data-mode="light"><i class="fa-solid fa-sun fa-lg fa-fw me-1"></i>亮色</button></li>
+    <li><button class="dropdown-item d-flex align-items-center theme-change-button" data-mode="dark"><i class="fa-solid fa-moon fa-lg fa-fw me-1"></i>暗色</button></li>
+  </ul>
+</div></div>
         
-          <div class="navbar-item"><ul class="navbar-icon-links navbar-nav"
+          <div class="navbar-item"><ul class="navbar-icon-links"
     aria-label="Icon Links">
         <li class="nav-item">
           
@@ -353,8 +356,7 @@ document.write(`
           
           
           
-          <a href="https://github.com/common-workflow-language/user_guide/" title="GitHub" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fab fa-github-square fa-lg" aria-hidden="true"></i></span>
-            <span class="sr-only">GitHub</span></a>
+          <a href="https://github.com/common-workflow-language/user_guide/" title="GitHub" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fab fa-github-square fa-lg" aria-hidden="true"></i><span class="visually-hidden">GitHub</span></a>
         </li>
 </ul></div>
         
@@ -364,20 +366,25 @@ document.write(`
   
   
   <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
   </div>
-  
-  <div id="rtd-footer-container"></div>
 
 
       </div>
       
-      <main id="main-content" class="bd-main">
+      <main id="main-content" class="bd-main" role="main">
         
         
           <div class="bd-content">
             <div class="bd-article-container">
               
-              <div class="bd-header-article"></div>
+              <div class="bd-header-article d-print-none"></div>
               
               
               
@@ -428,14 +435,14 @@ document.write(`
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="topics/index.html">2. 主题</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="topics/yaml-guide.html">2.1. YAML Guide</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="topics/yaml-guide.html#contents">2.1.1. Contents</a></li>
-<li class="toctree-l3"><a class="reference internal" href="topics/yaml-guide.html#key-value-pairs">2.1.2. Key-Value Pairs</a></li>
-<li class="toctree-l3"><a class="reference internal" href="topics/yaml-guide.html#comments">2.1.3. Comments</a></li>
-<li class="toctree-l3"><a class="reference internal" href="topics/yaml-guide.html#maps">2.1.4. Maps</a></li>
-<li class="toctree-l3"><a class="reference internal" href="topics/yaml-guide.html#arrays">2.1.5. Arrays</a></li>
-<li class="toctree-l3"><a class="reference internal" href="topics/yaml-guide.html#json-style">2.1.6. JSON Style</a></li>
-<li class="toctree-l3"><a class="reference internal" href="topics/yaml-guide.html#reference">2.1.7. Reference</a></li>
+<li class="toctree-l2"><a class="reference internal" href="topics/yaml-guide.html">2.1. YAML 语言指南</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="topics/yaml-guide.html#contents">2.1.1. 目录</a></li>
+<li class="toctree-l3"><a class="reference internal" href="topics/yaml-guide.html#key-value-pairs">2.1.2. 键值对</a></li>
+<li class="toctree-l3"><a class="reference internal" href="topics/yaml-guide.html#comments">2.1.3. 注释</a></li>
+<li class="toctree-l3"><a class="reference internal" href="topics/yaml-guide.html#maps">2.1.4. 映射</a></li>
+<li class="toctree-l3"><a class="reference internal" href="topics/yaml-guide.html#arrays">2.1.5. 数组</a></li>
+<li class="toctree-l3"><a class="reference internal" href="topics/yaml-guide.html#json-style">2.1.6. JSON 样式</a></li>
+<li class="toctree-l3"><a class="reference internal" href="topics/yaml-guide.html#reference">2.1.7. 参考资料</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="topics/command-line-tool.html">2.2. 命令行工具</a><ul>
@@ -465,8 +472,8 @@ document.write(`
 <li class="toctree-l2"><a class="reference internal" href="topics/workflows.html">2.10. 工作流</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="topics/workflows.html#writing-workflows">2.10.1. 编写工作流</a></li>
 <li class="toctree-l3"><a class="reference internal" href="topics/workflows.html#nested-workflows">2.10.2. 嵌套的工作流</a></li>
-<li class="toctree-l3"><a class="reference internal" href="topics/workflows.html#scattering-steps">2.10.3. Scattering Steps</a></li>
-<li class="toctree-l3"><a class="reference internal" href="topics/workflows.html#conditional-workflows">2.10.4. Conditional Workflows</a></li>
+<li class="toctree-l3"><a class="reference internal" href="topics/workflows.html#scattering-steps">2.10.3. 分散步骤</a></li>
+<li class="toctree-l3"><a class="reference internal" href="topics/workflows.html#conditional-workflows">2.10.4. 条件性工作流</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="topics/operations.html">2.11. 抽象操作</a></li>
@@ -493,30 +500,30 @@ document.write(`
 </li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="tutorials.html">3. Tutorials</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="tutorials.html#beginner-tutorials">3.1. Beginner Tutorials</a></li>
-<li class="toctree-l2"><a class="reference internal" href="tutorials.html#advanced-tutorials">3.2. Advanced Tutorials</a></li>
-<li class="toctree-l2"><a class="reference internal" href="tutorials.html#bioinformatics-tutorials">3.3. Bioinformatics Tutorials</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tutorials.html">3. 教程</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="tutorials.html#beginner-tutorials">3.1. 入门教程</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tutorials.html#advanced-tutorials">3.2. 进阶教程</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tutorials.html#bioinformatics-tutorials">3.3. 生物信息学相关教程</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="faq.html">4. 常见问题</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="faq.html#how-do-i-create-non-file-types-using-evalfrom">4.1. How do I create non &quot;<code class="docutils literal notranslate"><span class="pre">File</span></code>&quot; types using <code class="docutils literal notranslate"><span class="pre">evalFrom</span></code>?</a></li>
-<li class="toctree-l2"><a class="reference internal" href="faq.html#how-do-i-rename-an-input-file">4.2. How do I rename an input file?</a></li>
-<li class="toctree-l2"><a class="reference internal" href="faq.html#how-do-i-rename-an-output-file">4.3. How do I rename an output file?</a></li>
-<li class="toctree-l2"><a class="reference internal" href="faq.html#how-do-i-reference-a-local-script">4.4. How do I reference a local script?</a></li>
-<li class="toctree-l2"><a class="reference internal" href="faq.html#how-can-i-set-self-based-input-bindings-for-optional-inputs">4.5. How can I set <code class="docutils literal notranslate"><span class="pre">self</span></code>-based input bindings for optional inputs?</a></li>
-<li class="toctree-l2"><a class="reference internal" href="faq.html#how-can-i-model-a-one-or-the-other-parameter">4.6. How can I model a &quot;one-or-the-other&quot; parameter?</a></li>
-<li class="toctree-l2"><a class="reference internal" href="faq.html#how-do-i-connect-a-solo-value-to-an-input-that-expects-an-array-of-that-type">4.7. How do I connect a solo value to an input that expects an array of that type?</a></li>
-<li class="toctree-l2"><a class="reference internal" href="faq.html#how-do-make-an-input-optional">4.8. How do make an input optional? 💯</a></li>
-<li class="toctree-l2"><a class="reference internal" href="faq.html#how-do-i-specify-an-input-that-must-come-from-a-list-of-predefined-values-i-e-how-do-i-use-enum-inputs">4.9. How do I specify an input that must come from a list of predefined values (i.e. How do I use enum inputs) ?</a></li>
-<li class="toctree-l2"><a class="reference internal" href="faq.html#how-do-i-describe-dependent-or-exclusive-input-parameters-e-g-how-do-i-use-record-inputs">4.10. How do I describe dependent or exclusive input parameters(e.g. How do I use record inputs)?</a></li>
-<li class="toctree-l2"><a class="reference internal" href="faq.html#how-do-i-set-mutually-exclusive-parameters">4.11. How do I set mutually exclusive parameters?</a></li>
-<li class="toctree-l2"><a class="reference internal" href="faq.html#how-can-i-set-booleans">4.12. How can I set Booleans?</a></li>
-<li class="toctree-l2"><a class="reference internal" href="faq.html#what-should-i-do-when-concatenating-strings-in-inputs">4.13. What should I do when concatenating strings in inputs?</a></li>
-<li class="toctree-l2"><a class="reference internal" href="faq.html#i-get-cwltool-errors-due-to-filenames-with-space-characters-inside-what-should-i-do">4.14. I get <code class="docutils literal notranslate"><span class="pre">cwltool</span></code> errors due to filenames with space characters inside. What should I do?</a></li>
-<li class="toctree-l2"><a class="reference internal" href="faq.html#what-should-i-do-when-i-get-cwl-parameter-reference-error-due-to-hyphen-in-an-input-identifier">4.15. What should I do when I get CWL Parameter Reference error due to hyphen in an input identifier?</a></li>
-<li class="toctree-l2"><a class="reference internal" href="faq.html#how-do-i-use-cwl-and-cwltool-with-singularity">4.16. How do I use CWL and cwltool with Singularity?</a></li>
-<li class="toctree-l2"><a class="reference internal" href="faq.html#how-do-i-debug-the-javascript-in-my-cwl-tool">4.17. How do I debug the JavaScript in my CWL tool?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="faq.html#how-do-i-create-non-file-types-using-evalfrom">4.1. 如何用 <code class="docutils literal notranslate"><span class="pre">evalFrom</span></code> 创建非“<code class="docutils literal notranslate"><span class="pre">File</span></code>”类型？</a></li>
+<li class="toctree-l2"><a class="reference internal" href="faq.html#how-do-i-rename-an-input-file">4.2. 如何重命名输入文件？</a></li>
+<li class="toctree-l2"><a class="reference internal" href="faq.html#how-do-i-rename-an-output-file">4.3. 如何重命名输出文件？</a></li>
+<li class="toctree-l2"><a class="reference internal" href="faq.html#how-do-i-reference-a-local-script">4.4. 如何引用本地脚本？</a></li>
+<li class="toctree-l2"><a class="reference internal" href="faq.html#how-can-i-set-self-based-input-bindings-for-optional-inputs">4.5. 如何为可选输入项设置用到 <code class="docutils literal notranslate"><span class="pre">self</span></code> 变量的输入绑定？</a></li>
+<li class="toctree-l2"><a class="reference internal" href="faq.html#how-can-i-model-a-one-or-the-other-parameter">4.6. 如何构建“非此即彼”的参数？</a></li>
+<li class="toctree-l2"><a class="reference internal" href="faq.html#how-do-i-connect-a-solo-value-to-an-input-that-expects-an-array-of-that-type">4.7. 如何将某个元素值与期待同一类型的数组关联起来？</a></li>
+<li class="toctree-l2"><a class="reference internal" href="faq.html#how-do-make-an-input-optional">4.8. 如何使某个输入称为可选的？💯</a></li>
+<li class="toctree-l2"><a class="reference internal" href="faq.html#how-do-i-specify-an-input-that-must-come-from-a-list-of-predefined-values-i-e-how-do-i-use-enum-inputs">4.9. 如何让某个输入只能从一组固定的值中取一（即：如何使用枚举类型输入）？</a></li>
+<li class="toctree-l2"><a class="reference internal" href="faq.html#how-do-i-describe-dependent-or-exclusive-input-parameters-e-g-how-do-i-use-record-inputs">4.10. 如何描述彼此依存或互斥的输入参数（即：如何使用记录类型输入）？</a></li>
+<li class="toctree-l2"><a class="reference internal" href="faq.html#how-do-i-set-mutually-exclusive-parameters">4.11. 如何设定互斥参数？</a></li>
+<li class="toctree-l2"><a class="reference internal" href="faq.html#how-can-i-set-booleans">4.12. 如何设置布尔参数？</a></li>
+<li class="toctree-l2"><a class="reference internal" href="faq.html#what-should-i-do-when-concatenating-strings-in-inputs">4.13. 在输入中串联多个字符串时该如何操作？</a></li>
+<li class="toctree-l2"><a class="reference internal" href="faq.html#i-get-cwltool-errors-due-to-filenames-with-space-characters-inside-what-should-i-do">4.14. 因文件名含有空格字符，<code class="docutils literal notranslate"><span class="pre">cwltool</span></code>报错，该怎么解决？</a></li>
+<li class="toctree-l2"><a class="reference internal" href="faq.html#what-should-i-do-when-i-get-cwl-parameter-reference-error-due-to-hyphen-in-an-input-identifier">4.15. 输入标识符中包含连字符造成 CWL 参数引用错误，如何解决？</a></li>
+<li class="toctree-l2"><a class="reference internal" href="faq.html#how-do-i-use-cwl-and-cwltool-with-singularity">4.16. 如何在 Singularity 下使用 CWL 和 cwltool?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="faq.html#how-do-i-debug-the-javascript-in-my-cwl-tool">4.17. 如何调试 CWL 工具中的 JavaScript 代码？</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="LICENSE.html">5. 许可协议</a><ul>
@@ -536,14 +543,14 @@ document.write(`
               
               
               
-                <footer class="prev-next-footer">
+                <footer class="prev-next-footer d-print-none">
                   
 <div class="prev-next-area">
     <a class="right-next"
        href="introduction/index.html"
-       title="next page">
+       title="下一页">
       <div class="prev-next-info">
-        <p class="prev-next-subtitle">下一页</p>
+        <p class="prev-next-subtitle">下一条</p>
         <p class="prev-next-title"><span class="section-number">1. </span>概述</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
@@ -555,17 +562,18 @@ document.write(`
             
             
               
-                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
 
 
   <div class="sidebar-secondary-item">
 <div
     id="pst-page-navigation-heading-2"
     class="page-toc tocsection onthispage">
-    <i class="fa-solid fa-list"></i> On this page
+    <i class="fa-solid fa-list"></i> 当前页面
   </div>
-  <nav class="bd-toc-nav page-toc" aria-labelledby="pst-page-navigation-heading-2">
-    <ul class="visible nav section-nav flex-column">
+  <nav id="pst-page-toc-nav" class="page-toc" aria-labelledby="pst-page-navigation-heading-2">
+    <ul class="pst-show_toc_level nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#navigating-the-user-guide">浏览《用户指南》</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#table-of-contents">目录</a></li>
 </ul>
@@ -580,7 +588,7 @@ document.write(`
       
       
         
-          Edit on GitHub
+          由 GitHub 编辑
         
       
     </a>
@@ -591,7 +599,7 @@ document.write(`
 
   <div class="tocsection sourcelink">
     <a href="_sources/index.md.txt">
-      <i class="fa-solid fa-file-lines"></i> 显示源代码
+      <i class="fa-solid fa-file-lines"></i> 显示源码
     </a>
   </div>
 </div>
@@ -609,8 +617,8 @@ document.write(`
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae"></script>
-<script src="_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae"></script>
+  <script defer src="_static/scripts/bootstrap.js?digest=cb8930eaaf36d9849b67"></script>
+<script defer src="_static/scripts/pydata-sphinx-theme.js?digest=cb8930eaaf36d9849b67"></script>
 
   <footer class="bd-footer">
 <div class="bd-footer__inner bd-page-width">
@@ -630,7 +638,7 @@ document.write(`
         <div class="footer-item">
 
   <p class="sphinx-version">
-    由 <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.3.7创建。
+    使用 <a href="https://www.sphinx-doc.org/">Sphinx</a> 8.2.3创建.
     <br/>
   </p>
 </div>
@@ -663,7 +671,8 @@ document.write(`
       
         <div class="footer-item">
 <p class="theme-version">
-  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.15.2.
+  <!-- # L10n: Setting the PST URL as an argument as this does not need to be localized -->
+  使用 <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.21.0构建.
 </p></div>
       
     </div>

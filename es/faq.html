@@ -12,7 +12,7 @@
     <link rel="icon" sizes="96x96" href="_static/images/favicons/cwl/favicon-96x96.png" type="image/png">
     <link rel="icon" sizes="128x128" href="_static/images/favicons/cwl/favicon-128.png" type="image/png">
     <link rel="icon" sizes="196x196" href="_static/images/favicons/cwl/favicon-196x196.png" type="image/png">
-    <title>4. Preguntas frecuentes &#8212; documentación de Common Workflow Language User Guide - 0.1</title>
+    <title>4. P+F &#8212; documentación de Common Workflow Language User Guide - 0.1</title>
   
   
   
@@ -20,71 +20,67 @@
     document.documentElement.dataset.mode = localStorage.getItem("mode") || "light";
     document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
   </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="_static/styles/theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
-<link href="_static/styles/bootstrap.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
-<link href="_static/styles/pydata-sphinx-theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+  <link href="_static/styles/theme.css?digest=cb8930eaaf36d9849b67" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=cb8930eaaf36d9849b67" rel="stylesheet" />
 
-  
-  <link href="_static/vendor/fontawesome/6.5.1/css/all.min.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
-  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.1/webfonts/fa-solid-900.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
-
-    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=80d5e7a1" />
-    <link rel="stylesheet" type="text/css" href="_static/graphviz.css?v=fd3f3429" />
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=b86133f3" />
+    <link rel="stylesheet" type="text/css" href="_static/graphviz.css?v=4ae1632d" />
     <link rel="stylesheet" type="text/css" href="_static/css/custom.css?v=e0da1575" />
   
+  <!-- So that users can add custom icons -->
+  <script defer src="_static/scripts/fontawesome.js?digest=cb8930eaaf36d9849b67"></script>
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae" />
-<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae" />
-  <script src="_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=8d27b9dea8ad943066ae"></script>
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=cb8930eaaf36d9849b67" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=cb8930eaaf36d9849b67" />
 
     <script src="_static/documentation_options.js?v=9c9b61ad"></script>
-    <script src="_static/doctools.js?v=9a2dae69"></script>
+    <script src="_static/doctools.js?v=9bcbadda"></script>
     <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
-    <script src="_static/translations.js?v=efdbd0b9"></script>
+    <script src="_static/translations.js?v=f85f4cfb"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'faq';</script>
+    <script>DOCUMENTATION_OPTIONS.search_as_you_type = false;</script>
     <link rel="icon" href="_static/favicon.ico"/>
     <link rel="index" title="Índice" href="genindex.html" />
     <link rel="search" title="Búsqueda" href="search.html" />
     <link rel="next" title="5. Licencias" href="LICENSE.html" />
-    <link rel="prev" title="3. Tutorials" href="tutorials.html" />
+    <link rel="prev" title="3. Tutoriales" href="tutorials.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="es"/>
+  <meta name="docsearch:version" content="" />
+  
+    
+    <script src="_static/searchtools.js"></script>
+    <script src="_static/language_data.js"></script>
+    <script src="searchindex.js"></script>
+  
   </head>
+  <body data-default-mode="light">
   
   
-  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="light">
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Saltar al contenido principal</a></div>
 
-  
-  
-  <a id="pst-skip-link" class="skip-link" href="#main-content">Saltar al contenido principal</a>
   
   <div id="pst-scroll-pixel-helper"></div>
   
   <button type="button" class="btn rounded-pill" id="pst-back-to-top">
-    <i class="fa-solid fa-arrow-up"></i>
-    Back to top
-  </button>
-
+    <i class="fa-solid fa-arrow-up"></i>Volver arriba</button>
   
-  <input type="checkbox"
-          class="sidebar-toggle"
-          name="__primary"
-          id="__primary"/>
-  <label class="overlay overlay-primary" for="__primary"></label>
   
-  <input type="checkbox"
-          class="sidebar-toggle"
-          name="__secondary"
-          id="__secondary"/>
-  <label class="overlay overlay-secondary" for="__secondary"></label>
   
-  <div class="search-button__wrapper">
-    <div class="search-button__overlay"></div>
-    <div class="search-button__search-container">
+  
+  <dialog id="pst-search-dialog">
+    
 <form class="bd-search d-flex align-items-center"
       action="search.html"
       method="get">
@@ -92,7 +88,6 @@
   <input type="search"
          class="form-control"
          name="q"
-         id="search-input"
          placeholder="Search the docs ..."
          aria-label="Search the docs ..."
          autocomplete="off"
@@ -100,20 +95,27 @@
          autocapitalize="off"
          spellcheck="false"/>
   <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
-</form></div>
-  </div>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Advertencia de versión"></aside>
+</div>
+
   
-    <header class="bd-header navbar navbar-expand-lg bd-navbar">
+    <header id="pst-header" class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
 <div class="bd-header__inner bd-page-width">
-  <label class="sidebar-toggle primary-toggle" for="__primary">
+  <button class="pst-navbar-icon sidebar-toggle primary-toggle" aria-label="Navegación del sitio">
     <span class="fa-solid fa-bars"></span>
-  </label>
+  </button>
   
   
   <div class="col-lg-3 navbar-header-items__start">
     
       <div class="navbar-item">
 
+  
+    
   
 
 <a class="navbar-brand logo" href="index.html">
@@ -126,7 +128,7 @@
     
     
     <img src="_static/CWL-Logo-HD-cropped2.png" class="logo__image only-light" alt="documentación de Common Workflow Language User Guide - 0.1 - Home"/>
-    <script>document.write(`<img src="_static/CWL-Logo-HD-cropped2.png" class="logo__image only-dark" alt="documentación de Common Workflow Language User Guide - 0.1 - Home"/>`);</script>
+    <img src="_static/CWL-Logo-HD-cropped2.png" class="logo__image only-dark pst-js-only" alt="documentación de Common Workflow Language User Guide - 0.1 - Home"/>
   
   
 </a></div>
@@ -138,50 +140,50 @@
     <div class="me-auto navbar-header-items__center">
       
         <div class="navbar-item">
-<nav class="navbar-nav">
+<nav>
   <ul class="bd-navbar-elements navbar-nav">
     
-                    <li class="nav-item">
-                      <a class="nav-link nav-internal" href="introduction/index.html">
-                        Introduction
-                      </a>
-                    </li>
-                
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="introduction/index.html">
+    Introducción
+  </a>
+</li>
 
-                    <li class="nav-item">
-                      <a class="nav-link nav-internal" href="topics/index.html">
-                        Topics
-                      </a>
-                    </li>
-                
 
-                    <li class="nav-item">
-                      <a class="nav-link nav-internal" href="tutorials.html">
-                        Tutorials
-                      </a>
-                    </li>
-                
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="topics/index.html">
+    Temas
+  </a>
+</li>
 
-                    <li class="nav-item current active">
-                      <a class="nav-link nav-internal" href="#">
-                        Preguntas frecuentes
-                      </a>
-                    </li>
-                
 
-                    <li class="nav-item">
-                      <a class="nav-link nav-internal" href="LICENSE.html">
-                        Licencias
-                      </a>
-                    </li>
-                
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="tutorials.html">
+    Tutoriales
+  </a>
+</li>
 
-                <li class="nav-item">
-                  <a class="nav-link nav-external" href="https://www.commonwl.org/community/">
-                    Community
-                  </a>
-                </li>
-                
+
+<li class="nav-item current active">
+  <a class="nav-link nav-internal" href="#">
+    P+F
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="LICENSE.html">
+    Licencias
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-external" href="https://www.commonwl.org/community/">
+    Community
+  </a>
+</li>
+
   </ul>
 </nav></div>
       
@@ -193,31 +195,30 @@
         <div class="navbar-item navbar-persistent--container">
           
 
- <script>
- document.write(`
-   <button class="btn navbar-btn search-button-field search-button__button" title="Búsqueda" aria-label="Búsqueda" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="fa-solid fa-magnifying-glass"></i>
-    <span class="search-button__default-text">Búsqueda</span>
-    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
-   </button>
- `);
- </script>
+<button class="btn search-button-field search-button__button pst-js-only" title="Búsqueda" aria-label="Búsqueda" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Búsqueda</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
         </div>
       
       
         <div class="navbar-item">
 
-<script>
-document.write(`
-  <button class="btn btn-sm navbar-btn theme-switch-button" title="claro/oscuro" aria-label="claro/oscuro" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
-    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
-    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+<div class="theme-switch-container dropdown pst-js-only" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Tema">
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button dropdown-toggle" aria-label="Tema" data-bs-toggle="dropdown">
+    <i class="theme-switch fa-solid fa-sun fa-lg fa-fw" data-mode="light" title="Claro"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg fa-fw" data-mode="dark" title="Oscuro"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg fa-fw" data-mode="auto" title="Sistema"></i>
   </button>
-`);
-</script></div>
+  <ul class="dropdown-menu dropdown-menu-end">
+    <li><button class="dropdown-item d-flex align-items-center theme-change-button" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg fa-fw me-1"></i>Sistema</button></li>
+    <li><button class="dropdown-item d-flex align-items-center theme-change-button" data-mode="light"><i class="fa-solid fa-sun fa-lg fa-fw me-1"></i>Claro</button></li>
+    <li><button class="dropdown-item d-flex align-items-center theme-change-button" data-mode="dark"><i class="fa-solid fa-moon fa-lg fa-fw me-1"></i>Oscuro</button></li>
+  </ul>
+</div></div>
       
-        <div class="navbar-item"><ul class="navbar-icon-links navbar-nav"
+        <div class="navbar-item"><ul class="navbar-icon-links"
     aria-label="Icon Links">
         <li class="nav-item">
           
@@ -228,8 +229,7 @@ document.write(`
           
           
           
-          <a href="https://github.com/common-workflow-language/user_guide/" title="GitHub" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fab fa-github-square fa-lg" aria-hidden="true"></i></span>
-            <span class="sr-only">GitHub</span></a>
+          <a href="https://github.com/common-workflow-language/user_guide/" title="GitHub" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fab fa-github-square fa-lg" aria-hidden="true"></i><span class="visually-hidden">GitHub</span></a>
         </li>
 </ul></div>
       
@@ -240,22 +240,18 @@ document.write(`
   
     <div class="navbar-persistent--mobile">
 
- <script>
- document.write(`
-   <button class="btn navbar-btn search-button-field search-button__button" title="Búsqueda" aria-label="Búsqueda" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="fa-solid fa-magnifying-glass"></i>
-    <span class="search-button__default-text">Búsqueda</span>
-    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
-   </button>
- `);
- </script>
+<button class="btn search-button-field search-button__button pst-js-only" title="Búsqueda" aria-label="Búsqueda" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Búsqueda</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
     </div>
   
 
   
-    <label class="sidebar-toggle secondary-toggle" for="__secondary" tabindex="0">
+    <button class="pst-navbar-icon sidebar-toggle secondary-toggle" aria-label="En esta página">
       <span class="fa-solid fa-outdent"></span>
-    </label>
+    </button>
   
 </div>
 
@@ -269,7 +265,8 @@ document.write(`
       
         
       
-      <div class="bd-sidebar-primary bd-sidebar hide-on-wide">
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar hide-on-wide">
         
 
   
@@ -278,53 +275,56 @@ document.write(`
     
       <div class="sidebar-header-items__center">
         
-          <div class="navbar-item">
-<nav class="navbar-nav">
+          
+          
+            <div class="navbar-item">
+<nav>
   <ul class="bd-navbar-elements navbar-nav">
     
-                    <li class="nav-item">
-                      <a class="nav-link nav-internal" href="introduction/index.html">
-                        Introduction
-                      </a>
-                    </li>
-                
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="introduction/index.html">
+    Introducción
+  </a>
+</li>
 
-                    <li class="nav-item">
-                      <a class="nav-link nav-internal" href="topics/index.html">
-                        Topics
-                      </a>
-                    </li>
-                
 
-                    <li class="nav-item">
-                      <a class="nav-link nav-internal" href="tutorials.html">
-                        Tutorials
-                      </a>
-                    </li>
-                
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="topics/index.html">
+    Temas
+  </a>
+</li>
 
-                    <li class="nav-item current active">
-                      <a class="nav-link nav-internal" href="#">
-                        Preguntas frecuentes
-                      </a>
-                    </li>
-                
 
-                    <li class="nav-item">
-                      <a class="nav-link nav-internal" href="LICENSE.html">
-                        Licencias
-                      </a>
-                    </li>
-                
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="tutorials.html">
+    Tutoriales
+  </a>
+</li>
 
-                <li class="nav-item">
-                  <a class="nav-link nav-external" href="https://www.commonwl.org/community/">
-                    Community
-                  </a>
-                </li>
-                
+
+<li class="nav-item current active">
+  <a class="nav-link nav-internal" href="#">
+    P+F
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="LICENSE.html">
+    Licencias
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-external" href="https://www.commonwl.org/community/">
+    Community
+  </a>
+</li>
+
   </ul>
 </nav></div>
+          
         
       </div>
     
@@ -334,17 +334,20 @@ document.write(`
         
           <div class="navbar-item">
 
-<script>
-document.write(`
-  <button class="btn btn-sm navbar-btn theme-switch-button" title="claro/oscuro" aria-label="claro/oscuro" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
-    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
-    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+<div class="theme-switch-container dropdown pst-js-only" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Tema">
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button dropdown-toggle" aria-label="Tema" data-bs-toggle="dropdown">
+    <i class="theme-switch fa-solid fa-sun fa-lg fa-fw" data-mode="light" title="Claro"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg fa-fw" data-mode="dark" title="Oscuro"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg fa-fw" data-mode="auto" title="Sistema"></i>
   </button>
-`);
-</script></div>
+  <ul class="dropdown-menu dropdown-menu-end">
+    <li><button class="dropdown-item d-flex align-items-center theme-change-button" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg fa-fw me-1"></i>Sistema</button></li>
+    <li><button class="dropdown-item d-flex align-items-center theme-change-button" data-mode="light"><i class="fa-solid fa-sun fa-lg fa-fw me-1"></i>Claro</button></li>
+    <li><button class="dropdown-item d-flex align-items-center theme-change-button" data-mode="dark"><i class="fa-solid fa-moon fa-lg fa-fw me-1"></i>Oscuro</button></li>
+  </ul>
+</div></div>
         
-          <div class="navbar-item"><ul class="navbar-icon-links navbar-nav"
+          <div class="navbar-item"><ul class="navbar-icon-links"
     aria-label="Icon Links">
         <li class="nav-item">
           
@@ -355,8 +358,7 @@ document.write(`
           
           
           
-          <a href="https://github.com/common-workflow-language/user_guide/" title="GitHub" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fab fa-github-square fa-lg" aria-hidden="true"></i></span>
-            <span class="sr-only">GitHub</span></a>
+          <a href="https://github.com/common-workflow-language/user_guide/" title="GitHub" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fab fa-github-square fa-lg" aria-hidden="true"></i><span class="visually-hidden">GitHub</span></a>
         </li>
 </ul></div>
         
@@ -366,29 +368,32 @@ document.write(`
   
   
   <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
   </div>
-  
-  <div id="rtd-footer-container"></div>
 
 
       </div>
       
-      <main id="main-content" class="bd-main">
+      <main id="main-content" class="bd-main" role="main">
         
         
           <div class="bd-content">
             <div class="bd-article-container">
               
-              <div class="bd-header-article">
+              <div class="bd-header-article d-print-none">
 <div class="header-article-items header-article__inner">
   
     <div class="header-article-items__start">
       
         <div class="header-article-item">
 
-
-
-<nav aria-label="Miga de pan">
+<nav aria-label="Miga de pan" class="d-print-none">
   <ul class="bd-breadcrumbs">
     
     <li class="breadcrumb-item breadcrumb-home">
@@ -396,7 +401,7 @@ document.write(`
         <i class="fa-solid fa-home"></i>
       </a>
     </li>
-    <li class="breadcrumb-item active" aria-current="page"><span...</li>
+    <li class="breadcrumb-item active" aria-current="page"><span class="ellipsis"><span class="section-number">4. </span>P+F</span></li>
   </ul>
 </nav>
 </div>
@@ -414,15 +419,15 @@ document.write(`
                 <article class="bd-article">
                   
   <section id="faq">
-<h1><span class="section-number">4. </span>Preguntas frecuentes<a class="headerlink" href="#faq" title="Link to this heading">#</a></h1>
+<h1><span class="section-number">4. </span>P+F<a class="headerlink" href="#faq" title="Link to this heading">#</a></h1>
 <nav class="contents local" id="contenido">
 <ul class="simple">
 <li><p><a class="reference internal" href="#how-do-i-create-non-file-types-using-evalfrom" id="id1">¿Cómo creo tipos que no sean «<code class="docutils literal notranslate"><span class="pre">File</span></code>» utilizando <code class="docutils literal notranslate"><span class="pre">evalFrom</span></code>?</a></p></li>
-<li><p><a class="reference internal" href="#how-do-i-rename-an-input-file" id="id2">¿Cómo renombro un fichero de entrada?</a></p></li>
-<li><p><a class="reference internal" href="#how-do-i-rename-an-output-file" id="id3">¿Cómo renombro un fichero de salida?</a></p></li>
+<li><p><a class="reference internal" href="#how-do-i-rename-an-input-file" id="id2">¿Cómo renombro un archivo de entrada?</a></p></li>
+<li><p><a class="reference internal" href="#how-do-i-rename-an-output-file" id="id3">¿Cómo renombro un archivo de salida?</a></p></li>
 <li><p><a class="reference internal" href="#how-do-i-reference-a-local-script" id="id4">¿Cómo hago referencia a un script local?</a></p></li>
 <li><p><a class="reference internal" href="#how-can-i-set-self-based-input-bindings-for-optional-inputs" id="id5">¿Cómo puedo configurar enlaces de entrada basados en <code class="docutils literal notranslate"><span class="pre">self</span></code> para entradas opcionales?</a></p></li>
-<li><p><a class="reference internal" href="#how-can-i-model-a-one-or-the-other-parameter" id="id6">How can I model a «one-or-the-other» parameter?</a></p></li>
+<li><p><a class="reference internal" href="#how-can-i-model-a-one-or-the-other-parameter" id="id6">¿Cómo puedo modelar un parámetro «uno-u-otro»?</a></p></li>
 <li><p><a class="reference internal" href="#how-do-i-connect-a-solo-value-to-an-input-that-expects-an-array-of-that-type" id="id7">¿Cómo puedo conectar un valor aislado a una entrada que espera un array de ese tipo?</a></p></li>
 <li><p><a class="reference internal" href="#how-do-make-an-input-optional" id="id8">¿Cómo hago una entrada opcional? 💯</a></p></li>
 <li><p><a class="reference internal" href="#how-do-i-specify-an-input-that-must-come-from-a-list-of-predefined-values-i-e-how-do-i-use-enum-inputs" id="id9">¿Cómo especifico una entrada que debe proceder de una lista de valores predeterminados (esto es, cómo utilizar entradas «enum»)?</a></p></li>
@@ -430,10 +435,10 @@ document.write(`
 <li><p><a class="reference internal" href="#how-do-i-set-mutually-exclusive-parameters" id="id11">¿Cómo configuro parámetros mutuamente excluyentes?</a></p></li>
 <li><p><a class="reference internal" href="#how-can-i-set-booleans" id="id12">¿Cómo puedo establecer valores de tipo Boolean?</a></p></li>
 <li><p><a class="reference internal" href="#what-should-i-do-when-concatenating-strings-in-inputs" id="id13">¿Qué debería hacer para concatenar cadenas en las entradas?</a></p></li>
-<li><p><a class="reference internal" href="#i-get-cwltool-errors-due-to-filenames-with-space-characters-inside-what-should-i-do" id="id14">Obtengo errores en <code class="docutils literal notranslate"><span class="pre">cwltool</span></code> debido a nombres de fichero con caracteres de espacio. ¿Qué debo hacer?</a></p></li>
-<li><p><a class="reference internal" href="#what-should-i-do-when-i-get-cwl-parameter-reference-error-due-to-hyphen-in-an-input-identifier" id="id15">What should I do when I get CWL Parameter Reference error due to hyphen in an input identifier?</a></p></li>
-<li><p><a class="reference internal" href="#how-do-i-use-cwl-and-cwltool-with-singularity" id="id16">How do I use CWL and cwltool with Singularity?</a></p></li>
-<li><p><a class="reference internal" href="#how-do-i-debug-the-javascript-in-my-cwl-tool" id="id17">How do I debug the JavaScript in my CWL tool?</a></p></li>
+<li><p><a class="reference internal" href="#i-get-cwltool-errors-due-to-filenames-with-space-characters-inside-what-should-i-do" id="id14">Obtengo errores en <code class="docutils literal notranslate"><span class="pre">cwltool</span></code> debido a nombres de archivo con caracteres de espacio. ¿Qué debo hacer?</a></p></li>
+<li><p><a class="reference internal" href="#what-should-i-do-when-i-get-cwl-parameter-reference-error-due-to-hyphen-in-an-input-identifier" id="id15">¿Qué debo hacer cuando obtengo un error de Referencia de Parámetro CWL debido a un guion en un identificador de entrada?</a></p></li>
+<li><p><a class="reference internal" href="#how-do-i-use-cwl-and-cwltool-with-singularity" id="id16">¿Cómo uso CWL y cwltool con Singularity?</a></p></li>
+<li><p><a class="reference internal" href="#how-do-i-debug-the-javascript-in-my-cwl-tool" id="id17">¿Cómo depuro el JavaScript en mi herramienta CLW?</a></p></li>
 </ul>
 </nav>
 <section id="how-do-i-create-non-file-types-using-evalfrom">
@@ -443,7 +448,7 @@ document.write(`
 <span class="nt">requirements</span><span class="p">:</span>
 <span class="w">  </span><span class="nt">InlineJavascriptRequirement</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">{}</span>
 
-<span class="nt">baseCommand</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="w"> </span><span class="nv">echo</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="s">&quot;42&quot;</span><span class="w"> </span><span class="p p-Indicator">]</span>
+<span class="nt">baseCommand</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="w"> </span><span class="nv">echo</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="s">"42"</span><span class="w"> </span><span class="p p-Indicator">]</span>
 
 <span class="nt">inputs</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[]</span>
 
@@ -467,8 +472,8 @@ document.write(`
 </div>
 </section>
 <section id="how-do-i-rename-an-input-file">
-<h2><a class="toc-backref" href="#contenido" role="doc-backlink"><span class="section-number">4.2. </span>¿Cómo renombro un fichero de entrada?</a><a class="headerlink" href="#how-do-i-rename-an-input-file" title="Link to this heading">#</a></h2>
-<p>Este ejemplo muestra como cambiar el nombre de un fichero de entrada como parte de la descripción de una herramienta. Esto podría ser útil cuando se están tomando archivos producidos por otro paso del flujo de trabajo y no se desea trabajar con los nombres predeterminados que se les asignó cuando fueron creados.</p>
+<h2><a class="toc-backref" href="#contenido" role="doc-backlink"><span class="section-number">4.2. </span>¿Cómo renombro un archivo de entrada?</a><a class="headerlink" href="#how-do-i-rename-an-input-file" title="Link to this heading">#</a></h2>
+<p>Este ejemplo muestra como cambiar el nombre de un archivo de entrada como parte de la descripción de una herramienta. Esto podría ser útil cuando se están tomando archivos producidos a partir de otro paso en un flujo de trabajo y no desea funcionar con los nombres predeterminados que se les proporcionó cuando fueron creados.</p>
 <div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">requirements</span><span class="p">:</span>
 <span class="w">  </span><span class="nt">InitialWorkDirRequirement</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">listing</span><span class="p">:</span>
@@ -480,8 +485,8 @@ document.write(`
 </div>
 </section>
 <section id="how-do-i-rename-an-output-file">
-<h2><a class="toc-backref" href="#contenido" role="doc-backlink"><span class="section-number">4.3. </span>¿Cómo renombro un fichero de salida?</a><a class="headerlink" href="#how-do-i-rename-an-output-file" title="Link to this heading">#</a></h2>
-<p>Este ejemplo muestra cómo cambiar el nombre de un fichero de salida a partir del nombre por defecto asignado por una herramienta:</p>
+<h2><a class="toc-backref" href="#contenido" role="doc-backlink"><span class="section-number">4.3. </span>¿Cómo renombro un archivo de salida?</a><a class="headerlink" href="#how-do-i-rename-an-output-file" title="Link to this heading">#</a></h2>
+<p>Este ejemplo muestra cómo cambiar el nombre de un archivo de salida del nombre predeterminado que le da una herramienta:</p>
 <div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">cwlVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">v1.0</span>
 <span class="nt">class</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">CommandLineTool</span>
 <span class="nt">requirements</span><span class="p">:</span>
@@ -500,18 +505,18 @@ document.write(`
 <span class="w">      </span><span class="nt">outputEval</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">${self[0].basename=inputs.otu_table_name; return self;}</span>
 </pre></div>
 </div>
-<p>Cambiando el campo <code class="docutils literal notranslate"><span class="pre">basename</span></code> en  <code class="docutils literal notranslate"><span class="pre">outputEval</span></code>, los motores de flujo de trabajo CWL renombrarán el fichero utilizando el nuevo nombre para los pasos posteriores o como salida a nivel de flujo de trabajo.</p>
+<p>Cambiando el campo <code class="docutils literal notranslate"><span class="pre">basename</span></code> en <code class="docutils literal notranslate"><span class="pre">outputEval</span></code>, los motores de flujo de trabajo CWL renombrarán el archivo utilizando el nuevo nombre para los pasos posteriores o como salida a nivel de flujo de trabajo.</p>
 </section>
 <section id="how-do-i-reference-a-local-script">
 <h2><a class="toc-backref" href="#contenido" role="doc-backlink"><span class="section-number">4.4. </span>¿Cómo hago referencia a un script local?</a><a class="headerlink" href="#how-do-i-reference-a-local-script" title="Link to this heading">#</a></h2>
-<p>Hay dos maneras de referenciar un script local:</p>
+<p>Hay dos maneras de referenciar a un script local:</p>
 <p>El primer método implica añadir la ruta al directorio donde se alojan los scripts a la variable de entorno <code class="docutils literal notranslate"><span class="pre">PATH</span></code>. Esto permite ejecutar directamente el script de shell (sin necesidad de utilizar explícitamente comandos <code class="docutils literal notranslate"><span class="pre">sh</span></code> o <code class="docutils literal notranslate"><span class="pre">bash</span></code>).</p>
-<p>Se empieza añadiendo <em>shebang</em> en la parte superior del fichero:</p>
+<p>Empieza añadiendo <em>shebang</em> al comienzo del archivo:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="ch">#!/bin/bash</span>
 </pre></div>
 </div>
 <p>Después, se hace el script ejecutable con el comando <code class="docutils literal notranslate"><span class="pre">chmod</span> <span class="pre">+x</span> <span class="pre">scriptname.sh</span></code></p>
-<p>Finalmente, se modifica el <code class="docutils literal notranslate"><span class="pre">PATH</span></code> para añadir el directorio en el que se aloja el script. (Es buena práctica utilizar <code class="docutils literal notranslate"><span class="pre">$HOME/bin</span></code> para alojar los scripts propios.)</p>
+<p>Finalmente, se modifica el <code class="docutils literal notranslate"><span class="pre">PATH</span></code> para añadir el directorio en el que se aloja el script. (Es buena práctica utilizar <code class="docutils literal notranslate"><span class="pre">$HOME/bin</span></code> para alojar los scripts propios.).</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">export</span><span class="w"> </span><span class="nv">PATH</span><span class="o">=</span><span class="nv">$PATH</span>:<span class="nv">$HOME</span>/bin
 </pre></div>
 </div>
@@ -522,7 +527,7 @@ document.write(`
 <span class="nt">baseCommand</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">scriptname.sh</span>
 </pre></div>
 </div>
-<p>Cuando se desee compartir el trabajo más tarde, se puede colocar su script en un contenedor de software en formato Docker.</p>
+<p>Cuando se desee compartir su trabajo más tarde, se puede colocar su script en un contenedor de software en formato Docker.</p>
 <p>El segundo método consiste en incluir una entrada con <code class="docutils literal notranslate"><span class="pre">type:</span> <span class="pre">File</span></code> en el propio script:</p>
 <div class="highlight-cwl notranslate"><div class="highlight"><pre><span></span><span class="nt">class</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">CommandLineTool</span>
 
@@ -565,7 +570,7 @@ document.write(`
 </div>
 </section>
 <section id="how-can-i-model-a-one-or-the-other-parameter">
-<h2><a class="toc-backref" href="#contenido" role="doc-backlink"><span class="section-number">4.6. </span>How can I model a «one-or-the-other» parameter?</a><a class="headerlink" href="#how-can-i-model-a-one-or-the-other-parameter" title="Link to this heading">#</a></h2>
+<h2><a class="toc-backref" href="#contenido" role="doc-backlink"><span class="section-number">4.6. </span>¿Cómo puedo modelar un parámetro «uno-u-otro»?</a><a class="headerlink" href="#how-can-i-model-a-one-or-the-other-parameter" title="Link to this heading">#</a></h2>
 <p>A continuación se muestra un ejemplo de cómo especificar diferentes cadenas que se añadirán a una línea de comandos, en función del valor dado a un parámetro booleano.</p>
 <div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">cwlVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">v1.0</span>
 <span class="nt">class</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">CommandLineTool</span>
@@ -576,7 +581,7 @@ document.write(`
 <span class="w">     </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">boolean</span>
 <span class="w">     </span><span class="nt">default</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span><span class="w">  </span><span class="c1"># or true</span>
 <span class="w">     </span><span class="nt">inputBinding</span><span class="p">:</span>
-<span class="w">        </span><span class="nt">valueFrom</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">${if (self) { return &quot;foo&quot;;} else { return &quot;bar&quot;;}}</span>
+<span class="w">        </span><span class="nt">valueFrom</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">${if (self) { return "foo";} else { return "bar";}}</span>
 
 <span class="nt">baseCommand</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">echo</span>
 
@@ -589,9 +594,9 @@ document.write(`
 <p>Añade un <a class="reference external" href="https://www.commonwl.org/v1.0/Workflow.html#MultipleInputFeatureRequirement"><code class="docutils literal notranslate"><span class="pre">MultipleInputFeatureRequirement</span></code></a> junto con <a class="reference external" href="https://www.commonwl.org/v1.0/Workflow.html#WorkflowStepInput"><code class="docutils literal notranslate"><span class="pre">linkMerge:</span> <span class="pre">merge_nested</span></code></a>:</p>
 <blockquote>
 <div><p>merge_nested</p>
-<p>La entrada debe ser una matriz que conste exactamente de una entrada por cada enlace de entrada. Si se especifica «merge_nested» con un solo enlace, el valor del enlace debe envolverse en una lista de un solo elemento.</p>
+<p>La entrada debe ser una formación que conste exactamente de una entrada por cada enlace de entrada. Si se especifica «merge_nested» con un solo enlace, el valor del enlace debe envolverse en una lista de un solo elemento.</p>
 </div></blockquote>
-<p>¿Qué significa «crear una lista con exactamente estas fuentes como elementos»?</p>
+<p>Cual significa «crear una lista con exactamente estas fuentes como elementos».</p>
 <p>O en otras palabras: si el destino es de tipo <code class="docutils literal notranslate"><span class="pre">File[]</span></code> (un array de <code class="docutils literal notranslate"><span class="pre">File</span></code>s) y el origen es un único <code class="docutils literal notranslate"><span class="pre">File</span></code>, entonces se añade <code class="docutils literal notranslate"><span class="pre">MultipleInputFeatureRequirement</span></code> al <code class="docutils literal notranslate"><span class="pre">requirements</span></code> a nivel de flujo de trabajo y se añade <code class="docutils literal notranslate"><span class="pre">linkMerge:</span> <span class="pre">merge_nested</span></code> bajo la entrada <code class="docutils literal notranslate"><span class="pre">in</span></code> apropiada del paso de destino.</p>
 <div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">cwlVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">v1.0</span>
 <span class="nt">class</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Workflow</span>
@@ -632,7 +637,7 @@ document.write(`
 <span class="w">    </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">boolean?</span>
 <span class="w">    </span><span class="nt">inputBinding</span><span class="p">:</span>
 <span class="w">      </span><span class="nt">position</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1</span>
-<span class="w">      </span><span class="nt">prefix</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;--casava&quot;</span>
+<span class="w">      </span><span class="nt">prefix</span><span class="p">:</span><span class="w"> </span><span class="s">"--casava"</span>
 </pre></div>
 </div>
 <p><a name="enuminputs"></a></p>
@@ -642,7 +647,7 @@ document.write(`
 <p>Para los indicadores de línea de comandos que requieren una entrada específica como argumento, se puede declarar un tipo enum en CWL. <strong>Especificar null aquí se conoce como estilo de forma larga. Hace lo mismo que el signo de interrogación en las otras entradas.</strong></p>
 <div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">Format</span><span class="p">:</span>
 <span class="w">  </span><span class="nt">type</span><span class="p">:</span>
-<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&quot;null&quot;</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">"null"</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">enum</span>
 <span class="w">      </span><span class="nt">symbols</span><span class="p">:</span>
 <span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">bam</span>
@@ -652,7 +657,7 @@ document.write(`
 <span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">fastq</span>
 <span class="w">  </span><span class="nt">inputBinding</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">position</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">2</span>
-<span class="w">    </span><span class="nt">prefix</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;--format&quot;</span>
+<span class="w">    </span><span class="nt">prefix</span><span class="p">:</span><span class="w"> </span><span class="s">"--format"</span>
 </pre></div>
 </div>
 <p><a name="recordinputs"></a></p>
@@ -664,14 +669,14 @@ document.write(`
 
 <span class="w">  </span><span class="nt">Strand</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">type</span><span class="p">:</span>
-<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&quot;null&quot;</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">"null"</span>
 <span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">record</span>
 <span class="w">        </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">forward</span>
 <span class="w">        </span><span class="nt">fields</span><span class="p">:</span>
 <span class="w">          </span><span class="nt">forward</span><span class="p">:</span>
 <span class="w">              </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">boolean</span>
 <span class="w">              </span><span class="nt">inputBinding</span><span class="p">:</span>
-<span class="w">                </span><span class="nt">prefix</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;--fr-stranded&quot;</span>
+<span class="w">                </span><span class="nt">prefix</span><span class="p">:</span><span class="w"> </span><span class="s">"--fr-stranded"</span>
 
 <span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">record</span>
 <span class="w">        </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">reverse</span>
@@ -679,35 +684,35 @@ document.write(`
 <span class="w">          </span><span class="nt">reverse</span><span class="p">:</span>
 <span class="w">            </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">boolean</span>
 <span class="w">            </span><span class="nt">inputBinding</span><span class="p">:</span>
-<span class="w">              </span><span class="nt">prefix</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;--rf-stranded&quot;</span>
+<span class="w">              </span><span class="nt">prefix</span><span class="p">:</span><span class="w"> </span><span class="s">"--rf-stranded"</span>
 
 <span class="w">  </span><span class="nt">PseudoBam</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">boolean?</span>
 <span class="w">    </span><span class="nt">inputBinding</span><span class="p">:</span>
-<span class="w">      </span><span class="nt">prefix</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;--pseudobam&quot;</span>
+<span class="w">      </span><span class="nt">prefix</span><span class="p">:</span><span class="w"> </span><span class="s">"--pseudobam"</span>
 
 <span class="c1">#Using record inputs to create dependent inputs</span>
 
 <span class="w">  </span><span class="nt">GenomeBam</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">type</span><span class="p">:</span>
-<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&quot;null&quot;</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">"null"</span>
 <span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">record</span>
 <span class="w">        </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">genome_bam</span>
 <span class="w">        </span><span class="nt">fields</span><span class="p">:</span>
 <span class="w">          </span><span class="nt">genomebam</span><span class="p">:</span>
 <span class="w">            </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">boolean</span>
 <span class="w">            </span><span class="nt">inputBinding</span><span class="p">:</span>
-<span class="w">              </span><span class="nt">prefix</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;--genomebam&quot;</span>
+<span class="w">              </span><span class="nt">prefix</span><span class="p">:</span><span class="w"> </span><span class="s">"--genomebam"</span>
 
 <span class="w">          </span><span class="nt">gtf</span><span class="p">:</span>
 <span class="w">            </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">File</span>
 <span class="w">            </span><span class="nt">inputBinding</span><span class="p">:</span>
-<span class="w">              </span><span class="nt">prefix</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;--gtf&quot;</span>
+<span class="w">              </span><span class="nt">prefix</span><span class="p">:</span><span class="w"> </span><span class="s">"--gtf"</span>
 
 <span class="w">          </span><span class="nt">chromosomes</span><span class="p">:</span>
 <span class="w">            </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">File</span>
 <span class="w">            </span><span class="nt">inputBinding</span><span class="p">:</span>
-<span class="w">              </span><span class="nt">prefix</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;--chromosomes&quot;</span>
+<span class="w">              </span><span class="nt">prefix</span><span class="p">:</span><span class="w"> </span><span class="s">"--chromosomes"</span>
 </pre></div>
 </div>
 </section>
@@ -722,7 +727,7 @@ document.write(`
 <span class="w">      </span><span class="nt">InputFiles</span><span class="p">:</span>
 <span class="w">        </span><span class="nt">source</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">FastaFiles</span>
 <span class="w">        </span><span class="nt">valueFrom </span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">|</span>
-<span class="w">          </span><span class="no">${return {&quot;fasta&quot;: self};}</span>
+<span class="w">          </span><span class="no">${return {"fasta": self};}</span>
 
 <span class="w">      </span><span class="nt">IndexName</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">IndexName</span>
 
@@ -732,7 +737,7 @@ document.write(`
 </section>
 <section id="how-can-i-set-booleans">
 <h2><a class="toc-backref" href="#contenido" role="doc-backlink"><span class="section-number">4.12. </span>¿Cómo puedo establecer valores de tipo Boolean?</a><a class="headerlink" href="#how-can-i-set-booleans" title="Link to this heading">#</a></h2>
-<p>Se pueden asignar utilizando valores «default»</p>
+<p>Pueden asignar utilizando el campo por defecto</p>
 <div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">input</span><span class="p">:</span>
 <span class="w">  </span><span class="nt">default</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 </pre></div>
@@ -740,7 +745,7 @@ document.write(`
 </section>
 <section id="what-should-i-do-when-concatenating-strings-in-inputs">
 <h2><a class="toc-backref" href="#contenido" role="doc-backlink"><span class="section-number">4.13. </span>¿Qué debería hacer para concatenar cadenas en las entradas?</a><a class="headerlink" href="#what-should-i-do-when-concatenating-strings-in-inputs" title="Link to this heading">#</a></h2>
-<p>El campo <code class="docutils literal notranslate"><span class="pre">valueFrom</span></code> debe ser utilizado en lugar de <code class="docutils literal notranslate"><span class="pre">default</span></code>.</p>
+<p>El campo “valueFrom” debe ser utilizado en lugar de “default”.</p>
 <div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">input</span><span class="p">:</span>
 <span class="w">  </span><span class="nt">valueFrom</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">|</span>
 <span class="w">     </span><span class="no">My String: $(input.stringvalue)</span>
@@ -748,36 +753,36 @@ document.write(`
 </div>
 </section>
 <section id="i-get-cwltool-errors-due-to-filenames-with-space-characters-inside-what-should-i-do">
-<h2><a class="toc-backref" href="#contenido" role="doc-backlink"><span class="section-number">4.14. </span>Obtengo errores en <code class="docutils literal notranslate"><span class="pre">cwltool</span></code> debido a nombres de fichero con caracteres de espacio. ¿Qué debo hacer?</a><a class="headerlink" href="#i-get-cwltool-errors-due-to-filenames-with-space-characters-inside-what-should-i-do" title="Link to this heading">#</a></h2>
-<p><code class="docutils literal notranslate"><span class="pre">cwltool</span></code> no me permite algunos caracteres en los nombres de fichero por defecto.</p>
-<p>Por ejemplo, el nombre de fichero <code class="docutils literal notranslate"><span class="pre">aqui</span> <span class="pre">hay</span> <span class="pre">un</span> <span class="pre">espacio.txt</span></code> incluye 3 caracteres de espacio.</p>
+<h2><a class="toc-backref" href="#contenido" role="doc-backlink"><span class="section-number">4.14. </span>Obtengo errores en <code class="docutils literal notranslate"><span class="pre">cwltool</span></code> debido a nombres de archivo con caracteres de espacio. ¿Qué debo hacer?</a><a class="headerlink" href="#i-get-cwltool-errors-due-to-filenames-with-space-characters-inside-what-should-i-do" title="Link to this heading">#</a></h2>
+<p><code class="docutils literal notranslate"><span class="pre">cwltool</span></code> no concede algunos caracteres en los nombres de archivo por defecto.</p>
+<p>Por ejemplo, el nombre de archivo <code class="docutils literal notranslate"><span class="pre">aquí</span> <span class="pre">hay</span> <span class="pre">un</span> <span class="pre">espacio.txt</span></code> incluye 3 caracteres de espacio.</p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">ERROR Workflow error, try again with --debug for more information:</span>
 
-<span class="go">Invalid filename: &#39;a space is here.txt&#39; contains illegal characters</span>
+<span class="go">Invalid filename: 'a space is here.txt' contains illegal characters</span>
 </pre></div>
 </div>
-<p>Si no puede evitar estos caracteres peligrosos, pase <code class="docutils literal notranslate"><span class="pre">--relax-path-checks</span></code> a <code class="docutils literal notranslate"><span class="pre">cwltool</span></code>.</p>
+<p>Si no puede evitar estos caracteres peligrosos, entonces pase <code class="docutils literal notranslate"><span class="pre">--relax-path-checks</span></code> a <code class="docutils literal notranslate"><span class="pre">cwltool</span></code>.</p>
 </section>
 <section id="what-should-i-do-when-i-get-cwl-parameter-reference-error-due-to-hyphen-in-an-input-identifier">
-<h2><a class="toc-backref" href="#contenido" role="doc-backlink"><span class="section-number">4.15. </span>What should I do when I get CWL Parameter Reference error due to hyphen in an input identifier?</a><a class="headerlink" href="#what-should-i-do-when-i-get-cwl-parameter-reference-error-due-to-hyphen-in-an-input-identifier" title="Link to this heading">#</a></h2>
-<p>If <code class="docutils literal notranslate"><span class="pre">cwltool</span> <span class="pre">--validate</span></code> returns valid</p>
+<h2><a class="toc-backref" href="#contenido" role="doc-backlink"><span class="section-number">4.15. </span>¿Qué debo hacer cuando obtengo un error de Referencia de Parámetro CWL debido a un guion en un identificador de entrada?</a><a class="headerlink" href="#what-should-i-do-when-i-get-cwl-parameter-reference-error-due-to-hyphen-in-an-input-identifier" title="Link to this heading">#</a></h2>
+<p>Si <code class="docutils literal notranslate"><span class="pre">cwltool</span> <span class="pre">--validate</span></code> devuelve válido</p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>cwltool<span class="w"> </span>--validate<span class="w"> </span>cwl/qiime.cwl
 <span class="go">INFO /usr/local/bin/cwltool 1.0.20190831161204</span>
-<span class="go">INFO Resolved &#39;cwl/qiime.cwl&#39; to &#39;file:///workspace/cwl/qiime.cwl&#39;</span>
+<span class="go">INFO Resolved 'cwl/qiime.cwl' to 'file:///workspace/cwl/qiime.cwl'</span>
 <span class="go">cwl/qiime.cwl is valid CWL.</span>
 </pre></div>
 </div>
-<p>But executing it causes an error like:</p>
+<p>Pero ejecutarlo causa un error como:</p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>cwltool<span class="w"> </span>cwl/qiime.cwl<span class="w"> </span>--sample-input<span class="w"> </span>metadata.tsv
 <span class="go">INFO /usr/local/bin/cwltool 1.0.20190831161204</span>
-<span class="go">INFO Resolved &#39;cwl/qiime.cwl&#39; to &#39;file:///workspace/cwl/qiime.cwl&#39;</span>
+<span class="go">INFO Resolved 'cwl/qiime.cwl' to 'file:///workspace/cwl/qiime.cwl'</span>
 <span class="go">ERROR Workflow error, try again with --debug for more information:</span>
 <span class="go">cwl/qiime.cwl:14:5: Expression evaluation error:</span>
-<span class="go">                    Syntax error in parameter reference &#39;(inputs.sample-input)&#39;. This could be due</span>
+<span class="go">                    Syntax error in parameter reference '(inputs.sample-input)'. This could be due</span>
 <span class="go">                    to using Javascript code without specifying InlineJavascriptRequirement.</span>
 </pre></div>
 </div>
-<p>The file is here</p>
+<p>El archivo está aquí</p>
 <div class="highlight-cwl notranslate"><div class="highlight"><pre><span></span><span class="nt">cwlVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">v1.0</span>
 <span class="nt">class</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">CommandLineTool</span>
 <span class="nt">baseCommand</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="nv">qiime</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">metadata</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">tabulate</span><span class="p p-Indicator">]</span>
@@ -789,7 +794,7 @@ document.write(`
 <span class="nt">outputs</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[]</span>
 </pre></div>
 </div>
-<p>Problem caused by <code class="docutils literal notranslate"><span class="pre">-</span></code> (hyphen character).</p>
+<p>Problema causado por <code class="docutils literal notranslate"><span class="pre">-</span></code> (carácter guion).</p>
 <div class="highlight-cwl notranslate"><div class="highlight"><pre><span></span><span class="nt">valueFrom</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">$(inputs.sample-input)</span>
 <span class="w">                        </span><span class="l l-Scalar l-Scalar-Plain"># ^ this is problem</span>
 <span class="nn">...</span>
@@ -799,7 +804,7 @@ document.write(`
 <span class="w">      </span><span class="l l-Scalar l-Scalar-Plain"># ^ this is problem</span>
 </pre></div>
 </div>
-<p>To fix this error, change <code class="docutils literal notranslate"><span class="pre">-</span></code> (hyphen) to <code class="docutils literal notranslate"><span class="pre">_</span></code> (underscore):</p>
+<p>Para arreglar este error, cambie el <code class="docutils literal notranslate"><span class="pre">-</span></code> (guion) por <code class="docutils literal notranslate"><span class="pre">_</span></code> (guion bajo):</p>
 <div class="highlight-cwl notranslate"><div class="highlight"><pre><span></span><span class="nt">valueFrom</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">$(inputs.sample_input)</span>
 <span class="w">                        </span><span class="l l-Scalar l-Scalar-Plain"># ^ changed here</span>
 
@@ -810,25 +815,19 @@ document.write(`
 <span class="w">      </span><span class="l l-Scalar l-Scalar-Plain"># ^ changed here</span>
 </pre></div>
 </div>
-<p>If it is not possible to change the input identifier, then you can use an alternative CWL Parameter Reference syntax:</p>
-<div class="highlight-cwl notranslate"><div class="highlight"><pre><span></span><span class="nt">valueFrom</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">$(inputs[&quot;sample-input&quot;])</span>
+<p>Si no es posible cambiar el identificador del input, entonces puedes usar una sintaxis alternativa para Referencias de Parámetros CWL:</p>
+<div class="highlight-cwl notranslate"><div class="highlight"><pre><span></span><span class="nt">valueFrom</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">$(inputs["sample-input"])</span>
 </pre></div>
 </div>
 </section>
 <section id="how-do-i-use-cwl-and-cwltool-with-singularity">
-<h2><a class="toc-backref" href="#contenido" role="doc-backlink"><span class="section-number">4.16. </span>How do I use CWL and cwltool with Singularity?</a><a class="headerlink" href="#how-do-i-use-cwl-and-cwltool-with-singularity" title="Link to this heading">#</a></h2>
+<h2><a class="toc-backref" href="#contenido" role="doc-backlink"><span class="section-number">4.16. </span>¿Cómo uso CWL y cwltool con Singularity?</a><a class="headerlink" href="#how-do-i-use-cwl-and-cwltool-with-singularity" title="Link to this heading">#</a></h2>
 <!-- https://matrix.to/#/!RQMxrGNGkeDmWHOaEs:gitter.im/$f1B-ytoep4PX3_tTgxaADRQFHGgisGiUL1nUHVQPBnY?via=gitter.im&via=matrix.org&via=gottliebtfreitag.de -->
-<p>The CWL standards are built around (optional) Docker format containers.
-The reference runner and several other CWL implementations support running
-those Docker format containers using the Singularity engine. Directly
-specifying a Singularity format container is not part of the CWL standards.</p>
+<p>Los estándares CWL se han creado en base a contenedores en formato Docker (opcionales). El ejecutor de referencia y otras implementaciones de CWL admiten ejecutar dichos contenedores en formato Docker usando el motor de Singularity. Especificar directamente un contenedor en formato Singularity no es parte de los estándares CWL.</p>
 </section>
 <section id="how-do-i-debug-the-javascript-in-my-cwl-tool">
-<h2><a class="toc-backref" href="#contenido" role="doc-backlink"><span class="section-number">4.17. </span>How do I debug the JavaScript in my CWL tool?</a><a class="headerlink" href="#how-do-i-debug-the-javascript-in-my-cwl-tool" title="Link to this heading">#</a></h2>
-<p>You can use the <code>–js-console</code> option of <code>cwltool</code>, or you can try
-creating a JavaScript or TypeScript project for your code, and load it
-using <code>expressionLib</code>, e.g.: <a href="https://github.com/common-workflow-language/common-workflow-language/blob/master/v1.0/v1.0/template-tool.cwl#L6-L8">
-https://github.com/common-workflow-language/common-workflow-language/blob/master/v1.0/v1.0/template-tool.cwl#L6-L8</a></dd></p>
+<h2><a class="toc-backref" href="#contenido" role="doc-backlink"><span class="section-number">4.17. </span>¿Cómo depuro el JavaScript en mi herramienta CLW?</a><a class="headerlink" href="#how-do-i-debug-the-javascript-in-my-cwl-tool" title="Link to this heading">#</a></h2>
+<p>Puedes utilizar la opción <code>–js-console</code> de <code>cwltool</code>, o puedes probar al crear un proyecto JavaScript o TypeScript para su código, y cargarlo utilizando <code>expressionLib</code>, p. ej.: <a href="https://github.com/common-workflow-language/common-workflow-language/blob/master/v1.0/v1.0/template-tool.cwl#L6-L8"> https://github.com/common-workflow-language/common-workflow-language/blob/master/v1.0/v1.0/template-tool.cwl#L6-L8</a></dd></p>
 </section>
 </section>
 
@@ -839,7 +838,7 @@ https://github.com/common-workflow-language/common-workflow-language/blob/master
               
               
               
-                <footer class="prev-next-footer">
+                <footer class="prev-next-footer d-print-none">
                   
 <div class="prev-next-area">
     <a class="left-prev"
@@ -848,7 +847,7 @@ https://github.com/common-workflow-language/common-workflow-language/blob/master
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">anterior</p>
-        <p class="prev-next-title"><span class="section-number">3. </span>Tutorials</p>
+        <p class="prev-next-title"><span class="section-number">3. </span>Tutoriales</p>
       </div>
     </a>
     <a class="right-next"
@@ -867,7 +866,8 @@ https://github.com/common-workflow-language/common-workflow-language/blob/master
             
             
               
-                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
 
 
   <div class="sidebar-secondary-item">
@@ -876,14 +876,14 @@ https://github.com/common-workflow-language/common-workflow-language/blob/master
     class="page-toc tocsection onthispage">
     <i class="fa-solid fa-list"></i> En esta página
   </div>
-  <nav class="bd-toc-nav page-toc" aria-labelledby="pst-page-navigation-heading-2">
-    <ul class="visible nav section-nav flex-column">
+  <nav id="pst-page-toc-nav" class="page-toc" aria-labelledby="pst-page-navigation-heading-2">
+    <ul class="pst-show_toc_level nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#how-do-i-create-non-file-types-using-evalfrom">4.1. ¿Cómo creo tipos que no sean «<code class="docutils literal notranslate"><span class="pre">File</span></code>» utilizando <code class="docutils literal notranslate"><span class="pre">evalFrom</span></code>?</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#how-do-i-rename-an-input-file">4.2. ¿Cómo renombro un fichero de entrada?</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#how-do-i-rename-an-output-file">4.3. ¿Cómo renombro un fichero de salida?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#how-do-i-rename-an-input-file">4.2. ¿Cómo renombro un archivo de entrada?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#how-do-i-rename-an-output-file">4.3. ¿Cómo renombro un archivo de salida?</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#how-do-i-reference-a-local-script">4.4. ¿Cómo hago referencia a un script local?</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#how-can-i-set-self-based-input-bindings-for-optional-inputs">4.5. ¿Cómo puedo configurar enlaces de entrada basados en <code class="docutils literal notranslate"><span class="pre">self</span></code> para entradas opcionales?</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#how-can-i-model-a-one-or-the-other-parameter">4.6. How can I model a «one-or-the-other» parameter?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#how-can-i-model-a-one-or-the-other-parameter">4.6. ¿Cómo puedo modelar un parámetro «uno-u-otro»?</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#how-do-i-connect-a-solo-value-to-an-input-that-expects-an-array-of-that-type">4.7. ¿Cómo puedo conectar un valor aislado a una entrada que espera un array de ese tipo?</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#how-do-make-an-input-optional">4.8. ¿Cómo hago una entrada opcional? 💯</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#how-do-i-specify-an-input-that-must-come-from-a-list-of-predefined-values-i-e-how-do-i-use-enum-inputs">4.9. ¿Cómo especifico una entrada que debe proceder de una lista de valores predeterminados (esto es, cómo utilizar entradas «enum»)?</a></li>
@@ -891,10 +891,10 @@ https://github.com/common-workflow-language/common-workflow-language/blob/master
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#how-do-i-set-mutually-exclusive-parameters">4.11. ¿Cómo configuro parámetros mutuamente excluyentes?</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#how-can-i-set-booleans">4.12. ¿Cómo puedo establecer valores de tipo Boolean?</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-should-i-do-when-concatenating-strings-in-inputs">4.13. ¿Qué debería hacer para concatenar cadenas en las entradas?</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#i-get-cwltool-errors-due-to-filenames-with-space-characters-inside-what-should-i-do">4.14. Obtengo errores en <code class="docutils literal notranslate"><span class="pre">cwltool</span></code> debido a nombres de fichero con caracteres de espacio. ¿Qué debo hacer?</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-should-i-do-when-i-get-cwl-parameter-reference-error-due-to-hyphen-in-an-input-identifier">4.15. What should I do when I get CWL Parameter Reference error due to hyphen in an input identifier?</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#how-do-i-use-cwl-and-cwltool-with-singularity">4.16. How do I use CWL and cwltool with Singularity?</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#how-do-i-debug-the-javascript-in-my-cwl-tool">4.17. How do I debug the JavaScript in my CWL tool?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#i-get-cwltool-errors-due-to-filenames-with-space-characters-inside-what-should-i-do">4.14. Obtengo errores en <code class="docutils literal notranslate"><span class="pre">cwltool</span></code> debido a nombres de archivo con caracteres de espacio. ¿Qué debo hacer?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-should-i-do-when-i-get-cwl-parameter-reference-error-due-to-hyphen-in-an-input-identifier">4.15. ¿Qué debo hacer cuando obtengo un error de Referencia de Parámetro CWL debido a un guion en un identificador de entrada?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#how-do-i-use-cwl-and-cwltool-with-singularity">4.16. ¿Cómo uso CWL y cwltool con Singularity?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#how-do-i-debug-the-javascript-in-my-cwl-tool">4.17. ¿Cómo depuro el JavaScript en mi herramienta CLW?</a></li>
 </ul>
   </nav></div>
 
@@ -936,8 +936,8 @@ https://github.com/common-workflow-language/common-workflow-language/blob/master
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae"></script>
-<script src="_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae"></script>
+  <script defer src="_static/scripts/bootstrap.js?digest=cb8930eaaf36d9849b67"></script>
+<script defer src="_static/scripts/pydata-sphinx-theme.js?digest=cb8930eaaf36d9849b67"></script>
 
   <footer class="bd-footer">
 <div class="bd-footer__inner bd-page-width">
@@ -957,7 +957,7 @@ https://github.com/common-workflow-language/common-workflow-language/blob/master
         <div class="footer-item">
 
   <p class="sphinx-version">
-    Creado usando <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.3.7.
+    Creado usando <a href="https://www.sphinx-doc.org/">Sphinx</a> 8.2.3.
     <br/>
   </p>
 </div>
@@ -990,7 +990,8 @@ https://github.com/common-workflow-language/common-workflow-language/blob/master
       
         <div class="footer-item">
 <p class="theme-version">
-  Construido con el <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">Tema PyData Sphinx</a> 0.15.2.
+  <!-- # L10n: Setting the PST URL as an argument as this does not need to be localized -->
+  Construido con el <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html"> Tema PyData Sphinx </a> 0.21.0.
 </p></div>
       
     </div>

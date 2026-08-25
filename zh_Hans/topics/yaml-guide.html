@@ -12,7 +12,7 @@
     <link rel="icon" sizes="96x96" href="../_static/images/favicons/cwl/favicon-96x96.png" type="image/png">
     <link rel="icon" sizes="128x128" href="../_static/images/favicons/cwl/favicon-128.png" type="image/png">
     <link rel="icon" sizes="196x196" href="../_static/images/favicons/cwl/favicon-196x196.png" type="image/png">
-    <title>2.1. YAML Guide &#8212; Common Workflow Language User Guide 0.1 文档</title>
+    <title>2.1. YAML 语言指南 &#8212; Common Workflow Language User Guide 0.1 documentation</title>
   
   
   
@@ -20,70 +20,66 @@
     document.documentElement.dataset.mode = localStorage.getItem("mode") || "light";
     document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
   </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../_static/styles/theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
-<link href="../_static/styles/bootstrap.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
-<link href="../_static/styles/pydata-sphinx-theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+  <link href="../_static/styles/theme.css?digest=cb8930eaaf36d9849b67" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=cb8930eaaf36d9849b67" rel="stylesheet" />
 
-  
-  <link href="../_static/vendor/fontawesome/6.5.1/css/all.min.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
-  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-solid-900.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
-
-    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=80d5e7a1" />
-    <link rel="stylesheet" type="text/css" href="../_static/graphviz.css?v=fd3f3429" />
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b86133f3" />
+    <link rel="stylesheet" type="text/css" href="../_static/graphviz.css?v=4ae1632d" />
     <link rel="stylesheet" type="text/css" href="../_static/css/custom.css?v=e0da1575" />
   
+  <!-- So that users can add custom icons -->
+  <script defer src="../_static/scripts/fontawesome.js?digest=cb8930eaaf36d9849b67"></script>
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae" />
-<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae" />
-  <script src="../_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=8d27b9dea8ad943066ae"></script>
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=cb8930eaaf36d9849b67" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=cb8930eaaf36d9849b67" />
 
     <script src="../_static/documentation_options.js?v=ac4875c4"></script>
-    <script src="../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../_static/doctools.js?v=9bcbadda"></script>
     <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'topics/yaml-guide';</script>
+    <script>DOCUMENTATION_OPTIONS.search_as_you_type = false;</script>
     <link rel="icon" href="../_static/favicon.ico"/>
-    <link rel="index" title="索引" href="../genindex.html" />
+    <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="搜索" href="../search.html" />
     <link rel="next" title="2.2. 命令行工具" href="command-line-tool.html" />
     <link rel="prev" title="2. 主题" href="index.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="zh-Hans"/>
+  <meta name="docsearch:version" content="" />
+  
+    
+    <script src="../_static/searchtools.js"></script>
+    <script src="../_static/language_data.js"></script>
+    <script src="../searchindex.js"></script>
+  
   </head>
+  <body data-default-mode="light">
   
   
-  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="light">
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">跳转至主要内容</a></div>
 
-  
-  
-  <a id="pst-skip-link" class="skip-link" href="#main-content">Skip to main content</a>
   
   <div id="pst-scroll-pixel-helper"></div>
   
   <button type="button" class="btn rounded-pill" id="pst-back-to-top">
-    <i class="fa-solid fa-arrow-up"></i>
-    Back to top
-  </button>
-
+    <i class="fa-solid fa-arrow-up"></i>回到顶部</button>
   
-  <input type="checkbox"
-          class="sidebar-toggle"
-          name="__primary"
-          id="__primary"/>
-  <label class="overlay overlay-primary" for="__primary"></label>
   
-  <input type="checkbox"
-          class="sidebar-toggle"
-          name="__secondary"
-          id="__secondary"/>
-  <label class="overlay overlay-secondary" for="__secondary"></label>
   
-  <div class="search-button__wrapper">
-    <div class="search-button__overlay"></div>
-    <div class="search-button__search-container">
+  
+  <dialog id="pst-search-dialog">
+    
 <form class="bd-search d-flex align-items-center"
       action="../search.html"
       method="get">
@@ -91,7 +87,6 @@
   <input type="search"
          class="form-control"
          name="q"
-         id="search-input"
          placeholder="Search the docs ..."
          aria-label="Search the docs ..."
          autocomplete="off"
@@ -99,20 +94,27 @@
          autocapitalize="off"
          spellcheck="false"/>
   <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
-</form></div>
-  </div>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="版本警告"></aside>
+</div>
+
   
-    <header class="bd-header navbar navbar-expand-lg bd-navbar">
+    <header id="pst-header" class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
 <div class="bd-header__inner bd-page-width">
-  <label class="sidebar-toggle primary-toggle" for="__primary">
+  <button class="pst-navbar-icon sidebar-toggle primary-toggle" aria-label="网页导航">
     <span class="fa-solid fa-bars"></span>
-  </label>
+  </button>
   
   
   <div class="col-lg-3 navbar-header-items__start">
     
       <div class="navbar-item">
 
+  
+    
   
 
 <a class="navbar-brand logo" href="../index.html">
@@ -124,8 +126,8 @@
     
     
     
-    <img src="../_static/CWL-Logo-HD-cropped2.png" class="logo__image only-light" alt="Common Workflow Language User Guide 0.1 文档 - Home"/>
-    <script>document.write(`<img src="../_static/CWL-Logo-HD-cropped2.png" class="logo__image only-dark" alt="Common Workflow Language User Guide 0.1 文档 - Home"/>`);</script>
+    <img src="../_static/CWL-Logo-HD-cropped2.png" class="logo__image only-light" alt="Common Workflow Language User Guide 0.1 documentation - Home"/>
+    <img src="../_static/CWL-Logo-HD-cropped2.png" class="logo__image only-dark pst-js-only" alt="Common Workflow Language User Guide 0.1 documentation - Home"/>
   
   
 </a></div>
@@ -137,50 +139,50 @@
     <div class="me-auto navbar-header-items__center">
       
         <div class="navbar-item">
-<nav class="navbar-nav">
+<nav>
   <ul class="bd-navbar-elements navbar-nav">
     
-                    <li class="nav-item">
-                      <a class="nav-link nav-internal" href="../introduction/index.html">
-                        概述
-                      </a>
-                    </li>
-                
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../introduction/index.html">
+    概述
+  </a>
+</li>
 
-                    <li class="nav-item current active">
-                      <a class="nav-link nav-internal" href="index.html">
-                        主题
-                      </a>
-                    </li>
-                
 
-                    <li class="nav-item">
-                      <a class="nav-link nav-internal" href="../tutorials.html">
-                        Tutorials
-                      </a>
-                    </li>
-                
+<li class="nav-item current active">
+  <a class="nav-link nav-internal" href="index.html">
+    主题
+  </a>
+</li>
 
-                    <li class="nav-item">
-                      <a class="nav-link nav-internal" href="../faq.html">
-                        常见问题
-                      </a>
-                    </li>
-                
 
-                    <li class="nav-item">
-                      <a class="nav-link nav-internal" href="../LICENSE.html">
-                        许可协议
-                      </a>
-                    </li>
-                
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../tutorials.html">
+    教程
+  </a>
+</li>
 
-                <li class="nav-item">
-                  <a class="nav-link nav-external" href="https://www.commonwl.org/community/">
-                    Community
-                  </a>
-                </li>
-                
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../faq.html">
+    常见问题
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../LICENSE.html">
+    许可协议
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-external" href="https://www.commonwl.org/community/">
+    Community
+  </a>
+</li>
+
   </ul>
 </nav></div>
       
@@ -192,31 +194,30 @@
         <div class="navbar-item navbar-persistent--container">
           
 
- <script>
- document.write(`
-   <button class="btn navbar-btn search-button-field search-button__button" title="搜索" aria-label="搜索" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="fa-solid fa-magnifying-glass"></i>
-    <span class="search-button__default-text">搜索</span>
-    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
-   </button>
- `);
- </script>
+<button class="btn search-button-field search-button__button pst-js-only" title="搜索" aria-label="搜索" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">搜索</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
         </div>
       
       
         <div class="navbar-item">
 
-<script>
-document.write(`
-  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
-    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
-    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+<div class="theme-switch-container dropdown pst-js-only" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Color mode">
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button dropdown-toggle" aria-label="Color mode" data-bs-toggle="dropdown">
+    <i class="theme-switch fa-solid fa-sun fa-lg fa-fw" data-mode="light" title="亮色"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg fa-fw" data-mode="dark" title="暗色"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg fa-fw" data-mode="auto" title="System Settings"></i>
   </button>
-`);
-</script></div>
+  <ul class="dropdown-menu dropdown-menu-end">
+    <li><button class="dropdown-item d-flex align-items-center theme-change-button" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg fa-fw me-1"></i>System Settings</button></li>
+    <li><button class="dropdown-item d-flex align-items-center theme-change-button" data-mode="light"><i class="fa-solid fa-sun fa-lg fa-fw me-1"></i>亮色</button></li>
+    <li><button class="dropdown-item d-flex align-items-center theme-change-button" data-mode="dark"><i class="fa-solid fa-moon fa-lg fa-fw me-1"></i>暗色</button></li>
+  </ul>
+</div></div>
       
-        <div class="navbar-item"><ul class="navbar-icon-links navbar-nav"
+        <div class="navbar-item"><ul class="navbar-icon-links"
     aria-label="Icon Links">
         <li class="nav-item">
           
@@ -227,8 +228,7 @@ document.write(`
           
           
           
-          <a href="https://github.com/common-workflow-language/user_guide/" title="GitHub" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fab fa-github-square fa-lg" aria-hidden="true"></i></span>
-            <span class="sr-only">GitHub</span></a>
+          <a href="https://github.com/common-workflow-language/user_guide/" title="GitHub" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fab fa-github-square fa-lg" aria-hidden="true"></i><span class="visually-hidden">GitHub</span></a>
         </li>
 </ul></div>
       
@@ -239,22 +239,18 @@ document.write(`
   
     <div class="navbar-persistent--mobile">
 
- <script>
- document.write(`
-   <button class="btn navbar-btn search-button-field search-button__button" title="搜索" aria-label="搜索" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="fa-solid fa-magnifying-glass"></i>
-    <span class="search-button__default-text">搜索</span>
-    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
-   </button>
- `);
- </script>
+<button class="btn search-button-field search-button__button pst-js-only" title="搜索" aria-label="搜索" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">搜索</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
     </div>
   
 
   
-    <label class="sidebar-toggle secondary-toggle" for="__secondary" tabindex="0">
+    <button class="pst-navbar-icon sidebar-toggle secondary-toggle" aria-label="当前页面">
       <span class="fa-solid fa-outdent"></span>
-    </label>
+    </button>
   
 </div>
 
@@ -266,7 +262,8 @@ document.write(`
       
       
       
-      <div class="bd-sidebar-primary bd-sidebar">
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
         
 
   
@@ -275,53 +272,56 @@ document.write(`
     
       <div class="sidebar-header-items__center">
         
-          <div class="navbar-item">
-<nav class="navbar-nav">
+          
+          
+            <div class="navbar-item">
+<nav>
   <ul class="bd-navbar-elements navbar-nav">
     
-                    <li class="nav-item">
-                      <a class="nav-link nav-internal" href="../introduction/index.html">
-                        概述
-                      </a>
-                    </li>
-                
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../introduction/index.html">
+    概述
+  </a>
+</li>
 
-                    <li class="nav-item current active">
-                      <a class="nav-link nav-internal" href="index.html">
-                        主题
-                      </a>
-                    </li>
-                
 
-                    <li class="nav-item">
-                      <a class="nav-link nav-internal" href="../tutorials.html">
-                        Tutorials
-                      </a>
-                    </li>
-                
+<li class="nav-item current active">
+  <a class="nav-link nav-internal" href="index.html">
+    主题
+  </a>
+</li>
 
-                    <li class="nav-item">
-                      <a class="nav-link nav-internal" href="../faq.html">
-                        常见问题
-                      </a>
-                    </li>
-                
 
-                    <li class="nav-item">
-                      <a class="nav-link nav-internal" href="../LICENSE.html">
-                        许可协议
-                      </a>
-                    </li>
-                
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../tutorials.html">
+    教程
+  </a>
+</li>
 
-                <li class="nav-item">
-                  <a class="nav-link nav-external" href="https://www.commonwl.org/community/">
-                    Community
-                  </a>
-                </li>
-                
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../faq.html">
+    常见问题
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../LICENSE.html">
+    许可协议
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-external" href="https://www.commonwl.org/community/">
+    Community
+  </a>
+</li>
+
   </ul>
 </nav></div>
+          
         
       </div>
     
@@ -331,17 +331,20 @@ document.write(`
         
           <div class="navbar-item">
 
-<script>
-document.write(`
-  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
-    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
-    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+<div class="theme-switch-container dropdown pst-js-only" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Color mode">
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button dropdown-toggle" aria-label="Color mode" data-bs-toggle="dropdown">
+    <i class="theme-switch fa-solid fa-sun fa-lg fa-fw" data-mode="light" title="亮色"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg fa-fw" data-mode="dark" title="暗色"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg fa-fw" data-mode="auto" title="System Settings"></i>
   </button>
-`);
-</script></div>
+  <ul class="dropdown-menu dropdown-menu-end">
+    <li><button class="dropdown-item d-flex align-items-center theme-change-button" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg fa-fw me-1"></i>System Settings</button></li>
+    <li><button class="dropdown-item d-flex align-items-center theme-change-button" data-mode="light"><i class="fa-solid fa-sun fa-lg fa-fw me-1"></i>亮色</button></li>
+    <li><button class="dropdown-item d-flex align-items-center theme-change-button" data-mode="dark"><i class="fa-solid fa-moon fa-lg fa-fw me-1"></i>暗色</button></li>
+  </ul>
+</div></div>
         
-          <div class="navbar-item"><ul class="navbar-icon-links navbar-nav"
+          <div class="navbar-item"><ul class="navbar-icon-links"
     aria-label="Icon Links">
         <li class="nav-item">
           
@@ -352,8 +355,7 @@ document.write(`
           
           
           
-          <a href="https://github.com/common-workflow-language/user_guide/" title="GitHub" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fab fa-github-square fa-lg" aria-hidden="true"></i></span>
-            <span class="sr-only">GitHub</span></a>
+          <a href="https://github.com/common-workflow-language/user_guide/" title="GitHub" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fab fa-github-square fa-lg" aria-hidden="true"></i><span class="visually-hidden">GitHub</span></a>
         </li>
 </ul></div>
         
@@ -362,12 +364,20 @@ document.write(`
   </div>
   
     <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item pst-sidebar-collapse"><button id="pst-collapse-sidebar-button" aria-expanded="true" aria-controls="pst-primary-sidebar">
+  <svg class="pst-icon" role="img" aria-hidden="true" focusable="false" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+    <path fill="currentColor" d="M3 15.5C2.36232 15.5 1.74874 15.2564 1.28478 14.8189C0.820828 14.3815 0.541576 13.7832 0.504167 13.1467L0.5 13L0.5 3C0.499965 2.36232 0.743605 1.74874 1.18107 1.28478C1.61854 0.820828 2.21676 0.541576 2.85333 0.504167L3 0.5L13 0.5C13.6377 0.499965 14.2513 0.743605 14.7152 1.18107C15.1792 1.61854 15.4584 2.21676 15.4958 2.85333L15.5 3L15.5 13C15.5 13.6377 15.2564 14.2513 14.8189 14.7152C14.3815 15.1792 13.7832 15.4584 13.1467 15.4958L13 15.5L3 15.5ZM3 13.8333L10.5 13.8333L10.5 2.16667L3 2.16667C2.79589 2.16669 2.59889 2.24163 2.44636 2.37726C2.29383 2.5129 2.19638 2.69979 2.1725 2.9025L2.16667 3L2.16667 13C2.16669 13.2041 2.24163 13.4011 2.37726 13.5536C2.5129 13.7062 2.69979 13.8036 2.9025 13.8275L3 13.8333ZM6.65583 10.325L6.5775 10.2558L4.91083 8.58917C4.76735 8.44567 4.68116 8.25476 4.66843 8.05223C4.65569 7.84971 4.71729 7.6495 4.84167 7.48917L4.91083 7.41083L6.5775 5.74417C6.72747 5.59471 6.9287 5.50794 7.14032 5.50148C7.35194 5.49502 7.55809 5.56935 7.7169 5.70937C7.8757 5.8494 7.97525 6.04463 7.99533 6.25539C8.01541 6.46616 7.95451 6.67667 7.825 6.84417L7.75583 6.9225L6.67917 8L7.75583 9.0775C7.89931 9.22099 7.98551 9.41191 7.99824 9.61443C8.01097 9.81695 7.94938 10.0172 7.825 10.1775L7.75583 10.2558C7.61234 10.3993 7.42142 10.4855 7.2189 10.4982C7.01638 10.511 6.81617 10.4494 6.65583 10.325Z"/>
+  </svg>
+  <span class="pst-collapse-sidebar-label">Collapse Sidebar</span>
+  <span class="pst-expand-sidebar-label">Expand Sidebar</span>
+</button></div>
         <div class="sidebar-primary-item">
+
 <nav class="bd-docs-nav bd-links"
      aria-label="章节导航">
   <p class="bd-links__title" role="heading" aria-level="1">章节导航</p>
   <div class="bd-toc-item navbar-nav"><ul class="current nav bd-sidenav">
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">2.1. YAML Guide</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">2.1. YAML 语言指南</a></li>
 <li class="toctree-l1"><a class="reference internal" href="command-line-tool.html">2.2. 命令行工具</a></li>
 <li class="toctree-l1"><a class="reference internal" href="expressions.html">2.3. 表达式</a></li>
 <li class="toctree-l1"><a class="reference internal" href="inputs.html">2.4. 输入 (inputs)</a></li>
@@ -394,40 +404,43 @@ document.write(`
   
   
   <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
   </div>
-  
-  <div id="rtd-footer-container"></div>
 
 
       </div>
       
-      <main id="main-content" class="bd-main">
+      <main id="main-content" class="bd-main" role="main">
         
         
           <div class="bd-content">
             <div class="bd-article-container">
               
-              <div class="bd-header-article">
+              <div class="bd-header-article d-print-none">
 <div class="header-article-items header-article__inner">
   
     <div class="header-article-items__start">
       
         <div class="header-article-item">
 
-
-
-<nav aria-label="Breadcrumb">
+<nav aria-label="Breadcrumb" class="d-print-none">
   <ul class="bd-breadcrumbs">
     
     <li class="breadcrumb-item breadcrumb-home">
-      <a href="../index.html" class="nav-link" aria-label="Home">
+      <a href="../index.html" class="nav-link" aria-label="初始页面">
         <i class="fa-solid fa-home"></i>
       </a>
     </li>
     
     <li class="breadcrumb-item"><a href="index.html" class="nav-link"><span class="section-number">2. </span>主题</a></li>
     
-    <li class="breadcrumb-item active" aria-current="page"><span...</li>
+    <li class="breadcrumb-item active" aria-current="page"><span class="ellipsis"><span class="section-number">2.1. </span>YAML 语言指南</span></li>
   </ul>
 </nav>
 </div>
@@ -445,67 +458,39 @@ document.write(`
                 <article class="bd-article">
                   
   <section id="yaml-guide">
-<h1><span class="section-number">2.1. </span>YAML Guide<a class="headerlink" href="#yaml-guide" title="Link to this heading">#</a></h1>
+<h1><span class="section-number">2.1. </span>YAML 语言指南<a class="headerlink" href="#yaml-guide" title="Link to this heading">#</a></h1>
 <script src="https://unpkg.com/mermaid@8.0.0/dist/mermaid.min.js"></script>
 <script>mermaid.initialize({startOnLoad:true});</script>
-<p><a class="reference external" href="http://yaml.org/">YAML</a> is a file format
-designed to be readable by both computers and humans.
-This guide introduces the features of YAML that are
-relevant when writing CWL descriptions and input parameter files.</p>
+<p><a class="reference external" href="http://yaml.org/">YAML</a> 是一种让计算机和人都能读懂的文件格式。这部分指南主要针对编写 CWL 描述和输入参数文件，介绍 YAML 的特性。</p>
 <div class="admonition note">
-<p class="admonition-title">备注</p>
-<p>You can skip this section if you are already comfortable with YAML.</p>
+<p class="admonition-title">Note</p>
+<p>如果你已经能够得心应手地运用 YAML, 这一部分可以跳过。</p>
 </div>
 <section id="contents">
-<h2><span class="section-number">2.1.1. </span>Contents<a class="headerlink" href="#contents" title="Link to this heading">#</a></h2>
+<h2><span class="section-number">2.1.1. </span>目录<a class="headerlink" href="#contents" title="Link to this heading">#</a></h2>
 <ul class="simple">
-<li><p><a class="reference external" href="#key-value-pairs">Key-Value Pairs</a></p></li>
-<li><p><a class="reference external" href="#comments">Comments</a></p></li>
-<li><p><a class="reference external" href="#maps">Maps</a></p></li>
-<li><p><a class="reference external" href="#arrays">Arrays</a></p></li>
-<li><p><a class="reference external" href="#json-style">JSON Style</a></p></li>
+<li><p><a class="reference external" href="#key-value-pairs">键值对</a></p></li>
+<li><p><a class="reference external" href="#comments">注释</a></p></li>
+<li><p><a class="reference external" href="#maps">映射</a></p></li>
+<li><p><a class="reference external" href="#arrays">数组</a></p></li>
+<li><p><a class="reference external" href="#json-style">JSON 样式</a></p></li>
 </ul>
 </section>
 <section id="key-value-pairs">
-<h2><span class="section-number">2.1.2. </span>Key-Value Pairs<a class="headerlink" href="#key-value-pairs" title="Link to this heading">#</a></h2>
-<p>Fundamentally, a file written in YAML consists of a set of <em>key-value pairs</em>.
-Each pair is written as <code class="docutils literal notranslate"><span class="pre">key:</span> <span class="pre">value</span></code>,
-where whitespace after the <code class="docutils literal notranslate"><span class="pre">:</span></code> is required.
-Key names in CWL files should not contain whitespace -
-<a class="reference external" href="https://en.wikipedia.org/wiki/Camel_case"><em>camelCase</em></a> is used for multi-word key names
-that have special meaning in the CWL specification
-and underscored key names otherwise.
-For example:</p>
+<h2><span class="section-number">2.1.2. </span>键值对<a class="headerlink" href="#key-value-pairs" title="Link to this heading">#</a></h2>
+<p>根本而言，YAML 格式的文件是一组形如 <code class="docutils literal notranslate"><span class="pre">key:</span> <span class="pre">value</span></code>（即“键: 值”）的_键值对_ (key-value pair). 这里，冒号 <code class="docutils literal notranslate"><span class="pre">:</span></code> 后的空白字符是不可少的。CWL 文件中的键名不得包含空白字符——CWL 规约中有特殊含义的词组键名写为 <a class="reference external" href="https://en.wikipedia.org/wiki/Camel_case"><em>camelCase</em></a>（“驼峰”大小写），无特殊含义者用下划线 (_) 分隔键名中的词。例如：</p>
 <div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">first_name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Bilbo</span>
 <span class="nt">last_name</span><span class="p">:</span><span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">Baggins</span>
 <span class="nt">age_years</span><span class="p">:</span><span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">111</span>
 <span class="nt">home</span><span class="p">:</span><span class="w">       </span><span class="l l-Scalar l-Scalar-Plain">Bag End, Hobbiton</span>
 </pre></div>
 </div>
-<p>The YAML above defines four keys -
-<code class="docutils literal notranslate"><span class="pre">first_name</span></code>, <code class="docutils literal notranslate"><span class="pre">last_name</span></code>, <code class="docutils literal notranslate"><span class="pre">age_years</span></code>, and <code class="docutils literal notranslate"><span class="pre">home</span></code> -
-with their four respective values.
-Values can be
-character strings,
-numeric (integer, floating point, or scientific representation),
-Boolean (<code class="docutils literal notranslate"><span class="pre">true</span></code> or <code class="docutils literal notranslate"><span class="pre">false</span></code>),
-or more complex nested types (see below).</p>
-<p>Values may be wrapped in quotation marks,
-but be aware that this may change the way that they are interpreted
-i.e. <code class="docutils literal notranslate"><span class="pre">&quot;1234&quot;</span></code> will be treated as a character string
-, while <code class="docutils literal notranslate"><span class="pre">1234</span></code> will be treated as an integer.
-This distinction can be important,
-for example when describing parameters to a command:
-in CWL all parts of <code class="docutils literal notranslate"><span class="pre">baseCommand</span></code> must be strings so,
-if you want to specify a fixed numeric value to a command,
-make sure that you wrap that numeric value in quotes: <code class="docutils literal notranslate"><span class="pre">baseCommand:</span> <span class="pre">[echo,</span> <span class="pre">&quot;42&quot;]</span></code>.</p>
+<p>上面这一段 YAML 包含4个键——<code class="docutils literal notranslate"><span class="pre">first_name</span></code>, <code class="docutils literal notranslate"><span class="pre">last_name</span></code>, <code class="docutils literal notranslate"><span class="pre">age_years</span></code>, 以及 <code class="docutils literal notranslate"><span class="pre">home</span></code>——及其对应的值。值可以是字符串，数值（整数，浮点数，或者科学记数法），布尔值（真值 <code class="docutils literal notranslate"><span class="pre">true</span></code> 或非真值 <code class="docutils literal notranslate"><span class="pre">false</span></code>），或者更复杂的嵌套类型（见下）。</p>
+<p>值可以用括号包围起来，但要当心这样做可能改变其理解：<code class="docutils literal notranslate"><span class="pre">&quot;1234&quot;</span></code> 会被当作字符串，而 <code class="docutils literal notranslate"><span class="pre">1234</span></code> 为整数。有的时候，这之间的区别会很重要，例如描述命令的参数时：CWL 语言中，<code class="docutils literal notranslate"><span class="pre">baseCommand</span></code> 的所有部分都必须为字符串；因此，如果你打算给命令传递一个数值常数作为参数值，那就必须将该数值用括号包围起来：<code class="docutils literal notranslate"><span class="pre">baseCommand:</span> <span class="pre">[echo,</span> <span class="pre">&quot;42&quot;]</span></code>.</p>
 </section>
 <section id="comments">
-<h2><span class="section-number">2.1.3. </span>Comments<a class="headerlink" href="#comments" title="Link to this heading">#</a></h2>
-<p>You may use <code class="docutils literal notranslate"><span class="pre">#</span></code> to add comments to your CWL and parameter files.
-Any characters to the right of <code class="docutils literal notranslate"> <span class="pre">#</span></code> will be ignored by the program interpreting
-the YAML.
-For example:</p>
+<h2><span class="section-number">2.1.3. </span>注释<a class="headerlink" href="#comments" title="Link to this heading">#</a></h2>
+<p>在 CWL 和参数文件中，可以用 <code class="docutils literal notranslate"><span class="pre">#</span></code> 符号引入注释。每行中 <code class="docutils literal notranslate"> <span class="pre">#</span></code> 之后的全部字符都会被 YAML 解释程序忽略。例如：</p>
 <div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">first_name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Bilbo</span>
 <span class="nt">last_name</span><span class="p">:</span><span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">Baggins</span>
 <span class="nt">age_years</span><span class="p">:</span><span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">111</span>
@@ -513,21 +498,11 @@ For example:</p>
 <span class="nt">home</span><span class="p">:</span><span class="w">       </span><span class="l l-Scalar l-Scalar-Plain">Bag End, Hobbiton</span><span class="w"> </span><span class="c1"># this is ignored too</span>
 </pre></div>
 </div>
-<p>If there is anything on the line before the comment,
-be sure to add at least one space before the <code class="docutils literal notranslate"><span class="pre">#</span></code>!</p>
+<p>如果在某行里，注释之前有任何内容，记得 <code class="docutils literal notranslate"><span class="pre">#</span></code> 前需要至少一个空白字符！</p>
 </section>
 <section id="maps">
-<h2><span class="section-number">2.1.4. </span>Maps<a class="headerlink" href="#maps" title="Link to this heading">#</a></h2>
-<p>When describing a tool or workflow with CWL,
-it is usually necessary to construct more complex, nested representations.
-Referred to as <em>maps</em>,
-these hierarchical structures are described in YAML by providing
-additional key-value pairs as the value of any key.
-These pairs (sometimes referred to as &quot;children&quot;) are written
-on new lines under the key to which they belong (the &quot;parent&quot;),
-and should be indented with two spaces
-(⇥tab characters are not allowed).
-For example:</p>
+<h2><span class="section-number">2.1.4. </span>映射<a class="headerlink" href="#maps" title="Link to this heading">#</a></h2>
+<p>用 CWL 描述工具或工作流时，通常需要构造更加复杂、多级嵌套的表示。这样的层级结构称为“映射”；用 YAML 表示映射，是用一组键值对作为某个键的值。这样（作为值）的键值对有时称为“子”键值对，写为其所属键（“母”键）下另起的新行，且应该用两个空格字符增加一级缩进（制表符⇥不允许用作此目的）。例如：</p>
 <div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">cwlVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">v1.0</span>
 <span class="nt">class</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">CommandLineTool</span>
 <span class="nt">baseCommand</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">echo</span>
@@ -539,16 +514,7 @@ For example:</p>
 <span class="w">      </span><span class="nt">prefix</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">-f</span>
 </pre></div>
 </div>
-<p>The YAML above illustrates how to build up complex nested object
-descriptions relatively quickly.
-The <code class="docutils literal notranslate"><span class="pre">inputs</span></code> map contains a single key, <code class="docutils literal notranslate"><span class="pre">example_flag</span></code>,
-which itself contains two keys, <code class="docutils literal notranslate"><span class="pre">type</span></code> and <code class="docutils literal notranslate"><span class="pre">inputBinding</span></code>,
-while one of these children, <code class="docutils literal notranslate"><span class="pre">inputBinding</span></code>,
-contains a further two key-value pairs (<code class="docutils literal notranslate"><span class="pre">position</span></code> and <code class="docutils literal notranslate"><span class="pre">prefix</span></code>).
-See the <a class="reference external" href="#arrays">Arrays</a> section below for more information about providing multiple
-values/key-value pairs for a single key.
-For comparison with the example YAML above,
-here is a graphical representation of the <code class="docutils literal notranslate"><span class="pre">inputs</span></code> object it describes.</p>
+<p>上面的 YAML 样本展示了快速构建复杂嵌套对象描述的办法。<code class="docutils literal notranslate"><span class="pre">inputs</span></code> 这个映射包含单独一个键 <code class="docutils literal notranslate"><span class="pre">example_flag</span></code>, 而后者本身又包含两个键 <code class="docutils literal notranslate"><span class="pre">type</span></code> 和 <code class="docutils literal notranslate"><span class="pre">inputBinding</span></code>; 其中，<code class="docutils literal notranslate"><span class="pre">inputBinding</span></code> 这个子键又包含另外两个键值对 (<code class="docutils literal notranslate"><span class="pre">position</span></code> 和 <code class="docutils literal notranslate"><span class="pre">prefix</span></code>). 如果要为某一个键提供多个单值或子键值对值，请参见后面的<a class="reference external" href="#arrays">数组</a>部分。这里，我们用如下图形表示它所描述的 <code class="docutils literal notranslate"><span class="pre">inputs</span></code> 这个对象，以供与上面的 YAML 对照。</p>
 <div class="mermaid">
 graph TD
   inputs --> example_flag
@@ -562,23 +528,15 @@ graph TD
 </div>
 </section>
 <section id="arrays">
-<h2><span class="section-number">2.1.5. </span>Arrays<a class="headerlink" href="#arrays" title="Link to this heading">#</a></h2>
-<p>In certain circumstances, it is necessary to provide
-multiple values or objects for a single key.
-As we've already seen in the <a class="reference external" href="#maps">Maps</a> section above,
-more than one key-value pair can be mapped to a single key.
-However, it is also possible to define multiple values for a key
-without having to provide a unique key for each value.
-We can achieve this with an <em>array</em>,
-where each value is defined on its own line and preceded by <code class="docutils literal notranslate"><span class="pre">-</span></code>.
-For example:</p>
+<h2><span class="section-number">2.1.5. </span>数组<a class="headerlink" href="#arrays" title="Link to this heading">#</a></h2>
+<p>有些情况下，我们需要为某个键提供多个值或对象。如前面的<a class="reference external" href="#maps">映射</a>部分所述，一个键下可以映射多个键值对。不过，我们还可以为某个键指定多个值，同时无需为每个值都添加一个独特的子键。这可以通过“数组”实现；数组中的每个元素值出现在 <code class="docutils literal notranslate"><span class="pre">-</span></code>（短线）符号后的新行上。例如：</p>
 <div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">touchfiles</span><span class="p">:</span>
 <span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">foo.txt</span>
 <span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">bar.dat</span>
 <span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">baz.txt</span>
 </pre></div>
 </div>
-<p>and a more complex example combining maps and arrays:</p>
+<p>以及将映射与数组结合的一个较复杂例子：</p>
 <div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">exclusive_parameters</span><span class="p">:</span>
 <span class="w">  </span><span class="nt">type</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">record</span>
@@ -599,33 +557,21 @@ For example:</p>
 </div>
 </section>
 <section id="json-style">
-<h2><span class="section-number">2.1.6. </span>JSON Style<a class="headerlink" href="#json-style" title="Link to this heading">#</a></h2>
-<p>YAML is based on <a class="reference external" href="http://json.org/">JavaScript Object Notation (JSON)</a>.
-Maps and arrays can also be defined in YAML using the native JSON syntax.
-For example:</p>
+<h2><span class="section-number">2.1.6. </span>JSON 样式<a class="headerlink" href="#json-style" title="Link to this heading">#</a></h2>
+<p>YAML 的基础是 <a class="reference external" href="http://json.org/">JavaScript Object Notation (JSON)</a>. YAML 映射与数组都可以用 JSON 原生的语法表达。例如：</p>
 <div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">touchfiles</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="nv">foo.txt</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">bar.dat</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">baz.txt</span><span class="p p-Indicator">]</span><span class="w"> </span><span class="c1"># equivalent to first Arrays example</span>
 </pre></div>
 </div>
-<p>and:</p>
-<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="c1"># equivalent to the `inputs` example in &quot;Maps&quot; above</span>
+<p>以及：</p>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="c1"># equivalent to the `inputs` example in "Maps" above</span>
 <span class="nt">inputs</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">{</span><span class="nt">example_flag</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">{</span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="nv">boolean</span><span class="p p-Indicator">,</span><span class="nt"> inputBinding</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">{</span><span class="nt">position</span><span class="p">:</span><span class="w"> </span><span class="nv">1</span><span class="p p-Indicator">,</span><span class="nt"> prefix</span><span class="p">:</span><span class="w"> </span><span class="nv">-f</span><span class="p p-Indicator">}}}</span>
 </pre></div>
 </div>
-<p>Native JSON can be useful
-in indicating where a field is intentionally left empty
-(such as <code class="docutils literal notranslate"><span class="pre">[]</span></code> for an empty array),
-as well as where it makes more sense
-for the values to be located on the same line
-(For example, when providing option flags and their values in a shell command).
-However, as the second example above shows,
-it can severely affect the readability of a YAML file,
-and should be used sparingly.</p>
+<p>原生 JSON 可以用于表达某字段值有意为空（如使用 <code class="docutils literal notranslate"><span class="pre">[]</span></code> 代表空数组），以及多个值适合出现在同一行内的情况（如为 shell 命令行提供选项和参数值的时候）。不过，如上第二个例子所示，这种格式可能让 YAML 文件的可读性大打折扣，因此应慎用。</p>
 </section>
 <section id="reference">
-<h2><span class="section-number">2.1.7. </span>Reference<a class="headerlink" href="#reference" title="Link to this heading">#</a></h2>
-<p>The <a class="reference external" href="https://learnxinyminutes.com/docs/yaml/">Learn YAML in Y Minutes</a> reference was very helpful for us
-while we wrote this guide,
-though it also covers features that are not valid in CWL.</p>
+<h2><span class="section-number">2.1.7. </span>参考资料<a class="headerlink" href="#reference" title="Link to this heading">#</a></h2>
+<p><a class="reference external" href="https://learnxinyminutes.com/docs/yaml/">Learn YAML in Y Minutes</a> 作为参考资料在我们写作本《指南》的过程中起到了很大的帮助，不过其中介绍的部分语言特性不适用于 CWL.</p>
 </section>
 </section>
 
@@ -636,23 +582,23 @@ though it also covers features that are not valid in CWL.</p>
               
               
               
-                <footer class="prev-next-footer">
+                <footer class="prev-next-footer d-print-none">
                   
 <div class="prev-next-area">
     <a class="left-prev"
        href="index.html"
-       title="previous page">
+       title="上一页">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
-        <p class="prev-next-subtitle">上一页</p>
+        <p class="prev-next-subtitle">上一条</p>
         <p class="prev-next-title"><span class="section-number">2. </span>主题</p>
       </div>
     </a>
     <a class="right-next"
        href="command-line-tool.html"
-       title="next page">
+       title="下一页">
       <div class="prev-next-info">
-        <p class="prev-next-subtitle">下一页</p>
+        <p class="prev-next-subtitle">下一条</p>
         <p class="prev-next-title"><span class="section-number">2.2. </span>命令行工具</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
@@ -664,24 +610,25 @@ though it also covers features that are not valid in CWL.</p>
             
             
               
-                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
 
 
   <div class="sidebar-secondary-item">
 <div
     id="pst-page-navigation-heading-2"
     class="page-toc tocsection onthispage">
-    <i class="fa-solid fa-list"></i> On this page
+    <i class="fa-solid fa-list"></i> 当前页面
   </div>
-  <nav class="bd-toc-nav page-toc" aria-labelledby="pst-page-navigation-heading-2">
-    <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#contents">2.1.1. Contents</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#key-value-pairs">2.1.2. Key-Value Pairs</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#comments">2.1.3. Comments</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#maps">2.1.4. Maps</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#arrays">2.1.5. Arrays</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#json-style">2.1.6. JSON Style</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#reference">2.1.7. Reference</a></li>
+  <nav id="pst-page-toc-nav" class="page-toc" aria-labelledby="pst-page-navigation-heading-2">
+    <ul class="pst-show_toc_level nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#contents">2.1.1. 目录</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#key-value-pairs">2.1.2. 键值对</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#comments">2.1.3. 注释</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#maps">2.1.4. 映射</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#arrays">2.1.5. 数组</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#json-style">2.1.6. JSON 样式</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#reference">2.1.7. 参考资料</a></li>
 </ul>
   </nav></div>
 
@@ -694,7 +641,7 @@ though it also covers features that are not valid in CWL.</p>
       
       
         
-          Edit on GitHub
+          由 GitHub 编辑
         
       
     </a>
@@ -705,7 +652,7 @@ though it also covers features that are not valid in CWL.</p>
 
   <div class="tocsection sourcelink">
     <a href="../_sources/topics/yaml-guide.md.txt">
-      <i class="fa-solid fa-file-lines"></i> 显示源代码
+      <i class="fa-solid fa-file-lines"></i> 显示源码
     </a>
   </div>
 </div>
@@ -723,8 +670,8 @@ though it also covers features that are not valid in CWL.</p>
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae"></script>
-<script src="../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae"></script>
+  <script defer src="../_static/scripts/bootstrap.js?digest=cb8930eaaf36d9849b67"></script>
+<script defer src="../_static/scripts/pydata-sphinx-theme.js?digest=cb8930eaaf36d9849b67"></script>
 
   <footer class="bd-footer">
 <div class="bd-footer__inner bd-page-width">
@@ -744,7 +691,7 @@ though it also covers features that are not valid in CWL.</p>
         <div class="footer-item">
 
   <p class="sphinx-version">
-    由 <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.3.7创建。
+    使用 <a href="https://www.sphinx-doc.org/">Sphinx</a> 8.2.3创建.
     <br/>
   </p>
 </div>
@@ -777,7 +724,8 @@ though it also covers features that are not valid in CWL.</p>
       
         <div class="footer-item">
 <p class="theme-version">
-  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.15.2.
+  <!-- # L10n: Setting the PST URL as an argument as this does not need to be localized -->
+  使用 <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.21.0构建.
 </p></div>
       
     </div>
