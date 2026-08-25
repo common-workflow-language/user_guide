@@ -2006,7 +2006,6 @@ msgstr ""
 #: ../../src/topics/parameter-references.md:64
 #: 1acb064f7a4a482aa0174bdc847c6382
 #: 0222780b98ac48e89b1b4f57c9df8590
-#, fuzzy
 msgid "`arguments`"
 msgstr "`arguments`"
 
