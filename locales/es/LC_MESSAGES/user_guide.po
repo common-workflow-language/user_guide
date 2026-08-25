@@ -9,8 +9,8 @@ msgstr ""
 "Project-Id-Version: Common Workflow Language User Guide\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-12-16 11:48+0100\n"
-"PO-Revision-Date: 2026-07-21 11:01+0000\n"
-"Last-Translator: Libre <6n0n1m0s@proton.me>\n"
+"PO-Revision-Date: 2026-08-25 14:29+0000\n"
+"Last-Translator: Michael Crusoe <mrc@commonwl.org>\n"
 "Language-Team: Spanish <https://hosted.weblate.org/projects/commonwl/user-"
 "guide/es/>\n"
 "Language: es\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 2026.8.dev0\n"
+"X-Generator: Weblate 2026.9.dev0\n"
 "Generated-By: Babel 2.12.1\n"
 
 #: ../../LICENSE.md:2 a48279b2231348eea3f7a3b74a6362ac
@@ -340,7 +340,7 @@ msgstr ""
 
 #: ../../src/faq.md:194 a00d5d96b15048a79ae099d22d63bb42
 msgid "merge_nested"
-msgstr "fusión_anidada"
+msgstr "merge_nested"
 
 #: ../../src/faq.md:196 3a92c6cc5c2b40ffa0d692d03bad5c87
 msgid ""
@@ -1013,7 +1013,7 @@ msgstr ""
 #: ../../src/introduction/basic-concepts.md:185
 #: 84c61946406347c8b138772909110d54
 msgid "PROV-O: The PROV Ontology - <https://www.w3.org/TR/prov-o/>"
-msgstr "PROV-O: La Ontología PROV - <https://www.w3.org/TR/prov-o/>"
+msgstr "PROV-O: Ontología PROV - <https://www.w3.org/TR/prov-o/>"
 
 #: ../../src/introduction/basic-concepts.md:186
 #: eb0b6a62e06143eabc7b92acff9643ea
@@ -2471,8 +2471,9 @@ msgstr ""
 #: ../../src/topics/expressions.md:67
 #: ../../src/topics/parameter-references.md:64 7ab0dbd54c1441539673fa12ef96b89e
 #: e76c6ece0c594fefa86b190879c5acaa
+#, fuzzy
 msgid "`arguments`"
-msgstr "`argumentos`"
+msgstr "`arguments`"
 
 #: ../../src/topics/expressions.md:68 ../../src/topics/expressions.md:76
 #: ../../src/topics/expressions.md:89
@@ -2618,7 +2619,7 @@ msgstr ""
 #: ../../src/topics/parameter-references.md:88 595b9ddcee734d6595c1b4b2d169dcb8
 #: 80b55c77a4384644acfc9472c3cedee0
 msgid "`expression`"
-msgstr "`expresión`"
+msgstr "`expression`"
 
 #: ../../src/topics/expressions.md:92 fd504478a6c641e0a72321fa80ad1c9c
 msgid ""
@@ -2709,7 +2710,7 @@ msgstr "en [Dirent](https://www.commonwl.org/v1.0/CommandLineTool.html#Dirent)"
 #: ../../src/topics/parameter-references.md:104
 #: 29c2424fc7dc43e68c9bfee179167bb3 30f25141bcce4670882e4a5bbe4fc3e2
 msgid "`entry`"
-msgstr "`apunte`"
+msgstr "`entry`"
 
 #: ../../src/topics/expressions.md:108
 #: ../../src/topics/parameter-references.md:105
@@ -2935,7 +2936,7 @@ msgstr ""
 
 #: ../../src/topics/file-formats.md:20 c5f6f6e4c23e4bf19dee69acb8ebed8e
 msgid "`metadata_example.cwl`"
-msgstr "`metadatos_ejemplo.cwl`"
+msgstr "`metadata_example.cwl`"
 
 #: ../../src/topics/file-formats.md:26
 #: ../../src/topics/metadata-and-authorship.md:22
@@ -2962,7 +2963,7 @@ msgstr ""
 
 #: ../../src/topics/file-formats.md:39 bb69d6963c174191bf527335c3f665b7
 msgid "`sample.yml`"
-msgstr "`muestra.yml`"
+msgstr "`sample.yml`"
 
 #: ../../src/topics/file-formats.md:45 ddb4f6f81c7d462b974e98c88dd3f558
 msgid ""
@@ -2996,7 +2997,7 @@ msgid ""
 "run the tool.  Each parameter has an `id` for the name of parameter, and "
 "`type` describing what types of values are valid for that parameter."
 msgstr ""
-"Las `entradas` de una herramienta son una lista de parámetros de entrada que "
+"Las `inputs` de una herramienta son una lista de parámetros de entrada que "
 "controlan cómo se ejecuta la herramienta.  Cada parámetro tiene un `id` para "
 "el nombre del parámetro, y `type` que describe qué tipos de valores son "
 "válidos para ese parámetro."
@@ -3461,7 +3462,7 @@ msgstr ""
 #: ../../src/topics/metadata-and-authorship.md:16
 #: c80f2b180ca74afb8a1fc18f8686304b
 msgid "`metadata_example2.cwl`"
-msgstr "`metadatos_ejemplo2.cwl`"
+msgstr "`metadata_example2.cwl`"
 
 #: ../../src/topics/metadata-and-authorship.md:28
 #: 37b07ea9b7124842b8ba3040f70308e9
@@ -3486,7 +3487,7 @@ msgstr ""
 #: ../../src/topics/metadata-and-authorship.md:35
 #: ae7369ba14404d23b72d1ef30dcd4153
 msgid "`metadata_example3.cwl`"
-msgstr "`metadatos_ejemplo3.cwl`"
+msgstr "`metadata_example3.cwl`"
 
 #: ../../src/topics/operations.md:1 a79974b2f4534fcd8c7a04401e8a5556
 msgid "Operations"
@@ -3515,7 +3516,7 @@ msgstr ""
 
 #: ../../src/topics/operations.md:10 e9b2b97f3059460b867577a49934a338
 msgid "`operations.cwl`"
-msgstr "`operaciones.cwl`"
+msgstr "`operations.cwl`"
 
 #: ../../src/topics/operations.md:16 d21e9444182d4e27bae934db4573ae99
 msgid ""
@@ -4370,7 +4371,7 @@ msgstr ""
 
 #: ../../src/topics/workflows.md:170 c61097c695424f7195e8205a23b6ecff
 msgid "`1st-workflow.cwl`"
-msgstr "`1er-flujo-de-trabajo.cwl`"
+msgstr "`1st-workflow.cwl`"
 
 #: ../../src/topics/workflows.md:179 ../../src/topics/workflows.md:180
 #: 6660c48f51d94d4fbcc05656e154059e bd2bab6c11614fa983ca8dab1408e1d8

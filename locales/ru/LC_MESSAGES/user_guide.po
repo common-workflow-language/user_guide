@@ -8,17 +8,17 @@ msgstr ""
 "Project-Id-Version: Common Workflow Language User Guide\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-01-25 14:33+0100\n"
-"PO-Revision-Date: 2025-08-12 10:22+0000\n"
+"PO-Revision-Date: 2026-08-25 14:30+0000\n"
 "Last-Translator: Michael Crusoe <mrc@commonwl.org>\n"
-"Language-Team: Russian <https://hosted.weblate.org/projects/commonwl/"
-"user-guide/ru/>\n"
+"Language-Team: Russian <https://hosted.weblate.org/projects/commonwl/user-"
+"guide/ru/>\n"
 "Language: ru\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
 "n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
-"X-Generator: Weblate 5.13-dev\n"
+"X-Generator: Weblate 2026.9.dev0\n"
 
 #: ../../LICENSE.md:2
 #: 4e203044f0464fd5a3256430391dde12
@@ -299,7 +299,6 @@ msgstr ""
 
 #: ../../src/faq.md:194
 #: 941077158ec54ae19bfa2e2ad6662da1
-#, fuzzy
 msgid "merge_nested"
 msgstr "merge_nested"
 
@@ -342,7 +341,6 @@ msgstr ""
 
 #: ../../src/faq.md:247
 #: a854006054ce4ffe94bbfa73bdbecbf2
-#, fuzzy
 msgid "<a name=\"enuminputs\"></a>"
 msgstr "<a name=\"enuminputs\"></a>"
 
@@ -362,7 +360,6 @@ msgstr ""
 
 #: ../../src/faq.md:267
 #: ad1c26711ccd4efd8fdb25f9293d33fd
-#, fuzzy
 msgid "<a name=\"recordinputs\"></a>"
 msgstr "<a name=\"recordinputs\"></a>"
 
@@ -986,7 +983,6 @@ msgstr ""
 
 #: ../../src/introduction/prerequisites.md:67
 #: 040c019b6e844eda8c8c2b210852516b
-#, fuzzy
 msgid "`true.cwl`"
 msgstr "`true.cwl`"
 
@@ -1075,7 +1071,6 @@ msgstr ""
 
 #: ../../src/introduction/prerequisites.md:129
 #: f74dd9bd4ff84bf48f3f8e8c8d6fb51a
-#, fuzzy
 msgid "`true_shebang.cwl`"
 msgstr "`true_shebang.cwl`"
 
@@ -1230,7 +1225,6 @@ msgstr ""
 
 #: ../../src/introduction/quick-start.md:16
 #: 9e51962a7e5c47248f3e20703ae101eb
-#, fuzzy
 msgid "`hello_world.cwl`"
 msgstr "`hello_world.cwl`"
 
@@ -1321,7 +1315,6 @@ msgstr ""
 
 #: ../../src/introduction/quick-start.md:74
 #: 1a44a545434b448aa956005deeed90a8
-#, fuzzy
 msgid "`hello_world-job.json`"
 msgstr "`hello_world-job.json`"
 
@@ -1424,7 +1417,6 @@ msgstr ""
 
 #: ../../src/topics/additional-arguments-and-parameters.md:13
 #: a74935dc31664e979ca8f90a6a4ba53c
-#, fuzzy
 msgid "`arguments.cwl`"
 msgstr "`arguments.cwl`"
 
@@ -1432,7 +1424,6 @@ msgstr "`arguments.cwl`"
 #: ../../src/topics/staging-input-files.md:15
 #: 0a8065edd8af4eaea08989a1060ce48f
 #: f357755f6dcb4971bade8636064f8dd1
-#, fuzzy
 msgid "`arguments-job.yml`"
 msgstr "`arguments-job.yml`"
 
@@ -1702,7 +1693,6 @@ msgstr "Инструмент командной строки CWL."
 
 #: ../../src/topics/command-line-tool.md:50
 #: 3b1a9ae3412f4d6e96a39b9a16934232
-#, fuzzy
 msgid "`echo.cwl`"
 msgstr "`echo.cwl`"
 
@@ -1756,7 +1746,6 @@ msgstr ""
 
 #: ../../src/topics/creating-files-at-runtime.md:9
 #: d3f74c3b094a427fbec831afab657d50
-#, fuzzy
 msgid "`createfile.cwl`"
 msgstr "`createfile.cwl`"
 
@@ -1791,7 +1780,6 @@ msgstr ""
 #: 2d2ef4769b2347e79db827655f1bcdeb
 #: 2699fbc4376148af91b7a5a6cdac467c
 #: ca03defa3ad14cf698171cb09e3055c1
-#, fuzzy
 msgid "`echo-job.yml`"
 msgstr "`echo-job.yml`"
 
@@ -1863,13 +1851,11 @@ msgstr ""
 
 #: ../../src/topics/custom-types.md:12
 #: ef5f35acb97f4ddfad7b688712f53484
-#, fuzzy
 msgid "`custom-types.cwl`"
 msgstr "`custom-types.cwl`"
 
 #: ../../src/topics/custom-types.md:18
 #: 7015dfa99a6f4cfb87ebf0ed61e8043c
-#, fuzzy
 msgid "`custom-types.yml`"
 msgstr "`custom-types.yml`"
 
@@ -1911,7 +1897,6 @@ msgstr ""
 
 #: ../../src/topics/custom-types.md:55
 #: fecfbb44456640d8ba05e519bf2ff564
-#, fuzzy
 msgid "`biom-convert-table.yaml`"
 msgstr "`biom-convert-table.yaml`"
 
@@ -1949,7 +1934,6 @@ msgstr ""
 
 #: ../../src/topics/environment-variables.md:7
 #: bfdebb32440a4034beb42135e38884e8
-#, fuzzy
 msgid "`env.cwl`"
 msgstr "`env.cwl`"
 
@@ -1982,7 +1966,6 @@ msgstr "Средство выражения CWL."
 
 #: ../../src/topics/expression-tool.md:48
 #: 39727e9058f24b62b8746a46d3f812c2
-#, fuzzy
 msgid "`uppercase.cwl`"
 msgstr "`uppercase.cwl`"
 
@@ -2021,7 +2004,6 @@ msgstr ""
 
 #: ../../src/topics/expressions.md:16
 #: 7fdbfd1c937b4991bf4a2fa26ea310e4
-#, fuzzy
 msgid "`expression.cwl`"
 msgstr "`expression.cwl`"
 
@@ -2034,7 +2016,6 @@ msgstr ""
 
 #: ../../src/topics/expressions.md:25
 #: e833649b951841c49397796f996d29f3
-#, fuzzy
 msgid "`empty.yml`"
 msgstr "`empty.yml`"
 
@@ -2096,7 +2077,7 @@ msgstr ""
 #: 1acb064f7a4a482aa0174bdc847c6382
 #: 0222780b98ac48e89b1b4f57c9df8590
 msgid "`arguments`"
-msgstr "`аргументы`"
+msgstr "`arguments`"
 
 #: ../../src/topics/expressions.md:68
 #: ../../src/topics/expressions.md:76
@@ -2110,7 +2091,6 @@ msgstr "`аргументы`"
 #: ffd3ca1f97cf4d3a892ef4f4b04771e4
 #: e4e68011dc5f42e4918c747afa7d764b
 #: d44e3cfa661840eb851782e24caf1b68
-#, fuzzy
 msgid "`valueFrom`"
 msgstr "`valueFrom`"
 
@@ -2118,7 +2098,6 @@ msgstr "`valueFrom`"
 #: ../../src/topics/parameter-references.md:66
 #: 0bddedfe40e841f7878e09792531e6bf
 #: 17ac6d2c703b466f9720b7489209a2ff
-#, fuzzy
 msgid "`stdin`"
 msgstr "`stdin`"
 
@@ -2126,7 +2105,6 @@ msgstr "`stdin`"
 #: ../../src/topics/parameter-references.md:67
 #: 58a6510ef69a4c51a4ea348cd98ef0d2
 #: a11d0de5ac6a4a6d9afe0e34823e3b45
-#, fuzzy
 msgid "`stdout`"
 msgstr "`stdout`"
 
@@ -2134,7 +2112,6 @@ msgstr "`stdout`"
 #: ../../src/topics/parameter-references.md:68
 #: 2437656e20354d63bede1b98d5348e2c
 #: 37392218309d4baebe62fc38bf50efe9
-#, fuzzy
 msgid "`stderr`"
 msgstr "`stderr`"
 
@@ -2162,7 +2139,7 @@ msgstr ""
 #: bd61499b71e64164878dea08d6d7141e
 #: ed875a006df64f9e8a55fa5e9fa87404
 msgid "`format`"
-msgstr "`формат`"
+msgstr "`format`"
 
 #: ../../src/topics/expressions.md:74
 #: ../../src/topics/expressions.md:79
@@ -2180,7 +2157,6 @@ msgstr "`формат`"
 #: da5188d3bedc4997a35bdf417f2f643c
 #: cd7a0190511d4613b09600a3b1e9d55f
 #: 47def3b078e2402182039be0227090ae
-#, fuzzy
 msgid "`secondaryFiles`"
 msgstr "`secondaryFiles`"
 
@@ -2209,7 +2185,6 @@ msgstr ""
 #: ../../src/topics/parameter-references.md:78
 #: 582b03ac742745a89f4dfc86b7404db2
 #: d193ce0123db4535a4f0b11405ad0322
-#, fuzzy
 msgid "`glob`"
 msgstr "`glob`"
 
@@ -2217,7 +2192,6 @@ msgstr "`glob`"
 #: ../../src/topics/parameter-references.md:79
 #: d555a3d991e344a5a8e1289168d7c6d1
 #: 44b3f123c9b04a308c1161b742a7b34b
-#, fuzzy
 msgid "`outputEval`"
 msgstr "`outputEval`"
 
@@ -2264,7 +2238,7 @@ msgstr ""
 #: c2a92d3eca7f4ee39cec649170eeea53
 #: 3c939769ede94602a67fc50c435741cf
 msgid "`expression`"
-msgstr "`выражение`"
+msgstr "`expression`"
 
 #: ../../src/topics/expressions.md:92
 #: f495da32f05a4a5ba9539be0a54c1a59
@@ -2285,7 +2259,6 @@ msgstr ""
 #: ../../src/topics/parameter-references.md:93
 #: 4b73495cf18a4d908525292b6f23c419
 #: d0eec6969d174b258e0f010800884cc6
-#, fuzzy
 msgid "`coresMin`"
 msgstr "`coresMin`"
 
@@ -2293,7 +2266,6 @@ msgstr "`coresMin`"
 #: ../../src/topics/parameter-references.md:94
 #: 718ceee9973240ec9c100977bbcc8921
 #: 2b25152f6df5494a8632f3ce631c20d8
-#, fuzzy
 msgid "`coresMax`"
 msgstr "`coresMax`"
 
@@ -2301,7 +2273,6 @@ msgstr "`coresMax`"
 #: ../../src/topics/parameter-references.md:95
 #: c07ab08eb75d4528949c56a3d7c12b28
 #: 846cd427ae25410eae7c920b237edcb0
-#, fuzzy
 msgid "`ramMin`"
 msgstr "`ramMin`"
 
@@ -2309,7 +2280,6 @@ msgstr "`ramMin`"
 #: ../../src/topics/parameter-references.md:96
 #: 594bc5b7e5be4be9b5e1f6b2502e3bd3
 #: b885e108dced4981a445e5fa0a044394
-#, fuzzy
 msgid "`ramMax`"
 msgstr "`ramMax`"
 
@@ -2317,7 +2287,6 @@ msgstr "`ramMax`"
 #: ../../src/topics/parameter-references.md:97
 #: 700c57ccd5e347be86702c83a8af24b3
 #: e9f5306ae6ea49bbb6801dcce9be2d67
-#, fuzzy
 msgid "`tmpdirMin`"
 msgstr "`tmpdirMin`"
 
@@ -2325,7 +2294,6 @@ msgstr "`tmpdirMin`"
 #: ../../src/topics/parameter-references.md:98
 #: 509a5e2ec52d413eb57754d359f133e4
 #: 58bf8016f5f04c26b645025f405e2288
-#, fuzzy
 msgid "`tmpdirMax`"
 msgstr "`tmpdirMax`"
 
@@ -2333,7 +2301,6 @@ msgstr "`tmpdirMax`"
 #: ../../src/topics/parameter-references.md:99
 #: 5a60ab5ee19446f8a6f49ab8583101a9
 #: 7c817029d55b4700ae8e84be4d0f0ca0
-#, fuzzy
 msgid "`outdirMin`"
 msgstr "`outdirMin`"
 
@@ -2341,7 +2308,6 @@ msgstr "`outdirMin`"
 #: ../../src/topics/parameter-references.md:100
 #: 1f39f016524a459895ed03c72d74932b
 #: e3b76f42c924489f9a0bcf5a7b636d23
-#, fuzzy
 msgid "`outdirMax`"
 msgstr "`outdirMax`"
 
@@ -2357,7 +2323,7 @@ msgstr ""
 #: 9359ef94c41249ea8e76fe629926054e
 #: a258554d462f4f5f83ece28d5b2fc584
 msgid "`listing`"
-msgstr "`список`"
+msgstr "`listing`"
 
 #: ../../src/topics/expressions.md:106
 #: 8d0b142bb7ed4e61b8fb03de197240ce
@@ -2369,13 +2335,12 @@ msgstr "в [Dirent](https://www.commonwl.org/v1.0/CommandLineTool.html#Dirent)"
 #: effc0208cf4f4551958db6e526c0528b
 #: 9d4889c8cec24351a7a9e3c547e331b6
 msgid "`entry`"
-msgstr "`вход`"
+msgstr "`entry`"
 
 #: ../../src/topics/expressions.md:108
 #: ../../src/topics/parameter-references.md:105
 #: be6c1e85c7b6495d8086c262daad20e7
 #: af4f7f232a9d42388c0ba1cfc7c2cdf7
-#, fuzzy
 msgid "`entryname`"
 msgstr "`entryname`"
 
@@ -2397,7 +2362,6 @@ msgstr ""
 #: ../../src/topics/parameter-references.md:108
 #: 107b54b832df4d408d1315bdba05b4dd
 #: 949c376120d8441796ec9c89364f8851
-#, fuzzy
 msgid "`envValue`"
 msgstr "`envValue`"
 
@@ -2445,7 +2409,6 @@ msgstr ""
 
 #: ../../src/topics/expressions.md:139
 #: 49d0fda2fc144e0b8b7c92afc1d8945e
-#, fuzzy
 msgid "`hello-world-expressionlib-inline.cwl`"
 msgstr "`hello-world-expressionlib-inline.cwl`"
 
@@ -2470,13 +2433,11 @@ msgstr ""
 
 #: ../../src/topics/expressions.md:158
 #: ed590f9e6f4f425da886b110295c45db
-#, fuzzy
 msgid "`custom-functions.js`"
 msgstr "`custom-functions.js`"
 
 #: ../../src/topics/expressions.md:164
 #: 093235307d6f47d4858e559b780ef5e5
-#, fuzzy
 msgid "`hello-world-expressionlib-external.cwl`"
 msgstr "`hello-world-expressionlib-external.cwl`"
 
@@ -2505,7 +2466,6 @@ msgstr ""
 
 #: ../../src/topics/expressions.md:186
 #: c4098489fbb049789f022cd3e5c3d49b
-#, fuzzy
 msgid "`hello-world-expressionlib.cwl`"
 msgstr "`hello-world-expressionlib.cwl`"
 
@@ -2566,7 +2526,6 @@ msgstr ""
 
 #: ../../src/topics/file-formats.md:20
 #: 0535d5de416b4ea3b2f5996583deecc1
-#, fuzzy
 msgid "`metadata_example.cwl`"
 msgstr "`metadata_example.cwl`"
 
@@ -2593,7 +2552,6 @@ msgstr ""
 
 #: ../../src/topics/file-formats.md:39
 #: aebee48b742c4145a600fd2daf8c75dc
-#, fuzzy
 msgid "`sample.yml`"
 msgstr "`sample.yml`"
 
@@ -2626,7 +2584,7 @@ msgstr "Основные входные параметры"
 #: 96671c56523c4ea9992fb5dfcfa6490e
 msgid "The `inputs` of a tool is a list of input parameters that control how to run the tool.  Each parameter has an `id` for the name of parameter, and `type` describing what types of values are valid for that parameter."
 msgstr ""
-"В `входах` инструмента содержится список входных параметров, которые "
+"В `inputs` инструмента содержится список входных параметров, которые "
 "определяют, как запустить инструмент.  Каждый параметр имеет `id` для "
 "названия параметра и `type`, описывающий, какие типы значений допустимы для "
 "этого параметра."
@@ -2653,7 +2611,6 @@ msgstr "Сначала создайте файл `inp.cwl`, содержащий
 
 #: ../../src/topics/inputs.md:18
 #: 8bdb875b63104f699efe28ea0abb1e3d
-#, fuzzy
 msgid "`inp.cwl`"
 msgstr "`inp.cwl`"
 
@@ -2664,7 +2621,6 @@ msgstr "Создайте файл с именем `inp-job.yml`:"
 
 #: ../../src/topics/inputs.md:26
 #: dc5e6b5e01d64226bd5dbbf3175fe010
-#, fuzzy
 msgid "`inp-job.yml`"
 msgstr "`inp-job.yml`"
 
@@ -2806,13 +2762,11 @@ msgstr ""
 
 #: ../../src/topics/inputs.md:154
 #: 01f30e38dfdd452dba3a996073936e16
-#, fuzzy
 msgid "`array-inputs.cwl`"
 msgstr "`array-inputs.cwl`"
 
 #: ../../src/topics/inputs.md:160
 #: 787d4bfb093c4ad287b902084706b751
-#, fuzzy
 msgid "`array-inputs-job.yml`"
 msgstr "`array-inputs-job.yml`"
 
@@ -2867,13 +2821,11 @@ msgstr ""
 
 #: ../../src/topics/inputs.md:198
 #: ddf598abf4f34aca9fffa045860fbf96
-#, fuzzy
 msgid "`record.cwl`"
 msgstr "`record.cwl`"
 
 #: ../../src/topics/inputs.md:204
 #: d52a8089920e45bd89d582533b50e3a1
-#, fuzzy
 msgid "`record-job1.yml`"
 msgstr "`record-job1.yml`"
 
@@ -2886,7 +2838,6 @@ msgstr ""
 
 #: ../../src/topics/inputs.md:217
 #: 9a5cf1d76fc84c1f9b0d123a3a2a480b
-#, fuzzy
 msgid "`record-job2.yml`"
 msgstr "`record-job2.yml`"
 
@@ -2900,7 +2851,6 @@ msgstr ""
 
 #: ../../src/topics/inputs.md:236
 #: bc21ee10bff843689cc98ac6630edcea
-#, fuzzy
 msgid "`record-job3.yml`"
 msgstr "`record-job3.yml`"
 
@@ -2936,7 +2886,6 @@ msgstr ""
 
 #: ../../src/topics/inputs.md:265
 #: 4a31c733092142b1af834eab1747c224
-#, fuzzy
 msgid "`exclusive-parameter-expressions.cwl`"
 msgstr "`exclusive-parameter-expressions.cwl`"
 
@@ -2998,7 +2947,6 @@ msgstr ""
 
 #: ../../src/topics/metadata-and-authorship.md:16
 #: 0d5200bbbfdc43e6a78b4e4c3096ebd7
-#, fuzzy
 msgid "`metadata_example2.cwl`"
 msgstr "`metadata_example2.cwl`"
 
@@ -3019,7 +2967,6 @@ msgstr ""
 
 #: ../../src/topics/metadata-and-authorship.md:35
 #: 2dfbd4d580044ed083992f3ceb1bc64e
-#, fuzzy
 msgid "`metadata_example3.cwl`"
 msgstr "`metadata_example3.cwl`"
 
@@ -3047,7 +2994,6 @@ msgstr ""
 
 #: ../../src/topics/operations.md:10
 #: 49cf614893d8438299b3bca384eb40cf
-#, fuzzy
 msgid "`operations.cwl`"
 msgstr "`operations.cwl`"
 
@@ -3141,13 +3087,11 @@ msgstr ""
 
 #: ../../src/topics/outputs.md:26
 #: f1ee2e00b0cc4112b51c9df3a919b73f
-#, fuzzy
 msgid "`tar.cwl`"
 msgstr "`tar.cwl`"
 
 #: ../../src/topics/outputs.md:32
 #: ad8e1acb251246d2a47c39b20d4e483a
-#, fuzzy
 msgid "`tar-job.yml`"
 msgstr "`tar-job.yml`"
 
@@ -3193,7 +3137,6 @@ msgstr ""
 
 #: ../../src/topics/outputs.md:71
 #: 9d86c03ab44841c785b924cc44727e31
-#, fuzzy
 msgid "`stdout.cwl`"
 msgstr "`stdout.cwl`"
 
@@ -3211,13 +3154,11 @@ msgstr ""
 
 #: ../../src/topics/outputs.md:93
 #: b9eaf21f5e014eefaae301c47dafd144
-#, fuzzy
 msgid "`array-outputs.cwl`"
 msgstr "`array-outputs.cwl`"
 
 #: ../../src/topics/outputs.md:99
 #: cffff6c43b4945daa3b2a49763bc50ae
-#, fuzzy
 msgid "`array-outputs-job.yml`"
 msgstr "`array-outputs-job.yml`"
 
@@ -3252,13 +3193,11 @@ msgstr ""
 
 #: ../../src/topics/parameter-references.md:13
 #: 280f1a07d0ae41d7a4674504f832fcf0
-#, fuzzy
 msgid "`tar-param.cwl`"
 msgstr "`tar-param.cwl`"
 
 #: ../../src/topics/parameter-references.md:19
 #: 5c64d938862747cb9fb52515a656ce27
-#, fuzzy
 msgid "`tar-param-job.yml`"
 msgstr "`tar-param-job.yml`"
 
@@ -3468,7 +3407,6 @@ msgstr ""
 
 #: ../../src/topics/staging-input-files.md:9
 #: c8159d0cb2ab452a9ce8e8d2adbaaa94
-#, fuzzy
 msgid "`linkfile.cwl`"
 msgstr "`linkfile.cwl`"
 
@@ -3512,7 +3450,6 @@ msgstr ""
 
 #: ../../src/topics/troubleshooting.md:20
 #: 0490b1fab86749e49b473949c52bbe8b
-#, fuzzy
 msgid "`troubleshooting-wf1.cwl`"
 msgstr "`troubleshooting-wf1.cwl`"
 
@@ -3605,13 +3542,11 @@ msgstr ""
 
 #: ../../src/topics/using-containers.md:21
 #: 7921a837ee744c5aa9a5bda04b0c8db1
-#, fuzzy
 msgid "`docker.cwl`"
 msgstr "`docker.cwl`"
 
 #: ../../src/topics/using-containers.md:27
 #: 387e9bc9381a4450af54aff77e4df6a2
-#, fuzzy
 msgid "`docker-job.yml`"
 msgstr "`docker-job.yml`"
 
@@ -3647,7 +3582,6 @@ msgstr ""
 
 #: ../../src/topics/using-containers.md:55
 #: 1a5596243cec4c948d9b6bf0bb12fad0
-#, fuzzy
 msgid "`hello.js`"
 msgstr "`hello.js`"
 
@@ -3695,7 +3629,6 @@ msgstr ""
 
 #: ../../src/topics/workflows.md:51
 #: a913c76d06164fa18718a8a6a7dcf0d6
-#, fuzzy
 msgid "`echo-uppercase.cwl`"
 msgstr "`echo-uppercase.cwl`"
 
@@ -3710,7 +3643,6 @@ msgstr ""
 
 #: ../../src/topics/workflows.md:91
 #: 36618126a4df4326b236ebe2ea42cffa
-#, fuzzy
 msgid "`echo-uppercase-single-file.cwl`"
 msgstr "`echo-uppercase-single-file.cwl`"
 
@@ -3746,7 +3678,6 @@ msgstr ""
 
 #: ../../src/topics/workflows.md:170
 #: 55ab007d472f43388e4c77aae8f165e7
-#, fuzzy
 msgid "`1st-workflow.cwl`"
 msgstr "`1st-workflow.cwl`"
 
@@ -3780,7 +3711,6 @@ msgstr ""
 
 #: ../../src/topics/workflows.md:185
 #: 26c51dcb76364ed780376aecb7cbacda
-#, fuzzy
 msgid "`1st-workflow-job.yml`"
 msgstr "`1st-workflow-job.yml`"
 
@@ -3896,7 +3826,6 @@ msgstr ""
 
 #: ../../src/topics/workflows.md:300
 #: 49ed137fe996452a8534c68d100db941
-#, fuzzy
 msgid "`nestedworkflows.cwl`"
 msgstr "`nestedworkflows.cwl`"
 
@@ -4035,7 +3964,6 @@ msgstr ""
 
 #: ../../src/topics/workflows.md:415
 #: 1e1f4d85fc5f49b5aac5c5b00f77d6fd
-#, fuzzy
 msgid "`scatter-workflow.cwl`"
 msgstr "`scatter-workflow.cwl`"
 
@@ -4079,7 +4007,6 @@ msgstr "Используя следующий входной файл:"
 
 #: ../../src/topics/workflows.md:452
 #: 842b926ae34542cb9023021f137b08be
-#, fuzzy
 msgid "`scatter-job.yml`"
 msgstr "`scatter-job.yml`"
 
@@ -4108,7 +4035,6 @@ msgstr ""
 
 #: ../../src/topics/workflows.md:472
 #: 242993d42b164ee5abe7ca10d45856de
-#, fuzzy
 msgid "`hello_world_to_stdout.cwl`"
 msgstr "`hello_world_to_stdout.cwl`"
 
@@ -4121,7 +4047,6 @@ msgstr ""
 
 #: ../../src/topics/workflows.md:483
 #: e61d93b848184c8e8e573928427b4d0a
-#, fuzzy
 msgid "`wc-tool.cwl`"
 msgstr "`wc-tool.cwl`"
 
@@ -4134,7 +4059,6 @@ msgstr ""
 
 #: ../../src/topics/workflows.md:491
 #: 99fa96caacaa45cb97aded9a24fcac6d
-#, fuzzy
 msgid "`scatter-two-steps.cwl`"
 msgstr "`scatter-two-steps.cwl`"
 
@@ -4168,7 +4092,6 @@ msgstr ""
 
 #: ../../src/topics/workflows.md:513
 #: 1c9e386922324ec8a59306572c19fb8b
-#, fuzzy
 msgid "`scatter-nested-workflow.cwl`"
 msgstr "`scatter-nested-workflow.cwl`"
 
@@ -4195,7 +4118,6 @@ msgstr ""
 
 #: ../../src/topics/workflows.md:527
 #: 20b9f181420c401d8615c17a10027517
-#, fuzzy
 msgid "`conditional-workflow.cwl`"
 msgstr "`conditional-workflow.cwl`"
 
