@@ -4,7 +4,7 @@ class: CommandLineTool
 inputs:
   filesA:
     type: string[]
-    inputBinding:
+    arguments:
       prefix: -A
       position: 1
 
@@ -12,15 +12,15 @@ inputs:
     type:
       type: array
       items: string
-      inputBinding:
+      arguments:
         prefix: -B=
         separate: false
-    inputBinding:
+    arguments:
       position: 2
 
   filesC:
     type: string[]
-    inputBinding:
+    arguments:
       prefix: -C=
       itemSeparator: ","
       separate: false

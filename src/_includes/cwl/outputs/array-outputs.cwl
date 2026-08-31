@@ -7,7 +7,7 @@ inputs:
     type:
       type: array
       items: string
-    inputBinding:
+    arguments:
       position: 1
 outputs:
   output:
