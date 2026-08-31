@@ -1,6 +1,6 @@
 Thank you to the following contributors (in alphabetical order by user name):
-* Alain Domissy (@alaindomissy)
-* Andrew Jesaitis (@andrewjesaitis)
+* Alain Domissy (@alaindomissy) <https://yeolab.github.io/alain-domissy/>
+* Andrew Jesaitis (@andrewjesaitis) <https://andrewjesaitis.com/>
 * Bamiwo Aluko (@bamiwoaluko)
 * Benjamin Carr (@BenjaminHCCarr) <https://orcid.org/0000-0002-6206-4638>
 * Michele Mastropietro (@elehcim) <https://orcid.org/0000-0002-6324-5713>
@@ -22,7 +22,7 @@ Thank you to the following contributors (in alphabetical order by user name):
 * @medcelerate
 * Michael Crusoe (@mr-c) <http://orcid.org/0000-0002-2961-9670>
 * Ruth B. McCole  (@rmccole) <https://orcid.org/0000-0002-1861-7055>
-* @sersorrel
+* Ash Holland @sersorrel
 * Adrian Sharma (@sharmatime)
 * Steffen Möller (@smoe) https://orcid.org/0000-0002-7187-4683
 * Oghenemaro Akpobi (@Smyja)
@@ -39,5 +39,5 @@ Thank you to the following contributors (in alphabetical order by user name):
 Thanks to:
 * [Common Workflow Language community](https://www.commonwl.org/community/)
   and the members of the CWL forums and chat rooms.
-* [ELIXIR](https://elixir-europe.org/), and ELIXIR Netherlands
+* [ELIXIR](https://elixir-europe.org/), and [ELIXIR Netherlands](https://elixir-europe.org/about-us/who-we-are/nodes/netherlands)
 * CZI Essential Open Source Software for Science (EOSS)
