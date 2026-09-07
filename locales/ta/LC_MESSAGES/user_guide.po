@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: Common Workflow Language User Guide\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-01-25 14:33+0100\n"
-"PO-Revision-Date: 2026-08-25 14:30+0000\n"
-"Last-Translator: Michael Crusoe <mrc@commonwl.org>\n"
+"PO-Revision-Date: 2026-09-07 18:51+0000\n"
+"Last-Translator: தமிழ்நேரம் <tamilneram247@gmail.com>\n"
 "Language-Team: Tamil <https://hosted.weblate.org/projects/commonwl/user-"
 "guide/ta/>\n"
 "Language: ta\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 2026.9.dev0\n"
+"X-Generator: Weblate 2026.9.1.dev0\n"
 
 #: ../../LICENSE.md:2
 #: 4e203044f0464fd5a3256430391dde12
@@ -131,10 +131,10 @@ msgstr ""
 #: d6ccd4b546254f56a597d67dd4fdc5d6
 msgid "CWL is a way to describe command-line tools and connect them together to create workflows. Because CWL is a specification and not a specific piece of software, tools and workflows described using CWL are portable across a variety of platforms that support the CWL standard."
 msgstr ""
-"பொபமொ என்பது கட்டளை-வரி கருவிகளை விவரிப்பதற்கும் அவற்றை ஒன்றாக இணைக்கவும் ஒரு வழியாகும்"
-". பொபமொ ஒரு விவரக்குறிப்பு மற்றும் ஒரு குறிப்பிட்ட மென்பொருள் அல்ல, பொபமொ ஐப் பயன்படுத்தி"
-" விவரிக்கப்பட்ட கருவிகள் மற்றும் பணிப்பாய்வுகள் பொபமொ தரத்தை ஆதரிக்கும் பல்வேறு தளங்களில் "
-"சிறியவை."
+"பொபமொ(CWL) என்பது கட்டளை-வரி கருவிகளை விவரிப்பதற்கும் அவற்றை ஒன்றாக இணைக்கவும் ஒரு "
+"வழியாகும். பொபமொ ஒரு விவரக்குறிப்பு மற்றும் ஒரு குறிப்பிட்ட மென்பொருள் அல்ல, பொபமொ ஐப் "
+"பயன்படுத்தி விவரிக்கப்பட்ட கருவிகள் மற்றும் பணிப்பாய்வுகள் பொபமொ தரத்தை ஆதரிக்கும் பல்வேறு "
+"தளங்களில் சிறியவை."
 
 #: ../../src/episodes.md:5
 #: ../../src/setup.md:5
@@ -245,7 +245,7 @@ msgstr "இரண்டாவது முறை கைஉரையில் `ty
 #: ../../src/faq.md:135
 #: f2c109998c76434893ff16b17fdb2bd0
 msgid "In CWL, everything must be directly stated."
-msgstr "பொபமொஇல், எல்லாவற்றையும் நேரடியாகக் கூற வேண்டும்."
+msgstr "பொபமொ(CWL)இல், எல்லாவற்றையும் நேரடியாகக் கூற வேண்டும்."
 
 #: ../../src/faq.md:138
 #: c2c752b86bf94d6fb3751f4dd81bc7a7
@@ -338,8 +338,8 @@ msgstr "எண்ணி உள்ளீடுகள்⚜️"
 #: 10af80fa13af4158aec7060550485350
 msgid "For command line flags that require a specific input as the argument an enum type can be declared in CWL. **Specifying null here is known as long form style. It does the same thing as the question mark on the other inputs.**"
 msgstr ""
-"ஒரு குறிப்பிட்ட உள்ளீடு தேவைப்படும் கட்டளை வரி கொடிகளுக்கு பொபமொ இல் ஒரு enum வகையை "
-"அறிவிக்க முடியும். **இங்கே சுழியத்தைக் குறிப்பிடுவது நீண்ட வடிவ பாணி என்று "
+"ஒரு குறிப்பிட்ட உள்ளீடு தேவைப்படும் கட்டளை வரி கொடிகளுக்கு பொபமொ (CWL)இல் ஒரு enum "
+"வகையை அறிவிக்க முடியும். **இங்கே சுழியத்தைக் குறிப்பிடுவது நீண்ட வடிவ பாணி என்று "
 "அழைக்கப்படுகிறது. இது மற்ற உள்ளீடுகளில் கேள்விக்குறியைப் போலவே செய்கிறது.**"
 
 #: ../../src/faq.md:267
@@ -423,7 +423,7 @@ msgstr ""
 #: cc7752e9989e4a6d957682f479d6fc60
 msgid "CWL Parameter Reference Error due to Hyphen in Input Identifier"
 msgstr ""
-"உள்ளீட்டு அடையாளங்காட்டியில் ஐபன் காரணமாகச் பொபமொ அளவுருக் குறிப்புப் பிழை"
+"உள்ளீட்டு அடையாளங்காட்டியில் ஐபன் காரணமாகச் பொபமொ(CWL) அளவுருக் குறிப்புப் பிழை"
 
 #: ../../src/faq.md:375
 #: 6db1ebd2d6c74ceca889662cd7df5cd5
@@ -454,13 +454,13 @@ msgstr "இந்தப் பிழையைச் சரிசெய்ய, `-
 #: 190099a242a645c9b9f8bc3ce89d920d
 msgid "If it is not possible to change the input identifier, then you can use an alternative CWL Parameter Reference syntax:"
 msgstr ""
-"உள்ளீட்டு அடையாளங்காட்டியை மாற்ற முடியாவிட்டால், நீங்கள் ஒரு மாற்று பொபமொ அளவுருக் குறிப்பு"
-" தொடரியல் பயன்படுத்தலாம்:"
+"உள்ளீட்டு அடையாளங்காட்டியை மாற்ற முடியாவிட்டால், நீங்கள் ஒரு மாற்று பொபமொ(CWL) அளவுருக் குறிப்பு "
+"தொடரியல் பயன்படுத்தலாம்:"
 
 #: ../../src/faq.md:442
 #: 06a4f6ffc2da4d43b453d4784b42efd3
 msgid "Use CWL and cwltool with Singularity"
-msgstr "பொபமொ மற்றும் பொபமொ.டூலை ஒருமைப்பாட்டுடன் பயன்படுத்தவும்"
+msgstr "பொபமொ(CWL) மற்றும் பொபமொ.டூலை ஒருமைப்பாட்டுடன் பயன்படுத்தவும்"
 
 #: ../../src/faq.md:445
 #: 1901c34201054a9cae199b0dbb8b945e
@@ -469,7 +469,7 @@ msgstr ""
 "பொபமொ தரநிலைகள் (விருப்ப) கப்பல்துறை வடிவமைப்பு கொள்கலன்களைச் சுற்றி கட்டப்பட்டுள்ளன. "
 "குறிப்பு ரன்னர் மற்றும் பல பொபமொ செயலாக்கங்கள் அந்தக் கப்பல்துறை வடிவமைப்பு கொள்கலன்களை "
 "ஒருமைப்பாட்டு இயந்திரத்தைப் பயன்படுத்தி இயக்குகின்றன. ஒரு ஒருமை வடிவமைப்பு கொள்கலனை "
-"நேரடியாகக் குறிப்பிடுவது பொபமொ தரங்களின் ஒரு பகுதியாக இல்லை."
+"நேரடியாகக் குறிப்பிடுவது பொபமொ(CWL) தரங்களின் ஒரு பகுதியாக இல்லை."
 
 #: ../../src/faq.md:450
 #: 2d498470524d47f18f9936ace6acebb0
@@ -497,9 +497,9 @@ msgstr "பொதுவான பணிப்பாய்வு மொழி ப
 #: f8d6e4cd54cb42c88182a43171d97bab
 msgid "This guide will introduce you to writing workflows using the [Common Workflow Language](https://www.commonwl.org/) (CWL) open standards. This guide describes the latest specification {{ cwl_version }}."
 msgstr ""
-"இந்த வழிகாட்டிப் [பொதுவான பணிப்பாய்வு மொழி](https://www.commonwl.org/) (பொபமொ) "
-"திறந்த தரநிலைகளைப் பயன்படுத்தி பணிப்பாய்வுகளை எழுதுவதை உங்களுக்கு அறிமுகப்படுத்தும். இந்"
-"த வழிகாட்டிச் அண்மைக் கால விவரக்குறிப்பை {{ cwl_version }} விவரிக்கிறது."
+"இந்த வழிகாட்டிப் [பொதுவான பணிப்பாய்வு மொழி](https://www.commonwl.org/) (பொபமொ-CWL) "
+"திறந்த தரநிலைகளைப் பயன்படுத்தி பணிப்பாய்வுகளை எழுதுவதை உங்களுக்கு அறிமுகப்படுத்தும். இந்த "
+"வழிகாட்டிச் அண்மைக் கால விவரக்குறிப்பை {{ cwl_version }} விவரிக்கிறது."
 
 #: ../../src/index.md:7
 #: 132d40fee3b84469afa80d5ff613bf77
@@ -526,7 +526,7 @@ msgid "If you are a beginner user get started with the [Introduction](/introduct
 msgstr ""
 "நீங்கள் ஒரு தொடக்க பயனராக இருந்தால் [அறிமுகம்](/introduction/index.md) பகுதியுடன் "
 "தொடங்குங்கள். மேம்பட்ட பயனர்களுக்குத் [தலைப்புகளின்](/topics/index.md) துணைப்பிரிவுகளில் "
-"பொபமொ-க்கான மிகவும் பொதுவான தலைப்புகள்பற்றிய விரிவான தகவல்கள் உள்ளன."
+"பொபமொ(CWL)-க்கான மிகவும் பொதுவான தலைப்புகள்பற்றிய விரிவான தகவல்கள் உள்ளன."
 
 #: ../../src/index.md:23
 #: cfa67cf5521b414da6f7d34cbed283f7
@@ -552,10 +552,10 @@ msgstr "அடிப்படை கருத்துக்கள்"
 msgid "This section describes the basic concepts for users to get started on working with Common Workflow Language (CWL) workflows. Readers are expected to be familiar with workflow managers, YAML, and comfortable with following instructions for the command-line. The other sections of the user guide cover the same concepts, but in more detail. If you are already familiar with CWL or you are looking for more advanced content, you may want to skip this section."
 msgstr ""
 "இந்தப் பிரிவுப் பயனர்கள் பொதுவான பணிப்பாய்வு மொழி (பொபமொ) பணிப்பாய்வுகளுடன் பணிபுரியத் "
-"தொடங்குவதற்கான அடிப்படைக் கருத்துக்களை விவரிக்கிறது. வாசகர்கள் பணிப்பாய்வு மேலாளர்கள், "
-"YAML உடன் நன்கு அறிந்திருப்பார்கள், மேலும் கட்டளை வரிக்கான பின்வரும் வழிமுறைகளுடன் வசதியா"
-"க இருப்பார்கள். பயனர் வழிகாட்டியின் பிற பிரிவுகள் அதே கருத்துக்களை உள்ளடக்கியது, ஆனால் "
-"இன்னும் விரிவாக. நீங்கள் ஏற்கனவே பொபமொ உடன் தெரிந்திருந்தால் அல்லது நீங்கள் இன்னும் மேம்பட்ட "
+"தொடங்குவதற்கான அடிப்படைக் கருத்துக்களை விவரிக்கிறது. வாசகர்கள் பணிப்பாய்வு மேலாளர்கள், YAML "
+"உடன் நன்கு அறிந்திருப்பார்கள், மேலும் கட்டளை வரிக்கான பின்வரும் வழிமுறைகளுடன் வசதியாக "
+"இருப்பார்கள். பயனர் வழிகாட்டியின் பிற பிரிவுகள் அதே கருத்துக்களை உள்ளடக்கியது, ஆனால் இன்னும் "
+"விரிவாக. நீங்கள் ஏற்கனவே பொபமொ(CWL) உடன் தெரிந்திருந்தால் அல்லது நீங்கள் இன்னும் மேம்பட்ட "
 "உள்ளடக்கத்தைத் தேடுகிறீர்களானால், இந்தப் பகுதியைத் தவிர்க்க விரும்பலாம்."
 
 #: ../../src/introduction/basic-concepts.md:10
@@ -567,8 +567,8 @@ msgstr "CWL விவரக்குறிப்பு"
 #: cbe1d761da5b403d9605fa1fb8e62fdf
 msgid "The CWL specification is a document written and maintained by the CWL community. The specification has different versions. The version covered in this user guide is the {{ cwl_version }}."
 msgstr ""
-"பொபமொ விவரக்குறிப்பு என்பது பொபமொ சமூகத்தால் எழுதப்பட்ட மற்றும் பராமரிக்கப்படும் ஒரு "
-"ஆவணமாகும். விவரக்குறிப்பில் வெவ்வேறு பதிப்புகள் உள்ளன. இந்த பயனர் வழிகாட்டியில் உள்ள "
+"பொபமொ(CWL) விவரக்குறிப்பு என்பது பொபமொ(CWL) சமூகத்தால் எழுதப்பட்ட மற்றும் பராமரிக்கப்படும் "
+"ஒரு ஆவணமாகும். விவரக்குறிப்பில் வெவ்வேறு பதிப்புகள் உள்ளன. இந்த பயனர் வழிகாட்டியில் உள்ள "
 "பதிப்பு {{ cwl_version }} ஆகும்."
 
 #: ../../src/introduction/basic-concepts.md:25
@@ -598,10 +598,10 @@ msgstr "செயல்படுத்தல்கள்"
 #: 078b58ffc1cc4d25a7c4eea3bb76e025
 msgid "An implementation of the CWL specification is any software written following what is defined in a version of the specification document. However, implementations may not implement every aspect of the specification. CWL implementations are licensed under both Open Source and commercial licenses."
 msgstr ""
-"பொபமொ விவரக்குறிப்பின் செயல்படுத்தல் என்பது விவரக்குறிப்பு ஆவணத்தின் பதிப்பில் "
+"பொபமொ(CWL) விவரக்குறிப்பின் செயல்படுத்தல் என்பது விவரக்குறிப்பு ஆவணத்தின் பதிப்பில் "
 "வரையறுக்கப்பட்டுள்ளதைத் தொடர்ந்து எழுதப்பட்ட எந்தவொரு மென்பொருளாகும். இருப்பினும், "
-"செயலாக்கங்கள் விவரக்குறிப்பின் ஒவ்வொரு அம்சத்தையும் செயல்படுத்தாது. பொபமொ செயலாக்கங்கள் திறந்"
-"த மூல மற்றும் வணிக உரிமங்களின் கீழ் உரிமம் பெற்றுள்ளன."
+"செயலாக்கங்கள் விவரக்குறிப்பின் ஒவ்வொரு அம்சத்தையும் செயல்படுத்தாது. பொபமொ செயலாக்கங்கள் திறந்த "
+"மூல மற்றும் வணிக உரிமங்களின் கீழ் உரிமம் பெற்றுள்ளன."
 
 #: ../../src/introduction/basic-concepts.md:44
 #: c3869b4ec5ff47d99e8da79770722e04
@@ -2510,7 +2510,6 @@ msgstr "அத்தியாவசிய உள்ளீட்டு அளவ�
 
 #: ../../src/topics/inputs.md:5
 #: 96671c56523c4ea9992fb5dfcfa6490e
-#, fuzzy
 msgid "The `inputs` of a tool is a list of input parameters that control how to run the tool.  Each parameter has an `id` for the name of parameter, and `type` describing what types of values are valid for that parameter."
 msgstr ""
 "ஒரு கருவியின் `inputs` கருவியை எவ்வாறு இயக்குவது என்பதைக் கட்டுப்படுத்தும் உள்ளீட்டு "
