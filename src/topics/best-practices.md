@@ -8,7 +8,7 @@ all are required.
 - No `type: string` parameters for names of input or reference
   files/directories; use `type: File` or `type: Directory` as appropriate.
 
-- A CWL document (in conjunction with any external components like `Dockerfile`s) is software code.
+- A CWL document (in conjunction with any external components like `Dockerfile`) is a software code.
   Workflow developers should be aware that the usual rules of software licensing apply to this
   document. For example, if the workflow is shared publicly, licensing terms must be clear so that
   a future user understands under what conditions they can run the workflow, modify it and/or
