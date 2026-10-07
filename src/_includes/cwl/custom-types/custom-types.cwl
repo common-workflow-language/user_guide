@@ -24,11 +24,11 @@ inputs:
   biom:
     type: File
     format: edam:format_3746  # BIOM
-    inputBinding:
+    arguments:
       prefix: --input-fp
   table_type:
     type: biom-convert-table.yaml#table_type
-    inputBinding:
+    arguments:
       prefix: --table-type
 
   header_key:
@@ -37,7 +37,7 @@ inputs:
       The observation metadata to include from the input BIOM table file when
       creating a tsv table file. By default no observation metadata will be
       included.
-    inputBinding:
+    arguments:
       prefix: --header-key
 
 baseCommand: [ biom, convert ]

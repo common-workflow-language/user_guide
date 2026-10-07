@@ -5,7 +5,7 @@ baseCommand: [tar, --extract]
 inputs:
   tarfile:
     type: File
-    inputBinding:
+    arguments:
       prefix: --file
 outputs:
   example_out:
