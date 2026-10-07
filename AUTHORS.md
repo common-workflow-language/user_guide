@@ -6,18 +6,18 @@ Thank you to the following contributors (in alphabetical order by user name):
 * Michele Mastropietro (@elehcim) <https://orcid.org/0000-0002-6324-5713>
 * Emannuel Fernandes de Oliveira Carvalho (@emannuelOC)
 * Eugene Miloslavsky (@emiloslavsky)
-* Robin Long (@longr) <https://orcid.org/0000-0003-2249-645X>
 * Ngumih Fien (@Fienne)
 * Mary Gathoni (@gathoni-k)
 * Henry Liu (@HenryLiu0)
 * Marijke J. van Baren (@Jeltje)
 * @jessMaia
-* Bruno P. Kinoshita (@kinow) <https://orcid.org/0000-0001-8250-4074>
 * Kaushik Ghose (@kghose) <https://orcid.org/0000-0003-2933-1260>
+* Bruno P. Kinoshita (@kinow) <https://orcid.org/0000-0001-8250-4074>
 * Konstantin Taletskiy (@ktaletsk) <https://orcid.org/0000-0001-6846-9815>
 * Kushal Beniwal (@KushalBeniwal)
-* Mark A. Jensen  (@majensen) <https://orcid.org/0000-0001-5215-101X>
+* Robin Long (@longr) <https://orcid.org/0000-0003-2249-645X>
 * Levai Mackenzie Ágbàrà (@Mackenzie-OO7)
+* Mark A. Jensen  (@majensen) <https://orcid.org/0000-0001-5215-101X>
 * Manabu Ishii (@manabuishii) <https://orcid.org/0000-0002-5843-4712>
 * @medcelerate
 * Michael Crusoe (@mr-c) <http://orcid.org/0000-0002-2961-9670>
